@@ -1,0 +1,7 @@
+site_name: Programación
+nav:
+    - Inicio: index.md
+    - About: about.md
+theme:
+    name: mkdocs
+    locale: es
