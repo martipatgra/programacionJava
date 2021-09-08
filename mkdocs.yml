@@ -4,5 +4,4 @@ nav:
     - Inicio: index.md
     - Sobre : about.md
 theme:
-    name: readthedocs
-    locale: es
+  name: material
