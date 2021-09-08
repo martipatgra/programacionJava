@@ -44,8 +44,3 @@ La nota de cada evaluación se calcula mediante:
     -   3: Entregada y solución correcta.
 -   70% Actividad de evaluación
 -   Una o dos pruebas por evaluación.
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
