@@ -1,4 +1,5 @@
 site_name: Programación
+repo_url: https://github.com/martipatgra/programacion2122
 nav:
     - Inicio: index.md
     - Sobre : about.md
