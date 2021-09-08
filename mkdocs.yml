@@ -5,7 +5,7 @@ nav:
 theme:
   name: material
   language: es
-  #custom_dir: overrides
+  custom_dir: overrides
   #logo: assets/logo.png
   palette:
     primary: teal
