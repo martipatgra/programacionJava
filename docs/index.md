@@ -20,16 +20,16 @@ La duración del módulo es de 256 horas lectivas, a razón de  **8 horas semana
 
 A continuación se muestran las unidades didácticas y una estimación temporal de cada una de ellas.
 
-Unidad 1. Elementos de un programa informático
-Unidad 2. Estructuras básicas de control
-Unidad 3. Arrays
-Unidad 4. Programación orientada a objetos. Clases y Objetos
-Unidad 5. Herencia y polimorfismo
-Unidad 6. Colecciones
-Unidad 7. Programación avanzada
-Unidad 8. Interfaces de usuario
-Unidad 9. Persistencia de la información
-Unidad 10. Bases de datos
+1. Elementos de un programa informático
+2. Estructuras básicas de control
+3. Arrays
+4. Programación orientada a objetos. Clases y Objetos
+5. Herencia y polimorfismo
+6. Colecciones
+7. Programación avanzada
+8. Interfaces de usuario
+9. Persistencia de la información
+10. Bases de datos
 
 ## Instrumentos de calificación
 
