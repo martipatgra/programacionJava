@@ -35,16 +35,15 @@ Unidad 10. Bases de datos
 
 La nota de cada evaluación se calcula mediante:
 
-30% Trabajo en Clase / Actividades
-Se evalúan todas las actividades realizadas en clase y en casa.
-Las actividades se evalúan mediante tareas de Aules con calificaciones comprendidas entre 0 y 3 puntos:
-0: No entregada
-1: Entregada pero solución errónea o incompleta
-2: Entregada y solución aceptable, aunque tiene algún apartado incompleto
-3: Entregada y solución correcta.
-70% Actividad de evaluación
-Una o dos pruebas por evaluación.
-La nota final se calcula mediante la media de cada una de las evaluaciones.
+-   30% Trabajo en Clase / Actividades
+-   Se evalúan todas las actividades realizadas en clase y en casa.
+-   Las actividades se evalúan mediante tareas de Aules con calificaciones comprendidas entre 0 y 3 puntos:
+    -   0: No entregada
+    -   1: Entregada pero solución errónea o incompleta
+    -   2: Entregada y solución aceptable, aunque tiene algún apartado incompleto
+    -   3: Entregada y solución correcta.
+-   70% Actividad de evaluación
+-   Una o dos pruebas por evaluación.
 
     mkdocs.yml    # The configuration file.
     docs/
