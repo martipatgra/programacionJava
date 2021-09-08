@@ -6,6 +6,7 @@ nav:
 theme:
   name: material
   custom_dir: overrides
+  logo: assets/logo.png
   palette:
-    scheme: teal
+    primary: teal
   
