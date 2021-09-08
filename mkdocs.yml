@@ -1,5 +1,4 @@
 site_name: Programación
-repo_url: https://github.com/martipatgra/programacion2122
 nav:
     - Inicio: index.md
     - Sobre : about.md
@@ -12,9 +11,5 @@ theme:
     primary: teal
   extra:
     generator: false
-    social:
-        - icon: none
-        - link: none
-        - name: none
   copyright: Copyright &copy; 2021 - Patricia Martí
   
