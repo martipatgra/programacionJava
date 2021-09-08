@@ -3,5 +3,5 @@ nav:
     - Inicio: index.md
     - Sobre : about.md
 theme:
-    name: mkdocs
+    name: readthedocs
     locale: es
