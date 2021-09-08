@@ -44,3 +44,5 @@ La nota de cada evaluación se calcula mediante:
     -   3: Entregada y solución correcta.
 -   70% Actividad de evaluación
 -   Una o dos pruebas por evaluación.
+
+La nota final se calcula mediante la media de cada una de las evaluaciones.
