@@ -2,6 +2,11 @@ site_name: Programación
 nav:
     - Inicio: index.md
     - Sobre : about.md
+    
+pages:
+    - Inicio: index.md
+    - 1.- Elementos de un programa informático: elementos.md
+    - Sobre : about.md
 theme:
   name: material
   language: es
