@@ -6,6 +6,10 @@ Aquí puedes encontrar los apuntes del módulo de _Programación_, que se impart
 
 La duración del módulo es de 256 horas lectivas, a razón de  **8 horas semanales**. Se ha planificado basándose en 4 sesiones de 2 horas lectivas por semana.
 
+~~~
+a one-line code block
+~~~
+
 ## Resultados de aprendizaje
 
 1. Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.
