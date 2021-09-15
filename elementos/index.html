@@ -734,13 +734,13 @@ un programador experimentado puede familiarizarse con un nuevo idioma en cuesti�
 <hr />
 <hr />
 <h2 id="7-tips-para-aprender-a-programar-con-exito">7 Tips para aprender a programar con éxito</h2>
-<div class="highlight"><pre><span></span><code>1. Learn by doing. Always play with the code while learning
-2. Grasp the fundamentals for long-term benefits
-3. Code by hand. It sharpens proficiency and you’ll need it to get a job
-4. Ask for help. You’ll need it
-5. Seek out more online resources. There’s a wealth of content
-6. Don’t just read the sample code. Tinker with it!
-7. Take breaks when debugging
+<div class="highlight"><pre><span></span><code><span class="m">1</span>. Learn by doing. Always play with the code <span class="k">while</span> learning
+<span class="m">2</span>. Grasp the fundamentals <span class="k">for</span> long-term benefits
+<span class="m">3</span>. Code by hand. It sharpens proficiency and you’ll need it to get a job
+<span class="m">4</span>. Ask <span class="k">for</span> help. You’ll need it
+<span class="m">5</span>. Seek out more online resources. There’s a wealth of content
+<span class="m">6</span>. Don’t just <span class="nb">read</span> the sample code. Tinker with it!
+<span class="m">7</span>. Take breaks when debugging
 </code></pre></div>
 <p>Fuente: <a href="https://www.codingdojo.com/blog/7-tips-learn-programming-faster">Coding dojo</a></p>
 <div class="admonition tip">
@@ -776,13 +776,17 @@ Nosotros para el propósito de este curso usaremos Java 11.</p>
 <p><img alt="IntelliJ" src="../img/intellij1.jpg" /></p>
 <h2 id="setup-java-11-y-intellij-en-windows">Setup Java 11 y IntelliJ en Windows</h2>
 <ol>
-<li>Vamos a la página de Oracle y descargamos JDK 11.</li>
+<li>
+<p>Vamos a la página de Oracle y descargamos JDK 11.</p>
+</li>
 <li>
 <p>Instalamos el JDK.</p>
+</li>
+</ol>
 <blockquote>
 <p>En linux usamos el siguiente comando para instalar el jdk: sudo apt-get install openjdk-11-jdk</p>
 </blockquote>
-</li>
+<ol>
 <li>
 <p>Windows: Añadimos en las variables de entorno del sistema dentro de la variable Path, la ruta donde se ha instalado java en nuestra máquina (C:\Program Files\Java\jdk-11\bin)</p>
 </li>
@@ -790,20 +794,25 @@ Nosotros para el propósito de este curso usaremos Java 11.</p>
 <p>Windows: Agregamos también una nueva variable llamada JAVA_HOME --&gt; C:\Program Files\Java\jdk-11 (Ruta de nuestra máquina).</p>
 </li>
 <li>
-<p>Verificamos que se ha instalado java, ejecutando desde línea de comandos:
-<div class="highlight"><pre><span></span><code>java --version
-</code></pre></div></p>
+<p>Verificamos que se ha instalado java, ejecutando desde línea de comandos:</p>
 </li>
-<li>Descargamos e instalamos <a href="https://www.jetbrains.com/idea/download/#section=windows">IntelliJ Community</a></li>
-<li>En File -&gt; Settings, modificamos las siguientes opciones:
+</ol>
+<div class="highlight"><pre><span></span><code>java --version
+</code></pre></div>
+<ol>
+<li>
+<p>Descargamos e instalamos <a href="https://www.jetbrains.com/idea/download/#section=windows">IntelliJ Community</a></p>
+</li>
+<li>
+<p>En File -&gt; Settings, modificamos las siguientes opciones:
 <img alt="IntelliJ" src="../img/settings.png" />
 <img alt="IntelliJ" src="../img/imports.png" />
-<img alt="IntelliJ" src="../img/codefolding.png" /></li>
+<img alt="IntelliJ" src="../img/codefolding.png" /></p>
+</li>
 </ol>
 <h2 id="proyecto-hola-mundo-estructura-de-un-programa">Proyecto "Hola Mundo". Estructura de un programa</h2>
 <p>Cada vez que estás aprendiendo un nuevo lenguaje de programación es una <em>tradición</em> crear un nuevo programa muy simple que genera el texto <strong>Hola mundo</strong>.
 Veamos como podemos hacer esto en IntelliJ.</p>
-<blockquote>
 <ol>
 <li>Hacemos click en crear nuevo proyecto y elegimos el JDK 11 que hemos instalado.
 <img alt="IntelliJ" src="../img/selectjdk.png" /></li>
@@ -821,7 +830,6 @@ Veamos como podemos hacer esto en IntelliJ.</p>
 <img alt="IntelliJ" src="../img/printhelloworld.png" />
 <img alt="IntelliJ" src="../img/output.png" /></li>
 </ol>
-</blockquote>
 <h3 id="challenge">Challenge!!</h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
@@ -839,6 +847,7 @@ Existe diferentes tipos de información que podemos utilizar para definir nuestr
 Los tipos de datos son palabras reservas <strong>keywords</strong> en Java, es decir, no podemos utilizarlas fuera del contexto de tipo de datos.
 Para definir una variable, necesitamos especificar el tipo de datos, luego darle un nombre a nuestra variable, y opcionalmente, podemos agregar una expresión para inicializar la variable con un valor.
 </p>
+
 <p><img alt="Java" src="../img/variable.png" /></p>
 <p>Definimos nuestra primera variable en el programa de la siguiente forma:
 <img alt="Java" src="../img/myfirstint.png" /></p>
@@ -853,21 +862,22 @@ A medida que se ejecuta un programa, decimos que ejecuta sentencias, lo que sign
 En nuestro programa Hello World, tenemos un statement en la <strong>línea 4 y 6</strong>. La regla en Java es que las sentencias deben terminar con un punto y coma.
 Si se olvida, se produciría un error de sintaxis.
 </p>
+
 <h3 id="sentencias-de-declaracion">Sentencias de declaración</h3>
 <p>Se usan para definir una variable de un tipo de dato en particular. En Java, una variable debe declararse antes de que pueda usarse en un programa. De no hacerlo, se produciría un error de sintaxis.
-En su forma más simple una declaración incluye el tipo de datos y el nombre de la variable. Opcionalmente se puede establecer la variable a cierto valor. Es decir, se dice que se ha inicializado.
-<div class="highlight"><pre><span></span><code>Ejemplos:
-    int numero;
-    int a = 3;
-    int dia;
-</code></pre></div></p>
+En su forma más simple una declaración incluye el tipo de datos y el nombre de la variable. Opcionalmente se puede establecer la variable a cierto valor. Es decir, se dice que se ha inicializado.</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Ejemplos</span><span class="p">:</span>
+   <span class="kt">int</span> <span class="n">numero</span><span class="p">;</span>
+   <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+   <span class="kt">int</span> <span class="n">dia</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="sentencias-de-asignacion">Sentencias de asignación</h3>
-<p>Una sentencia de asignación es una sentencia que almacena (asigna) un valor en una variable. Una sentencia de asignación utiliza el signo igual (=) como operador de asignación. En su forma más simple, tiene una variable en el lado izquierdo del signo igual y algún tipo de valor en el lado derecho.
-<div class="highlight"><pre><span></span><code>Ejemplos:
-    numero = 6;
-    a = 0;
-    dia = 22;
-</code></pre></div></p>
+<p>Una sentencia de asignación es una sentencia que almacena (asigna) un valor en una variable. Una sentencia de asignación utiliza el signo igual (=) como operador de asignación. En su forma más simple, tiene una variable en el lado izquierdo del signo igual y algún tipo de valor en el lado derecho.</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Ejemplos</span><span class="p">:</span>
+    <span class="n">numero</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">dia</span> <span class="o">=</span> <span class="mi">22</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="challenge_1">Challenge!!</h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
@@ -875,10 +885,10 @@ En su forma más simple una declaración incluye el tipo de datos y el nombre de
 </div>
 <h2 id="expressions">Expressions</h2>
 <p>Una expresión es un conjunto de variables, operadores e invocaciones de métodos que se construyen para poder ser evaluadas retornando un resultado.
-Podemos cambiar la expresión y añadir una suma, de forma que quede así:
-<div class="highlight"><pre><span></span><code>int miPrimerEntero = 7 + 5;
+Podemos cambiar la expresión y añadir una suma, de forma que quede así:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">miPrimerEntero</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
-Java examina la expresión de la derecha del signo igual y ha realizado el cálculo de una expresión matemática. Después ha asignado ese valor a la variable miPrimerEntero.
+<p>Java examina la expresión de la derecha del signo igual y ha realizado el cálculo de una expresión matemática. Después ha asignado ese valor a la variable miPrimerEntero.
 Podríamos complicar más la expresión utilizando <strong>operadores</strong> como paréntesis, multiplicaciones, divisiones, etc.
 Los operadores en Java realizan una operación en una variable o valor. Más adelante veremos los diferentes operadores existentes.</p>
 <h3 id="challenge_2">Challenge!!</h3>
@@ -897,27 +907,29 @@ Los operadores en Java realizan una operación en una variable o valor. Más ade
 Se pueden clasificar en primitivos y no primitivos.
 <img alt="Java" src="../img/primitives.png" /></p>
 <h3 id="primitivos">Primitivos</h3>
-<p>Los primitivos son los más básicos y fundamentales, vienen integrados en Java. Especifican el tipo de valor almacenado en una variable y el tamaño de la memoria. Hay 8 tipos primitivos de datos integrados en el lenguaje Java. Estos incluyen: int, byte, short, long, float, double, boolean y char. 
+<p>Los primitivos son los más básicos y fundamentales, vienen integrados en Java. Especifican el tipo de valor almacenado en una variable y el tamaño de la memoria. Hay 8 tipos primitivos de datos integrados en el lenguaje Java. Estos incluyen: int, byte, short, long, float, double, boolean y char.
 <img alt="Java" src="../img/datosprimitivos.png" /></p>
 <h3 id="no-primitivos-u-objetos">No primitivos u objetos</h3>
 <p>En Java, los tipos de datos no primitivos son los tipos de datos de referencia o los tipos de datos creados por el usuario. Todos los tipos de datos no primitivos se implementan utilizando conceptos de objeto. Cada variable del tipo de datos no primitivo es un objeto. Los tipos de datos no primitivos pueden utilizar métodos adicionales para realizar determinadas operaciones. El valor predeterminado de la variable de tipo de datos no primitivos es nulo.</p>
 <h2 id="actividad-1-crear-y-compilar-un-programa-en-java-desde-linea-de-comandos">Actividad 1 - Crear y compilar un programa en java desde línea de comandos</h2>
 <p>Crea un PDF llamado "UD1Actividad1.pdf", incluyendo capturas con las siguientes acciones:</p>
 <ul>
-<li>Crea un fichero llamado HolaMundo.java con el siguiente texto:
-<div class="highlight"><pre><span></span><code>public class HolaMundo {
-      public static void main(String[ ] arg) {
-        System.out.println(&quot;Mi primer programa.&quot;);
-      }
-}
-</code></pre></div></li>
+<li>Crea un fichero llamado HolaMundo.java con el siguiente texto:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HolaMundo</span> <span class="p">{</span>
+      <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[</span> <span class="o">]</span> <span class="n">arg</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mi primer programa.&quot;</span><span class="p">);</span>
+      <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
 <li>Compila el fichero desde la consola usando el compilador de java:</li>
 </ul>
 <blockquote>
 <p>javac HolaMundo.java</p>
 </blockquote>
 <ul>
-<li>Ejecuta el programa mediante </li>
+<li>Ejecuta el programa mediante</li>
 </ul>
 <blockquote>
 <p>java HolaMundo</p>
