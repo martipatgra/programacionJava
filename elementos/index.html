@@ -416,7 +416,8 @@
     Primitivos
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Primitivos">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#wrapper-classes-clases-contenedores" class="md-nav__link">
@@ -426,9 +427,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#byte-short-int-long" class="md-nav__link">
-    Byte, short, int, long
+  <a href="#casting" class="md-nav__link">
+    Casting
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -696,7 +702,8 @@
     Primitivos
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Primitivos">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#wrapper-classes-clases-contenedores" class="md-nav__link">
@@ -706,9 +713,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#byte-short-int-long" class="md-nav__link">
-    Byte, short, int, long
+  <a href="#casting" class="md-nav__link">
+    Casting
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -955,8 +967,10 @@ Se pueden clasificar en primitivos y objetos.
 <h3 id="primitivos">Primitivos</h3>
 <p>Los primitivos son los más básicos y fundamentales, vienen integrados en Java. Especifican el tipo de valor almacenado en una variable y el tamaño de la memoria. Hay 8 tipos primitivos de datos integrados en el lenguaje Java. Estos incluyen: int, byte, short, long, float, double, boolean y char.
 <img alt="Java" src="../img/datosprimitivos.png" /></p>
-<h3 id="wrapper-classes-clases-contenedores">Wrapper classes (clases contenedores)</h3>
-<p>Las clases contenedoras proporcionan una forma de utilizar tipos de datos primitivos como objetos. En Java, tenemos una Wrapper class para cada uno de los 8 tipos de datos primitivos. Gracias a esto, podemos realizar operaciones en un int por ejemplo.</p>
+<h4 id="wrapper-classes-clases-contenedores">Wrapper classes (clases contenedores)</h4>
+<p>Las clases contenedoras proporcionan una forma de utilizar tipos de datos primitivos como objetos. En Java, tenemos una Wrapper class para cada uno de los 8 tipos de datos primitivos. Gracias a esto, podemos realizar operaciones en un dato primitivo como por ejemplo en un int:</p>
+<div class="highlight"><pre><span></span><code>   <span class="kt">int</span> <span class="n">minimoValorInt</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">MIN_VALUE</span><span class="p">;</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -999,8 +1013,24 @@ Se pueden clasificar en primitivos y objetos.
 </tr>
 </tbody>
 </table>
-<h3 id="byte-short-int-long">Byte, short, int, long</h3>
-<p>f</p>
+<ul>
+<li>
+<p>Byte: Como su propio nombre denota, emplea un solo byte (8 bits) de almacenamiento. Esto permite almacenar valores en el rango [-128, 127]. Raramente se usa. Ocupa menos memoria y puede ser más rápido accedido.</p>
+</li>
+<li>
+<p>short: Usa el doble de almacenamiento que el anterior, es decir, ocupa 16 bits.</p>
+</li>
+<li>
+<p>int: emplea 4 bytes (32 bits) de almacenamiento y es el tipo de dato entero más empleado. Necesita cuatro veces el espacio que ocupa un byte. <strong>Es el entero predeterminado usado en Java.</strong></p>
+</li>
+<li>
+<p>long: es el tipo entero de mayor tamaño, 8 bytes (64 bits). Para definir un long, tenemos que hacerlo de la siguiente forma:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="kt">long</span> <span class="n">myLongNumber</span> <span class="o">=</span> <span class="mi">500L</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="casting">Casting</h4>
+<p>Es una forma de convertir un número de un tipo a otro tipo de dato. Para hacerlo ponemos en paréntesis el tipo de dato al que queremos convertirlo.</p>
 <h3 id="no-primitivos-u-objetos">No primitivos u objetos</h3>
 <p>En Java, los tipos de datos no primitivos son los tipos de datos de referencia o los tipos de datos creados por el usuario. Todos los tipos de datos no primitivos se implementan utilizando conceptos de objeto. Cada variable del tipo de datos no primitivo es un objeto. Los tipos de datos no primitivos pueden utilizar métodos adicionales para realizar determinadas operaciones. El valor predeterminado de la variable de tipo de datos no primitivos es nulo.</p>
 <h2 id="actividad-1-crear-y-compilar-un-programa-en-java-desde-linea-de-comandos">Actividad 1 - Crear y compilar un programa en java desde línea de comandos</h2>
