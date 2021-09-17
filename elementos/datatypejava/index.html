@@ -684,8 +684,12 @@ Se pueden clasificar en primitivos y objetos.
 </table>
 <h3 id="byte">byte</h3>
 <p>Como su propio nombre denota, emplea un solo byte (8 bits) de almacenamiento. Esto permite almacenar valores en el rango [-128, 127]. Raramente se usa. Ocupa menos memoria y puede ser más rápido accedido.</p>
+<div class="highlight"><pre><span></span><code>  <span class="kt">byte</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;;</span>
+</code></pre></div>
 <h3 id="short">short</h3>
 <p>Usa el doble de almacenamiento que el anterior, es decir, ocupa 16 bits.</p>
+<div class="highlight"><pre><span></span><code>  <span class="kt">short</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">3467</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="int">int</h3>
 <p>emplea 4 bytes (32 bits) de almacenamiento y es el tipo de dato entero más empleado. Necesita cuatro veces el espacio que ocupa un byte. <strong>Es el entero predeterminado usado en Java.</strong></p>
 <div class="highlight"><pre><span></span><code>        <span class="kt">int</span> <span class="n">maxValor</span> <span class="o">=</span> <span class="mi">2147483647</span><span class="p">;</span>
@@ -695,7 +699,7 @@ Se pueden clasificar en primitivos y objetos.
 <div class="admonition note">
 <p class="admonition-title">Casting</p>
 <p>Es una forma de convertir un número de un tipo a otro tipo de dato. Para hacerlo ponemos en paréntesis el tipo de dato al que queremos convertirlo.
-<div class="highlight"><pre><span></span><code>    <span class="kt">byte</span> <span class="n">miBye</span> <span class="o">=</span> <span class="p">(</span><span class="kt">byte</span><span class="p">)</span> <span class="p">(</span><span class="mi">14</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code>    <span class="kt">byte</span> <span class="n">miByte</span> <span class="o">=</span> <span class="p">(</span><span class="kt">byte</span><span class="p">)</span> <span class="p">(</span><span class="mi">14</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
 </code></pre></div></p>
 </div>
 <h3 id="long">long</h3>
@@ -715,6 +719,7 @@ Se pueden clasificar en primitivos y objetos.
 <h3 id="char">char</h3>
 <p>se utiliza para almacenar caracteres (letras, números, signos, etc.) individuales. Ocupa 2 bytes en memoria (16 bits). Permite almacenar caracteres Unicode. Unicode es un estándar de codificación internacional que nos permite representar diferentes idiomas; y la forma en que funciona es usando una combinación de los dos bytes que un char ocupa en la memoria, que puede representar hasta 65535 diferentes tipos de caracteres. <a href="https://unicode-table.com/en/">Unicode table.</a></p>
 <div class="highlight"><pre><span></span><code>  <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;P&#39;</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">u</span> <span class="o">=</span> <span class="sc">&#39;\u00A2&#39;</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="boolean">boolean</h3>
 <p>solo permite almacenar dos posibles valores que son <em>true</em> o <em>false</em>. Tiene la finalidad de facilitar el trabajo con valores "verdadero/falso" (booleanos), resultantes por regla general de evaluar expresiones.</p>
