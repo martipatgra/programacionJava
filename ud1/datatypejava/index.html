@@ -761,6 +761,8 @@ Se pueden clasificar en primitivos y objetos.
 <div class="highlight"><pre><span></span><code>  <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;P&#39;</span><span class="p">;</span>
   <span class="kt">char</span> <span class="n">u</span> <span class="o">=</span> <span class="sc">&#39;\u00A2&#39;</span><span class="p">;</span><span class="c1">//print unicode character</span>
 </code></pre></div>
+<p>Un carácter precedido por una barra invertida () es una secuencia de escape y tiene un significado especial para el compilador. La siguiente tabla muestra las secuencias de escape de Java:</p>
+<p><img alt="Java" src="../../img/scapedsequences.png" /></p>
 <h3 id="boolean">boolean</h3>
 <p>solo permite almacenar dos posibles valores que son <em>true</em> o <em>false</em>. Tiene la finalidad de facilitar el trabajo con valores "verdadero/falso" (booleanos), resultantes por regla general de evaluar expresiones.</p>
 <div class="highlight"><pre><span></span><code>  <span class="kt">boolean</span> <span class="n">isMyNamePatri</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
@@ -774,7 +776,7 @@ Se pueden clasificar en primitivos y objetos.
 <h2 id="no-primitivos-u-objetos">No primitivos u objetos</h2>
 <p>En Java, los tipos de datos no primitivos son los tipos de datos de referencia o los tipos de datos creados por el usuario. Todos los tipos de datos no primitivos se implementan utilizando conceptos de objeto. Cada variable del tipo de datos no primitivo es un objeto. Los tipos de datos no primitivos pueden utilizar métodos adicionales para realizar determinadas operaciones. El valor predeterminado de la variable de tipo de datos no primitivos es nulo.</p>
 <h3 id="string-cadena-de-caracteres">String - Cadena de caracteres</h3>
-<p>String es una clase integrada en el lenguaje Java definido en el paquete java.lang. Representa cadenas de caracteres. Los String son inmutables; es decir, no se pueden modificar una vez creados. Siempre que se modifica un objeto String, en realidad se crea uno nuevo String.</p>
+<p>String es una clase integrada en el lenguaje Java ampliamente utilizada y definido en el paquete java.lang. Representa cadenas de caracteres y se utilizan para almacenar varios atributos como nombre de usuario, contraseña, etc. Los String son inmutables; es decir, no se pueden modificar una vez creados. Siempre que se modifica un objeto String, en realidad se crea uno nuevo String.</p>
 <p>Existen varias formas para crear un String:</p>
 <div class="highlight"><pre><span></span><code>    <span class="n">String</span> <span class="n">texto</span> <span class="o">=</span> <span class="s">&quot;Severo Ochoa&quot;</span><span class="p">;</span>
     <span class="n">String</span> <span class="n">texto2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="p">(</span><span class="s">&quot;Severo Ochoa&quot;</span><span class="p">);</span>
