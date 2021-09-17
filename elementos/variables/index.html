@@ -14,7 +14,7 @@
     
     
       
-        <title>Proyecto Hola Mundo - Programación</title>
+        <title>Variables - Programación</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#proyecto-hola-mundo-estructura-de-un-programa" class="md-skip">
+        <a href="#variables" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Proyecto Hola Mundo
+              Variables
             
           </span>
         </div>
@@ -227,14 +227,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       <label class="md-nav__link" for="__nav_2_2">
         1.2.- El lenguaje Java
@@ -274,6 +272,47 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../holamundo/" class="md-nav__link">
+        Proyecto Hola Mundo
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        1.3.- Variables y sentencias
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="1.3.- Variables y sentencias" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          1.3.- Variables y sentencias
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
     
   
   
@@ -286,12 +325,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Proyecto Hola Mundo
+          Variables
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Proyecto Hola Mundo
+        Variables
       </a>
       
         
@@ -309,8 +348,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#challenge" class="md-nav__link">
-    Challenge
+  <a href="#reglas-para-el-nombrado-de-variables" class="md-nav__link">
+    Reglas para el nombrado de variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keywords" class="md-nav__link">
+    Keywords
   </a>
   
 </li>
@@ -319,45 +365,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
-      
-      <label class="md-nav__link" for="__nav_2_3">
-        1.3.- Variables y sentencias
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="1.3.- Variables y sentencias" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
-          <span class="md-nav__icon md-icon"></span>
-          1.3.- Variables y sentencias
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../variables/" class="md-nav__link">
-        Variables
-      </a>
     </li>
   
 
@@ -439,8 +446,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#challenge" class="md-nav__link">
-    Challenge
+  <a href="#reglas-para-el-nombrado-de-variables" class="md-nav__link">
+    Reglas para el nombrado de variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keywords" class="md-nav__link">
+    Keywords
   </a>
   
 </li>
@@ -458,35 +472,42 @@
               
                 
                 
-                <h1 id="proyecto-hola-mundo-estructura-de-un-programa">Proyecto "Hola Mundo". Estructura de un programa</h1>
-<p>Cada vez que estás aprendiendo un nuevo lenguaje de programación es una <em>tradición</em> crear un nuevo programa muy simple que genera el texto <strong>Hola mundo</strong>.
-Veamos como podemos hacer esto en IntelliJ.</p>
-<ol>
-<li>Hacemos click en crear nuevo proyecto y elegimos el JDK 11 que hemos instalado.
-<img alt="IntelliJ" src="../../img/selectjdk.png" /></li>
-<li>Luego en Next, Next, añadimos nombre al proyecto y Finish.
-<img alt="IntelliJ" src="../../img/projectname.png" />
-<img alt="IntelliJ" src="../../img/projectstructure.png" /></li>
-<li>Creamos una nueva clase Java llamada Hello.java
-<img alt="IntelliJ" src="../../img/newjavaclass.png" />
-<img alt="IntelliJ" src="../../img/helloclass.png" /></li>
-<li>Vamos a crear un método para imprimir el mensaje <em>Hola mundo</em>. Usaremos un método especial llamado <strong>main</strong>. El main es el primer método que Java busca y ejecuta en el proyecto. Es el punto de entrada.
-<img alt="IntelliJ" src="../../img/main.png" /></li>
-<li>Ejecutamos el programa mediante
-<img alt="IntelliJ" src="../../img/run.png" /></li>
-<li>Añadimos y ejecutamos la siguiente sentencia dentro del método main: <em>System.out.println("Hello World");</em>
-<img alt="IntelliJ" src="../../img/printhelloworld.png" />
-<img alt="IntelliJ" src="../../img/output.png" /></li>
-</ol>
-<h2 id="challenge">Challenge</h2>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>Modifica el programa para que imprima por pantalla <em>Hello Teacher</em>.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>Realizar las actividades 1 y 2.</p>
-</div>
+                <h1 id="variables">Variables</h1>
+<p style='text-align: justify;'>Las variables en Java es una forma de almacenar información en nuestro ordenador. Definimos variables asignándoles un nombre. De igual manera se puede acceder a la información que guardar las variable, simplemente accediendo por el nombre que le hemos dado.
+Es el ordenador el que se encarga de averiguar dónde se almacena internamente en la memoria RAM del ordenador.
+Como su nombre indica "variable", se puede modificar el contenido que ésta almacena, es decir, es variable. Lo único que tenemos que hacer es decirle al PC qué tipo de información queremos guardar en nuestra variable y darle un nombre.
+Existe diferentes tipos de información que podemos utilizar para definir nuestras variables. Se les conoce como <strong>tipos de datos</strong> o data types.
+Los tipos de datos son palabras reservas <strong>keywords</strong> en Java, es decir, no podemos utilizarlas fuera del contexto de tipo de datos.
+
+Para definir una variable, necesitamos especificar el tipo de datos, luego darle un nombre a nuestra variable, y opcionalmente, podemos agregar una expresión para inicializar la variable con un valor.
+</p>
+
+<h2 id="reglas-para-el-nombrado-de-variables">Reglas para el nombrado de variables</h2>
+<ul>
+<li>
+<p>Tiene que comenzar con una letra o '_', nunca con números.</p>
+</li>
+<li>
+<p>Puede contener números. No debe contener espacios en blanco.</p>
+</li>
+<li>
+<p>No debe ser muy largo y debe expresar algo en el contexto.</p>
+</li>
+<li>
+<p>No se pueden usar palabras reservadas.</p>
+</li>
+<li>
+<p>Mayúsculas y minúsculas se tratan diferente.</p>
+</li>
+</ul>
+<p><img alt="Java" src="../../img/variable.png" /></p>
+<p>Definimos nuestra primera variable en el programa de la siguiente forma:
+<img alt="Java" src="../../img/myfirstint.png" /></p>
+<p>La línea que acabamos de escribir se conoce como <strong>sentencia de declaración</strong>.</p>
+<h2 id="keywords">Keywords</h2>
+<p>Son palabras reservadas del lenguaje. Es decir, son palabras que tienen un significado especial en Java y no puedes usarlas fuera de ese contexto.
+Ejemplos: public, class, void, static, etc.
+Existen 61 <a href="https://en.wikipedia.org/wiki/List_of_Java_keywords">keywords</a> en Java.</p>
                 
               
               
