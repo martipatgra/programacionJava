@@ -562,14 +562,17 @@ En su forma más simple una declaración incluye el tipo de datos y el nombre de
     <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">dia</span> <span class="o">=</span> <span class="mi">22</span><span class="p">;</span>
 </code></pre></div>
+<hr />
 <p>En el siguiente ejemplo, hay variables tanto a la izquierda como a la derecha del operador de asignación (=). Pero tienen un significado muy diferente. La variable de la derecha (num2) se trata como un valor. Si esa variable almacena 20, entonces ese es su valor. De hecho, cualquier cosa que ocurra en el lado derecho de un operador de asignación se trata como un valor. La variable de la izquierda (num1) se trata como una ubicación de memoria. Es donde se almacenará el valor 20 como resultado de la ejecución de esta declaración. El efecto de esta declaración es copia el valor almacenado en num2 en num1, como se ilustra en la siguiente imagen.</p>
-<div class="highlight"><pre><span></span><code>    <span class="c1">//se crean las variables</span>
+<div class="highlight"><pre><span></span><code><span class="n">Ejemplo</span>
+    <span class="c1">//se crean las variables</span>
     <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
 
     <span class="n">num1</span> <span class="o">=</span> <span class="n">num2</span><span class="p">;</span> <span class="c1">//se copia el valor de num2 a la variable num1</span>
 </code></pre></div>
 <p><img alt="Java" src="../../img/varmem.png" /></p>
+<hr />
 <h2 id="challenge">Challenge</h2>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
