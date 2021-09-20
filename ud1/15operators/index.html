@@ -14,7 +14,7 @@
     
     
       
-        <title>Statements - Sentencias - Programación</title>
+        <title>1.5.- Operadores y operandos - Programación</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#statements-sentencias" class="md-skip">
+        <a href="#operadores" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Statements - Sentencias
+              1.5.- Operadores y operandos
             
           </span>
         </div>
@@ -192,12 +192,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         1.- Elementos de un programa informático
@@ -351,11 +353,86 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../15operators/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          1.5.- Operadores y operandos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         1.5.- Operadores y operandos
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operando" class="md-nav__link">
+    Operando
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-operadores-en-java" class="md-nav__link">
+    Tipos de operadores en Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operador-de-asignacion" class="md-nav__link">
+    Operador de asignación (=)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-aritmeticos" class="md-nav__link">
+    Operadores aritméticos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-unarios" class="md-nav__link">
+    Operadores unarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abreviaciones" class="md-nav__link">
+    Abreviaciones
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -407,49 +484,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sentencias-de-declaracion" class="md-nav__link">
-    Sentencias de declaración
+  <a href="#operando" class="md-nav__link">
+    Operando
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sentencias-de-asignacion" class="md-nav__link">
-    Sentencias de asignación
+  <a href="#tipos-de-operadores-en-java" class="md-nav__link">
+    Tipos de operadores en Java
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#challenge" class="md-nav__link">
-    Challenge
+  <a href="#operador-de-asignacion" class="md-nav__link">
+    Operador de asignación (=)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#expressions" class="md-nav__link">
-    Expressions
+  <a href="#operadores-aritmeticos" class="md-nav__link">
+    Operadores aritméticos
   </a>
-  
-    <nav class="md-nav" aria-label="Expressions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#challenge2" class="md-nav__link">
-    Challenge2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#paquetes-en-java-java-packages" class="md-nav__link">
-    Paquetes en Java - Java Packages
+  <a href="#operadores-unarios" class="md-nav__link">
+    Operadores unarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abreviaciones" class="md-nav__link">
+    Abreviaciones
   </a>
   
 </li>
@@ -467,67 +538,81 @@
               
                 
                 
-                <h1 id="statements-sentencias">Statements - Sentencias</h1>
-<p style='text-align: justify;'>Hemos comentado que un programa es un conjunto de instrucciones. Estas instrucciones se llaman sentencias o statements en inglés. Una sentencia es un segmento de código que realiza una acción en el programa.
-A medida que se ejecuta un programa, decimos que ejecuta sentencias, lo que significa que lleva a cabo las acciones especificadas por esas sentencias.
-En nuestro programa Hello World, tenemos un statement en la <strong>línea 4 y 6</strong>. La regla en Java es que las sentencias deben terminar con un punto y coma.
-Si se olvida, se produciría un error de sintaxis.
-</p>
-
-<h2 id="sentencias-de-declaracion">Sentencias de declaración</h2>
-<p>Se usan para definir una variable de un tipo de dato en particular. En Java, una variable debe declararse antes de que pueda usarse en un programa. De no hacerlo, se produciría un error de sintaxis.
-En su forma más simple una declaración incluye el tipo de datos y el nombre de la variable. Opcionalmente se puede establecer la variable a cierto valor. Es decir, se dice que se ha inicializado.</p>
-<div class="highlight"><pre><span></span><code><span class="nl">Ejemplos</span><span class="p">:</span>
-   <span class="kt">int</span> <span class="n">numero</span><span class="p">;</span>
-   <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">//se crea la variable a y se le asigna el valor 3</span>
-   <span class="kt">int</span> <span class="n">dia</span><span class="p">;</span>
+                <h1 id="operadores">Operadores</h1>
+<p>Los operadores son símbolos especiales en Java que realizan operaciones entre uno o varios operandos y devuelve un resultado. Uno de los más usados es el operador suma (+) como hemos visto en clases anteriores.</p>
+<h2 id="operando">Operando</h2>
+<p>Es cualquier término, que puede ser una variable o valor y que es manipulado por un operador.</p>
+<div class="highlight"><pre><span></span><code>   <span class="kt">int</span> <span class="n">valor</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+   <span class="kt">int</span> <span class="n">numero</span> <span class="o">=</span> <span class="n">valor</span> <span class="o">+</span> <span class="mi">12</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="sentencias-de-asignacion">Sentencias de asignación</h2>
-<p>Una sentencia de asignación es una sentencia que almacena (asigna) un valor en una variable. Una sentencia de asignación utiliza el signo igual (=) como operador de asignación. En su forma más simple, tiene una variable en el lado izquierdo del signo igual y algún tipo de valor en el lado derecho.</p>
-<div class="highlight"><pre><span></span><code><span class="nl">Ejemplos</span><span class="p">:</span>
-    <span class="n">numero</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">//asigno el valor 6 a la variable numero</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">dia</span> <span class="o">=</span> <span class="mi">22</span><span class="p">;</span>
-</code></pre></div>
-<hr />
-<p>En el siguiente ejemplo, hay variables tanto a la izquierda como a la derecha del operador de asignación (=). Pero tienen un significado muy diferente. La variable de la derecha (num2) se trata como un valor. Si esa variable almacena 20, entonces ese es su valor. De hecho, cualquier cosa que ocurra en el lado derecho de un operador de asignación se trata como un valor. La variable de la izquierda (num1) se trata como una ubicación de memoria. Es donde se almacenará el valor 20 como resultado de la ejecución de esta declaración. El efecto de esta declaración es copia el valor almacenado en num2 en num1, como se ilustra en la siguiente imagen.</p>
-<div class="highlight"><pre><span></span><code><span class="n">Ejemplo</span>
-    <span class="c1">//se crean las variables</span>
-    <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
-
-    <span class="n">num1</span> <span class="o">=</span> <span class="n">num2</span><span class="p">;</span> <span class="c1">//se copia el valor de num2 a la variable num1</span>
-</code></pre></div>
-<p><img alt="Java" src="../../img/varmem.png" /></p>
-<hr />
-<h2 id="challenge">Challenge</h2>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>En el programa Hello World, imprime por pantalla la variable miPrimerEntero que hemos creado.</p>
-</div>
-<h2 id="expressions">Expressions</h2>
-<p>Una expresión es un conjunto de variables, operadores e invocaciones de métodos que se construyen para poder ser evaluadas retornando un resultado.
-Podemos cambiar la expresión y añadir una suma, de forma que quede así:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">miPrimerEntero</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
-</code></pre></div>
-<p>Java examina la expresión de la derecha del signo igual y ha realizado el cálculo de una expresión matemática. Después ha asignado ese valor a la variable miPrimerEntero.
-Podríamos complicar más la expresión utilizando <strong>operadores</strong> como paréntesis, multiplicaciones, divisiones, etc.
-Los operadores en Java realizan una operación en una variable o valor. Más adelante veremos los diferentes operadores existentes.</p>
-<h3 id="challenge2">Challenge2</h3>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>En el programa Hello World, crea las siguientes variables adicionales justo debajo de la declaración "int miPrimerEntero = 7;" en el programa:</p>
+<p>En el ejemplo anterior, <em>+</em> es el operador y <em>valor</em> y <em>12</em> son los operandos. <em>valor + 12</em> es una expresión que devuelve el resultado de 20.</p>
+<h2 id="tipos-de-operadores-en-java">Tipos de operadores en Java</h2>
+<p>Java proporciona muchos tipos de operadores que se pueden usar según la necesidad. Se clasifican según la funcionalidad que brindan. Algunos de los tipos son los siguientes:</p>
+<p>Operadores aritméticos, unarios, de asignación, relacionales, lógicos, etc.</p>
+<h2 id="operador-de-asignacion">Operador de asignación (=)</h2>
+<p>Es uno de los operadores más usados. Se usa para asignar un valor a cualquier variable. Tiene una asociación de derecha a izquierda, es decir, el valor dado en el lado derecho del operador se asigna a la variable de la izquierda y, por lo tanto, el valor del lado derecho debe declararse antes de usarlo o debe ser una constante.</p>
+<h2 id="operadores-aritmeticos">Operadores aritméticos</h2>
+<p>Se utilizan para realizar operaciones aritméticas simples.</p>
 <ul>
-<li><strong>num1</strong> de tipo int y con un valor de 10.</li>
-<li><strong>num2</strong> de tipo int y con un valor de 8.</li>
-<li>y una tercera <strong>total</strong> que sea la suma de las anteriores.</li>
-<li>imprime por pantalla la variable total.</li>
+<li>*: Multiplicación</li>
+<li>/: División</li>
+<li>%: Modulo</li>
+<li>+: Suma</li>
+<li>–: Resta</li>
 </ul>
-</div>
-<h2 id="paquetes-en-java-java-packages">Paquetes en Java - Java Packages</h2>
-<p>Un paquete es una forma de organizar nuestros proyectos Java. Se pueden ver como carpetas dentro de la estructuración interna del proyecto.
-IntelliJ nos ofrece la opción de automatizar esto cuando creamos un proyecto, simplemente seleccionando la opción:
-<img alt="Java" src="../../img/createprojecttemplate.png" /></p>
+<h2 id="operadores-unarios">Operadores unarios</h2>
+<p>Los operadores unarios solo necesitan un operando. Se usan para incrementar, disminuir o negar un valor.</p>
+<ul>
+<li><strong>++</strong>: Operador de incremento, utilizado para incrementar el valor en 1. Hay dos variedades de operador de incremento.</li>
+<li>Pre-Incremento: el valor se incrementa primero y luego se calcula el resultado.</li>
+</ul>
+<div class="highlight"><pre><span></span><code> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+ <span class="o">++</span><span class="n">i</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>Post-Incremento: el valor se usa por primera vez para calcular el resultado y luego se incrementa.</li>
+</ul>
+<div class="highlight"><pre><span></span><code> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+ <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li><strong>--</strong>: Operador de decremento , usado para incrementar el valor en 1. Hay dos variedades de operador de incremento.</li>
+<li>Pre-Decremento: el valor se disminuye primero y luego se calcula el resultado.</li>
+<li>Post-Decremento: el valor se usa por primera vez para calcular el resultado y luego se disminuye.</li>
+<li><strong>!</strong> : Operador lógico “no”, utilizado para invertir un valor booleano.</li>
+</ul>
+<h2 id="abreviaciones">Abreviaciones</h2>
+<p>En muchos casos, el operador de asignación se puede combinar con otros operadores para construir una versión más corta de la declaración llamada Declaración Compuesta (Compound Statement).</p>
+<ul>
+<li>+= , para sumar el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a + 5;</span>
+</code></pre></div>
+<ul>
+<li>– = , para restar el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">-=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a - 5;</span>
+</code></pre></div>
+<ul>
+<li>*= , para multiplicar el operando izquierdo con el operando derecho y luego asignándolo a la variable de la izquierda.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">*=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a * 5;</span>
+</code></pre></div>
+<ul>
+<li>/ = , para dividir el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">/=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a / 5;</span>
+</code></pre></div>
+<ul>
+<li>% = , para asignar el módulo del operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">%=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a % 5;</span>
+</code></pre></div>
                 
               
               
