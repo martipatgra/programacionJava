@@ -14,7 +14,7 @@
     
     
       
-        <title>Conceptos básicos del lenguaje - Programación</title>
+        <title>1.7.- Statements - Programación</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#java" class="md-skip">
+        <a href="#comentarios-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Conceptos básicos del lenguaje
+              1.7.- Statements
             
           </span>
         </div>
@@ -227,14 +227,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       <label class="md-nav__link" for="__nav_2_2">
         1.2.- El lenguaje Java
@@ -250,72 +248,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Conceptos básicos del lenguaje
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../121conceptosbasicos/" class="md-nav__link">
         Conceptos básicos del lenguaje
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#jre" class="md-nav__link">
-    JRE
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jdk" class="md-nav__link">
-    JDK
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#versiones-java" class="md-nav__link">
-    Versiones Java
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#porque-java" class="md-nav__link">
-    ¿Porqué Java?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -440,11 +377,58 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../17statements/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          1.7.- Statements
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         1.7.- Statements
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios-de-una-linea" class="md-nav__link">
+    Comentarios de una línea //
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios-multilinea" class="md-nav__link">
+    Comentarios multilínea
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -496,29 +480,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jre" class="md-nav__link">
-    JRE
+  <a href="#comentarios-de-una-linea" class="md-nav__link">
+    Comentarios de una línea //
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#jdk" class="md-nav__link">
-    JDK
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#versiones-java" class="md-nav__link">
-    Versiones Java
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#porque-java" class="md-nav__link">
-    ¿Porqué Java?
+  <a href="#comentarios-multilinea" class="md-nav__link">
+    Comentarios multilínea
   </a>
   
 </li>
@@ -536,27 +506,23 @@
               
                 
                 
-                <h1 id="java">JAVA <img src="../../img/java.png" width="200" align="right"></h1>
-<p style='text-align: justify;'>Java es un lenguaje de programación orientado a objetos. Fue creado por James Gosling en 1995. Oracle lo compró.
-Es un lenguaje indepediente de la plataforma donde va a ser ejecutado, esto significa, que una vez que se compila (.class también llamado bytecode) puede ser transportado a diferentes plataformas (Windows, MacOS, Linux) para ser ejecutado.
-¿Cómo se hace esto? Utilizando la JVM (Java Virtual Machine). La JVM coge los bytecode compilados y los interpreta dependiendo del OS para poder ser ejecutado. Por tanto, el bytecode siempre es el mismo, pero lo que genera la JVM cambiará para cada SO.
-También existen otros términos muy famosos relacionados con Java como JRE y JDK.
-</p>
-
-<h2 id="jre">JRE</h2>
-<p><strong>Java Runtime Environment</strong>. La máquina virtual de Java está incluida en el JRE. Se utiliza para ejecutar aplicaciones Java en el SO, por tanto si queremos desplegar una aplicación en Java, necesitamos tener instalado previamente el JRE para esa máquina y plataforma.</p>
-<h2 id="jdk">JDK</h2>
-<p><strong>Java Development Kit</strong>. Es más pesado que el JRE, contiene todas las herramientas para programar y compilar las clases Java en bytecode, por tanto cuando desarrollamos clases Java necesitamos el JDK. Además incluy el JRE.</p>
-<h2 id="versiones-java">Versiones Java</h2>
-<p>La última versión de Java se conoce como LTS Release (Long Term Support), y es JAVA 11 LTS ( la LTS 17 estará disponible 14 de Septiembre 2021).
-Nosotros para el propósito de este curso usaremos Java 11.</p>
-<h2 id="porque-java">¿Porqué Java?</h2>
-<ul>
-<li>Nació en 1995 y todavía sigue siendo uno de los lenguajes más usados a nivel mundial.</li>
-<li>Su capacidad de escribirlo y ejecutarlo en cualquier plataforma: <em>"Write once, run anywhere"</em>.</li>
-<li>Desde que nació han salido muchas releases de gran importancia, el lenguaje sigue evolucionando con nuevas funcionalidades.</li>
-<li>Tiene un comunidad muy grande de código abierto, documentación y tutoriales. Es usado por muchas compañías de software, por tanto se ofertan muchos empleos de desarrolladores Java.</li>
-</ul>
+                <h1 id="comentarios-en-java">Comentarios en Java</h1>
+<p>Los comentarios son ignorados por el ordenador y se usan en el programa para ayudar a describir alguna funcionalidad o explicación del código fuente.
+Existen dos tipos de comentarios.</p>
+<h2 id="comentarios-de-una-linea">Comentarios de una línea //</h2>
+<p>Usamos la doble barra <em>//</em> para realizar un comentario de una sola línea. Lo podemos usar en una línea en blanco o detrás del código.</p>
+<div class="highlight"><pre><span></span><code>   <span class="kt">int</span> <span class="n">gravity</span><span class="p">;</span> <span class="c1">//variable para calcular la gravedad</span>
+</code></pre></div>
+<h2 id="comentarios-multilinea">Comentarios multilínea</h2>
+<p>Usamos la barra con asterisco doble para realizar comentarios que afecten a más de una línea. De forma que cuando abramos un comentario usaremos <em>/<strong><em>, para cerrarlo </em></strong>/</em>, y entre medio de las líneas *.</p>
+<div class="highlight"><pre><span></span><code>   <span class="cm">/**</span>
+<span class="cm">   *   Clase que almacena en la base de datos</span>
+<span class="cm">   *   los datos de una persona.</span>
+<span class="cm">   **/</span>
+   <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Persona</span> <span class="p">{</span>
+      <span class="p">...</span>
+   <span class="p">}</span>
+</code></pre></div>
                 
               
               
