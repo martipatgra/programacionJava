@@ -14,7 +14,7 @@
     
     
       
-        <title>Proyecto Hola Mundo - Programación</title>
+        <title>Conceptos básicos del lenguaje - Programación</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#proyecto-hola-mundo-estructura-de-un-programa" class="md-skip">
+        <a href="#java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Proyecto Hola Mundo
+              Conceptos básicos del lenguaje
             
           </span>
         </div>
@@ -217,7 +217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../elementos/" class="md-nav__link">
+      <a href="../1elementos/" class="md-nav__link">
         1.1.- Programa y lenguajes de programación
       </a>
     </li>
@@ -250,30 +250,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../conceptosbasicos/" class="md-nav__link">
-        Conceptos básicos del lenguaje
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
-        Setup
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -286,12 +262,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Proyecto Hola Mundo
+          Conceptos básicos del lenguaje
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Proyecto Hola Mundo
+        Conceptos básicos del lenguaje
       </a>
       
         
@@ -309,8 +285,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#challenge" class="md-nav__link">
-    Challenge
+  <a href="#jre" class="md-nav__link">
+    JRE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jdk" class="md-nav__link">
+    JDK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versiones-java" class="md-nav__link">
+    Versiones Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#porque-java" class="md-nav__link">
+    ¿Porqué Java?
   </a>
   
 </li>
@@ -319,6 +316,30 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../122setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../123holamundo/" class="md-nav__link">
+        Proyecto Hola Mundo
+      </a>
     </li>
   
 
@@ -355,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../variables/" class="md-nav__link">
+      <a href="../131variables/" class="md-nav__link">
         Variables
       </a>
     </li>
@@ -367,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../statements/" class="md-nav__link">
+      <a href="../132statements.md" class="md-nav__link">
         Statements y paquetes
       </a>
     </li>
@@ -385,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypejava/" class="md-nav__link">
+      <a href="../14datatypejava/" class="md-nav__link">
         1.4.- Tipos de datos
       </a>
     </li>
@@ -439,8 +460,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#challenge" class="md-nav__link">
-    Challenge
+  <a href="#jre" class="md-nav__link">
+    JRE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jdk" class="md-nav__link">
+    JDK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versiones-java" class="md-nav__link">
+    Versiones Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#porque-java" class="md-nav__link">
+    ¿Porqué Java?
   </a>
   
 </li>
@@ -458,35 +500,27 @@
               
                 
                 
-                <h1 id="proyecto-hola-mundo-estructura-de-un-programa">Proyecto "Hola Mundo". Estructura de un programa</h1>
-<p>Cada vez que estás aprendiendo un nuevo lenguaje de programación es una <em>tradición</em> crear un nuevo programa muy simple que genera el texto <strong>Hola mundo</strong>.
-Veamos como podemos hacer esto en IntelliJ.</p>
-<ol>
-<li>Hacemos click en crear nuevo proyecto y elegimos el JDK 11 que hemos instalado.
-<img alt="IntelliJ" src="../../img/selectjdk.png" /></li>
-<li>Luego en Next, Next, añadimos nombre al proyecto y Finish.
-<img alt="IntelliJ" src="../../img/projectname.png" />
-<img alt="IntelliJ" src="../../img/projectstructure.png" /></li>
-<li>Creamos una nueva clase Java llamada Hello.java
-<img alt="IntelliJ" src="../../img/newjavaclass.png" />
-<img alt="IntelliJ" src="../../img/helloclass.png" /></li>
-<li>Vamos a crear un método para imprimir el mensaje <em>Hola mundo</em>. Usaremos un método especial llamado <strong>main</strong>. El main es el primer método que Java busca y ejecuta en el proyecto. Es el punto de entrada.
-<img alt="IntelliJ" src="../../img/main.png" /></li>
-<li>Ejecutamos el programa mediante
-<img alt="IntelliJ" src="../../img/run.png" /></li>
-<li>Añadimos y ejecutamos la siguiente sentencia dentro del método main: <em>System.out.println("Hello World");</em>
-<img alt="IntelliJ" src="../../img/printhelloworld.png" />
-<img alt="IntelliJ" src="../../img/output.png" /></li>
-</ol>
-<h2 id="challenge">Challenge</h2>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>Modifica el programa para que imprima por pantalla <em>Hello Teacher</em>.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>Realizar las actividades 1 y 2.</p>
-</div>
+                <h1 id="java">JAVA <img src="../../img/java.png" width="200" align="right"></h1>
+<p style='text-align: justify;'>Java es un lenguaje de programación orientado a objetos. Fue creado por James Gosling en 1995. Oracle lo compró.
+Es un lenguaje indepediente de la plataforma donde va a ser ejecutado, esto significa, que una vez que se compila (.class también llamado bytecode) puede ser transportado a diferentes plataformas (Windows, MacOS, Linux) para ser ejecutado.
+¿Cómo se hace esto? Utilizando la JVM (Java Virtual Machine). La JVM coge los bytecode compilados y los interpreta dependiendo del OS para poder ser ejecutado. Por tanto, el bytecode siempre es el mismo, pero lo que genera la JVM cambiará para cada SO.
+También existen otros términos muy famosos relacionados con Java como JRE y JDK.
+</p>
+
+<h2 id="jre">JRE</h2>
+<p><strong>Java Runtime Environment</strong>. La máquina virtual de Java está incluida en el JRE. Se utiliza para ejecutar aplicaciones Java en el SO, por tanto si queremos desplegar una aplicación en Java, necesitamos tener instalado previamente el JRE para esa máquina y plataforma.</p>
+<h2 id="jdk">JDK</h2>
+<p><strong>Java Development Kit</strong>. Es más pesado que el JRE, contiene todas las herramientas para programar y compilar las clases Java en bytecode, por tanto cuando desarrollamos clases Java necesitamos el JDK. Además incluy el JRE.</p>
+<h2 id="versiones-java">Versiones Java</h2>
+<p>La última versión de Java se conoce como LTS Release (Long Term Support), y es JAVA 11 LTS ( la LTS 17 estará disponible 14 de Septiembre 2021).
+Nosotros para el propósito de este curso usaremos Java 11.</p>
+<h2 id="porque-java">¿Porqué Java?</h2>
+<ul>
+<li>Nació en 1995 y todavía sigue siendo uno de los lenguajes más usados a nivel mundial.</li>
+<li>Su capacidad de escribirlo y ejecutarlo en cualquier plataforma: <em>"Write once, run anywhere"</em>.</li>
+<li>Desde que nació han salido muchas releases de gran importancia, el lenguaje sigue evolucionando con nuevas funcionalidades.</li>
+<li>Tiene un comunidad muy grande de código abierto, documentación y tutoriales. Es usado por muchas compañías de software, por tanto se ofertan muchos empleos de desarrolladores Java.</li>
+</ul>
                 
               
               
