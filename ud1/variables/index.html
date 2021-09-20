@@ -362,8 +362,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acceso" class="md-nav__link">
-    Acceso
+  <a href="#vida-de-las-variables" class="md-nav__link">
+    Vida de las variables
   </a>
   
 </li>
@@ -371,13 +371,6 @@
         <li class="md-nav__item">
   <a href="#visibilidad" class="md-nav__link">
     Visibilidad
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vida-de-las-variables" class="md-nav__link">
-    Vida de las variables
   </a>
   
 </li>
@@ -481,8 +474,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acceso" class="md-nav__link">
-    Acceso
+  <a href="#vida-de-las-variables" class="md-nav__link">
+    Vida de las variables
   </a>
   
 </li>
@@ -490,13 +483,6 @@
         <li class="md-nav__item">
   <a href="#visibilidad" class="md-nav__link">
     Visibilidad
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vida-de-las-variables" class="md-nav__link">
-    Vida de las variables
   </a>
   
 </li>
@@ -550,10 +536,17 @@ Para definir una variable, necesitamos especificar el tipo de datos, luego darle
 <p>Son palabras reservadas del lenguaje. Es decir, son palabras que tienen un significado especial en Java y no puedes usarlas fuera de ese contexto.
 Ejemplos: public, class, void, static, etc.
 Existen 61 <a href="https://en.wikipedia.org/wiki/List_of_Java_keywords">keywords</a> en Java.</p>
-<h2 id="acceso">Acceso</h2>
-<p><img alt="Java" src="../../img/varmem.png" /></p>
-<h2 id="visibilidad">Visibilidad</h2>
 <h2 id="vida-de-las-variables">Vida de las variables</h2>
+<p>Las variables son memorias reservadas para almacenar valores en RAM. Estas posiciones de memoria se liberan tan pronto como termina la vida de la variable. Según la vida de las variables, hay tres tipos de Variables.</p>
+<p><strong>1. Variables locales</strong>: La vida permanece dentro de un bloque donde se ha declarado.</p>
+<p><strong>2. Variables de instancia</strong>: Declaradas dentro de la Clase pero fuera de los métodos. No debería ser estático.</p>
+<p><strong>3. Variables estáticas</strong>: es como una variable global. Declarado como estático en la clase pero fuera de los métodos.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kd">static</span> <span class="kt">int</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="visibilidad">Visibilidad</h2>
+<p>En las variables locales, su ámbito y uso se encuentra dentro del método o bloque en el que se definió y se destruyen después de la ejecución del método. Es decir, no se puede usar una variable local fuera del método actual.</p>
+<p>A las variables de instancia se puede acceder solo a través de objetos de la clase para la que se definió.</p>
+<p>Un campo / variable estático pertenece a la clase y se cargará en la memoria junto con la clase. Se invocan sin crear un objeto. (Usando el nombre de la clase como referencia). Solo hay una copia de la variable estática disponible en toda la clase, es decir, el valor de la variable estática será el mismo en todos los objetos. Puede definir una variable estática utilizando la palabra clave <strong>static</strong>.</p>
                 
               
               
