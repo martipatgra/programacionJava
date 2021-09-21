@@ -485,9 +485,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conversiones-de-tipo-casting-entre-tipos-nativos" class="md-nav__link">
-    Conversiones de tipo (casting entre tipos nativos)
+  <a href="#conversiones-de-tipo" class="md-nav__link">
+    Conversiones de tipo
   </a>
+  
+    <nav class="md-nav" aria-label="Conversiones de tipo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversiones-por-defecto" class="md-nav__link">
+    Conversiones por defecto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversiones-forzosas-casting-entre-tipos-nativos" class="md-nav__link">
+    Conversiones forzosas (casting entre tipos nativos)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -667,9 +687,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conversiones-de-tipo-casting-entre-tipos-nativos" class="md-nav__link">
-    Conversiones de tipo (casting entre tipos nativos)
+  <a href="#conversiones-de-tipo" class="md-nav__link">
+    Conversiones de tipo
   </a>
+  
+    <nav class="md-nav" aria-label="Conversiones de tipo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversiones-por-defecto" class="md-nav__link">
+    Conversiones por defecto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversiones-forzosas-casting-entre-tipos-nativos" class="md-nav__link">
+    Conversiones forzosas (casting entre tipos nativos)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -958,7 +998,37 @@ Los operadores condicionales son:</p>
 <h2 id="precedencia-de-operadores">Precedencia de operadores</h2>
 <p>El orden de precedencia de los operadores es:</p>
 <p><img alt="Java" src="../../img/precedenceoperators.png" /></p>
-<h2 id="conversiones-de-tipo-casting-entre-tipos-nativos">Conversiones de tipo (casting entre tipos nativos)</h2>
+<h2 id="conversiones-de-tipo">Conversiones de tipo</h2>
+<h3 id="conversiones-por-defecto">Conversiones por defecto</h3>
+<p>Las reglas de Java para saber el tipo de datos resultante de una expresión se siguen las siguientes reglas:</p>
+<table>
+<thead>
+<tr>
+<th>Si algún operando es</th>
+<th>El otro operando se transforma a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>double</td>
+<td>double</td>
+</tr>
+<tr>
+<td>float</td>
+<td>float</td>
+</tr>
+<tr>
+<td>long</td>
+<td>long</td>
+</tr>
+<tr>
+<td>byte or short</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<p>Si se aplican dos regla, se elige la que aparece primero en la tabla.</p>
+<h3 id="conversiones-forzosas-casting-entre-tipos-nativos">Conversiones forzosas (casting entre tipos nativos)</h3>
 <p>Es una forma de convertir un número de un tipo a otro tipo de dato. Para hacerlo ponemos en paréntesis el tipo de dato al que queremos convertirlo.</p>
 <div class="highlight"><pre><span></span><code>    <span class="kt">byte</span> <span class="n">miByte</span> <span class="o">=</span> <span class="p">(</span><span class="kt">byte</span><span class="p">)</span> <span class="p">(</span><span class="mi">14</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
 </code></pre></div>
