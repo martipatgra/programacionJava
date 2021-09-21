@@ -395,6 +395,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#expresiones" class="md-nav__link">
+    Expresiones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expresiones-mixtas-con-int-y-double" class="md-nav__link">
+    Expresiones mixtas con int y double
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tipos-de-operadores-en-java" class="md-nav__link">
     Tipos de operadores en Java
   </a>
@@ -439,6 +453,13 @@
         <li class="md-nav__item">
   <a href="#operadores-de-bits" class="md-nav__link">
     Operadores de bits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operador-ternario" class="md-nav__link">
+    Operador ternario
   </a>
   
 </li>
@@ -550,6 +571,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#expresiones" class="md-nav__link">
+    Expresiones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expresiones-mixtas-con-int-y-double" class="md-nav__link">
+    Expresiones mixtas con int y double
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tipos-de-operadores-en-java" class="md-nav__link">
     Tipos de operadores en Java
   </a>
@@ -599,6 +634,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#operador-ternario" class="md-nav__link">
+    Operador ternario
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#abreviaciones" class="md-nav__link">
     Abreviaciones
   </a>
@@ -640,6 +682,25 @@
    <span class="kt">int</span> <span class="n">numero</span> <span class="o">=</span> <span class="n">valor</span> <span class="o">+</span> <span class="mi">12</span><span class="p">;</span>
 </code></pre></div>
 <p>En el ejemplo anterior, <em>+</em> es el operador y <em>valor</em> y <em>12</em> son los operandos. <em>valor + 12</em> es una expresión que devuelve el resultado de 20.</p>
+<h2 id="expresiones">Expresiones</h2>
+<p>Una expresión es una combinación de literales, operadores, nombres de variables y paréntesis que se utilizan para calcular un valor.</p>
+<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">miPrimerEntero</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">resultado</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="n">resultado</span> <span class="o">=</span> <span class="p">(</span><span class="n">miPrimerEntero</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">32</span> <span class="o">+</span> <span class="mi">12</span><span class="p">);</span>
+</code></pre></div>
+<p>Java examina la expresión de la derecha del signo igual y realiza el cálculo de una expresión matemática. Después asigna ese valor a la variable resultado.
+Podríamos complicar más la expresión utilizando <strong>operadores</strong> como paréntesis, multiplicaciones, divisiones, etc.</p>
+<p>Las partes de una expresión deben estar ordenadas correctamente. Las reglas para las expresiones Java correctas son casi las mismas que las del álgebra:</p>
+<ul>
+<li>Cada operador debe tener el número correcto de operandos.</li>
+<li>Multiplicación *, División /, Suma +, Resta: debe tener dos operandos, uno en cada lado.</li>
+<li>La negación - y unario más + deben ir seguidos de un operando.</li>
+<li>Los paréntesis () pueden rodear una expresión legal para convertirla en operando.</li>
+</ul>
+<p><img alt="Java" src="../../img/expressions.png" /></p>
+<h2 id="expresiones-mixtas-con-int-y-double">Expresiones mixtas con int y double</h2>
+<p>Si ambos operandos de un operador aritmético son números enteros, entonces la operación es una operación entera. Si algún operando es de punto flotante, entonces la operación es de punto flotante.</p>
 <h2 id="tipos-de-operadores-en-java">Tipos de operadores en Java</h2>
 <p>Java proporciona muchos tipos de operadores que se pueden usar según la necesidad. Se clasifican según la funcionalidad que brindan. Algunos de los tipos son los siguientes:</p>
 <p>Operadores aritméticos, unarios, de asignación, relacionales, lógicos, etc.</p>
@@ -803,6 +864,40 @@ Los operadores condicionales son:</p>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="o">||</span> <span class="n">b</span> <span class="o">==</span> <span class="n">c</span><span class="p">));</span> <span class="c1">//True</span>
 </code></pre></div>
 <h2 id="operadores-de-bits">Operadores de bits</h2>
+<table>
+<thead>
+<tr>
+<th>Símbolo</th>
+<th>Operación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;</td>
+<td>AND</td>
+<td>Si ambos bits de entrada son 1, establece como resultado 1. De lo contrario 0.</td>
+</tr>
+<tr>
+<td>|</td>
+<td>OR</td>
+<td>Si por lo menos uno de los bits de entrada es 1, establece como resultado 1. De lo contrario 0.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>XOR</td>
+<td>Si uno de los bits de entrada es 1 y el otro 0, establece como resultado 1. Si los bits son iguales establece 0.</td>
+</tr>
+<tr>
+<td>~</td>
+<td>NOT</td>
+<td>Invierte todos los bits y devuelve el resultado en complemento a 2.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="operador-ternario">Operador ternario</h2>
+<p>Ternario es una versión abreviada de la sentencia if-else. Tiene tres operandos y de ahí el nombre ternario. El formato general es:</p>
+<p>La declaración anterior significa que si la condición se evalúa como verdadera, entonces ejecuta las instrucciones después del ‘?‘ de lo contrario, ejecuta las instrucciones después de ‘:‘.</p>
 <h2 id="abreviaciones">Abreviaciones</h2>
 <p>En muchos casos, el operador de asignación se puede combinar con otros operadores para construir una versión más corta de la declaración llamada Declaración Compuesta (Compound Statement).</p>
 <ul>
