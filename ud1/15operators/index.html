@@ -423,13 +423,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#abreviaciones" class="md-nav__link">
-    Abreviaciones
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#operadores-relacionales" class="md-nav__link">
     Operadores relacionales
   </a>
@@ -446,6 +439,13 @@
         <li class="md-nav__item">
   <a href="#operadores-de-bits" class="md-nav__link">
     Operadores de bits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abreviaciones" class="md-nav__link">
+    Abreviaciones
   </a>
   
 </li>
@@ -578,13 +578,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#abreviaciones" class="md-nav__link">
-    Abreviaciones
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#operadores-relacionales" class="md-nav__link">
     Operadores relacionales
   </a>
@@ -601,6 +594,13 @@
         <li class="md-nav__item">
   <a href="#operadores-de-bits" class="md-nav__link">
     Operadores de bits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abreviaciones" class="md-nav__link">
+    Abreviaciones
   </a>
   
 </li>
@@ -726,38 +726,6 @@
  <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">++</span><span class="p">;</span><span class="c1">//b = 8, a = 9</span>
 </code></pre></div>
 <p><img alt="Java" src="../../img/postincrement.png" /></p>
-<h2 id="abreviaciones">Abreviaciones</h2>
-<p>En muchos casos, el operador de asignación se puede combinar con otros operadores para construir una versión más corta de la declaración llamada Declaración Compuesta (Compound Statement).</p>
-<ul>
-<li>+= , para sumar el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-  <span class="n">a</span> <span class="o">+=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a + 5;</span>
-</code></pre></div>
-<ul>
-<li>– = , para restar el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-  <span class="n">a</span> <span class="o">-=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a - 5;</span>
-</code></pre></div>
-<ul>
-<li>*= , para multiplicar el operando izquierdo con el operando derecho y luego asignándolo a la variable de la izquierda.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-  <span class="n">a</span> <span class="o">*=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a * 5;</span>
-</code></pre></div>
-<ul>
-<li>/ = , para dividir el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-  <span class="n">a</span> <span class="o">/=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a / 5;</span>
-</code></pre></div>
-<ul>
-<li>% = , para asignar el módulo del operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-  <span class="n">a</span> <span class="o">%=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a % 5;</span>
-</code></pre></div>
 <h2 id="operadores-relacionales">Operadores relacionales</h2>
 <p>Estos operadores se utilizan para verificar relaciones como igualdad, mayor que, menor que. Devuelven el resultado booleano después de la comparación.</p>
 <table>
@@ -835,6 +803,38 @@ Los operadores condicionales son:</p>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="o">||</span> <span class="n">b</span> <span class="o">==</span> <span class="n">c</span><span class="p">));</span> <span class="c1">//True</span>
 </code></pre></div>
 <h2 id="operadores-de-bits">Operadores de bits</h2>
+<h2 id="abreviaciones">Abreviaciones</h2>
+<p>En muchos casos, el operador de asignación se puede combinar con otros operadores para construir una versión más corta de la declaración llamada Declaración Compuesta (Compound Statement).</p>
+<ul>
+<li>+= , para sumar el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a + 5;</span>
+</code></pre></div>
+<ul>
+<li>– = , para restar el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">-=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a - 5;</span>
+</code></pre></div>
+<ul>
+<li>*= , para multiplicar el operando izquierdo con el operando derecho y luego asignándolo a la variable de la izquierda.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">*=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a * 5;</span>
+</code></pre></div>
+<ul>
+<li>/ = , para dividir el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">/=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a / 5;</span>
+</code></pre></div>
+<ul>
+<li>% = , para asignar el módulo del operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">%=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// a = a % 5;</span>
+</code></pre></div>
 <h2 id="precedencia-de-operadores">Precedencia de operadores</h2>
 <h2 id="conversiones-de-tipo-casting-entre-tipos-nativos">Conversiones de tipo (casting entre tipos nativos)</h2>
 <p>Es una forma de convertir un número de un tipo a otro tipo de dato. Para hacerlo ponemos en paréntesis el tipo de dato al que queremos convertirlo.</p>
