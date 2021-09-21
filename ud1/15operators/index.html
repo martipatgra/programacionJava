@@ -647,36 +647,85 @@
 <p>Es uno de los operadores más usados. Se usa para asignar un valor a cualquier variable. Tiene una asociación de derecha a izquierda, es decir, el valor dado en el lado derecho del operador se asigna a la variable de la izquierda y, por lo tanto, el valor del lado derecho debe declararse antes de usarlo o debe ser una constante.</p>
 <h2 id="operadores-aritmeticos">Operadores aritméticos</h2>
 <p>Se utilizan para realizar operaciones aritméticas simples.</p>
-<ul>
-<li>*: Multiplicación</li>
-<li>/: División</li>
-<li>%: Modulo</li>
-<li>+: Suma</li>
-<li>–: Resta</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Símbolo</th>
+<th>Operación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>Suma</td>
+<td>Realiza la suma de los operandos.</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Resta</td>
+<td>Realiza la resta de los operandos.</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Producto</td>
+<td>Multiplica los operandos.</td>
+</tr>
+<tr>
+<td>/</td>
+<td>División</td>
+<td>Realiza la división.</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Módulo</td>
+<td>Calcula el resto.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="operadores-unarios">Operadores unarios</h2>
 <p>Los operadores unarios solo necesitan un operando. Se usan para incrementar, disminuir o negar un valor.</p>
+<table>
+<thead>
+<tr>
+<th>Símbolo</th>
+<th>Operación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>++</td>
+<td>Incremento</td>
+<td>Incrementa el valor en 1 unidad.</td>
+</tr>
+<tr>
+<td>--</td>
+<td>Decremento</td>
+<td>El valor disminuye en 1 unidad.</td>
+</tr>
+<tr>
+<td>!</td>
+<td>NOT lógico</td>
+<td>Invierte un valor booleano.</td>
+</tr>
+</tbody>
+</table>
+<p>Existen dos versiones de estos operadores:</p>
 <ul>
-<li><strong>++</strong>: Operador de incremento, utilizado para incrementar el valor en 1. Hay dos variedades de operador de incremento.</li>
-<li>Pre-Incremento: el valor se incrementa primero y luego se calcula el resultado.</li>
+<li>Pre-incremento y pre-decremento. El valor se aumenta/disminuye primero y luego se calcula el resultado.</li>
 </ul>
 <p><img alt="Java" src="../../img/preincrement.png" /></p>
-<div class="highlight"><pre><span></span><code> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
- <span class="o">++</span><span class="n">a</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+ <span class="n">b</span> <span class="o">=</span> <span class="o">++</span><span class="n">a</span><span class="p">;</span> <span class="c1">//b=9, a=9</span>
 </code></pre></div>
 <ol>
-<li>Post-Incremento: el valor se usa por primera vez para calcular el resultado y luego se incrementa.</li>
+<li>Post-Incremento y post-decremento: el valor se usa por primera vez para calcular el resultado y luego se incrementa/decrementa.</li>
 </ol>
-<div class="highlight"><pre><span></span><code> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
- <span class="n">a</span><span class="o">++</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+ <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">++</span><span class="p">;</span><span class="c1">//b = 8, a = 9</span>
 </code></pre></div>
 <p><img alt="Java" src="../../img/postincrement.png" /></p>
-<ul>
-<li><strong>--</strong>: Operador de decremento , usado para incrementar el valor en 1. Hay dos variedades de operador de incremento.</li>
-<li>Pre-Decremento: el valor se disminuye primero y luego se calcula el resultado.</li>
-<li>Post-Decremento: el valor se usa por primera vez para calcular el resultado y luego se disminuye.</li>
-<li><strong>!</strong> : Operador lógico “no”, utilizado para invertir un valor booleano.</li>
-</ul>
 <h2 id="abreviaciones">Abreviaciones</h2>
 <p>En muchos casos, el operador de asignación se puede combinar con otros operadores para construir una versión más corta de la declaración llamada Declaración Compuesta (Compound Statement).</p>
 <ul>
