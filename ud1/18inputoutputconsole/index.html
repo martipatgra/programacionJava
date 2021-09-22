@@ -560,6 +560,17 @@ La clase <em>Scanner</em> está diseñada para ser una forma muy flexible de rec
    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
    <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
 </code></pre></div>
+<p>Los espacios en blanco como delimitadores también significan que el método <em>next()</em> no puede devolver una cadena vacía ni puede devolver una cadena que contenga espacios. Por ejemplo, considere el código:</p>
+<div class="highlight"><pre><span></span><code>   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Introduce un texto separado por espacio en blanco: &quot;</span><span class="p">);</span>
+   <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+</code></pre></div>
+<p>Si se escribe "Hola mundo" y se presiona la tecla enter, la cadena str almacenará sólo "Hola".</p>
+<p>Para que un objeto <em>Scanner</em> lea cadenas que contienen espacios, debemos usar el método <em>nextLine()</em>:</p>
+<div class="highlight"><pre><span></span><code>   <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+</code></pre></div>
+<p>Cuando se acaba de usar el objeto <em>Scanner</em> hay que cerrar el stream de flujo con:</p>
+<div class="highlight"><pre><span></span><code>   <span class="n">sc</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div>
                 
               
               
