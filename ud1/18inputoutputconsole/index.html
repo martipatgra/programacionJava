@@ -400,9 +400,46 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          1.8.- Entrada y salida de información por consola
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         1.8.- Entrada y salida de información por consola
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#salida-de-la-informacion" class="md-nav__link">
+    Salida de la información
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-de-la-informacion-javautilscanner" class="md-nav__link">
+    Entrada de la información java.util.Scanner
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -460,6 +497,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#salida-de-la-informacion" class="md-nav__link">
+    Salida de la información
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-de-la-informacion-javautilscanner" class="md-nav__link">
+    Entrada de la información java.util.Scanner
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -472,6 +531,21 @@
                 
                 
                 <h1 id="programacion-de-la-consola-entrada-y-salida-de-informacion">Programación de la consola: entrada y salida de información</h1>
+<h2 id="salida-de-la-informacion">Salida de la información</h2>
+<h2 id="entrada-de-la-informacion-javautilscanner">Entrada de la información <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Scanner.html">java.util.Scanner</a></h2>
+<p>Se ha agregado la clase <em>Scanner</em> al paquete java.util que permite la entrada de teclado sin forzar el programador para manejar las excepciones.
+La clase <em>Scanner</em> está diseñada para ser una forma muy flexible de reconocer fragmentos de datos que se ajustan a patrones específicos de cualquier flujo de entrada.</p>
+<p>Para usar la clase Scanner para la entrada de teclado, debemos crear una instancia de Scanner y asociarla con System.in. La clase tiene un constructor para este propósito, por lo que la declaración</p>
+<div class="highlight"><pre><span></span><code>   <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</code></pre></div>
+<p>declara y crea una instancia de un objeto que se puede utilizar para la entrada del teclado. Después de crear un objeto Scanner, podemos hacer una llamada a nextInt(), nextDouble(), o next() para leer, respectivamente, un entero, un número real, o String del teclado.</p>
+<div class="highlight"><pre><span></span><code>   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Introduce un entero: &quot;</span><span class="p">);</span>
+      <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="c1">//Read the integer</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">num</span> <span class="o">+</span>  <span class="s">&quot;, su cuadrado es = &quot;</span> <span class="o">+</span> <span class="n">num</span><span class="err">∗</span><span class="n">num</span><span class="p">);</span>
+   <span class="p">}</span>
+</code></pre></div>
                 
               
               
