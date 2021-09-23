@@ -538,10 +538,12 @@
 <p>En Java, cualquier origen o destino de I/O se considera un flujo de bytes o caracteres. Para realizar la salida, insertamos bytes o caracteres en la secuencia. Para realizar la entrada, extraemos bytes o caracteres del flujo (stream).
 Incluso los caracteres introducidos en un teclado, si se consideran como una secuencia de pulsaciones de teclas, se pueden representar como un stream.</p>
 <p>En Java, la I/O se maneja a través de métodos que pertenecen a clases contenidas en el paquete java.io. Ya hemos visto cómo se usa el método de salida println() para enviar una cadena a la consola. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Hola mundo&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code>   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola mundo&quot;</span><span class="p">);</span>
 </code></pre></div>
 <p>imprime el texto <em>Hola mundo</em> por la consola.</p>
 <p>Los objetos <strong>System.out</strong> y <strong>System.err</strong> se pueden usar para escribir la salida en la consola. Como sugiere su nombre, el flujo de errores se usa principalmente para mensajes de error, mientras que el flujo de salida se usa para otras salidas impresas.</p>
+<div class="highlight"><pre><span></span><code>   <span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fallo al abrir el fichero&quot;</span><span class="p">);</span>
+</code></pre></div>
 <p>De manera similar, como sugiere su nombre, el objeto System.in se puede usar para manejar la entrada, que se trata en el siguiente punto.</p>
 <p>La única diferencia entre los métodos <em>print()</em> y <em>println()</em> es que println() también imprimirá un retorno de carro y un avance de línea después de imprimir sus datos, lo que permitirá que la salida posterior se imprima en una nueva línea. Por ejemplo:</p>
 <div class="highlight"><pre><span></span><code>   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">);</span>
