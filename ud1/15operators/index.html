@@ -1068,7 +1068,12 @@ Los operadores condicionales son:</p>
 <p>Si se aplican dos regla, se elige la que aparece primero en la tabla.</p>
 <h3 id="conversiones-forzosas-casting-entre-tipos-nativos">Conversiones forzosas (casting entre tipos nativos)</h3>
 <p>Es una forma de convertir un número de un tipo a otro tipo de dato. Para hacerlo ponemos en paréntesis el tipo de dato al que queremos convertirlo.</p>
-<div class="highlight"><pre><span></span><code>    <span class="kt">byte</span> <span class="n">miByte</span> <span class="o">=</span> <span class="p">(</span><span class="kt">byte</span><span class="p">)</span> <span class="p">(</span><span class="mi">14</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code>    <span class="kt">byte</span> <span class="n">miByte</span> <span class="o">=</span> <span class="p">(</span><span class="kt">byte</span><span class="p">)</span> <span class="p">(</span><span class="mi">14</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">//conviero la operación división que devuelve un int a byte</span>
+
+    <span class="c1">//Otra forma</span>
+    <span class="kt">float</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">8.0f</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">a</span><span class="p">;</span><span class="c1">//conviero el tipo float a int</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Otros operadores</p>
