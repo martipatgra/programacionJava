@@ -882,6 +882,24 @@ Por ejemplo, las clases existentes (como <em>java.util.Date</em> y <em>SimpleDat
 <p class="admonition-title">More information</p>
 <p><a href="https://www.oracle.com/technical-resources/articles/java/jf14-date-time.html">Why do we need a new date and time library?</a></p>
 </div>
+<p>Ejemplo de código para mostara la fecha y la hora:</p>
+<div class="highlight"><pre><span></span><code>  <span class="c1">//mostrar fecha</span>
+  <span class="n">LocalDate</span> <span class="n">ld</span> <span class="o">=</span> <span class="n">LocalDate</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ld</span><span class="p">);</span>
+
+  <span class="c1">//mostrar hora</span>
+  <span class="n">LocalTime</span> <span class="n">lt</span> <span class="o">=</span> <span class="n">LocalTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">lt</span><span class="p">);</span>
+
+  <span class="c1">//mostrar fecha y hora</span>
+  <span class="n">LocalDateTime</span> <span class="n">ldt</span> <span class="o">=</span> <span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ldt</span><span class="p">);</span>
+
+  <span class="c1">//formatear la fecha con un formato dado</span>
+  <span class="n">DateTimeFormatter</span> <span class="n">formatter</span> <span class="o">=</span> <span class="n">DateTimeFormatter</span><span class="p">.</span><span class="na">ofPattern</span><span class="p">(</span><span class="s">&quot;dd-MM-yyyy HH:mm:ss&quot;</span><span class="p">);</span>
+  <span class="n">String</span> <span class="n">formatted</span> <span class="o">=</span> <span class="n">formatter</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">ldt</span><span class="p">);</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">formatted</span><span class="p">);</span>
+</code></pre></div>
                 
               
               
