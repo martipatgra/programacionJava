@@ -454,9 +454,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2.1.- Estructuras de selección
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         2.1.- Estructuras de selección
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sentencia-simple-condicional-if" class="md-nav__link">
+    Sentencia simple condicional if
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -517,6 +547,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sentencia-simple-condicional-if" class="md-nav__link">
+    Sentencia simple condicional if
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -541,15 +586,32 @@ La respuesta es verdadera o falsa.</p>
 <p>Si la respuesta es verdadera,</p>
 <ul>
 <li>siga la línea etiquetada como Verdadero,</li>
-<li>siga las instrucciones en el cuadro "limpiaparabrisas en",</li>
-<li>siga la línea para "continuar".</li>
+<li>siga las instrucciones en el cuadro "Activo limpiaparabrisas ,</li>
+<li>siga la línea para "Continuar".</li>
 </ul>
 <p>Si la respuesta es falsa,</p>
 <ul>
 <li>siga la línea etiquetada como Falso,</li>
 <li>siga las instrucciones en el cuadro "limpiaparabrisas desactivados",</li>
-<li>siga la línea para "continuar".</li>
+<li>siga la línea para "Continuar".</li>
 </ul>
+<h2 id="sentencia-simple-condicional-if">Sentencia simple condicional <em>if</em></h2>
+<p>La sentencia simple condicional if tiene la siguiente estructura:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="p">(</span><span class="err">\\</span><span class="n">expresión</span> <span class="n">booleana</span><span class="err">\\</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//código a realizar</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>La expresión booleana es una expresión verdadera o falsa. Hemos visto ejemplos de expresiones booleanas que involucran variables int, valores int y los operadores de desigualdad o igualdad. Una llamada de método a un método con un tipo de resultado booleano es otro ejemplo de expresión booleana.</p>
+<p>Dada esta descripción de la sintaxis de la sentencia if, los siguientes son ejemplos de sentencias if válidas:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;expresión if&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El número es positivo.&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
               
               
