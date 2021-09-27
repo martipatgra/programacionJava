@@ -478,8 +478,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sentencia-simple-condicional-if" class="md-nav__link">
-    Sentencia simple condicional if
+  <a href="#sentencia-simple-condicional-if-then" class="md-nav__link">
+    Sentencia simple condicional if-then
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentencia-condicional-compuesta-if-else" class="md-nav__link">
+    Sentencia condicional compuesta if-else
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentencia-condicional-if-else-anidada" class="md-nav__link">
+    Sentencia condicional if-else anidada
   </a>
   
 </li>
@@ -554,8 +568,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sentencia-simple-condicional-if" class="md-nav__link">
-    Sentencia simple condicional if
+  <a href="#sentencia-simple-condicional-if-then" class="md-nav__link">
+    Sentencia simple condicional if-then
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentencia-condicional-compuesta-if-else" class="md-nav__link">
+    Sentencia condicional compuesta if-else
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentencia-condicional-if-else-anidada" class="md-nav__link">
+    Sentencia condicional if-else anidada
   </a>
   
 </li>
@@ -595,13 +623,14 @@ La respuesta es verdadera o falsa.</p>
 <li>siga las instrucciones en el cuadro "limpiaparabrisas desactivados",</li>
 <li>siga la línea para "Continuar".</li>
 </ul>
-<h2 id="sentencia-simple-condicional-if">Sentencia simple condicional <em>if</em></h2>
-<p>La sentencia simple condicional if tiene la siguiente estructura:</p>
-<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="p">(</span><span class="err">\\</span><span class="n">expresión</span> <span class="n">booleana</span><span class="err">\\</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//código a realizar</span>
+<h2 id="sentencia-simple-condicional-if-then">Sentencia simple condicional <em>if-then</em></h2>
+<p>La declaración if-then (si-entonces) es la más básica de todas las declaraciones de flujo de control. Le dice a su programa que ejecute una determinada sección de código solo si una prueba en particular se evalúa como verdadera.
+La sentencia simple condicional if tiene la siguiente estructura:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">condición</span><span class="o">*</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//sentencias</span>
     <span class="p">}</span>
 </code></pre></div>
-<p>La expresión booleana es una expresión verdadera o falsa. Hemos visto ejemplos de expresiones booleanas que involucran variables int, valores int y los operadores de desigualdad o igualdad. Una llamada de método a un método con un tipo de resultado booleano es otro ejemplo de expresión booleana.</p>
+<p><strong><em>Condicion</em></strong> es una expresión verdadera o falsa. Hemos visto ejemplos de expresiones booleanas que involucran variables int, valores int y los operadores de desigualdad o igualdad. Una llamada de método a un método con un tipo de resultado booleano es otro ejemplo de expresión booleana.</p>
 <p>Dada esta descripción de la sintaxis de la sentencia if, los siguientes son ejemplos de sentencias if válidas:</p>
 <div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;expresión if&quot;</span><span class="p">);</span>
@@ -610,6 +639,46 @@ La respuesta es verdadera o falsa.</p>
     <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El número es positivo.&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h2 id="sentencia-condicional-compuesta-if-else">Sentencia condicional compuesta <em>if-else</em></h2>
+<p>Una segunda versión de la sentencia if incorpora una cláusula <em>else</em> en la estructura. Esto nos permite ejecutar cualquiera de dos declaraciones separadas (simple o compuesta) como resultado de un booleano expresión.</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">condición</span><span class="o">*</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//sentencias 1</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">//sentencias 2</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span> <span class="n">numJugadores</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">numJugadores</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Single player&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Multiplayer&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h2 id="sentencia-condicional-if-else-anidada">Sentencia condicional <em>if-else</em> anidada</h2>
+<p>Lo que se ejecuta dentro de los if or else, es decir las sentencias pueden ser a su vez sentencias if-else. En otras palabras, es posible incrustar una o más sentencias if-else dentro de otra sentencia if-else, creando así una estructura de control anidada. Como ocurre con la mayoría de las cosas, hacer una estructura de control demasiado compleja no es una buena idea, pero existe una estructura de control estándar anidada ifelse que es muy útil. Se conoce como selección de múltiples vías.</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">condición</span><span class="o">*</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//sentencias 1</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">condición</span><span class="o">*</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//sentencias 2</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">condición</span><span class="o">*</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">...</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">//sentencias</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="p">(</span><span class="n">numJugadores</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Single player&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">numJugadores</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Two player&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">numJugadores</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Multiplayer&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Not possible, too many players&quot;</span><span class="p">);</span>
     <span class="p">}</span>
 </code></pre></div>
                 
