@@ -582,7 +582,35 @@
                 
                 
                 <h1 id="sentencia-switch">Sentencia <em>SWITCH</em></h1>
-<p>Otra estructura de selección para agregar a nuestro repertorio es la estructura <em>switch/break</em>. Es una forma abreviada de codificar la <a href="../1seleccion/#sentencia-condicional-if-else-multiple">estructura de selección múltiple</a> que vimos en el capítulo anterior.</p>
+<p>Otra estructura de selección para agregar a nuestro repertorio es la estructura <strong><em>switch/break</em></strong>.</p>
+<p><img alt="Java" src="../../img/switchsyntax.png" /></p>
+<p>Es una forma abreviada de codificar la <a href="../1seleccion/#sentencia-condicional-if-else-multiple">estructura de selección múltiple</a> que vimos en el capítulo anterior.</p>
+<p>Esto:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="p">(</span><span class="n">numJugadores</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Single player&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">numJugadores</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Two player&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">numJugadores</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Multiplayer&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Not possible, too many players&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>Se transforma en esto:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">switch</span> <span class="p">(</span><span class="n">numJugadores</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Single player&quot;</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Two player&quot;</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Multiplayer&quot;</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">default</span><span class="p">:</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Not possible, too many players&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
               
               
