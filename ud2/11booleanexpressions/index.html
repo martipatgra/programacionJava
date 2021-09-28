@@ -489,9 +489,53 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Expresiones booleanas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Expresiones booleanas
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    &amp;&amp;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ||
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    !
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -570,6 +614,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    &amp;&amp;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ||
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    !
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -582,6 +655,28 @@
                 
                 
                 <h1 id="expresiones-booleanas">Expresiones booleanas</h1>
+<p>Las sentencias if del capítulo anterior incluían preguntas simples de verdadero / falso (expresiones booleanas) como num&lt;10 o jugadores==1. A menudo, las expresiones booleanas simples no son suficientes. Este capítulo trata sobre expresiones booleanas más complicadas.</p>
+<h2 id="_1">&amp;&amp;</h2>
+<p>El operador <strong>AND &amp;&amp;</strong> es un operador lógico. Un operador lógico examina dos valores verdadero / falso y genera un único valor verdadero / falso.</p>
+<p>Por ejemplo cuando necesitas verificar más de una expresión.</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="p">(</span><span class="n">harina</span> <span class="o">==</span> <span class="mi">100</span> <span class="o">&amp;&amp;</span> <span class="n">azucar</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+</code></pre></div>
+<p>Cada parte es una expresión relacional. Una expresión relacional es un tipo de expresión booleana que usa un operador relacional para calcular un valor verdadero o falso.</p>
+<p>Las expresiones se evalúan de izquierda a derecha, así, tan pronto se detecta el primer false, la expresión entera se convierte en false y no se evalúa el resto de expresiones.</p>
+<h2 id="_2">||</h2>
+<p>El operador <strong>OR ||</strong> se usa en una expresión booleana para verificar que haya al menos una verdadera. Si solo un lado es verdadero, toda la expresión es verdadera. Si ambos lados son falsos, toda la expresión es falsa.</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="p">(</span><span class="n">ahorrosMensuales</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="o">||</span> <span class="n">préstamo</span> <span class="o">==</span> <span class="mi">3000</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+</code></pre></div>
+<h2 id="_3">!</h2>
+<p>El operador <strong>NOT !</strong> cambia de verdadero a falso y de falso a verdadero. Esto puede parecer una tontería, pero a menudo es útil. A veces es más natural expresar una condición de una manera particular, pero la lógica del programa requiere lo contrario de lo que ha escrito.</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">precio</span> <span class="o">&lt;</span> <span class="mi">35</span><span class="p">))</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+</code></pre></div>
                 
               
               
