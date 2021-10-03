@@ -775,6 +775,16 @@
     <span class="p">}</span>
 </code></pre></div>
 <p>Contiene la palabra reservada <em>while</em> seguida de un bloque de código. Un bloque es un conjunto de sentencias encerradas entre corchetes { y }.</p>
+<p>Cuando se ejecuta la instrucción while, se evalúa la condición de entrada del bucle. Sucede algunos de los siguientes escenarios:</p>
+<ol>
+<li>Si esto se evalúa como falso, la ejecución continúa en la instrucción inmediatamente después del cuerpo del bucle(fuera del bloque).</li>
+<li>Si la condición de entrada de bucle se evalúa como verdadero, el cuerpo del bucle se ejecuta y luego la condición de entrada se evalúa nuevamente y se repite el proceso.</li>
+</ol>
+<p>El cuerpo del bucle continúa ejecutándose hasta que la condición se evalúa como falsa.</p>
+<p>Para que una declaración while realice una tarea, la variable o variables en la condición de entrada de bucle deben inicializarse correctamente antes; y además estas variables deben actualizarse correctamente al final del cuerpo de bucle. Podemos reformular las pautas anteriores como un principio de diseño:</p>
+<p><mark class="critic">
+Una estructura while correctamente diseñada debe incluir un inicializador, una condición de entrada de bucle y un actualizador. El actualizador debe garantizar que la condición de entrada del bucle finalmente falle, <strong>permitiendo así que el bucle termine</strong>.
+</mark></p>
                 
               
               
