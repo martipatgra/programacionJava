@@ -634,6 +634,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bucle-infinito" class="md-nav__link">
+    Bucle infinito
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bucle-for-each" class="md-nav__link">
     Bucle for-each
   </a>
@@ -825,6 +832,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bucle-infinito" class="md-nav__link">
+    Bucle infinito
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bucle-for-each" class="md-nav__link">
     Bucle for-each
   </a>
@@ -857,6 +871,12 @@
 <div class="highlight"><pre><span></span><code>    <span class="k">for</span><span class="p">(</span><span class="n">inicializador</span><span class="p">;</span> <span class="n">condición</span><span class="p">;</span> <span class="n">modificador</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">//cuerpo del bucle</span>
     <span class="p">}</span>
+
+    <span class="c1">//VARIANTES: Si solo tiene una sentencia en el cuerpo también se puede escribir sin llaves</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">inicializador</span><span class="p">;</span> <span class="n">condición</span><span class="p">;</span> <span class="n">modificador</span><span class="p">)</span>
+        <span class="c1">//sentencia;</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="n">inicializador</span><span class="p">;</span> <span class="n">condición</span><span class="p">;</span> <span class="n">modificador</span><span class="p">)</span> <span class="c1">//sentencia;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
@@ -924,8 +944,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="bucle-infinito">Bucle infinito</h2>
 <p>Un límite de bucle es un valor que controla cuántas veces se repite un bucle. Un bucle se repetirá hasta que se alcance su límite de bucle. La condición del bucle debe ser una expresión booleana que pruebe si se ha alcanzado el límite del bucle. De manera similar, el actualizador debe modificar el contador del bucle para que avance hacia su límite.</p>
 <p>Si nunca se alcanza el límite del bucle, la condición del bucle nunca se volverá falsa y el bucle se repetirá para siempre. Esto se conoce como <strong>bucle infinito</strong>.</p>
+<p>Para salir de un programa con bucle infinito presiona CONTROL+C.</p>
 <h2 id="bucle-for-each">Bucle for-each</h2>
 <p>Lo veremos más adelante, cuando veamos los arrays y colecciones.</p>
                 
