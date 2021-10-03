@@ -786,11 +786,19 @@
                 
                 
                 <h1 id="sentencia-do-while">Sentencia <em>DO-WHILE</em></h1>
-<p>El lenguaje de programación Java también proporciona una declaración <em><strong>do-while</strong></em>, que se puede expresar de la siguiente manera:</p>
+<p>El bucle <em><strong>do-while</strong></em> es una variante del bucle while que proporciona el lenguaje de programación Java. Se puede expresar de la siguiente forma:</p>
 <div class="highlight"><pre><span></span><code>    <span class="k">do</span> <span class="p">{</span>
         <span class="c1">//cuerpo del bucle</span>
         <span class="c1">//bloque de código: sentencia(s)</span>
-    <span class="p">}</span><span class="k">while</span> <span class="p">(</span><span class="n">condición</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">condición</span><span class="p">);</span>
+</code></pre></div>
+<p>La diferencia entre do-while y while es que do-while evalúa la condición después de ejecutar el cuerpo del bucle. Por lo tanto, las sentencias dentro del bloque do-while se ejecutan <strong>al menos una vez</strong>.</p>
+<p>Ejemplo: <em>Muestra los números del 0 al 5</em></p>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">);</span>
 </code></pre></div>
                 
               
