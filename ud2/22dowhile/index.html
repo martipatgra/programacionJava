@@ -795,13 +795,69 @@
 </code></pre></div>
 <p><img alt="Java" src="../../img/dowhile.png" /></p>
 <p>La diferencia entre do-while y while es que do-while evalúa la condición después de ejecutar el cuerpo del bucle. Por lo tanto, las sentencias dentro del bloque do-while se ejecutan <strong>al menos una vez</strong>.</p>
-<p>Ejemplo: <em>Muestra los números del 0 al 5</em></p>
+<p>Ejemplo: <em>Muestra los números del 0 al 4</em></p>
 <div class="highlight"><pre><span></span><code>    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">do</span> <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
         <span class="n">i</span><span class="o">++</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">);</span>
 </code></pre></div>
+<p>Salida</p>
+<div class="highlight"><pre><span></span><code>    0
+    1
+    2
+    3
+    4
+</code></pre></div>
+<p>Traza</p>
+<table>
+<thead>
+<tr>
+<th>Iteración</th>
+<th>Variable</th>
+<th>i &lt; 5</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>i = 0</td>
+<td>no se verifica</td>
+<td>imprime 0 incrementa i=1</td>
+</tr>
+<tr>
+<td>1a</td>
+<td>i = 1</td>
+<td>true</td>
+<td>imprime 1 i = 2</td>
+</tr>
+<tr>
+<td>2a</td>
+<td>i = 2</td>
+<td>true</td>
+<td>imprime 2 i = 3</td>
+</tr>
+<tr>
+<td>3a</td>
+<td>i = 3</td>
+<td>true</td>
+<td>imprime 3 i = 4</td>
+</tr>
+<tr>
+<td>4a</td>
+<td>i = 4</td>
+<td>true</td>
+<td>imprime 4 i = 5</td>
+</tr>
+<tr>
+<td>5a</td>
+<td>i = 5</td>
+<td>false</td>
+<td>termina</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition warning">
 <p class="admonition-title">Una estructura while correctamente diseñada debe incluir 3 partes:</p>
 <ul>
