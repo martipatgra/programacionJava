@@ -782,9 +782,9 @@
 </ol>
 <p>El cuerpo del bucle continúa ejecutándose hasta que la condición se evalúa como falsa.</p>
 <p>Para que una declaración while realice una tarea, la variable o variables en la condición de entrada de bucle deben inicializarse correctamente antes; y además estas variables deben actualizarse correctamente al final del cuerpo de bucle. Podemos reformular las pautas anteriores como un principio de diseño:</p>
-<p><mark class="critic">
-Una estructura while correctamente diseñada debe incluir un inicializador, una condición de entrada de bucle y un actualizador. El actualizador debe garantizar que la condición de entrada del bucle finalmente falle, <strong>permitiendo así que el bucle termine</strong>.
-</mark></p>
+<mark class="critic block">
+<p>Una estructura while correctamente diseñada debe incluir un inicializador, una condición de entrada de bucle y un actualizador. El actualizador debe garantizar que la condición de entrada del bucle finalmente falle, <strong>permitiendo así que el bucle termine</strong>.</p>
+</mark>
 <div class="highlight"><pre><span></span><code>    <span class="c1">//inicializadores</span>
     <span class="k">while</span> <span class="p">(</span> <span class="n">condición_entrada</span> <span class="p">)</span> <span class="p">{</span>
         <span class="c1">//sentencias</span>
