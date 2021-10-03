@@ -579,9 +579,46 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bucle while
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Bucle while
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-mostrar-los-3-primeros-numeros" class="md-nav__link">
+    Ejemplo: Mostrar los 3 primeros números
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-sumar-los-numeros-del-0-al-10" class="md-nav__link">
+    Ejemplo: Sumar los números del 0 al 10
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -774,6 +811,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-mostrar-los-3-primeros-numeros" class="md-nav__link">
+    Ejemplo: Mostrar los 3 primeros números
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-sumar-los-numeros-del-0-al-10" class="md-nav__link">
+    Ejemplo: Sumar los números del 0 al 10
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -825,7 +884,7 @@
         <span class="c1">//actualizador</span>
     <span class="p">}</span>
 </code></pre></div>
-<p>Ejemplo: <em>Mostrar los 3 primeros números</em></p>
+<h2 id="ejemplo-mostrar-los-3-primeros-numeros">Ejemplo: <em>Mostrar los 3 primeros números</em></h2>
 <div class="highlight"><pre><span></span><code>    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//inicializador</span>
     <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="c1">//Sentencia</span>
@@ -837,7 +896,44 @@
     2
     3
 </code></pre></div>
-<p>Ejemplo: <em>Sumar los números del 0 al 10</em></p>
+<p>Traza</p>
+<table>
+<thead>
+<tr>
+<th>Iteración</th>
+<th>Variable</th>
+<th>i &lt;= 3</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1a</td>
+<td>i = 1</td>
+<td>true</td>
+<td>se imprime 1 se incrementa i=2</td>
+</tr>
+<tr>
+<td>2a</td>
+<td>i = 2</td>
+<td>true</td>
+<td>se imprime 2 i = 3</td>
+</tr>
+<tr>
+<td>3a</td>
+<td>i = 3</td>
+<td>true</td>
+<td>se imprime 3 i = 4</td>
+</tr>
+<tr>
+<td>4a</td>
+<td>i = 4</td>
+<td>false</td>
+<td>termina el bucle</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ejemplo-sumar-los-numeros-del-0-al-10">Ejemplo: <em>Sumar los números del 0 al 10</em></h2>
 <div class="highlight"><pre><span></span><code>    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//inicializador</span>
     <span class="kt">int</span> <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
@@ -849,6 +945,7 @@
 <p>Salida</p>
 <div class="highlight"><pre><span></span><code>    55
 </code></pre></div>
+<p>Traza</p>
                 
               
               
