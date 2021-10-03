@@ -591,9 +591,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bucle do while
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Bucle do while
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-muestra-los-numeros-del-0-al-4" class="md-nav__link">
+    Ejemplo: Muestra los números del 0 al 4
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -774,6 +804,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-muestra-los-numeros-del-0-al-4" class="md-nav__link">
+    Ejemplo: Muestra los números del 0 al 4
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -795,7 +840,15 @@
 </code></pre></div>
 <p><img alt="Java" src="../../img/dowhile.png" /></p>
 <p>La diferencia entre do-while y while es que do-while evalúa la condición después de ejecutar el cuerpo del bucle. Por lo tanto, las sentencias dentro del bloque do-while se ejecutan <strong>al menos una vez</strong>.</p>
-<p>Ejemplo: <em>Muestra los números del 0 al 4</em></p>
+<div class="admonition warning">
+<p class="admonition-title">Una estructura while correctamente diseñada debe incluir 3 partes:</p>
+<ul>
+<li>un inicializador,</li>
+<li>una condición de bucle y</li>
+<li>un actualizador. El actualizador debe garantizar que la condición de entrada del bucle finalmente falle, <strong>permitiendo así que el bucle termine</strong>.</li>
+</ul>
+</div>
+<h2 id="ejemplo-muestra-los-numeros-del-0-al-4">Ejemplo: <em>Muestra los números del 0 al 4</em></h2>
 <div class="highlight"><pre><span></span><code>    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">do</span> <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
@@ -858,14 +911,6 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Una estructura while correctamente diseñada debe incluir 3 partes:</p>
-<ul>
-<li>un inicializador,</li>
-<li>una condición de bucle y</li>
-<li>un actualizador. El actualizador debe garantizar que la condición de entrada del bucle finalmente falle, <strong>permitiendo así que el bucle termine</strong>.</li>
-</ul>
-</div>
                 
               
               
