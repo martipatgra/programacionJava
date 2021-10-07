@@ -810,6 +810,33 @@
                 
                 
                 <h1 id="bucles-while-con-sentencias-if">Bucles <em>WHILE</em> con sentencias <em>IF</em></h1>
+<p>Este capítulo muestra cómo los bucles while y las instrucciones if se usan juntas para implementar la lógica de un programa.</p>
+<p>Abajo se muestra un esqueleto del programa que suma todos los números y suma los números pares.</p>
+<p>Primero, inicializamos la variable count. El bucle debe contar desde uno hasta el límite(incluido).
+En este programa, la mayor parte de la lógica está contenida dentro del cuerpo del bucle.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">scan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span> <span class="n">System</span><span class="p">.</span><span class="na">in</span> <span class="p">);</span>
+        <span class="kt">int</span> <span class="n">limite</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">sumaTotal</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">sumaPar</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span> <span class="s">&quot;Inserta el valor límite:&quot;</span> <span class="p">);</span>
+        <span class="n">limite</span> <span class="o">=</span> <span class="n">scan</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">_________</span> <span class="p">;</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="n">__________</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">//sentencias</span>
+        <span class="p">}</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Suma total: &quot;</span> <span class="o">+</span> <span class="n">sumaTotal</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\tSuma de valores pares: &quot;</span> <span class="o">+</span> <span class="n">sumaPar</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Es mejor escribir un programa por etapas. Escriba y depura cada etapa antes de construir sobre el. En un programa con un bucle principal, la primera etapa es construir el bucle.</p>
+</div>
                 
               
               
