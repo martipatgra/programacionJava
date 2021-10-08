@@ -64,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#break-y-continue" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -658,10 +663,49 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Sentencias break y continue
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Sentencias break y continue
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    BREAK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continue" class="md-nav__link">
+    CONTINUE
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -779,15 +823,81 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    BREAK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continue" class="md-nav__link">
+    CONTINUE
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Sentencias break y continue</h1>
-                
-                
+                <h1 id="break-y-continue">Break y continue</h1>
+<p>Las sentencias break y continue son las sentencias de salto que se utilizan para omitir algunas sentencias dentro del bucle o terminar el bucle inmediatamente sin comprobar la condición. Estas instrucciones se pueden usar dentro de cualquier bucle, como for, while, do-while.</p>
+<h2 id="break">BREAK</h2>
+<p>Ya se ha visto la instrucción break utilizada en un capítulo anterior de este tutorial. En concreto en la estructura switch.</p>
+<p>La sentencia <strong>break</strong> en java se usa para terminar el bucle inmediatamente.</p>
+<p>Cuando se encuentra una sentencia break dentro de un bucle, la iteración del bucle se detiene ahí y el control vuelve a la primera sentencia después del bucle.</p>
+<p>Básicamente, las instrucciones break se utilizan en situaciones en las que no estamos seguros del número real de iteraciones del bucle o queremos terminar el bucle en función de alguna condición.</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fuera del bucle for&quot;</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nl">Output</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span>
+<span class="n">Fuera</span> <span class="n">del</span> <span class="n">bucle</span> <span class="k">for</span>
+</code></pre></div>
+<h2 id="continue">CONTINUE</h2>
+<p>La instrucción <strong>continue</strong> en Java se usa para omitir la iteración actual de un bucle y continuar con la siguiente iteración del bucle.</p>
+<p>Podemos usar la instrucción continue dentro de cualquier tipo de bucle, como el bucle for, while y do-while.</p>
+<p>Básicamente, las sentencias continue se utilizan en situaciones en las que queremos continuar el ciclo pero no queremos la sentencia restante después de la sentencia continue.</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="k">continue</span><span class="p">;</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>Output: 0 1 2 3 4</p>
                 
               
               
