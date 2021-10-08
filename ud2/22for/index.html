@@ -672,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../22nestedloop.md" class="md-nav__link">
+      <a href="../22nestedloop/" class="md-nav__link">
         Bucles anidados
       </a>
     </li>
@@ -970,6 +970,19 @@ El bucle for se utiliza cuando el número de iteraciones es conocido. Mientras q
 </tr>
 </tbody>
 </table>
+<p>La variable de inicialización en el bucle for, puede ser declarada en otro lugar del código.
+Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="c1">//código</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;This is a for loop.&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+<mark class="critic block">
+<p>Una variable declarada en una instrucción for solo se puede usar en esa instrucción y en el cuerpo del bucle.</p>
+</mark>
 <h2 id="bucle-infinito">Bucle infinito</h2>
 <p>Un límite de bucle es un valor que controla cuántas veces se repite un bucle. Un bucle se repetirá hasta que se alcance su límite de bucle. La condición del bucle debe ser una expresión booleana que pruebe si se ha alcanzado el límite del bucle. De manera similar, el actualizador debe modificar el contador del bucle para que avance hacia su límite.</p>
 <p>Si nunca se alcanza el límite del bucle, la condición del bucle nunca se volverá falsa y el bucle se repetirá para siempre. Esto se conoce como <strong>bucle infinito</strong>.</p>
