@@ -930,6 +930,14 @@
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
     <span class="p">}</span>
 </code></pre></div>
+<p>Otra solución si no queremos usar un literal en la condición del bucle interno sería:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">fila</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">fila</span> <span class="o">&lt;=</span> <span class="mi">5</span> <span class="p">;</span> <span class="n">fila</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="n">fila</span><span class="p">;</span> <span class="n">j</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="sc">&#39;#&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
               
               
