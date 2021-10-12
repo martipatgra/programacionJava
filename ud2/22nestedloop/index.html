@@ -823,6 +823,63 @@
 <p>Indentamos el código para hacer que sea más legible. En este ejemplo, el bucle externo controla el número de filas en la tabla, es decir, nuestra elección de fila como su contador de bucle.</p>
 <p>La instrucción println() (línea 4) se ejecuta después de que el bucle interno haya terminado de iterar, lo que nos permite imprimir una nueva fila en cada iteración del bucle externo.</p>
 <p>El bucle interno imprime los nueve valores en cada fila imprimiendo la expresión col * fila. Obviamente, el valor de esta expresión depende de ambas variables de bucle.</p>
+<p>Analicemos un poco este ejemplo. ¿Cuántas veces se ejecuta la instrucción for en la línea 2? El bucle interno se ejecuta una vez por cada iteración del bucle externo. Por lo tanto, se ejecuta cuatro veces, que es el mismo número de veces que se ejecuta la línea 4. ¿Cuántas veces se ejecuta la declaración de la línea 3? El cuerpo del bucle interno se ejecuta 36 veces, 9 veces por cada ejecución de la línea 2.</p>
+<p>A veces es útil usar la variable del bucle externo como límite para el bucle interno. Por ejemplo, veamos el siguiente patrón:</p>
+<p><img alt="Java" src="../../img/ud22forfor.png" /></p>
+<p>El número de símbolos # en cada fila varía inversamente con el número de fila. En la fila 1, tenemos cinco símbolos; en la fila 2 tenemos cuatro; y así sucesivamente hasta la fila 5, donde tenemos un #.</p>
+<p>Para producir este tipo de patrón bidimensional, necesitamos <strong>dos contadores</strong>:</p>
+<ul>
+<li>uno para contar el número de fila y</li>
+<li>otro para contar el número de símbolos # en cada fila.</li>
+</ul>
+<blockquote>
+<p>Debido a que tenemos que imprimir los símbolos de cada fila antes de pasar a la siguiente fila, el ciclo externo contará los números de fila y el ciclo interno contará los símbolos en cada fila.</p>
+</blockquote>
+<p>La siguiente tabla muestra la relación que queremos:</p>
+<table>
+<thead>
+<tr>
+<th>Fila</th>
+<th>Límite (6-fila)</th>
+<th>Núm. símbolos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>6-1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>6-2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6-3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>6-4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6-5</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Si dejamos que j sea el contador del bucle interno, entonces j estará limitado por la expresión <em>6 - fila</em>. Esto conduce a la siguiente estructura de bucle anidado:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">fila</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">fila</span> <span class="o">&lt;=</span> <span class="mi">5</span> <span class="p">;</span> <span class="n">fila</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">6</span> <span class="o">-</span> <span class="n">fila</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="sc">&#39;#&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
               
               
