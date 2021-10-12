@@ -822,8 +822,9 @@
                 <h1 id="excepciones">Excepciones</h1>
 <p>Un programa a menudo encuentra problemas mientras se ejecuta. Puede tener problemas para leer datos, puede haber caracteres ilegales en los datos o un índice puede salirse de los límites. La clase Java que gestiona estos problemas se llama <strong><em>Exception</em></strong>.</p>
 <p>La entrada y la salida son especialmente propensas a errores. El manejo de excepciones es esencial para la programación de I/O.</p>
-<p>Por ejemplo:</p>
+<p>Por ejemplo, ¿qué ha ido mal en el siguiente programa?:</p>
 <p><img alt="Java" src="../../img/ud2exception.png" /></p>
+<p>Si hacemos un seguimiento a la pila de errores, vemos que el usuario insertó "hola" y la clase Scanner, en concreto el método nextInt no pudo convertir ese texto en un número, por tanto, se lanzó una excepción, en este caso <em>InputMismatchException</em>.</p>
                 
               
               
