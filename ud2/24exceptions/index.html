@@ -888,12 +888,12 @@
 <mark class="critic block">
 <p>Es muy importante leer bien la pila de errores en la consola cuando se lanza una excepción para encontrar el fallo.</p>
 </mark>
+<p><img alt="Java" src="../../img/ud22exception.png" /></p>
 <h2 id="que-es-una-excepcion">¿Qué es una excepción?</h2>
 <p>Una excepción es un problema que ocurre cuando se ejecuta un programa. Cuando ocurre una excepción, la máquina virtual Java crea un objeto de clase Exception que contiene información sobre el problema.
 Cuando se lanza una excepción, se puede capturar la excepción para recuperarse del programa.</p>
 <h2 id="que-es-un-error">¿Qué es un error?</h2>
 <p>Un <em>error</em> indica que se ha producido un fallo no recuperable, del que no se puede recuperar la ejecución normal del programa. Un error está representado por un objeto de clase <strong><em>Error</em></strong>.</p>
-<p><img alt="Java" src="../../img/ud22exception.png" /></p>
 <p>La clase <em>Throwable</em> tiene dos subclases: <em>Exception</em> y <em>Error</em>. Un método Java puede "lanzar" un objeto de clase Throwable. Por ejemplo, Scanner lanzó una excepción cuando intentó convertir "hola" en un número entero.</p>
 <p>Las excepciones son diferentes de los errores porque los programas se pueden escribir para recuperarse de las excepciones, pero los programas no se pueden escribir para recuperarse de los errores.</p>
                 
