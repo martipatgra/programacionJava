@@ -627,9 +627,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bucles anidados
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Bucles anidados
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#patrones-de-for-anidado" class="md-nav__link">
+    Patrones de FOR anidado
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -798,6 +828,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#patrones-de-for-anidado" class="md-nav__link">
+    Patrones de FOR anidado
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -823,7 +868,12 @@
 <p>Indentamos el código para hacer que sea más legible. En este ejemplo, el bucle externo controla el número de filas en la tabla, es decir, nuestra elección de fila como su contador de bucle.</p>
 <p>La instrucción println() (línea 4) se ejecuta después de que el bucle interno haya terminado de iterar, lo que nos permite imprimir una nueva fila en cada iteración del bucle externo.</p>
 <p>El bucle interno imprime los nueve valores en cada fila imprimiendo la expresión <em>col * fila</em>. Obviamente, el valor de esta expresión depende de ambas variables de bucle.</p>
-<p>Analicemos un poco este ejemplo. ¿Cuántas veces se ejecuta la instrucción for en la línea 2? El bucle interno se ejecuta una vez por cada iteración del bucle externo. Por lo tanto, se ejecuta cuatro veces, que es el mismo número de veces que se ejecuta la línea 4. ¿Cuántas veces se ejecuta la declaración de la línea 3? El cuerpo del bucle interno se ejecuta 36 veces, 9 veces por cada ejecución de la línea 2.</p>
+<p>Analicemos un poco el ejemplo anterior:</p>
+<ol>
+<li>¿Cuántas veces se ejecuta la instrucción for en la línea 2? El bucle interno se ejecuta una vez por cada iteración del bucle externo. Por lo tanto, se ejecuta cuatro veces, que es el mismo número de veces que se ejecuta la línea 4.</li>
+<li>¿Cuántas veces se ejecuta la declaración de la línea 3? El cuerpo del bucle interno se ejecuta 36 veces, 9 veces por cada ejecución de la línea 2.</li>
+</ol>
+<h2 id="patrones-de-for-anidado">Patrones de FOR anidado</h2>
 <p>A veces es útil usar la variable del bucle externo como límite para el bucle interno. Por ejemplo, veamos el siguiente patrón:</p>
 <p><img alt="Java" src="../../img/ud22forfor.png" /></p>
 <p>El número de símbolos # en cada fila varía inversamente con el número de fila. En la fila 1, tenemos cinco símbolos; en la fila 2 tenemos cuatro; y así sucesivamente hasta la fila 5, donde tenemos un #.</p>
