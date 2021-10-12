@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bucles-while-con-sentencias-if" class="md-skip">
+        <a href="#bucles-anidados" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -627,46 +627,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Bucles anidados
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         Bucles anidados
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
-    STEP 1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2" class="md-nav__link">
-    STEP 2
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -835,28 +798,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
-    STEP 1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2" class="md-nav__link">
-    STEP 2
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -868,32 +809,10 @@
               
                 
                 
-                <h1 id="bucles-while-con-sentencias-if">Bucles <em>WHILE</em> con sentencias <em>IF</em></h1>
-<p>Este capítulo muestra cómo los bucles while y las instrucciones if se usan juntas para implementar la lógica de un programa.</p>
-<p>El siguiente código muestra un esqueleto de un programa que suma todos los números enteros hasta un límite y suma también los que son números pares.</p>
-<p><img alt="Java" src="../../img/ud22whileif1.png" /></p>
-<h2 id="step-1"><em>STEP 1</em></h2>
-<p>Primero, inicializamos la variable count. El bucle debe contar desde uno hasta el límite(incluido).
-En este programa, la mayor parte de la lógica está contenida dentro del cuerpo del bucle.</p>
-<p><img alt="Java" src="../../img/ud22whileif2.png" /></p>
-<p>Comprobamos que el programa se puede compilar y ejecutar. Si no fuera así, corrige los errores de sintaxis (si los hay) y busca qué errores tienes. Inserta algunas sentencias println temporales para ayudarte en la búsqueda de errores. (O usa un depurador).</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Es mejor escribir un programa por etapas. Escriba y depura cada etapa antes de construir sobre el. En un programa con un bucle principal, la primera etapa es construir el bucle.</p>
-</div>
-<h2 id="step-2"><em>STEP 2</em></h2>
-<p>El bucle de momento solo cuenta números hasta un límite, pero todavía no hace nada con ellos. Esto es lo que queremos que suceda:</p>
-<ul>
-<li>Sumar cada entero y asignarlo a sumaTotal.</li>
-<li>Sumar cada entero par y asginarlo a sumaPar.</li>
-</ul>
-<p><strong>¿Cómo decidimos cuando agregar un número entero a sumaPar?</strong>
-Para ello necesitaremos la sentencia <strong><em>if</em></strong>.</p>
-<p>El cuerpo del bucle en este programa contiene una instrucción if. Una instrucción if dentro de un cuerpo de bucle se denomina if anidado. No tiene nada de especial funciona igual que fuera del cuerpo del bucle.</p>
-<p><img alt="Java" src="../../img/ud22whileif3.png" /></p>
-<p>¿Cómo calculamos los números que son pares? Los números pares son aquellos que son divisibles por 2.
-Podemos hacerlo usando el operador %. Si el resto al dividir entre 2 da 0, entonces obtenemos un número par.</p>
-<p><img alt="Java" src="../../img/ud22whileif4.png" /></p>
+                <h1 id="bucles-anidados">Bucles anidados</h1>
+<p>Un bucle anidado es una estructura en la que un bucle está contenido dentro del cuerpo de otro bucle.</p>
+<p>Por ejemplo, imagina que quieres imprimir algo como la siguiente tabla de números, donde en la fila y columnas superiores aparecen las posiciones y dentro de las filas tenemos fila x columna.</p>
+<p><img alt="Java" src="../../img/22nestedloops.png" /></p>
                 
               
               
