@@ -813,6 +813,13 @@
 <p>Un bucle anidado es una estructura en la que un bucle está contenido dentro del cuerpo de otro bucle.</p>
 <p>Por ejemplo, imagina que quieres imprimir algo como la siguiente tabla de números, donde en la fila y columnas superiores aparecen las posiciones y dentro de las filas tenemos fila x columna.</p>
 <p><img alt="Java" src="../../img/22nestedloops.png" /></p>
+<p>Para producir esta tabla de multiplicar, podríamos usar los siguientes bucles <em>for</em> anidados:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">fila</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">fila</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">fila</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//para cada una de las 4 filas</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">;</span> <span class="n">col</span> <span class="o">++</span><span class="p">)</span> <span class="c1">//para cada una de las 9 columnas</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">col</span> <span class="o">*</span> <span class="n">fila</span> <span class="o">+</span> <span class="s">&quot;\t&quot;</span><span class="p">);</span> <span class="c1">//muestra la multiplicación</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span> <span class="c1">//Empieza una nueva fila</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
               
               
