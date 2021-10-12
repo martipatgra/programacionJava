@@ -694,9 +694,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2.4.- Control de excepciones
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         2.4.- Control de excepciones
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-excepcion" class="md-nav__link">
+    ¿Qué es una excepción?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -808,6 +838,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-excepcion" class="md-nav__link">
+    ¿Qué es una excepción?
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -824,7 +869,13 @@
 <p>La entrada y la salida son especialmente propensas a errores. El manejo de excepciones es esencial para la programación de I/O.</p>
 <p>Por ejemplo, ¿qué ha ido mal en el siguiente programa?:</p>
 <p><img alt="Java" src="../../img/ud2exception.png" /></p>
-<p>Si hacemos un seguimiento a la pila de errores, vemos que el usuario insertó "hola" y la clase Scanner, en concreto el método nextInt no pudo convertir ese texto en un número, por tanto, se lanzó una excepción, en este caso <em>InputMismatchException</em>.</p>
+<p>Si hacemos un seguimiento a la pila de errores, vemos que el usuario insertó "hola" y la clase Scanner, en concreto el método nextInt no pudo convertir ese texto en un número, por tanto, se lanzó una excepción.</p>
+<p>Eso no significa que el programa esté mal, simplemente el fallo está en los datos. Cuando nextInt encuentra el problema lanza la excepción <em>InputMismatchException</em>. La ejecución del programa Java detecta la excepción y detiene el programa imprimiendo los mensajes de error.</p>
+<mark class="critic block">
+<p>Es muy importante leer bien la pila de errores en la consola cuando se lanza una excepción para encontrar el fallo.</p>
+</mark>
+<h2 id="que-es-una-excepcion">¿Qué es una excepción?</h2>
+<p>Una excepción es un problema que ocurre cuando se ejecuta un programa. Cuando ocurre una excepción, la máquina virtual Java crea un objeto de clase Exception que contiene información sobre el problema.</p>
                 
               
               
