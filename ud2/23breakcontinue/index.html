@@ -709,6 +709,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#break-etiquetado" class="md-nav__link">
+    Break etiquetado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#continue" class="md-nav__link">
     CONTINUE
   </a>
@@ -861,6 +868,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#break-etiquetado" class="md-nav__link">
+    Break etiquetado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#continue" class="md-nav__link">
     CONTINUE
   </a>
@@ -902,6 +916,35 @@
 <p class="admonition-title">Note</p>
 <p>En el caso de bucles anidados, la instrucción break termina el bucle más interno.</p>
 </div>
+<h2 id="break-etiquetado">Break etiquetado</h2>
+<p>Hasta ahora, hemos utilizado la sentencia break sin etiquetar. Sin embargo, hay otra forma de utilizar break en Java conocido como break etiquetado (labeled break).</p>
+<p><img alt="Java" src="../../img/ud22labelbreak.png" /></p>
+<p>En la imagen se ha utilizado un break etiquetado con el identificador <strong><em>label</em></strong> para especificar el bucle exterior. Observa cómo se usa la declaración break con etiqueta.</p>
+<p>La sentencia break está terminando la sentencia etiquetada (es decir, el bucle externo). Luego, el control del programa salta a la sentencia justo después de la etiquetada.</p>
+<p>De esta forma, podríamos utilizar la sentencia break etiquetada para terminar el bucle más externo como se ve en el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">//el primer bucle es etiquetado como primero</span>
+        <span class="n">primero</span><span class="p">:</span>
+        <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="c1">// el segundo bucle como segundo</span>
+            <span class="n">segundo</span><span class="p">:</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">j</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;i = &quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">&quot;; j = &quot;</span> <span class="o">+</span><span class="n">j</span><span class="p">);</span>
+
+                <span class="c1">// se realiza un break del primer bucle</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+                    <span class="k">break</span> <span class="n">primero</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Output
+i = 1; j = 1
+i = 1; j = 2
+i = 2; j = 1
+</code></pre></div>
 <h2 id="continue">CONTINUE</h2>
 <p>La instrucción <strong>continue</strong> en Java se usa para omitir la iteración actual de un bucle y continuar con la siguiente iteración del bucle.</p>
 <p>Podemos usar la instrucción continue dentro de cualquier tipo de bucle, como el bucle for, while y do-while.</p>
