@@ -733,15 +733,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#try-and-catch" class="md-nav__link">
-    try and catch
+  <a href="#bloques-try-catch" class="md-nav__link">
+    Bloques try -  catch
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Bloques try -  catch">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#capturar-mas-de-una-excepcion-en-un-solo-catch" class="md-nav__link">
     Capturar más de una excepción en un solo catch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-finally" class="md-nav__link">
+    Bloque finally
   </a>
   
 </li>
@@ -887,15 +900,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#try-and-catch" class="md-nav__link">
-    try and catch
+  <a href="#bloques-try-catch" class="md-nav__link">
+    Bloques try -  catch
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Bloques try -  catch">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#capturar-mas-de-una-excepcion-en-un-solo-catch" class="md-nav__link">
     Capturar más de una excepción en un solo catch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-finally" class="md-nav__link">
+    Bloque finally
   </a>
   
 </li>
@@ -936,7 +962,7 @@
 <h2 id="que-es-una-excepcion">¿Qué es una excepción?</h2>
 <p>Una excepción es un problema que ocurre cuando se ejecuta un programa. Cuando ocurre una excepción, la máquina virtual Java crea un objeto de clase Exception que contiene información sobre el problema.
 Cuando se lanza una excepción, se puede capturar la excepción para recuperarse del programa.</p>
-<h3 id="try-and-catch"><strong><em>try</em></strong> and <strong><em>catch</em></strong></h3>
+<h3 id="bloques-try-catch">Bloques <strong><em>try</em></strong> -  <strong><em>catch</em></strong></h3>
 <p><img alt="Java" src="../../img/ud22trycatch.png" /></p>
 <p>Para capturar una excepción realizamos los siguientes pasos:</p>
 <ol>
@@ -961,7 +987,7 @@ Cuando se lanza una excepción, se puede capturar la excepción para recuperarse
 </code></pre></div>
 <p>El parámetro dentro de catch <strong>e</strong> se refiere al objeto de excepción que se lanza.</p>
 <p>Después de ejecutar el bloque catch, la ejecución continúa con la instrucción que sigue al bloque catch. <strong>La ejecución no vuelve al bloque try</strong>.</p>
-<h3 id="capturar-mas-de-una-excepcion-en-un-solo-catch">Capturar más de una excepción en un solo catch</h3>
+<h4 id="capturar-mas-de-una-excepcion-en-un-solo-catch">Capturar más de una excepción en un solo catch</h4>
 <p>En Java SE 7 y posteriores, un solo bloque catch puede manejar más de un tipo de excepción. Esta función puede reducir la duplicación de código.</p>
 <p>En la cláusula catch, se especifican los tipos de excepciones que puede manejar el bloque y se separa cada tipo de excepción con una barra vertical (|):</p>
 <p>catch (IOException | SQLException ex) {
@@ -971,6 +997,7 @@ Cuando se lanza una excepción, se puede capturar la excepción para recuperarse
 <p class="admonition-title">Note</p>
 <p>Si un bloque catch maneja más de un tipo de excepción, el parámetro catch es implícitamente final. En este ejemplo, la variable catch ex es final y, por lo tanto, no puede asignarle ningún valor dentro del bloque catch.</p>
 </div>
+<h3 id="bloque-finally">Bloque <strong><em>finally</em></strong></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Más información en <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html">oracle-exceptions java</a></p>
