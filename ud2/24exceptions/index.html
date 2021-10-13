@@ -1053,6 +1053,28 @@ Cuando se lanza una excepción, se puede capturar la excepción para recuperarse
     <span class="p">}</span> 
 </code></pre></div>
 <h3 id="bloque-finally">Bloque <strong><em>finally</em></strong></h3>
+<p>El bloque finally siempre se ejecuta cuando sale del bloque try-catch incluso si ocurre una excepción inesperada.</p>
+<p>Estructura:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span> <span class="p">{</span>
+    <span class="c1">//código</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//código</span>
+<span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
+    <span class="c1">//siempre se ejecuta</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Solo puede haber un bloque finally, y debe estar después de los bloques catch.</p>
+<ul>
+<li>Si el bloque try sale normalmente (no ocurrieron excepciones), entonces el control va directamente al bloque finally.</li>
+<li>Si el bloque try sale debido a una excepción que es manejada por un bloque catch, primero ese bloque se ejecuta y luego el control va al bloque finally.</li>
+<li>Si el bloque try sale debido a una excepción que NO es manejada por un bloque catch, el control va directamente al bloque finally. Después de que se ejecuta el bloque finally, se lanza la excepción a la persona que llama y el control vuelve a la persona que llama.</li>
+</ul>
+<p><img alt="Java" src="../../img/ud22trycatch3.png" /></p>
+<p>En resumen: si el control entra en un bloque try, siempre entrará en el bloque finally.</p>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>El bloque finally es una herramienta clave para prevenir fugas de recursos. Al cerrar un archivo o recuperar recursos, coloque el código en un bloque final para asegurarse de que el recurso siempre se recupere.</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Más información en <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html">oracle-exceptions java</a></p>
