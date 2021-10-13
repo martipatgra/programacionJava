@@ -1048,7 +1048,9 @@ Cuando se lanza una excepción, se puede capturar la excepción para recuperarse
         <span class="k">if</span> <span class="p">(</span> <span class="n">div</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">ArithmeticException</span><span class="p">();</span>
 
         <span class="p">....</span>
-    <span class="p">}</span> <span class="k">catch</span> <span class="p">....</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ArithmeticException</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span> 
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No se puede dividir &quot;</span> <span class="o">+</span> <span class="n">num</span> <span class="o">+</span> <span class="s">&quot; entre &quot;</span> <span class="o">+</span> <span class="n">div</span><span class="p">);</span>
+    <span class="p">}</span> 
 </code></pre></div>
 <h3 id="bloque-finally">Bloque <strong><em>finally</em></strong></h3>
 <div class="admonition tip">
