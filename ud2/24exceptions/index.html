@@ -760,6 +760,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sentencia-throw" class="md-nav__link">
+    Sentencia throw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#bloque-finally" class="md-nav__link">
     Bloque finally
   </a>
@@ -934,6 +941,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sentencia-throw" class="md-nav__link">
+    Sentencia throw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#bloque-finally" class="md-nav__link">
     Bloque finally
   </a>
@@ -1022,6 +1036,20 @@ Cuando se lanza una excepción, se puede capturar la excepción para recuperarse
 <p class="admonition-title">Note</p>
 <p>Si un bloque catch maneja más de un tipo de excepción, el parámetro catch es implícitamente final. En este ejemplo, la variable catch ex es final y, por lo tanto, no puede asignarle ningún valor dentro del bloque catch.</p>
 </div>
+<h3 id="sentencia-throw">Sentencia <strong><em>throw</em></strong></h3>
+<p>Utilizando la palabra reservada throw podemos lanzar nosotros explícitamente una excepción.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Inserta el numerador: &quot;</span><span class="p">);</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="n">scan</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Inserta el denominador: &quot;</span><span class="p">);</span>
+        <span class="n">div</span> <span class="o">=</span> <span class="n">scan</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span> <span class="n">div</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">ArithmeticException</span><span class="p">();</span>
+
+        <span class="p">....</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">....</span>
+</code></pre></div>
 <h3 id="bloque-finally">Bloque <strong><em>finally</em></strong></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
