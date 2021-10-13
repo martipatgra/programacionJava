@@ -737,12 +737,18 @@
     Bloques try -  catch
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Bloques try -  catch">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#capturar-mas-de-una-excepcion-en-un-solo-catch" class="md-nav__link">
     Capturar más de una excepción en un solo catch
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -898,12 +904,18 @@
     Bloques try -  catch
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Bloques try -  catch">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#capturar-mas-de-una-excepcion-en-un-solo-catch" class="md-nav__link">
     Capturar más de una excepción en un solo catch
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -975,7 +987,7 @@ Cuando se lanza una excepción, se puede capturar la excepción para recuperarse
 </code></pre></div>
 <p>El parámetro dentro de catch <strong>e</strong> se refiere al objeto de excepción que se lanza.</p>
 <p>Después de ejecutar el bloque catch, la ejecución continúa con la instrucción que sigue al bloque catch. <strong>La ejecución no vuelve al bloque try</strong>.</p>
-<h3 id="capturar-mas-de-una-excepcion-en-un-solo-catch">Capturar más de una excepción en un solo catch</h3>
+<h4 id="capturar-mas-de-una-excepcion-en-un-solo-catch">Capturar más de una excepción en un solo catch</h4>
 <p>En Java SE 7 y posteriores, un solo bloque catch puede manejar más de un tipo de excepción. Esta función puede reducir la duplicación de código.</p>
 <p>En la cláusula catch, se especifican los tipos de excepciones que puede manejar el bloque y se separa cada tipo de excepción con una barra vertical (|):</p>
 <div class="highlight"><pre><span></span><code><span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="o">|</span> <span class="n">SQLException</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
