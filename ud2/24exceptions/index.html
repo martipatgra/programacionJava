@@ -741,6 +741,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#como-se-ejecuta-un-try-catch-paso-por-paso" class="md-nav__link">
+    Cómo se ejecuta un try-catch paso por paso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#capturar-mas-de-una-excepcion-en-un-solo-catch" class="md-nav__link">
     Capturar más de una excepción en un solo catch
   </a>
@@ -908,6 +915,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#como-se-ejecuta-un-try-catch-paso-por-paso" class="md-nav__link">
+    Cómo se ejecuta un try-catch paso por paso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#capturar-mas-de-una-excepcion-en-un-solo-catch" class="md-nav__link">
     Capturar más de una excepción en un solo catch
   </a>
@@ -987,6 +1001,16 @@ Cuando se lanza una excepción, se puede capturar la excepción para recuperarse
 </code></pre></div>
 <p>El parámetro dentro de catch <strong>e</strong> se refiere al objeto de excepción que se lanza.</p>
 <p>Después de ejecutar el bloque catch, la ejecución continúa con la instrucción que sigue al bloque catch. <strong>La ejecución no vuelve al bloque try</strong>.</p>
+<h4 id="como-se-ejecuta-un-try-catch-paso-por-paso">Cómo se ejecuta un try-catch paso por paso</h4>
+<p><img alt="Java" src="../../img/ud22trycatch2.png" /></p>
+<ol>
+<li>Cuando se lanza una excepción dentro de un bloque try, el controlador de excepciones examina la excepción dentro de los bloques catch.</li>
+<li>Los bloques catch se examinan uno a uno empezando por el primero.</li>
+<li>El primer bloque catch que encaja con la excepción obtiene el control. Aunque haya muchas excepciones que encajen solo se ejecuta un bloque catch.</li>
+<li>Si ningún bloque catch encaja con la excepción lanzada se muestra la pila de errores y se termina la ejecución del programa ya que no se ha manejado la excepción.</li>
+<li>Las clases más especificas deben ir primero seguidas de las más generales.</li>
+<li>Después de ejecutar la última instrucción dentro del catch el control del programa vuelve a la siguiente línea fuera del try-catch (o finally si hubiera).</li>
+</ol>
 <h4 id="capturar-mas-de-una-excepcion-en-un-solo-catch">Capturar más de una excepción en un solo catch</h4>
 <p>En Java SE 7 y posteriores, un solo bloque catch puede manejar más de un tipo de excepción. Esta función puede reducir la duplicación de código.</p>
 <p>En la cláusula catch, se especifican los tipos de excepciones que puede manejar el bloque y se separa cada tipo de excepción con una barra vertical (|):</p>
