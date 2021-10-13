@@ -739,6 +739,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#capturar-mas-de-una-excepcion-en-un-solo-catch" class="md-nav__link">
+    Capturar más de una excepción en un solo catch
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -886,6 +893,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#capturar-mas-de-una-excepcion-en-un-solo-catch" class="md-nav__link">
+    Capturar más de una excepción en un solo catch
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -923,15 +937,40 @@
 <p>Una excepción es un problema que ocurre cuando se ejecuta un programa. Cuando ocurre una excepción, la máquina virtual Java crea un objeto de clase Exception que contiene información sobre el problema.
 Cuando se lanza una excepción, se puede capturar la excepción para recuperarse del programa.</p>
 <h3 id="try-and-catch"><strong><em>try</em></strong> and <strong><em>catch</em></strong></h3>
+<p><img alt="Java" src="../../img/ud22trycatch.png" /></p>
 <p>Para capturar una excepción realizamos los siguientes pasos:</p>
 <ol>
 <li>Colocar el código que pueda lanzar una excepción dentro de un bloque try.</li>
 <li>Colocar el código que maneja la excepción dentro de un bloque catch (captura).</li>
 <li>El bloque catch debe seguir inmediatamente al bloque try.</li>
 </ol>
-<p>Si una sentencia dentro del bloque try arroja una InputMismatchException, el bloque catch comienza a ejecutarse inmediatamente. Se omiten las sentencias restantes en el bloque try.</p>
+<p>Cada bloque catch es un manejador de excepciones que maneja el tipo de excepción indicado por su argumento. El tipo de argumento, ExceptionType, declara el tipo de excepción que el controlador puede manejar y debe ser el nombre de una clase que hereda de la clase Throwable.</p>
+<p>El siguiente ejemplo arroja dentro del bloque try una InputMismatchException, el bloque catch comienza a ejecutarse inmediatamente. Se omiten las sentencias restantes en el bloque try.</p>
+<div class="highlight"><pre><span></span><code>    <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">numero</span><span class="p">;</span>
+
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introduzca un entero:&quot;</span><span class="p">);</span>
+
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">numero</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">InputMismatchException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No has introducido un número.&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sigue ejecutándose el programa&quot;</span><span class="p">);</span>
+</code></pre></div>
 <p>El parámetro dentro de catch <strong>e</strong> se refiere al objeto de excepción que se lanza.</p>
 <p>Después de ejecutar el bloque catch, la ejecución continúa con la instrucción que sigue al bloque catch. <strong>La ejecución no vuelve al bloque try</strong>.</p>
+<h3 id="capturar-mas-de-una-excepcion-en-un-solo-catch">Capturar más de una excepción en un solo catch</h3>
+<p>En Java SE 7 y posteriores, un solo bloque catch puede manejar más de un tipo de excepción. Esta función puede reducir la duplicación de código.</p>
+<p>En la cláusula catch, se especifican los tipos de excepciones que puede manejar el bloque y se separa cada tipo de excepción con una barra vertical (|):</p>
+<p>catch (IOException | SQLException ex) {
+     //realizar acciones
+}</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si un bloque catch maneja más de un tipo de excepción, el parámetro catch es implícitamente final. En este ejemplo, la variable catch ex es final y, por lo tanto, no puede asignarle ningún valor dentro del bloque catch.</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Más información en <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html">oracle-exceptions java</a></p>
