@@ -985,6 +985,7 @@ Cuando se lanza una excepción, se puede capturar la excepción para recuperarse
         <span class="n">numero</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
     <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">InputMismatchException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No has introducido un número.&quot;</span><span class="p">);</span>
+        <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
     <span class="p">}</span>
 
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sigue ejecutándose el programa&quot;</span><span class="p">);</span>
@@ -1015,6 +1016,7 @@ Si queremos mostrar la pila de errores que genera el error usamos el método <st
 </div>
 <h3 id="sentencia-throw">Sentencia <strong><em>throw</em></strong></h3>
 <p>Utilizando la palabra reservada throw podemos lanzar nosotros explícitamente una excepción.</p>
+<p>Podemos construir una instancia de la excepción que queremos lanzar y añadirle un mensaje en el constructor.</p>
 <p>Ejemplo:</p>
 <div class="highlight"><pre><span></span><code>    <span class="k">try</span> <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Inserta el numerador: &quot;</span><span class="p">);</span>
@@ -1022,11 +1024,12 @@ Si queremos mostrar la pila de errores que genera el error usamos el método <st
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Inserta el denominador: &quot;</span><span class="p">);</span>
         <span class="n">div</span> <span class="o">=</span> <span class="n">scan</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
 
-        <span class="k">if</span> <span class="p">(</span> <span class="n">div</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">ArithmeticException</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">div</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">ArithmeticException</span><span class="p">(</span><span class="s">&quot;Error al intentar dividir entre cero&quot;</span><span class="p">);</span>
 
         <span class="p">....</span>
     <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ArithmeticException</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span> 
       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No se puede dividir &quot;</span> <span class="o">+</span> <span class="n">num</span> <span class="o">+</span> <span class="s">&quot; entre &quot;</span> <span class="o">+</span> <span class="n">div</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
     <span class="p">}</span> 
 </code></pre></div>
 <h3 id="bloque-finally">Bloque <strong><em>finally</em></strong></h3>
