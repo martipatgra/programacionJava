@@ -948,6 +948,7 @@
                 
                 
                 <h1 id="excepciones">Excepciones</h1>
+<p><img alt="Java" src="../../img/ud22exception1.png" /></p>
 <p>Un programa a menudo encuentra problemas mientras se ejecuta. Puede tener problemas para leer datos, puede haber caracteres ilegales en los datos o un índice puede salirse de los límites. La clase Java que gestiona estos problemas se llama <strong><em>Exception</em></strong>.</p>
 <p>La entrada y la salida son especialmente propensas a errores. El manejo de excepciones es esencial para la programación de I/O.</p>
 <p>Por ejemplo, ¿qué ha ido mal en el siguiente programa?:</p>
@@ -988,7 +989,8 @@ Cuando se lanza una excepción, se puede capturar la excepción para recuperarse
 
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sigue ejecutándose el programa&quot;</span><span class="p">);</span>
 </code></pre></div>
-<p>El parámetro dentro de catch <strong>e</strong> se refiere al objeto de excepción que se lanza.</p>
+<p>El parámetro dentro de catch <strong>e</strong> se refiere al objeto de excepción que se lanza.
+Si queremos mostrar la pila de errores que genera el error usamos el método <strong>e.printStackTrace();</strong></p>
 <p>Después de ejecutar el bloque catch, la ejecución continúa con la instrucción que sigue al bloque catch. <strong>La ejecución no vuelve al bloque try</strong>.</p>
 <h4 id="como-se-ejecuta-un-try-catch-paso-por-paso">Cómo se ejecuta un try-catch paso por paso</h4>
 <p><img alt="Java" src="../../img/ud22trycatch2.png" /></p>
