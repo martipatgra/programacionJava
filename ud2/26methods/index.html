@@ -821,8 +821,30 @@ Todo el tiempo hemos estado usando un método llamado main, dentro de él se enc
             <span class="kt">int</span> <span class="n">puntuacionFinal</span> <span class="o">=</span> <span class="n">puntuacion</span> <span class="o">+</span> <span class="p">(</span><span class="n">nivelCompletado</span> <span class="o">*</span> <span class="n">bonus</span><span class="p">);</span>
             <span class="n">puntuacionFinal</span> <span class="o">+=</span> <span class="mi">100</span><span class="p">;</span>
             <span class="k">return</span> <span class="n">puntuacionFinal</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">//OTRAS FORMAS MÁS EFICIENTES DE CREAR EL MÉTODO calcularPuntuaciones</span>
+    <span class="c1">//1. Método más eficiente sin sentencia else</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">calcularPuntuacion</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">gameOver</span><span class="p">,</span> <span class="kt">int</span> <span class="n">puntuacion</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nivelCompletado</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bonus</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">gameOver</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">puntuacionFinal</span> <span class="o">=</span> <span class="n">puntuacion</span> <span class="o">+</span> <span class="p">(</span><span class="n">nivelCompletado</span> <span class="o">*</span> <span class="n">bonus</span><span class="p">);</span>
+            <span class="n">puntuacionFinal</span> <span class="o">+=</span> <span class="mi">100</span><span class="p">;</span>
+            <span class="k">return</span> <span class="n">puntuacionFinal</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//2. Otra forma de realizar el método calcularPuntuacion sin utilizar dos sentencias de return sería</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">calcularPuntuacion</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">gameOver</span><span class="p">,</span> <span class="kt">int</span> <span class="n">puntuacion</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nivelCompletado</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bonus</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">puntuacionFinal</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">gameOver</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">puntuacionFinal</span> <span class="o">=</span> <span class="n">puntuacion</span> <span class="o">+</span> <span class="p">(</span><span class="n">nivelCompletado</span> <span class="o">*</span> <span class="n">bonus</span><span class="p">);</span>
+            <span class="n">puntuacionFinal</span> <span class="o">+=</span> <span class="mi">100</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">puntuacionFinal</span><span class="p">;</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
