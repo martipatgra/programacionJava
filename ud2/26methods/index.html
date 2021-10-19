@@ -802,17 +802,17 @@ Todo el tiempo hemos estado usando un método llamado main, dentro de él se enc
 <div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
 
         <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">boolean</span> <span class="n">gameOver</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">puntuacion</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">nivelCompletado</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">bonus</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+            <span class="kt">boolean</span> <span class="n">gameOver</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">puntuacion</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">nivelCompletado</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">bonus</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 
-        <span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="n">calcularPuntuacion</span><span class="p">(</span><span class="n">gameOver</span><span class="p">,</span> <span class="n">puntuacion</span><span class="p">,</span> <span class="n">nivelCompletado</span><span class="p">,</span> <span class="n">bonus</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="n">calcularPuntuacion</span><span class="p">(</span><span class="n">gameOver</span><span class="p">,</span> <span class="n">puntuacion</span><span class="p">,</span> <span class="n">nivelCompletado</span><span class="p">,</span> <span class="n">bonus</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
 
-        <span class="c1">//otra forma de hacerlo es pasarle directamente el valor de las variables</span>
-        <span class="n">score</span> <span class="o">=</span> <span class="n">calcularPuntuacion</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
+            <span class="c1">//otra forma de hacerlo es pasarle directamente el valor de las variables</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="n">calcularPuntuacion</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
 
         <span class="p">}</span>
 
