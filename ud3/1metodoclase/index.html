@@ -1272,7 +1272,25 @@ Para crear los métodos que actualizan los campos debemos usar la siguiente nome
 <h3 id="constructor">Constructor</h3>
 <p>Cuando usamos la palabra new Coche(); para crear un objeto de la clase Coche, en realidad estamos usando lo que se conoce como el constructor de la clase para crear el coche.</p>
 <h3 id="constructor-por-defecto">Constructor por defecto</h3>
+<p>En Java cuando creamos un objeto con la sentencia new Coche(), se lanza el llamado contructor por defecto. Si no se ha definido este en la clase, Java lo crea y lo lanza automáticamente e iniciliza los campos de la clase con valores por defecto.</p>
+<p>Si queremos definirlo nosotros tenemos que usar public más el nombre de la clase.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Coche</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">puertas</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">ruedas</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">modelo</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">color</span><span class="p">;</span>
+
+    <span class="c1">//Constructor por defecto</span>
+    <span class="kd">public</span> <span class="nf">Coche</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+
+    <span class="c1">//getters y setters</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="constructor-sobrecargado">Constructor sobrecargado</h3>
+<p>Los constructores pueden ser sobrecargados, es decir, podemos tener más de un constructor en nuestra clase.</p>
 <h2 id="ambito-de-variables-locales-y-argumentos">Ámbito de variables locales y argumentos</h2>
 <h2 id="variables-y-clases-estaticas">Variables y clases estáticas</h2>
 <h3 id="sobrecarga-de-metodos">Sobrecarga de métodos</h3>
