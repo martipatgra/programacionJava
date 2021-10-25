@@ -1258,14 +1258,15 @@ Para crear los métodos que actualizan los campos debemos usar la siguiente nome
 <p>En un método set como el nombre del parámetro del método es igual al del campo de la clase, necesitamos algo que nos permita distinguir entre uno u otro. Para esto se utiliza la palabra reservada <strong><em>this</em></strong> que hace alusión al campo de la clase.</p>
 <h2 id="creacion-e-inicializacion-de-objetos-de-la-clase">Creación e inicialización de objetos de la clase</h2>
 <p>Para crear objetos de la clase, podemos hacerlo de dos formas:</p>
-<ol>
+<ul>
 <li>Creando un variable de la clase como hemos hecho hasta ahora:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="n">Coche</span> <span class="n">seat</span><span class="p">;</span> <span class="c1">//(Aquí la variable no está inicializada y puede dar errores de compilación).</span>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">Coche</span> <span class="n">seat</span><span class="p">;</span> <span class="c1">//(Aquí la variable no está inicializada y</span>
+<span class="c1">// puede dar errores de compilación).</span>
 </code></pre></div>
-<ol>
+<ul>
 <li>Utilizando la palabra resevada <strong><em>new</em></strong> más el nombre de la clase:</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="n">Coche</span> <span class="n">seat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Coche</span><span class="p">();</span> <span class="c1">//En este caso la variable es creada e inicializada</span>
 </code></pre></div>
 <h3 id="constructor">Constructor</h3>
