@@ -14,7 +14,7 @@
     
     
       
-        <title>3.1- Concepto de método de clase - Programación</title>
+        <title>3.1- Clases en Java - Programación</title>
       
     
     
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3.1- Concepto de método de clase
+              3.1- Clases en Java
             
           </span>
         </div>
@@ -761,12 +761,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          3.1- Concepto de método de clase
+          3.1- Clases en Java
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        3.1- Concepto de método de clase
+        3.1- Clases en Java
       </a>
       
         
@@ -865,78 +865,34 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#creacion-e-inicializacion-de-objetos-de-la-clase" class="md-nav__link">
-    Creación e inicialización de objetos de la clase
-  </a>
-  
-    <nav class="md-nav" aria-label="Creación e inicialización de objetos de la clase">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#constructor" class="md-nav__link">
-    Constructor
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#constructor-por-defecto" class="md-nav__link">
-    Constructor por defecto
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#constructor-sobrecargado" class="md-nav__link">
-    Constructor sobrecargado
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#llamar-a-un-constructor-desde-otro-dentro-de-la-misma-clase" class="md-nav__link">
-    Llamar a un constructor desde otro dentro de la misma clase
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ambito-de-variables-locales-y-argumentos" class="md-nav__link">
-    Ámbito de variables locales y argumentos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variables-y-clases-estaticas" class="md-nav__link">
-    Variables y clases estáticas
-  </a>
-  
-    <nav class="md-nav" aria-label="Variables y clases estáticas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sobrecarga-de-metodos" class="md-nav__link">
-    Sobrecarga de métodos
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2constructor/" class="md-nav__link">
+        3.2- Constructores
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3sobrecargametodos/" class="md-nav__link">
+        3.3- Sobrecarga de métodos
+      </a>
     </li>
   
 
@@ -1084,74 +1040,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#creacion-e-inicializacion-de-objetos-de-la-clase" class="md-nav__link">
-    Creación e inicialización de objetos de la clase
-  </a>
-  
-    <nav class="md-nav" aria-label="Creación e inicialización de objetos de la clase">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#constructor" class="md-nav__link">
-    Constructor
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#constructor-por-defecto" class="md-nav__link">
-    Constructor por defecto
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#constructor-sobrecargado" class="md-nav__link">
-    Constructor sobrecargado
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#llamar-a-un-constructor-desde-otro-dentro-de-la-misma-clase" class="md-nav__link">
-    Llamar a un constructor desde otro dentro de la misma clase
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ambito-de-variables-locales-y-argumentos" class="md-nav__link">
-    Ámbito de variables locales y argumentos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variables-y-clases-estaticas" class="md-nav__link">
-    Variables y clases estáticas
-  </a>
-  
-    <nav class="md-nav" aria-label="Variables y clases estáticas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sobrecarga-de-metodos" class="md-nav__link">
-    Sobrecarga de métodos
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1270,71 +1158,6 @@ Para crear los métodos que actualizan los campos debemos usar la siguiente nome
 </code></pre></div>
 <h3 id="palabra-reservada-this"><strong>Palabra reservada this</strong></h3>
 <p>En un método set como el nombre del parámetro del método es igual al del campo de la clase, necesitamos algo que nos permita distinguir entre uno u otro. Para esto se utiliza la palabra reservada <strong><em>this</em></strong> que hace alusión al campo de la clase.</p>
-<h2 id="creacion-e-inicializacion-de-objetos-de-la-clase">Creación e inicialización de objetos de la clase</h2>
-<p>Para crear objetos de la clase, podemos hacerlo de dos formas:</p>
-<ul>
-<li>Creando un variable de la clase como hemos hecho hasta ahora:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="n">Coche</span> <span class="n">seat</span><span class="p">;</span> <span class="c1">//(Aquí la variable no está inicializada y</span>
-<span class="c1">// puede dar errores de compilación).</span>
-</code></pre></div>
-<ul>
-<li>Utilizando la palabra resevada <strong><em>new</em></strong> más el nombre de la clase:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="n">Coche</span> <span class="n">seat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Coche</span><span class="p">();</span> <span class="c1">//En este caso la variable es creada e inicializada</span>
-</code></pre></div>
-<h3 id="constructor">Constructor</h3>
-<p>Cuando usamos la palabra new Coche(); para crear un objeto de la clase Coche, en realidad estamos usando lo que se conoce como el constructor de la clase para crear el coche.
-El constructor por normal general da valor a los campos de la clase.</p>
-<h3 id="constructor-por-defecto">Constructor por defecto</h3>
-<p>En Java cuando creamos un objeto con la sentencia new Coche(), se lanza el llamado contructor por defecto. Si no se ha definido este en la clase, Java lo crea y lo lanza automáticamente e iniciliza los campos de la clase con valores por defecto.</p>
-<p>Si queremos definirlo nosotros tenemos que usar public más el nombre de la clase.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Coche</span> <span class="p">{</span>
-
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">puertas</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">ruedas</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">modelo</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">color</span><span class="p">;</span>
-
-    <span class="c1">//Constructor por defecto</span>
-    <span class="kd">public</span> <span class="nf">Coche</span><span class="p">()</span> <span class="p">{</span>
-
-    <span class="p">}</span>
-
-    <span class="c1">//getters y setters</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="constructor-sobrecargado">Constructor sobrecargado</h3>
-<p>Los constructores pueden ser sobrecargados al igual que los métodos, es decir, podemos tener más de un constructor en nuestra clase siempre que cambiemos el número de parámetros.
-Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="nf">Coche</span><span class="p">(</span><span class="n">String</span> <span class="n">modelo</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">modelo</span> <span class="o">=</span> <span class="n">modelo</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">public</span> <span class="nf">Coche</span><span class="p">(</span><span class="kt">int</span> <span class="n">puertas</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">puertas</span> <span class="o">=</span> <span class="n">puertas</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Estos serían dos constructores diferentes para el objeto Coche, donde en uno se construye usando el modelo y en el otro el número de puertas.</p>
-<p>A estos constructores también se les conoce como constructor parametrizado.</p>
-<h3 id="llamar-a-un-constructor-desde-otro-dentro-de-la-misma-clase">Llamar a un constructor desde otro dentro de la misma clase</h3>
-<p>Hemos comentado que podemos tener más de un constructor en nuestra clase gracias a la sobrecarga. En corcondancia con esto, también podemos llamar a un constructor desde otro constructor.</p>
-<p>Por ejemplo, el constructor por defecto es llamado cuando hacemos new Coche(); pero dentro de este constructor no se inicializa ningún campo, y tal vez nosotros queramos crear el objeto con algunos valores predeterminados. Entonces llamaríamos desde dentro del constructor por defecto a un constructor parametrizado.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="nf">Coche</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s">&quot;blanco&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">public</span> <span class="nf">Coche</span><span class="p">(</span><span class="kt">int</span> <span class="n">puertas</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">puertas</span> <span class="o">=</span> <span class="n">puertas</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>En el código anterior, cada vez que creamos un coche vacío, le asignamos por defecto 5 puertas y color blanco como valores predeterminados.</p>
-<p>Con esto te aseguras que el objeto se crea con todos los campos inicializados.</p>
-<h2 id="ambito-de-variables-locales-y-argumentos">Ámbito de variables locales y argumentos</h2>
-<h2 id="variables-y-clases-estaticas">Variables y clases estáticas</h2>
-<h3 id="sobrecarga-de-metodos">Sobrecarga de métodos</h3>
                 
               
               
