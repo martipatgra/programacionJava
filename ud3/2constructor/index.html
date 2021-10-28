@@ -959,7 +959,7 @@
 <div class="highlight"><pre><span></span><code><span class="n">Coche</span> <span class="n">seat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Coche</span><span class="p">();</span> <span class="c1">//En este caso la variable es creada e inicializada</span>
 </code></pre></div>
 <h2 id="constructor">Constructor</h2>
-<p>Cuando usamos la palabra new Coche(); para crear un objeto de la clase Coche, en realidad estamos usando lo que se conoce como el constructor de la clase para crear el coche.
+<p>Cuando usamos la palabra <strong>new</strong> Coche(); para crear un objeto de la clase Coche, en realidad estamos usando lo que se conoce como el constructor de la clase para crear el coche.
 El constructor por normal general da valor a los campos de la clase.</p>
 <h2 id="constructor-por-defecto">Constructor por defecto</h2>
 <p>En Java cuando creamos un objeto con la sentencia new Coche(), se lanza el llamado contructor por defecto. Si no se ha definido este en la clase, Java lo crea y lo lanza automáticamente e iniciliza los campos de la clase con valores por defecto.</p>
@@ -967,7 +967,6 @@ El constructor por normal general da valor a los campos de la clase.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Coche</span> <span class="p">{</span>
 
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">puertas</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">ruedas</span><span class="p">;</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">modelo</span><span class="p">;</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">color</span><span class="p">;</span>
 
@@ -989,6 +988,12 @@ Por ejemplo:</p>
 <span class="kd">public</span> <span class="nf">Coche</span><span class="p">(</span><span class="kt">int</span> <span class="n">puertas</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="na">puertas</span> <span class="o">=</span> <span class="n">puertas</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="nf">Coche</span><span class="p">(</span><span class="kt">int</span> <span class="n">puertas</span><span class="p">,</span> <span class="n">String</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">puertas</span> <span class="o">=</span> <span class="n">puertas</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">modelo</span> <span class="o">=</span> <span class="n">modelo</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Estos serían dos constructores diferentes para el objeto Coche, donde en uno se construye usando el modelo y en el otro el número de puertas.</p>
