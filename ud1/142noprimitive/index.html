@@ -1037,8 +1037,17 @@ Por ejemplo, las clases existentes (como <em>java.util.Date</em> y <em>SimpleDat
 <p>Debido a que son constantes, los nombres de los campos del tipo enum deben estar en letras mayúsculas.</p>
 <p>En Java, se define un enumerado utilizando la palabra clave <strong>enum</strong> seguido del nombre siguiendo la convención del nombrado de clases. Primera letra en mayúscula y CamelCase.</p>
 <p>Ejemplo de enumardo:</p>
-<div class="highlight"><pre><span></span><code>  <span class="kd">public</span> <span class="kd">enum</span> <span class="n">Day</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code>  <span class="kd">public</span> <span class="kd">enum</span> <span class="n">PuntosCardinales</span> <span class="p">{</span>
     <span class="n">NORTE</span><span class="p">,</span> <span class="n">SUR</span><span class="p">,</span> <span class="n">ESTE</span><span class="p">,</span> <span class="n">OESTE</span>
+  <span class="p">}</span>
+
+  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">PuntosCardinales</span> <span class="n">myVar</span> <span class="o">=</span> <span class="n">PuntosCardinales</span><span class="p">.</span><span class="na">ESTE</span><span class="p">;</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myVar</span><span class="p">);</span>
+    <span class="p">}</span>
+
   <span class="p">}</span>
 </code></pre></div>
                 
