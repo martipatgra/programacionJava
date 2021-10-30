@@ -1048,12 +1048,17 @@ Por ejemplo:</p>
 <p>Hemos comentado que podemos tener más de un constructor en nuestra clase gracias a la sobrecarga. En corcondancia con esto, también podemos llamar a un constructor desde otro constructor.</p>
 <p>Por ejemplo, el constructor por defecto es llamado cuando hacemos new Coche(); pero dentro de este constructor no se inicializa ningún campo, y tal vez nosotros queramos crear el objeto con algunos valores predeterminados. Entonces llamaríamos desde dentro del constructor por defecto a un constructor parametrizado.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="nf">Coche</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s">&quot;blanco&quot;</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s">&quot;blanco&quot;</span><span class="p">);</span><span class="c1">//invoco al constructor con 2 parámetros</span>
 <span class="p">}</span>
 
 <span class="kd">public</span> <span class="nf">Coche</span><span class="p">(</span><span class="kt">int</span> <span class="n">puertas</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">(</span><span class="n">puertas</span><span class="p">,</span> <span class="s">&quot;desconocido&quot;</span><span class="p">,</span> <span class="n">color</span><span class="p">);</span><span class="c1">//invoco al constructor con 3 parámetros</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="nf">Coche</span><span class="p">(</span><span class="kt">int</span> <span class="n">puertas</span><span class="p">,</span> <span class="n">String</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="na">puertas</span> <span class="o">=</span> <span class="n">puertas</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">modelo</span> <span class="o">=</span> <span class="n">modelo</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>En el código anterior, cada vez que creamos un coche vacío, le asignamos por defecto 5 puertas y color blanco como valores predeterminados.</p>
