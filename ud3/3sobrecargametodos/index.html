@@ -962,7 +962,9 @@ Es la capacidad de crear múltiples métodos con el mismo nombre pero diferentes
 <span class="p">}</span>
 </code></pre></div>
 <p>Cuando se ejecuta al método <em>ingresar(50)</em>, al parámetro cantidad se le da el valor 50, luego se ejecuta el interior del método, y el valor se suma a la variable de instancia o campo balance. El método termina y el control vuelve al método main(), pero el balance del objeto <em>patriCuenta</em> ha cambiado.</p>
-<p>Las variables de instancia se utilizan para almacenar el estado de un objeto. Mantienen valores mientras exista el objeto.</p>
+<p>Las variables de instancia se utilizan para almacenar el estado de un objeto. Mantienen los valores mientras exista el objeto.</p>
+<p>Si intentáramos usar la variable cantidad en otro método, nos daría error de compilación, puesto que esa variable no existe fuera del método <em>ingresar</em>.</p>
+<p><img alt="POO" src="../../img/ud33parameters.png" /></p>
                 
               
               
