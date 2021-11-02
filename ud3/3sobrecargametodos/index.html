@@ -1017,7 +1017,7 @@ Es la capacidad de crear múltiples métodos con el mismo nombre pero diferentes
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">cambiarCantidad</span><span class="p">(</span><span class="kt">double</span> <span class="n">cantidad</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">cantidad</span> <span class="o">-=</span> <span class="mi">20</span><span class="p">;</span>
     <span class="p">}</span>
-<span class="o">------------------</span>
+<span class="o">------------------</span><span class="n">Clase</span> <span class="n">Main</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">Cuenta</span> <span class="n">cuenta</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cuenta</span><span class="p">(</span><span class="s">&quot;Pepe&quot;</span><span class="p">,</span> <span class="s">&quot;pepe@gmail.com&quot;</span><span class="p">,</span> <span class="s">&quot;873463774&quot;</span><span class="p">);</span>
         <span class="kt">int</span> <span class="n">cantidad</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
@@ -1030,6 +1030,8 @@ Es la capacidad de crear múltiples métodos con el mismo nombre pero diferentes
 </code></pre></div>
 <p><em>cantidad</em> es el nombre de la variable para el valor 50 que se ha enviado al método cambiarCantidad(). Ese método cambia el valor de la cantidad, pero esto no tiene ningún efecto sobre ninguna otra variable fuera del método.</p>
 <p>Cuando el método regresa a su llamador (main), el valor del parámetro cantidad se olvida.</p>
+<p><strong>Una variable local</strong> es una variable que se declara dentro del cuerpo de un método.</p>
+<p>El alcance de una variable local comienza desde donde se declara y termina al final del bloque en el que se encuentra. Recuerde que un bloque es un grupo de declaraciones entre llaves, {}.</p>
                 
               
               
