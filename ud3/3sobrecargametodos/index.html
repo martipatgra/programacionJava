@@ -819,6 +819,19 @@
     Ámbito de variables locales y argumentos
   </a>
   
+    <nav class="md-nav" aria-label="Ámbito de variables locales y argumentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#argumentos-paso-por-valor" class="md-nav__link">
+    Argumentos paso por valor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -914,6 +927,19 @@
     Ámbito de variables locales y argumentos
   </a>
   
+    <nav class="md-nav" aria-label="Ámbito de variables locales y argumentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#argumentos-paso-por-valor" class="md-nav__link">
+    Argumentos paso por valor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -963,8 +989,47 @@ Es la capacidad de crear múltiples métodos con el mismo nombre pero diferentes
 </code></pre></div>
 <p>Cuando se ejecuta al método <em>ingresar(50)</em>, al parámetro cantidad se le da el valor 50, luego se ejecuta el interior del método, y el valor se suma a la variable de instancia o campo balance. El método termina y el control vuelve al método main(), pero el balance del objeto <em>patriCuenta</em> ha cambiado.</p>
 <p>Las variables de instancia se utilizan para almacenar el estado de un objeto. Mantienen los valores mientras exista el objeto.</p>
-<p>Si intentáramos usar la variable cantidad en otro método, nos daría error de compilación, puesto que esa variable no existe fuera del método <em>ingresar</em>.</p>
+<p>Si intentáramos usar la variable cantidad en otro método, nos daría error de compilación, puesto que esa variable no existe fuera del método <em>ingresar</em>, es lo que se conoce como <strong>una variable local</strong>.</p>
 <p><img alt="POO" src="../../img/ud33parameters.png" /></p>
+<p>Podríamos tener otro método que definiera o usara otra variable llamada <em>cantidad</em>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cuenta</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">balance</span><span class="p">;</span>
+    <span class="p">...</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">ingresar</span><span class="p">(</span><span class="kt">double</span> <span class="n">cantidad</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">balance</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">balance</span> <span class="o">+</span> <span class="n">cantidad</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Balance actual &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">balance</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">retirar</span><span class="p">(</span><span class="kt">double</span> <span class="n">cantidad</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">balance</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">balance</span> <span class="o">-</span> <span class="n">cantidad</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En el método <em>retirar</em> la variable <strong>cantidad</strong> es una variable diferente a la que usamos en el método <em>ingresar</em>, aunque tengan el mismo nombre ya que están en ámbitos diferentes, no pueden verse entre ellas.</p>
+<h3 id="argumentos-paso-por-valor">Argumentos paso por valor</h3>
+<p>Un parámetro o argumento es un "mensaje unidireccional" que la persona que llama usa para enviar valores a un método.</p>
+<p>Dentro del cuerpo de un método, un parámetro se usa como cualquier variable. Se puede utilizar en expresiones aritméticas, en sentencias de asignación, etc.</p>
+<p>Sin embargo, los cambios realizados en el parámetro no tienen ningún efecto fuera del cuerpo del método. Un parámetro es una copia local de cualquier valor que la persona que llama haya pasado al método. Cualquier cambio realizado afectará solo a esta copia local.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="o">------</span><span class="n">Clase</span> <span class="n">Cuenta</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">cambiarCantidad</span><span class="p">(</span><span class="kt">double</span> <span class="n">cantidad</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cantidad</span> <span class="o">-=</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="o">------------------</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Cuenta</span> <span class="n">cuenta</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cuenta</span><span class="p">(</span><span class="s">&quot;Pepe&quot;</span><span class="p">,</span> <span class="s">&quot;pepe@gmail.com&quot;</span><span class="p">,</span> <span class="s">&quot;873463774&quot;</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">cantidad</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+
+        <span class="n">cuenta</span><span class="p">.</span><span class="na">ingresar</span><span class="p">(</span><span class="n">cantidad</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">cantidad</span><span class="p">);</span><span class="c1">//imprime 50</span>
+        <span class="n">cuenta</span><span class="p">.</span><span class="na">cambiarCantidad</span><span class="p">(</span><span class="n">cantidad</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">cantidad</span><span class="p">);</span><span class="c1">//imprime 50</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p><em>cantidad</em> es el nombre de la variable para el valor 50 que se ha enviado al método cambiarCantidad(). Ese método cambia el valor de la cantidad, pero esto no tiene ningún efecto sobre ninguna otra variable fuera del método.</p>
+<p>Cuando el método regresa a su llamador (main), el valor del parámetro cantidad se olvida.</p>
                 
               
               
