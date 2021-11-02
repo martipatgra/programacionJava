@@ -940,6 +940,20 @@ Es la capacidad de crear múltiples métodos con el mismo nombre pero diferentes
 <p>La signature(firma) de un método consta del nombre del método, más el número, los tipos y el orden de sus parámetros formales. Una clase no puede contener dos métodos con la misma signature.</p>
 <p><img alt="POO" src="../../img/ud33methodsignature.png" /></p>
 <h2 id="ambito-de-variables-locales-y-argumentos">Ámbito de variables locales y argumentos</h2>
+<p>El estado de un objeto consta de los datos que contiene en sus variables de instancia(campos o atributos). Las variables de instancia mantienen sus valores hasta que se cambian explícitamente o hasta que se destruye el objeto.</p>
+<p>Los métodos de un objeto suelen trabajar con otros valores que no se mantienen en las variables de instancia. Estos valores se mantienen en variables y parámetros locales.</p>
+<p>En el ejemplo de la clase Cuenta.java teníamos:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cuenta</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">balance</span><span class="p">;</span>
+    <span class="p">...</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">ingresar</span><span class="p">(</span><span class="kt">double</span> <span class="n">cantidad</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">balance</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">balance</span> <span class="o">+</span> <span class="n">cantidad</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Balance actual &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">balance</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
