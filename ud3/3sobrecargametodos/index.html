@@ -955,12 +955,13 @@ Es la capacidad de crear múltiples métodos con el mismo nombre pero diferentes
 <span class="p">}</span>
 </code></pre></div>
 <p>La persona que llama al método ingresar utiliza el parámetro <em>cantidad</em> para enviar un valor al método. A esto se le llama <strong>pasar un valor al método</strong>.</p>
-<p>Desde el método main() se llama al método ingresar que usa el parámetro para pasar un valor al método:</p>
+<p>Desde el método main() llamamos al método ingresar que usa el parámetro para pasar un valor al método:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="n">Cuenta</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cuenta</span><span class="p">(</span><span class="s">&quot;1234567&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s">&quot;Patricia&quot;</span><span class="p">);</span>
+    <span class="n">Cuenta</span> <span class="n">patriCuenta</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cuenta</span><span class="p">(</span><span class="s">&quot;1234567&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s">&quot;Patricia&quot;</span><span class="p">);</span>
     <span class="n">c</span><span class="p">.</span><span class="na">ingresar</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>Cuando se ejecuta al método <em>ingresar(50)</em>, al parámetro cantidad se le da el valor 50, luego se ejecuta el interior del método, y el valor se suma a la variable de instancia o campo balance. El método termina y el control vuelve al método main(), pero el balance del objeto <em>patriCuenta</em> ha cambiado.</p>
                 
               
               
