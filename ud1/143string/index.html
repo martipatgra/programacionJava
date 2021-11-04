@@ -430,6 +430,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#el-operador-concatenacion" class="md-nav__link">
+    El operador concatenación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#indices" class="md-nav__link">
     Índices
   </a>
@@ -446,6 +453,27 @@
         <li class="md-nav__item">
   <a href="#comparar-strings" class="md-nav__link">
     Comparar Strings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#char-dentro-de-string" class="md-nav__link">
+    char dentro de String
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#char" class="md-nav__link">
+    char
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diferencias-entre-char-y-string" class="md-nav__link">
+    Diferencias entre char y String
   </a>
   
 </li>
@@ -938,6 +966,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#el-operador-concatenacion" class="md-nav__link">
+    El operador concatenación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#indices" class="md-nav__link">
     Índices
   </a>
@@ -954,6 +989,27 @@
         <li class="md-nav__item">
   <a href="#comparar-strings" class="md-nav__link">
     Comparar Strings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#char-dentro-de-string" class="md-nav__link">
+    char dentro de String
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#char" class="md-nav__link">
+    char
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diferencias-entre-char-y-string" class="md-nav__link">
+    Diferencias entre char y String
   </a>
   
 </li>
@@ -986,6 +1042,19 @@ Todos los literales de la forma "cualquier texto", es decir, literales entre com
     <span class="c1">//Utilizando el operador concatenación +</span>
     <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">text</span> <span class="o">+</span> <span class="s">&quot; 2021&quot;</span><span class="p">;</span>      <span class="c1">//s2 contiene &quot;Severo Ochoa 2021&quot;</span>
 </code></pre></div>
+<h2 id="el-operador-concatenacion">El operador concatenación</h2>
+<p>La clase proporciona el operador + (concatenación) para unir dos o más String.
+El resultado de aplicar este operador es un nuevo String concatenación de los otros.
+Por ejemplo, si tenemos dos String b y c:</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span> <span class="n">b</span> <span class="o">=</span> <span class="s">&quot;Ordenador&quot;</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">c</span> <span class="o">=</span> <span class="s">&quot; Portátil&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p><img alt="String" src="../../img/stringconcat.png" /></p>
+<p>La operación</p>
+<div class="highlight"><pre><span></span><code><span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">;</span>
+</code></pre></div>
+<p>Crea un nuevo String que se incluye en el String Pool:</p>
+<p><img alt="String" src="../../img/stringconcat2.png" /></p>
 <h2 id="indices">Índices</h2>
 <p>Cada uno de los caracteres que forman un String son del tipo primitivo <strong>char</strong>.
 Los caracteres de un string están numerados internamente con índices empezando desde el cero:</p>
@@ -1013,6 +1082,49 @@ Los caracteres de un string están numerados internamente con índices empezando
   <span class="p">}</span>
 </code></pre></div>
 <p><img alt="String" src="../../img/stringcompare.png" /></p>
+<h2 id="char-dentro-de-string">char dentro de String</h2>
+<p>Como se ha comentado, un String está compuesto de caracteres tipo char.</p>
+<p>Para acceder a los caracteres dentro de un String usamos el método <strong>charAt</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span> <span class="n">food</span> <span class="o">=</span> <span class="s">&quot;cookie&quot;</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">firstLetter</span> <span class="o">=</span> <span class="n">food</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// &#39;c&#39;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">firstLetter</span> <span class="o">+</span> <span class="s">&quot; is for &quot;</span> <span class="o">+</span> <span class="n">food</span><span class="p">);</span> 
+</code></pre></div>
+<p>También podemos recorrer el String con un bucle for e imprimir cada uno de los caracteres que lo forman.</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span> <span class="n">major</span> <span class="o">=</span> <span class="s">&quot;CSE&quot;</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">major</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">major</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>OUTPUT
+C
+S
+E</p>
+<h2 id="char">char</h2>
+<p>A todos los valores char se les asigna un número internamente por el ordenador, son los llamados valores ASCII.
+Por ejemplo:</p>
+<blockquote>
+<p>el carácter 'A' es 65 en código ASCII</p>
+<p>el carácter 'a' es 97 en código ASCII</p>
+</blockquote>
+<p>Mezclar tipos de datos char e int automáticamente cause una conversión en entero.
+Por ejemplo:</p>
+<blockquote>
+<p>'a' + 10 --&gt; devuelve 107.</p>
+</blockquote>
+<p>Para convertir un entero en su equivalente a carácter (char) haríamos:</p>
+<blockquote>
+<p>(char) ('a' + 2) --&gt; devuelve 'c'.</p>
+</blockquote>
+<h2 id="diferencias-entre-char-y-string">Diferencias entre char y String</h2>
+<ul>
+<li>String es un objeto, por tanto, contiene métodos.</li>
+<li>char es un tipo de dato primitivo, no puedes llamar a métodos con él.</li>
+<li>String utiliza comillas dobles.</li>
+<li>char utiliza comillas simples.</li>
+<li>No se puede comparar un String usando operadores relacionales.</li>
+<li>Si se puede comparar un char usando operadores relacionales: 'a' &lt; 'b', 'X' == 'X', ...</li>
+</ul>
                 
               
               
