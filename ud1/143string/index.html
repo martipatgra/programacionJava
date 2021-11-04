@@ -443,6 +443,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#comparar-strings" class="md-nav__link">
+    Comparar Strings
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -944,6 +951,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#comparar-strings" class="md-nav__link">
+    Comparar Strings
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -989,6 +1003,16 @@ Los caracteres de un string están numerados internamente con índices empezando
 <p class="admonition-title">Tip</p>
 <p>Para más información consulta la documentación oficial de la clase <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html">String</a></p>
 </div>
+<h2 id="comparar-strings">Comparar Strings</h2>
+<p>Los operadores relacionales como == o &lt; &gt; no se utilizan para comparar Strings, aunque el código compile no es correcto, ya que == compara objetos, y devolvería falso aunque dos strings tuvieran el mismo texto puesto que son objetos diferentes.</p>
+<p>Para comparar strings utilizamos el método <em>equals</em>.</p>
+<div class="highlight"><pre><span></span><code>  <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Patri&quot;</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Patri&quot;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Coincide.&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+</code></pre></div>
+<p><img alt="String" src="../../img/stringcompare.png" /></p>
                 
               
               
