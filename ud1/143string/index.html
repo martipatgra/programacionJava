@@ -1073,7 +1073,7 @@ Los caracteres de un string están numerados internamente con índices empezando
 <p>Para más información consulta la documentación oficial de la clase <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html">String</a></p>
 </div>
 <h2 id="comparar-strings">Comparar Strings</h2>
-<p>Los operadores relacionales como == o &lt; &gt; no se utilizan para comparar Strings, aunque el código compile no es correcto, ya que == compara objetos, y devolvería falso aunque dos strings tuvieran el mismo texto puesto que son objetos diferentes.</p>
+<p>Los operadores relacionales como == o &lt; &gt; <strong>NO</strong> se utilizan para comparar Strings, aunque el código compile no es correcto, ya que == compara objetos, y devolvería falso aunque dos strings tuvieran el mismo texto puesto que son objetos diferentes.</p>
 <p>Para comparar strings utilizamos el método <em>equals</em>.</p>
 <div class="highlight"><pre><span></span><code>  <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Patri&quot;</span><span class="p">;</span>
 
@@ -1086,6 +1086,7 @@ Los caracteres de un string están numerados internamente con índices empezando
 <h2 id="char-dentro-de-string">char dentro de String</h2>
 <p>Como se ha comentado, un String está compuesto de caracteres tipo char.</p>
 <p>Para acceder a los caracteres dentro de un String usamos el método <strong>charAt</strong>.</p>
+<p>Se puede usar la concatenación + para concatenar char con String.</p>
 <div class="highlight"><pre><span></span><code><span class="n">String</span> <span class="n">food</span> <span class="o">=</span> <span class="s">&quot;cookie&quot;</span><span class="p">;</span>
 <span class="kt">char</span> <span class="n">firstLetter</span> <span class="o">=</span> <span class="n">food</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// &#39;c&#39;</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">firstLetter</span> <span class="o">+</span> <span class="s">&quot; is for &quot;</span> <span class="o">+</span> <span class="n">food</span><span class="p">);</span> 
