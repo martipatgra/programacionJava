@@ -847,8 +847,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objetos-paso-por-referencia" class="md-nav__link">
-    Objetos, paso por referencia
+  <a href="#paso-por-referencia" class="md-nav__link">
+    Paso por referencia
   </a>
   
 </li>
@@ -873,8 +873,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../4referencevalue/" class="md-nav__link">
+        3.4- Paso de parámetros por valor y referencia
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../4static/" class="md-nav__link">
-        3.4- Variables y clases estáticas
+        3.5- Variables y clases estáticas
       </a>
     </li>
   
@@ -969,8 +981,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objetos-paso-por-referencia" class="md-nav__link">
-    Objetos, paso por referencia
+  <a href="#paso-por-referencia" class="md-nav__link">
+    Paso por referencia
   </a>
   
 </li>
@@ -1049,7 +1061,7 @@ Es la capacidad de crear múltiples métodos con el mismo nombre pero diferentes
 </code></pre></div>
 <p>En el método <em>retirar</em> la variable <strong>cantidad</strong> es una variable diferente a la que usamos en el método <em>ingresar</em>, aunque tengan el mismo nombre ya que están en ámbitos diferentes, no pueden verse entre ellas.</p>
 <h3 id="argumentos-paso-por-valor">Argumentos paso por valor</h3>
-<p>Un parámetro o argumento es un "mensaje unidireccional" que la persona que llama usa para enviar valores a un método.</p>
+<p>Un parámetro es un "mensaje unidireccional" que la persona que llama usa para enviar valores a un método.</p>
 <p>Dentro del cuerpo de un método, un parámetro se usa como cualquier variable. Se puede utilizar en expresiones aritméticas, en sentencias de asignación, etc.</p>
 <p>Sin embargo, los cambios realizados en el parámetro no tienen ningún efecto fuera del cuerpo del método. Un parámetro es una copia local de cualquier valor que la persona que llama haya pasado al método. Cualquier cambio realizado afectará solo a esta copia local.</p>
 <p>Esto ocurre cuando se pasa una dato de tipo primitivo.</p>
@@ -1083,7 +1095,7 @@ Es la capacidad de crear múltiples métodos con el mismo nombre pero diferentes
 </ol>
 <p>Como hemos visto un cambio en un parámetro dentro del método no afecta a ninguna variable desde donde se invocó. Entonces, ¿cómo puede un método enviar un valor a la persona que lo invoca?</p>
 <p>Para devolver un valor único a la persona que invoca, un método invocado puede utilizar la declaración de retorno <strong>return</strong> junto con el valor que se devolverá.</p>
-<h2 id="objetos-paso-por-referencia">Objetos, paso por referencia</h2>
+<h2 id="paso-por-referencia">Paso por referencia</h2>
 <p>Las referencias a objetos o variable de referencia pueden ser parámetros. Esto sigue siendo una llamada por valor, pero ahora el valor es una referencia de objeto. Esta referencia se puede utilizar para acceder al objeto y posiblemente cambiarlo.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
 
@@ -1103,6 +1115,7 @@ Es la capacidad de crear múltiples métodos con el mismo nombre pero diferentes
 </code></pre></div>
 <p>Las variables de instancia pública de los objetos se pueden cambiar mediante cualquier método que tenga una referencia al objeto. Como se ha hecho en el ejemplo anterior en la variable de instancia <em>balance</em>.</p>
 <h2 id="resumen">Resumen</h2>
+<p>Un parámetro formal es una variable en una declaración de método. Siempre consta de un tipo seguido de un identificador de variable. Un argumento es un valor que se pasa a un método a través de un parámetro formal cuando se invoca el método. Los parámetros de un método limitan el tipo de información que se puede pasar a un método.</p>
 <ol>
 <li>
 <p>El paso de parámetros siempre se realiza por valor.</p>
