@@ -1052,6 +1052,7 @@ Es la capacidad de crear múltiples métodos con el mismo nombre pero diferentes
 <p>Un parámetro o argumento es un "mensaje unidireccional" que la persona que llama usa para enviar valores a un método.</p>
 <p>Dentro del cuerpo de un método, un parámetro se usa como cualquier variable. Se puede utilizar en expresiones aritméticas, en sentencias de asignación, etc.</p>
 <p>Sin embargo, los cambios realizados en el parámetro no tienen ningún efecto fuera del cuerpo del método. Un parámetro es una copia local de cualquier valor que la persona que llama haya pasado al método. Cualquier cambio realizado afectará solo a esta copia local.</p>
+<p>Esto ocurre cuando se pasa una dato de tipo primitivo.</p>
 <p>Por ejemplo:</p>
 <div class="highlight"><pre><span></span><code><span class="o">------</span><span class="n">Clase</span> <span class="n">Cuenta</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">cambiarCantidad</span><span class="p">(</span><span class="kt">double</span> <span class="n">cantidad</span><span class="p">)</span> <span class="p">{</span>
@@ -1083,28 +1084,20 @@ Es la capacidad de crear múltiples métodos con el mismo nombre pero diferentes
 <p>Como hemos visto un cambio en un parámetro dentro del método no afecta a ninguna variable desde donde se invocó. Entonces, ¿cómo puede un método enviar un valor a la persona que lo invoca?</p>
 <p>Para devolver un valor único a la persona que invoca, un método invocado puede utilizar la declaración de retorno <strong>return</strong> junto con el valor que se devolverá.</p>
 <h2 id="objetos-paso-por-referencia">Objetos, paso por referencia</h2>
-<p>Las referencias a objetos pueden ser parámetros. Esto sigue siendo una llamada por valor, pero ahora el valor es una referencia de objeto. Esta referencia se puede utilizar para acceder al objeto y posiblemente cambiarlo.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cuenta</span> <span class="p">{</span>
+<p>Las referencias a objetos o variable de referencia pueden ser parámetros. Esto sigue siendo una llamada por valor, pero ahora el valor es una referencia de objeto. Esta referencia se puede utilizar para acceder al objeto y posiblemente cambiarlo.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
 
-    <span class="kd">private</span> <span class="kt">double</span> <span class="n">balance</span><span class="p">;</span>
-    <span class="p">...</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">imprimirBalance</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">balance</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">ingresarCienEuros</span><span class="p">(</span><span class="n">Cuenta</span> <span class="n">cuenta</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El balance es &quot;</span> <span class="o">+</span> <span class="n">cuenta</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
+        <span class="n">cuenta</span><span class="p">.</span><span class="na">ingresar</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El balance es &quot;</span> <span class="o">+</span> <span class="n">cuenta</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">ingresar</span><span class="p">(</span><span class="kt">double</span> <span class="n">cantidad</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">balance</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">balance</span> <span class="o">+</span> <span class="n">cantidad</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Balance actual &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">balance</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Cuenta</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cuenta</span><span class="p">();</span>
-        <span class="n">c</span><span class="p">.</span><span class="na">imprimirBalance</span><span class="p">();</span><span class="c1">//imprime 0</span>
-        <span class="n">c</span><span class="p">.</span><span class="na">ingresar</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-        <span class="n">c</span><span class="p">.</span><span class="na">imprimirBalance</span><span class="p">();</span><span class="c1">//imprime 100</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El balance es &quot;</span> <span class="o">+</span> <span class="n">cuenta</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
+        <span class="n">ingresarCienEuros</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El balance es &quot;</span> <span class="o">+</span> <span class="n">cuenta</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
