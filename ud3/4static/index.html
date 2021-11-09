@@ -820,9 +820,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          3.5- Variables y clases estáticas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         3.5- Variables y clases estáticas
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-estaticos" class="md-nav__link">
+    Métodos estáticos
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -883,6 +913,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-estaticos" class="md-nav__link">
+    Métodos estáticos
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -895,6 +940,33 @@
                 
                 
                 <h1 id="variables-y-clases-estaticas">Variables y clases estáticas</h1>
+<h2 id="metodos-estaticos">Métodos estáticos</h2>
+<ul>
+<li>Los métodos estáticos son declarados usando el modificador <strong>static</strong>.</li>
+<li>No se puede acceder a los métodos estáticos desde métodos de instancia o variables de instancia directamente.</li>
+<li>Para invocar a un método estático se utiliza el nombre de la clase + "." + el nombre del método, o solamente el nombre del método si está en la misma clase.(VEASE EJEMPLO)</li>
+<li>Normalmente se usan para operaciones que no requieren ningún dato de instancia de la clase, es decir, nada que venga de this.</li>
+<li>Dentro de un método estático no podemos usar la palabra <em>this</em>.</li>
+<li>Cada vez que veas un método que <strong>no utilice variables de instancia</strong>, significa que ese método debería declararse como estático.</li>
+<li>Por ejemplo, el main es declarado como estático y es llamado por la JVM cuando se lanza la aplicación.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculadora</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printSuma</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Calculadora</span><span class="p">.</span><span class="na">printSuma</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+        <span class="n">printHolaMundo</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printHolaMundo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola mundo.&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
