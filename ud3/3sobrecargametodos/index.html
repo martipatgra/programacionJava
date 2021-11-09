@@ -831,33 +831,6 @@
     Ámbito de variables locales y argumentos
   </a>
   
-    <nav class="md-nav" aria-label="Ámbito de variables locales y argumentos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#argumentos-paso-por-valor" class="md-nav__link">
-    Argumentos paso por valor
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#paso-por-referencia" class="md-nav__link">
-    Paso por referencia
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen" class="md-nav__link">
-    Resumen
-  </a>
-  
 </li>
       
     </ul>
@@ -886,7 +859,7 @@
   
     <li class="md-nav__item">
       <a href="../4static/" class="md-nav__link">
-        3.5- Variables y clases estáticas
+        3.5- Variables, métodos y clases estáticas
       </a>
     </li>
   
@@ -965,33 +938,6 @@
     Ámbito de variables locales y argumentos
   </a>
   
-    <nav class="md-nav" aria-label="Ámbito de variables locales y argumentos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#argumentos-paso-por-valor" class="md-nav__link">
-    Argumentos paso por valor
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#paso-por-referencia" class="md-nav__link">
-    Paso por referencia
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen" class="md-nav__link">
-    Resumen
-  </a>
-  
 </li>
       
     </ul>
@@ -1060,76 +1006,6 @@ Es la capacidad de crear múltiples métodos con el mismo nombre pero diferentes
 <span class="p">}</span>
 </code></pre></div>
 <p>En el método <em>retirar</em> la variable <strong>cantidad</strong> es una variable diferente a la que usamos en el método <em>ingresar</em>, aunque tengan el mismo nombre ya que están en ámbitos diferentes, no pueden verse entre ellas.</p>
-<h3 id="argumentos-paso-por-valor">Argumentos paso por valor</h3>
-<p>Un parámetro es un "mensaje unidireccional" que la persona que llama usa para enviar valores a un método.</p>
-<p>Dentro del cuerpo de un método, un parámetro se usa como cualquier variable. Se puede utilizar en expresiones aritméticas, en sentencias de asignación, etc.</p>
-<p>Sin embargo, los cambios realizados en el parámetro no tienen ningún efecto fuera del cuerpo del método. Un parámetro es una copia local de cualquier valor que la persona que llama haya pasado al método. Cualquier cambio realizado afectará solo a esta copia local.</p>
-<p>Esto ocurre cuando se pasa una dato de tipo primitivo.</p>
-<p>Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="o">------</span><span class="n">Clase</span> <span class="n">Cuenta</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">cambiarCantidad</span><span class="p">(</span><span class="kt">double</span> <span class="n">cantidad</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">cantidad</span> <span class="o">-=</span> <span class="mi">20</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="o">------------------</span><span class="n">Clase</span> <span class="n">Main</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">Cuenta</span> <span class="n">cuenta</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cuenta</span><span class="p">(</span><span class="s">&quot;Pepe&quot;</span><span class="p">,</span> <span class="s">&quot;pepe@gmail.com&quot;</span><span class="p">,</span> <span class="s">&quot;873463774&quot;</span><span class="p">);</span>
-        <span class="kt">int</span> <span class="n">cantidad</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
-
-        <span class="n">cuenta</span><span class="p">.</span><span class="na">ingresar</span><span class="p">(</span><span class="n">cantidad</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">cantidad</span><span class="p">);</span><span class="c1">//imprime 50</span>
-        <span class="n">cuenta</span><span class="p">.</span><span class="na">cambiarCantidad</span><span class="p">(</span><span class="n">cantidad</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">cantidad</span><span class="p">);</span><span class="c1">//imprime 50</span>
-    <span class="p">}</span>
-</code></pre></div>
-<p><em>cantidad</em> es el nombre de la variable para el valor 50 que se ha enviado al método cambiarCantidad(). Ese método cambia el valor de la cantidad, pero esto no tiene ningún efecto sobre ninguna otra variable fuera del método.</p>
-<p>Cuando el método regresa a su llamador (main), el valor del parámetro cantidad se olvida.</p>
-<p><strong>Una variable local</strong> es una variable que se declara dentro del cuerpo de un método.</p>
-<p>El alcance de una variable local comienza desde donde se declara y termina al final del bloque en el que se encuentra. Recuerde que un bloque es un grupo de declaraciones entre llaves, {}.</p>
-<p>Así es como funciona el paso de parámetros por valor:</p>
-<ol>
-<li>Cuando la persona invoca un método, es persona proporciona una lista de valores (los parámetros) en la lista de parámetros del método.</li>
-<li>Cuando el método invocado comienza a ejecutarse, estos valores se copian en los parámetros formales o argumentos.</li>
-<li>El método invocado utiliza los parámetros formales para acceder a estos valores copiados.</li>
-<li>Cualquier cambio que realice el método en el valor contenido en un parámetro formal cambia solo esa copia.</li>
-<li>El método invocado no puede utilizar un parámetro formal para enviar un valor a la persona que ha invocado el método.</li>
-</ol>
-<p>Como hemos visto un cambio en un parámetro dentro del método no afecta a ninguna variable desde donde se invocó. Entonces, ¿cómo puede un método enviar un valor a la persona que lo invoca?</p>
-<p>Para devolver un valor único a la persona que invoca, un método invocado puede utilizar la declaración de retorno <strong>return</strong> junto con el valor que se devolverá.</p>
-<h2 id="paso-por-referencia">Paso por referencia</h2>
-<p>Las referencias a objetos o variable de referencia pueden ser parámetros. Esto sigue siendo una llamada por valor, pero ahora el valor es una referencia de objeto. Esta referencia se puede utilizar para acceder al objeto y posiblemente cambiarlo.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">ingresarCienEuros</span><span class="p">(</span><span class="n">Cuenta</span> <span class="n">cuenta</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El balance es &quot;</span> <span class="o">+</span> <span class="n">cuenta</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
-        <span class="n">cuenta</span><span class="p">.</span><span class="na">ingresar</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El balance es &quot;</span> <span class="o">+</span> <span class="n">cuenta</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Cuenta</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cuenta</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El balance es &quot;</span> <span class="o">+</span> <span class="n">cuenta</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
-        <span class="n">ingresarCienEuros</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El balance es &quot;</span> <span class="o">+</span> <span class="n">cuenta</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Las variables de instancia pública de los objetos se pueden cambiar mediante cualquier método que tenga una referencia al objeto. Como se ha hecho en el ejemplo anterior en la variable de instancia <em>balance</em>.</p>
-<h2 id="resumen">Resumen</h2>
-<p>Un parámetro formal es una variable en una declaración de método. Siempre consta de un tipo seguido de un identificador de variable. Un argumento es un valor que se pasa a un método a través de un parámetro formal cuando se invoca el método. Los parámetros de un método limitan el tipo de información que se puede pasar a un método.</p>
-<ol>
-<li>
-<p>El paso de parámetros siempre se realiza por valor.</p>
-</li>
-<li>
-<p>Si el parámetro de un método es un tipo de datos primitivo, el método puede cambiar el valor contenido en su parámetro, pero ese cambio no tiene ningún efecto en otros lugares.</p>
-</li>
-<li>
-<p>Sin embargo, si el parámetro de un método es una referencia a un objeto, el método puede usar la referencia para acceder al objeto y luego cambiar las variables de instancia del objeto (a menos que sean privadas o en un paquete diferente).</p>
-</li>
-<li>
-<p>Por supuesto, incluso si un método tiene una referencia a un objeto, el objeto se puede cambiar solo si el objeto permite que se realicen cambios.</p>
-</li>
-</ol>
                 
               
               
