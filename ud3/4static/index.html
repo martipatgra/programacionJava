@@ -1118,6 +1118,33 @@ Son también llamadas <strong>constantes de clase</strong>:</p>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="variables-de-instancia">Variables de instancia</h2>
+<ul>
+<li>Las variables de instancia también son conocidas como campos o atributos.</li>
+<li>Las variables de instancia pertenecen a una instancia de la clase.</li>
+<li>Cada instancia tiene su propia copia de una variable de instancia, así que cada instancia puede tener un valor(estado) diferente.</li>
+<li>Las variables de instancia representan el estado de una instancia.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Persona</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Persona</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printName</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Persona</span> <span class="n">p1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">);</span>
+        <span class="n">Persona</span> <span class="n">p2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Maxi&quot;</span><span class="p">);</span>
+        <span class="n">p1</span><span class="p">.</span><span class="na">printName</span><span class="p">();</span><span class="c1">//imprime Patricia</span>
+        <span class="n">p2</span><span class="p">.</span><span class="na">printName</span><span class="p">();</span><span class="c1">//imprime Maxi</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="metodos-estaticos">Métodos estáticos</h2>
 <ul>
 <li>Los métodos estáticos son declarados usando el modificador <strong>static</strong>.</li>
@@ -1166,6 +1193,25 @@ Son también llamadas <strong>constantes de clase</strong>:</p>
 <li>Una clase interna estática no necesita ninguna referencia de clase externa para acceder a las variables miembro.</li>
 <li>La clase estática nunca se puede instanciar. Por lo tanto, los métodos son directamente accesibles por el nombre de la clase.</li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Estatica</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Estatica</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Estatica</span><span class="p">();</span>
+        <span class="c1">//s.ClaseInterna.printNum(); NO ES CORRECTO</span>
+        <span class="c1">//Estatica.ClaseInterna.printNum(); SI se podría hacer</span>
+        <span class="n">ClaseInterna</span><span class="p">.</span><span class="na">printNum</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">ClaseInterna</span> <span class="p">{</span>
+        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printNum</span><span class="p">()</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="c1">//System.out.println(j); //NO PODEMOS ACCEDER A ATRIBUTOS NO ESTÁTICOS</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="bloques-estaticos">Bloques estáticos</h2>
 <p>Es posible declarar bloques de código como estáticos, de tal manera que sean ejecutados cuando se cargue la clase. Este tipo de bloques se conocen como bloques de inicialización estáticos (static initializer block). Si no se declara un bloque de este tipo de forma explícita, el compilador Just-in-Time combina todos los campos estáticos en un bloque y los ejecuta durante la carga de clases.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Objeto</span> <span class="p">{</span>
