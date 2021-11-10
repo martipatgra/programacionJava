@@ -871,8 +871,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#factorial-n" class="md-nav__link">
-    Factorial: N!
+  <a href="#ejemplo-1-factorial-n" class="md-nav__link">
+    EJEMPLO 1: Factorial: N!
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-2-verificar-si-un-numero-es-palindromo" class="md-nav__link">
+    EJEMPLO 2: Verificar si un número es palíndromo
   </a>
   
 </li>
@@ -967,8 +974,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#factorial-n" class="md-nav__link">
-    Factorial: N!
+  <a href="#ejemplo-1-factorial-n" class="md-nav__link">
+    EJEMPLO 1: Factorial: N!
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-2-verificar-si-un-numero-es-palindromo" class="md-nav__link">
+    EJEMPLO 2: Verificar si un número es palíndromo
   </a>
   
 </li>
@@ -1034,15 +1048,17 @@
 <h2 id="parte-recursiva-y-caso-base">Parte recursiva y caso base</h2>
 <p>Una definición recursiva consta de dos partes: <strong>una parte recursiva</strong> que se repite y reduce el problema en una versión más pequeña del problema original, y un <strong>caso base</strong> o límite no recursivo, que define una condición límite y se utiliza para detener la recursividad.</p>
 <p>Veamos esto con un ejemplo:</p>
-<h3 id="factorial-n">Factorial: N!</h3>
+<h3 id="ejemplo-1-factorial-n">EJEMPLO 1: Factorial: N!</h3>
 <p>Recordamos como se hacía el cálculo de n!:</p>
 <p>n! = n * (n-1) * n(n-2) * .... mientras n &gt; 0</p>
 <p>Además, 0! se define como 1.</p>
-<p>Ejemplos:
-+ 4! = 4 * 3 * 2 * 1 = 24
-+ 3! = 3 * 2 * 1 = 6
-+ 1! = 1
-+ 0! = 1</p>
+<p>Ejemplos:</p>
+<ul>
+<li>4! = 4 * 3 * 2 * 1 = 24</li>
+<li>3! = 3 * 2 * 1 = 6</li>
+<li>1! = 1</li>
+<li>0! = 1</li>
+</ul>
 <p>Como vemos en el ejemplo, podemos deducir que el factorial se repite en términos de (n-1) y el único caso donde no se calcula el factorial es 0!, esto nos lleva a que:</p>
 <blockquote>
 <p>n! = 1             --&gt; if n = 0 //caso base
@@ -1057,6 +1073,8 @@ n! = n * (n-1)     --&gt; if n &gt; 0 //caso recursivo</p>
         <span class="p">}</span>
     <span class="p">}</span>
 </code></pre></div>
+<h3 id="ejemplo-2-verificar-si-un-numero-es-palindromo">EJEMPLO 2: Verificar si un número es palíndromo</h3>
+<p>Un número es palíndromo si al leerse en ambos sentidos, tanto de izquierda a derecha como de derecha a izquierda, se obtiene el mismo número. Por ejemplo: 121, 1001, etc.</p>
                 
               
               
