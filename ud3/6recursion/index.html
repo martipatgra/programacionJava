@@ -1032,7 +1032,7 @@
 <p>La recursividad se basa en dos conceptos clave de resolución de problemas: divide y vencerás y auto-similaridad. En la resolución de problemas recursivos, utilizamos la estrategia de divide y vencerás repetidamente para dividir un gran problema en una secuencia de problemas cada vez más pequeños hasta que llegamos a un problema que es prácticamente trivial de resolver. Lo que nos permite crear esta serie de subproblemas es que cada subproblema es similar al problema original, es decir, cada subproblema es solo una versión más pequeña del problema original.</p>
 <p>La capacidad de ver un problema, por uno compuesto por problemas más pequeños y similares es el núcleo del enfoque recursivo.</p>
 <h2 id="parte-recursiva-y-caso-base">Parte recursiva y caso base</h2>
-<p>Una definición recursiva consta de dos partes: <strong>una parte recursiva</strong> que se repite, y un <strong>caso base</strong> o límite no recursivo, que define una condición límite.</p>
+<p>Una definición recursiva consta de dos partes: <strong>una parte recursiva</strong> que se repite y reduce el problema en una versión más pequeña del problema original, y un <strong>caso base</strong> o límite no recursivo, que define una condición límite y se utiliza para detener la recursividad.</p>
 <p>Veamos esto con un ejemplo:</p>
 <h3 id="factorial-n">Factorial: N!</h3>
 <p>Recordamos como se hacía el cálculo de n!:</p>
@@ -1043,6 +1043,14 @@
 + 3! = 3 * 2 * 1 = 6
 + 1! = 1
 + 0! = 1</p>
+<p>Como vemos en el ejemplo, podemos deducir que el factorial se repite en términos de (n-1) y el único caso donde no se calcula el factorial es 0!, esto nos lleva a que:</p>
+<blockquote>
+<p>n! = 1             --&gt; if n = 0 //caso base
+n! = n * (n-1)     --&gt; if n &gt; 0 //caso recursivo</p>
+</blockquote>
+<p>De forma que el factorial de un número quedaría codificado de la siguiente forma:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
                 
               
               
