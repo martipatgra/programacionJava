@@ -1075,6 +1075,25 @@ n! = n * (n-1)     --&gt; if n &gt; 0 //caso recursivo</p>
 </code></pre></div>
 <h3 id="ejemplo-2-verificar-si-un-numero-es-palindromo">EJEMPLO 2: Verificar si un número es palíndromo</h3>
 <p>Un número es palíndromo si al leerse en ambos sentidos, tanto de izquierda a derecha como de derecha a izquierda, se obtiene el mismo número. Por ejemplo: 121, 1001, etc.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">revertir</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">reverso</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">ud</span> <span class="o">=</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="n">reverso</span> <span class="o">=</span> <span class="n">reverso</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">revertir</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span> <span class="n">ud</span><span class="o">+</span><span class="n">reverso</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">reverso</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">reverso</span> <span class="o">=</span> <span class="n">revertir</span><span class="p">(</span><span class="mi">121</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">reverso</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Son palíndromos.&quot;</span><span class="p">);</span>
+    <span class="k">else</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No lo son&quot;</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
