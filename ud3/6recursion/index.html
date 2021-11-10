@@ -915,6 +915,32 @@
     <span class="p">}</span>
 <span class="p">}</span> 
 </code></pre></div>
+<p>Una versión recursiva de ese método sería:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">hola</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">hola</span><span class="p">(</span><span class="n">n</span> <span class="err">−</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">//Llamada recursiva</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este método es recursivo porque se llama a sí mismo cuando <em>n</em> es mayor que 0. Sin embargo, ten en cuenta que cuando se llama a sí mismo, pasa <em>n - 1</em> como el valor de su parámetro. Si este método se llama inicialmente con n igual a 5, lo siguiente es una pila de lo que sucede. Las indentaciones indican cada vez que el método se llama a sí mismo:</p>
+<div class="highlight"><pre><span></span><code>hola(5)
+    imprime &quot;Hola&quot;
+    hola(4)
+        imprime &quot;Hola&quot;
+        hola(3)
+            imprime &quot;Hola&quot;
+            hola(2)
+                imprime &quot;Hola&quot;
+                hola(1)
+                    imprime &quot;Hola&quot;
+                    hola(0)
+</code></pre></div>
+<p>En el ejemplo anterior, es mucho menos eficiente llamar a un método cinco veces que repetir un bucle <em>for</em> cinco veces. Las llamadas a métodos ocupan más memoria que los bucles e implican más sobrecarga computacional, en tareas como pasar parámetros, asignar almacenamiento para las variables locales del método y devolver los resultados del método.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Los algoritmos y métodos iterativos son generalmente más eficientes que los algoritmos recursivos que hacen lo mismo.</p>
+</div>
                 
               
               
