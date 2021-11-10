@@ -1049,7 +1049,13 @@
 n! = n * (n-1)     --&gt; if n &gt; 0 //caso recursivo</p>
 </blockquote>
 <p>De forma que el factorial de un número quedaría codificado de la siguiente forma:</p>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 </code></pre></div>
                 
               
