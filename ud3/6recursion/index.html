@@ -1040,8 +1040,8 @@
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">hola</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">);</span>
+        <span class="n">hola</span><span class="p">(</span><span class="n">n</span> <span class="err">−</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">//Llamada recursiva</span>
     <span class="p">}</span>
-    <span class="n">hola</span><span class="p">(</span><span class="n">n</span> <span class="err">−</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">//Llamada recursiva</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Este método es recursivo porque se llama a sí mismo cuando <em>n</em> es mayor que 0. Sin embargo, ten en cuenta que cuando se llama a sí mismo, pasa <em>n - 1</em> como el valor de su parámetro. Si este método se llama inicialmente con n igual a 5, lo siguiente es una pila de lo que sucede. Las indentaciones indican cada vez que el método se llama a sí mismo:</p>
