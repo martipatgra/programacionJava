@@ -930,6 +930,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ejemplo-3-revertir-un-string" class="md-nav__link">
+    EJEMPLO 3: Revertir un String
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1042,6 +1049,13 @@
           <li class="md-nav__item">
   <a href="#ejemplo-2-verificar-si-un-numero-es-palindromo" class="md-nav__link">
     EJEMPLO 2: Verificar si un número es palíndromo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-3-revertir-un-string" class="md-nav__link">
+    EJEMPLO 3: Revertir un String
   </a>
   
 </li>
@@ -1164,6 +1178,15 @@ return 24
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Son palíndromos.&quot;</span><span class="p">);</span>
     <span class="k">else</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No lo son&quot;</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="ejemplo-3-revertir-un-string">EJEMPLO 3: Revertir un String</h3>
+<p>Para revertir un String, nos quedamos con el primer carácter que iremos añadiendo al final de la recursividad, y vamos acortando el String para llegar al caso base.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">reverseRecursive</span><span class="p">(</span><span class="n">String</span> <span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span> <span class="c1">//caso base</span>
+        <span class="k">return</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">reverseRecursive</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="n">str</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
                 
