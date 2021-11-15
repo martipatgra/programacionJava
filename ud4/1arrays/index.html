@@ -1094,8 +1094,11 @@
     <span class="p">....</span>
     <span class="n">miArray</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 </code></pre></div>
-<p>Lo cual es una forma muy pesada y tediosa. Java nos ofrece otras formas de inicializar los arrays en una sola línea de código:</p>
-<div class="highlight"><pre><span></span><code>
+<p>Lo cual es una forma muy pesada y tediosa. Java nos ofrece otras formas de inicializar los arrays en una sola línea de código que solo es aplicable a la vez que definimos la variable:</p>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">miArray</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">89</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">4</span><span class="p">};</span><span class="c1">//correcto</span>
+
+    <span class="c1">//no puedo inicializar el array después de haberlo creado</span>
+    <span class="n">miArray</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">89</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">4</span><span class="p">};</span><span class="c1">//eso da ERROR</span>
 </code></pre></div>
                 
               
