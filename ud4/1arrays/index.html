@@ -931,8 +931,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#declaracion-e-inicializacion" class="md-nav__link">
-    Declaración e inicialización
+  <a href="#declaracion-y-reseva-de-memoria" class="md-nav__link">
+    Declaración y reseva de memoria
   </a>
   
 </li>
@@ -940,6 +940,13 @@
         <li class="md-nav__item">
   <a href="#acceso-a-los-elementos-del-array" class="md-nav__link">
     Acceso a los elementos del array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicializacion-del-array" class="md-nav__link">
+    Inicialización del array
   </a>
   
 </li>
@@ -1014,8 +1021,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#declaracion-e-inicializacion" class="md-nav__link">
-    Declaración e inicialización
+  <a href="#declaracion-y-reseva-de-memoria" class="md-nav__link">
+    Declaración y reseva de memoria
   </a>
   
 </li>
@@ -1023,6 +1030,13 @@
         <li class="md-nav__item">
   <a href="#acceso-a-los-elementos-del-array" class="md-nav__link">
     Acceso a los elementos del array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicializacion-del-array" class="md-nav__link">
+    Inicialización del array
   </a>
   
 </li>
@@ -1045,13 +1059,13 @@
 <p>Los arrays es una estructura de datos que te permite almacenar una secuencia de valores todos del mismo tipo.</p>
 <p>En el ejemplo de la imagen hemos creado un array de enteros. También se podría crear un array de caracteres, de String, etc. Esto se podría hacer tanto para tipos de datos primitivos como para objetos.</p>
 <p><strong>Es muy importante tener en cuenta que los arrays empiezan siempre en la posición cero.</strong> Por tanto, si se desea acceder al primer elemento del array, estará almacenado en la posición 0.</p>
-<h2 id="declaracion-e-inicializacion">Declaración e inicialización</h2>
+<h2 id="declaracion-y-reseva-de-memoria">Declaración y reseva de memoria</h2>
 <p>Para declarar un array, se hace de la misma forma que haríamos si quisiéramos declarar una variable pero añadiendo <strong><em>[ ]</em></strong>:</p>
 <div class="highlight"><pre><span></span><code>    <span class="kt">int</span> <span class="n">miVariable</span><span class="p">;</span> <span class="c1">//declaramos una variable normal</span>
     <span class="kt">int</span><span class="o">[]</span> <span class="n">miArray</span><span class="p">;</span> <span class="c1">//declaramos una variable array</span>
 </code></pre></div>
 <p>Para inicializar un array usaremos la palabra <strong>new</strong> + tipo de dato + tamaño del array entre corchetes[]:</p>
-<div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">miArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span> <span class="c1">//creamos e inicializamos el array con 10 elementos vacíos</span>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">miArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span> <span class="c1">//creamos y reservamos memoria para el array con 10 elementos</span>
 
     <span class="kt">double</span><span class="o">[]</span> <span class="n">dArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
 </code></pre></div>
@@ -1071,6 +1085,17 @@
 
     <span class="c1">// o también podemos hacer directamente</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">miArray</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="inicializacion-del-array">Inicialización del array</h2>
+<p>Si quisiéramos darle valor a todas las posiciones del array podríamos hacerlo de la forma:</p>
+<div class="highlight"><pre><span></span><code>    <span class="n">miArray</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">miArray</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">31</span><span class="p">;</span>
+    <span class="n">miArray</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="p">....</span>
+    <span class="n">miArray</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</code></pre></div>
+<p>Lo cual es una forma muy pesada y tediosa. Java nos ofrece otras formas de inicializar los arrays en una sola línea de código:</p>
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
                 
               
