@@ -907,9 +907,46 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          4.1- Introducción
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         4.1- Introducción
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaracion-e-inicializacion" class="md-nav__link">
+    Declaración e inicialización
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceso-a-los-elementos-del-array" class="md-nav__link">
+    Acceso a los elementos del array
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -970,6 +1007,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaracion-e-inicializacion" class="md-nav__link">
+    Declaración e inicialización
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceso-a-los-elementos-del-array" class="md-nav__link">
+    Acceso a los elementos del array
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -985,14 +1044,24 @@
 <p><img alt="POO" src="../../img/ud4/4arrays.png" /></p>
 <p>Los arrays es una estructura de datos que te permite almacenar una secuencia de valores todos del mismo tipo.</p>
 <p>En el ejemplo de la imagen hemos creado un array de enteros. También se podría crear un array de caracteres, de String, etc. Esto se podría hacer tanto para tipos de datos primitivos como para objetos.</p>
+<h2 id="declaracion-e-inicializacion">Declaración e inicialización</h2>
 <p>Para declarar un array, se hace de la misma forma que haríamos si quisiéramos declarar una variable pero añadiendo <strong><em>[ ]</em></strong>:</p>
 <div class="highlight"><pre><span></span><code>    <span class="kt">int</span> <span class="n">miVariable</span><span class="p">;</span> <span class="c1">//declaramos una variable normal</span>
     <span class="kt">int</span><span class="o">[]</span> <span class="n">miArray</span><span class="p">;</span> <span class="c1">//declaramos una variable array</span>
 </code></pre></div>
 <p>Para inicializar un array usaremos la palabra <strong>new</strong> + tipo de dato + tamaño del array entre corchetes[]:</p>
-<div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">miArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span> <span class="c1">//creamos e inicializamos el array con 10 elementos</span>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">miArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span> <span class="c1">//creamos e inicializamos el array con 10 elementos vacíos</span>
 </code></pre></div>
 <p>La variable miArray va a ser un array con espacio para 10 elementos de tipo entero.</p>
+<h2 id="acceso-a-los-elementos-del-array">Acceso a los elementos del array</h2>
+<p>Para guardar un valor dentro del array tenemos que acceder a su posición dentro del array.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">miArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">miArray</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">//guardamos en la posición 2 del array el valor 5</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Recuerda que los elementos del array empiezan con índice 0.</p>
+</div>
                 
               
               
