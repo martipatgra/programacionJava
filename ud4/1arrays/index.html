@@ -1044,6 +1044,7 @@
 <p><img alt="POO" src="../../img/ud4/4arrays.png" /></p>
 <p>Los arrays es una estructura de datos que te permite almacenar una secuencia de valores todos del mismo tipo.</p>
 <p>En el ejemplo de la imagen hemos creado un array de enteros. También se podría crear un array de caracteres, de String, etc. Esto se podría hacer tanto para tipos de datos primitivos como para objetos.</p>
+<p><strong>Es muy importante tener en cuenta que los arrays empiezan siempre en la posición cero.</strong> Por tanto, si se desea acceder al primer elemento del array, estará almacenado en la posición 0.</p>
 <h2 id="declaracion-e-inicializacion">Declaración e inicialización</h2>
 <p>Para declarar un array, se hace de la misma forma que haríamos si quisiéramos declarar una variable pero añadiendo <strong><em>[ ]</em></strong>:</p>
 <div class="highlight"><pre><span></span><code>    <span class="kt">int</span> <span class="n">miVariable</span><span class="p">;</span> <span class="c1">//declaramos una variable normal</span>
@@ -1051,6 +1052,8 @@
 </code></pre></div>
 <p>Para inicializar un array usaremos la palabra <strong>new</strong> + tipo de dato + tamaño del array entre corchetes[]:</p>
 <div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">miArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span> <span class="c1">//creamos e inicializamos el array con 10 elementos vacíos</span>
+
+    <span class="kt">double</span><span class="o">[]</span> <span class="n">dArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
 </code></pre></div>
 <p>La variable miArray va a ser un array con espacio para 10 elementos de tipo entero.</p>
 <h2 id="acceso-a-los-elementos-del-array">Acceso a los elementos del array</h2>
@@ -1060,8 +1063,15 @@
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Recuerda que los elementos del array empiezan con índice 0.</p>
+<p>Recuerda que los elementos del array empiezan con índice 0, por tanto, en realidad la posición 2 sería la 3.</p>
 </div>
+<p>Para acceder a un valor de una determinada posición del array y mostrarlo lo haríamos de la siguiente forma:</p>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span> <span class="n">elemento</span> <span class="o">=</span> <span class="n">miArray</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span> <span class="c1">//almacenamos el valor 5 en la variable entera elemento</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">elemento</span><span class="p">);</span>
+
+    <span class="c1">// o también podemos hacer directamente</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">miArray</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span>
+</code></pre></div>
                 
               
               
