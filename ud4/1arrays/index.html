@@ -1201,6 +1201,40 @@ Por ejemplo, si quisiéramos darle valor a todas las posiciones del array podrí
 </code></pre></div>
 <h2 id="caso-real-uso-de-un-array">Caso real uso de un array</h2>
 <p>Vamos a presentar un ejemplo de un caso real para el que los arrays son muy efectivos. Por ejemplo pedir al usuario que inserte números y mostrar la media de los números insertados.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MiArray</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">enteros</span> <span class="o">=</span> <span class="n">leerEnteros</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+
+        <span class="c1">//imprimimos los valores</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">enteros</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Elemento en posición &quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">&quot; valor &quot;</span> <span class="o">+</span> <span class="n">enteros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La media del array es &quot;</span> <span class="o">+</span> <span class="n">calcularMedia</span><span class="p">(</span><span class="n">enteros</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">leerEnteros</span><span class="p">(</span><span class="kt">int</span> <span class="n">elementos</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Inserta &quot;</span> <span class="o">+</span> <span class="n">elementos</span> <span class="o">+</span> <span class="s">&quot; de tipo entero.&quot;</span><span class="p">);</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">elementos</span><span class="o">]</span><span class="p">;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">array</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">calcularMedia</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">suma</span> <span class="o">+=</span> <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span> <span class="n">suma</span> <span class="o">/</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
