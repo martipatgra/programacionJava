@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arrays" class="md-skip">
+        <a href="#arrays-de-datos-primitivos" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1110,7 +1110,7 @@
               
                 
                 
-                <h1 id="arrays">Arrays</h1>
+                <h1 id="arrays-de-datos-primitivos">Arrays de datos primitivos</h1>
 <p><img alt="POO" src="../../img/ud4/4arrays.png" /></p>
 <p>Los arrays es una estructura de datos que te permite almacenar una secuencia de valores todos del mismo tipo.</p>
 <p>Un array está hecho de bloques contiguos de memoria que se divide en varias celdas. Cada celda tiene un valor y todos los valores son del mismo tipo. A veces, las celdas de un array se denominan slots. En el array de la imagen cada celda contiene un int.</p>
@@ -1127,12 +1127,15 @@
 <div class="highlight"><pre><span></span><code>    <span class="kt">int</span> <span class="n">miVariable</span><span class="p">;</span> <span class="c1">//declaramos una variable normal</span>
     <span class="kt">int</span><span class="o">[]</span> <span class="n">miArray</span><span class="p">;</span> <span class="c1">//declaramos una variable array</span>
 </code></pre></div>
-<p>Para inicializar un array usaremos la palabra <strong>new</strong> + tipo de dato + tamaño del array entre corchetes[]:</p>
+<p>Si usamos la declaración <em>tipo[]</em> arrayName crea una referencia a una variable de tipo de array, pero no construye el objeto.</p>
+<p>Un array es un objeto, y como cualquier otro objeto en Java, para construirlo utilizamos la palabra reservada <em>new</em>. Para inicializar un array usaremos la palabra <strong>new</strong> + tipo de dato + tamaño del array entre corchetes[]:</p>
 <div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">miArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span> <span class="c1">//creamos y reservamos memoria para el array con 10 elementos</span>
+    <span class="c1">// y valores 0 en cada posición</span>
 
     <span class="kt">double</span><span class="o">[]</span> <span class="n">dArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
 </code></pre></div>
-<p>La variable miArray va a ser un array con espacio para 10 elementos de tipo entero.</p>
+<p>Una vez ha sido construido no es posible cambiar su tamaño.
+La variable miArray va a ser un array con espacio para 10 elementos de tipo entero.</p>
 <h2 id="acceso-a-los-elementos-del-array">Acceso a los elementos del array</h2>
 <p>Para guardar un valor dentro de una celda del array tenemos que acceder a su posición dentro del array.</p>
 <div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">miArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
@@ -1181,6 +1184,8 @@ Por ejemplo, si quisiéramos darle valor a todas las posiciones del array podrí
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Elemento &quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">&quot; valor &quot;</span> <span class="o">+</span> <span class="n">miArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
     <span class="p">}</span>
 </code></pre></div>
+<p>A falta de cualquier otra información, las celdas de un array se inicializan con el valor predeterminado para su tipo. Cada celda de un array de tipo numérico se inicializa a cero.</p>
+<p>Y cada celda de un array de referencias a objetos se inicializa en <strong>nulo (null)</strong>.</p>
 <h2 id="longitud-del-array">Longitud del array</h2>
 <p>Una buena práctica, es utilizar una propiedad integrada dentro de array, en vez de hardcodear literales de tamaño dentro del bucle. Esta propiedad es <strong>length</strong>:</p>
 <div class="highlight"><pre><span></span><code>    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">miArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
