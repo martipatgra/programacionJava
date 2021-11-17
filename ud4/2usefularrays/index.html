@@ -919,9 +919,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          4.2- Algoritmos útiles en arrays
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         4.2- Algoritmos útiles en arrays
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#imprimir-los-elementos-de-un-array" class="md-nav__link">
+    Imprimir los elementos de un array
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -982,6 +1012,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#imprimir-los-elementos-de-un-array" class="md-nav__link">
+    Imprimir los elementos de un array
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -997,6 +1042,14 @@
 <p>Un array que utiliza un solo índice para acceder a sus valores se denomina <em><strong>array unidimensional</strong></em>, ya que utilizamos el índice para acceder a todas las celdas del array. Éstas celdas están alineadas de forma secuencial.</p>
 <p>Un array bidimensional necesita dos índices para acceder a los valores. En este caso las celdas están dispuestas en forma de matriz, como una estructura rectangular.</p>
 <p>Es posible crear arrays de mayores dimensiones aunque rara vez se utilizan.</p>
+<h2 id="imprimir-los-elementos-de-un-array">Imprimir los elementos de un array</h2>
+<p>Un algoritmo muy utilizado cuando trabajamos con arrays es mostrar los valores que contiene el array en cada una de sus celdas. Para ello nos ayudamos del campo <strong>length</strong> que nos devuelve la longitud del array.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">imprimirArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Elemento &quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">&quot; valor &quot;</span> <span class="o">+</span> <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
