@@ -943,8 +943,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#contar-los-elementos-que-contiene-un-array" class="md-nav__link">
+    Contar los elementos que contiene un array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#imprimir-los-elementos-de-un-array" class="md-nav__link">
     Imprimir los elementos de un array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leer-y-rellenar-los-elementos-de-un-array-por-teclado" class="md-nav__link">
+    Leer y rellenar los elementos de un array por teclado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmo" class="md-nav__link">
+    Algoritmo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasico-error-1-no-testear-los-limites-del-array" class="md-nav__link">
+    Clásico error 1: no testear los límites del array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasico-error-2-exceder-los-limites-del-array" class="md-nav__link">
+    Clásico error 2: exceder los límites del array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bucle-foreach-enhanced-for-loop" class="md-nav__link">
+    Bucle foreach (enhanced for loop)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparar-si-dos-arrays-son-iguales" class="md-nav__link">
+    Comparar si dos arrays son iguales
   </a>
   
 </li>
@@ -1019,8 +1068,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#contar-los-elementos-que-contiene-un-array" class="md-nav__link">
+    Contar los elementos que contiene un array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#imprimir-los-elementos-de-un-array" class="md-nav__link">
     Imprimir los elementos de un array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leer-y-rellenar-los-elementos-de-un-array-por-teclado" class="md-nav__link">
+    Leer y rellenar los elementos de un array por teclado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmo" class="md-nav__link">
+    Algoritmo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasico-error-1-no-testear-los-limites-del-array" class="md-nav__link">
+    Clásico error 1: no testear los límites del array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasico-error-2-exceder-los-limites-del-array" class="md-nav__link">
+    Clásico error 2: exceder los límites del array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bucle-foreach-enhanced-for-loop" class="md-nav__link">
+    Bucle foreach (enhanced for loop)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparar-si-dos-arrays-son-iguales" class="md-nav__link">
+    Comparar si dos arrays son iguales
   </a>
   
 </li>
@@ -1042,6 +1140,8 @@
 <p>Un array que utiliza un solo índice para acceder a sus valores se denomina <em><strong>array unidimensional</strong></em>, ya que utilizamos el índice para acceder a todas las celdas del array. Éstas celdas están alineadas de forma secuencial.</p>
 <p>Un array bidimensional necesita dos índices para acceder a los valores. En este caso las celdas están dispuestas en forma de matriz, como una estructura rectangular.</p>
 <p>Es posible crear arrays de mayores dimensiones aunque rara vez se utilizan.</p>
+<h2 id="contar-los-elementos-que-contiene-un-array">Contar los elementos que contiene un array</h2>
+<p>Cuando utilizamos arrays, es muy molesto contar los elementos de un array para saber su tamaño. Afortunadamente, todo objeto de tipo array tiene una variable de instancia llamada <strong><em>length</em></strong> que contiene el tamaño del array, es decir, el número de celdas.</p>
 <h2 id="imprimir-los-elementos-de-un-array">Imprimir los elementos de un array</h2>
 <p>Un algoritmo muy utilizado cuando trabajamos con arrays es mostrar los valores que contiene el array en cada una de sus celdas. Para ello nos ayudamos del campo <strong>length</strong> que nos devuelve la longitud del array.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">imprimirArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
@@ -1050,6 +1150,81 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<h2 id="leer-y-rellenar-los-elementos-de-un-array-por-teclado">Leer y rellenar los elementos de un array por teclado</h2>
+<p>Es muy común que los elementos de un array sean valores introducidos de alguna forma por el usuario. El ejemplo más sencillo es leerlos directamente desde la entrada de flujo, a la vez que leemos el valor insertado por el usuario se lo asignamos al array.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">elementos</span><span class="o">]</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h2 id="algoritmo">Algoritmo</h2>
+<p>Cualquier procedimiento sistemático utilizado para calcular algo se llama <strong><em>algoritmo</em></strong>.
+Por ejemplo si queremos sumar todos los elementos de un array realizaremos un algoritmo.
+Un algoritmo es una descripción de cómo hacer algo. No está vinculado a ningún idioma en particular. Un algoritmo se puede implementar en cualquier lenguaje de programación de computadoras.</p>
+<p>El programa siguiente muestra un ejemplo de un algoritmo. Aquí la variable <strong><em>suma</em></strong> juega el papel de almacenar la suma de los elementos que se van leyendo. El programa recorre elementos del array comenzando en el índice 0 y yendo hasta el final.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">suma</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">suma</span> <span class="o">+=</span> <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">suma</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h2 id="clasico-error-1-no-testear-los-limites-del-array">Clásico error 1: no testear los límites del array</h2>
+<p>Cuando trabajamos con arrays, a menudo nos puede ocurrir que olvidamos el último elemento del array, si cambiamos la condición del bucle por <strong><em>i &lt; array.length -1</em></strong>, o olvidamos el primer elemento si establecemos el índice en  <strong><em>int i = 1</em></strong> porque creemos que el primer elemento está en la posición 1 del array.</p>
+<p>Estos son errores clásicos: no probar los límites de los arrays, es decir, el primer elemento o el último.</p>
+<p>Por ejemplo, en el siguiente código no quiero tener números de una cifra en mi array.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span>  <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
+            <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>Cuando recorro el array, el último elemento no sería testeado por tanto me devolvería un 5 en vez de 50. El programa sería incorrecto.</p>
+<h2 id="clasico-error-2-exceder-los-limites-del-array">Clásico error 2: exceder los límites del array</h2>
+<p>Al contrario que, en el apartado anterior, si intentamos acceder a una celda del array que no existe, se lanzará una ArrayIndexOutOfBoundsException y el programa se detendrá.</p>
+<p>Los errores de acceso a la última posición del array + 1 son muy comunes. Un ejemplo sería:</p>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span>  <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
+            <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h2 id="bucle-foreach-enhanced-for-loop">Bucle foreach (enhanced for loop)</h2>
+<p>Para evitar que los errores mencionados anteriormente ocurran, Java dispone de un bucle mejorado que visita cada elemento del array en orden sin necesidad de establecer un índice. Por tanto, los errores de exceder los límites del array se eliminan automáticamente con este bucle.</p>
+<p>La sintaxis es la siguiente:</p>
+<p><img alt="POO" src="../../img/ud4/enhancedForLoop.png" /></p>
+<p>Este bucle de lee en voz alta de la siguiente manera: "para cada valor del array..." (for each value in array...)</p>
+<p>El tipo de dato de la variable que se crea en el bucle es igual al de cada una de las celdas del array, y va a contener los valores de ellas. En la primera iteración contrendrá el valor de la primera celda del array, y así sucesivamente hasta llegar a la última celda del array.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span>  <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
+    <span class="kt">int</span> <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">numero</span> <span class="p">:</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">suma</span> <span class="o">+=</span> <span class="n">numero</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h2 id="comparar-si-dos-arrays-son-iguales">Comparar si dos arrays son iguales</h2>
+<p>Es muy usual utilizar el operador "==" cuando queremos comparar si dos arrays son iguales, es decir, si contienen los mismos elementos. Pero si ejecutamos el siguiente código:</p>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">array1</span> <span class="o">=</span>  <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+    <span class="kt">int</span><span class="o">[]</span> <span class="n">array2</span> <span class="o">=</span>  <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">array1</span> <span class="o">==</span> <span class="n">array2</span><span class="p">);</span> <span class="c1">//imprime false</span>
+</code></pre></div>
+<p>Obtenemos <em>false</em>, esta situación es parecida a cuando intentábamos comparar dos String. Recordar que utilizar el operador "==" era incorrecto ya que son objetos diferentes aunque tuvieran el mismo contenido.</p>
+<p>Si utilizamos el método <em>equals()</em> para arrays, devolvería el mismo valor booleano que el operador "==".</p>
+<div class="highlight"><pre><span></span><code>    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">array1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">array2</span><span class="p">));</span> <span class="c1">//imprime false</span>
+</code></pre></div>
+<p>Para comprobar que dos arrays contienen los mismos elementos se utiliza la clase <strong>Arrays</strong>.</p>
+<p>La clase Arrays contiene muchos métodos estáticos para manipular matrices. Dado que los métodos son estáticos, <strong>los invoca utilizando el nombre de la clase</strong>.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kt">int</span><span class="o">[]</span> <span class="n">array1</span> <span class="o">=</span>  <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+    <span class="kt">int</span><span class="o">[]</span> <span class="n">array2</span> <span class="o">=</span>  <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">array1</span><span class="p">,</span> <span class="n">array2</span><span class="p">));</span> <span class="c1">//imprime true</span>
+</code></pre></div>
+<p>El método <em>Arrays.equals</em> comprueba que dos arrays son iguales si tienen la misma longitud y contienen los mismos elementos en el mismo orden.</p>
                 
               
               
