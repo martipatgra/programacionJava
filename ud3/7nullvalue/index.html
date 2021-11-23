@@ -1018,6 +1018,23 @@
                 
                 
                 <h1 id="valor-nulo">Valor nulo</h1>
+<p>Una variable de referencia contiene información sobre la ubicación de un objeto. No contiene el objeto en sí.</p>
+<p>Por ejemplo el siguiente código:</p>
+<div class="highlight"><pre><span></span><code> <span class="n">String</span> <span class="n">str</span><span class="p">;</span>
+ <span class="n">Persona</span> <span class="n">p</span><span class="p">;</span>
+</code></pre></div>
+<p>declara dos variables de referencia pero no construye ningún objeto. Con el siguiente código:</p>
+<div class="highlight"><pre><span></span><code> <span class="n">str</span> <span class="o">=</span> <span class="s">&quot;Programación&quot;</span><span class="p">;</span>
+ <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>se construyen los objetos y se colocan referencias en las variables.</p>
+<p><strong><em>null</em></strong> es un valor especial que significa "sin objeto". Se establece una variable de referencia a <em>null</em> cuando no se refiere a ningún objeto. Las variables a menudo se asignan en nulas cuando se declaran:</p>
+<div class="highlight"><pre><span></span><code> <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+ <span class="n">Persona</span> <span class="n">p</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</code></pre></div>
+<p><em>str</em> y <em>p</em> todavía no son objetos, son variables que en un futuro pueden referenciar a objetos.</p>
+<p>Podemos asignar el valor null a cualquier variable de tipo referencia, ya sea un objeto, string, array, etc.</p>
+<p>Una variable de referencia a veces hace referencia a un objeto y otras veces no, y puede referirse a diferentes objetos en diferentes momentos. Por tanto, necesitamos una forma de decir que una variable ahora no se refiere a un objeto. Para ello, se le asigna un valor <em>null</em> a la variable.</p>
                 
               
               
