@@ -986,8 +986,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#string-args-del-metodo-main" class="md-nav__link">
-    String[] args del método main
+  <a href="#argumentos-de-linea-de-comandos" class="md-nav__link">
+    Argumentos de línea de comandos
   </a>
   
 </li>
@@ -1069,8 +1069,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#string-args-del-metodo-main" class="md-nav__link">
-    String[] args del método main
+  <a href="#argumentos-de-linea-de-comandos" class="md-nav__link">
+    Argumentos de línea de comandos
   </a>
   
 </li>
@@ -1110,7 +1110,7 @@
 </code></pre></div>
 <p><img alt="Arrays" src="../../img/ud4/4arraystrings.png" /></p>
 <p>Cada objeto String del ejemplo es un String normal. Nada en él ha cambiado porque su referencia se mantiene en el array. Cada cadena puede tener cualquier número de caracteres.</p>
-<h2 id="string-args-del-metodo-main">String[] args del método main</h2>
+<h2 id="argumentos-de-linea-de-comandos">Argumentos de línea de comandos</h2>
 <p>Como ya sabemos el método <code>main</code> recibe un array de Strings como parámetro:</p>
 <div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
     <span class="p">}</span>
@@ -1119,7 +1119,9 @@
 <blockquote>
 <p>java Demo cadena1 cadena1</p>
 </blockquote>
+<p>Donde <code>Demo</code> es el nombre del programa, <code>cadena1</code> es el primer argumento y <code>cadena2</code> el segudno.</p>
 <p>Por tanto <code>args[0]</code> contendrá cadena1 y <code>args[1]</code> cadena2.</p>
+<p>Puede haber cualquier número de argumentos en la línea de comandos. Los argumentos son cadenas de caracteres, aunque algunos caracteres como <code>&lt;</code> y <code>&gt;</code> no están permitidos. Cada argumento está separado del resto por espacios.</p>
                 
               
               
