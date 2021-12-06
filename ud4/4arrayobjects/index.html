@@ -1121,7 +1121,8 @@
 </blockquote>
 <p>Donde <code>Demo</code> es el nombre del programa, <code>cadena1</code> es el primer argumento y <code>cadena2</code> el segudno.</p>
 <p>Por tanto <code>args[0]</code> contendrá cadena1 y <code>args[1]</code> cadena2.</p>
-<p>Puede haber cualquier número de argumentos en la línea de comandos. Los argumentos son cadenas de caracteres, aunque algunos caracteres como <code>&lt;</code> y <code>&gt;</code> no están permitidos. Cada argumento está separado del resto por espacios.</p>
+<p>Puede haber cualquier número de argumentos en la línea de comandos. Los argumentos son siempre cadenas de caracteres, aunque algunos caracteres como <code>&lt;</code> y <code>&gt;</code> no están permitidos. Cada argumento está separado del resto por espacios.</p>
+<p>A veces, se quieren enviar número por línea de comandos. Por tanto necesitaremos convertir las cadenas de dígitos en números. Para ello, utilizaremos el método <code>Integer.parseInt(String)</code> o <code>Double.parseDouble(String)</code>.</p>
                 
               
               
