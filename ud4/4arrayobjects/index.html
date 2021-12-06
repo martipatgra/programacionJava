@@ -955,9 +955,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          4.4- Array de objetos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         4.4- Array de objetos
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#array-de-strings" class="md-nav__link">
+    Array de Strings
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1018,6 +1048,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#array-de-strings" class="md-nav__link">
+    Array de Strings
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1041,6 +1086,16 @@
                         <span class="c1">// almacena su referencia</span>
 </code></pre></div>
 <p><img alt="Arrays" src="../../img/ud4/4referencearray.png" /></p>
+<h2 id="array-de-strings">Array de Strings</h2>
+<p>Para declarar un array de Strings ser realizaría de la siguiente forma:</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+
+<span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+<span class="n">array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="s">&quot;World&quot;</span><span class="p">;</span>
+<span class="p">...</span>
+</code></pre></div>
+<p><img alt="Arrays" src="../../img/ud4/4arraystrings.png" /></p>
+<p>Cada objeto String del ejemplo es un String normal. Nada en él ha cambiado porque su referencia se mantiene en el array. Cada cadena puede tener cualquier número de caracteres.</p>
                 
               
               
