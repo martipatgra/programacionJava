@@ -992,6 +992,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#espacio-de-memoria-en-arrays-de-objetos" class="md-nav__link">
+    Espacio de memoria en arrays de objetos
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1075,6 +1082,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#espacio-de-memoria-en-arrays-de-objetos" class="md-nav__link">
+    Espacio de memoria en arrays de objetos
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1123,6 +1137,9 @@
 <p>Por tanto <code>args[0]</code> contendrá cadena1 y <code>args[1]</code> cadena2.</p>
 <p>Puede haber cualquier número de argumentos en la línea de comandos. Los argumentos son siempre cadenas de caracteres, aunque algunos caracteres como <code>&lt;</code> y <code>&gt;</code> no están permitidos. Cada argumento está separado del resto por espacios.</p>
 <p>A veces, se quieren enviar número por línea de comandos. Por tanto necesitaremos convertir las cadenas de dígitos en números. Para ello, utilizaremos el método <code>Integer.parseInt(String)</code> o <code>Double.parseDouble(String)</code>.</p>
+<h2 id="espacio-de-memoria-en-arrays-de-objetos">Espacio de memoria en arrays de objetos</h2>
+<p>Como hemos comentado, en arrays de objetos, Java almacena solo la referencia al objeto en el propio array, en lugar de todo el objeto. Esto conserva la memoria, ya que las referencias requieren solo <strong>4 bytes</strong> cada una, mientras que cada objeto puede requerir cientos de bytes.</p>
+<p>Ejemplo, para un array de 15 enteros, sabiendo que cada entero requiere 4 bytes de almacenamiento, se almacenará 60 bytes contiguos de memoria.</p>
                 
               
               
