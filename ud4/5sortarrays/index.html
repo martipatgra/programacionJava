@@ -1025,15 +1025,15 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#complejidad" class="md-nav__link">
+    Complejidad
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#radix-sort" class="md-nav__link">
-    Radix sort
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1162,15 +1162,15 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#complejidad" class="md-nav__link">
+    Complejidad
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#radix-sort" class="md-nav__link">
-    Radix sort
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1232,7 +1232,7 @@
 <p>Para calcular la complejidad temporal de Bubble Sort, necesitamos mirar el peor escenario posible. ¿Cuál es la cantidad máxima de veces que necesitamos pasar por todo el array antes de ordenarlo?</p>
 <p>El peor escenario sería <code>[5, 4, 3, 2, 1]</code>. En la primera iteración, 5 "burbujeará hasta la superficie", pero el resto de los elementos permanecerán en orden descendente. Tendríamos que hacer una iteración para cada elemento excepto 1, y luego otra iteración para verificar que todo esté en orden, por lo que un total de 5 iteraciones.</p>
 <p>Si pensamos en un array de n elementos, eso significa que necesitamos hacer n iteraciones.</p>
-<p>Cada una de esas n veces estamos iterando a través de todo el array, lo que significa que la complejidad temporal en el peor de los casos sería O(n^2).</p>
+<p>Cada una de esas n veces estamos iterando a través de todo el array, lo que significa que la complejidad temporal en el peor de los casos sería [Big O]: O (n^2).</p>
 <h2 id="counting-sort">Counting sort</h2>
 <p>El ordenamiento por conteo es un algoritmo de ordenamiento que ordena los elementos de un array contando el número de apariciones de cada elemento único en el array. El recuento se almacena en un array auxiliar y la ordenación se realiza mapeando la cuenta como un índice del array auxiliar.</p>
 <h3 id="como-se-hace">¿Cómo se hace?</h3>
@@ -1249,8 +1249,8 @@
 <img alt="Arrays" src="../../img/ud4/5countingsort.png" /></li>
 <li>Después de colocar el elemento en la posición correcta del array ordenado, disminuye el array de recuento para ese índice en uno.</li>
 </ol>
-<h2 id="radix-sort">Radix sort</h2>
-<p>La idea de Radix Sort es ordenar dígito por dígito comenzando desde el dígito menos significativo hasta el dígito más significativo.</p>
+<h3 id="complejidad">Complejidad</h3>
+<p>La complejidad temporal en el peor caso es [Big O]: O(n).</p>
 <h2 id="quicksort">Quicksort</h2>
 <h2 id="merge-sort">Merge sort</h2>
 <h2 id="heap-sort">Heap sort</h2>
