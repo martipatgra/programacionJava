@@ -1212,17 +1212,18 @@ Este algoritmo es conocido como <strong>búsqueda lineal o secuencial</strong>.<
 <img alt="Arrays" src="../../img/ud4/6search1.png" /></li>
 <li>Establezce dos punteros <code>low</code> y <code>high</code> en las posiciones más baja y más alta, respectivamente.
 <img alt="Arrays" src="../../img/ud4/6search2.png" /></li>
-<li>Encuentra el elemento del medio en la mitad del array, es decir, <code>array[(low + high) / 2] = 6</code>.
+<li>Encuentra el elemento del medio <code>mid</code> en la mitad del array, es decir, <code>mid = (low + high)/2; array[mid] = 6</code>.
 <img alt="Arrays" src="../../img/ud4/6search3.png" /></li>
 <li>Si <code>x == mid</code>, devuelve <code>mid</code>. De lo contrario, compara el elemento que se va a buscar con <code>m</code>.</li>
-<li>Si <code>x &gt; mid</code>, comparamos <code>x</code> con el elemento medio de los elementos en el lado derecho de <code>mid</code>. Esto se hace estableciendo <code>low</code> a <code>low = mid + 1</code>.</li>
+<li>Si <code>x &gt; array[mid]</code>, comparamos <code>x</code> con el elemento medio de los elementos en el lado derecho de <code>mid</code>. Esto se hace estableciendo <code>low</code> a <code>low = mid + 1</code>.</li>
 <li>De lo contrario, comparamos <code>x</code> con el elemento central de los elementos en el lado izquierdo de <code>mid</code>. Esto se hace estableciendo <code>high</code> a <code>high = mid - 1</code>.
 <img alt="Arrays" src="../../img/ud4/6search4.png" /></li>
-<li>Repetimos los pasos 3 a 6 hasta que <code>low</code> se encuentre con <code>high</code>.
+<li>Repetimos los pasos 3 a 6 mientras que <code>low</code> sea menor igual que <code>high</code>.
 <img alt="Arrays" src="../../img/ud4/6search5.png" /></li>
 <li><code>x = 4</code> se ha encontrado.</li>
 </ol>
 <p><img alt="Arrays" src="../../img/ud4/6search6.png" /></p>
+<p>Al método se le pasa el <code>array</code>, la <code>clave</code>, y las posiciones <code>low</code> y <code>high</code>.</p>
                 
               
               
