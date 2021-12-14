@@ -1037,67 +1037,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#quicksort" class="md-nav__link">
-    Quicksort
-  </a>
-  
-    <nav class="md-nav" aria-label="Quicksort">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#como-funciona_1" class="md-nav__link">
-    ¿Cómo funciona ?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merge-sort" class="md-nav__link">
-    Merge sort
-  </a>
-  
-    <nav class="md-nav" aria-label="Merge sort">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#divide" class="md-nav__link">
-    Divide
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conquer" class="md-nav__link">
-    Conquer
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fusionar-merge" class="md-nav__link">
-    Fusionar (merge)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-funciona-mergesort" class="md-nav__link">
-    ¿Cómo funciona mergesort?
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1238,67 +1177,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#quicksort" class="md-nav__link">
-    Quicksort
-  </a>
-  
-    <nav class="md-nav" aria-label="Quicksort">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#como-funciona_1" class="md-nav__link">
-    ¿Cómo funciona ?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merge-sort" class="md-nav__link">
-    Merge sort
-  </a>
-  
-    <nav class="md-nav" aria-label="Merge sort">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#divide" class="md-nav__link">
-    Divide
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conquer" class="md-nav__link">
-    Conquer
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fusionar-merge" class="md-nav__link">
-    Fusionar (merge)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-funciona-mergesort" class="md-nav__link">
-    ¿Cómo funciona mergesort?
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1355,56 +1233,6 @@
 </ol>
 <h3 id="complejidad">Complejidad</h3>
 <p>La complejidad temporal en el peor caso es [Big O]: O(n).</p>
-<h2 id="quicksort">Quicksort</h2>
-<p>Quicksort es un algoritmo de divide y vencerás. Selecciona un elemento del array como pivote y ordena todos los demás elementos a su alrededor, por ejemplo, elementos más pequeños a la izquierda y más grandes a la derecha.</p>
-<p>Esto garantiza que el pivote esté en su lugar correcto después del proceso. Luego, el algoritmo hace lo mismo de forma recursiva para las partes izquierda y derecha del array.</p>
-<h3 id="como-funciona_1">¿Cómo funciona ?</h3>
-<ol>
-<li><strong>Selecciona el elemento pivote</strong>. Existen diferentes variaciones en las que el elemento de pivote se selecciona desde diferentes posiciones. En el ejemplo, seleccionaremos el elemento más a la derecha del array como elemento pivote.
-<img alt="Arrays" src="../../img/ud4/5quicksort1.png" /></li>
-<li><strong>Reorganiza el array</strong>. Ahora los elementos del array se reorganizan de modo que los elementos que son más pequeños que el pivote se colocan a la izquierda y los elementos mayores que el pivote se colocan a la derecha.
-<img alt="Arrays" src="../../img/ud4/5quicksort2.png" />
-Esto lo haremos de la siguiente forma:</li>
-<li>Un puntero se fija en el elemento pivote. El elemento pivote se compara con los elementos a partir del primer índice.
-    <img alt="Arrays" src="../../img/ud4/5quicksort3.png" /></li>
-<li>Si el elemento es mayor que el elemento pivote, se establece un segundo puntero para ese elemento.
-    <img alt="Arrays" src="../../img/ud4/5quicksort4.png" /></li>
-<li>Ahora, el pivote se compara con otros elementos. Si se alcanza un elemento más pequeño que el elemento de pivote, el elemento más pequeño se intercambia con el elemento más grande encontrado anteriormente.
-    <img alt="Arrays" src="../../img/ud4/5quicksort5.png" /></li>
-<li>Nuevamente, el proceso se repite para establecer el siguiente elemento mayor como segundo puntero. Y cámbielo por otro elemento más pequeño.
-    <img alt="Arrays" src="../../img/ud4/5quicksort6.png" /></li>
-<li>El proceso continúa hasta que se alcanza el penúltimo elemento.
-    <img alt="Arrays" src="../../img/ud4/5quicksort7.png" /></li>
-<li>Finalmente, el elemento pivote se intercambia con el segundo puntero.
-    <img alt="Arrays" src="../../img/ud4/5quicksort8.png" /></li>
-<li><strong>Dividir subarrays</strong>. Los elementos de pivote se eligen de nuevo para las subpartes izquierda y derecha por separado. Y se repite el paso 2.</li>
-</ol>
-<p>Los subarrays se dividen hasta que cada subarray esté formado por un solo elemento. En este punto, el array ya está ordenado.</p>
-<h2 id="merge-sort">Merge sort</h2>
-<p>Merge Sort usa la recursividad para resolver el problema de la ordenación de manera más eficiente que los algoritmos anteriores y usa el famoso enfoque de <strong>divide y vencerás</strong>.</p>
-<p>Usando la técnica "Divide and Conquer", dividimos un problema en subproblemas. Cuando la solución a cada subproblema está lista, 'combinamos' los resultados de los subproblemas para resolver el problema principal.</p>
-<p>Supongamos que tuviéramos que ordenar un array <code>A</code> que comienza en el índice <code>p</code> y termina en el índice <code>r</code>, denotado como <code>A[p..r]</code>.</p>
-<h3 id="divide">Divide</h3>
-<p>Si <code>q</code> es el punto medio entre <code>p</code> y <code>r</code>, entonces podemos dividir el array <code>A[p..r]</code> en dos subarrays <code>A[p..q]</code> y <code>A [q + 1, r]</code>.</p>
-<h3 id="conquer">Conquer</h3>
-<p>En el paso de conquista, intentamos ordenar los subarrays <code>A[p..q]</code> y <code>A[q + 1, r]</code>. Si aún no hemos llegado al caso base, nuevamente dividimos estos dos subarrays e intentamos ordenarlos.</p>
-<h2 id="fusionar-merge">Fusionar (merge)</h2>
-<p>Cuando el paso de conquista alcanza el caso base de la recursividad y obtenemos dos subarrays ordenados <code>A[p..q]</code> y <code>A[q + 1, r]</code> para el array <code>A[p..r]</code>, combinamos los resultados creando un array ordenado.</p>
-<p>El algoritmo MergeSort divide repetidamente el array en dos mitades hasta que llegamos a una etapa en la que intentamos realizar MergeSort en un subarray de tamaño 1.</p>
-<p>Después de eso, la función de combinación entra en juego y combina las matrices ordenadas en matrices más grandes hasta que se fusiona toda la matriz.</p>
-<p>Para ordenar un array completo, necesitamos llamar a <code>mergesort(A, 0, length(A) - 1)</code>.</p>
-<p>Como se muestra en la imagen a continuación, el algoritmo de ordenación merge divide recursivamente el array en mitades hasta que llegamos al caso base del array con 1 elemento. Después de eso, la función de combinación recoge los subarrays ordenados y los fusiona para ordenar gradualmente todo el array.</p>
-<p>El algoritmo mantiene tres punteros, uno para cada uno de los dos arryas y otro para mantener el índice actual del array ordenado final.</p>
-<h2 id="como-funciona-mergesort">¿Cómo funciona mergesort?</h2>
-<ol>
-<li>Crea copias de los subarrays <code>L ← A [p..q]</code> y <code>M ← A [q + 1..r]</code>.</li>
-<li>Crea tres punteros <code>i</code>, <code>j</code> y <code>k</code></li>
-<li><code>i</code> mantiene el índice actual de <code>L</code>, comenzando en 1</li>
-<li><code>j</code> mantiene el índice actual de <code>M</code>, comenzando en 1</li>
-<li><code>k</code> mantiene el índice actual de <code>A[p..q]</code>, comenzando en <code>p</code>.</li>
-<li>Hasta que lleguemos al final de <code>L</code> o <code>M</code>, escoge el más grande entre los elementos de <code>L</code> y <code>M</code> y colócalos en la posición correcta en <code>A[p..q]</code>.</li>
-<li>Cuando nos quedemos sin elementos en <code>L</code> o <code>M</code>, recoge los elementos restantes y ponlos en <code>A [p..q]</code>.</li>
-</ol>
                 
               
               
