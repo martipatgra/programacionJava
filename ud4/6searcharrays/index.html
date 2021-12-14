@@ -14,7 +14,7 @@
     
     
       
-        <title>4.6- Arrays multidimensionales - Programación</title>
+        <title>4.6- Algoritmos de búsqueda - Programación</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arrays-multidimensionales" class="md-skip">
+        <a href="#algoritmos-de-busqueda" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4.6- Arrays multidimensionales
+              4.6- Algoritmos de búsqueda
             
           </span>
         </div>
@@ -980,12 +980,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          4.6- Arrays multidimensionales
+          4.6- Algoritmos de búsqueda
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        4.6- Arrays multidimensionales
+        4.6- Algoritmos de búsqueda
       </a>
       
         
@@ -1003,30 +1003,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#declaracion-de-un-array-2d-o-matriz-2d" class="md-nav__link">
-    Declaración de un array 2D o matriz 2D
+  <a href="#busqueda-secuencial" class="md-nav__link">
+    Búsqueda secuencial
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#longitud-de-una-matriz-2d" class="md-nav__link">
-    Longitud de una matriz 2D
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entender-mejor-los-arrays-o-matrices-2d" class="md-nav__link">
-    Entender mejor los arrays o matrices 2D
-  </a>
-  
-    <nav class="md-nav" aria-label="Entender mejor los arrays o matrices 2D">
+    <nav class="md-nav" aria-label="Búsqueda secuencial">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#como-se-podrian-reemplazar-las-celdas-individuales-de-cada-fila-dentro-de-una-matriz" class="md-nav__link">
-    ¿Cómo se podrían reemplazar las celdas individuales de cada fila dentro de una matriz?
+  <a href="#algoritmo-busqueda-secuencial" class="md-nav__link">
+    Algoritmo búsqueda secuencial
   </a>
   
 </li>
@@ -1036,10 +1022,29 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#busqueda-binaria" class="md-nav__link">
+    Búsqueda binaria
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7twodimensionarray/" class="md-nav__link">
+        4.7- Arrays multidimensionales
+      </a>
     </li>
   
 
@@ -1106,36 +1111,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#declaracion-de-un-array-2d-o-matriz-2d" class="md-nav__link">
-    Declaración de un array 2D o matriz 2D
+  <a href="#busqueda-secuencial" class="md-nav__link">
+    Búsqueda secuencial
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#longitud-de-una-matriz-2d" class="md-nav__link">
-    Longitud de una matriz 2D
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entender-mejor-los-arrays-o-matrices-2d" class="md-nav__link">
-    Entender mejor los arrays o matrices 2D
-  </a>
-  
-    <nav class="md-nav" aria-label="Entender mejor los arrays o matrices 2D">
+    <nav class="md-nav" aria-label="Búsqueda secuencial">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#como-se-podrian-reemplazar-las-celdas-individuales-de-cada-fila-dentro-de-una-matriz" class="md-nav__link">
-    ¿Cómo se podrían reemplazar las celdas individuales de cada fila dentro de una matriz?
+  <a href="#algoritmo-busqueda-secuencial" class="md-nav__link">
+    Algoritmo búsqueda secuencial
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#busqueda-binaria" class="md-nav__link">
+    Búsqueda binaria
+  </a>
   
 </li>
       
@@ -1152,70 +1150,27 @@
               
                 
                 
-                <h1 id="arrays-multidimensionales">Arrays multidimensionales</h1>
-<p>Un array bidimensional o matriz, es un array cuyos componentes son ellos mismos arrays, y es necesario o útil para ciertos tipos de problemas. Por ejemplo, imagina una clase de 7 estudiantes que tienen un examen cada semana durante 5 semanas. El profesor registra las calificaciones en una tabla. Una celda particular de la tabla se designa por número de estudiante y número de semana.</p>
-<p>En Java, una tabla se puede implementar como una matriz 2D. Cada celda de la matriz es una variable que puede contener un valor y funciona como cualquier variable. Al igual que con los arrays unidimensionales, todas las celdas de una matriz 2D son del mismo tipo. El tipo puede ser un tipo primitivo o un tipo de referencia de objeto.</p>
-<p><strong>Importante: cada celda de la matriz se especifica con un número de fila y columna, en ese orden.</strong></p>
-<p><code>matriz[fila][col]</code></p>
-<p>Al igual que con los arrays unidimensionales, los índices comienzan en cero.</p>
-<p><img alt="Arrays" src="../../img/ud4/6matriz1.png" /></p>
-<p>Para acceder a la posición 0,2 lo haríamos con <code>matriz[0][2]</code> y esto devuelve el entero 4.</p>
-<p>Al igual que con una matriz 1D o un arrar, un índice de matriz puede ser un literal entero, una variable de tipo entero, un método que se evalúa como un número entero o una expresión aritmética que involucra todas estas cosas:</p>
-<div class="highlight"><pre><span></span><code><span class="n">matriz</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="mi">34</span><span class="p">;</span>
+                <h1 id="algoritmos-de-busqueda">Algoritmos de búsqueda</h1>
+<p>Supongamos que tenemos un array de grandes dimensiones y necesitamos encontrar uno de sus elementos. Necesitamos un algoritmo para buscar en el array un valor particular, generalmente llamado <code>clave</code>. Si los elementos del array no están organizados en ningún orden en particular, la única forma en que podemos estar seguros de encontrar la clave, asumiendo que está en el array, es buscar cada elemento, comenzando por el primer elemento, hasta encontrarlo.
+Este algoritmo es conocido como <strong>búsqueda lineal o secuencial</strong>.</p>
+<h2 id="busqueda-secuencial">Búsqueda secuencial</h2>
+<p>En la búsqueda secuencial, cada elemento del array se examinará en secuencia hasta que se encuentre la clave (o se llegue al final del array).</p>
+<h3 id="algoritmo-busqueda-secuencial"><strong>Algoritmo búsqueda secuencial</strong></h3>
+<p>Este algoritmo se puede implementar fácilmente en un método que busca un array de enteros, que se pasa como parámetro del método y la clave a buscar. Si la clave se encuentra en el array, se devuelve su ubicación. Si no se encuentra, se devuelve −1 para indicar fallo.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Search</span> <span class="p">{</span>
 
-<span class="n">suma</span> <span class="o">=</span> <span class="n">matriz</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">+</span> <span class="n">suma</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">sequentialSearch</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+         <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//no lo ha encontrado</span>
+   <span class="p">}</span>
 
-<span class="n">value</span> <span class="o">=</span> <span class="n">matriz</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="n">someFunction</span><span class="p">()</span><span class="o">]</span><span class="p">;</span>
-
-<span class="n">matriz</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">matriz</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="o">][</span><span class="n">algunaFunción</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="o">]</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
-<h2 id="declaracion-de-un-array-2d-o-matriz-2d">Declaración de un array 2D o matriz 2D</h2>
-<p>Recordamos que al igual que los arrays unidimensionales, las matrices bidimensionales son objetos. Para declara un array bidimensional se puede crear una lista. La lista debe contener las filas cada una separada por una coma; y cada fila es una lista de valores.</p>
-<p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[][]</span> <span class="n">myArray</span> <span class="o">=</span> <span class="p">{</span> <span class="p">{</span><span class="mi">8</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">},</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">},</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">}</span> <span class="p">};</span>
-
-<span class="c1">//también se puede hacer así</span>
-<span class="kt">int</span><span class="o">[][]</span> <span class="n">matriz</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="mi">7</span><span class="o">]</span><span class="p">;</span><span class="c1">//inicializa todo a 0s</span>
-</code></pre></div>
-<p>Cada fila de una matriz 2D puede tener un número diferente de celdas.</p>
-<p>Si un programa intenta acceder a una celda que no existe, se lanzará una excepción (que generalmente detendrá su programa). Hacer una asignación a una celda que no existe es un error.</p>
-<h2 id="longitud-de-una-matriz-2d">Longitud de una matriz 2D</h2>
-<p><strong>La longitud de una matriz 2D es el número de filas</strong> que tiene. Se puede adivinar que "longitud" podría definirse como un par de números (filas, columnas). Pero el número de columnas puede variar de una fila a otra, por lo que esto no funcionará. Sin embargo, el número de filas no cambia, por lo que funciona como una longitud.</p>
-<p>Cada fila de una matriz 2D puede tener un número diferente de celdas (columnas), por lo que cada fila tiene su propia longitud.</p>
-<h2 id="entender-mejor-los-arrays-o-matrices-2d">Entender mejor los arrays o matrices 2D</h2>
-<p>Un array bidimensional se implementa como un array unidimensionales. La declaracion</p>
-<p><code>int [][] myArray;</code> // 1.</p>
-<p><img alt="Arrays" src="../../img/ud4/6myarray1.png" /></p>
-<p>declara una variable llamada <code>myArray</code> que en el futuro puede hacer referencia a un objeto de matriz. En este punto, no se ha dicho nada sobre el número de filas o columnas.</p>
-<p>Para crear una matriz de 3 filas, haríamos:</p>
-<p><code>myArray = new int [3][];</code> // 2.</p>
-<p><img alt="Arrays" src="../../img/ud4/6myarray2.png" /></p>
-<p>Ahora <code>myArray</code> hace referencia a un objeto de matriz. El objeto de matriz tiene 3 celdas. Cada celda puede hacer referencia (en el futuro) a una matriz de int, un objeto int []. Sin embargo, ninguna de las celdas se refiere todavía a un objeto. Se inicializan a nulo.</p>
-<p>Una forma de crear la fila 0 es esta:</p>
-<p><code>myArray[0] = new int [3];</code> // 3.</p>
-<p><img alt="Arrays" src="../../img/ud4/6myarray3.png" /></p>
-<p>Esto crea un objeto array 1D y coloca su referencia en la celda 0 de myArray. Las celdas del array 1D se inicializan a 0.</p>
-<p>Una matriz o array 1D construida previamente se puede asignar a una fila:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span> <span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>
-<span class="kt">int</span><span class="o">[]</span> <span class="n">y</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>
-
-<span class="n">myArray</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
-<span class="n">myArray</span> <span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span> <span class="c1">// 4.</span>
-</code></pre></div>
-<p><img alt="Arrays" src="../../img/ud4/6myarray4.png" /></p>
-<p>No es necesario que las filas tengan el mismo número de celdas.</p>
-<p>Las declaraciones anteriores construyen la matriz 2D paso a paso.</p>
-<h3 id="como-se-podrian-reemplazar-las-celdas-individuales-de-cada-fila-dentro-de-una-matriz">¿Cómo se podrían reemplazar las celdas individuales de cada fila dentro de una matriz?</h3>
-<p>Si quisieras reemplazar la fila uno del ejemplo anterior con la siguiente sentencia:</p>
-<p><code>myArray [0] = {1, 9, 4};</code> No funcionará.</p>
-<p>Una lista de inicializadores entre llaves { } solo se puede usar para inicializar una matriz, no para asignarle valores después de que ya se ha creado y existe.</p>
-<p>Si has pensado en hacer algo así:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span> <span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span> <span class="c1">// declarar e iniciar x</span>
-<span class="n">myArray</span> <span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// asignar a myArray</span>
-</code></pre></div>
-<p>Esto si funcionaría, pero no haríamos exactamente lo que se pidió en la pregunta. Es decir, de esta forma reemplazaríamos la antigua fila 0 con una nueva fila. Lo que hacemos es construir un nuevo objeto de matriz 1D (un array) que contiene los valores deseados en sus celdas y luego asigna ese objeto a la fila 0 de <code>myArray</code>. La fila 0 anterior ahora es basura.</p>
-<p>Lo correcto sería recorrer la fila 0 y reemplazar el <strong>valor</strong> de cada celda.</p>
-<p><img alt="Arrays" src="../../img/ud4/6array.png" /></p>
+<h2 id="busqueda-binaria">Búsqueda binaria</h2>
                 
               
               
@@ -1256,13 +1211,13 @@
       
       
         
-        <a href="../../shortcuts/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Atajos de teclado para IntelliJ" rel="next">
+        <a href="../7twodimensionarray/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 4.7- Arrays multidimensionales" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Siguiente
               </span>
-              Atajos de teclado para IntelliJ
+              4.7- Arrays multidimensionales
             </div>
           </div>
           <div class="md-footer__button md-icon">
