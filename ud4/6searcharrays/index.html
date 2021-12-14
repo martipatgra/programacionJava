@@ -1027,6 +1027,19 @@
     Búsqueda binaria
   </a>
   
+    <nav class="md-nav" aria-label="Búsqueda binaria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-se-hace" class="md-nav__link">
+    ¿Cómo se hace?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1135,6 +1148,19 @@
     Búsqueda binaria
   </a>
   
+    <nav class="md-nav" aria-label="Búsqueda binaria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-se-hace" class="md-nav__link">
+    ¿Cómo se hace?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1156,7 +1182,7 @@ Este algoritmo es conocido como <strong>búsqueda lineal o secuencial</strong>.<
 <h2 id="busqueda-secuencial">Búsqueda secuencial</h2>
 <p>En la búsqueda secuencial, cada elemento del array se examinará en secuencia hasta que se encuentre la clave (o se llegue al final del array).</p>
 <h3 id="algoritmo-busqueda-secuencial"><strong>Algoritmo búsqueda secuencial</strong></h3>
-<p>Este algoritmo se puede implementar fácilmente en un método que busca un array de enteros, que se pasa como parámetro del método y la clave a buscar. Si la clave se encuentra en el array, se devuelve su ubicación. Si no se encuentra, se devuelve −1 para indicar fallo.</p>
+<p>Este algoritmo se puede implementar fácilmente en un método que busca un array de enteros, que se pasa como parámetro del método y la <code>clave</code> a buscar. Si la <code>clave</code> se encuentra en el array, se devuelve su ubicación. Si no se encuentra, se devuelve <code>−1</code> para indicar fallo.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Search</span> <span class="p">{</span>
 
    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">sequentialSearch</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
@@ -1171,6 +1197,32 @@ Este algoritmo es conocido como <strong>búsqueda lineal o secuencial</strong>.<
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="busqueda-binaria">Búsqueda binaria</h2>
+<p>La búsqueda binaria es un algoritmo de búsqueda para encontrar la posición de un elemento en un array ordenado.</p>
+<blockquote>
+<p>La búsqueda binaria <strong>solo se puede implementar en una lista ordenada de elementos</strong>. Si los elementos no están ordenados, primero debemos ordenarlos.</p>
+</blockquote>
+<p>El algoritmo de búsqueda binaria se puede implementar de dos formas diferentes:</p>
+<ol>
+<li>Método iterativo</li>
+<li>Método recursivo. El método recursivo sigue el enfoque de <strong>divide y vencerás</strong>.</li>
+</ol>
+<h3 id="como-se-hace">¿Cómo se hace?</h3>
+<ol>
+<li>El array en el que se va a realizar la búsqueda es. Sea <code>x = 4</code> el elemento a buscar.
+<img alt="Arrays" src="../../img/ud4/6search1.png" /></li>
+<li>Establezce dos punteros <code>low</code> y <code>high</code> en las posiciones más baja y más alta, respectivamente.
+<img alt="Arrays" src="../../img/ud4/6search2.png" /></li>
+<li>Encuentra el elemento del medio en la mitad del array, es decir, <code>array[(low + high) / 2] = 6</code>.
+<img alt="Arrays" src="../../img/ud4/6search3.png" /></li>
+<li>Si <code>x == mid</code>, devuelve <code>mid</code>. De lo contrario, compara el elemento que se va a buscar con <code>m</code>.</li>
+<li>Si <code>x &gt; mid</code>, comparamos <code>x</code> con el elemento medio de los elementos en el lado derecho de <code>mid</code>. Esto se hace estableciendo <code>low</code> a <code>low = mid + 1</code>.</li>
+<li>De lo contrario, comparamos <code>x</code> con el elemento central de los elementos en el lado izquierdo de <code>mid</code>. Esto se hace estableciendo <code>high</code> a <code>high = mid - 1</code>.
+<img alt="Arrays" src="../../img/ud4/6search4.png" /></li>
+<li>Repetimos los pasos 3 a 6 hasta que <code>low</code> se encuentre con <code>high</code>.
+<img alt="Arrays" src="../../img/ud4/6search5.png" /></li>
+<li><code>x = 4</code> se ha encontrado.</li>
+</ol>
+<p><img alt="Arrays" src="../../img/ud4/6search6.png" /></p>
                 
               
               
