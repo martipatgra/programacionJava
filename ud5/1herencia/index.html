@@ -1188,6 +1188,12 @@
 <blockquote>
 <p><em>En general, decimos que una subclase extiende una superclase, lo que significa que agrega elementos adicionales (atributos y / o métodos) a los contenidos en sus superclases. Como el caso de la clase <code>Square</code> que agrega la característica de que su largo y ancho son siempre iguales.</em></p>
 </blockquote>
+<p>Hay tres conjuntos de terminología para describir las relaciones de herencia:</p>
+<ul>
+<li>padre / hijo</li>
+<li>clase base / clase derivada</li>
+<li>superclase / subclase</li>
+</ul>
 <p><img alt="Arrays" src="../../img/ud5/1herencia.png" /></p>
 <p>El concepto importante asociado con una jerarquía de clases es la noción de <strong><em>herencia</em></strong> de clases, mediante la cual una subclase hereda elementos (atributos y / o métodos) de sus superclases.</p>
 <p>Para ilustrar cómo funciona la herencia pensemos en un ajedrez. Hay varios tipos diferentes de piezas de ajedrez. Hay peones, caballeros, reinas y reyes. Un par de atributos que todas las piezas de ajedrez tienen en común es su posición de fila y columna en el tablero de ajedrez. Debido a que todas las piezas de ajedrez tienen estos atributos en común, habrá una clase en la jerarquía superior llamada <code>PiezaAjedrez</code> con estos atributos que serán heredados por todas las subclases de <code>PiezaAjedrez</code>.</p>
@@ -1200,12 +1206,6 @@ Por lo tanto, la clase <code>Rey</code> tiene ciertas características particula
 <h2 id="herencia-simple">Herencia simple</h2>
 <p>En Java, (a diferencia de los humanos) los hijos heredan características de un solo padre. A esto se le llama <strong>herencia simple</strong>. Aunque algunos lenguajes de programación permiten que una clase hija herede de más de una clase padre. A esto se le llama <strong>herencia múltiple</strong>. Con la herencia múltiple, a veces es difícil saber qué padre contribuyó con qué características al hijo. Java evita estos problemas mediante el uso de herencia simple.</p>
 <p>Una clase padre puede tener múltiples hijos.</p>
-<p>Hay tres conjuntos de terminología para describir las relaciones de herencia:</p>
-<ul>
-<li>padre / hijo</li>
-<li>clase base / clase derivada</li>
-<li>superclase / subclase</li>
-</ul>
 <p><strong>La herencia es entre clases, no entre objetos.</strong></p>
 <h2 id="sintaxis-herencia-en-java-extends">Sintaxis herencia en Java - <em>extends</em></h2>
 <p>La sintaxis para heredar de una superclase es:</p>
