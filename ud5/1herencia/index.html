@@ -1082,6 +1082,19 @@
     Super keyword
   </a>
   
+    <nav class="md-nav" aria-label="Super keyword">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probar-funcionamiento" class="md-nav__link">
+    Probar funcionamiento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1191,6 +1204,19 @@
     Super keyword
   </a>
   
+    <nav class="md-nav" aria-label="Super keyword">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probar-funcionamiento" class="md-nav__link">
+    Probar funcionamiento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1207,7 +1233,7 @@
                 
                 
                 <h1 id="herencia">Herencia</h1>
-<p>Cuando tenemos una clase con una serie de características  y nuestro programa se actualiza o amplia y necesita un clase con unas características similares, como por ejemplo, Ordenador, posee un ram, cpu, tamaño de disco, etc.</p>
+<p>Cuando tenemos una clase con una serie de características  y nuestro programa se actualiza o amplia, tal vez se necesita de una clase con unas características similares, como por ejemplo, Ordenador, posee un ram, cpu, tamaño de disco, etc.</p>
 <p>Si ahora queremos añadir la clase Tablet Android en nuestro sistema, como posee todas esas características de ordenador además de algunas específicas, copiaríamos todo lo que hay en ordenador y agregaríamos lo que fuera específico para Tablet. Lo mismo tendríamos que realizar si añadiéramos Pórtatil Mac. Como te habrás dado cuenta, este proceso genera mucho código repetido. Y arreglar un error en él puede ser también complicado. Para ello utilizamos la herencia.</p>
 <p>¿Cómo se relacionan las clases entre sí? En Java, y en cualquier otro lenguaje orientado a objetos, las clases se organizan en una <strong>jerarquía de clases</strong>. Una jerarquía de clases es como un árbol al revés. En lo más alto de la jerarquía se encuentra la clase más general, en Java, la clase <code>Object</code>. Las clases debajo de <code>Object</code> en la jerarquía se conocen como sus <strong>subclases</strong>. Dado que todos los objetos que usamos en nuestros programas pertenecen a una clase u otra, esto es como decir que todos los objetos son <code>Object</code>.</p>
 <p><img alt="Arrays" src="../../img/ud5/1inheritance.png" /></p>
@@ -1252,13 +1278,11 @@ Por lo tanto, la clase <code>Rey</code> tiene ciertas características particula
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
 
     <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">body</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">;</span>
 
-    <span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">body</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">body</span> <span class="o">=</span> <span class="n">body</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">weight</span> <span class="o">=</span> <span class="n">weight</span><span class="p">;</span>
     <span class="p">}</span>
@@ -1274,15 +1298,15 @@ Por lo tanto, la clase <code>Rey</code> tiene ciertas características particula
 <p>Cuando creamos una subclase, necesitamos llamar al constructor de la superclase para inicializarla, ya que hereda de ella. Así que tendremos que crear el constructor en la clase <code>Dog</code> que llame dentro al constructor de la superclase (<code>Animal</code>):</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
 
-    <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">body</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Al crear una clase hija <code>Dog</code> que hereda de la clase padre <code>Animal</code>, lo que estamos haciendo es heredar todo su comportamiento (atributos y métodos) y además nos permite añadir atributos específicos y únicos para esa clase hija que son particulares de los perros y no comunes o aplicables a todos los animales.</p>
 <hr />
 <h2 id="super-keyword"><em>Super</em> keyword</h2>
-<p>La palabra reservada <code>super</code> se utiliza para llamar al constructor de la clase de la que estamos heredando. En nuestro caso, para invocar al constructor de la superclase <code>Animal</code>.
+<p>La palabra reservada <code>super</code> se utiliza para llamar al constructor de la clase de la que estamos heredando (clase base). En nuestro caso, para invocar al constructor de la superclase <code>Animal</code>.
 Esto nos permite inicializar la clase <code>Animal</code>, ya que <code>Dog</code> es una clase derivada que se basa en ella.</p>
 <hr />
 <p>En la clase hija vamos a crear algunos campos específicos para los perros como ojos, piernas, etc. Porque recuerda que no todos los animales tienen piernas u ojos pero si todos los perros.</p>
@@ -1292,11 +1316,50 @@ Esto nos permite inicializar la clase <code>Animal</code>, ya que <code>Dog</cod
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">tail</span><span class="p">;</span>
 
-    <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">body</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>Además de los campos que se necesitan para crear un objeto <code>Animal</code>, también hay que inicializar los campos propios de la clase <code>Dog</code> en el constructor:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">eyes</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">tail</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">,</span> <span class="kt">int</span> <span class="n">eyes</span><span class="p">,</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">,</span> <span class="kt">int</span> <span class="n">tail</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">eyes</span> <span class="o">=</span> <span class="n">eyes</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">legs</span> <span class="o">=</span> <span class="n">legs</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En la clase base, vamos a añadir comportamiento, que será común para todos los animales, comer y moverse:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">weight</span> <span class="o">=</span> <span class="n">weight</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//código</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">move</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//código</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Al hacer esto, y crearlos como <code>public</code> (<code>protected</code> también serviría), significa que ahora están disponibles en la clase <code>Dog</code> automáticamente. Es decir, el método <code>eat</code> y <code>move</code> se hereda a la clase <code>Dog</code>.</p>
+<h3 id="probar-funcionamiento">Probar funcionamiento</h3>
                 
               
               
