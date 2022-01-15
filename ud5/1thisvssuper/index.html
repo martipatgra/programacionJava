@@ -1298,6 +1298,33 @@
 <p>Un constructor puede tener las sentencias <code>this()</code> o <code>super()</code> pero nunca ambas.</p>
 </div>
 <p><img alt="Arrays" src="../../img/ud5/1thisvssuper.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Transporte</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">puertas</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">precio</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Transporte</span><span class="p">(</span><span class="kt">int</span> <span class="n">puertas</span><span class="p">,</span> <span class="kt">int</span> <span class="n">precio</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">puertas</span> <span class="o">=</span> <span class="n">puertas</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">precio</span> <span class="o">=</span> <span class="n">precio</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Coche</span> <span class="kd">extends</span> <span class="n">Transporte</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">modelo</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">marca</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Coche</span><span class="p">(</span><span class="n">String</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">String</span> <span class="n">marca</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">modelo</span><span class="p">,</span><span class="n">marca</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="nf">Coche</span><span class="p">(</span><span class="kt">int</span> <span class="n">puertas</span><span class="p">,</span> <span class="kt">int</span> <span class="n">precio</span><span class="p">,</span> <span class="n">String</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">String</span> <span class="n">marca</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">puertas</span><span class="p">,</span> <span class="n">precio</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">modelo</span> <span class="o">=</span> <span class="n">modelo</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">marca</span> <span class="o">=</span> <span class="n">marca</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
