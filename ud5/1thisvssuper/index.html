@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#polimorfismo" class="md-skip">
+        <a href="#this-vs-super" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1068,9 +1068,46 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          This vs super
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         This vs super
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#this" class="md-nav__link">
+    This
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super" class="md-nav__link">
+    Super
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1149,6 +1186,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#this" class="md-nav__link">
+    This
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super" class="md-nav__link">
+    Super
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1160,7 +1219,30 @@
               
                 
                 
-                <h1 id="polimorfismo">Polimorfismo</h1>
+                <h1 id="this-vs-super">This vs Super</h1>
+<p>La palabra reservada <strong>super</strong> se usa para acceder a los miembros (atributos y métodos) de la clase padre.</p>
+<p>La palabra reservada <strong>this</strong> se utiliza para acceder a los miembros (atributos y métodos) de la clase actual en la que se usa.</p>
+<p>Las dos palabras pueden usarse en cualquier lugar excepto en bloques de código estático.</p>
+<h2 id="this">This</h2>
+<p><code>This</code> es generalmente usada en constructores y en los métodos setters, y opcionalmente en los getters ya que no tenemos parámetro de entrada con el mismo nombre:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Coche</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">ruedas</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Coche</span><span class="p">(</span><span class="kt">int</span> <span class="n">ruedas</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">ruedas</span> <span class="o">=</span> <span class="n">ruedas</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setRuedas</span><span class="p">(</span><span class="kt">int</span> <span class="n">ruedas</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">ruedas</span> <span class="o">=</span> <span class="n">ruedas</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getRuedas</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">ruedas</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="super">Super</h2>
                 
               
               
