@@ -1220,11 +1220,17 @@
                 
                 
                 <h1 id="this-vs-super">This vs Super</h1>
+<ul>
+<li>
 <p>La palabra reservada <strong>super</strong> se usa para acceder a los miembros (atributos y métodos) de la clase padre.</p>
+</li>
+<li>
 <p>La palabra reservada <strong>this</strong> se utiliza para acceder a los miembros (atributos y métodos) de la clase actual en la que se usa.</p>
+</li>
+</ul>
 <p>Las dos palabras pueden usarse en cualquier lugar excepto en bloques de código estático.</p>
 <h2 id="this">This</h2>
-<p><code>This</code> es generalmente usada en constructores y en los métodos setters, y opcionalmente en los getters ya que no tenemos parámetro de entrada con el mismo nombre:</p>
+<p><code>this</code> es generalmente usada en constructores y en los métodos setters, y opcionalmente en los getters ya que no tenemos parámetro de entrada con el mismo nombre:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Coche</span> <span class="p">{</span>
 
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">ruedas</span><span class="p">;</span>
@@ -1243,6 +1249,15 @@
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="super">Super</h2>
+<p><code>super</code> es generalmente usada en sobreescritura de métodos al usar herencia. Es decir, se utiliza para llamar desde las clases hijas al método con el mismo nombre en la clase padre.</p>
+<div class="highlight"><pre><span></span><code>    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog eat&quot;</span><span class="p">);</span>
+        <span class="n">chew</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">eat</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>Sin la palabra reservada <code>super</code>, se produciría una llamada recursiva al mismo método de forma infinita.</p>
                 
               
               
