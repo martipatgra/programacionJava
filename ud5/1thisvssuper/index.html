@@ -1287,7 +1287,16 @@
 </code></pre></div>
 <p>Sin la palabra reservada <code>super</code>, se produciría una llamada recursiva al mismo método de forma infinita.</p>
 <h2 id="this_1">this()</h2>
+<p>Usamos <code>this()</code> en forma de método dentro del cuerpo de un constructor cuando queremos invocar a otro constructor sobrecargado dentro de la misma clase.
+<code>this()</code> solo puede usarse en un constructor; y debe de ser la primera sentencia que aparece en el constructor.</p>
 <h2 id="super_1">super()</h2>
+<p>Usamos <code>super()</code> en forma de método dentro del cuerpo de un constructor cuando queremos invocar a un constructor de la clase padre.
+<code>super()</code> solo puede usarse en un constructor; y debe de ser la primera sentencia que aparece en el constructor.</p>
+<p>Recordemos que el compilador de Java agrega de forma automática la sentencia <code>super()</code> en el constructor de la clase hija si nosotros no lo añadimos.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Un constructor puede tener las sentencias <code>this()</code> o <code>super()</code> pero nunca ambas.</p>
+</div>
                 
               
               
