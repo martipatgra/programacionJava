@@ -14,7 +14,7 @@
     
     
       
-        <title>5.1 Herencia - Programación</title>
+        <title>Concepto de herencia - Programación</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5.1 Herencia
+              Concepto de herencia
             
           </span>
         </div>
@@ -1025,6 +1025,29 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
+      
+      <label class="md-nav__link" for="__nav_6_1">
+        5.1 Herencia
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="5.1 Herencia" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          5.1 Herencia
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -1034,12 +1057,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          5.1 Herencia
+          Concepto de herencia
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        5.1 Herencia
+        Concepto de herencia
       </a>
       
         
@@ -1097,10 +1120,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sobreescribir-metodos-de-la-clase-padre-en-los-hijos" class="md-nav__link">
+    Sobreescribir métodos de la clase padre en los hijos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodo-equals" class="md-nav__link">
+    Método equals
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1thisvssuper/" class="md-nav__link">
+        This vs super
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1219,6 +1274,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sobreescribir-metodos-de-la-clase-padre-en-los-hijos" class="md-nav__link">
+    Sobreescribir métodos de la clase padre en los hijos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodo-equals" class="md-nav__link">
+    Método equals
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1251,7 +1320,11 @@
 <li>superclase / subclase</li>
 </ul>
 <p><img alt="Arrays" src="../../img/ud5/1herencia.png" /></p>
-<p>El concepto importante asociado con una jerarquía de clases es la noción de <strong><em>herencia</em></strong> de clases, mediante la cual una subclase hereda elementos (atributos y / o métodos) de sus superclases.</p>
+<p>El concepto importante asociado con una jerarquía de clases es la noción de <strong><em>herencia</em></strong> de clases, mediante la cual una subclase hereda elementos (atributos y / o métodos, excepto el constructor) de sus superclases.</p>
+<div class="admonition nota">
+<p class="admonition-title">Nota</p>
+<p>Los atributos y métodos declarados como <code>private</code> no se heredan.</p>
+</div>
 <p>Para ilustrar cómo funciona la herencia pensemos en un ajedrez. Hay varios tipos diferentes de piezas de ajedrez. Hay peones, caballeros, reinas y reyes. Un par de atributos que todas las piezas de ajedrez tienen en común es su posición de fila y columna en el tablero de ajedrez. Debido a que todas las piezas de ajedrez tienen estos atributos en común, habrá una clase en la jerarquía superior llamada <code>PiezaAjedrez</code> con estos atributos que serán heredados por todas las subclases de <code>PiezaAjedrez</code>.</p>
 <p>Una de las acciones que todas las piezas de ajedrez tienen en común es que pueden moverse a una casilla determinada del tablero de ajedrez. Pero los diferentes tipos de piezas de ajedrez tienen diferentes formas de moverse. Por ejemplo, un alfil solo puede moverse a lo largo de diagonales en el tablero de ajedrez, mientras que una torre solo puede moverse a lo largo de una fila o columna en el tablero de ajedrez. Entonces, claramente, no podemos describir un método <code>moveTo()</code> que funcione para todas las piezas de ajedrez. Es por eso que colocamos el método <code>moveTo()</code> en todas las subclases de <code>PiezaAjedrez</code>. La clase <code>PiezaAjedrez</code> también tiene un método <code>moveTo()</code>, pero tenga en cuenta que su nombre está en cursiva. Esto indica que no se puede definir completamente a ese nivel.</p>
 <p>En el ajedrez, el rey tiene ciertos atributos y acciones especiales. Por tanto, sólo el rey puede ser puesto bajo control. Esto significa que el rey está siendo atacado y en peligro de ser capturado, poniendo fin al juego. Del mismo modo, solo el rey tiene la capacidad de enrocar. Este es un movimiento especial que un rey puede realizar junto con una de sus torres bajo ciertas condiciones.
@@ -1306,8 +1379,15 @@ Por lo tanto, la clase <code>Rey</code> tiene ciertas características particula
 <p>Al crear una clase hija <code>Dog</code> que hereda de la clase padre <code>Animal</code>, lo que estamos haciendo es heredar todo su comportamiento (atributos y métodos) y además nos permite añadir atributos específicos y únicos para esa clase hija que son particulares de los perros y no comunes o aplicables a todos los animales.</p>
 <hr />
 <h2 id="super-keyword"><em>Super</em> keyword</h2>
-<p>La palabra reservada <code>super</code> se utiliza para llamar al constructor de la clase de la que estamos heredando (clase base). En nuestro caso, para invocar al constructor de la superclase <code>Animal</code>.
+<p>La palabra reservada <code>super</code> se utiliza para llamar al constructor de la clase de la que estamos heredando, es decir, llamar a la clase padre o superclase. En nuestro caso, para invocar al constructor de la superclase <code>Animal</code>.
 Esto nos permite inicializar la clase <code>Animal</code>, ya que <code>Dog</code> es una clase derivada que se basa en ella.</p>
+<p>La primera línea dentro del constructor de la clase hija debe ser la llamada al constructor padre con <code>super()</code>.
+Si no se especifica explícitamente entonces el compilador Java llama por defecto a <code>super();</code>, es decir, al constructor por defecto (sin argumentos) de la clase padre.
+Si el padre no tiene un constructor sin argumentos, entonces provoca un error.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si se proporciona un constructor con parámetros en una clase, el compilador de Java <strong>no</strong> creará automáticamente el constructor sin parámetros.</p>
+</div>
 <hr />
 <p>En la clase hija vamos a crear algunos campos específicos para los perros como ojos, piernas, etc. Porque recuerda que no todos los animales tienen piernas u ojos pero si todos los perros.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
@@ -1360,6 +1440,105 @@ Esto nos permite inicializar la clase <code>Animal</code>, ya que <code>Dog</cod
 </code></pre></div>
 <p>Al hacer esto, y crearlos como <code>public</code> (<code>protected</code> también serviría), significa que ahora están disponibles en la clase <code>Dog</code> automáticamente. Es decir, el método <code>eat</code> y <code>move</code> se hereda a la clase <code>Dog</code>.</p>
 <h3 id="probar-funcionamiento">Probar funcionamiento</h3>
+<p>Vamos a probar cómo funciona la herencia, para ello creamos un clase <code>Main</code> con un método <code>main</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Animal</span> <span class="n">animal</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Animal</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="n">Dog</span> <span class="n">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Maxi&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>Vemos que crear un animal no tiene mucho sentido, puesto que no sabemos mucho sobre él. Cuando creamos un perro, podemos ser más específicos en nuestra definición y dar valores relativos solo para perros.
+Además, desde perro tenemos acceso a los métodos definidos en la clase padre (<code>Animal</code>) como públicos o protected. Por ejemplo, <code>dog.eat()</code> invocará al método comer que se encuentra en la clase padre, ya que la clase <code>Dog</code> no tiene ningún método <code>eat</code>.</p>
+<h2 id="sobreescribir-metodos-de-la-clase-padre-en-los-hijos">Sobreescribir métodos de la clase padre en los hijos</h2>
+<p>La herencia nos aporta la opción de la <strong>sobreescritura</strong> de métodos. Es decir, redefinir los métodos de una clase padre en las clases hijas.</p>
+<p>Por ejemplo, en la clase <code>Dog</code> podemos sobreescribir el método <code>eat()</code> con una funcionalidad más específica.</p>
+<p>El IntelliJ nos ofrece un atajo para sobreescritura de métodos. Botón derecho --&gt; Generate...</p>
+<p><img alt="Arrays" src="../../img/ud5/1intellij.png" /></p>
+<p><img alt="Arrays" src="../../img/ud5/2intellij.png" /></p>
+<p>IntelliJ nos muestra todos los métodos que están en la clase <code>Animal</code> y podemos sobreescribir:</p>
+<p><img alt="Arrays" src="../../img/ud5/3intellij.png" /></p>
+<p>Si seleccionamos el método <code>eat()</code>, tenemos:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">eyes</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">tail</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">,</span> <span class="kt">int</span> <span class="n">eyes</span><span class="p">,</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">,</span> <span class="kt">int</span> <span class="n">tail</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">eyes</span> <span class="o">=</span> <span class="n">eyes</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">legs</span> <span class="o">=</span> <span class="n">legs</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">eat</span><span class="p">();</span><span class="c1">//Código que se crea automáticamente y llama al método eat de la clase padre</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Ahora la clase hija <code>Dog</code> tiene su propio método <code>eat()</code> con código específico para esta clase.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">eyes</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">tail</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">years</span><span class="p">,</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">,</span> <span class="kt">int</span> <span class="n">eyes</span><span class="p">,</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">,</span> <span class="kt">int</span> <span class="n">tail</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">years</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">eyes</span> <span class="o">=</span> <span class="n">eyes</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">legs</span> <span class="o">=</span> <span class="n">legs</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//Método privado solo de la clase Dog</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">chew</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog eat&quot;</span><span class="p">);</span>
+        <span class="n">chew</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">eat</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En términos de sobreescritura, debemos de llevar cuidado con el método que se invoca:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">eyes</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">tail</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">years</span><span class="p">,</span> <span class="kt">int</span> <span class="n">weight</span><span class="p">,</span> <span class="kt">int</span> <span class="n">eyes</span><span class="p">,</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">,</span> <span class="kt">int</span> <span class="n">tail</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">years</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">eyes</span> <span class="o">=</span> <span class="n">eyes</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">legs</span> <span class="o">=</span> <span class="n">legs</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//Método privado solo de la clase Dog</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">chew</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog eat&quot;</span><span class="p">);</span>
+        <span class="n">chew</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">eat</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">walk</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">move</span><span class="p">();</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>Si no sobreescribimos el método <code>move()</code> en la clase <code>Dog</code>, cuando lo invocamos dentro del método <code>walk()</code> se llamaría al método de la clase <code>Animal</code>.</p>
+<h2 id="metodo-equals">Método equals</h2>
                 
               
               
@@ -1400,13 +1579,13 @@ Esto nos permite inicializar la clase <code>Animal</code>, ya que <code>Dog</cod
       
       
         
-        <a href="../2polimorfismo/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 5.2 Polimorfismo" rel="next">
+        <a href="../1thisvssuper/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: This vs super" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Siguiente
               </span>
-              5.2 Polimorfismo
+              This vs super
             </div>
           </div>
           <div class="md-footer__button md-icon">
