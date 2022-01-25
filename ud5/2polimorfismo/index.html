@@ -1084,9 +1084,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          5.2 Polimorfismo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         5.2 Polimorfismo
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#composicion" class="md-nav__link">
+    Composición
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1147,6 +1177,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#composicion" class="md-nav__link">
+    Composición
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1159,6 +1204,182 @@
                 
                 
                 <h1 id="polimorfismo">Polimorfismo</h1>
+<h2 id="composicion">Composición</h2>
+<p>La composición es otro componente de la programación orientada a objetos y es muy utilizada.</p>
+<p>Es el mecanismo en el cual una clase se construye a partir de otros objetos de igual o distinto tipo, pudiéndolos combinar para obtener la funcionalidad deseada. En la composición la nueva clase, mantiene una relación “Usa/Tiene un”, con los objetos que son parte de la clase.</p>
+<p>Vamos a ver un ejemplo de la clase <code>Car</code> que extiende <code>Vehicle</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Vehicle</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span> <span class="kd">extends</span> <span class="n">Vehicle</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">doors</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">seats</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Car</span><span class="p">(</span><span class="kt">int</span> <span class="n">doors</span><span class="p">,</span> <span class="kt">int</span> <span class="n">seats</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">doors</span> <span class="o">=</span> <span class="n">doors</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">seats</span> <span class="o">=</span> <span class="n">seats</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Estas dos clases tienen una relación de herencia, el significado es que un coche <strong>es un</strong> vehículo.</p>
+<p>Pero la composición es diferente a la herencia también es un tipo de relación.
+Por ejemplo, pensemos en un ordenador. Un ordenador se compone de una CPU, pantalla, ratón y teclado. Pero una pantalla no es un ordenador, un ratón no es un ordenador. Decimos que un ordenador <strong>tiene una</strong> pantalla, un ordenador <strong>tiene un</strong> teclado, etc. Eso es la composición, un todo que se construye con partes.</p>
+<p>Vamos a ver como se implementa esto:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Procesador</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">modelo</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">ramSlots</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">cardSlots</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Procesador</span><span class="p">(</span><span class="n">String</span> <span class="n">modelo</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ramSlots</span><span class="p">,</span> <span class="kt">int</span> <span class="n">cardSlots</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">modelo</span> <span class="o">=</span> <span class="n">modelo</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">ramSlots</span> <span class="o">=</span> <span class="n">ramSlots</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">cardSlots</span> <span class="o">=</span> <span class="n">cardSlots</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">cargarPrograma</span><span class="p">(</span><span class="n">String</span> <span class="n">nombre</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getModelo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">modelo</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setModelo</span><span class="p">(</span><span class="n">String</span> <span class="n">modelo</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">modelo</span> <span class="o">=</span> <span class="n">modelo</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getRamSlots</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">ramSlots</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setRamSlots</span><span class="p">(</span><span class="kt">int</span> <span class="n">ramSlots</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">ramSlots</span> <span class="o">=</span> <span class="n">ramSlots</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getCardSlots</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">cardSlots</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setCardSlots</span><span class="p">(</span><span class="kt">int</span> <span class="n">cardSlots</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">cardSlots</span> <span class="o">=</span> <span class="n">cardSlots</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Monitor</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">modelo</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">resolucion</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">tam</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Monitor</span><span class="p">(</span><span class="n">String</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">String</span> <span class="n">resolucion</span><span class="p">,</span> <span class="kt">int</span> <span class="n">tam</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">modelo</span> <span class="o">=</span> <span class="n">modelo</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">resolucion</span> <span class="o">=</span> <span class="n">resolucion</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">tam</span> <span class="o">=</span> <span class="n">tam</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">dibujarPixel</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pixel en &quot;</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getModelo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">modelo</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setModelo</span><span class="p">(</span><span class="n">String</span> <span class="n">modelo</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">modelo</span> <span class="o">=</span> <span class="n">modelo</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getResolucion</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">resolucion</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setResolucion</span><span class="p">(</span><span class="n">String</span> <span class="n">resolucion</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">resolucion</span> <span class="o">=</span> <span class="n">resolucion</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getTam</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">tam</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTam</span><span class="p">(</span><span class="kt">int</span> <span class="n">tam</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">tam</span> <span class="o">=</span> <span class="n">tam</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teclado</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">color</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">teclas</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Teclado</span><span class="p">(</span><span class="n">String</span> <span class="n">color</span><span class="p">,</span> <span class="kt">int</span> <span class="n">teclas</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">teclas</span> <span class="o">=</span> <span class="n">teclas</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">pushKey</span><span class="p">(</span><span class="kt">char</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Se ha presionado la tecla &quot;</span> <span class="o">+</span> <span class="n">key</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getColor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">color</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setColor</span><span class="p">(</span><span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getTeclas</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">teclas</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTeclas</span><span class="p">(</span><span class="kt">int</span> <span class="n">teclas</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">teclas</span> <span class="o">=</span> <span class="n">teclas</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Hemos creado las clases <code>Monitor</code>, <code>Teclado</code> y <code>Procesador</code>.
+Ahora vamos a crear una clase <code>Ordenador</code> que se compondrán de las otras tres clases de la forma:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Ordenador</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">Procesador</span> <span class="n">procesador</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Teclado</span> <span class="n">teclado</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Monitor</span> <span class="n">monitor</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Ordenador</span><span class="p">(</span><span class="n">Procesador</span> <span class="n">procesador</span><span class="p">,</span> <span class="n">Teclado</span> <span class="n">teclado</span><span class="p">,</span> <span class="n">Monitor</span> <span class="n">monitor</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">procesador</span> <span class="o">=</span> <span class="n">procesador</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">teclado</span> <span class="o">=</span> <span class="n">teclado</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">monitor</span> <span class="o">=</span> <span class="n">monitor</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">Procesador</span> <span class="nf">getProcesador</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">procesador</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setProcesador</span><span class="p">(</span><span class="n">Procesador</span> <span class="n">procesador</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">procesador</span> <span class="o">=</span> <span class="n">procesador</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">Teclado</span> <span class="nf">getTeclado</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">teclado</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTeclado</span><span class="p">(</span><span class="n">Teclado</span> <span class="n">teclado</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">teclado</span> <span class="o">=</span> <span class="n">teclado</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">Monitor</span> <span class="nf">getMonitor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">monitor</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setMonitor</span><span class="p">(</span><span class="n">Monitor</span> <span class="n">monitor</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">monitor</span> <span class="o">=</span> <span class="n">monitor</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
