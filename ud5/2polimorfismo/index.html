@@ -1380,6 +1380,30 @@ Ahora vamos a crear una clase <code>Ordenador</code> que se compondrán de las o
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>Ya hemos implementado nuestras clases que componen un <code>Ordenador</code>. Ahora vamos a ver como utilizarlas:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Procesador</span> <span class="n">procesador</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Procesador</span><span class="p">(</span><span class="s">&quot;Intel&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+        <span class="n">Monitor</span> <span class="n">monitor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Monitor</span><span class="p">(</span><span class="s">&quot;Philips&quot;</span><span class="p">,</span> <span class="s">&quot;1024x900&quot;</span><span class="p">,</span> <span class="mi">24</span><span class="p">);</span>
+        <span class="n">Teclado</span> <span class="n">teclado</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Teclado</span><span class="p">(</span><span class="s">&quot;Negror&quot;</span><span class="p">,</span><span class="mi">90</span><span class="p">);</span>
+
+        <span class="n">Ordenador</span> <span class="n">ordenador</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Ordenador</span><span class="p">(</span><span class="n">procesador</span><span class="p">,</span> <span class="n">teclado</span><span class="p">,</span> <span class="n">monitor</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Se ha creado un objeto de la clase <code>Ordenador</code> a partir de las otras clases. En herencia teníamos acceso a los atributos de la clase padre, pero ahora con composición para acceder a los métodos o atributos de las partes a partir de <code>Ordenador</code> lo haremos usando los métodos getters que tenemos en la clase y nos permite acceder a <code>Teclado</code>, <code>Monitor</code> y <code>Procesador</code>.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Procesador</span> <span class="n">procesador</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Procesador</span><span class="p">(</span><span class="s">&quot;Intel&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+        <span class="n">Monitor</span> <span class="n">monitor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Monitor</span><span class="p">(</span><span class="s">&quot;Philips&quot;</span><span class="p">,</span> <span class="s">&quot;1024x900&quot;</span><span class="p">,</span> <span class="mi">24</span><span class="p">);</span>
+        <span class="n">Teclado</span> <span class="n">teclado</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Teclado</span><span class="p">(</span><span class="s">&quot;Negror&quot;</span><span class="p">,</span><span class="mi">90</span><span class="p">);</span>
+
+        <span class="n">Ordenador</span> <span class="n">ordenador</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Ordenador</span><span class="p">(</span><span class="n">procesador</span><span class="p">,</span> <span class="n">teclado</span><span class="p">,</span> <span class="n">monitor</span><span class="p">);</span>
+        <span class="n">ordenador</span><span class="p">.</span><span class="na">getMonitor</span><span class="p">().</span><span class="na">dibujarPixel</span><span class="p">(</span><span class="mi">34</span><span class="p">,</span> <span class="mi">56</span><span class="p">);</span>
+        <span class="n">ordenador</span><span class="p">.</span><span class="na">getProcesador</span><span class="p">().</span><span class="na">cargarPrograma</span><span class="p">(</span><span class="s">&quot;Demo&quot;</span><span class="p">);</span>
+        <span class="n">ordenador</span><span class="p">.</span><span class="na">getTeclado</span><span class="p">().</span><span class="na">pushKey</span><span class="p">(</span><span class="sc">&#39;X&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
               
               
