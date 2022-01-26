@@ -1417,7 +1417,7 @@ Ahora vamos a crear una clase <code>Ordenador</code> que se compondrán de las o
 </code></pre></div>
 <h2 id="ocultar-funcionalidad-de-los-objetos-parte">Ocultar funcionalidad de los objetos parte</h2>
 <p>Otro escenario viable es el cual nos permita ocultar la funcionalidad, y no le permitamos al programa acceder directamente a los objetos que componen el todo.
-Para ello, lo primero que haremos será modificar la visibilidad de los getters y ponerlos <code>private</code>, de manera que no se pueda acceder ni a <code>Teclado</code>, <code>Monitor</code> o <code>Procesador</code>.</p>
+Para ello, lo primero que haremos será modificar la visibilidad de los getters y ponerlos <code>private</code>, de manera que no se pueda acceder desde fuera a <code>Teclado</code>, <code>Monitor</code> o <code>Procesador</code> pero si podamos acceder internamente.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Ordenador</span> <span class="p">{</span>
 
     <span class="kd">private</span> <span class="n">Procesador</span> <span class="n">procesador</span><span class="p">;</span>
