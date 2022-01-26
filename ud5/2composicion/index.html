@@ -1084,9 +1084,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          5.2 Composición
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         5.2 Composición
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ocultar-funcionalidad-de-los-objetos-parte" class="md-nav__link">
+    Ocultar funcionalidad de los objetos parte
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1158,6 +1188,21 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ocultar-funcionalidad-de-los-objetos-parte" class="md-nav__link">
+    Ocultar funcionalidad de los objetos parte
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1369,6 +1414,34 @@ Ahora vamos a crear una clase <code>Ordenador</code> que se compondrán de las o
         <span class="n">ordenador</span><span class="p">.</span><span class="na">getProcesador</span><span class="p">().</span><span class="na">cargarPrograma</span><span class="p">(</span><span class="s">&quot;Demo&quot;</span><span class="p">);</span>
         <span class="n">ordenador</span><span class="p">.</span><span class="na">getTeclado</span><span class="p">().</span><span class="na">pushKey</span><span class="p">(</span><span class="sc">&#39;X&#39;</span><span class="p">);</span>
     <span class="p">}</span>
+</code></pre></div>
+<h2 id="ocultar-funcionalidad-de-los-objetos-parte">Ocultar funcionalidad de los objetos parte</h2>
+<p>Otro escenario viable es el cual nos permita ocultar la funcionalidad, y no le permitamos al programa acceder directamente a los objetos que componen el todo.
+Para ello, lo primero que haremos será modificar la visibilidad de los getters y ponerlos <code>private</code>, de manera que no se pueda acceder ni a <code>Teclado</code>, <code>Monitor</code> o <code>Procesador</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Ordenador</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">Procesador</span> <span class="n">procesador</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Teclado</span> <span class="n">teclado</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Monitor</span> <span class="n">monitor</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Ordenador</span><span class="p">(</span><span class="n">Procesador</span> <span class="n">procesador</span><span class="p">,</span> <span class="n">Teclado</span> <span class="n">teclado</span><span class="p">,</span> <span class="n">Monitor</span> <span class="n">monitor</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">procesador</span> <span class="o">=</span> <span class="n">procesador</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">teclado</span> <span class="o">=</span> <span class="n">teclado</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">monitor</span> <span class="o">=</span> <span class="n">monitor</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="n">Procesador</span> <span class="nf">getProcesador</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">procesador</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="n">Teclado</span> <span class="nf">getTeclado</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">teclado</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="n">Monitor</span> <span class="nf">getMonitor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">monitor</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
                 
               
