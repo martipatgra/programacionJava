@@ -1482,6 +1482,17 @@ Para ello, lo primero que haremos será modificar la visibilidad de los getters 
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>En el <code>main</code> accederemos a este método:</p>
+<p>```java
+    public static void main(String[] args) {
+        Procesador procesador = new Procesador("Intel", 2, 3);
+        Monitor monitor = new Monitor("Philips", "1024x900", 24);
+        Teclado teclado = new Teclado("Negror",90);</p>
+<div class="highlight"><pre><span></span><code>    Ordenador ordenador = new Ordenador(procesador, teclado, monitor);
+    ordenador.encender();
+}
+</code></pre></div>
+<p>``</p>
                 
               
               
