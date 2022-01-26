@@ -1251,6 +1251,10 @@ Por ejemplo, pensemos en un ordenador. Un ordenador se compone de una CPU, panta
         <span class="k">this</span><span class="p">.</span><span class="na">cardSlots</span> <span class="o">=</span> <span class="n">cardSlots</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">presionarBotonEncendido</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Iniciando el pc&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">cargarPrograma</span><span class="p">(</span><span class="n">String</span> <span class="n">nombre</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
     <span class="p">}</span>
@@ -1428,6 +1432,41 @@ Para ello, lo primero que haremos será modificar la visibilidad de los getters 
         <span class="k">this</span><span class="p">.</span><span class="na">procesador</span> <span class="o">=</span> <span class="n">procesador</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">teclado</span> <span class="o">=</span> <span class="n">teclado</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">monitor</span> <span class="o">=</span> <span class="n">monitor</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="n">Procesador</span> <span class="nf">getProcesador</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">procesador</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="n">Teclado</span> <span class="nf">getTeclado</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">teclado</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="n">Monitor</span> <span class="nf">getMonitor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">monitor</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Una vez oculta la información veamos como podemos acceder a ella en el main. Creamos un método en la clase <code>Ordenador</code> que accederá a las distintas partes.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Ordenador</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">Procesador</span> <span class="n">procesador</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Teclado</span> <span class="n">teclado</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Monitor</span> <span class="n">monitor</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Ordenador</span><span class="p">(</span><span class="n">Procesador</span> <span class="n">procesador</span><span class="p">,</span> <span class="n">Teclado</span> <span class="n">teclado</span><span class="p">,</span> <span class="n">Monitor</span> <span class="n">monitor</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">procesador</span> <span class="o">=</span> <span class="n">procesador</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">teclado</span> <span class="o">=</span> <span class="n">teclado</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">monitor</span> <span class="o">=</span> <span class="n">monitor</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">encender</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">getProcesador</span><span class="p">().</span><span class="na">presionarBotonEncendido</span><span class="p">();</span>
+        <span class="n">dibujarLogo</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">dibujarLogo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">monitor</span><span class="p">.</span><span class="na">dibujarPixel</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">23</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="kd">private</span> <span class="n">Procesador</span> <span class="nf">getProcesador</span><span class="p">()</span> <span class="p">{</span>
