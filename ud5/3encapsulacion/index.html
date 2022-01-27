@@ -1096,9 +1096,73 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          5.3 Encapsulación
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         5.3 Encapsulación
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-sin-encapsulacion" class="md-nav__link">
+    Ejemplo SIN encapsulación
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo SIN encapsulación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceso-a-la-clase-y-modificacion-de-funcionalidad" class="md-nav__link">
+    Acceso a la clase y modificacion de funcionalidad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consecuencias-de-cambios-internos-de-la-clase" class="md-nav__link">
+    Consecuencias de cambios internos de la clase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#garantizar-la-clase-se-crea-con-los-valores-correctos" class="md-nav__link">
+    Garantizar la clase se crea con los valores correctos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-con-encapsulacion" class="md-nav__link">
+    Ejemplo CON encapsulación
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1171,6 +1235,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-sin-encapsulacion" class="md-nav__link">
+    Ejemplo SIN encapsulación
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo SIN encapsulación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceso-a-la-clase-y-modificacion-de-funcionalidad" class="md-nav__link">
+    Acceso a la clase y modificacion de funcionalidad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consecuencias-de-cambios-internos-de-la-clase" class="md-nav__link">
+    Consecuencias de cambios internos de la clase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#garantizar-la-clase-se-crea-con-los-valores-correctos" class="md-nav__link">
+    Garantizar la clase se crea con los valores correctos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-con-encapsulacion" class="md-nav__link">
+    Ejemplo CON encapsulación
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1183,6 +1296,100 @@
                 
                 
                 <h1 id="encapsulacion">Encapsulación</h1>
+<p>El mecanismo que permite restringir el acceso a componentes en los objetos, es decir, ofrece protección a los miembros de la clase de cualquier acceso externo no autorizado. No estamos hablando de seguridad, hablamos más bien, de restringir el acceso desde fuera al funcionamiento interno de una clase, es decir, ocultar el trabajo interno que se realiza en una clase.</p>
+<p>Veamos un ejemplo de una clase que no usa encapsulación y así nos permitirá entender mejor porqué la encapsulación en algo positivo. Luego veremos cómo se haría con encapsulación.</p>
+<h2 id="ejemplo-sin-encapsulacion">Ejemplo SIN encapsulación</h2>
+<h3 id="acceso-a-la-clase-y-modificacion-de-funcionalidad">Acceso a la clase y modificacion de funcionalidad</h3>
+<p>Primero creamos una clase <code>Player</code> con los siguiente campos:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Player</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">health</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">weapon</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">applyDamage</span><span class="p">(</span><span class="kt">int</span> <span class="n">damage</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">health</span> <span class="o">-=</span> <span class="n">damage</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">health</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Player died&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getActualHealth</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">health</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Ahora implementamos el <code>main</code> en otra clase:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Player</span> <span class="n">player</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Player</span><span class="p">();</span>
+        <span class="n">player</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;Patricia&quot;</span><span class="p">;</span>
+        <span class="n">player</span><span class="p">.</span><span class="na">health</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+        <span class="n">player</span><span class="p">.</span><span class="na">weapon</span> <span class="o">=</span> <span class="s">&quot;flamethrower&quot;</span><span class="p">;</span>
+
+        <span class="kt">int</span> <span class="n">damage</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+        <span class="n">player</span><span class="p">.</span><span class="na">applyDamage</span><span class="p">(</span><span class="n">damage</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The actual health is &quot;</span> <span class="o">+</span> <span class="n">player</span><span class="p">.</span><span class="na">getActualHealth</span><span class="p">());</span>
+
+        <span class="n">damage</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="n">player</span><span class="p">.</span><span class="na">health</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+        <span class="n">player</span><span class="p">.</span><span class="na">applyDamage</span><span class="p">(</span><span class="n">damage</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The actual health is &quot;</span> <span class="o">+</span> <span class="n">player</span><span class="p">.</span><span class="na">getActualHealth</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Observamos que podemos inicializar directamente los campos del objeto <code>Player</code> a través de clase externa porque hemos establecido la visibilidad como <code>public</code>.
+Además, vemos que podemos causar daño al jugador, pero seguidamente podemos darle más vida puesto que tenemos control sobre los atributos del jugador. Por lo que, al poder acceder a esos campos directamente potencialmente estamos abriendo la aplicación y permitiendo cambiar el comportamiento.
+Ya que nosotros no queremos que se le pueda dar vida. Solo aplicar daño.</p>
+<h3 id="consecuencias-de-cambios-internos-de-la-clase">Consecuencias de cambios internos de la clase</h3>
+<p>Imaginar que la aplicación evoluciona y queremos modificar un atributo de la clase <code>Player</code>, por ejemplo, ya no queremos el nombre, ahora vamos a tener en cuenta el <code>nickname</code> del jugador.</p>
+<p><img alt="Arrays" src="../../img/ud5/1encapsulation.png" /></p>
+<p>Al hacer este cambio, el método <code>main</code> que accedía a este campo, genera un error.
+Lo que significa que cualquier campo que hagamos en la clase de <code>Player</code> afectará a cualquier clase que lo haya usado.
+Sabiendo que, es un cambio interno de la clase y en teoría no debería afectar a ninguna otra clase, porque hemos decidido que es se entiende mejor si el atributo se llama <code>nickname</code> que si se llama <code>name</code>.</p>
+<h3 id="garantizar-la-clase-se-crea-con-los-valores-correctos">Garantizar la clase se crea con los valores correctos</h3>
+<p>Como no hemos definido un constructor, puede ser que la clase externa que usa <code>Player</code> no defina las variables de forma válida. Por tanto, no podemos garantizar que el uso del objeto jugador sera correcto.</p>
+<p>Imagina que al crear un objeto de la clase <code>Player</code> nos olvidamos de darle valor al campo de <code>health</code>:</p>
+<p><img alt="Arrays" src="../../img/ud5/2encapsulation.png" /></p>
+<p>Al intentar aplicar daño no se aplicará de forma correcta.
+Por tanto, es conveniente definir un constructor para garantizar que el objeto se construye de forma correcta y además si queremos agregar algún tipo de validación también podríamos realizarla en el constructor.</p>
+<h2 id="ejemplo-con-encapsulacion">Ejemplo CON encapsulación</h2>
+<p>Vamos a ver cuál es la forma correcta realizar el ejemplo anterior usando encapsulación.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PlayerOk</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">health</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">weapon</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">PlayerOk</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">health</span><span class="p">,</span> <span class="n">String</span> <span class="n">weapon</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">health</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">health</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">health</span> <span class="o">=</span> <span class="n">health</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">weapon</span> <span class="o">=</span> <span class="n">weapon</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">applyDamage</span><span class="p">(</span><span class="kt">int</span> <span class="n">damage</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">health</span> <span class="o">-=</span> <span class="n">damage</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">health</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Player died&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getActualHealth</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">health</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">PlayerOk</span> <span class="n">playerOk</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PlayerOk</span><span class="p">(</span><span class="s">&quot;Patri&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s">&quot;flamethrower&quot;</span><span class="p">);</span>
+        <span class="n">PlayerOk</span> <span class="n">playerOk2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PlayerOk</span><span class="p">(</span><span class="s">&quot;Manu&quot;</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="s">&quot;sword&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
