@@ -1268,6 +1268,17 @@
         <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
     <span class="p">}</span>
 </code></pre></div>
+<p>Gracias a la herencia, podemos devolver un tipo de la clase padre <code>Pelicula</code> aunque en realidad hayamos creado un objeto de una clase hija.</p>
+<p>Ahora vamos a ver el polimorfismo, para ello vamos a crear un bucle en el main de la siguiente forma:</p>
+<div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Pelicula</span> <span class="n">pelicula</span> <span class="o">=</span> <span class="n">peliculaAleatoria</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pelicula &quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">pelicula</span><span class="p">.</span><span class="na">getTitulo</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; \n&quot;</span> <span class="o">+</span> <span class="n">pelicula</span><span class="p">.</span><span class="na">trama</span><span class="p">());</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>Gracias al polimorfismo tenemos la capacidad de llamar al método <code>trama</code> con el objeto de una clase padre y Java automáticamente ve qué tipo de hijo es e imprime el correspondiente método <code>trama</code>. Para el caso de que no se haya sobreescrito el método llamará al de la clase padre.
+Es decir, un mismo tipo de objeto realiza acciones diferentes.</p>
                 
               
               
