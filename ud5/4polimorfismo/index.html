@@ -1183,6 +1183,91 @@
                 
                 
                 <h1 id="polimorfismo">Polimorfismo</h1>
+<p>El <strong>Polimorfismo</strong> es uno de los 4 pilares de la programación orientada a objetos (POO) junto con la Abstracción, Encapsulación y Herencia. Para entender que es el polimorfismo <em>es muy importante que tengáis bastante claro el concepto de la Herencia</em>.</p>
+<p>Polimorfismo es la capacidad que tienen los objetos de una clase en ofrecer respuesta distinta e independiente en función de los parámetros (diferentes implementaciones) utilizados durante su invocación.</p>
+<p>Veamos un ejemplo para entender de forma más clara cómo funciona el polimorfismo.</p>
+<p>Crearemos unas clases que heredan de la clase padre <code>Pelicula</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Pelicula</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">titulo</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Pelicula</span><span class="p">(</span><span class="n">String</span> <span class="n">titulo</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">titulo</span> <span class="o">=</span> <span class="n">titulo</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">trama</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">&quot;No hay trama&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Spiderman</span> <span class="kd">extends</span> <span class="n">Pelicula</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Spiderman</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="s">&quot;Spiderman&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">trama</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">&quot;Un hombre que le muerde una araña y adquiere sus poderes.&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Batman</span> <span class="kd">extends</span> <span class="n">Pelicula</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Batman</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="s">&quot;Batman&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">trama</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">&quot;Un hombre que le muerde un murciélago y adquiere sus poderes.&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Zombieland</span> <span class="kd">extends</span> <span class="n">Pelicula</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Zombieland</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="s">&quot;Zombieland&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">trama</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">&quot;Un puñado de humanos convertidos en zombies tratan de hacerse con el mundo&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">StarWars</span> <span class="kd">extends</span> <span class="n">Pelicula</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">StarWars</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="s">&quot;StarWars&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">trama</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">&quot;Las fuerzas imperiales tratan de hacerse con control del mundo&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">PeliRandom</span> <span class="kd">extends</span> <span class="n">Pelicula</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">PeliRandom</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="s">&quot;PeliRandom&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Ahora vamos a crear un método estático que nos va a devolver un objeto de tipo <code>Pelicula</code> en la clase <code>Main</code>, es decir, nos devolverá una película de manera aleatoria:</p>
+<div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Pelicula</span> <span class="nf">peliculaAleatoria</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">numero</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//genera un número aleatorio entre 1 - 5</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">return</span> <span class="k">new</span> <span class="n">Spiderman</span><span class="p">();</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">return</span> <span class="k">new</span> <span class="n">Batman</span><span class="p">();</span>
+            <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="k">return</span> <span class="k">new</span> <span class="n">Zombieland</span><span class="p">();</span>
+            <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="k">return</span> <span class="k">new</span> <span class="n">StarWars</span><span class="p">();</span>
+            <span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
+                <span class="k">return</span> <span class="k">new</span> <span class="n">PeliRandom</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
               
               
