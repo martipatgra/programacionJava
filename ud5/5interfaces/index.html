@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#polimorfismo" class="md-skip">
+        <a href="#interfaces" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1120,9 +1120,53 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          5.5 Interfaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         5.5 Interfaces
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    Definición
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaz-vs-herencia" class="md-nav__link">
+    Interfaz vs Herencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-crear-una-interfaz" class="md-nav__link">
+    Cómo crear una interfaz
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1183,6 +1227,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    Definición
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaz-vs-herencia" class="md-nav__link">
+    Interfaz vs Herencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-crear-una-interfaz" class="md-nav__link">
+    Cómo crear una interfaz
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1194,103 +1267,63 @@
               
                 
                 
-                <h1 id="polimorfismo">Polimorfismo</h1>
-<p>El <strong>Polimorfismo</strong> es uno de los 4 pilares de la programación orientada a objetos (POO) junto con la Abstracción, Encapsulación y Herencia. Para entender que es el polimorfismo <em>es muy importante que tengáis bastante claro el concepto de la Herencia</em>.</p>
-<p>Polimorfismo significa "que tiene muchas formas", es la capacidad que tienen los objetos de una clase en ofrecer respuesta distinta e independiente en función de los parámetros (diferentes implementaciones) utilizados durante su invocación.</p>
-<p>Veamos un ejemplo para entender de forma más clara cómo funciona el polimorfismo.</p>
-<p>Crearemos unas clases que heredan de la clase padre <code>Pelicula</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Pelicula</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">titulo</span><span class="p">;</span>
+                <h1 id="interfaces">Interfaces</h1>
+<h2 id="definicion">Definición</h2>
+<p>Una <strong>interfaz</strong> es una clase que define métodos pero no los implementa. La idea es proporcionar un comportamiento común que pueda ser utilizado por varias clases que implemente una interfaz.</p>
+<p>Las interfaces son muy usadas, de hecho, muchas de las librerías de Java hacen un uso extensivo de las interfaces.</p>
+<p>Sabemos que Java tiene herencia única, es decir, una clase hija hereda solo de una clase padre. Esto, por lo general, es suficiente para codificar nuestras aplicaciones. Aunque a veces sería conveniente la herencia múltiple, donde una clase hija pudiera heredar características de varias clases padres. Pero esto puede llegar a ser confuso. ¿Qué sucede cuando dos padres tienen diferentes versiones del mismo método?</p>
+<p>Las interfaces dan a Java algunas de las ventajas de la herencia múltiple sin las desventajas.</p>
+<p>Una interfaz describe aspectos de una clase distintos de los que hereda de su padre. <strong><em>Una interfaz es un conjunto de requisitos que la clase debe implementar</em></strong>.</p>
+<p>Una interfaz es una lista de constantes y signaturas de métodos. Los métodos no están implementados en la interfaz (no hay cuerpo de método).</p>
+<h2 id="interfaz-vs-herencia">Interfaz vs Herencia</h2>
+<p>Una clase puede extender de una clase padre para heredar los métodos y las variables de instancia de ese padre. Una clase también puede implementar una interfaz al incluir métodos y constantes adicionales. Sin embargo, los métodos en la interfaz deben escribirse explícitamente como parte de la definición de la clase. La interfaz es una lista de requisitos que debe incluir la definición de clase (a través de código explícito, no a través de herencia).</p>
+<p>Por ejemplo, una clase <code>Coche</code> podría extender de la clase <code>Vehiculo</code>. La herencia le da todos los métodos y variables de instancia. Pero si <code>Coche</code> también implementa la interfaz <code>Impuestos</code>, entonces su definición debe contener código para todos los métodos enumerados en <code>Impuestos</code>.</p>
+<p>Una clase extiende de un solo padre, pero puede implementar varias interfaces.</p>
+<h2 id="como-crear-una-interfaz">Cómo crear una interfaz</h2>
+<p>Para crear una interfaz en IntelliJ, haremos lo siguiente:</p>
+<ol>
+<li>Botón derecho en el paquete de nuestra aplicación --&gt; New ---&gt; Java class y seleccionamos Interface.</li>
+</ol>
+<p><img alt="Interface" src="../../img/ud5/1interfaces.png" /></p>
+<p>Por convención el nombre que se le da a la interfaz es siempre primera letra "I" (de interfaz) + nombre de la clase.</p>
+<p><img alt="Interface" src="../../img/ud5/2interfaces.png" /></p>
+<p>Una vez creada la interfaz definiremos los métodos que desarrollarán las clases que implementen esta interfaz.</p>
+<p><img alt="Interface" src="../../img/ud5/3interfaces.png" /></p>
+<p>Los métodos de una interfaz son <strong>públicos</strong> de forma predeterminada, por lo que puede omitirlos en los encabezados de los métodos. Los métodos no pueden ser <code>private</code> ni <code>protected</code>.</p>
+<p>Las constantes en una interfaz son <code>public static final</code> por defecto, por tanto podemos omitirlo. Se estructura de forma que primero se sitúan las constantes y luego los</p>
+<p>En las interfaces poner <code>public</code> o <code>private</code> es innecesario, porque eso se hará en la clase que implemente los métodos. No hace falta añadir el modificador de acceso en las interfaces, de manera que podriamos borrar <code>public</code> de los métodos. IntelliJ nos ofrece la opción de hacerlo:</p>
+<p><img alt="Interface" src="../../img/ud5/4interfaces.png" /></p>
+<p><img alt="Interface" src="../../img/ud5/41interfaces.png" /></p>
+<p>Una vez creada la interfaz, necesitaremos clases que la implementen, para ello usaremos la palabra reservada <strong>implements</strong> en la nueva clase. Por ejemplo, vamos a crear la clase TelefonoMovil:</p>
+<p><img alt="Interface" src="../../img/ud5/5interfaces.png" /></p>
+<p>Observamos que IntelliJ nos genera un error, ya que debemos definir o implementar los métodos que habíamos declarado en la interfaz. Si hacemos click en el error, IntelliJ nos ofrece crearlos:</p>
+<p><img alt="Interface" src="../../img/ud5/6interfaces.png" /></p>
+<p><img alt="Interface" src="../../img/ud5/7interfaces.png" /></p>
+<p>IntelliJ nos ha creado <strong>TODOS</strong> los métodos que habíamos definido en la interfaz, como vemos con la anotación <code>@Override</code>, ya que los está sobreescribiendo puesto que estaban declarados en la interfaz.</p>
+<p>Con la interfaz lo que hacemos es obligar, es decir, para que una clase de teléfono en nuestra aplicación sea válidad ha de implementar los 4 métodos que definimos en la interfaz <code>ITelefono</code>.</p>
+<div class="admonition nota">
+<p class="admonition-title">Nota</p>
+<p>TODOS los métodos definidos en la interfaz se han de implementar en la clase, no podríamos implementar solo algunos.</p>
+</div>
+<p>Veamos como probar el código en nuestra clase <code>Main</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainTelefono</span> <span class="p">{</span>
 
-    <span class="kd">public</span> <span class="nf">Pelicula</span><span class="p">(</span><span class="n">String</span> <span class="n">titulo</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">titulo</span> <span class="o">=</span> <span class="n">titulo</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">trama</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s">&quot;No hay trama&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">Spiderman</span> <span class="kd">extends</span> <span class="n">Pelicula</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="nf">Spiderman</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="s">&quot;Spiderman&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">trama</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s">&quot;Un hombre que le muerde una araña y adquiere sus poderes.&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">Batman</span> <span class="kd">extends</span> <span class="n">Pelicula</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="nf">Batman</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="s">&quot;Batman&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">trama</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s">&quot;Un hombre que le muerde un murciélago y adquiere sus poderes.&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">Zombieland</span> <span class="kd">extends</span> <span class="n">Pelicula</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="nf">Zombieland</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="s">&quot;Zombieland&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">trama</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s">&quot;Un puñado de humanos convertidos en zombies tratan de hacerse con el mundo&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">StarWars</span> <span class="kd">extends</span> <span class="n">Pelicula</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="nf">StarWars</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="s">&quot;StarWars&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">trama</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s">&quot;Las fuerzas imperiales tratan de hacerse con control del mundo&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">PeliRandom</span> <span class="kd">extends</span> <span class="n">Pelicula</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="nf">PeliRandom</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="s">&quot;PeliRandom&quot;</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ITelefono</span> <span class="n">telefono</span><span class="p">;</span>
+        <span class="n">telefono</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TelefonoMovil</span><span class="p">(</span><span class="mi">1234567</span><span class="p">);</span>
+        <span class="n">telefono</span><span class="p">.</span><span class="na">encender</span><span class="p">();</span>
+        <span class="n">telefono</span><span class="p">.</span><span class="na">llamar</span><span class="p">(</span><span class="mi">1234567</span><span class="p">);</span>
+        <span class="n">telefono</span><span class="p">.</span><span class="na">apagar</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Ahora vamos a crear un método estático que nos va a devolver un objeto de tipo <code>Pelicula</code> en la clase <code>Main</code>, es decir, nos devolverá una película de manera aleatoria:</p>
-<div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Pelicula</span> <span class="nf">peliculaAleatoria</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">numero</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//genera un número aleatorio entre 1 - 5</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span>
-        <span class="k">switch</span> <span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="k">return</span> <span class="k">new</span> <span class="n">Spiderman</span><span class="p">();</span>
-            <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
-                <span class="k">return</span> <span class="k">new</span> <span class="n">Batman</span><span class="p">();</span>
-            <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="k">return</span> <span class="k">new</span> <span class="n">Zombieland</span><span class="p">();</span>
-            <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
-                <span class="k">return</span> <span class="k">new</span> <span class="n">StarWars</span><span class="p">();</span>
-            <span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
-                <span class="k">return</span> <span class="k">new</span> <span class="n">PeliRandom</span><span class="p">();</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-    <span class="p">}</span>
-</code></pre></div>
-<p>Gracias a la herencia, podemos devolver un tipo de la clase padre <code>Pelicula</code> aunque en realidad hayamos creado un objeto de una clase hija.</p>
-<p>Ahora vamos a ver el polimorfismo, para ello vamos a crear un bucle en el main de la siguiente forma:</p>
-<div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">Pelicula</span> <span class="n">pelicula</span> <span class="o">=</span> <span class="n">peliculaAleatoria</span><span class="p">();</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pelicula &quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">pelicula</span><span class="p">.</span><span class="na">getTitulo</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; \n&quot;</span> <span class="o">+</span> <span class="n">pelicula</span><span class="p">.</span><span class="na">trama</span><span class="p">());</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-</code></pre></div>
-<p>Gracias al polimorfismo tenemos la capacidad de llamar al método <code>trama</code> con el objeto de una clase padre y Java automáticamente ve qué tipo de hijo es e imprime el correspondiente método <code>trama</code>. Para el caso de que no se haya sobreescrito el método llamará al de la clase padre
-Es decir, dependiendo del tipo de objeto invocado se realiza acciones diferentes, teniendo en cuenta, de que todas las clases heredan de <code>Pelicula</code> eso es el <strong>polimorfismo</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Las interfaces no pueden instanciarse, tienes que usar una clase que haya implementado la funcionalidad definida por la interfaz.</p>
+</div>
+<p>Ahora vamos a crear otro tipo de teléfono:</p>
+<p><img alt="Interface" src="../../img/ud5/8interfaces.png" /></p>
+<p><img alt="Interface" src="../../img/ud5/9interfaces.png" /></p>
                 
               
               
