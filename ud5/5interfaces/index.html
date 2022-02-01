@@ -1195,6 +1195,35 @@
                 
                 
                 <h1 id="interfaces">Interfaces</h1>
+<p>Una <strong>interfaz</strong> es una clase que define métodos pero no los implementa. La idea es proporcionar un comportamiento común que pueda ser utilizado por varias clases que implemente una interfaz.</p>
+<p>La interfaz define las signaturas de los métodos y constantes, los métodos no se desarrollan.</p>
+<p>Para crear una interfaz en IntelliJ, haremos lo siguiente:</p>
+<ol>
+<li>Botón derecho en el paquete de nuestra aplicación --&gt; New ---&gt; Java class y seleccionamos Interface.</li>
+</ol>
+<p><img alt="Interface" src="../../img/ud5/1interfaces.png" /></p>
+<p>Por convención el nombre que se le da a la interfaz es siempre primera letra "I" (de interfaz) + nombre de la clase.</p>
+<p><img alt="Interface" src="../../img/ud5/2interfaces.png" /></p>
+<p>Una vez creada la interfaz definiremos los métodos que desarrollarán las clases que implementen esta interfaz.</p>
+<p><img alt="Interface" src="../../img/ud5/3interfaces.png" /></p>
+<p>En las interfaces poner <code>public</code> o <code>private</code> es innecesario, porque eso se hará en la clase que implemente los métodos. No hace falta añadir el modificador de acceso en las interfaces, de manera que podriamos borrar <code>public</code> de los métodos. IntelliJ nos ofrece la opción de hacerlo:</p>
+<p><img alt="Interface" src="../../img/ud5/4interfaces.png" /></p>
+<p>Una vez creada la interfaz, necesitaremos clases que la implementen, para ello usaremos la palabra reservada <strong>implements</strong> en la nueva clase. Por ejemplo, vamos a crear la clase TelefonoMovil:</p>
+<p><img alt="Interface" src="../../img/ud5/5interfaces.png" /></p>
+<p>Observamos que IntelliJ nos genera un error, ya que debemos definir o implementar los métodos que habíamos declarado en la interfaz. Si hacemos click en el error, IntelliJ nos ofrece crearlos:</p>
+<p><img alt="Interface" src="../../img/ud5/6interfaces.png" /></p>
+<p><img alt="Interface" src="../../img/ud5/7interfaces.png" /></p>
+<p>IntelliJ nos ha creado <strong>TODOS</strong> los métodos que habíamos definido en la interfaz, como vemos con la anotación <code>@Override</code>, ya que los está sobreescribiendo puesto que estaban declarados en la interfaz.</p>
+<p>Con la interfaz lo que hacemos es obligar, es decir, para que una clase de teléfono en nuestra aplicación sea válidad ha de implementar los 4 métodos que definimos en la interfaz <code>ITelefono</code>.</p>
+<div class="admonition nota">
+<p class="admonition-title">Nota</p>
+<p>TODOS los métodos definidos en la interfaz se han de implementar en la clase, no podríamos implementar solo algunos.</p>
+</div>
+<p>Veamos como probar el código en nuestra clase <code>Main</code>:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Las interfaces no pueden instanciarse, tienes que usar una clase que haya implementado la funcionalidad definida por la interfaz.</p>
+</div>
                 
               
               
