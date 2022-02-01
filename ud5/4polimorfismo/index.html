@@ -1108,9 +1108,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          5.4 Polimorfismo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         5.4 Polimorfismo
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#importante" class="md-nav__link">
+    Importante
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1194,6 +1224,21 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#importante" class="md-nav__link">
+    Importante
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1303,6 +1348,21 @@
 </code></pre></div>
 <p>Gracias al polimorfismo tenemos la capacidad de llamar al método <code>trama</code> con el mismo tipo de objeto, en este caso de tipo <code>Pelicula</code> y obtener diferentes resultados, ya que Java automáticamente ve qué tipo de hijo es e imprime el correspondiente método <code>trama</code>. Para el caso de que no se haya sobreescrito el método llamará al de la clase padre
 Es decir, dependiendo del tipo de objeto invocado se realizan acciones diferentes, teniendo en cuenta, que todas las clases heredan de <code>Pelicula</code> eso es el <strong>polimorfismo</strong>.</p>
+<h2 id="importante">Importante</h2>
+<p>Una variable puede contener una referencia a un objeto cuya clase es descendiente de la clase de la variable.
+Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>    <span class="c1">//La variable a es una referencia a un objeto Perro que es descendiente de Animal. </span>
+    <span class="n">Animal</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Perro</span><span class="p">();</span>
+</code></pre></div>
+<p>Un descendiente de una clase es un hijo de esa clase, o un hijo de un hijo de esa clase, y así sucesivamente. Los hermanos no son descendientes entre sí.</p>
+<p><strong>NO podemos tener variables de referencias a objetos padre si la variable es un hijo</strong>. En estos casos tendriamos que hacer un cast (conversión implícita).</p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code>    <span class="c1">//NO SE PUEDE HACER</span>
+    <span class="n">Perro</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Animal</span><span class="p">();</span>
+
+    <span class="c1">//SOLO PODRÍA HACERSE SI HACEMOS UNA CONVERSIÓN</span>
+    <span class="n">Perro</span> <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">Perro</span><span class="p">)</span> <span class="k">new</span> <span class="n">Animal</span><span class="p">();</span>
+</code></pre></div>
                 
               
               
