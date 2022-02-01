@@ -1208,6 +1208,7 @@
 <p><img alt="Interface" src="../../img/ud5/3interfaces.png" /></p>
 <p>En las interfaces poner <code>public</code> o <code>private</code> es innecesario, porque eso se hará en la clase que implemente los métodos. No hace falta añadir el modificador de acceso en las interfaces, de manera que podriamos borrar <code>public</code> de los métodos. IntelliJ nos ofrece la opción de hacerlo:</p>
 <p><img alt="Interface" src="../../img/ud5/4interfaces.png" /></p>
+<p><img alt="Interface" src="../../img/ud5/41interfaces.png" /></p>
 <p>Una vez creada la interfaz, necesitaremos clases que la implementen, para ello usaremos la palabra reservada <strong>implements</strong> en la nueva clase. Por ejemplo, vamos a crear la clase TelefonoMovil:</p>
 <p><img alt="Interface" src="../../img/ud5/5interfaces.png" /></p>
 <p>Observamos que IntelliJ nos genera un error, ya que debemos definir o implementar los métodos que habíamos declarado en la interfaz. Si hacemos click en el error, IntelliJ nos ofrece crearlos:</p>
@@ -1220,10 +1221,23 @@
 <p>TODOS los métodos definidos en la interfaz se han de implementar en la clase, no podríamos implementar solo algunos.</p>
 </div>
 <p>Veamos como probar el código en nuestra clase <code>Main</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainTelefono</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ITelefono</span> <span class="n">telefono</span><span class="p">;</span>
+        <span class="n">telefono</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TelefonoMovil</span><span class="p">(</span><span class="mi">1234567</span><span class="p">);</span>
+        <span class="n">telefono</span><span class="p">.</span><span class="na">encender</span><span class="p">();</span>
+        <span class="n">telefono</span><span class="p">.</span><span class="na">llamar</span><span class="p">(</span><span class="mi">1234567</span><span class="p">);</span>
+        <span class="n">telefono</span><span class="p">.</span><span class="na">apagar</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Las interfaces no pueden instanciarse, tienes que usar una clase que haya implementado la funcionalidad definida por la interfaz.</p>
 </div>
+<p>Ahora vamos a crear otro tipo de teléfono:</p>
+<p><img alt="Interface" src="../../img/ud5/8interfaces.png" /></p>
                 
               
               
