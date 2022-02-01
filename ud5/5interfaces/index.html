@@ -1278,6 +1278,7 @@
 <h2 id="interfaz-vs-herencia">Interfaz vs Herencia</h2>
 <p>Una clase puede extender de una clase padre para heredar los métodos y las variables de instancia de ese padre. Una clase también puede implementar una interfaz al incluir métodos y constantes adicionales. Sin embargo, los métodos en la interfaz deben escribirse explícitamente como parte de la definición de la clase. La interfaz es una lista de requisitos que debe incluir la definición de clase (a través de código explícito, no a través de herencia).</p>
 <p>Por ejemplo, una clase <code>Coche</code> podría extender de la clase <code>Vehiculo</code>. La herencia le da todos los métodos y variables de instancia. Pero si <code>Coche</code> también implementa la interfaz <code>Impuestos</code>, entonces su definición debe contener código para todos los métodos enumerados en <code>Impuestos</code>.</p>
+<p>Una clase extiende de un solo padre, pero puede implementar varias interfaces.</p>
 <h2 id="como-crear-una-interfaz">Cómo crear una interfaz</h2>
 <p>Para crear una interfaz en IntelliJ, haremos lo siguiente:</p>
 <ol>
@@ -1288,6 +1289,7 @@
 <p><img alt="Interface" src="../../img/ud5/2interfaces.png" /></p>
 <p>Una vez creada la interfaz definiremos los métodos que desarrollarán las clases que implementen esta interfaz.</p>
 <p><img alt="Interface" src="../../img/ud5/3interfaces.png" /></p>
+<p>Los métodos de una interfaz son <strong>públicos</strong> de forma predeterminada, por lo que puede omitirlos en los encabezados de los métodos. Los métodos no pueden ser <code>private</code> ni <code>protected</code>.</p>
 <p>En las interfaces poner <code>public</code> o <code>private</code> es innecesario, porque eso se hará en la clase que implemente los métodos. No hace falta añadir el modificador de acceso en las interfaces, de manera que podriamos borrar <code>public</code> de los métodos. IntelliJ nos ofrece la opción de hacerlo:</p>
 <p><img alt="Interface" src="../../img/ud5/4interfaces.png" /></p>
 <p><img alt="Interface" src="../../img/ud5/41interfaces.png" /></p>
