@@ -1120,9 +1120,53 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          5.5 Interfaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         5.5 Interfaces
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    Definición
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaz-vs-herencia" class="md-nav__link">
+    Interfaz vs Herencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-crear-una-interfaz" class="md-nav__link">
+    Cómo crear una interfaz
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1183,6 +1227,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    Definición
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaz-vs-herencia" class="md-nav__link">
+    Interfaz vs Herencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-crear-una-interfaz" class="md-nav__link">
+    Cómo crear una interfaz
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1195,12 +1268,17 @@
                 
                 
                 <h1 id="interfaces">Interfaces</h1>
+<h2 id="definicion">Definición</h2>
 <p>Una <strong>interfaz</strong> es una clase que define métodos pero no los implementa. La idea es proporcionar un comportamiento común que pueda ser utilizado por varias clases que implemente una interfaz.</p>
 <p>Las interfaces son muy usadas, de hecho, muchas de las librerías de Java hacen un uso extensivo de las interfaces.</p>
 <p>Sabemos que Java tiene herencia única, es decir, una clase hija hereda solo de una clase padre. Esto, por lo general, es suficiente para codificar nuestras aplicaciones. Aunque a veces sería conveniente la herencia múltiple, donde una clase hija pudiera heredar características de varias clases padres. Pero esto puede llegar a ser confuso. ¿Qué sucede cuando dos padres tienen diferentes versiones del mismo método?</p>
 <p>Las interfaces dan a Java algunas de las ventajas de la herencia múltiple sin las desventajas.</p>
 <p>Una interfaz describe aspectos de una clase distintos de los que hereda de su padre. <strong><em>Una interfaz es un conjunto de requisitos que la clase debe implementar</em></strong>.</p>
 <p>Una interfaz es una lista de constantes y signaturas de métodos. Los métodos no están implementados en la interfaz (no hay cuerpo de método).</p>
+<h2 id="interfaz-vs-herencia">Interfaz vs Herencia</h2>
+<p>Una clase puede extender de una clase padre para heredar los métodos y las variables de instancia de ese padre. Una clase también puede implementar una interfaz al incluir métodos y constantes adicionales. Sin embargo, los métodos en la interfaz deben escribirse explícitamente como parte de la definición de la clase. La interfaz es una lista de requisitos que debe incluir la definición de clase (a través de código explícito, no a través de herencia).</p>
+<p>Por ejemplo, una clase <code>Coche</code> podría extender de la clase <code>Vehiculo</code>. La herencia le da todos los métodos y variables de instancia. Pero si <code>Coche</code> también implementa la interfaz <code>Impuesto</code>, entonces su definición debe contener código para todos los métodos enumerados en <code>Impuesto</code>.</p>
+<h2 id="como-crear-una-interfaz">Cómo crear una interfaz</h2>
 <p>Para crear una interfaz en IntelliJ, haremos lo siguiente:</p>
 <ol>
 <li>Botón derecho en el paquete de nuestra aplicación --&gt; New ---&gt; Java class y seleccionamos Interface.</li>
