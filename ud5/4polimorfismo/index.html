@@ -1355,13 +1355,20 @@ Ejemplo:</p>
     <span class="n">Animal</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Perro</span><span class="p">();</span>
 </code></pre></div>
 <p>Un descendiente de una clase es un hijo de esa clase, o un hijo de un hijo de esa clase, y así sucesivamente. Los hermanos no son descendientes entre sí.</p>
-<p><strong>NO podemos tener variables de referencias a objetos padre si la variable es un hijo</strong>. En estos casos tendriamos que hacer un cast (conversión implícita).</p>
+<p><strong>NO podemos asignar un objeto de referencia de padre a una variable de clase hijo</strong> (Perro p = new Animal()). Si queremos convertir un padre en hijo, la variable tiene que ser creada de tipo hijo.
+Si queremos convertir un hijo en padre tendremos que hacer un Upcasting, y al revés tendríamos un Downcasting:</p>
+<p><img alt="Polimorfismo" src="../../img/ud5/1polimor.png" /></p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code>    <span class="c1">//NO SE PUEDE HACER</span>
-    <span class="n">Perro</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Animal</span><span class="p">();</span>
+    <span class="n">Perro</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Animal</span><span class="p">();</span> <span class="c1">//no compila</span>
+    <span class="n">Perro</span> <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">Perro</span><span class="p">)</span> <span class="k">new</span> <span class="n">Animal</span><span class="p">();</span> <span class="c1">// compila pero da error de ejecución</span>
 
-    <span class="c1">//SOLO PODRÍA HACERSE SI HACEMOS UNA CONVERSIÓN</span>
-    <span class="n">Perro</span> <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">Perro</span><span class="p">)</span> <span class="k">new</span> <span class="n">Animal</span><span class="p">();</span>
+    <span class="c1">//DOWNCASTING, convertir padre en hijo</span>
+    <span class="n">Animal</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Perro</span><span class="p">();</span>
+    <span class="n">Perro</span> <span class="n">pe</span> <span class="o">=</span> <span class="p">(</span><span class="n">Perro</span><span class="p">)</span><span class="n">a</span><span class="p">;</span>
+
+    <span class="c1">//UPCASTING, convertir hijo en padre</span>
+    <span class="n">Animal</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">Animal</span><span class="p">)</span> <span class="k">new</span> <span class="n">Perro</span><span class="p">();</span>
 </code></pre></div>
                 
               
