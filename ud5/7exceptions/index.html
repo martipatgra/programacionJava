@@ -14,7 +14,7 @@
     
     
       
-        <title>5.5 Interfaces - Programación</title>
+        <title>Excepciones - Programación</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#interfaces" class="md-skip">
+        <a href="#excepciones" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5.5 Interfaces
+              Excepciones
             
           </span>
         </div>
@@ -999,14 +999,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       <label class="md-nav__link" for="__nav_6">
         5.- Herencia y polimorfismo
@@ -1109,65 +1107,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          5.5 Interfaces
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../5interfaces/" class="md-nav__link">
         5.5 Interfaces
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#definicion" class="md-nav__link">
-    Definición
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interfaz-vs-herencia" class="md-nav__link">
-    Interfaz vs Herencia
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-crear-una-interfaz" class="md-nav__link">
-    Cómo crear una interfaz
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1246,22 +1190,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#definicion" class="md-nav__link">
-    Definición
+  <a href="#checked-exceptions" class="md-nav__link">
+    Checked exceptions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#interfaz-vs-herencia" class="md-nav__link">
-    Interfaz vs Herencia
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-crear-una-interfaz" class="md-nav__link">
-    Cómo crear una interfaz
+  <a href="#unchecked-exceptions" class="md-nav__link">
+    Unchecked exceptions
   </a>
   
 </li>
@@ -1279,62 +1216,38 @@
               
                 
                 
-                <h1 id="interfaces">Interfaces</h1>
-<h2 id="definicion">Definición</h2>
-<p>Una <strong>interfaz</strong> es una clase que define métodos pero no los implementa. La idea es proporcionar un comportamiento común que pueda ser utilizado por varias clases que implemente una interfaz.</p>
-<p>Las interfaces son muy usadas, de hecho, muchas de las librerías de Java hacen un uso extensivo de las interfaces.</p>
-<p>Sabemos que Java tiene herencia única, es decir, una clase hija hereda solo de una clase padre. Esto, por lo general, es suficiente para codificar nuestras aplicaciones. Aunque a veces sería conveniente la herencia múltiple, donde una clase hija pudiera heredar características de varias clases padres. Pero esto puede llegar a ser confuso. ¿Qué sucede cuando dos padres tienen diferentes versiones del mismo método?</p>
-<p>Las interfaces dan a Java algunas de las ventajas de la herencia múltiple sin las desventajas.</p>
-<p>Una interfaz describe aspectos de una clase distintos de los que hereda de su padre. <strong><em>Una interfaz es un conjunto de requisitos que la clase debe implementar</em></strong>.</p>
-<p>Una interfaz es una lista de constantes y signaturas de métodos. Los métodos no están implementados en la interfaz (no hay cuerpo de método).</p>
-<h2 id="interfaz-vs-herencia">Interfaz vs Herencia</h2>
-<p>Una clase puede extender de una clase padre para heredar los métodos y las variables de instancia de ese padre. Una clase también puede implementar una interfaz al incluir métodos y constantes adicionales. Sin embargo, los métodos en la interfaz deben escribirse explícitamente como parte de la definición de la clase. La interfaz es una lista de requisitos que debe incluir la definición de clase (a través de código explícito, no a través de herencia).</p>
-<p>Por ejemplo, una clase <code>Coche</code> podría extender de la clase <code>Vehiculo</code>. La herencia le da todos los métodos y variables de instancia. Pero si <code>Coche</code> también implementa la interfaz <code>Impuestos</code>, entonces su definición debe contener código para todos los métodos enumerados en <code>Impuestos</code>.</p>
-<p>Una clase extiende de un solo padre, pero puede implementar varias interfaces.</p>
-<h2 id="como-crear-una-interfaz">Cómo crear una interfaz</h2>
-<p>Para crear una interfaz en IntelliJ, haremos lo siguiente:</p>
+                <h1 id="excepciones">Excepciones</h1>
+<p><img alt="Exception" src="../../img/ud5/exceptions1.png" /></p>
+<p>Class Exception y class Error extienden Throwable. Un método Java puede "lanzar" un objeto de clase Throwable.</p>
+<p>Las excepciones son diferentes de los errores porque se pueden escribir programas para recuperarse de excepciones, pero no se pueden escribir programas para recuperarse de errores.</p>
+<p>Las excepciones pueden ser detectadas por una parte del programa que intenta recuperarse del problema.</p>
+<p>En Java, hay dos tipos de excepciones:</p>
+<ul>
+<li><strong>Checked exceptions</strong> (Excepciones verificadas).</li>
+<li><strong>Unchecked exceptions</strong> (Excepciones no verificadas).</li>
+</ul>
+<h2 id="checked-exceptions">Checked exceptions</h2>
+<p>Estas son las excepciones que se comprueban en tiempo de compilación, es decir, un método debe hacer algo al respecto sino el programa no compila. Si algún código dentro de un método arroja una excepción verificada, entonces el método puede:</p>
 <ol>
-<li>Botón derecho en el paquete de nuestra aplicación --&gt; New ---&gt; Java class y seleccionamos Interface.</li>
+<li>manejar la excepción en un bloque <code>try-catch{}</code>, o</li>
+<li><code>throws</code> (lanzar) la excepción al que invoca el método.</li>
 </ol>
-<p><img alt="Interface" src="../../img/ud5/1interfaces.png" /></p>
-<p>Por convención, a veces el nombre que se le da a la interfaz es siempre primera letra "I" (de interfaz) + nombre de la clase. Pero debe ser una decisión consensuada entre el equipo de desarrolladores o tener razones.</p>
-<p><img alt="Interface" src="../../img/ud5/2interfaces.png" /></p>
-<p>Una vez creada la interfaz definiremos los métodos que desarrollarán las clases que implementen esta interfaz.</p>
-<p><img alt="Interface" src="../../img/ud5/3interfaces.png" /></p>
-<p>Los métodos de una interfaz son <strong>públicos</strong> de forma predeterminada, por lo que puede omitirlos en los encabezados de los métodos. Los métodos no pueden ser <code>private</code> ni <code>protected</code>.</p>
-<p>Las constantes en una interfaz son <code>public static final</code> por defecto, por tanto podemos omitirlo. Se estructura de forma que primero se sitúan las constantes y luego los</p>
-<p>En las interfaces poner <code>public</code> o <code>private</code> es innecesario, porque eso se hará en la clase que implemente los métodos. No hace falta añadir el modificador de acceso en las interfaces, de manera que podriamos borrar <code>public</code> de los métodos. IntelliJ nos ofrece la opción de hacerlo:</p>
-<p><img alt="Interface" src="../../img/ud5/4interfaces.png" /></p>
-<p><img alt="Interface" src="../../img/ud5/41interfaces.png" /></p>
-<p>Una vez creada la interfaz, necesitaremos clases que la implementen, para ello usaremos la palabra reservada <strong>implements</strong> en la nueva clase. Por ejemplo, vamos a crear la clase TelefonoMovil:</p>
-<p><img alt="Interface" src="../../img/ud5/5interfaces.png" /></p>
-<p>Observamos que IntelliJ nos genera un error, ya que debemos definir o implementar los métodos que habíamos declarado en la interfaz. Si hacemos click en el error, IntelliJ nos ofrece crearlos:</p>
-<p><img alt="Interface" src="../../img/ud5/6interfaces.png" /></p>
-<p><img alt="Interface" src="../../img/ud5/7interfaces.png" /></p>
-<p>IntelliJ nos ha creado <strong>TODOS</strong> los métodos que habíamos definido en la interfaz, como vemos con la anotación <code>@Override</code>, ya que los está sobreescribiendo puesto que estaban declarados en la interfaz.</p>
-<p>Con la interfaz lo que hacemos es obligar, es decir, para que una clase de teléfono en nuestra aplicación sea válidad ha de implementar los 4 métodos que definimos en la interfaz <code>Telefono</code>.</p>
-<div class="admonition nota">
-<p class="admonition-title">Nota</p>
-<p>TODOS los métodos definidos en la interfaz se han de implementar en la clase, no podríamos implementar solo algunos.</p>
-</div>
-<p>Veamos como probar el código en nuestra clase <code>Main</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainTelefono</span> <span class="p">{</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Telefono</span> <span class="n">telefono</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TelefonoMovil</span><span class="p">(</span><span class="mi">1234567</span><span class="p">);</span>
-        <span class="n">telefono</span><span class="p">.</span><span class="na">encender</span><span class="p">();</span>
-        <span class="n">telefono</span><span class="p">.</span><span class="na">llamar</span><span class="p">(</span><span class="mi">1234567</span><span class="p">);</span>
-        <span class="n">telefono</span><span class="p">.</span><span class="na">apagar</span><span class="p">();</span>
-    <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">leerFichero</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">a</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="p">{</span>
+    <span class="c1">//código java</span>
 <span class="p">}</span>
 </code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Las interfaces no pueden instanciarse, tienes que usar una clase que haya implementado la funcionalidad definida por la interfaz.</p>
-</div>
-<p>Ahora vamos a crear otro tipo de teléfono:</p>
-<p><img alt="Interface" src="../../img/ud5/8interfaces.png" /></p>
-<p><img alt="Interface" src="../../img/ud5/9interfaces.png" /></p>
+<p>En el ejemplo, <code>IOException</code> es una checked exception. Este método lanza una IOException cuando hay un problema de lectura.</p>
+<p>La palabra reservada <code>throws</code> dice que este método <strong>no</strong> captura la excepción <code>IOException</code> con un <code>catch</code>, sino que cuando ocurra una, se lanzará a la persona que llama el método <code>leerFichero</code>.</p>
+<p>Si hiciéramos esto en un método <code>main</code>, como por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="p">{</span>
+    <span class="c1">//código java</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>La excepción se lanzará al Java runtime system.
+El sistema de tiempo de ejecución de Java detecta las excepciones que se le han lanzado e imprime un mensaje y un seguimiento de la pila utilizando los datos de la excepción.</p>
+<h2 id="unchecked-exceptions">Unchecked exceptions</h2>
+<p>Ocurren en tiempo de compilación, es decir, no se verifican por el compilador. En Java, las excepciones en las clases <em>RunTimeException</em> y <em>Error</em> y sus subclases son unchecked exceptions. La clase padre <em>Exception</em> es checked.</p>
                 
               
               
@@ -1355,41 +1268,6 @@
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Pie">
-      
-        
-        <a href="../4polimorfismo/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 5.4 Polimorfismo" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Anterior
-              </span>
-              5.4 Polimorfismo
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../6abstraccion/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 5.6 Abstracción" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Siguiente
-              </span>
-              5.6 Abstracción
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
