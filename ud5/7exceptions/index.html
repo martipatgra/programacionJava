@@ -14,7 +14,7 @@
     
     
       
-        <title>Excepciones - Programación</title>
+        <title>5.7 Excepciones - Programación</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Excepciones
+              5.7 Excepciones
             
           </span>
         </div>
@@ -999,12 +999,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       <label class="md-nav__link" for="__nav_6">
         5.- Herencia y polimorfismo
@@ -1124,6 +1126,134 @@
       <a href="../6abstraccion/" class="md-nav__link">
         5.6 Abstracción
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          5.7 Excepciones
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        5.7 Excepciones
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checked-exceptions" class="md-nav__link">
+    Checked exceptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unchecked-exceptions" class="md-nav__link">
+    Unchecked exceptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diferencias-entre-checked-y-unchecked-exceptions" class="md-nav__link">
+    Diferencias entre checked y unchecked exceptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throwable" class="md-nav__link">
+    Throwable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excecpciones-personalizadas" class="md-nav__link">
+    Excecpciones personalizadas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-para-definir-excepciones-personalizadas" class="md-nav__link">
+    Buenas prácticas para definir excepciones personalizadas
+  </a>
+  
+    <nav class="md-nav" aria-label="Buenas prácticas para definir excepciones personalizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#haz-que-tenga-sentido" class="md-nav__link">
+    Haz que tenga sentido
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sigue-la-convencion-de-nomenclatura-estandar" class="md-nav__link">
+    Sigue la convención de nomenclatura estándar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anade-javadoc-a-tu-clase-de-excepcion-personalizada" class="md-nav__link">
+    Añade Javadoc a tu clase de excepción personalizada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proporciona-un-constructor" class="md-nav__link">
+    Proporciona un constructor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pasos-para-implementar-una-excepcion-personalizada" class="md-nav__link">
+    Pasos para implementar una excepción personalizada
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1403,6 +1533,41 @@ Por ejemplo, imagina que tenemos el siguiente programa Java se compila sin erorr
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        
+        <a href="../6abstraccion/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 5.6 Abstracción" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              5.6 Abstracción
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../shortcuts/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Atajos de teclado para IntelliJ" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Atajos de teclado para IntelliJ
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
