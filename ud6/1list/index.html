@@ -1273,6 +1273,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#buscar-un-item-en-el-arraylist" class="md-nav__link">
+    Buscar un ítem en el ArrayList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-si-existe-un-item-en-el-arraylist" class="md-nav__link">
+    Comprobar si existe un ítem en el ArrayList
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1411,6 +1425,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#buscar-un-item-en-el-arraylist" class="md-nav__link">
+    Buscar un ítem en el ArrayList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-si-existe-un-item-en-el-arraylist" class="md-nav__link">
+    Comprobar si existe un ítem en el ArrayList
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1475,6 +1503,10 @@ Sin embargo, desde Java 5, las primitivas se convierten automáticamente en obje
 <h3 id="eliminar-un-item-de-un-arraylist">Eliminar un ítem de un <code>ArrayList</code></h3>
 <p><img alt="List" src="../../img/ud6/arraylist6.png" /></p>
 <p>El método remove elimina el elemento de la lista y deja la lista ordenada, es decir, si tuviéramos una lista con los siguientes productos: ["Leche", "Tomate", "Lechuga", "Carne"] y elimináramos el producto <code>Tomate</code>, la lista quedaría: ["Leche", "Lechuga", "Carne"], los ítem se moverían de posiciones. Todo eso lo hace Java automáticamente por nosotros.</p>
+<h3 id="buscar-un-item-en-el-arraylist">Buscar un ítem en el <code>ArrayList</code></h3>
+<p><img alt="List" src="../../img/ud6/arraylist7.png" /></p>
+<h3 id="comprobar-si-existe-un-item-en-el-arraylist">Comprobar si existe un ítem en el <code>ArrayList</code></h3>
+<p><img alt="List" src="../../img/ud6/arraylist8.png" /></p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AlmacenList</span> <span class="p">{</span>
 
     <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">productosList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
@@ -1497,6 +1529,18 @@ Sin embargo, desde Java 5, las primitivas se convierten automáticamente en obje
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeProductItem</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">String</span> <span class="n">item</span> <span class="o">=</span> <span class="n">productosList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
         <span class="n">productosList</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">existsItem</span><span class="p">(</span><span class="n">String</span> <span class="n">searchItem</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">productosList</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">searchItem</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">findItem</span><span class="p">(</span><span class="n">String</span> <span class="n">searchItem</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">productosList</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="n">searchItem</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">productosList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
