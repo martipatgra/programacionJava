@@ -1230,6 +1230,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#arraylist" class="md-nav__link">
+    ArrayList
+  </a>
+  
+    <nav class="md-nav" aria-label="ArrayList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-arraylist" class="md-nav__link">
+    Crear un ArrayList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-item-al-arraylist" class="md-nav__link">
+    Añadir ítem al ArrayList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imprimir-los-elementos-del-arraylist" class="md-nav__link">
+    Imprimir los elementos del ArrayList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-un-item-en-una-posicion-del-arraylist" class="md-nav__link">
+    Modificar un ítem en una posición del ArrayList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-un-item-de-un-arraylist" class="md-nav__link">
+    Eliminar un ítem de un ArrayList
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1320,6 +1368,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#arraylist" class="md-nav__link">
+    ArrayList
+  </a>
+  
+    <nav class="md-nav" aria-label="ArrayList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-arraylist" class="md-nav__link">
+    Crear un ArrayList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-item-al-arraylist" class="md-nav__link">
+    Añadir ítem al ArrayList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imprimir-los-elementos-del-arraylist" class="md-nav__link">
+    Imprimir los elementos del ArrayList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-un-item-en-una-posicion-del-arraylist" class="md-nav__link">
+    Modificar un ítem en una posición del ArrayList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-un-item-de-un-arraylist" class="md-nav__link">
+    Eliminar un ítem de un ArrayList
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1350,11 +1446,59 @@ Hacer esto cada vez que queremos redimensionar el tamaño de un array es muy ted
 <p><img alt="List" src="../../img/ud6/list1.png" /></p>
 <p>Una lista se puede ver como un array ya que es una secuencia de elementos o colección ordenada que te permite tener elementos en posiciones consecutivas.</p>
 <p>En Java <code>List</code> es una interfaz <strong><em>Java.util.List</em></strong> que exitende de <code>Collection</code>. Siempre conserva el orden de los elementos. Los elementos contenidos en una lista se pueden insertar, acceder, iterar y eliminar de acuerdo con el orden en que aparecen internamente en la lista. El orden de los elementos es la razón por la cual esta estructura de datos se llama <code>List</code>. Cada elemento en una lista de Java tiene un índice, al igual que ocurría con los arrays.</p>
-<p>La interfaz de lista se implementa mediante las clases ArrayList, LinkedList, Vector y Stack. Es decir, dado que <code>List</code> es una interfaz, no se puede crear una instancia directamente. Sin embargo, uno puede crear objetos de aquellas clases que han implementado esta interfaz e instanciarlos. Por ejemplo:</p>
+<p>La interfaz de lista se implementa mediante las clases <code>ArrayList</code>, <code>LinkedList</code>, <code>Vector</code> y <code>Stack</code>. Es decir, dado que <code>List</code> es una interfaz, no se puede crear una instancia directamente. Sin embargo, uno puede crear objetos de aquellas clases que han implementado esta interfaz e instanciarlos. Por ejemplo:</p>
 <div class="highlight"><pre><span></span><code><span class="n">List</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="p">();</span>
 <span class="n">List</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="p">();</span>
 <span class="n">List</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vector</span><span class="p">();</span> 
 <span class="n">List</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="p">();</span> 
+</code></pre></div>
+<p>De estas implementaciones, <code>ArrayList</code> es la más utilizada.</p>
+<h2 id="arraylist">ArrayList</h2>
+<p>La primera clase de la que vamos a hablar es <code>ArrayList</code>. Un <code>ArrayList</code> como su nombre indica basa su implementación de una lista en un array. Es un array dinámico en tamaño (es decir, de tamaño variable), pudiendo agrandarse el número de elementos o disminuirse de forma automática. Implementa todos los métodos de la interfaz List y permite incluir elementos null.</p>
+<p>Un <code>ArrayList</code> no permite almacenar tipos de datos primitivos, solo puede almacenar objetos. Al contrario que un array que permitía almacenar ambos.
+Sin embargo, desde Java 5, las primitivas se convierten automáticamente en objetos, gracias a los Wrappers.</p>
+<p><code>ArrayList</code> forma parte de <code>Collection</code> en Java. Por lo tanto, a diferencia de los arrays que para acceder a los elementos se hacía usando [], en <code>ArrayList</code> tenemos un  conjunto de métodos para acceder a los elementos y modificarlos.</p>
+<h3 id="crear-un-arraylist">Crear un <code>ArrayList</code></h3>
+<p>Para crear un <code>ArrayList</code> en IntelliJ escribimos:</p>
+<p><img alt="List" src="../../img/ud6/arraylist1.png" /></p>
+<p>Si nos fijamos nos aparece una <code>&lt;E&gt;</code>, esto quiere decir que cuando creamos un <code>ArrayList</code> no le estamos diciendo el tipo como hacíamos con los arrays: <code>int[] array;</code>. Por tanto, para crear un <code>ArrayList</code> que almacena objetos necesitamos decirle qué tipo de datos vamos a almacenar en nuestra lista.</p>
+<p><img alt="List" src="../../img/ud6/arraylist2.png" /></p>
+<p>En el ejemplo hemos creado una lista que contendrá elementos de tipo <code>String</code>. Y si nos fijamos no le hemos especificado ningún tamaño como hacíamos en los arrays puesto que Java maneja el tamaño por nosotros automáticamente.</p>
+<h3 id="anadir-item-al-arraylist">Añadir ítem al <code>ArrayList</code></h3>
+<p>Para agregar un ítem o elemento a la lista utilizaremos los métodos que nos provee la interfaz <code>List</code>:</p>
+<p><img alt="List" src="../../img/ud6/arraylist3.png" /></p>
+<p>El método <code>add</code> agrega automáticamente el elemento en la lista. <code>ArrayList</code> es el que tiene toda la funcionalidad sobre dónde guardarlo (posición) y cantidad de espacio para asignar. Eso es abstracto para nosotros y no tenemos que preocuparnos por ello.</p>
+<h3 id="imprimir-los-elementos-del-arraylist">Imprimir los elementos del <code>ArrayList</code></h3>
+<p><img alt="List" src="../../img/ud6/arraylist4.png" /></p>
+<h3 id="modificar-un-item-en-una-posicion-del-arraylist">Modificar un ítem en una posición del <code>ArrayList</code></h3>
+<p><img alt="List" src="../../img/ud6/arraylist5.png" /></p>
+<h3 id="eliminar-un-item-de-un-arraylist">Eliminar un ítem de un <code>ArrayList</code></h3>
+<p><img alt="List" src="../../img/ud6/arraylist6.png" /></p>
+<p>El método remove elimina el elemento de la lista y deja la lista ordenada, es decir, si tuviéramos una lista con los siguientes productos: ["Leche", "Tomate", "Lechuga", "Carne"] y elimináramos el producto <code>Tomate</code>, la lista quedaría: ["Leche", "Lechuga", "Carne"], los ítem se moverían de posiciones. Todo eso lo hace Java automáticamente por nosotros.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AlmacenList</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">productosList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addProduct</span><span class="p">(</span><span class="n">String</span> <span class="n">item</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">productosList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printProductList</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tenemos &quot;</span>  <span class="o">+</span> <span class="n">productosList</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; elementos en el arrayList&quot;</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">productosList</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">productosList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">modifyProductItem</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="n">String</span> <span class="n">newItem</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">productosList</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">newItem</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeProductItem</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">item</span> <span class="o">=</span> <span class="n">productosList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
+        <span class="n">productosList</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
                 
               
