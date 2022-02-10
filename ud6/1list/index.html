@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#list" class="md-skip">
+        <a href="#estructuras-de-datos" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1186,9 +1186,53 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          6.1 List y ArrayList
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         6.1 List y ArrayList
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estructuras-de-datos-estaticos" class="md-nav__link">
+    Estructuras de datos estáticos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructuras-de-datos-dinamicas" class="md-nav__link">
+    Estructuras de datos dinámicas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1249,6 +1293,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estructuras-de-datos-estaticos" class="md-nav__link">
+    Estructuras de datos estáticos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructuras-de-datos-dinamicas" class="md-nav__link">
+    Estructuras de datos dinámicas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1260,7 +1333,29 @@
               
                 
                 
-                <h1 id="list">List</h1>
+                <h1 id="estructuras-de-datos">Estructuras de datos</h1>
+<p>La estructura de datos es una forma de almacenar y organizar datos de manera eficiente, de modo que las operaciones requeridas en ellos se puedan realizar de manera eficiente con respecto al tiempo y la memoria. Simplemente, la estructura de datos se utiliza para reducir la complejidad (principalmente la complejidad del tiempo) del código.</p>
+<p>Las estructuras de datos pueden ser de dos tipos:</p>
+<ol>
+<li>Estructura de datos estática</li>
+<li>Estructura de datos dinámica</li>
+</ol>
+<h2 id="estructuras-de-datos-estaticos">Estructuras de datos estáticos</h2>
+<p>En la estructura de datos estática, el tamaño de la estructura es <strong>fijo</strong>. El contenido de la estructura de datos se puede modificar pero sin cambiar el espacio de memoria que se le asigna. Un ejemplo de estas estructuras son los arrays que vimos en la unidad 4.</p>
+<p>Aunque los arrays son muy útiles como hemos estudiado, si queremos redimensionar un array, es decir, cambiar su tamaño una vez lo hemos creado y preservar los valores que se encuentran en él la única forma de hacerlo sería creando un nuevo array y copiar los elementos a este nuevo array.
+Hacer esto cada vez que queremos redimensionar el tamaño de un array es muy tedioso y no es nada productivo.</p>
+<h2 id="estructuras-de-datos-dinamicas">Estructuras de datos dinámicas</h2>
+<p>En la estructura de datos dinámica, el tamaño de la estructura no es fijo y puede modificarse durante las operaciones realizadas en él. Las estructuras de datos dinámicas están diseñadas para facilitar el cambio en tiempo de ejecución.</p>
+<h2 id="list">List</h2>
+<p><img alt="List" src="../../img/ud6/list1.png" /></p>
+<p>Una lista se puede ver como un array ya que es una secuencia de elementos o colección ordenada que te permite tener elementos en posiciones consecutivas.</p>
+<p>En Java <code>List</code> es una interfaz <strong><em>Java.util.List</em></strong> que exitende de <code>Collection</code>. Siempre conserva el orden de los elementos. Los elementos contenidos en una lista se pueden insertar, acceder, iterar y eliminar de acuerdo con el orden en que aparecen internamente en la lista. El orden de los elementos es la razón por la cual esta estructura de datos se llama <code>List</code>. Cada elemento en una lista de Java tiene un índice, al igual que ocurría con los arrays.</p>
+<p>La interfaz de lista se implementa mediante las clases ArrayList, LinkedList, Vector y Stack. Es decir, dado que <code>List</code> es una interfaz, no se puede crear una instancia directamente. Sin embargo, uno puede crear objetos de aquellas clases que han implementado esta interfaz e instanciarlos. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="p">();</span>
+<span class="n">List</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="p">();</span>
+<span class="n">List</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vector</span><span class="p">();</span> 
+<span class="n">List</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="p">();</span> 
+</code></pre></div>
                 
               
               
