@@ -1274,6 +1274,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#copiar-todo-el-contenido-del-un-arraylist-a-otro" class="md-nav__link">
+    Copiar todo el contenido del un ArrayList a otro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#buscar-un-item-en-el-arraylist" class="md-nav__link">
     Buscar un ítem en el ArrayList
   </a>
@@ -1287,8 +1294,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    Main
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    Buenas prácticas
+  </a>
   
 </li>
       
@@ -1426,6 +1447,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#copiar-todo-el-contenido-del-un-arraylist-a-otro" class="md-nav__link">
+    Copiar todo el contenido del un ArrayList a otro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#buscar-un-item-en-el-arraylist" class="md-nav__link">
     Buscar un ítem en el ArrayList
   </a>
@@ -1439,8 +1467,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    Main
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    Buenas prácticas
+  </a>
   
 </li>
       
@@ -1503,11 +1545,24 @@ Sin embargo, desde Java 5, las primitivas se convierten automáticamente en obje
 <h3 id="eliminar-un-item-de-un-arraylist">Eliminar un ítem de un <code>ArrayList</code></h3>
 <p><img alt="List" src="../../img/ud6/arraylist6.png" /></p>
 <p>El método remove elimina el elemento de la lista y deja la lista ordenada, es decir, si tuviéramos una lista con los siguientes productos: ["Leche", "Tomate", "Lechuga", "Carne"] y elimináramos el producto <code>Tomate</code>, la lista quedaría: ["Leche", "Lechuga", "Carne"], los ítem se moverían de posiciones. Todo eso lo hace Java automáticamente por nosotros.</p>
+<h3 id="copiar-todo-el-contenido-del-un-arraylist-a-otro">Copiar todo el contenido del un <code>ArrayList</code> a otro</h3>
+<p>Se puede hacer de varias formas:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//Forma 1</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">newArray</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">newArray</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">productosList</span><span class="p">);</span>
+
+<span class="c1">//Forma 2</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">newArray2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="n">productosList</span><span class="p">);</span>
+
+<span class="c1">//Forma 3 - Copiar un ArrayList a un array</span>
+<span class="n">String</span><span class="o">[]</span> <span class="n">myArray</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="n">productosList</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">]</span><span class="p">;</span>
+<span class="n">myArray</span> <span class="o">=</span> <span class="n">productosList</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="n">myArray</span><span class="p">);</span>
+</code></pre></div>
 <h3 id="buscar-un-item-en-el-arraylist">Buscar un ítem en el <code>ArrayList</code></h3>
 <p><img alt="List" src="../../img/ud6/arraylist7.png" /></p>
 <h3 id="comprobar-si-existe-un-item-en-el-arraylist">Comprobar si existe un ítem en el <code>ArrayList</code></h3>
 <p><img alt="List" src="../../img/ud6/arraylist8.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AlmacenList</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ProductList</span> <span class="p">{</span>
 
     <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">productosList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
 
@@ -1544,6 +1599,96 @@ Sin embargo, desde Java 5, las primitivas se convierten automáticamente en obje
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<h3 id="main">Main</h3>
+<p>Vamos a crear una clase principal <code>Main</code> con un método <code>main</code>que imprimirá un menú de opciones relacionadas con la lista de productos y realizará sus respectivas acciones.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainList</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">ProductList</span> <span class="n">productList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProductList</span><span class="p">();</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">imprimirMenu</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;0 - Para imprimir menu&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1 - Para imprimir productos&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2 - Para añadir&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3 - Para modificar&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;4 - Para eliminar&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;5 - Para salir&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">addItem</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Inserta el producto: &quot;</span><span class="p">);</span>
+        <span class="n">productList</span><span class="p">.</span><span class="na">addProduct</span><span class="p">(</span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">modifyItem</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Inserta número de posición: &quot;</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+        <span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Escribe el nuevo producto:&quot;</span><span class="p">);</span>
+        <span class="n">String</span> <span class="n">newItem</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+        <span class="n">productList</span><span class="p">.</span><span class="na">modifyProductItem</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">newItem</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">removeItem</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Inserta número de posición: &quot;</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+        <span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+        <span class="n">productList</span><span class="p">.</span><span class="na">removeProductItem</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">boolean</span> <span class="n">continuar</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">opcion</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">imprimirMenu</span><span class="p">();</span>
+
+        <span class="k">while</span><span class="p">(</span><span class="n">continuar</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Elige una opción: &quot;</span><span class="p">);</span>
+            <span class="n">opcion</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+            <span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+            <span class="k">switch</span> <span class="p">(</span><span class="n">opcion</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">imprimirMenu</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">productList</span><span class="p">.</span><span class="na">printProductList</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">addItem</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+                    <span class="n">modifyItem</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+                    <span class="n">removeItem</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
+                    <span class="n">continuar</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="buenas-practicas">Buenas prácticas</h2>
+<p>Si nos fijamos, el método para modificar un ítem de la lista espera recibir un índice o posición donde se encuentra el elemento. Pero eso puede se peligroso, puesto que, sabemos que las posiciones empiezan por 0, pero a lo mejor el usuario no lo sabe y piensan que empiezan por 1. Por tanto, no sabemos a qué posición apunta realmente el índice que recibimos.</p>
+<p>Una buena práctica es crear otro método que se le pase el nombre, buscarlo y devolver la posición en la lista:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">modifyProductItem</span><span class="p">(</span><span class="n">String</span> <span class="n">newItem</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">findItem</span><span class="p">(</span><span class="n">newItem</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">modifyProductItem</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">newItem</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">private</span> <span class="kt">void</span> <span class="nf">modifyProductItem</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="n">String</span> <span class="n">newItem</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">productosList</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">newItem</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">findItem</span><span class="p">(</span><span class="n">String</span> <span class="n">searchItem</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">productosList</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="n">searchItem</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Ejercicio. Haz lo mismo con el método de eliminar elemento.</p>
                 
               
               
