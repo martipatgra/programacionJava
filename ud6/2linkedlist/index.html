@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linked-list" class="md-skip">
+        <a href="#linkedlist" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1198,9 +1198,53 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          6.2 Linked List
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         6.2 Linked List
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crear-y-anadir-items-en-una-linkedlist" class="md-nav__link">
+    Crear y añadir ítems en una LinkedList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterar-una-linkedlist" class="md-nav__link">
+    Iterar una LinkedList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insertar-elementos-en-orden" class="md-nav__link">
+    Insertar elementos en orden
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1261,6 +1305,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crear-y-anadir-items-en-una-linkedlist" class="md-nav__link">
+    Crear y añadir ítems en una LinkedList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterar-una-linkedlist" class="md-nav__link">
+    Iterar una LinkedList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insertar-elementos-en-orden" class="md-nav__link">
+    Insertar elementos en orden
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1272,13 +1345,54 @@
               
                 
                 
-                <h1 id="linked-list">Linked List</h1>
-<p>Una <code>LinkedList</code> en Java es una implementación de lista doblemente enlazada.</p>
+                <h1 id="linkedlist"><code>LinkedList</code></h1>
+<p>Una <code>LinkedList</code> en Java es una implementación de lista doblemente enlazada. Admite duplicados.</p>
 <p>Cada elemento de la lista almacena el enlace real al siguiente elemento de la lista así como también el valor real que se desea almacenar.</p>
 <p><code>LinkedList</code> no es un array, sino una cola de dos extremos de elementos conectados entre sí. El primer elemento apunta al segundo, que apunta al tercero, y así sucesivamente. Internamente, LinkedList se implementa utilizando la estructura de datos de lista doblemente enlazada. La principal diferencia entre una lista enlazada normal y una lista doblemente enlazada es que una lista doblemente enlazada contiene un puntero adicional, normalmente llamado puntero anterior, junto con el puntero siguiente y los datos que están en la lista enlazada individualmente.</p>
 <p><img alt="LinkedList" src="../../img/ud6/linkedlist1.png" /></p>
 <p>ArrayList contiene un único array para el almacenamiento de datos. LinkedList necesita una estructura de datos personalizada. Esta estructura de datos personalizada es conocida como <strong>Nodo</strong>. Es una pequeña clase interna que sirve como envoltorio para cada elemento.</p>
 <p>El primer puntero conocido como <strong>head</strong>, apunta al primer nodo y se actualiza cada vez que se inserta un nuevo nodo al principio. El puntero que apunta al último nodo es conocido como <strong>tail</strong> y también se actualiza cada vez que se agrega un nuevo elemento al final.</p>
+<h2 id="crear-y-anadir-items-en-una-linkedlist">Crear y añadir ítems en una <code>LinkedList</code></h2>
+<div class="highlight"><pre><span></span><code><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lugares</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">lugares</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Roma&quot;</span><span class="p">);</span>
+<span class="n">lugares</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;París&quot;</span><span class="p">);</span>
+<span class="n">lugares</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Amsterdam&quot;</span><span class="p">);</span>
+<span class="n">lugares</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Toronto&quot;</span><span class="p">);</span>
+<span class="n">lugares</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Miami&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="iterar-una-linkedlist">Iterar una <code>LinkedList</code></h2>
+<p>Para iterar una lista vamos a usar el concepto de iterador. Un iterador es una forma de acceder a cada uno de los elementos de una lista, arrayList, linkedlist, etc. Es el equivalente a un bucle for que hemos estado usando hasta ahora.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printList</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lugares</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">it</span> <span class="o">=</span> <span class="n">lugares</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nodo: &quot;</span> <span class="o">+</span> <span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;-----&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>i.next()</code>: primero devuelve el nodo actual y luego se mueve al siguiente elemento.
+Hasta que no usamos .next() no se sitúa en el primer nodo.
+La primera línea de código solo es para montar y establecer el iterador.</p>
+<h2 id="insertar-elementos-en-orden">Insertar elementos en orden</h2>
+<p>Para insertar elementos en un orden específico se usa un <code>ListIterator</code> ya que proporcionar mayor flexibilidad y está creado para situaciones como esa. Te permite volver a los elementos anteriores.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">private</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">addInOrder</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lugares</span><span class="p">,</span> <span class="n">String</span> <span class="n">newItem</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ListIterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">it</span> <span class="o">=</span> <span class="n">lugares</span><span class="p">.</span><span class="na">listIterator</span><span class="p">();</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">comparacion</span> <span class="o">=</span> <span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">newItem</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">comparacion</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//no queremos añadir porque no queremos tener duplicados</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;el lugar &quot;</span> <span class="o">+</span> <span class="n">newItem</span> <span class="o">+</span> <span class="s">&quot; ya está incluido&quot;</span><span class="p">);</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">comparacion</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//newItem es más pequeño</span>
+            <span class="n">it</span><span class="p">.</span><span class="na">previous</span><span class="p">();</span>
+            <span class="n">it</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">newItem</span><span class="p">);</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">it</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">newItem</span><span class="p">);</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
