@@ -1643,17 +1643,22 @@ Las clases anidadas estáticas no tienen acceso a otros miembros de la clase env
 <span class="p">}</span>
 </code></pre></div>
 <p>Crear una instancia de una clase anidada estática es un poco diferente de crear una instancia de una clase interna.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Outer</span> <span class="p">{</span>
-   <span class="kd">static</span> <span class="kd">class</span> <span class="nc">NestedDemo</span> <span class="p">{</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">mymethod</span><span class="p">()</span> <span class="p">{</span>
-         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;This is my nested class&quot;</span><span class="p">);</span>
-      <span class="p">}</span>
-   <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Outer</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">NestedDemo</span> <span class="n">nested</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NestedDemo</span><span class="p">();</span>
-      <span class="n">nested</span><span class="p">.</span><span class="na">mymethod</span><span class="p">();</span>
-   <span class="p">}</span>
+    <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Inner</span> <span class="p">{</span>
+        <span class="kd">private</span> <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+        <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getY</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">y</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StaticNestedClass</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Outer</span><span class="p">.</span><span class="na">Inner</span> <span class="n">inner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Outer</span><span class="p">.</span><span class="na">Inner</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">inner</span><span class="p">.</span><span class="na">getY</span><span class="p">());</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="ejemeplo-combinado"><em>Ejemeplo combinado</em></h3>
