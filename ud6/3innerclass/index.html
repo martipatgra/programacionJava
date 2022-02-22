@@ -1601,17 +1601,21 @@ Las clases anidadas estáticas no tienen acceso a otros miembros de la clase env
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">greetSomeone</span><span class="p">(</span><span class="n">String</span> <span class="n">someone</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="c1">//Anonymous class</span>
-<span class="n">Greeting</span> <span class="n">frenchGreeting</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Greeting</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;tout le monde&quot;</span><span class="p">;</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">greet</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">greetSomeone</span><span class="p">(</span><span class="s">&quot;tout le monde&quot;</span><span class="p">);</span>
+<span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//Anonymous class</span>
+        <span class="n">Greeting</span> <span class="n">frenchGreeting</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Greeting</span><span class="p">()</span> <span class="p">{</span>
+            <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;tout le monde&quot;</span><span class="p">;</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">greet</span><span class="p">()</span> <span class="p">{</span>
+                <span class="n">greetSomeone</span><span class="p">(</span><span class="s">&quot;tout le monde&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">greetSomeone</span><span class="p">(</span><span class="n">String</span> <span class="n">someone</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">someone</span><span class="p">;</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Salut &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">};</span>
     <span class="p">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">greetSomeone</span><span class="p">(</span><span class="n">String</span> <span class="n">someone</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">someone</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Salut &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+<span class="p">}</span>
 </code></pre></div>
 <h4 id="ejemplo-2"><em>Ejemplo</em> 2</h4>
 <div class="highlight"><pre><span></span><code><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">AnonymousInner</span> <span class="p">{</span>
