@@ -1242,6 +1242,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-clase-de-visitar-lugares" class="md-nav__link">
+    Ejemplo de clase de Visitar Lugares
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1356,6 +1363,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-clase-de-visitar-lugares" class="md-nav__link">
+    Ejemplo de clase de Visitar Lugares
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1416,6 +1430,71 @@ La primera línea de código solo es para montar y establecer el iterador.</p>
     <span class="n">it</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">newItem</span><span class="p">);</span>
     <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
 <span class="p">}</span>
+</code></pre></div>
+<h2 id="ejemplo-de-clase-de-visitar-lugares">Ejemplo de clase de Visitar Lugares</h2>
+<p>Utilizamos un list iterator para ir hacia adelante y hacia atrás.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">visitarLugar</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lugares</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="kt">boolean</span> <span class="n">continuar</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="n">ListIterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">it</span> <span class="o">=</span> <span class="n">lugares</span><span class="p">.</span><span class="na">listIterator</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">lugares</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No hay lugares visitados&quot;</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Visitando &quot;</span> <span class="o">+</span> <span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+            <span class="n">imprimirMenu</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="kt">boolean</span> <span class="n">haciaAdelante</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">continuar</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">opcion</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+            <span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+            <span class="k">switch</span> <span class="p">(</span><span class="n">opcion</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Se acabaron las vacaciones&quot;</span><span class="p">);</span>
+                    <span class="n">continuar</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">it</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">haciaAdelante</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span>
+                            <span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+                        <span class="n">haciaAdelante</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Visitando &quot;</span> <span class="o">+</span> <span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ya no hay más ciudades&quot;</span><span class="p">);</span>
+                        <span class="n">haciaAdelante</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">haciaAdelante</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasPrevious</span><span class="p">())</span>
+                            <span class="n">it</span><span class="p">.</span><span class="na">previous</span><span class="p">();</span>
+                        <span class="n">haciaAdelante</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasPrevious</span><span class="p">())</span> <span class="p">{</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Visitando &quot;</span> <span class="o">+</span> <span class="n">it</span><span class="p">.</span><span class="na">previous</span><span class="p">());</span>
+                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Primera ciudad&quot;</span><span class="p">);</span>
+                        <span class="n">haciaAdelante</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+                    <span class="n">imprimirMenu</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">imprimirMenu</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;0 - Para salir\n&quot;</span> <span class="o">+</span>
+                <span class="s">&quot;1 - para ir a la siguiente ciudad\n&quot;</span> <span class="o">+</span>
+                <span class="s">&quot;2 - para ir a la ciudad anterior\n&quot;</span> <span class="o">+</span>
+                <span class="s">&quot;3 - imprimir el menú&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
 </code></pre></div>
                 
               
