@@ -1380,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6ordercollections" class="md-nav__link">
+      <a href="../../6ordercollections.md" class="md-nav__link">
         6.6 Colecciones ordenadas
       </a>
     </li>
@@ -1714,16 +1714,14 @@ Es muy parecido a la clase <code>HashMap</code> que hemos utilizado anteriorment
 
 
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Persona</span> <span class="n">g1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-    <span class="n">Persona</span> <span class="n">g2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">Persona</span> <span class="n">p1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">Persona</span> <span class="n">p2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 
-    <span class="n">Map</span><span class="o">&lt;</span><span class="n">Persona</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Persona</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
-    <span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="s">&quot;MARKETING&quot;</span><span class="p">);</span>
-    <span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">g2</span><span class="p">,</span> <span class="s">&quot;IT&quot;</span><span class="p">);</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">Persona</span><span class="o">&gt;</span> <span class="n">conjunto</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">Persona</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">conjunto</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
+    <span class="n">conjunto</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">p2</span><span class="p">);</span>
 
-    <span class="k">for</span><span class="p">(</span><span class="n">Persona</span> <span class="n">persona</span> <span class="p">:</span> <span class="n">map</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">persona</span><span class="p">).</span><span class="na">toString</span><span class="p">());</span>
-    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">conjunto</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">p1</span><span class="p">));</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="operaciones-con-set">Operaciones con <code>Set</code></h2>
