@@ -14,7 +14,7 @@
     
     
       
-        <title>3.7- Null value - Programación</title>
+        <title>7.2 Expresiones lambda - Programación</title>
       
     
     
@@ -75,11 +75,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#valor-nulo" class="md-skip">
-          Saltar a contenido
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3.7- Null value
+              7.2 Expresiones lambda
             
           </span>
         </div>
@@ -771,14 +766,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
         3.- Programación orientada a objetos POO
@@ -796,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1metodoclase/" class="md-nav__link">
+      <a href="../../ud3/1metodoclase/" class="md-nav__link">
         3.1- Clases en Java
       </a>
     </li>
@@ -808,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2constructor/" class="md-nav__link">
+      <a href="../../ud3/2constructor/" class="md-nav__link">
         3.2- Constructores y destructores
       </a>
     </li>
@@ -820,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3sobrecargametodos/" class="md-nav__link">
+      <a href="../../ud3/3sobrecargametodos/" class="md-nav__link">
         3.3- Métodos y sobrecarga de métodos
       </a>
     </li>
@@ -832,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4referencevalue/" class="md-nav__link">
+      <a href="../../ud3/4referencevalue/" class="md-nav__link">
         3.4- Paso de parámetros por valor y referencia
       </a>
     </li>
@@ -844,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5static/" class="md-nav__link">
+      <a href="../../ud3/5static/" class="md-nav__link">
         3.5- Variables, métodos y clases estáticas
       </a>
     </li>
@@ -856,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6recursion/" class="md-nav__link">
+      <a href="../../ud3/6recursion/" class="md-nav__link">
         3.6- Recursividad
       </a>
     </li>
@@ -866,21 +859,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ud3/7nullvalue/" class="md-nav__link">
         3.7- Null value
       </a>
-      
     </li>
   
 
@@ -1278,12 +1261,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       <label class="md-nav__link" for="__nav_8">
         7.- Programación avanzada
@@ -1301,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud7/1generics/" class="md-nav__link">
+      <a href="../1generics/" class="md-nav__link">
         7.1 Genéricos
       </a>
     </li>
@@ -1311,11 +1296,19 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ud7/2lambda/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         7.2 Expresiones lambda
       </a>
+      
     </li>
   
 
@@ -1363,49 +1356,15 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <h1 id="valor-nulo">Valor nulo</h1>
-<p>Una variable de referencia contiene información sobre la ubicación de un objeto. No contiene el objeto en sí.</p>
-<p>Por ejemplo el siguiente código:</p>
-<div class="highlight"><pre><span></span><code> <span class="n">String</span> <span class="n">str</span><span class="p">;</span>
- <span class="n">Persona</span> <span class="n">p</span><span class="p">;</span>
-</code></pre></div>
-<p>declara dos variables de referencia pero no construye ningún objeto. Con el siguiente código:</p>
-<div class="highlight"><pre><span></span><code> <span class="n">str</span> <span class="o">=</span> <span class="s">&quot;Programación&quot;</span><span class="p">;</span>
- <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">);</span>
-</code></pre></div>
-<p>se construyen los objetos y se colocan referencias en las variables.</p>
-<p><strong><em>null</em></strong> es un valor especial que significa "sin objeto". Se establece una variable de referencia a <em>null</em> cuando no se refiere a ningún objeto. Las variables a menudo se asignan en nulas cuando se declaran:</p>
-<div class="highlight"><pre><span></span><code> <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
- <span class="n">Persona</span> <span class="n">p</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-</code></pre></div>
-<p><em>str</em> y <em>p</em> todavía no son objetos, son variables que en un futuro pueden referenciar a objetos.</p>
-<p>Podemos asignar el valor null a cualquier variable de tipo referencia, ya sea un objeto, string, array, etc.</p>
-<p>Una variable de referencia a veces hace referencia a un objeto y otras veces no, y puede referirse a diferentes objetos en diferentes momentos. Por tanto, necesitamos una forma de decir que una variable ahora no se refiere a un objeto. Para ello, se le asigna un valor <em>null</em> a la variable.</p>
-<p><img alt="Arrays" src="../../img/ud4/nullvalue.png" /></p>
-<p>El objeto Persona con el nombre de Patricia se destruirá eventualmente por el <em>garbage collector</em> ya que no es referenciado por nadie.</p>
+                  <h1>7.2 Expresiones lambda</h1>
+                
+                
                 
               
               
@@ -1430,7 +1389,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Pie">
       
         
-        <a href="../6recursion/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 3.6- Recursividad" rel="prev">
+        <a href="../1generics/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 7.1 Genéricos" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1439,20 +1398,20 @@
               <span class="md-footer__direction">
                 Anterior
               </span>
-              3.6- Recursividad
+              7.1 Genéricos
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../ud4/1arrays/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 4.1- Introducción" rel="next">
+        <a href="../../shortcuts/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Atajos de teclado para IntelliJ" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Siguiente
               </span>
-              4.1- Introducción
+              Atajos de teclado para IntelliJ
             </div>
           </div>
           <div class="md-footer__button md-icon">
