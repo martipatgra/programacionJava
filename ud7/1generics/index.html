@@ -1300,9 +1300,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          7.1 Genéricos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         7.1 Genéricos
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clases-genericas" class="md-nav__link">
+    Clases genéricas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1363,6 +1393,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clases-genericas" class="md-nav__link">
+    Clases genéricas
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1398,8 +1443,9 @@
 <span class="p">}</span> 
 </code></pre></div>
 <p>Desde Java 5 contamos con una característica llamada generics que puede solventar esta clase de problemas. Los generics son una mejora al sistema de tipos que nos permite programar abstrayéndonos de los tipos de datos.</p>
+<p><strong>Genéricos</strong> significa <strong>tipos parametrizados</strong>. La idea es permitir que el tipo (<code>Integer</code>, <code>String</code>, etc., y tipos definidos por el usuario) sea un parámetro para métodos, clases e interfaces. Utilizando Generics, es posible crear clases que trabajen con diferentes tipos de datos. Una entidad como clase, interfaz o método que opera en un tipo parametrizado es una entidad genérica.</p>
 <p>Gracias a los generics podemos especificar el tipo de objeto que introduciremos en la colección, de forma que el compilador conozca el tipo de objeto que vamos a utilizar, evitándonos así el casting. Además, gracias a esta información, el compilador podrá comprobar el tipo de los objetos que introducimos, y lanzar un error en tiempo de compilación si se intenta introducir un objeto de un tipo incompatible, en lugar de que se produzca una excepción en tiempo de ejecución.</p>
-<p>Para utilizar generics con nuestras colecciones tan solo tenemos que indicar el tipo entre <strong>el operador Diamond &lt;&gt;</strong> a la hora de crearla. A estas clases a las que podemos pasar un tipo como «parámetro» se les llama clases parametrizadas, clases genéricas, definiciones genéricas o simplemente genéricas (generics).</p>
+<p>Para utilizar generics con nuestras colecciones tan solo tenemos que indicar el tipo entre <strong>el operador Diamond &lt;&gt;</strong> a la hora de crearla. A estas clases a las que podemos pasar un tipo como «parámetro» se les llama clases parametrizadas, clases genéricas o simplemente genéricas (generics).</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Ejemplo</span> <span class="p">{</span>  
   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>  
     <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>  
@@ -1415,6 +1461,38 @@
 <p class="admonition-title">Note</p>
 <p><strong>Algo a tener en cuenta es que el tipo parámetro debe ser una clase; no podemos utilizar tipos primitivos.</strong></p>
 </div>
+<h2 id="clases-genericas">Clases genéricas</h2>
+<p>Para declarar una clase como genérica tenemos que añadir el tipo de parámetro de tipo después del nombre de la clase, y utilizar el nombre de este tipo genérico donde usaríamos un tipo concreto (con algunas excepciones). Por convención se suele utilizar una sola letra mayúscula para el tipo genérico.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Box</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+
+  <span class="kd">private</span> <span class="n">T</span> <span class="n">t</span><span class="p">;</span>
+
+  <span class="kd">public</span> <span class="n">T</span> <span class="nf">get</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">t</span><span class="p">;</span> <span class="p">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">set</span><span class="p">(</span><span class="n">T</span> <span class="n">t</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="na">t</span> <span class="o">=</span> <span class="n">t</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>Según las convenciones los nombres de los parámetros de tipo usados comúnmente son los siguientes:</p>
+<ul>
+<li>E: elemento de una colección.</li>
+<li>K: clave.</li>
+<li>N: número.</li>
+<li>T: tipo.</li>
+<li>V: valor.</li>
+<li>S, U, V etc: para segundos, terceros y cuartos tipos.</li>
+</ul>
+<p>En el momento de la instanciación de un tipo genérico indicaremos el argumento para el tipo, en este caso Box contendrá una referencia a un tipo Integer.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//Las dos formas son válidas:</span>
+<span class="n">Box</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">integerBox1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Box</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">Box</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">integerBox2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Box</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="n">Box</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">textoBox</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Box</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>Estamos creando objetos de la clase <code>Box</code>, tanto de tipo Integer como String.</p>
+<p>A veces querremos limitar los tipos que pueden ser usados empleando lo que se denomina <strong>bounded type</strong>. Con \&lt;T extends Number> el tipo T debe extender la clase Number.
+Java permite múltiples límites o bounded type: <code>&lt;T extends Box &amp; B1 &amp; B2&gt;</code>.
+<code>Box</code> es una clase y <code>B1</code> y <code>B2</code> son interfaces. Primero siempre debe ir la clase y luego las interfaces.
+Recuerda que Java NO permite la herencia múltiple, por tanto, SOLO se puede extender de una clase, pero puede implementar varias interfaces en la declaración del bounded type.</p>
                 
               
               
