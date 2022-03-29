@@ -1411,6 +1411,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#crear-una-expresion-lambda-a-partir-de-un-metodo" class="md-nav__link">
+    Crear una expresión lambda a partir de un método
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1552,6 +1559,13 @@
         <li class="md-nav__item">
   <a href="#escenario-con-expresiones-lambda" class="md-nav__link">
     Escenario con expresiones lambda
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-una-expresion-lambda-a-partir-de-un-metodo" class="md-nav__link">
+    Crear una expresión lambda a partir de un método
   </a>
   
 </li>
@@ -1752,6 +1766,29 @@
         <span class="n">s2</span><span class="p">.</span><span class="na">saludar</span><span class="p">();</span>  
     <span class="p">}</span>  
 <span class="p">}</span>  
+</code></pre></div>
+<h2 id="crear-una-expresion-lambda-a-partir-de-un-metodo">Crear una expresión lambda a partir de un método</h2>
+<p>Para definir una expresión lambda de un método que no está definido en ninguna interfaz funcional, tenemos que utilizar la clase <code>Function</code>.</p>
+<div class="highlight"><pre><span></span><code>    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">texto</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">total</span><span class="o">+=</span><span class="n">texto</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">total</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="c1">//Queremos crear una expresión lambda que realice lo que está entre { }</span>
+
+    <span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">funcionLambda</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">texto</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">total</span><span class="o">+=</span><span class="n">texto</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="n">total</span><span class="p">;</span>
+        <span class="p">};</span>
+</code></pre></div>
+<p>Para ejecutar el código en el interior de la expresión lambda, utilizaremos el método <code>apply</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">funcionLambda</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="s">&quot;Programación&quot;</span><span class="p">));</span>
 </code></pre></div>
                 
               
