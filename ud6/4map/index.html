@@ -1587,6 +1587,11 @@
 <span class="p">}</span>
 </code></pre></div>
 <p>Al imprimir vemos que las claves no aparecen en ningún orden, ni en el que las hemos introducido ni en orden alfabético. Los elementos del <code>HashMap</code> no están ordenados.</p>
+<p>Si queremos recorrer las entradas del mapa usaremos:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">entradaMapa</span><span class="p">:</span> <span class="n">idiomas</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">entradaMapa</span><span class="p">.</span><span class="na">getKey</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">entradaMapa</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="eliminar-una-entrada-clave-valor-de-un-map">Eliminar una entrada clave-valor de un <code>Map</code></h2>
 <p>Tenemos dos formas de eliminar:</p>
 <ol>
