@@ -1361,6 +1361,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#consumer" class="md-nav__link">
+    Consumer
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1444,6 +1451,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#consumer" class="md-nav__link">
+    Consumer
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1496,7 +1510,7 @@
 </div>
 <p>También existen <code>IntPredicate</code> cuando queremos trabajar con predicados de tipo entero, <code>DoublePredicate</code> y <code>LongPredicate</code>.</p>
 <h2 id="supplier">Supplier</h2>
-<p>Supplier es otra interfaz funcional dentro del paquete java.util que nos provee del método abstracto get, sin argumentos que devuelve un tipo de dato.</p>
+<p><code>Supplier</code> es otra interfaz funcional dentro del paquete java.util que nos provee del método abstracto get, sin argumentos que devuelve un tipo de dato.</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@FunctionalInterface</span>
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Supplier</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
 
@@ -1508,6 +1522,19 @@
     <span class="n">Supplier</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">su</span> <span class="o">=</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
 </code></pre></div>
 <p>Al igual que ocurría en los predicados con los <code>Supplier</code> también disponemos de las clases <code>IntSupplier</code>, <code>DoubleSupplier</code>, <code>LongSupplier</code> y <code>BooleanSupplier</code>.</p>
+<h2 id="consumer">Consumer</h2>
+<p><code>Consumer</code> es otra interfaz funcional que provee un método que recibe un solo parámetro de tipo genérico y no devuelve nada.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Consumer</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">accept</span><span class="p">(</span><span class="n">T</span> <span class="n">t</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>La expresión lambda asignada a un objeto de tipo <code>Consumer</code> se usa para definir su método <code>accept()</code> que eventualmente aplica la operación dada en su argumento. Los <code>Consumer</code> son útiles cuando no necesitan devolver ningún valor, ya que se espera que operen a través de efectos secundarios.</p>
+<p><code>BiConsumer</code> es un caso especial de las expresiones <code>Consumer</code>, son aquellas que reciben dos valores como parámetro y no devuelven resultado.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@FunctionalInterface</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">BiConsumer</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">U</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">accept</span><span class="p">(</span><span class="n">T</span> <span class="n">t</span><span class="p">,</span> <span class="n">U</span> <span class="n">u</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
