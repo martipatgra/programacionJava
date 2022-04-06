@@ -1366,6 +1366,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resumen-de-las-interfaces-funcionales-dentro-de-javautilfunction" class="md-nav__link">
+    Resumen de las interfaces funcionales dentro de java.util.function
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1442,6 +1449,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resumen-de-las-interfaces-funcionales-dentro-de-javautilfunction" class="md-nav__link">
+    Resumen de las interfaces funcionales dentro de java.util.function
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1488,11 +1502,14 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><code>UnaryOperator</code> se crea con un tipo de dato y devuelve un resultado del mismo tipo de su argumento.</p>
+<p><code>UnaryOperator</code> se crea con un tipo de dato, recibe un parámetro y devuelve un resultado del mismo tipo de su argumento.</p>
 <div class="highlight"><pre><span></span><code><span class="n">UnaryOperator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">func2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">resultado</span> <span class="o">=</span> <span class="n">func2</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">resultado</span><span class="p">);</span><span class="c1">//imprime 4</span>
 </code></pre></div>
+<p>Existen también las interfaces derivadas <code>IntUnaryOperator</code>, <code>DoubleUnaryOperator</code>, etc.</p>
+<h2 id="resumen-de-las-interfaces-funcionales-dentro-de-javautilfunction">Resumen de las interfaces funcionales dentro de java.util.function</h2>
+<p><img alt="Lambda" src="../../img/ud7/7summary.png" /></p>
                 
               
               
