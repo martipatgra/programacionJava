@@ -1484,7 +1484,7 @@
                 
                 
                 <h1 id="predicate">Predicate</h1>
-<p><strong>Predicate</strong> es una interfaz funcional que se encuentra en el paquete java.util.Function . Mejora la capacidad de administración del código, ayuda a realizar pruebas unitarias por separado.</p>
+<p><strong>Predicate</strong> es una interfaz funcional que se encuentra en el paquete <code>java.util.function</code>. Mejora la capacidad de administración del código, ayuda a realizar pruebas unitarias por separado.</p>
 <p>Se utiliza en expresiones lambda para comprobar si una condición dada es verdadera o falsa.</p>
 <p>En lugar de pasar un booleano con valor true or false,  pasas una referencia de tipo Predicate para determinar de manera dinámica si una condición dada es verdadera, o falsa.</p>
 <p>Esta es la estructura de la interfaz <code>Predicate</code>:</p>
@@ -1523,7 +1523,7 @@
 <p>También existen <code>IntPredicate</code> cuando queremos trabajar con predicados de tipo entero, <code>DoublePredicate</code> y <code>LongPredicate</code>.</p>
 <p>También tenemos la interfaz <code>BiPredicate</code> que es un caso especial de <code>Predicate</code> y recibe dos parámetros en vez de uno.</p>
 <h2 id="supplier">Supplier</h2>
-<p><code>Supplier</code> es otra interfaz funcional dentro del paquete java.util que nos provee del método abstracto get, sin argumentos que devuelve un tipo de dato.</p>
+<p><code>Supplier</code> es otra interfaz funcional dentro del paquete <code>java.util.function</code> que nos provee del método abstracto get, sin argumentos que devuelve un tipo de dato.</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@FunctionalInterface</span>
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Supplier</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
 
@@ -1536,7 +1536,7 @@
 </code></pre></div>
 <p>Al igual que ocurría en los predicados con los <code>Supplier</code> también disponemos de las clases <code>IntSupplier</code>, <code>DoubleSupplier</code>, <code>LongSupplier</code> y <code>BooleanSupplier</code>.</p>
 <h2 id="consumer">Consumer</h2>
-<p><code>Consumer</code> es otra interfaz funcional que provee un método que recibe un solo parámetro de tipo genérico y no devuelve nada.</p>
+<p><code>Consumer</code> es otra interfaz funcional dentro del paquete <code>java.util.function</code> que provee un método que recibe un solo parámetro de tipo genérico y no devuelve nada.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Consumer</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
     <span class="kt">void</span> <span class="nf">accept</span><span class="p">(</span><span class="n">T</span> <span class="n">t</span><span class="p">);</span>
 <span class="p">}</span>
