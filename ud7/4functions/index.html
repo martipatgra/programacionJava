@@ -1336,9 +1336,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          7.4 Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         7.4 Functions
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unaryoperator" class="md-nav__link">
+    UnaryOperator
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1399,6 +1429,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unaryoperator" class="md-nav__link">
+    UnaryOperator
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1433,6 +1478,20 @@
 <span class="n">Function</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">mul</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
 <span class="n">Function</span> <span class="n">co</span> <span class="o">=</span> <span class="n">suma</span><span class="p">.</span><span class="na">andThen</span><span class="p">(</span><span class="n">mul</span><span class="p">);</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">co</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span> <span class="c1">//imprime 18 = (4 + 2) * 3</span>
+</code></pre></div>
+<h2 id="unaryoperator">UnaryOperator</h2>
+<p><code>UnaryOperator</code> es una interfaz funcional que extiende de <code>Function</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@FunctionalInterface</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UnaryOperator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">UnaryOperator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">identity</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">t</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>UnaryOperator</code> se crea con un tipo de dato y devuelve un resultado del mismo tipo de su argumento.</p>
+<div class="highlight"><pre><span></span><code><span class="n">UnaryOperator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">func2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">resultado</span> <span class="o">=</span> <span class="n">func2</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">resultado</span><span class="p">);</span><span class="c1">//imprime 4</span>
 </code></pre></div>
                 
               
