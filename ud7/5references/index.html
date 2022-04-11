@@ -1568,16 +1568,27 @@
 </code></pre></div>
 <p>Dado que los parámetros de los métodos <code>Finder.find()</code> y <code>MyClass.doFind()</code> coinciden, es posible crear una expresión lambda que implemente <code>Finder.find()</code> y haga referencia al método <code>MyClass.doFind()</code>.</p>
 <h2 id="referencia-a-metodos-con-parametro">Referencia a métodos con parámetro</h2>
-<p>También puede hacer referencia a un método con parámetros.</p>
+<p>También puede hacer referencia a un método con parámetros de objeto de la clase al método que se llama.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Finder</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="n">String</span> <span class="n">s1</span><span class="p">,</span> <span class="n">String</span> <span class="n">s2</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="n">MyClass</span> <span class="n">mc</span><span class="p">,</span> <span class="n">String</span> <span class="n">s1</span><span class="p">,</span> <span class="n">String</span> <span class="n">s2</span><span class="p">);</span>
 <span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">check</span><span class="p">(</span><span class="n">String</span> <span class="n">s1</span><span class="p">,</span> <span class="n">String</span> <span class="n">s2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">s1</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//dentro del main</span>
+<span class="c1">//Aunque es un método de instancia, no estático</span>
+<span class="c1">//podemos llamarlo con la clase porque en la interfaz</span>
+<span class="c1">//está añadido un parámetro de tipo MyClass</span>
+<span class="n">Finder</span> <span class="n">finder</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">::</span><span class="n">check</span><span class="p">;</span>
 </code></pre></div>
-<p>La interfaz tiene un método capaz de buscar en s1 las ocurrencias de s2.
-Si quisiéramos hacerlo con una expresión lambda sin usar referencia de métodos que llama a String.indexOf() para buscar sería:</p>
+<p>Si quisiéramos hacerlo con una expresión lambda sin usar referencia de métodos que llama a String.indexOf() para buscar sería:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Finder</span> <span class="n">finder</span> <span class="o">=</span> <span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">s1</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span>
 </code></pre></div>
-<p>Su equivalente utilizando referencia de métodos en la expresión lambda sería:</p>
+<p>Su equivalente utilizando referencia de métodos con parámetro de objeto en la expresión lambda sería:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Finder</span> <span class="n">finder</span> <span class="o">=</span> <span class="n">String</span><span class="p">::</span><span class="n">indexOf</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">numero</span> <span class="o">=</span> <span class="n">finder</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">);</span>
 </code></pre></div>
