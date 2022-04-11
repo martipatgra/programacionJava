@@ -1379,8 +1379,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#referencia-a-metodos-con-parametros" class="md-nav__link">
-    Referencia a métodos con parámetros
+  <a href="#referencia-a-metodos-con-parametro" class="md-nav__link">
+    Referencia a métodos con parámetro
   </a>
   
 </li>
@@ -1488,8 +1488,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#referencia-a-metodos-con-parametros" class="md-nav__link">
-    Referencia a métodos con parámetros
+  <a href="#referencia-a-metodos-con-parametro" class="md-nav__link">
+    Referencia a métodos con parámetro
   </a>
   
 </li>
@@ -1567,7 +1567,7 @@
 <div class="highlight"><pre><span></span><code><span class="n">Finder</span> <span class="n">finder</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">::</span><span class="n">doFind</span><span class="p">;</span>
 </code></pre></div>
 <p>Dado que los parámetros de los métodos <code>Finder.find()</code> y <code>MyClass.doFind()</code> coinciden, es posible crear una expresión lambda que implemente <code>Finder.find()</code> y haga referencia al método <code>MyClass.doFind()</code>.</p>
-<h2 id="referencia-a-metodos-con-parametros">Referencia a métodos con parámetros</h2>
+<h2 id="referencia-a-metodos-con-parametro">Referencia a métodos con parámetro</h2>
 <p>También puede hacer referencia a un método con parámetros.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Finder</span> <span class="p">{</span>
     <span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="n">String</span> <span class="n">s1</span><span class="p">,</span> <span class="n">String</span> <span class="n">s2</span><span class="p">);</span>
@@ -1579,6 +1579,7 @@ Si quisiéramos hacerlo con una expresión lambda sin usar referencia de método
 </code></pre></div>
 <p>Su equivalente utilizando referencia de métodos en la expresión lambda sería:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Finder</span> <span class="n">finder</span> <span class="o">=</span> <span class="n">String</span><span class="p">::</span><span class="n">indexOf</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">numero</span> <span class="o">=</span> <span class="n">finder</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">);</span>
 </code></pre></div>
 <p>Observe cómo la versión abreviada hace referencia a un solo método. El compilador de Java intentará hacer coincidir el método al que se hace referencia con el primer tipo de parámetro, utilizando el segundo tipo de parámetro como parámetro del método al que se hace referencia.</p>
 <h2 id="referencia-a-metodos-de-instancia">Referencia a métodos de instancia</h2>
@@ -1602,6 +1603,7 @@ Si quisiéramos hacerlo con una expresión lambda sin usar referencia de método
 <h2 id="referencias-a-constructores">Referencias a constructores</h2>
 <p>Finalmente, es posible hacer referencia a un constructor de una clase. Para ello, se escribe el nombre de la clase seguido de <strong>::new</strong>:</p>
 <div class="highlight"><pre><span></span><code><span class="nl">MiClase</span><span class="p">::</span><span class="k">new</span>
+<span class="n">Usuario</span> <span class="n">usuario</span> <span class="o">=</span> <span class="n">Usuario</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="n">Supplier</span><span class="o">&lt;</span><span class="n">Usuario</span><span class="o">&gt;</span> <span class="n">usu</span> <span class="o">=</span> <span class="n">Usuario</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
 <span class="c1">//Construye un objeto de tipo usuario que es devuelto por método get();</span>
