@@ -1440,6 +1440,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#toarray" class="md-nav__link">
+    ToArray()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorted" class="md-nav__link">
+    Sorted()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min" class="md-nav__link">
+    Min()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max" class="md-nav__link">
+    Max()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distinct" class="md-nav__link">
+    Distinct()
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1571,6 +1606,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#toarray" class="md-nav__link">
+    ToArray()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorted" class="md-nav__link">
+    Sorted()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min" class="md-nav__link">
+    Min()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max" class="md-nav__link">
+    Max()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distinct" class="md-nav__link">
+    Distinct()
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1617,6 +1687,19 @@
 Recibe como parámetro una expresión lambda <code>Predicate</code> la cual debe devolver <code>true</code> solo en aquellos elementos que se quedarán en el <em>stream</em> y <code>false</code> para aquellos elementos que se deben eliminar.</p>
 <h3 id="findfirst"><code>FindFirst()</code></h3>
 <p>Se utiliza para devolver el primer elemento encontrado del <em>stream</em>. Se suele utilizar en combinación con otras funciones cuando hay que seleccionar un único valor del <em>stream</em> que cumpla determinadas condiciones.</p>
+<p><code>findFirst</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devovler ningún elemento del <em>stream</em>.</p>
+<h3 id="toarray"><code>ToArray()</code></h3>
+<p>Con este método se puede convertir cualquier tipo de <code>Collection</code> en un array de forma sencilla.</p>
+<h3 id="sorted"><code>Sorted()</code></h3>
+<p>Se utiliza para ordenar los elementos del <em>stream</em>. Recibe como parámetro una expresión lambda de tipo <code>Comparator</code> para que podamos indicar la lógica de la ordenación.</p>
+<h3 id="min"><code>Min()</code></h3>
+<p>Con <code>min</code> se obtiene el elemento del <em>stream</em> con el valor mínimo calculado a partir de una expresión lambda de tipo <code>Comparator</code> que indicamos como parámetro.</p>
+<p><code>min</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del <em>stream</em>.</p>
+<h3 id="max"><code>Max()</code></h3>
+<p>Con <code>max</code> se obtiene el elemento del <em>stream</em> con el valor máximo calculado a partir de una expresión lambda de tipo <code>Comparator</code> que indicamos como parámetro de la expresión.</p>
+<p><code>max</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del <em>stream</em>.</p>
+<h3 id="distinct"><code>Distinct()</code></h3>
+<p>Con <code>distinct</code> se seleccionan los elementos distintos dentro del <em>stream</em> eliminando los duplicados.</p>
                 
               
               
