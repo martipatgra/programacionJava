@@ -1673,14 +1673,38 @@
 <li><strong>Operaciones intermedias</strong> como por ejemplo el método filter, que permite hacer una selección a partir de un predicado.</li>
 <li><strong>Operaciones terminales</strong>, como por ejemplo los métodos max, min, forEach, findFirst etc.</li>
 </ol>
+<p>La fuente proporciona los elementos a la tubería.</p>
+<p>Las operaciones intermedias obtienen elementos uno por uno y los procesan. Todas las operaciones intermedias son perezosas (lazy) y, como resultado, ninguna operación tendrá ningún efecto hasta que la tubería comience a funcionar.</p>
+<p>Las operaciones terminales significan el final del ciclo de vida del steam. Lo más importante para nuestro escenario es que inician el trabajo en la tubería.</p>
 <h2 id="funciones-de-stream">Funciones de Stream</h2>
+<p><img alt="Streams" src="../../img/ud7/streams2.png" /></p>
 <h3 id="collect"><code>Collect()</code></h3>
 <p>Se utiliza para indicar el tipo de colección en la que se devolverá el resultado final de todas las operaciones realizadas en el <em>stream</em>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;Texto1&quot;</span><span class="p">,</span> <span class="s">&quot;Texto2&quot;</span><span class="p">);</span>
+<span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">set</span> <span class="o">=</span> <span class="n">lista</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toSet</span><span class="p">());</span>
+</code></pre></div>
 <h3 id="peek"><code>Peek()</code></h3>
 <p>El método <code>peek</code> recibe como parámetro una expresión lambda de tipo <code>Consumer</code> para poder utilizar cada elemento del stream. Normalmente se utilizar para mostrar por consola el contenido del <em>stream</em>.</p>
+<p>Este método existe principalmente para la depuración del programa, donde se desea ver los elementos a medida que pasan por un punto determinado en el pipeline.</p>
+<p><code>peek()</code> también se utiliza cuando queremos <strong>alterar el estado interno de un elemento</strong> (aunque esto no es muy común).</p>
+<div class="highlight"><pre><span></span><code><span class="n">Stream</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;one&quot;</span><span class="p">,</span> <span class="s">&quot;two&quot;</span><span class="p">,</span> <span class="s">&quot;three&quot;</span><span class="p">,</span> <span class="s">&quot;four&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">e</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">peek</span><span class="p">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Filtered value: &quot;</span> <span class="o">+</span> <span class="n">e</span><span class="p">))</span>
+  <span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">String</span><span class="p">::</span><span class="n">toUpperCase</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">peek</span><span class="p">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mapped value: &quot;</span> <span class="o">+</span> <span class="n">e</span><span class="p">))</span>
+  <span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+</code></pre></div>
 <h3 id="map"><code>Map()</code></h3>
 <p>El método <code>map</code> recibe como parámetro una expresión lambda de tipo <code>Function</code>, por lo que debemos especificar una función que recibe como parámetro de entrada cada elemento del <em>stream</em>, y devuelve un objeto que puede ser un tipo de dato distinto o el mismo.</p>
-<p>Se utiliza para modificar el contenido del <em>stream</em>.</p>
+<p>La función se aplica a cada uno de los elementos del <em>stream</em>.
+Se utiliza para modificar el contenido del <em>stream</em>.
+<code>map()</code> devuelve un stream nuevo que consta de los resultados de aplicar la función dada a los elementos del <em>stream</em>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span>
+
+<span class="c1">//Mostramos el nuevo stream devuelto por map</span>
+<span class="n">list</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">map</span><span class="p">(</span><span class="n">number</span> <span class="o">-&gt;</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">3</span><span class="p">).</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+<span class="c1">//[9 18 27 36 45]</span>
+</code></pre></div>
 <h3 id="foreach"><code>ForEach()</code></h3>
 <p>Recorremos cada elemento del <em>stream</em> para realizar alguna acción con él. Como bien sabemos recibe como parámetro una exprsión lambda de tipo <code>Consumer</code>.</p>
 <h3 id="filter"><code>Filter()</code></h3>
