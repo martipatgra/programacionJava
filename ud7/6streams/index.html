@@ -1360,9 +1360,94 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          7.6 Streams
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         7.6 Streams
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#partes-de-un-stream" class="md-nav__link">
+    Partes de un Stream
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-de-stream" class="md-nav__link">
+    Funciones de Stream
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones de Stream">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collect" class="md-nav__link">
+    Collect()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peek" class="md-nav__link">
+    Peek()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    Map()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foreach" class="md-nav__link">
+    ForEach()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    Filter()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#findfirst" class="md-nav__link">
+    FindFirst()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1423,6 +1508,76 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#partes-de-un-stream" class="md-nav__link">
+    Partes de un Stream
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-de-stream" class="md-nav__link">
+    Funciones de Stream
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones de Stream">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collect" class="md-nav__link">
+    Collect()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peek" class="md-nav__link">
+    Peek()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    Map()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foreach" class="md-nav__link">
+    ForEach()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    Filter()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#findfirst" class="md-nav__link">
+    FindFirst()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1439,6 +1594,29 @@
 <p>La API <code>Stream</code> permite manipular las colecciones como nunca antes. Nos permite realizar operaciones sobre la colección, como por ejemplo, buscar, filtrar, reordenar, etc.</p>
 <p>Con Streams podemos utilizar cualquier clase que implemente la interfaz <code>Collection</code> como si fuese un <code>Stream</code> con la ventaja que nos ofrecen las expresiones lambda.</p>
 <p>Con streams hay que tener el cuenta que la fuente o colección que utilicemos no se puede modificar y no debe afectar al estado de la misma. Cada operación dentro del stream debe verse como una operación independiente que opera sobre el argumento (colección).</p>
+<p>A través del API Stream podemos trabajar sobre colecciones como si estuviéramos realizando sentencias SQL pero de una manera limpia y clara, evitando bucles y algoritmos que ralentizan los programas e incluso hacen que el código se torne inmanejable.</p>
+<h2 id="partes-de-un-stream">Partes de un Stream</h2>
+<p>De forma genérica existen 3 partes que componen un Stream:</p>
+<ol>
+<li>Un Stream funciona a partir de una lista o colección, que también se la conoce <strong>como la fuente de donde obtienen información</strong>.</li>
+<li><strong>Operaciones intermedias</strong> como por ejemplo el método filter, que permite hacer una selección a partir de un predicado.</li>
+<li><strong>Operaciones terminales</strong>, como por ejemplo los métodos max, min, forEach, findFirst etc.</li>
+</ol>
+<h2 id="funciones-de-stream">Funciones de Stream</h2>
+<h3 id="collect"><code>Collect()</code></h3>
+<p>Se utiliza para indicar el tipo de colección en la que se devolverá el resultado final de todas las operaciones realizadas en el <em>stream</em>.</p>
+<h3 id="peek"><code>Peek()</code></h3>
+<p>El método <code>peek</code> recibe como parámetro una expresión lambda de tipo <code>Consumer</code> para poder utilizar cada elemento del stream. Normalmente se utilizar para mostrar por consola el contenido del <em>stream</em>.</p>
+<h3 id="map"><code>Map()</code></h3>
+<p>El método <code>map</code> recibe como parámetro una expresión lambda de tipo <code>Function</code>, por lo que debemos especificar una función que recibe como parámetro de entrada cada elemento del <em>stream</em>, y devuelve un objeto que puede ser un tipo de dato distinto o el mismo.</p>
+<p>Se utiliza para modificar el contenido del <em>stream</em>.</p>
+<h3 id="foreach"><code>ForEach()</code></h3>
+<p>Recorremos cada elemento del <em>stream</em> para realizar alguna acción con él. Como bien sabemos recibe como parámetro una exprsión lambda de tipo <code>Consumer</code>.</p>
+<h3 id="filter"><code>Filter()</code></h3>
+<p>Como su nombre indica lo que hacemos es filtrar de todos los elementos del <em>stream</em> solo aquellos que cumplan una determinada condición.
+Recibe como parámetro una expresión lambda <code>Predicate</code> la cual debe devolver <code>true</code> solo en aquellos elementos que se quedarán en el <em>stream</em> y <code>false</code> para aquellos elementos que se deben eliminar.</p>
+<h3 id="findfirst"><code>FindFirst()</code></h3>
+<p>Se utiliza para devolver el primer elemento encontrado del <em>stream</em>. Se suele utilizar en combinación con otras funciones cuando hay que seleccionar un único valor del <em>stream</em> que cumpla determinadas condiciones.</p>
                 
               
               
