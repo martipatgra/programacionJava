@@ -1712,7 +1712,7 @@
 </code></pre></div>
 <h3 id="map"><code>Map()</code></h3>
 <p>El método <code>map</code> recibe como parámetro una expresión lambda de tipo <code>Function</code>, por lo que debemos especificar una función que recibe como parámetro de entrada cada elemento del <em>stream</em>, y devuelve un objeto que puede ser un tipo de dato distinto o el mismo.</p>
-<p>La función se aplica a cada uno de los elementos del <em>stream</em>.
+<p>La función se aplica a cada uno de los elementos del <em>stream</em> para realizar alguna transformación sobre cada elemento y devuelve <strong>otro Stream</strong> sobre el cual puedes seguir trabajando.
 Se utiliza para modificar el contenido del <em>stream</em>.
 <code>map()</code> devuelve un stream nuevo que consta de los resultados de aplicar la función dada a los elementos del <em>stream</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span>
