@@ -1665,6 +1665,7 @@
 <p>Con Streams podemos utilizar cualquier clase que implemente la interfaz <code>Collection</code> como si fuese un <code>Stream</code> con la ventaja que nos ofrecen las expresiones lambda.</p>
 <p>Con streams hay que tener el cuenta que la fuente o colección que utilicemos no se puede modificar y no debe afectar al estado de la misma. Cada operación dentro del stream debe verse como una operación independiente que opera sobre el argumento (colección).</p>
 <p>A través del API Stream podemos trabajar sobre colecciones como si estuviéramos realizando sentencias SQL pero de una manera limpia y clara, evitando bucles y algoritmos que ralentizan los programas e incluso hacen que el código se torne inmanejable.</p>
+<p><strong>Cada operación del stream debe verse como un paso independiente, es decir, no se puede usar variables intermedias</strong>.</p>
 <h2 id="partes-de-un-stream">Partes de un Stream</h2>
 <p><img alt="Streams" src="../../img/ud7/7streams.png" /></p>
 <p>De forma genérica existen 3 partes que componen un Stream:</p>
