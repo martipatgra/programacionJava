@@ -1722,11 +1722,24 @@ Se utiliza para modificar el contenido del <em>stream</em>.
 <span class="c1">//[9 18 27 36 45]</span>
 </code></pre></div>
 <h3 id="flatmap"><code>FlatMap</code></h3>
+<p>Cuando nos encontramos con estructuras más complejas, como por ejemplo una lista con otra lista, trabajar con <code>map()</code> no es suficiente, por ello, utilizamos <code>flatMap()</code> que lo que hace es "aplanar" el resultado para quedarnos con un <em>stream</em> plano.</p>
 <p>Es una función que recibe una entrada y devuelve varias salidas para esa entrada. Esa es la diferencia con respecto a <code>map()</code> que recibe solo un parámetro de entrada y devuelve una salida.</p>
 <p><code>flatMap()</code> es una operación intermedia y devuelve un nuevo <em>Stream</em>.
 Devuelve un Stream que consiste en los resultados de reemplazar cada elemento del <em>stream</em> dado con el contenido de un <em>stream</em> mapeado producido al aplicar la función de mapeo provista a cada elemento.
 La función de mapeo utilizada para la transformación en <code>flatMap()</code> es una función sin estado y solo devuelve una secuencia de nuevos valores.</p>
-<div class="highlight"><pre><span></span><code>
+<p>En el siguiente ejemplo el programa usa la operación <code>flatMap()</code> para convertir una lista de una lista <code>List&lt;List&lt;Integer&gt;&gt;</code> a una lista <code>List&lt;Integer&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list1</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list2</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list3</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">);</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">listOfLists</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span> <span class="n">list2</span><span class="p">,</span> <span class="n">list3</span><span class="p">);</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">listOfAllIntegers</span> <span class="o">=</span> <span class="n">listOfLists</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+          <span class="p">.</span><span class="na">flatMap</span><span class="p">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span><span class="p">.</span><span class="na">stream</span><span class="p">())</span>
+          <span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">listOfAllIntegers</span><span class="p">);</span>
+<span class="c1">//[1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
 </code></pre></div>
 <h3 id="foreach"><code>ForEach()</code></h3>
 <p>Recorremos cada elemento del <em>stream</em> para realizar alguna acción con él. Como bien sabemos recibe como parámetro una exprsión lambda de tipo <code>Consumer</code>.</p>
