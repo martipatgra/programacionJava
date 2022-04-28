@@ -1495,6 +1495,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7regularexpressions/" class="md-nav__link">
+        7.7 Expresiones regulares
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1695,7 +1707,7 @@
 <h2 id="funciones-de-stream">Funciones de Stream</h2>
 <p><img alt="Streams" src="../../img/ud7/streams3.png" /></p>
 <h3 id="collect"><code>Collect()</code></h3>
-<p>Se utiliza para indicar el tipo de colección en la que se devolverá el resultado final de todas las operaciones realizadas en el <em>stream</em>.</p>
+<p>Es una operación terminal, se utiliza para indicar el tipo de colección en la que se devolverá el resultado final de todas las operaciones realizadas en el <em>stream</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;Texto1&quot;</span><span class="p">,</span> <span class="s">&quot;Texto2&quot;</span><span class="p">);</span>
 <span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">set</span> <span class="o">=</span> <span class="n">lista</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toSet</span><span class="p">());</span>
 </code></pre></div>
@@ -1722,7 +1734,7 @@ Se utiliza para modificar el contenido del <em>stream</em>.
 <span class="c1">//[9 18 27 36 45]</span>
 </code></pre></div>
 <h3 id="flatmap"><code>FlatMap</code></h3>
-<p>Cuando nos encontramos con estructuras más complejas, como por ejemplo una lista con otra lista, trabajar con <code>map()</code> no es suficiente, por ello, utilizamos <code>flatMap()</code> que lo que hace es "aplanar" el resultado para quedarnos con un <em>stream</em> plano.</p>
+<p>Cuando nos encontramos con estructuras más complejas, como por ejemplo una lista con otra lista, trabajar con <code>map()</code> no es suficiente, por ello, utilizamos <code>flatMap()</code> que lo que hace es "aplanar" listas anidadas y quedarnos con un <em>stream</em> plano.</p>
 <p>Es una función que recibe una entrada y devuelve varias salidas para esa entrada. Esa es la diferencia con respecto a <code>map()</code> que recibe solo un parámetro de entrada y devuelve una salida.</p>
 <p><code>flatMap()</code> es una operación intermedia y devuelve un nuevo <em>Stream</em>.
 Devuelve un Stream que consiste en los resultados de reemplazar cada elemento del <em>stream</em> dado con el contenido de un <em>stream</em> mapeado producido al aplicar la función de mapeo provista a cada elemento.
@@ -1760,7 +1772,8 @@ Recibe como parámetro una expresión lambda <code>Predicate</code> la cual debe
 <p>Con <code>max</code> se obtiene el elemento del <em>stream</em> con el valor máximo calculado a partir de una expresión lambda de tipo <code>Comparator</code> que indicamos como parámetro de la expresión.</p>
 <p><code>max</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del <em>stream</em>.</p>
 <h3 id="distinct"><code>Distinct()</code></h3>
-<p>Con <code>distinct</code> se seleccionan los elementos distintos dentro del <em>stream</em> eliminando los duplicados.</p>
+<p>Con <code>distinct</code> se seleccionan los elementos distintos dentro del <em>stream</em> eliminando los duplicados.
+Los elementos se comparan utilizando el método equals().</p>
                 
               
               
@@ -1801,13 +1814,13 @@ Recibe como parámetro una expresión lambda <code>Predicate</code> la cual debe
       
       
         
-        <a href="../../shortcuts/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Atajos de teclado para IntelliJ" rel="next">
+        <a href="../7regularexpressions/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 7.7 Expresiones regulares" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Siguiente
               </span>
-              Atajos de teclado para IntelliJ
+              7.7 Expresiones regulares
             </div>
           </div>
           <div class="md-footer__button md-icon">
