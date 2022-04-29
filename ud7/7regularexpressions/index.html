@@ -1400,6 +1400,19 @@
     Clases de caracteres y límites de coincidencia
   </a>
   
+    <nav class="md-nav" aria-label="Clases de caracteres y límites de coincidencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#especificacion-de-modos-dentro-de-la-expresion-regular" class="md-nav__link">
+    Especificación de modos dentro de la expresión regular
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1483,6 +1496,19 @@
     Clases de caracteres y límites de coincidencia
   </a>
   
+    <nav class="md-nav" aria-label="Clases de caracteres y límites de coincidencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#especificacion-de-modos-dentro-de-la-expresion-regular" class="md-nav__link">
+    Especificación de modos dentro de la expresión regular
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1551,14 +1577,29 @@
 </tr>
 <tr>
 <td>[^abc]</td>
-<td>El símbolo dentro de los corchetes indica negación. El String debe coincidir con cualquier carácter excepto a ó b ó c.</td>
+<td>El símbolo ^ dentro de los corchetes indica negación. El String debe coincidir con cualquier carácter excepto a ó b ó c.</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>[a-z1-9]</td>
+<td>Rango. Busca coincidir las letras minúsculas de la a a la z (ambas incluidas) y los dígitos del 1 al 9 (ambos incluidos).</td>
+</tr>
+<tr>
+<td>a|b</td>
+<td>Encuentra en el String las ocurrencias de a ó b.</td>
+</tr>
+<tr>
+<td>ab</td>
+<td>Encuentra en el String todas las ocurrencias de 'a' seguido de una 'b'.</td>
 </tr>
 </tbody>
 </table>
+<h3 id="especificacion-de-modos-dentro-de-la-expresion-regular">Especificación de modos dentro de la expresión regular</h3>
+<p>Puede agregar los siguientes modificadores de modo al comienzo de la expresión regular. Para especificar múltiples modos, simplemente se juntan: (?ismx).</p>
+<ul>
+<li>(?i) hace que la expresión regular sea insensible a mayúsculas y minúsculas.</li>
+<li>(?s) para "modo de una sola línea" hace que el punto coincida con todos los caracteres, incluidos los saltos de línea.</li>
+<li>(?m) para "modo multilínea" hace que el símbolo de intercalación y el dólar coincidan al principio y al final de cada línea en la cadena de asunto.</li>
+</ul>
 <h2 id="cuantificadores-regex">Cuantificadores Regex</h2>
 <p>Los cuantificadores especifican el número de ocurrencias de un carácter.</p>
                 
