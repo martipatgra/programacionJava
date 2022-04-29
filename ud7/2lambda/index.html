@@ -1418,47 +1418,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#referencia-a-metodos-en-expresiones-lambda" class="md-nav__link">
-    Referencia a métodos en expresiones lambda
-  </a>
-  
-    <nav class="md-nav" aria-label="Referencia a métodos en expresiones lambda">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#referencias-a-metodos-estaticos" class="md-nav__link">
-    Referencias a métodos estáticos
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#referencia-a-metodos-con-parametros" class="md-nav__link">
-    Referencia a métodos con parámetros
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#referencia-a-metodos-de-instancia" class="md-nav__link">
-    Referencia a métodos de instancia
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#referencias-a-constructores" class="md-nav__link">
-    Referencias a constructores
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1668,47 +1627,6 @@
   <a href="#crear-una-expresion-lambda-a-partir-de-un-metodo" class="md-nav__link">
     Crear una expresión lambda a partir de un método
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referencia-a-metodos-en-expresiones-lambda" class="md-nav__link">
-    Referencia a métodos en expresiones lambda
-  </a>
-  
-    <nav class="md-nav" aria-label="Referencia a métodos en expresiones lambda">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#referencias-a-metodos-estaticos" class="md-nav__link">
-    Referencias a métodos estáticos
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#referencia-a-metodos-con-parametros" class="md-nav__link">
-    Referencia a métodos con parámetros
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#referencia-a-metodos-de-instancia" class="md-nav__link">
-    Referencia a métodos de instancia
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#referencias-a-constructores" class="md-nav__link">
-    Referencias a constructores
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1931,108 +1849,6 @@ p1 -&gt; {body}</p>
 </code></pre></div>
 <p>Para ejecutar el código en el interior de la expresión lambda, utilizaremos el método <code>apply</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">funcionLambda</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="s">&quot;Programación&quot;</span><span class="p">));</span>
-</code></pre></div>
-<h2 id="referencia-a-metodos-en-expresiones-lambda">Referencia a métodos en expresiones lambda</h2>
-<p>En el caso de que todo lo que haga la expresión lambda sea <strong>llamar a otro método con los parámetros pasados ​​a la lambda</strong>, la implementación de Java lambda proporciona una forma más corta de expresar la llamada al método, que es usando <strong>::</strong>.</p>
-<p>Veamos un ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Impresora</span><span class="p">{</span>
-    <span class="kt">void</span> <span class="nf">imprimir</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Si usáramos lambda sin referencias a métodos, lo haríamos de la siguiente forma:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Impresora</span> <span class="n">impresora</span> <span class="o">=</span> <span class="n">s</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-</code></pre></div>
-<p>Dado que todo lo que hace el cuerpo lambda es reenviar el parámetro String al método System.out.println(), podemos reemplazar la declaración lambda anterior con una referencia de método utilizando ::. De forma que quedaría:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Impresora</span> <span class="n">impresora</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">names</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="p">();</span>
-<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Andrea&quot;</span><span class="p">);</span>
-<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Luisa&quot;</span><span class="p">);</span>
-<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Diego&quot;</span><span class="p">);</span>
-<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Paúl&quot;</span><span class="p">);</span>
-<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Dario&quot;</span><span class="p">);</span>
-<span class="n">names</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
-</code></pre></div>
-<p>Observa los dos puntos dobles <strong>::</strong> . Estos le indican al compilador de Java que se trata de <strong>una referencia de método</strong>. El método al que se hace referencia es lo que viene después de los dos puntos dobles. Cualquier clase u objeto que posea el método al que se hace referencia viene antes de los dos puntos dobles.</p>
-<p>Podemos hacer referencia a los siguientes tipos de métodos:</p>
-<ul>
-<li>Método estático</li>
-<li>Método con parámetros de objeto</li>
-<li>Método de instancia</li>
-<li>Constructor</li>
-</ul>
-<h3 id="referencias-a-metodos-estaticos">Referencias a métodos estáticos</h3>
-<p>Los métodos más fáciles de referenciar son los métodos estáticos. Veamos un ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Finder</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="n">String</span> <span class="n">s1</span><span class="p">,</span> <span class="n">String</span> <span class="n">s2</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyClass</span><span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">doFind</span><span class="p">(</span><span class="n">String</span> <span class="n">s1</span><span class="p">,</span> <span class="n">String</span> <span class="n">s2</span><span class="p">){</span>
-        <span class="k">return</span> <span class="n">s1</span><span class="p">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>La referencia al método estático <code>doFind</code> se haría con:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Finder</span> <span class="n">finder</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">::</span><span class="n">doFind</span><span class="p">;</span>
-</code></pre></div>
-<p>Dado que los parámetros de los métodos <code>Finder.find()</code> y <code>MyClass.doFind()</code> coinciden, es posible crear una expresión lambda que implemente <code>Finder.find()</code> y haga referencia al método <code>MyClass.doFind()</code>.</p>
-<h3 id="referencia-a-metodos-con-parametros">Referencia a métodos con parámetros</h3>
-<p>También puede hacer referencia a un método con parámetros.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Finder</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="n">String</span> <span class="n">s1</span><span class="p">,</span> <span class="n">String</span> <span class="n">s2</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>La interfaz tiene un método capaz de buscar en s1 las ocurrencias de s2.
-Si quisiéramos hacerlo con una expresión lambda sin usar referencia de métodos que llama a String.indexOf() para buscar sería:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Finder</span> <span class="n">finder</span> <span class="o">=</span> <span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">s1</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span>
-</code></pre></div>
-<p>Su equivalente utilizando referencia de métodos en la expresión lambda sería:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Finder</span> <span class="n">finder</span> <span class="o">=</span> <span class="n">String</span><span class="p">::</span><span class="n">indexOf</span><span class="p">;</span>
-</code></pre></div>
-<p>Observe cómo la versión abreviada hace referencia a un solo método. El compilador de Java intentará hacer coincidir el método al que se hace referencia con el primer tipo de parámetro, utilizando el segundo tipo de parámetro como parámetro del método al que se hace referencia.</p>
-<h3 id="referencia-a-metodos-de-instancia">Referencia a métodos de instancia</h3>
-<p>En tercer lugar, también es posible hacer referencia a un método de instancia desde una definición lambda.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Deserializer</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="nf">deserialize</span><span class="p">(</span><span class="n">String</span> <span class="n">v1</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Esta interfaz representa un componente que es capaz de "deserializar" un String en un int.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StringConverter</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">convertToInt</span><span class="p">(</span><span class="n">String</span> <span class="n">v1</span><span class="p">){</span>
-        <span class="k">return</span> <span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">v1</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>El método <code>convertToInt()</code> tiene la misma signatura que el método <code>deserialize()</code> del método de la interfaz <code>Deserializer</code>. Por eso, podemos crear una instancia de StringConverter y hacer referencia a su método convertToInt() desde una expresión lambda de Java.</p>
-<div class="highlight"><pre><span></span><code><span class="n">StringConverter</span> <span class="n">stringConverter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringConverter</span><span class="p">();</span>
-<span class="n">Deserializador</span> <span class="n">des</span> <span class="o">=</span> <span class="n">stringConverter</span><span class="p">::</span><span class="n">convertToInt</span><span class="p">;</span>
-</code></pre></div>
-<p>La expresión lambda creada por la segunda de las dos líneas hace referencia al método convertToInt de la instancia de StringConverter creada en la primera línea.</p>
-<h3 id="referencias-a-constructores">Referencias a constructores</h3>
-<p>Finalmente, es posible hacer referencia a un constructor de una clase. Para ello, se escribe el nombre de la clase seguido de <strong>::new</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="nl">MiClase</span><span class="p">::</span><span class="k">new</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">Supplier</span><span class="o">&lt;</span><span class="n">Usuario</span><span class="o">&gt;</span> <span class="n">usu</span> <span class="o">=</span> <span class="n">Usuario</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
-<span class="c1">//Construye un objeto de tipo usuario que es devuelto por método get();</span>
-<span class="n">Usuario</span> <span class="n">usuario</span> <span class="o">=</span> <span class="n">usu</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
-</code></pre></div>
-<p>Veamos otro ejemplo utilizando <code>BiFunction</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Pruebas</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">BiFunction</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">Usuario</span><span class="o">&gt;</span> <span class="n">crearUsuario</span> <span class="o">=</span> <span class="n">Usuario</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
-        <span class="n">Usuario</span> <span class="n">u</span> <span class="o">=</span> <span class="n">crearUsuario</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="kd">class</span> <span class="nc">Usuario</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">nombre</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">edad</span><span class="p">;</span>
-
-    <span class="kd">public</span> <span class="nf">Usuario</span><span class="p">(</span><span class="n">String</span> <span class="n">nombre</span><span class="p">,</span> <span class="kt">int</span> <span class="n">edad</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">nombre</span> <span class="o">=</span> <span class="n">nombre</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">edad</span> <span class="o">=</span> <span class="n">edad</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
 </code></pre></div>
                 
               
