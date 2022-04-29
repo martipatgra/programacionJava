@@ -1400,7 +1400,14 @@
     Clases de caracteres y límites de coincidencia
   </a>
   
-    <nav class="md-nav" aria-label="Clases de caracteres y límites de coincidencia">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-caracteres" class="md-nav__link">
+    Meta caracteres
+  </a>
+  
+    <nav class="md-nav" aria-label="Meta caracteres">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1496,7 +1503,14 @@
     Clases de caracteres y límites de coincidencia
   </a>
   
-    <nav class="md-nav" aria-label="Clases de caracteres y límites de coincidencia">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-caracteres" class="md-nav__link">
+    Meta caracteres
+  </a>
+  
+    <nav class="md-nav" aria-label="Meta caracteres">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1590,6 +1604,50 @@
 <tr>
 <td>ab</td>
 <td>Encuentra en el String todas las ocurrencias de 'a' seguido de una 'b'.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="meta-caracteres">Meta caracteres</h2>
+<p>Los siguientes metacaracteres tienen un significado predefinido y hacen que ciertos patrones comunes sean más fáciles de usar. Por ejemplo, puede usar \d como definición simplificada para [0..9].</p>
+<table>
+<thead>
+<tr>
+<th>Regex</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\d</td>
+<td>Cualquier dígito. Equivale a [0-9].</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>No dígito. Equivale a [^0-9].</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>Espacio en blanco. Equivale a [ \t\n\x0b\r\f]</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>No espacio en blanco. Equivale a [^\s]</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>Una letra mayúscula o minúscula, un dígito o el carácter '_'. Equivale a  [a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>Equivale a [^\w]</td>
+</tr>
+<tr>
+<td>\S+</td>
+<td>Varios caracteres que no son espacios en blanco</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>Límite de una palabra</td>
 </tr>
 </tbody>
 </table>
