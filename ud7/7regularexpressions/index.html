@@ -1372,9 +1372,46 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          7.7 Expresiones regulares
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         7.7 Expresiones regulares
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clases-de-caracteres-y-limites-de-coincidencia" class="md-nav__link">
+    Clases de caracteres y límites de coincidencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuantificadores-regex" class="md-nav__link">
+    Cuantificadores Regex
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1435,6 +1472,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clases-de-caracteres-y-limites-de-coincidencia" class="md-nav__link">
+    Clases de caracteres y límites de coincidencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuantificadores-regex" class="md-nav__link">
+    Cuantificadores Regex
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1458,6 +1517,50 @@
 <li>Pattern class</li>
 <li>PatternSyntaxException class</li>
 </ul>
+<h2 id="clases-de-caracteres-y-limites-de-coincidencia">Clases de caracteres y límites de coincidencia</h2>
+<p>La forma más simple de una expresión regular (regex) es una cadena, un literal, un String. Por ejemplo, "Hola" es una regex que coincide (matches) con la palabra "Hola".</p>
+<p>Si solo usáramos literales como patrón para buscar en un String, las regex no serían muy interesantes. Por eso, se crearon las <strong>Character classes &amp; boundary matches</strong>.</p>
+<p>Una clase caracter es como un comodín y representa un conjunto o clase de caracteres.</p>
+<table>
+<thead>
+<tr>
+<th>Regex</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>Coincide con cualquier carácter.</td>
+</tr>
+<tr>
+<td>^pattern</td>
+<td>El símbolo ^ indica al inicio del String. Encuentra la regex que coincide con el patrón dado al comienzo del String.</td>
+</tr>
+<tr>
+<td>pattern$</td>
+<td>El símbolo $ indica el final del String. Encuentra la regex que coincide con el patrón dado al final del String.</td>
+</tr>
+<tr>
+<td>[abc]</td>
+<td>Los corchetes representan un conjunto. El String debe coincidir con la/s letra/s dentro del corchete.</td>
+</tr>
+<tr>
+<td>[abc][12]</td>
+<td>El String debe coincidir con las letras a, b ó c, seguidas de 1 ó 2.</td>
+</tr>
+<tr>
+<td>[^abc]</td>
+<td>El símbolo dentro de los corchetes indica negación. El String debe coincidir con cualquier carácter excepto a ó b ó c.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="cuantificadores-regex">Cuantificadores Regex</h2>
+<p>Los cuantificadores especifican el número de ocurrencias de un carácter.</p>
                 
               
               
