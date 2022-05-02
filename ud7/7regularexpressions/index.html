@@ -1443,6 +1443,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#java-regex-core-classes" class="md-nav__link">
+    Java Regex Core Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-pattern" class="md-nav__link">
+    Clase Pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#clase-matcher" class="md-nav__link">
     Clase Matcher
   </a>
@@ -1562,6 +1576,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-regex-core-classes" class="md-nav__link">
+    Java Regex Core Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-pattern" class="md-nav__link">
+    Clase Pattern
+  </a>
   
 </li>
       
@@ -1740,18 +1768,40 @@
 <p><a href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html">https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html</a></p>
 <h3 id="entrena-tus-regex">Entrena tus Regex</h3>
 <p><a href="https://regexcrossword.com/">https://regexcrossword.com/</a></p>
-<h2 id="clase-matcher">Clase <strong>Matcher</strong></h2>
-<p>Implementa la interfaz <code>MatchResult</code>. Es un motor de expresiones regulares que se utiliza para realizar operaciones de coincidencia en una secuencia de caracteres.</p>
+<h2 id="java-regex-core-classes">Java Regex Core Classes</h2>
+<p>La API de expresiones regulares de Java consta de dos clases principales. Estos son:</p>
+<p><code>Pattern</code> (java.util.regex.Pattern)
+<code>Matcher</code> (java.util.regex.Matcher)</p>
+<h2 id="clase-pattern">Clase <code>Pattern</code></h2>
+<p>La clase <code>Pattern</code> se utiliza para crear patrones (expresiones regulares). Un patrón es una expresión regular precompilada en forma de objeto (como una instancia de patrón), capaz de compararse con un texto.</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span> <span class="n">regex</span> <span class="o">=</span> <span class="s">&quot;.*http://.*&quot;</span><span class="p">;</span>
+
+<span class="n">Pattern</span> <span class="n">pattern</span> <span class="o">=</span> <span class="n">Pattern</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span><span class="n">regex</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="clase-matcher">Clase <code>Matcher</code></h2>
+<p>La clase <code>Matcher</code> se usa para hacer coincidir una expresión regular determinada (ùna instancia de <code>Pattern</code>) con un texto varias veces. En otras palabras, buscar múltiples ocurrencias de la expresión regular en el texto. <code>Matcher</code> nos dirá en qué parte del texto (índice de caracteres) encontró las ocurrencias. Puede obtener una instancia de Matcher a partir de una instancia de Pattern.</p>
+<p>Implementa la interfaz <code>MatchResult</code>.</p>
 <p>Algunos de los métodos de la clase Matcher son:</p>
 <ul>
-<li>boolean matches(): prueba si la expresión regular coincide con el patrón.</li>
-<li>booleano find(): encuentra la siguiente expresión que coincide con el patrón.</li>
-<li>boolean find(int start): encuentra la siguiente expresión que coincide con el patrón del número de inicio dado.</li>
-<li>String group(): devuelve la subsecuencia coincidente.</li>
-<li>int start(): devuelve el índice inicial de la subsecuencia coincidente.</li>
-<li>int end() devuelve el índice final de la subsecuencia coincidente.</li>
-<li>int groupCount() devuelve el número total de la subsecuencia coincidente.</li>
+<li><strong>boolean matches():</strong> prueba si la expresión regular coincide con el patrón.</li>
+<li><strong>booleano find():</strong> encuentra la siguiente expresión que coincide con el patrón.</li>
+<li><strong>boolean find(int start):</strong> encuentra la siguiente expresión que coincide con el patrón del número de inicio dado.</li>
+<li><strong>String group():</strong> devuelve la subsecuencia coincidente.</li>
+<li><strong>int start():</strong> devuelve el índice inicial de la subsecuencia coincidente.</li>
+<li><strong>int end():</strong> devuelve el índice final de la subsecuencia coincidente.</li>
+<li><strong>int groupCount():</strong> devuelve el número total de la subsecuencia coincidente.</li>
 </ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">StringBuilder</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">(</span><span class="s">&quot;&lt;h1&gt;Head&lt;/h1&gt;&quot;</span><span class="p">);</span>
+<span class="n">html</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;&lt;h2&gt;Etiqueta h2 de encabezado&lt;/h2&gt;&quot;</span><span class="p">);</span>
+<span class="n">html</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;&lt;p&gt;Esto es un párrafo en html&lt;/p&gt;&quot;</span><span class="p">);</span>
+<span class="n">html</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;&lt;h2&gt;Resumen&lt;/h2&gt;&quot;</span><span class="p">);</span>
+<span class="n">html</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;&lt;p&gt;Fin del html&lt;/p&gt;&quot;</span><span class="p">);</span>
+
+<span class="n">Pattern</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Pattern</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span><span class="s">&quot;&lt;h2&gt;&quot;</span><span class="p">);</span>
+<span class="n">Matcher</span> <span class="n">m</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="na">matcher</span><span class="p">(</span><span class="n">html</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="na">matches</span><span class="p">());</span>
+</code></pre></div>
                 
               
               
