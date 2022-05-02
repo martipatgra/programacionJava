@@ -1490,6 +1490,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ejemplo-expresion-regular-telefono-movil" class="md-nav__link">
+    Ejemplo expresión regular teléfono móvil
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1650,6 +1657,13 @@
         <li class="md-nav__item">
   <a href="#operadores-logicos" class="md-nav__link">
     Operadores lógicos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-expresion-regular-telefono-movil" class="md-nav__link">
+    Ejemplo expresión regular teléfono móvil
   </a>
   
 </li>
@@ -1894,6 +1908,20 @@
 <p>El operador <strong>or</strong> es explícito y está representado por el carácter vertical <strong>|</strong>.</p>
 <p>El operador <strong>not</strong> es explícito, está representado por el símbolo <strong>!</strong>, brinda la posibilidad de excluir un patrón. Con esto se puede decir que una cadena no debe ir seguida de otra cadena.</p>
 <p>La anticipación negativa (negative look ahead) se define a través de <strong>(?!patrón)</strong>, el operador ? delante del paréntesis es parte de la sintaxis look ahead, que siempre comienzan con un paréntesis y un signo de interrogación. Esta operación no consume ningún carácter.</p>
+<h2 id="ejemplo-expresion-regular-telefono-movil">Ejemplo expresión regular teléfono móvil</h2>
+<div class="highlight"><pre><span></span><code><span class="c1">//(+34) 655-555-555</span>
+<span class="n">String</span> <span class="n">regexTelefono</span> <span class="o">=</span> <span class="s">&quot;^([\\(]{1}[\\+]{1}34[\\)]{1}[ ]{1}[0-9]{3}[\\-]{1}[0-9]{3}[\\-]{1}[0-9]{3})$&quot;</span><span class="p">;</span>
+
+<span class="n">String</span> <span class="n">t1</span> <span class="o">=</span> <span class="s">&quot;123456789&quot;</span><span class="p">;</span><span class="c1">//no</span>
+<span class="n">String</span> <span class="n">t2</span> <span class="o">=</span> <span class="s">&quot;(+35) 123456-789&quot;</span><span class="p">;</span><span class="c1">//no</span>
+<span class="n">String</span> <span class="n">t3</span> <span class="o">=</span> <span class="s">&quot;(+34) 123-456-789&quot;</span><span class="p">;</span><span class="c1">//si</span>
+<span class="n">String</span> <span class="n">t4</span> <span class="o">=</span> <span class="s">&quot;(+34)123-456-789&quot;</span><span class="p">;</span><span class="c1">//no</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">t1</span><span class="p">.</span><span class="na">matches</span><span class="p">(</span><span class="n">regexTelefono</span><span class="p">));</span><span class="c1">//false</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">t2</span><span class="p">.</span><span class="na">matches</span><span class="p">(</span><span class="n">regexTelefono</span><span class="p">));</span><span class="c1">//false</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">t3</span><span class="p">.</span><span class="na">matches</span><span class="p">(</span><span class="n">regexTelefono</span><span class="p">));</span><span class="c1">//true</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">t4</span><span class="p">.</span><span class="na">matches</span><span class="p">(</span><span class="n">regexTelefono</span><span class="p">));</span><span class="c1">//false</span>
+</code></pre></div>
                 
               
               
