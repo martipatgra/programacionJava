@@ -1461,6 +1461,26 @@
     Clase Matcher
   </a>
   
+    <nav class="md-nav" aria-label="Clase Matcher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    reset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group" class="md-nav__link">
+    group()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1597,6 +1617,26 @@
   <a href="#clase-matcher" class="md-nav__link">
     Clase Matcher
   </a>
+  
+    <nav class="md-nav" aria-label="Clase Matcher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    reset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group" class="md-nav__link">
+    group()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1772,13 +1812,13 @@
 <p>La API de expresiones regulares de Java consta de dos clases principales. Estos son:</p>
 <p><code>Pattern</code> (java.util.regex.Pattern)
 <code>Matcher</code> (java.util.regex.Matcher)</p>
-<h2 id="clase-pattern">Clase <code>Pattern</code></h2>
+<h2 id="clase-pattern">Clase <a href="https://docs.oracle.com/javase/9/docs/api/java/util/regex/Pattern.html"><code>Pattern</code></a></h2>
 <p>La clase <code>Pattern</code> se utiliza para crear patrones (expresiones regulares). Un patrón es una expresión regular precompilada en forma de objeto (como una instancia de patrón), capaz de compararse con un texto.</p>
 <div class="highlight"><pre><span></span><code><span class="n">String</span> <span class="n">regex</span> <span class="o">=</span> <span class="s">&quot;.*http://.*&quot;</span><span class="p">;</span>
 
 <span class="n">Pattern</span> <span class="n">pattern</span> <span class="o">=</span> <span class="n">Pattern</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span><span class="n">regex</span><span class="p">);</span>
 </code></pre></div>
-<h2 id="clase-matcher">Clase <code>Matcher</code></h2>
+<h2 id="clase-matcher">Clase <a href="https://docs.oracle.com/javase/9/docs/api/java/util/regex/Matcher.html"><code>Matcher</code></a></h2>
 <p>La clase <code>Matcher</code> se usa para hacer coincidir una expresión regular determinada (ùna instancia de <code>Pattern</code>) con un texto varias veces. En otras palabras, buscar múltiples ocurrencias de la expresión regular en el texto. <code>Matcher</code> nos dirá en qué parte del texto (índice de caracteres) encontró las ocurrencias. Puede obtener una instancia de Matcher a partir de una instancia de Pattern.</p>
 <p>Implementa la interfaz <code>MatchResult</code>.</p>
 <p>Algunos de los métodos de la clase Matcher son:</p>
@@ -1802,6 +1842,37 @@
 <span class="n">Matcher</span> <span class="n">m</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="na">matcher</span><span class="p">(</span><span class="n">html</span><span class="p">);</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="na">matches</span><span class="p">());</span>
 </code></pre></div>
+<h3 id="reset">reset()</h3>
+<p>El método de la clase Matcher <code>reset()</code> restablece el estado de coincidencia internamente en el Matcher. En caso de que haya comenzado a hacer coincidir las ocurrencias en una cadena a través del método <code>find()</code>, el Matcher mantendrá internamente un estado sobre qué tan lejos ha buscado a través del texto de entrada. Al llamar a <code>reset()</code>, la coincidencia comenzará nuevamente desde el principio del texto.</p>
+<h3 id="group">group()</h3>
+<p>Los grupos están marcados con paréntesis en la expresión regular. Por ejemplo:</p>
+<blockquote>
+<p>(Hola)</p>
+</blockquote>
+<p>Esta expresión regular coincide con el texto Hola. <strong>Los paréntesis no son parte del texto que se compara</strong>. Los paréntesis marcan un grupo. Cuando se encuentra una coincidencia en un texto, puede obtener acceso a la parte de la expresión regular dentro del grupo.</p>
+<p>Para acceder a un grupo se utliza el método <code>group(int groupNo)</code>. Una expresión regular puede tener más de un grupo. Por lo tanto, cada grupo está marcado con un conjunto separado de paréntesis. Para obtener acceso al texto que coincidió con la subparte de la expresión en un grupo específico, se pasa el número del grupo al método <code>group(int groupNo)</code>.</p>
+<p>El grupo con el número 0 es siempre la expresión regular completa. Para obtener acceso a un grupo marcado entre paréntesis, debe comenzar con los números de grupo 1.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span> <span class="n">text</span>    <span class="o">=</span>
+  <span class="s">&quot;John writes about this, and John writes about that,&quot;</span> <span class="o">+</span>
+          <span class="s">&quot; and John writes about everything. &quot;</span>
+<span class="p">;</span>
+
+<span class="n">String</span> <span class="n">patternString1</span> <span class="o">=</span> <span class="s">&quot;(John)&quot;</span><span class="p">;</span>
+
+<span class="n">Pattern</span> <span class="n">pattern</span> <span class="o">=</span> <span class="n">Pattern</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span><span class="n">patternString1</span><span class="p">);</span>
+<span class="n">Matcher</span> <span class="n">matcher</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">.</span><span class="na">matcher</span><span class="p">(</span><span class="n">text</span><span class="p">);</span>
+
+<span class="k">while</span><span class="p">(</span><span class="n">matcher</span><span class="p">.</span><span class="na">find</span><span class="p">())</span> <span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;found: &quot;</span> <span class="o">+</span> <span class="n">matcher</span><span class="p">.</span><span class="na">group</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span> <span class="c1">//el primer grupo de paréntesis</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>OUTPUT</p>
+<blockquote>
+<p>found: John</p>
+<p>found: John</p>
+<p>found: John</p>
+</blockquote>
                 
               
               
