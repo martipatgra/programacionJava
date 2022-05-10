@@ -14,7 +14,7 @@
     
     
       
-        <title>8.1 Java FX - Programación</title>
+        <title>Scene - Programación</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#java-fx" class="md-skip">
+        <a href="#scene" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8.1 Java FX
+              Scene
             
           </span>
         </div>
@@ -1380,14 +1380,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       <label class="md-nav__link" for="__nav_9">
         8.- Interfaces de usuario
@@ -1403,65 +1401,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          8.1 Java FX
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../1javafx/" class="md-nav__link">
         8.1 Java FX
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#crear-un-nuevo-proyecto-javafx" class="md-nav__link">
-    Crear un nuevo proyecto JavaFX
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow-de-una-aplicacion-javafx" class="md-nav__link">
-    Workflow de una aplicación JavaFX
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#estructura-de-una-aplicacion-javafx" class="md-nav__link">
-    Estructura de una aplicación JavaFX
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1528,22 +1472,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#crear-un-nuevo-proyecto-javafx" class="md-nav__link">
-    Crear un nuevo proyecto JavaFX
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow-de-una-aplicacion-javafx" class="md-nav__link">
-    Workflow de una aplicación JavaFX
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#estructura-de-una-aplicacion-javafx" class="md-nav__link">
-    Estructura de una aplicación JavaFX
+  <a href="#scene-graph" class="md-nav__link">
+    Scene Graph
   </a>
   
 </li>
@@ -1561,45 +1491,16 @@
               
                 
                 
-                <h1 id="java-fx">Java FX</h1>
-<p>JavaFX es una plataforma de aplicaciones de cliente de próxima generación de código abierto para sistemas integrados, móviles y de escritorio construidos en Java. Es un esfuerzo de colaboración de muchas personas y empresas con el objetivo de producir un conjunto de herramientas moderno, eficiente y con todas las funciones para desarrollar aplicaciones de clientes enriquecidos.</p>
-<p><strong>En este tema nos centraremos en las aplicaciones de escritorio.</strong>
-JavaFX está disponible en Windows, Mac OS X y Linux.</p>
-<p>Dado que la biblioteca JavaFX está escrita como una API de Java, el código de la aplicación JavaFX puede hacer referencia a las API de cualquier biblioteca de Java. Por ejemplo, las aplicaciones JavaFX pueden usar bibliotecas API de Java para acceder a las capacidades del sistema nativo y conectarse a aplicaciones de middleware basadas en servidor.</p>
-<p>Es en esencia un conjunto de paquetes en Java y el sucesor de swing.</p>
-<p><a href="https://openjfx.io/openjfx-docs/">Documentación oficial para JavaFX JDK11</a></p>
-<h2 id="crear-un-nuevo-proyecto-javafx">Crear un nuevo proyecto JavaFX</h2>
-<p>En IntelliJ, seleccionamos File -&gt; New Project</p>
-<p><img alt="JavaFx" src="../../img/ud8/5setup.png" /></p>
-<p>Seleccionamos JavaFX, lo llamamos HolaMundo y le damos a crear.
-Para ejecutarlo nos ponemos en la clase principal y hacemos click en Run.</p>
-<p><img alt="JavaFx" src="../../img/ud8/6setup.png" /></p>
-<h2 id="workflow-de-una-aplicacion-javafx">Workflow de una aplicación JavaFX</h2>
-<ol>
-<li>
-<p><code>Application</code>
-La clase de <code>Application</code> del paquete javafx.application es el punto de entrada de la aplicación en JavaFX. Para crear una aplicación JavaFX, se debe heredar esta clase e implementar su método abstracto <code>start()</code>. La clase principal tiene el nombre del proyecto seguido de Application y extiende de la clase <code>Application</code>, que es la que gestiona el ciclo de vida de una aplicación JavaFX.</p>
-</li>
-<li>
-<p><code>main</code> method
-Cuando ejecutamos la aplicación JavaFX por primera vez, se lanza el método <code>main</code> que contiene el método <code>launch</code> que lanza la aplicación JavaFX y no vuelve hasta que se cierra la aplicación.</p>
-</li>
-<li>
-<p><code>init</code> method
-Cuando un aplicación JavaFX es lanzada, el método <code>init</code> se ejecuta primero. Este método se encuentra en la clase <code>Application</code> y está vacío, por lo que podremos sobreescribirlo si queremos hacer algo con él.</p>
-</li>
-<li>
-<p><code>start</code> method
-El método <code>start</code> se ejecuta justo después del método <code>init</code>. <code>start</code> es un método abstracto que heredamos de la clase <code>Application</code> por lo que siempre hay que sobreescribirlo y darle cuerpo.</p>
-</li>
-<li>
-<p><code>stop</code> method
-Cuando la aplicación acaba porque los usuario cierran la ventana de la aplicación se ejecuta el método <code>stop</code>. Igual que pasa con el método <code>init</code>, este método se encuentra en la clase <code>Application</code> y está vacío también. Si no lo sobreescribimos no se hará nada con él.</p>
-</li>
-</ol>
-<h2 id="estructura-de-una-aplicacion-javafx">Estructura de una aplicación JavaFX</h2>
-<p>En general, una aplicación JavaFX tendrá tres componentes principales, <strong>Stage, Scene y Node</strong> como se muestra en la siguiente figura:</p>
-<p><img alt="JavaFx" src="../../img/ud8/structure2.png" /></p>
+                <h1 id="scene">Scene</h1>
+<p>Para mostrar cualquier cosa en un escenario <code>Stage</code> se necesita una escena <code>Scene</code>. <strong>Un <code>Stage</code> solo puede mostrar una escena a la vez, pero es posible intercambiar la escena en tiempo de ejecución.</strong> Al igual que un escenario en un teatro se puede reorganizar para mostrar varias escenas durante una obra, un objeto de escenario (stage) en JavaFX puede mostrar varias escenas (una a la vez) durante la vida útil de una aplicación JavaFX.</p>
+<p>Quizás se pregunte por qué una aplicación JavaFX tendría más de una escena por etapa. Imagina un juego de computadora. Un juego puede tener múltiples "pantallas" para mostrar al usuario. Por ejemplo, una pantalla de menú inicial, la pantalla principal del juego (donde se juega el juego), una pantalla de finalización del juego y una pantalla de puntuación más alta. Cada una de estas pantallas puede ser representada por una escena diferente. Cuando el juego necesita cambiar de una pantalla a la siguiente, simplemente adjunta la escena correspondiente al objeto Stage de la aplicación JavaFX.</p>
+<p>Una escena está representada por un objeto <code>Scene</code> dentro de una aplicación JavaFX.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Para que un objeto <code>Scene</code> sea visible debe configurarse en un <code>Stage</code>.</p>
+</div>
+<h2 id="scene-graph">Scene Graph</h2>
+<p>Todos los componentes visuales (controls, layouts, etc.) deben adjuntarse a un <code>Scene</code> para ser mostrados, y ese <code>Scene</code> debe adjuntarse a un <code>Stage</code> para que la escena completa sea visible. El objeto gráfico total final de todos los controles, layouts, etc. adjuntos a un <code>Scene</code> se denomina <strong>gráfico de escena (Scene Graph)</strong>.</p>
                 
               
               
@@ -1620,41 +1521,6 @@ Cuando la aplicación acaba porque los usuario cierran la ventana de la aplicaci
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Pie">
-      
-        
-        <a href="../../ud7/7regularexpressions/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 7.7 Expresiones regulares" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Anterior
-              </span>
-              7.7 Expresiones regulares
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../shortcuts/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Atajos de teclado para IntelliJ" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Siguiente
-              </span>
-              Atajos de teclado para IntelliJ
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

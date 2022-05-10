@@ -14,7 +14,7 @@
     
     
       
-        <title>8.1 Java FX - Programación</title>
+        <title>Stage - Programación</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#java-fx" class="md-skip">
+        <a href="#stage" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8.1 Java FX
+              Stage
             
           </span>
         </div>
@@ -1380,14 +1380,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       <label class="md-nav__link" for="__nav_9">
         8.- Interfaces de usuario
@@ -1403,65 +1401,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          8.1 Java FX
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../1javafx/" class="md-nav__link">
         8.1 Java FX
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#crear-un-nuevo-proyecto-javafx" class="md-nav__link">
-    Crear un nuevo proyecto JavaFX
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow-de-una-aplicacion-javafx" class="md-nav__link">
-    Workflow de una aplicación JavaFX
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#estructura-de-una-aplicacion-javafx" class="md-nav__link">
-    Estructura de una aplicación JavaFX
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1528,22 +1472,85 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#crear-un-nuevo-proyecto-javafx" class="md-nav__link">
-    Crear un nuevo proyecto JavaFX
+  <a href="#crear-un-stage" class="md-nav__link">
+    Crear un Stage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#workflow-de-una-aplicacion-javafx" class="md-nav__link">
-    Workflow de una aplicación JavaFX
+  <a href="#mostrar-un-stage" class="md-nav__link">
+    Mostrar un Stage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#estructura-de-una-aplicacion-javafx" class="md-nav__link">
-    Estructura de una aplicación JavaFX
+  <a href="#establecer-un-scene-a-un-stage" class="md-nav__link">
+    Establecer un Scene a un Stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ponerle-titulo-a-un-stage" class="md-nav__link">
+    Ponerle título a un Stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posicionar-un-stage" class="md-nav__link">
+    Posicionar un Stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimensionar-un-stage" class="md-nav__link">
+    Dimensionar un Stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#establecer-una-ventana-modal" class="md-nav__link">
+    Establecer una ventana modal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#establecer-propietario-de-un-stage" class="md-nav__link">
+    Establecer propietario de un Stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dar-estilo-a-un-stage" class="md-nav__link">
+    Dar estilo a un Stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-a-pantalla-completa" class="md-nav__link">
+    Stage a pantalla completa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventos-del-ciclo-de-vida-de-un-stage" class="md-nav__link">
+    Eventos del ciclo de vida de un Stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventos-de-teclado-del-stage" class="md-nav__link">
+    Eventos de teclado del Stage
   </a>
   
 </li>
@@ -1561,45 +1568,164 @@
               
                 
                 
-                <h1 id="java-fx">Java FX</h1>
-<p>JavaFX es una plataforma de aplicaciones de cliente de próxima generación de código abierto para sistemas integrados, móviles y de escritorio construidos en Java. Es un esfuerzo de colaboración de muchas personas y empresas con el objetivo de producir un conjunto de herramientas moderno, eficiente y con todas las funciones para desarrollar aplicaciones de clientes enriquecidos.</p>
-<p><strong>En este tema nos centraremos en las aplicaciones de escritorio.</strong>
-JavaFX está disponible en Windows, Mac OS X y Linux.</p>
-<p>Dado que la biblioteca JavaFX está escrita como una API de Java, el código de la aplicación JavaFX puede hacer referencia a las API de cualquier biblioteca de Java. Por ejemplo, las aplicaciones JavaFX pueden usar bibliotecas API de Java para acceder a las capacidades del sistema nativo y conectarse a aplicaciones de middleware basadas en servidor.</p>
-<p>Es en esencia un conjunto de paquetes en Java y el sucesor de swing.</p>
-<p><a href="https://openjfx.io/openjfx-docs/">Documentación oficial para JavaFX JDK11</a></p>
-<h2 id="crear-un-nuevo-proyecto-javafx">Crear un nuevo proyecto JavaFX</h2>
-<p>En IntelliJ, seleccionamos File -&gt; New Project</p>
-<p><img alt="JavaFx" src="../../img/ud8/5setup.png" /></p>
-<p>Seleccionamos JavaFX, lo llamamos HolaMundo y le damos a crear.
-Para ejecutarlo nos ponemos en la clase principal y hacemos click en Run.</p>
-<p><img alt="JavaFx" src="../../img/ud8/6setup.png" /></p>
-<h2 id="workflow-de-una-aplicacion-javafx">Workflow de una aplicación JavaFX</h2>
-<ol>
-<li>
-<p><code>Application</code>
-La clase de <code>Application</code> del paquete javafx.application es el punto de entrada de la aplicación en JavaFX. Para crear una aplicación JavaFX, se debe heredar esta clase e implementar su método abstracto <code>start()</code>. La clase principal tiene el nombre del proyecto seguido de Application y extiende de la clase <code>Application</code>, que es la que gestiona el ciclo de vida de una aplicación JavaFX.</p>
-</li>
-<li>
-<p><code>main</code> method
-Cuando ejecutamos la aplicación JavaFX por primera vez, se lanza el método <code>main</code> que contiene el método <code>launch</code> que lanza la aplicación JavaFX y no vuelve hasta que se cierra la aplicación.</p>
-</li>
-<li>
-<p><code>init</code> method
-Cuando un aplicación JavaFX es lanzada, el método <code>init</code> se ejecuta primero. Este método se encuentra en la clase <code>Application</code> y está vacío, por lo que podremos sobreescribirlo si queremos hacer algo con él.</p>
-</li>
-<li>
-<p><code>start</code> method
-El método <code>start</code> se ejecuta justo después del método <code>init</code>. <code>start</code> es un método abstracto que heredamos de la clase <code>Application</code> por lo que siempre hay que sobreescribirlo y darle cuerpo.</p>
-</li>
-<li>
-<p><code>stop</code> method
-Cuando la aplicación acaba porque los usuario cierran la ventana de la aplicación se ejecuta el método <code>stop</code>. Igual que pasa con el método <code>init</code>, este método se encuentra en la clase <code>Application</code> y está vacío también. Si no lo sobreescribimos no se hará nada con él.</p>
-</li>
-</ol>
-<h2 id="estructura-de-una-aplicacion-javafx">Estructura de una aplicación JavaFX</h2>
-<p>En general, una aplicación JavaFX tendrá tres componentes principales, <strong>Stage, Scene y Node</strong> como se muestra en la siguiente figura:</p>
-<p><img alt="JavaFx" src="../../img/ud8/structure2.png" /></p>
+                <h1 id="stage">Stage</h1>
+<p>Uno de los símiles que más se aproxima para entender estos conceptos es ver el stage como un escenario, teatro o cine, en el cual, se desarrollan escenas. Dicho de otro modo, stage es un espacio y una escena define que sucede en ese espacio.
+Visto así, tenemos que un stage es el contenedor de nivel superior, que como mínimo consta de una escena, que a su vez es contenedora de otros elementos.</p>
+<p>Si nuestra programa es una aplicación de escritorio, el stage será la ventana, con su barra de título, y botones de maximizar, minimizar o cerrar, en el caso que que se ejecutase en un navegador web como Chrome, nuestro stage esta embebido dentro del navegador.</p>
+<p>Un <code>Stage</code> JavaFX, javafx.stage.Stage, es un contenedor de nivel superior y extiende de la clase <code>Window</code>. Representa una ventana en una aplicación de escritorio JavaFX. Dentro de un stage JavaFX, se puede insertar un <code>Scene</code> JavaFX que representará el contenido que se muestra dentro de una ventana, dentro de un <code>Stage</code>.</p>
+<p>Cuando se inicia una aplicación JavaFX, se crea un objeto <code>Stage</code> raíz que se pasa al método <code>start(Stage primaryStage)</code> de la clase raíz de la aplicación JavaFX. Este objeto Stage representa la ventana principal de la aplicación. Se pueden crear más objetos nuevos <code>Stage</code> más adelante si la aplicación necesita abrir más ventanas.</p>
+<p>Normalmente las aplicaciones tienen una ventana o stage de nivel superior, ya que muchas ventanas pueden conducir a una mala experiencia por parte del usuario.</p>
+<p><img alt="JavaFx" src="../../img/ud8/structure1.png" /></p>
+<h2 id="crear-un-stage">Crear un <code>Stage</code></h2>
+<div class="highlight"><pre><span></span><code><span class="n">Stage</span> <span class="n">stage</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stage</span><span class="p">();</span>
+</code></pre></div>
+<h2 id="mostrar-un-stage">Mostrar un <code>Stage</code></h2>
+<p>Solo con crear un objeto Stage no basta para que se muestre en la aplicación. Para que el Stage sea visible, se debe llamar a su método <code>show()</code> o <code>showAndWait()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">stage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+</code></pre></div>
+<p>La diferencia entre los métodos <code>show()</code> y <code>showAndWait()</code>, es que show() hace visible el <code>Stage</code> y sale del método inmediatamente, mientras que showAndWait() muestra el objeto <code>Stage</code> y luego lo bloquea (permanece dentro del método showAndWait()) hasta que se cierre el <code>stage</code>.</p>
+<h2 id="establecer-un-scene-a-un-stage">Establecer un <code>Scene</code> a un <code>Stage</code></h2>
+<p>Para mostrar algo dentro de un <code>Stage</code>, se debe establecer un objeto <code>Scene</code> en el Stage. El contenido de <code>Scene</code> se mostrará dentro del Stage cuando se muestre el Stage.</p>
+<div class="highlight"><pre><span></span><code><span class="n">VBox</span> <span class="n">vBox</span> <span class="o">=</span> <span class="k">new</span> <span class="n">VBox</span><span class="p">(</span><span class="k">new</span> <span class="n">Label</span><span class="p">(</span><span class="s">&quot;A JavaFX Label&quot;</span><span class="p">));</span>
+<span class="n">Scene</span> <span class="n">scene</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scene</span><span class="p">(</span><span class="n">vBox</span><span class="p">);</span>
+
+<span class="n">Stage</span> <span class="n">stage</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stage</span><span class="p">();</span>
+<span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="n">scene</span><span class="p">);</span>
+<span class="n">stage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+</code></pre></div>
+<h2 id="ponerle-titulo-a-un-stage">Ponerle título a un <code>Stage</code></h2>
+<p>El título del <code>Stage</code> se muestra en la barra de título de la ventana.</p>
+<div class="highlight"><pre><span></span><code><span class="n">stage</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;Aplicación JavaFX&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="posicionar-un-stage">Posicionar un <code>Stage</code></h2>
+<p>Se puede establecer la posición (X,Y) de un <code>Stage</code> a través de sus métodos setX() y setY(). Los métodos setX() y setY() establecen la posición de la esquina superior izquierda de la ventana.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Stage</span> <span class="n">stage</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stage</span><span class="p">();</span>
+
+<span class="n">stage</span><span class="p">.</span><span class="na">setX</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">stage</span><span class="p">.</span><span class="na">setY</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="dimensionar-un-stage">Dimensionar un <code>Stage</code></h2>
+<p>Para establecer el ancho y el alto de un <code>Stage</code> utilizaremos los métodos <code>setWidth()</code> y <code>setHeight()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Stage</span> <span class="n">stage</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stage</span><span class="p">();</span>
+
+<span class="n">stage</span><span class="p">.</span><span class="na">setWidth</span><span class="p">(</span><span class="mi">600</span><span class="p">);</span>
+<span class="n">stage</span><span class="p">.</span><span class="na">setHeight</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="establecer-una-ventana-modal">Establecer una ventana modal</h2>
+<p>Si queremos establecer la ventana como modal en un <code>Stage</code> usamos el método <code>initModality()</code>. La modalidad determina si la ventana que representa el Stage bloqueará otras ventanas abiertas por la misma aplicación.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="p">(</span><span class="n">Stage</span> <span class="n">primaryStage</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">primaryStage</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;JavaFX App&quot;</span><span class="p">);</span>
+
+    <span class="n">Stage</span> <span class="n">stage</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stage</span><span class="p">();</span>
+    <span class="n">stage</span><span class="p">.</span><span class="na">initModality</span><span class="p">(</span><span class="n">Modality</span><span class="p">.</span><span class="na">APPLICATION_MODAL</span><span class="p">);</span>
+    <span class="c1">//stage.initModality(Modality.WINDOW_MODAL);</span>
+    <span class="c1">//stage.initModality(Modality.NONE);</span>
+
+    <span class="n">primaryStage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+
+    <span class="n">stage</span><span class="p">.</span><span class="na">showAndWait</span><span class="p">();</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>Modalidad.APPLICATION_MODAL, bloqueará todas las demás ventanas abiertas por esta aplicación. No puede acceder a ninguna otra ventana hasta que se haya cerrado esta ventana.</li>
+<li>Modality.WINDOW_MODAL el <code>Stage</code> creado bloqueará la ventana del <code>Stage</code> que "posee" (propietario) el <code>Stage</code> creado, pero solo eso. No todas las ventanas de la aplicación.</li>
+<li>Modalidad.NONE el <code>Stage</code> no bloqueará ninguna otra ventana abierta en esta aplicación.</li>
+</ul>
+<h2 id="establecer-propietario-de-un-stage">Establecer propietario de un <code>Stage</code></h2>
+<p>Un <code>Stage</code> puede ser propiedad de otro <code>Stage</code>. El propietario de un stage se establece a través de su método <code>initOwner()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="p">(</span><span class="n">Stage</span> <span class="n">primaryStage</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">primaryStage</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;JavaFX App&quot;</span><span class="p">);</span>
+
+    <span class="n">Stage</span> <span class="n">stage</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stage</span><span class="p">();</span>
+    <span class="n">stage</span><span class="p">.</span><span class="na">initModality</span><span class="p">(</span><span class="n">Modality</span><span class="p">.</span><span class="na">WINDOW_MODAL</span><span class="p">);</span>
+
+    <span class="n">stage</span><span class="p">.</span><span class="na">initOwner</span><span class="p">(</span><span class="n">primaryStage</span><span class="p">);</span>
+
+    <span class="n">primaryStage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+
+    <span class="n">stage</span><span class="p">.</span><span class="na">showAndWait</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="dar-estilo-a-un-stage">Dar estilo a un <code>Stage</code></h2>
+<p>Se puede dar estilo a un stage utilizando el método <code>initStyle()</code>. Hay un conjunto de estilos diferentes:</p>
+<ul>
+<li>DECORATED: es una ventana estándar con decoraciones del sistema operativo (barra de título y botones para minimizar/maximizar/cerrar) y un fondo blanco.</li>
+<li>UNDECORATED: es una ventana estándar sin decoraciones del sistema operativo, pero aún con un fondo blanco.</li>
+<li>TRANSPARENT: es una ventana sin decorar con un fondo transparente.</li>
+<li>UNIFIED: es como un escenario decorado, excepto que no tiene borde entre el área de decoración y el área de contenido principal.</li>
+<li>UTILITY: es una ventana decorada, pero con decoraciones mínimas.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">stage</span><span class="p">.</span><span class="na">initStyle</span><span class="p">(</span><span class="n">StageStyle</span><span class="p">.</span><span class="na">DECORATED</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="stage-a-pantalla-completa"><code>Stage</code> a pantalla completa</h2>
+<p>Se puede establecer el stage a modo de pantalla completa a través del método <code>setFullScreen()</code>. Nota: puede que no obtengamos el resultado esperado sino añadimos un <code>Scene</code> en el stage.</p>
+<div class="highlight"><pre><span></span><code><span class="n">VBox</span> <span class="n">vbox</span> <span class="o">=</span> <span class="k">new</span> <span class="n">VBox</span><span class="p">();</span>
+<span class="n">Scene</span> <span class="n">scene</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scene</span><span class="p">(</span><span class="n">vbox</span><span class="p">);</span>
+
+<span class="n">primaryStage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="n">scene</span><span class="p">);</span>
+<span class="n">primaryStage</span><span class="p">.</span><span class="na">setFullScreen</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="n">primaryStage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+</code></pre></div>
+<h2 id="eventos-del-ciclo-de-vida-de-un-stage">Eventos del ciclo de vida de un <code>Stage</code></h2>
+<p><code>Stage</code> emite algunos eventos que se pueden escuchar.</p>
+<ul>
+<li>Close Request: se recibe una notificación cuando el usuario hace click en el botón con la X en la esquina superior derecha de la ventana del escenario. Escuchar el evento de cierre del escenario puede ser útil si se necesita limpiar algunos recursos después de cerrar la ventana principal del escenario, o p. necesita detener algunos hilos, etc.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">primaryStage</span><span class="p">.</span><span class="na">setOnCloseRequest</span><span class="p">((</span><span class="n">event</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Closing Stage&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<ul>
+<li>Hiding: se llama antes de que se oculte el stage, pero después de que se haya solicitado ocultarlo.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">primaryStage</span><span class="p">.</span><span class="na">setOnHiding</span><span class="p">((</span><span class="n">event</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hiding Stage&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<ul>
+<li>Hidden: se llama después de que se oculta el Stage.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">primaryStage</span><span class="p">.</span><span class="na">setOnHidden</span><span class="p">((</span><span class="n">event</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Stage hidden&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<ul>
+<li>Showing: se llama después de que se solicite que se muestre el stage, pero antes de que se muestre.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">primaryStage</span><span class="p">.</span><span class="na">setOnShowing</span><span class="p">((</span><span class="n">event</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Showing Stage&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<ul>
+<li>Shown: se llama después de que se muestre el stage.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">primaryStage</span><span class="p">.</span><span class="na">setOnShown</span><span class="p">((</span><span class="n">event</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Stage Shown&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h2 id="eventos-de-teclado-del-stage">Eventos de teclado del <code>Stage</code></h2>
+<p>Podemos escuchar eventos de teclado en un stage. De esta forma, se puede capturar todos los eventos del teclado que ocurren mientras el stage tiene el foco. Ejemplo que escucha las teclas ESC y Retorno en el teclado cuando un Stage tiene foco:</p>
+<div class="highlight"><pre><span></span><code><span class="n">primaryStage</span><span class="p">.</span><span class="na">addEventHandler</span><span class="p">(</span><span class="n">KeyEvent</span><span class="p">.</span><span class="na">KEY_PRESSED</span><span class="p">,</span>  <span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Key pressed: &quot;</span> <span class="o">+</span> <span class="n">event</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+
+    <span class="k">switch</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="na">getCode</span><span class="p">().</span><span class="na">getCode</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="mi">27</span> <span class="p">:</span> <span class="p">{</span> <span class="c1">// 27 = ESC key</span>
+            <span class="n">primaryStage</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">case</span> <span class="mi">10</span> <span class="p">:</span> <span class="p">{</span> <span class="c1">// 10 = Return</span>
+            <span class="n">primaryStage</span><span class="p">.</span><span class="na">setWidth</span><span class="p">(</span> <span class="n">primaryStage</span><span class="p">.</span><span class="na">getWidth</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">default</span><span class="p">:</span>  <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Unrecognized key&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
                 
               
               
@@ -1620,41 +1746,6 @@ Cuando la aplicación acaba porque los usuario cierran la ventana de la aplicaci
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Pie">
-      
-        
-        <a href="../../ud7/7regularexpressions/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 7.7 Expresiones regulares" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Anterior
-              </span>
-              7.7 Expresiones regulares
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../shortcuts/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Atajos de teclado para IntelliJ" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Siguiente
-              </span>
-              Atajos de teclado para IntelliJ
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
