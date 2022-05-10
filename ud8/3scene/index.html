@@ -1466,6 +1466,33 @@
     Scene Graph
   </a>
   
+    <nav class="md-nav" aria-label="Scene Graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-scene" class="md-nav__link">
+    Crear un Scene
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#establecer-un-scene-en-un-stage" class="md-nav__link">
+    Establecer un Scene en un Stage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scene-mouse-cursor" class="md-nav__link">
+    Scene Mouse Cursor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1542,6 +1569,33 @@
     Scene Graph
   </a>
   
+    <nav class="md-nav" aria-label="Scene Graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-scene" class="md-nav__link">
+    Crear un Scene
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#establecer-un-scene-en-un-stage" class="md-nav__link">
+    Establecer un Scene en un Stage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scene-mouse-cursor" class="md-nav__link">
+    Scene Mouse Cursor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1567,6 +1621,37 @@
 </div>
 <h2 id="scene-graph">Scene Graph</h2>
 <p>Todos los componentes visuales (controls, layouts, etc.) deben adjuntarse a un <code>Scene</code> para ser mostrados, y ese <code>Scene</code> debe adjuntarse a un <code>Stage</code> para que la escena completa sea visible. El objeto gráfico total final de todos los controles, layouts, etc. adjuntos a un <code>Scene</code> se denomina <strong>gráfico de escena (Scene Graph)</strong>.</p>
+<p>Consta de todos los nodos que se adjuntan a un objeto de Scene determinado. Cada objeto Scene tiene su propio gráfico de escena.</p>
+<p>El Scene Graph tiene un único nodo raíz. Se pueden adjuntar otros nodos al nodo raíz en una estructura de datos similar a un árbol (un árbol es una especie de gráfico).</p>
+<h3 id="crear-un-scene">Crear un Scene</h3>
+<p>Para crear un objeto <code>Scene</code> lo haremos a través de su constructor. Como parámetro, se debe pasar el componente raíz de la GUI de JavaFX que actuará como la vista raíz que se mostrará dentro de la escena.</p>
+<div class="highlight"><pre><span></span><code><span class="n">VBox</span>  <span class="n">vBox</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">VBox</span><span class="p">();</span>
+<span class="n">Scene</span> <span class="n">scene</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scene</span><span class="p">(</span><span class="n">vBox</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="establecer-un-scene-en-un-stage">Establecer un Scene en un Stage</h3>
+<p>Para hacer visible un <code>Scene</code> debe asignarse a un <code>Stage</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">VBox</span> <span class="n">vBox</span> <span class="o">=</span> <span class="k">new</span> <span class="n">VBox</span><span class="p">(</span><span class="k">new</span> <span class="n">Label</span><span class="p">(</span><span class="s">&quot;A JavaFX Label&quot;</span><span class="p">));</span>
+<span class="n">Scene</span> <span class="n">scene</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scene</span><span class="p">(</span><span class="n">vBox</span><span class="p">);</span>
+
+<span class="n">Stage</span> <span class="n">stage</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stage</span><span class="p">();</span>
+<span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="n">scene</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>Un Scene se puede adjuntar a un solo Stage a la vez, y el Stage también puede mostrar solo un Scene a la vez.</strong></p>
+<h3 id="scene-mouse-cursor">Scene Mouse Cursor</h3>
+<p>Es posible configurar el cursor del mouse de un <code>Scene</code>. Se establece el cursor del mouse de una escena a través del método <code>setCursor()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">scene</span><span class="p">.</span><span class="na">setCursor</span><span class="p">(</span><span class="n">Cursor</span><span class="p">.</span><span class="na">OPEN_HAND</span><span class="p">);</span>
+</code></pre></div>
+<p>La clase <code>javafx.scene.Cursor</code> contiene muchas constantes que puede usar para especificar qué cursor del mouse desea mostrar. Algunas de estas constantes son:</p>
+<ul>
+<li>Cursor.OPEN_HAND</li>
+<li>Cursor.CLOSED_HAND</li>
+<li>Cursor.CROSSHAIR</li>
+<li>Cursor.DEFAULT</li>
+<li>Cursor.HAND</li>
+<li>Cursor.WAIT</li>
+<li>Cursor.MOVE</li>
+</ul>
+<p>Puede consultar el resto en la documentación oficial de JavaFX.</p>
                 
               
               
