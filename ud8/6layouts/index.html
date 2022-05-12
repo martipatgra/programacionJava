@@ -1558,10 +1558,11 @@
 <li><code>StackPane</code> coloca sus nodos de contenido en una sola pila de atrás hacia adelante.</li>
 <li><code>GridPane</code> permite al desarrollador crear una cuadrícula flexible de filas y columnas en la que diseñar los nodos de contenido. Cada posición de la cuadrícula se llama celda. Un fila será tan alta como el control más alto y una columna será tan ancha como el control más ancho que contiene.</li>
 <li><code>FlowPane</code> organiza sus nodos de contenido en un "flujo" horizontal o vertical, envolviéndose en los límites especificados de ancho (para horizontal) o alto (para vertical).</li>
-<li><code>TilePane</code> coloca sus nodos de contenido en mosaicos o celdas de diseño de tamaño uniforme.</li>
+<li><code>TilePane</code> coloca sus nodos de contenido en mosaicos o celdas de diseño de tamaño uniforme y los envuelve como hace <code>FlowPane</code>.</li>
 <li><code>AnchorPane</code> permite a los desarrolladores crear nodos de anclaje en la parte superior, inferior, izquierda o central del diseño.</li>
 </ol>
 <p>Para lograr una estructura de diseño deseada, se pueden anidar diferentes layouts dentro de una aplicación JavaFX.</p>
+<p>En <code>HBox</code> y <code>VBox</code> si al reducir la ventana los hijos que contienen esos paneles no caben, entonces se cortan. En cambio, con <code>FlowPane</code>, pasan a la siguiente fila en el caso de que la orientación sea horizontal y si es vertical pasarían a la siguiente columna.</p>
                 
               
               
