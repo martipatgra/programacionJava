@@ -14,7 +14,7 @@
     
     
       
-        <title>8.3 Node - Programación</title>
+        <title>8.6 Eventos - Programación</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#javafx-node" class="md-skip">
+        <a href="#eventos" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8.3 Node
+              8.6 Eventos
             
           </span>
         </div>
@@ -1439,120 +1439,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          8.3 Node
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../4node/" class="md-nav__link">
         8.3 Node
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#conceptos-basicos-de-node" class="md-nav__link">
-    Conceptos básicos de Node
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#propiedades-de-javafx-node" class="md-nav__link">
-    Propiedades de JavaFX Node
-  </a>
-  
-    <nav class="md-nav" aria-label="Propiedades de JavaFX Node">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sistema-de-coordenadas-coordinate-system" class="md-nav__link">
-    1. Sistema de coordenadas (Coordinate System)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cuadro-delimitador-bounding-box" class="md-nav__link">
-    2. Cuadro delimitador (Bounding Box)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-layoutx-y-layouty" class="md-nav__link">
-    3. layoutX y layoutY
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-preferred-height-and-width" class="md-nav__link">
-    4. Preferred height and width
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-minimum-height-and-minimum-width" class="md-nav__link">
-    5. Minimum height and Minimum width
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-maximum-height-and-maximum-width" class="md-nav__link">
-    6. Maximum height and Maximum width
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-user-data" class="md-nav__link">
-    7. User data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-items-child-nodes" class="md-nav__link">
-    8. Items (Child nodes)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1584,11 +1475,120 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../7events/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          8.6 Eventos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         8.6 Eventos
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-eventos" class="md-nav__link">
+    Tipos de eventos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventos-en-javafx" class="md-nav__link">
+    Eventos en JavaFX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manejo-de-eventos-event-handling" class="md-nav__link">
+    Manejo de eventos (Event Handling)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fases-del-manejo-de-eventos" class="md-nav__link">
+    Fases del manejo de eventos
+  </a>
+  
+    <nav class="md-nav" aria-label="Fases del manejo de eventos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#route-construction-construccion-de-rutas" class="md-nav__link">
+    Route construction (Construcción de rutas)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-capturing-phase-fase-de-captura-de-eventos" class="md-nav__link">
+    Event capturing phase (Fase de captura de eventos)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-bubbling-phase-fase-de-propagacion-de-eventos" class="md-nav__link">
+    Event bubbling phase (Fase de propagación de eventos)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-handlers-and-filters" class="md-nav__link">
+    Event handlers and filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anadir-y-eliminar-un-event-filter" class="md-nav__link">
+    Añadir y eliminar un event filter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anadir-y-eliminar-event-handler" class="md-nav__link">
+    Añadir y eliminar event handler
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1655,78 +1655,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#conceptos-basicos-de-node" class="md-nav__link">
-    Conceptos básicos de Node
+  <a href="#tipos-de-eventos" class="md-nav__link">
+    Tipos de eventos
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#propiedades-de-javafx-node" class="md-nav__link">
-    Propiedades de JavaFX Node
+  <a href="#eventos-en-javafx" class="md-nav__link">
+    Eventos en JavaFX
   </a>
   
-    <nav class="md-nav" aria-label="Propiedades de JavaFX Node">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manejo-de-eventos-event-handling" class="md-nav__link">
+    Manejo de eventos (Event Handling)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fases-del-manejo-de-eventos" class="md-nav__link">
+    Fases del manejo de eventos
+  </a>
+  
+    <nav class="md-nav" aria-label="Fases del manejo de eventos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-sistema-de-coordenadas-coordinate-system" class="md-nav__link">
-    1. Sistema de coordenadas (Coordinate System)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cuadro-delimitador-bounding-box" class="md-nav__link">
-    2. Cuadro delimitador (Bounding Box)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-layoutx-y-layouty" class="md-nav__link">
-    3. layoutX y layoutY
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-preferred-height-and-width" class="md-nav__link">
-    4. Preferred height and width
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-minimum-height-and-minimum-width" class="md-nav__link">
-    5. Minimum height and Minimum width
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-maximum-height-and-maximum-width" class="md-nav__link">
-    6. Maximum height and Maximum width
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-user-data" class="md-nav__link">
-    7. User data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-items-child-nodes" class="md-nav__link">
-    8. Items (Child nodes)
+  <a href="#route-construction-construccion-de-rutas" class="md-nav__link">
+    Route construction (Construcción de rutas)
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-capturing-phase-fase-de-captura-de-eventos" class="md-nav__link">
+    Event capturing phase (Fase de captura de eventos)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-bubbling-phase-fase-de-propagacion-de-eventos" class="md-nav__link">
+    Event bubbling phase (Fase de propagación de eventos)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-handlers-and-filters" class="md-nav__link">
+    Event handlers and filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anadir-y-eliminar-un-event-filter" class="md-nav__link">
+    Añadir y eliminar un event filter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anadir-y-eliminar-event-handler" class="md-nav__link">
+    Añadir y eliminar event handler
+  </a>
   
 </li>
       
@@ -1743,43 +1743,99 @@
               
                 
                 
-                <h1 id="javafx-node">JavaFX Node</h1>
-<p>La clase <code>Node</code>, javafx.scene.Node, es la clase base (superclase) para todos los componentes agregados a <strong>JavaFX Scene Graph</strong>. La clase <code>Node</code> es abstracta, por lo que solo agregará subclases de la clase Node al Scene Graph. Todas las instancias de <code>Node</code> en el escenario gráfico comparten un conjunto de propiedades comunes que están definidas por la clase JavaFX <code>Node</code> y que veremos a continuación.</p>
-<h2 id="conceptos-basicos-de-node">Conceptos básicos de <code>Node</code></h2>
-<p>Cada instancia de <code>Node</code> (subclase) solo se puede agregar al Scene Graph una vez. En otras palabras, cada instancia de Node solo puede aparecer en un lugar en el escenario gráfico. <strong>Si intenta agregar la misma instancia de Node, o instancia de subclase de Node, al gráfico de escena más de una vez, se generará una excepción.</strong></p>
-<p>Un nodo JavaFX a veces puede tener subelementos, que también se denominan elementos secundarios.</p>
-<p>Una vez que se adjunta una instancia de node al gráfico de escena, solo el hilo de la aplicación JavaFX puede modificar la instancia de node.</p>
-<h2 id="propiedades-de-javafx-node">Propiedades de JavaFX <code>Node</code></h2>
-<p>La clase <code>Node</code> y, por lo tanto, todas las subclases de Node, tienen las siguientes propiedades comunes:</p>
-<h3 id="1-sistema-de-coordenadas-coordinate-system">1. Sistema de coordenadas (Coordinate System)</h3>
-<p>Cada nodo JavaFX tiene su propio sistema de coordenadas cartesianas. La única diferencia con un sistema de coordenadas cartesianas regular es que <strong>el eje Y está invertido</strong>. Eso significa que el origen del sistema de coordenadas está en la esquina superior izquierda del sistema de coordenadas. A medida que aumentan los valores de Y, el punto se mueve hacia abajo desde la parte superior del sistema de coordenadas. Esta inversión del eje Y es normal en los sistemas de coordenadas de gráficos 2D.</p>
-<p><img alt="JavaFx" src="../../img/ud8/1node.png" /></p>
-<p>Es posible que un nodo JavaFX tenga coordenadas X e Y negativas.</p>
-<p>Cada nodo tiene su propio sistema de coordenadas. Este sistema de coordenadas se utiliza para colocar instancias de nodos secundarios dentro del nodo principal o al dibujar en un lienzo JavaFX. Eso significa que un nodo que es hijo de otro nodo tiene su propio sistema de coordenadas y una ubicación (X,Y) dentro del sistema de coordenadas de su nodo principal.</p>
-<p>A continuación se muestra un ejemplo de un sistema de coordenadas de nodo principal en el que un nodo secundario está ubicado en (25,25) en el sistema de coordenadas del nodo principal. El nodo secundario también tiene su propio sistema de coordenadas que tiene su (0,0) donde el nodo secundario se encuentra en el sistema de coordenadas principal, es decir, en (25,25) en el sistema de coordenadas del nodo principal.</p>
-<p><img alt="JavaFx" src="../../img/ud8/2node.png" /></p>
-<h3 id="2-cuadro-delimitador-bounding-box">2. Cuadro delimitador (Bounding Box)</h3>
-<p>Un nodo JavaFX tiene un cuadro delimitador. El cuadro delimitador es un cuadro lógico alrededor de la forma del nodo. El nodo completo se encuentra dentro del cuadro delimitador, es decir, gráficamente. En otras palabras, todas las esquinas y bordes del Nodo están contenidos dentro del cuadro delimitador, y no hay espacio adicional alrededor del Nodo, a menos que se agregue a través de un efecto, relleno u otra cosa aplicada al Nodo.</p>
-<p>En realidad, un nodo tiene 3 cuadros delimitadores:</p>
+                <h1 id="eventos">Eventos</h1>
+<p>Cada vez que un usuario interactúa con la aplicación (nodos), se dice que ha ocurrido un evento.</p>
+<p>Por ejemplo, hacer clic en un botón, mover el mouse, ingresar un carácter a través del teclado, seleccionar un elemento de la lista, desplazarse por la página, etc. son ejemplos de actividades que provocan que suceda un evento.</p>
+<p>Un evento notifica que ha ocurrido algo importante. Los eventos suelen ser la parte "primitiva" de un sistema de eventos (también conocido como bus de eventos). Generalmente, un sistema de eventos tiene las siguientes 3 responsabilidades:</p>
+<ol>
+<li>Trigger an event (disparar un evento),</li>
+<li>Notify listeners (notificar a los oyentes partes interesadas) sobre el evento y</li>
+<li>Handle the event (manejar o procesar el evento).</li>
+</ol>
+<p>El mecanismo de notificación de eventos lo realiza la plataforma JavaFX automáticamente. Por lo tanto, solo consideraremos cómo disparar eventos, escuchar eventos y cómo manejarlos.</p>
+<h2 id="tipos-de-eventos">Tipos de eventos</h2>
 <ul>
-<li><strong>layoutBounds</strong> Los límites del nodo en su propio espacio de coordenadas, sin aplicar ningún efecto, recorte o transformación.</li>
-<li><strong>boundsInLocal</strong> Los límites del nodo en su propio espacio de coordenadas, con efectos y clip aplicados, pero sin transformaciones.</li>
-<li><strong>boundsInParent</strong> Los límites del nodo en su espacio de coordenadas principal, con efectos, recorte y transformaciones aplicadas.</li>
+<li><strong>Eventos en primer plano</strong> (foreground events): requieren la interacción directa de un usuario. Se generan como consecuencia de la interacción de una persona con los componentes gráficos en una interfaz gráfica de usuario. Por ejemplo, hacer clic en un botón, mover el mouse, ingresar un carácter a través del teclado, seleccionar un elemento de la lista, desplazarse por la página, etc.</li>
+<li><strong>Eventos de fondo</strong> (background events): no requieren la interacción del usuario final. Las interrupciones del sistema operativo, fallas de hardware o software, vencimiento del temporizador, finalización de la operación son ejemplos de eventos en segundo plano.</li>
 </ul>
-<p>Cada una de estas dimensiones del cuadro delimitador se puede leer desde sus propiedades correspondientes con el mismo nombre, es decir, propiedades denominadas layoutBounds,boundsInLocal yboundsInParent.</p>
-<p>El cuadro boundsInParent es utilizado por el nodo padre (padre) para diseñar sus hijos. El nodo principal necesita conocer el espacio total, incluidos todos los efectos, clips y transformaciones de un nodo para poder asignarle espacio.</p>
-<h3 id="3-layoutx-y-layouty">3. layoutX y layoutY</h3>
-<p>Las propiedades layoutX y layoutY de un objeto de nodo contienen la X y la Y del nodo dentro de su padre.</p>
-<h3 id="4-preferred-height-and-width">4. Preferred height and width</h3>
-<p>Las propiedades de ancho y alto preferidas de un objeto de nodo especifican el ancho y alto preferidos del objeto de nodo dado (normalmente subclase de nodo). No todas las clases de nodos principales respetarán el ancho preferido y la altura preferida de un nodo secundario. Depende de la implementación concreta del nodo padre.</p>
-<h3 id="5-minimum-height-and-minimum-width">5. Minimum height and Minimum width</h3>
-<p>Las propiedades mínimas de ancho y alto de un objeto de nodo JavaFX especifican el ancho y el alto mínimos que un nodo quiere (o necesita) para mostrarse. No todas las clases de nodos principales pueden respetar estas propiedades. Depende de la implementación concreta del nodo padre.</p>
-<h3 id="6-maximum-height-and-maximum-width">6. Maximum height and Maximum width</h3>
-<p>Las propiedades máximas de ancho y alto de un objeto de nodo especifican el ancho y alto máximo que un nodo quiere (o necesita) para mostrarse. No todas las clases de nodos principales pueden respetar estas propiedades. Depende de la implementación concreta del nodo padre.</p>
-<h3 id="7-user-data">7. User data</h3>
-<p>Puede establecer datos de usuario en un nodo utilizando el método <code>setUserData()</code>. Este método toma cualquier objeto Java de su elección. De esta manera puede adjuntar, por ejemplo objetos de instancias de nodo.</p>
-<h3 id="8-items-child-nodes">8. Items (Child nodes)</h3>
-<p>Muchas subclases de nodos pueden contener elementos o nodos secundarios. La forma exacta en que agrega y accede a estos nodos secundarios depende de la subclase de nodo concreta. Algunas clases tienen un método <code>getItems()</code> que devuelve una lista de elementos. Otras clases tienen un método <code>getChildren()</code> que hace lo mismo. Se tendrá que comprobar la subclase de Nodo concreta para averiguar si puede tener elementos o nodos secundarios, y cómo los agrega y accede a ellos.</p>
+<h2 id="eventos-en-javafx">Eventos en JavaFX</h2>
+<p>La clase denominada <code>Event</code> del paquete <code>javafx.event</code> es la clase base para un evento. Una instancia de cualquiera de sus subclases es un evento. JavaFX proporciona una amplia variedad de eventos. Algunos de ellos se enumeran a continuación.</p>
+<ul>
+<li>
+<p><strong>Mouse event</strong>: evento de entrada que ocurre cuando se hace clic en el mouse. Está representado por la clase denominada <code>MouseEvent</code>. Incluye acciones como hacer clic con el mouse, presionar el mouse, soltar el mouse, mover el mouse, objetivo ingresado con el mouse, objetivo salido del mouse, etc.</p>
+</li>
+<li>
+<p><strong>Key event</strong>: evento de entrada que indica que se produjo una pulsación de tecla en un nodo. Está representado por la clase denominada <code>KeyEvent</code>. Este evento incluye acciones como pulsación de tecla, liberación de tecla y escritura de tecla.</p>
+</li>
+<li>
+<p><strong>Drag event</strong>: evento de entrada que ocurre cuando se arrastra el mouse. Está representado por la clase llamada <code>DragEvent</code>. Incluye acciones como arrastrar para insertar, arrastrar para soltar, etc.</p>
+</li>
+<li>
+<p><strong>Window event</strong>: evento relacionado con las acciones de mostrar/ocultar ventanas. Está representado por la clase llamada <code>WindowEvent</code>.</p>
+</li>
+</ul>
+<h2 id="manejo-de-eventos-event-handling">Manejo de eventos (Event Handling)</h2>
+<p>Es el mecanismo que controla el evento y decide qué debe suceder, si ocurre un evento. Tiene el código que se conoce como event handler que se ejecuta cuando ocurre un evento.</p>
+<p>En JavaFX cada evento tiene:</p>
+<ol>
+<li>
+<p><strong>Target</strong>: el nodo en el que se produjo un evento. Un objetivo puede ser una ventana, una escena y un nodo.</p>
+</li>
+<li>
+<p><strong>Source</strong>: la fuente a partir de la cual se genera el evento. Por ejemplo, el mouse es la fuente del evento.</p>
+</li>
+<li>
+<p><strong>Type</strong>: tipo del evento ocurrido; en el caso de un evento del mouse, el tipo de evento es presionar el mouse y soltar el mouse.</p>
+</li>
+</ol>
+<p>Supongamos que tenemos una aplicación que tiene botones. Si hace clic en un botón, la source será el mouse, el target será el nodo del botón presionado y el tipo de evento generado será el clic del mouse.</p>
+<h2 id="fases-del-manejo-de-eventos">Fases del manejo de eventos</h2>
+<p>Cada vez que se genera un evento, JavaFX pasa por las siguientes fases.</p>
+<h3 id="route-construction-construccion-de-rutas">Route construction (Construcción de rutas)</h3>
+<p>Cada vez que se genera un evento, la ruta predeterminada/inicial del evento está determinada por la construcción de una cadena de envío de eventos. Es el camino desde el escenario hasta el Nodo fuente.</p>
+<p>A continuación se muestra la cadena de envío de eventos para el evento generado, cuando hacemos clic en el botón en el escenario anterior: Stage -&gt; Scene -&gt; Button</p>
+<h2 id="event-capturing-phase-fase-de-captura-de-eventos">Event capturing phase (Fase de captura de eventos)</h2>
+<p>Después de la fase anterior se dispara el evento. Este evento viaja a todos los nodos de la cadena de despacho anterior (de arriba a abajo). Si alguno de estos nodos tiene registrado un filtro (<strong>filter</strong>) para el evento generado, se ejecutará. Si ninguno de los nodos en la cadena de despacho tiene un filtro para el evento generado, entonces se pasa al nodo de destino y finalmente el nodo de destino procesa el evento.</p>
+<h2 id="event-bubbling-phase-fase-de-propagacion-de-eventos">Event bubbling phase (Fase de propagación de eventos)</h2>
+<p>Aquí el evento viaja desde el nodo de destino hasta el nodo de Stage (de abajo hacia arriba). Si alguno de los nodos de la cadena de envío de eventos tiene un controlador (<strong>handler</strong>) registrado para el evento generado, se ejecutará. Si ninguno de estos nodos tiene controladores para manejar el evento, entonces el evento llega al nodo raíz y finalmente se completará el proceso.</p>
+<h2 id="event-handlers-and-filters">Event handlers and filters</h2>
+<p>Los filter y handlers de eventos son aquellos que contienen la lógica de la aplicación para procesar un evento. Un nodo puede registrarse en más de un controlador/filtro (handler/filter).</p>
+<p>Como se mencionó anteriormente, durante el evento, el procesamiento es un filtro que se ejecuta y durante la fase de propagación del evento, se ejecuta un controlador. Todos los controladores y filtros implementan la interfaz EventHandler del paquete javafx.event.</p>
+<h2 id="anadir-y-eliminar-un-event-filter">Añadir y eliminar un event filter</h2>
+<p>Para agregar un filtro de eventos a un nodo, debe registrar este filtro utilizando el método <code>addEventFilter()</code> de la clase Node.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//Creating the mouse event handler </span>
+<span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">MouseEvent</span><span class="o">&gt;</span> <span class="n">eventHandler</span> <span class="o">=</span> <span class="k">new</span> <span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">MouseEvent</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span> 
+   <span class="nd">@Override</span> 
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">handle</span><span class="p">(</span><span class="n">MouseEvent</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span> 
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">);</span> 
+      <span class="n">boton</span><span class="p">.</span><span class="na">setFill</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="na">DARKSLATEBLUE</span><span class="p">);</span>  
+   <span class="p">}</span> 
+<span class="p">};</span>   
+<span class="c1">//Adding event Filter </span>
+<span class="n">boton</span><span class="p">.</span><span class="na">addEventFilter</span><span class="p">(</span><span class="n">MouseEvent</span><span class="p">.</span><span class="na">MOUSE_CLICKED</span><span class="p">,</span> <span class="n">eventHandler</span><span class="p">);</span>
+</code></pre></div>
+<p>Para eliminar un filter hacemos:</p>
+<div class="highlight"><pre><span></span><code><span class="n">boton</span><span class="p">.</span><span class="na">removeEventFilter</span><span class="p">(</span><span class="n">MouseEvent</span><span class="p">.</span><span class="na">MOUSE_CLICKED</span><span class="p">,</span> <span class="n">eventHandler</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="anadir-y-eliminar-event-handler">Añadir y eliminar event handler</h2>
+<p>Para agregar un controlador de eventos a un nodo, debe registrar este controlador mediante el método <code>addEventHandler()</code> de la clase Node, como se muestra a continuación.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//Creating the mouse event handler </span>
+<span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">MouseEvent</span><span class="o">&gt;</span> <span class="n">eventHandler</span> <span class="o">=</span> 
+   <span class="k">new</span> <span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">MouseEvent</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span> 
+
+   <span class="nd">@Override</span> 
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">handle</span><span class="p">(</span><span class="n">MouseEvent</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span> 
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">);</span> 
+      <span class="n">boton</span><span class="p">.</span><span class="na">setFill</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="na">DARKSLATEBLUE</span><span class="p">);</span>             
+   <span class="p">}</span> 
+<span class="p">};</span>    
+<span class="c1">//Adding the event handler </span>
+<span class="n">boton</span><span class="p">.</span><span class="na">addEventHandler</span><span class="p">(</span><span class="n">MouseEvent</span><span class="p">.</span><span class="na">MOUSE_CLICKED</span><span class="p">,</span> <span class="n">eventHandler</span><span class="p">);</span>
+</code></pre></div>
+<p>Para eliminar:</p>
+<div class="highlight"><pre><span></span><code><span class="n">boton</span><span class="p">.</span><span class="na">removeEventHandler</span><span class="p">(</span><span class="n">MouseEvent</span><span class="p">.</span><span class="na">MOUSE_CLICKED</span><span class="p">,</span> <span class="n">eventHandler</span><span class="p">);</span>
+</code></pre></div>
+<p><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/fxml/doc-files/introduction_to_fxml.html#controllers">Controllers JavaFX</a></p>
                 
               
               
@@ -1804,7 +1860,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Pie">
       
         
-        <a href="../3scene/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 8.3 Scene" rel="prev">
+        <a href="../5uicontrols/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 8.5 Controles UI" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1813,20 +1869,20 @@
               <span class="md-footer__direction">
                 Anterior
               </span>
-              8.3 Scene
+              8.5 Controles UI
             </div>
           </div>
         </a>
       
       
         
-        <a href="../6layouts/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 8.4 Layouts" rel="next">
+        <a href="../../shortcuts/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Atajos de teclado para IntelliJ" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Siguiente
               </span>
-              8.4 Layouts
+              Atajos de teclado para IntelliJ
             </div>
           </div>
           <div class="md-footer__button md-icon">
