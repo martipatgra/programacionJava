@@ -1744,7 +1744,7 @@
                 
                 
                 <h1 id="eventos">Eventos</h1>
-<p>Cada vez que un usuario interactúa con la aplicación (nodos), se dice que ha ocurrido un evento.</p>
+<p>Cada vez que un usuario interactúa con la aplicación (nodos), se dice que ha ocurrido un evento. Existe un <code>UIThread</code> que está escuchando cuando lanzamos la aplicación. Cuando el usuario hace algo el UIThread que está escuchando, mira a ver si se lanza un evento, y si es así, envía el evento al controlador de eventos (event handler). El Event Handler se ejecuta en el subproceso del hilo UIThread. Mientras se ejecuta un evento del UIThread el usuario no puede interactuar con la aplicación.</p>
 <p>Por ejemplo, hacer clic en un botón, mover el mouse, ingresar un carácter a través del teclado, seleccionar un elemento de la lista, desplazarse por la página, etc. son ejemplos de actividades que provocan que suceda un evento.</p>
 <p>Un evento notifica que ha ocurrido algo importante. Los eventos suelen ser la parte "primitiva" de un sistema de eventos (también conocido como bus de eventos). Generalmente, un sistema de eventos tiene las siguientes 3 responsabilidades:</p>
 <ol>
