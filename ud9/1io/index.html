@@ -1528,9 +1528,46 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          9.1 java.IO
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         9.1 java.IO
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-datos-caracteres-y-bytes" class="md-nav__link">
+    Tipos de Datos - Caracteres y bytes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-acceso-a-ficheros" class="md-nav__link">
+    Tipos de acceso a ficheros
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1591,6 +1628,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-datos-caracteres-y-bytes" class="md-nav__link">
+    Tipos de Datos - Caracteres y bytes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-acceso-a-ficheros" class="md-nav__link">
+    Tipos de acceso a ficheros
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1603,8 +1662,36 @@
                 
                 
                 <h1 id="io-inputoutput-entradasalida-de-la-informacion">I/O Input/Output - Entrada/Salida de la información</h1>
-<p>Todo dato tiene un origen de entrada o un destino de salida (convenientemente en inglés: I/O). Un programa trabaja con datos que provienen de una entrada la cual puede ser un teclado, un archivo en disco o un socket a través de la red. Así mismo un programa genera resultados enviándolos a una salida la cual puede ser la pantalla, un archivo en disco o un socket a través de la red. Como podemos comprender hay distintos orígenes de entrada y destinos de salida para los datos, en Java todos estos se consideran flujos (en inglés: streams) de datos para los cuales disponemos, en la API estándar, del paquete <code>java.io</code>.</p>
+<p>Todo dato tiene un origen de entrada o un destino de salida (convenientemente en inglés: I/O). <strong>Input</strong> o entrada implica leer datos de una fuente y <strong>Output</strong> o salida implica escribirlos en un destino. Un programa trabaja con datos que provienen de una entrada la cual puede ser un teclado, un archivo en disco o un socket a través de la red. Así mismo un programa genera resultados enviándolos a una salida la cual puede ser la pantalla, un archivo en disco o un socket a través de la red. Como sabemos hay distintos orígenes de entrada y destinos de salida para los datos, en Java todos estos se consideran <strong>flujos</strong> (en inglés: <strong>streams</strong>) de datos para los cuales disponemos, en la API estándar, del paquete <code>java.io</code>.</p>
+<p>En clase, ya hemos usado la clase <code>Scanner</code> para la lectura de datos desde teclado.</p>
 <p><img alt="JavaIO" src="../../img/ud9/1javaio.png" /></p>
+<p>En las primeras versiones de Java el sistema de entrada/salida proporcionado en el paquete <code>java.io</code> era básico. En la versión 1.4 de Java se añadió un nuevo sistema de entrada/salida llamado <code>java.NIO</code> (New IO) para suplir algunas de sus deficiencias que posteriormente en Java 7 se mejoró aún más <code>java.NIO</code>. Entre las mejoras se incluyen permitir navegación de directorios sencillo, soporte para reconocer enlaces simbólicos, leer atributos de ficheros como permisos e información como última fecha de modificación, soporte de entrada/salida asíncrona y soporte para operaciones básicas sobre ficheros como copiar y mover ficheros.</p>
+<h2 id="tipos-de-datos-caracteres-y-bytes">Tipos de Datos - Caracteres y bytes</h2>
+<p>Existen dos tipos de flujos (streams) según el tipo de datos, flujos binarios y flujos de caracteres. Los tipos de datos que se pueden leer/escribir suelen ser bytes o caracteres y los métodos que se utilizan son similares, pero se utilizan clases diferentes.</p>
+<p>Al escribir y leer datos de caracteres, éstos están en un formato legible para el ser humano, sin embargo, los datos binarios implican leer y escribir bytes que no son legibles si los abrimos en un editor de texto.</p>
+<ul>
+<li>Flujos binarios (byte streams): almacenan variables, clases del programa, archivos de imagen, sonido, etc. Las clases principales para manejar estos flujos son las clases abstractas <strong>InputStream</strong> y <strong>OutputStream</strong>.</li>
+</ul>
+<p>Clases principales de InputStream:</p>
+<p><img alt="JavaIO" src="../../img/ud9/2javaio.png" /></p>
+<p>Clases principales de OutputStream:</p>
+<p><img alt="JavaIO" src="../../img/ud9/3javaio.png" /></p>
+<ul>
+<li>Flujos de caracteres (character streams): se utilizan con frecuencia para leer/escribir ficheros de texto, xml y json. Las clases principales para manejar estos flujos son las clases abstractas <strong>Reader</strong> y <strong>Writer</strong>.</li>
+</ul>
+<p>Clases principales de Reader:</p>
+<p><img alt="JavaIO" src="../../img/ud9/4javaio.png" /></p>
+<p>Clases principales de Writer:</p>
+<p><img alt="JavaIO" src="../../img/ud9/5javaio.png" /></p>
+<h2 id="tipos-de-acceso-a-ficheros">Tipos de acceso a ficheros</h2>
+<ol>
+<li>
+<p>Acceso secuencial: Una lectura secuencial implica tener que acceder a un elemento antes de acceder al siguiente, es decir, de una manera lineal (sin saltos).</p>
+</li>
+<li>
+<p>Acceso aleatorio: los ficheros de acceso aleatorio permiten acceder a sus datos de una forma aleatoria, esto es indicando una determinada posición desde la que leer/escribir.</p>
+</li>
+</ol>
                 
               
               
