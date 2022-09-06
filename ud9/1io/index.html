@@ -1592,6 +1592,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#escritura-en-un-fichero-binario-usando-el-bufer" class="md-nav__link">
+    Escritura en un fichero binario usando el búfer
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1702,6 +1709,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#escritura-en-un-fichero-binario-usando-el-bufer" class="md-nav__link">
+    Escritura en un fichero binario usando el búfer
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1785,6 +1799,9 @@ Los streams pueden estar orientados a bytes u orientados a caracteres. Cada tipo
 <p class="admonition-title">Warning</p>
 <p>Siempre hay que cerrar el flujo para asegurarse de liberar todos los recursos asociados a él y que el sistema operativo no consuma recursos.</p>
 </div>
+<h2 id="escritura-en-un-fichero-binario-usando-el-bufer">Escritura en un fichero binario usando el búfer</h2>
+<p>Ahora vamos a escribir más enteros en el fichero. Para ello utilizamos <code>BufferedOutputStream</code>. Este búfer almacena los bytes antes de que se escriban en el disco. Recuerda que un búfer es un bloque de memoria que se usa para ensamblar datos antes de que se escriban todos a la vez.</p>
+<p><strong>El almacenamiento en búfer hace que las operaciones de E/S sean más eficientes.</strong> Para un programa que realiza E/S masivas, el almacenamiento en búfer es esencial. La E/S es muy lenta en comparación con las operaciones con almacenamiento principal. Sin almacenamiento en búfer, la E/S sería muy, muy lenta.</p>
                 
               
               
