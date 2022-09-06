@@ -1802,6 +1802,22 @@ Los streams pueden estar orientados a bytes u orientados a caracteres. Cada tipo
 <h2 id="escritura-en-un-fichero-binario-usando-el-bufer">Escritura en un fichero binario usando el búfer</h2>
 <p>Ahora vamos a escribir más enteros en el fichero. Para ello utilizamos <code>BufferedOutputStream</code>. Este búfer almacena los bytes antes de que se escriban en el disco. Recuerda que un búfer es un bloque de memoria que se usa para ensamblar datos antes de que se escriban todos a la vez.</p>
 <p><strong>El almacenamiento en búfer hace que las operaciones de E/S sean más eficientes.</strong> Para un programa que realiza E/S masivas, el almacenamiento en búfer es esencial. La E/S es muy lenta en comparación con las operaciones con almacenamiento principal. Sin almacenamiento en búfer, la E/S sería muy, muy lenta.</p>
+<div class="highlight"><pre><span></span><code> <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">writeBuffer</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">DataOutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DataOutputStream</span><span class="p">(</span>
+                <span class="k">new</span> <span class="n">BufferedOutputStream</span><span class="p">(</span>
+                        <span class="k">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&quot;datosBufer.dat&quot;</span><span class="p">)));</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">out</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">out</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
