@@ -1556,11 +1556,38 @@
     Tipos de Datos - Caracteres y bytes
   </a>
   
+    <nav class="md-nav" aria-label="Tipos de Datos - Caracteres y bytes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flujos-orientados-a-bytes" class="md-nav__link">
+    Flujos orientados a bytes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujos-orientados-a-caracteres" class="md-nav__link">
+    Flujos orientados a caracteres
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#tipos-de-acceso-a-ficheros" class="md-nav__link">
     Tipos de acceso a ficheros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escribir-datos-en-un-fichero-binario" class="md-nav__link">
+    Escribir datos en un fichero binario
   </a>
   
 </li>
@@ -1639,11 +1666,38 @@
     Tipos de Datos - Caracteres y bytes
   </a>
   
+    <nav class="md-nav" aria-label="Tipos de Datos - Caracteres y bytes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flujos-orientados-a-bytes" class="md-nav__link">
+    Flujos orientados a bytes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujos-orientados-a-caracteres" class="md-nav__link">
+    Flujos orientados a caracteres
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#tipos-de-acceso-a-ficheros" class="md-nav__link">
     Tipos de acceso a ficheros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escribir-datos-en-un-fichero-binario" class="md-nav__link">
+    Escribir datos en un fichero binario
   </a>
   
 </li>
@@ -1662,26 +1716,41 @@
                 
                 
                 <h1 id="io-inputoutput-entradasalida-de-la-informacion">I/O Input/Output - Entrada/Salida de la información</h1>
-<p>Todo dato tiene un origen de entrada o un destino de salida (convenientemente en inglés: I/O). <strong>Input</strong> o entrada implica leer datos de una fuente y <strong>Output</strong> o salida implica escribirlos en un destino. Un programa trabaja con datos que provienen de una entrada la cual puede ser un teclado, un archivo en disco o un socket a través de la red. Así mismo un programa genera resultados enviándolos a una salida la cual puede ser la pantalla, un archivo en disco o un socket a través de la red. Como sabemos hay distintos orígenes de entrada y destinos de salida para los datos, en Java todos estos se consideran <strong>flujos</strong> (en inglés: <strong>streams</strong>) de datos para los cuales disponemos, en la API estándar, del paquete <code>java.io</code>.</p>
-<p>En clase, ya hemos usado la clase <code>Scanner</code> para la lectura de datos desde teclado.</p>
+<p>Todo dato tiene un origen de entrada o un destino de salida (convenientemente en inglés: I/O). <strong>Input</strong> o entrada implica leer datos de una fuente y <strong>Output</strong> o salida implica escribirlos en un destino. Un programa trabaja con datos que provienen de una entrada la cual puede ser un teclado, un archivo en disco o un socket a través de la red. Así mismo un programa genera resultados enviándolos a una salida la cual puede ser la pantalla, un archivo en disco o un socket a través de la red. En Java, la conexión entre un programa y un origen o destino de datos se denomina <strong>flujo</strong> (en inglés: <strong>stream</strong>).</p>
+<p><img alt="JavaIO" src="../../img/ud9/stream.png" /></p>
+<p>Un flujo de entrada <em>(input stream)</em> maneja los datos que fluyen hacia un programa. Un flujo de salida <em>(output stream)</em> maneja los datos que salen de un programa.</p>
 <p><img alt="JavaIO" src="../../img/ud9/1javaio.png" /></p>
 <p>En las primeras versiones de Java el sistema de entrada/salida proporcionado en el paquete <code>java.io</code> era básico. En la versión 1.4 de Java se añadió un nuevo sistema de entrada/salida llamado <code>java.NIO</code> (New IO) para suplir algunas de sus deficiencias que posteriormente en Java 7 se mejoró aún más <code>java.NIO</code>. Entre las mejoras se incluyen permitir navegación de directorios sencillo, soporte para reconocer enlaces simbólicos, leer atributos de ficheros como permisos e información como última fecha de modificación, soporte de entrada/salida asíncrona y soporte para operaciones básicas sobre ficheros como copiar y mover ficheros.</p>
 <h2 id="tipos-de-datos-caracteres-y-bytes">Tipos de Datos - Caracteres y bytes</h2>
 <p>Existen dos tipos de flujos (streams) según el tipo de datos, flujos binarios y flujos de caracteres. Los tipos de datos que se pueden leer/escribir suelen ser bytes o caracteres y los métodos que se utilizan son similares, pero se utilizan clases diferentes.</p>
+<p>Internamente, todos los datos consisten en patrones de bits agrupados en bytes. Entonces, lógicamente, todos los flujos podrían llamarse "flujos de bytes" <strong>(byte streams)</strong>. Sin embargo, los flujos destinados a bytes que representan caracteres se denominan "flujos de caracteres" <strong>(character streams)</strong> y todos los demás se denominan "flujos de bytes".</p>
 <p>Al escribir y leer datos de caracteres, éstos están en un formato legible para el ser humano, sin embargo, los datos binarios implican leer y escribir bytes que no son legibles si los abrimos en un editor de texto.</p>
 <ul>
-<li>Flujos binarios (byte streams): almacenan variables, clases del programa, archivos de imagen, sonido, etc. Las clases principales para manejar estos flujos son las clases abstractas <strong>InputStream</strong> y <strong>OutputStream</strong>.</li>
+<li>Flujos binarios (byte streams): almacenan variables, clases del programa, archivos de imagen, sonido, etc. Por ejemplo, el archivo de código de bytes creado por el compilador de Java contiene instrucciones de máquina para la máquina virtual de Java. Estos no están destinados a representar caracteres, y la entrada y salida de ellos debe usar flujos de bytes. Las clases principales para manejar estos flujos son las clases abstractas <strong>InputStream</strong> y <strong>OutputStream</strong>.</li>
 </ul>
-<p>Clases principales de InputStream:</p>
+<p>La siguiente figura muestra la jerarquía del paquete <code>java.io</code>.
+Los streams pueden estar orientados a bytes u orientados a caracteres. Cada tipo tiene flujos de entrada y flujos de salida.</p>
+<p><img alt="JavaIO" src="../../img/ud9/2stream.png" /></p>
+<h3 id="flujos-orientados-a-bytes">Flujos orientados a bytes</h3>
+<ul>
+<li>Diseñado para entrada y salida de propósito general.</li>
+<li>Los datos pueden ser tipos de datos primitivos o bytes sin procesar.</li>
+</ul>
+<h3 id="flujos-orientados-a-caracteres">Flujos orientados a caracteres</h3>
+<ul>
+<li>Destinado a datos de caracteres.</li>
+<li>Los datos se transforman de/a caracteres Java de 16 bits utilizados dentro de los programas al formato utilizado externamente.</li>
+</ul>
+<p><em>Clases principales de InputStream:</em></p>
 <p><img alt="JavaIO" src="../../img/ud9/2javaio.png" /></p>
-<p>Clases principales de OutputStream:</p>
+<p><em>Clases principales de OutputStream:</em></p>
 <p><img alt="JavaIO" src="../../img/ud9/3javaio.png" /></p>
 <ul>
-<li>Flujos de caracteres (character streams): se utilizan con frecuencia para leer/escribir ficheros de texto, xml y json. Las clases principales para manejar estos flujos son las clases abstractas <strong>Reader</strong> y <strong>Writer</strong>.</li>
+<li>Flujos de caracteres (character streams): están optimizados para datos de caracteres. Se utilizan con frecuencia para leer/escribir ficheros de texto, xml y json. Las clases principales para manejar estos flujos son las clases abstractas <strong>Reader</strong> y <strong>Writer</strong>.</li>
 </ul>
-<p>Clases principales de Reader:</p>
+<p><em>Clases principales de Reader</em>:</p>
 <p><img alt="JavaIO" src="../../img/ud9/4javaio.png" /></p>
-<p>Clases principales de Writer:</p>
+<p><em>Clases principales de Writer:</em></p>
 <p><img alt="JavaIO" src="../../img/ud9/5javaio.png" /></p>
 <h2 id="tipos-de-acceso-a-ficheros">Tipos de acceso a ficheros</h2>
 <ol>
@@ -1692,6 +1761,30 @@
 <p>Acceso aleatorio: los ficheros de acceso aleatorio permiten acceder a sus datos de una forma aleatoria, esto es indicando una determinada posición desde la que leer/escribir.</p>
 </li>
 </ol>
+<h2 id="escribir-datos-en-un-fichero-binario">Escribir datos en un fichero binario</h2>
+<p>Se puede escribir datos en un fichero binario de muchas formas. Veamos un ejemplo utilizando la clase <code>FileOutputStream</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">DataOutputStream</span> <span class="n">fos</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DataOutputStream</span><span class="p">(</span><span class="k">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&quot;datos.dat&quot;</span><span class="p">));</span>
+        <span class="n">fos</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="n">fos</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">fos</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="mi">33</span><span class="p">);</span>
+        <span class="n">fos</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="o">-</span><span class="mi">77</span><span class="p">);</span>
+        <span class="n">fos</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//todas pueden derivar de IOException</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En el ejemplo, el constructor <code>FileOutputStream</code> abre el fichero <code>datos.dat</code> para escritura. Se crea un nuevo fichero; si un fichero antiguo tiene el mismo nombre, se eliminará. Luego, un <code>DataOutputStream</code> se conecta al <code>FileOutputStream</code>.</p>
+<p><code>DataOutputStream</code> tiene métodos para escribir datos primitivos en un flujo de salida. El método writeInt() escribe los cuatro bytes de un tipo de datos int en la secuencia.</p>
+<p>El programa escribe cuatro enteros en el flujo de salida y luego cierra el flujo.</p>
+<div class="admonition nota">
+<p class="admonition-title">Nota</p>
+<p>Siempre hay que cerrar el flujo de salida para asegurarse de que el sistema operativo realmente escriba los datos.</p>
+</div>
                 
               
               
