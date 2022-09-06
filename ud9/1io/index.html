@@ -1599,6 +1599,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lectura-de-datos-en-un-fichero-binario" class="md-nav__link">
+    Lectura de datos en un fichero binario
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1716,6 +1723,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lectura-de-datos-en-un-fichero-binario" class="md-nav__link">
+    Lectura de datos en un fichero binario
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1776,7 +1790,7 @@ Los streams pueden estar orientados a bytes u orientados a caracteres. Cada tipo
 </li>
 </ol>
 <h2 id="escribir-datos-en-un-fichero-binario">Escribir datos en un fichero binario</h2>
-<p>Se puede escribir datos en un fichero binario de muchas formas. Veamos un ejemplo utilizando la clase <code>FileOutputStream</code>.</p>
+<p>La escritura en ficheros binarios representa el flujo de salida de bytes, es decir, necesitamos utilizar las clases que derivan de <code>OutputStream</code>. Se puede escribir datos en un fichero binario de muchas formas. Veamos un ejemplo utilizando la clase <code>FileOutputStream</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">try</span> <span class="p">{</span>
         <span class="n">DataOutputStream</span> <span class="n">fos</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DataOutputStream</span><span class="p">(</span><span class="k">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&quot;datos.dat&quot;</span><span class="p">));</span>
@@ -1818,6 +1832,9 @@ Los streams pueden estar orientados a bytes u orientados a caracteres. Cada tipo
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<h2 id="lectura-de-datos-en-un-fichero-binario">Lectura de datos en un fichero binario</h2>
+<p>Para leer un fichero, primero hemos de preguntarnos un poco sobre él, es decir, si fue escrito por un programa Java, entonces necesitaremos saber qué tipos de datos se usaron, y así poder usar una subclase de <code>InputStream</code> para leer bytes para ese tipo de datos.</p>
+<p><code>InputStream</code>, como hemos visto en los diagramas, es una clase abstracta para objetos que leen flujos de bytes. Aunque, no todas las clases que derivan de ella están relacionadas con la entrada de ficheros de disco. Por ejemplo, <code>PipedInputStream</code> representa datos provenientes de otro programa en ejecución.</p>
                 
               
               
