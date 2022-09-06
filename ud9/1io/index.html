@@ -1728,6 +1728,17 @@
 <ul>
 <li>Flujos binarios (byte streams): almacenan variables, clases del programa, archivos de imagen, sonido, etc. Por ejemplo, el archivo de código de bytes creado por el compilador de Java contiene instrucciones de máquina para la máquina virtual de Java. Estos no están destinados a representar caracteres, y la entrada y salida de ellos debe usar flujos de bytes. Las clases principales para manejar estos flujos son las clases abstractas <strong>InputStream</strong> y <strong>OutputStream</strong>.</li>
 </ul>
+<p><em>Clases principales de InputStream:</em></p>
+<p><img alt="JavaIO" src="../../img/ud9/2javaio.png" /></p>
+<p><em>Clases principales de OutputStream:</em></p>
+<p><img alt="JavaIO" src="../../img/ud9/3javaio.png" /></p>
+<ul>
+<li>Flujos de caracteres (character streams): están optimizados para datos de caracteres. Se utilizan con frecuencia para leer/escribir ficheros de texto, xml y json. Las clases principales para manejar estos flujos son las clases abstractas <strong>Reader</strong> y <strong>Writer</strong>.</li>
+</ul>
+<p><em>Clases principales de Reader</em>:</p>
+<p><img alt="JavaIO" src="../../img/ud9/4javaio.png" /></p>
+<p><em>Clases principales de Writer:</em></p>
+<p><img alt="JavaIO" src="../../img/ud9/5javaio.png" /></p>
 <p>La siguiente figura muestra la jerarquía del paquete <code>java.io</code>.
 Los streams pueden estar orientados a bytes u orientados a caracteres. Cada tipo tiene flujos de entrada y flujos de salida.</p>
 <p><img alt="JavaIO" src="../../img/ud9/2stream.png" /></p>
@@ -1741,17 +1752,6 @@ Los streams pueden estar orientados a bytes u orientados a caracteres. Cada tipo
 <li>Destinado a datos de caracteres.</li>
 <li>Los datos se transforman de/a caracteres Java de 16 bits utilizados dentro de los programas al formato utilizado externamente.</li>
 </ul>
-<p><em>Clases principales de InputStream:</em></p>
-<p><img alt="JavaIO" src="../../img/ud9/2javaio.png" /></p>
-<p><em>Clases principales de OutputStream:</em></p>
-<p><img alt="JavaIO" src="../../img/ud9/3javaio.png" /></p>
-<ul>
-<li>Flujos de caracteres (character streams): están optimizados para datos de caracteres. Se utilizan con frecuencia para leer/escribir ficheros de texto, xml y json. Las clases principales para manejar estos flujos son las clases abstractas <strong>Reader</strong> y <strong>Writer</strong>.</li>
-</ul>
-<p><em>Clases principales de Reader</em>:</p>
-<p><img alt="JavaIO" src="../../img/ud9/4javaio.png" /></p>
-<p><em>Clases principales de Writer:</em></p>
-<p><img alt="JavaIO" src="../../img/ud9/5javaio.png" /></p>
 <h2 id="tipos-de-acceso-a-ficheros">Tipos de acceso a ficheros</h2>
 <ol>
 <li>
