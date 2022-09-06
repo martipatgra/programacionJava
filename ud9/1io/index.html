@@ -1781,9 +1781,9 @@ Los streams pueden estar orientados a bytes u orientados a caracteres. Cada tipo
 <p>En el ejemplo, el constructor <code>FileOutputStream</code> abre el fichero <code>datos.dat</code> para escritura. Se crea un nuevo fichero; si un fichero antiguo tiene el mismo nombre, se eliminará. Luego, un <code>DataOutputStream</code> se conecta al <code>FileOutputStream</code>.</p>
 <p><code>DataOutputStream</code> tiene métodos para escribir datos primitivos en un flujo de salida. El método writeInt() escribe los cuatro bytes de un tipo de datos int en la secuencia.</p>
 <p>El programa escribe cuatro enteros en el flujo de salida y luego cierra el flujo.</p>
-<div class="admonition nota">
-<p class="admonition-title">Nota</p>
-<p>Siempre hay que cerrar el flujo de salida para asegurarse de que el sistema operativo realmente escriba los datos.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Siempre hay que cerrar el flujo para asegurarse de liberar todos los recursos asociados a él y que el sistema operativo no consuma recursos.</p>
 </div>
                 
               
