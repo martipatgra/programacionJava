@@ -1606,6 +1606,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#path-vs-file" class="md-nav__link">
+    Path vs File
+  </a>
+  
+    <nav class="md-nav" aria-label="Path vs File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javaiofile" class="md-nav__link">
+    java.io.File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1730,6 +1750,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#path-vs-file" class="md-nav__link">
+    Path vs File
+  </a>
+  
+    <nav class="md-nav" aria-label="Path vs File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javaiofile" class="md-nav__link">
+    java.io.File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1835,6 +1875,30 @@ Los streams pueden estar orientados a bytes u orientados a caracteres. Cada tipo
 <h2 id="lectura-de-datos-en-un-fichero-binario">Lectura de datos en un fichero binario</h2>
 <p>Para leer un fichero, primero hemos de preguntarnos un poco sobre él, es decir, si fue escrito por un programa Java, entonces necesitaremos saber qué tipos de datos se usaron, y así poder usar una subclase de <code>InputStream</code> para leer bytes para ese tipo de datos.</p>
 <p><code>InputStream</code>, como hemos visto en los diagramas, es una clase abstracta para objetos que leen flujos de bytes. Aunque, no todas las clases que derivan de ella están relacionadas con la entrada de ficheros de disco. Por ejemplo, <code>PipedInputStream</code> representa datos provenientes de otro programa en ejecución.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">DataInputStream</span> <span class="n">dis</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DataInputStream</span><span class="p">(</span><span class="k">new</span> <span class="n">FileInputStream</span><span class="p">(</span><span class="s">&quot;datos.dat&quot;</span><span class="p">));</span>
+
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">dis</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">dis</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">dis</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">dis</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span>
+        <span class="n">dis</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//todas pueden derivar de IOException</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Al igual que en la escritura para la lectura también disponemos de la clase <code>BufferedInputStream</code>.</p>
+<h2 id="path-vs-file">Path vs File</h2>
+<p>En Java, <code>Path</code> y <code>File</code> son clases responsables de las operaciones de E/S de ficheros. Realizan las mismas funciones pero pertenecen a diferentes paquetes.</p>
+<h3 id="javaiofile"><code>java.io.File</code></h3>
+<p>Las primeras versiones de Java incluyen el paquete <code>java.io</code>, que contiene casi todas las clases que podríamos necesitar para realizar operaciones de entrada y salida. La clase <code>File</code> es una representación abstracta de nombres de rutas de archivos y directorios.</p>
                 
               
               
