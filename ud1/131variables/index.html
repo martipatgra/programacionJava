@@ -408,6 +408,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    Scope
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1678,6 +1685,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    Scope
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1738,6 +1752,23 @@ Existen 61 <a href="https://en.wikipedia.org/wiki/List_of_Java_keywords">keyword
 <p>En las variables locales, su ámbito y uso se encuentra dentro del método o bloque en el que se definió y se destruyen después de la ejecución del método. Es decir, no se puede usar una variable local fuera del método actual.</p>
 <p>A las variables de instancia se puede acceder solo a través de objetos de la clase para la que se definió.</p>
 <p>Un campo / variable estático pertenece a la clase y se cargará en la memoria junto con la clase. Se invocan sin crear un objeto. (Usando el nombre de la clase como referencia). Solo hay una copia de la variable estática disponible en toda la clase, es decir, el valor de la variable estática será el mismo en todos los objetos. Puede definir una variable estática utilizando la palabra clave <strong>static</strong>.</p>
+<h2 id="scope">Scope</h2>
+<p>El alcance o ámbito (<strong>scope</strong>) de una variable es la parte de un programa <em>en la que existe.</em> En Java, el alcance de una variable comienza donde se declara y termina cuando se alcanza la llave de cierre del bloque que la contiene.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+     <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">// ¡x todavía está dentro del alcance aquí!</span>
+     <span class="p">}</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">// ¡x todavía está dentro del alcance aquí también!</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>x</code> está dentro del alcance entre su declaración en la línea 2 y la llave que la encierra en la línea 8.</li>
+<li><code>y</code> está dentro del alcance entre su declaración en la línea 4 y la llave que la encierra en la línea 6.</li>
+<li>Las variables de bucle están dentro del alcance entre sus bucles <code>for</code> { }. Entonces, <code>i</code> está dentro del alcance entre las líneas 3 - 6.
+Nota: Dos variables con el mismo nombre no pueden existir dentro del mismo ámbito (scope).</li>
+</ul>
                 
               
               
