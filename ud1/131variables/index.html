@@ -409,8 +409,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope" class="md-nav__link">
-    Scope
+  <a href="#mutacion-de-las-variables" class="md-nav__link">
+    Mutación de las variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope-ambito" class="md-nav__link">
+    Scope - Ámbito
   </a>
   
 </li>
@@ -1686,8 +1693,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope" class="md-nav__link">
-    Scope
+  <a href="#mutacion-de-las-variables" class="md-nav__link">
+    Mutación de las variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope-ambito" class="md-nav__link">
+    Scope - Ámbito
   </a>
   
 </li>
@@ -1752,7 +1766,29 @@ Existen 61 <a href="https://en.wikipedia.org/wiki/List_of_Java_keywords">keyword
 <p>En las variables locales, su ámbito y uso se encuentra dentro del método o bloque en el que se definió y se destruyen después de la ejecución del método. Es decir, no se puede usar una variable local fuera del método actual.</p>
 <p>A las variables de instancia se puede acceder solo a través de objetos de la clase para la que se definió.</p>
 <p>Un campo / variable estático pertenece a la clase y se cargará en la memoria junto con la clase. Se invocan sin crear un objeto. (Usando el nombre de la clase como referencia). Solo hay una copia de la variable estática disponible en toda la clase, es decir, el valor de la variable estática será el mismo en todos los objetos. Puede definir una variable estática utilizando la palabra clave <strong>static</strong>.</p>
-<h2 id="scope">Scope</h2>
+<h2 id="mutacion-de-las-variables">Mutación de las variables</h2>
+<p>Supongamos que hemos ejecutado la siguiente línea de código:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+<p>¿Cómo podríamos sumar 6 al valor actualmente almacenado en <code>x</code>? Un enfoque ingenuo podría ser probar esta línea de código:</p>
+<div class="highlight"><pre><span></span><code>    <span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">;</span>
+</code></pre></div>
+<p>Sin embargo, esta línea de código es una expresión que da como resultado un valor: <strong>no hemos alterado el valor de x</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Recuerda, x es una variable que contiene el valor 5</span>
+<span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">// se evalúa como:</span>
+<span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">// y luego da como resultado:</span>
+<span class="mi">11</span><span class="p">;</span>
+
+<span class="c1">// Pero 11; no es una declaración que Java entienda,</span>
+<span class="c1">// entonces el compilador lanza un error cuando ve: x + 6;</span>
+</code></pre></div>
+<p>Para aumentar el valor de <code>x</code> en 6, necesitamos reasignar el valor de <code>x</code> para que sea el resultado de <code>x + 6</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">// se evalúa como:</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">// y luego se suman los valores</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span><span class="c1">// como resultado se asigna el valor 11 a x</span>
+</code></pre></div>
+<p>Aquí, hemos usado el valor de <code>x</code> para calcular y almacenar un nuevo valor en la variable <code>x</code>; en este caso, 11.</p>
+<h2 id="scope-ambito">Scope - Ámbito</h2>
 <p>El alcance o ámbito (<strong>scope</strong>) de una variable es la parte de un programa <em>en la que existe.</em> En Java, el alcance de una variable comienza donde se declara y termina cuando se alcanza la llave de cierre del bloque que la contiene.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
      <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
