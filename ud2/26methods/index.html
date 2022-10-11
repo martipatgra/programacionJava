@@ -763,9 +763,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2.6.- Introducción a los métodos en Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         2.6.- Introducción a los métodos en Java
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sentencia-return-valores-devueltos" class="md-nav__link">
+    Sentencia Return - Valores devueltos
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1591,6 +1621,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sentencia-return-valores-devueltos" class="md-nav__link">
+    Sentencia Return - Valores devueltos
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1608,6 +1653,14 @@ Todo el tiempo hemos estado usando un método llamado main, dentro de él se enc
 <p><img alt="Método" src="../../img/ud26method2.png" /></p>
 <p><img alt="Método" src="../../img/ud26method.png" /></p>
 <p>Los métodos se alinean unos debajo de otros, no se puede insertar un método dentro de otro método, y además deben estar dentro de la clase.</p>
+<h2 id="sentencia-return-valores-devueltos">Sentencia <code>Return</code> - Valores devueltos</h2>
+<p>Un valor devuelto es información que un método <strong>devuelve al código que lo llamó</strong>. Cada método solo puede devolver un valor: cuando un método regresa, deja de ejecutarse (y continuamos donde lo dejamos antes de llamar al método). Para que el código que llamó al método use el valor devuelto, <strong>el valor devuelto debe almacenarse en una variable</strong> o <strong>usarse inmediatamente</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="n">type</span> <span class="nf">methodName</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// llamar a nombre de método devuelve expresión</span>
+     <span class="p">...</span>
+     <span class="k">return</span> <span class="n">expression</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">type</span> <span class="n">variableName</span> <span class="o">=</span> <span class="n">methodName</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>  <span class="c1">// variableName almacena el valor de retorno</span>
+</code></pre></div>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
 
