@@ -2060,20 +2060,25 @@ Para una persona será comer, beber, dormir, etc.</p>
 <hr />
 <p>Los objetos de software almacenan su estado en <strong><em>campos</em></strong>. Los campos es lo que conocemos como variables.
 Y exponen su comportamiento en lo que llamamos <strong><em>métodos</em></strong>.</p>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p><strong>Un objeto es una instancia de la clase.</strong> Una clase es una plantilla o modelo a partir del cual se crean objetos. Entonces, un objeto es la instancia (resultado) de una clase.</p>
+</div>
 <h2 id="clases">Clases</h2>
 <p>Teniendo en cuenta todo esto, podemos pasar a hablar de <strong>clase</strong>.
 Una clase es una plantilla para crear objetos.
-Para crear un clase en Java utilizamos la palabra reservada <em>class</em>.</p>
+Para crear un clase en Java utilizamos la palabra reservada <code>_class_</code>.</p>
 <p>La nomenclatura del nombre de la clase es primera letra en mayúsculas y usar la regla CamelCase para palabras compuestas.</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Coche</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
+<p><code>public</code>: es un modificador de acceso, determina qué acceso queremos permitir a otros en la clase. Existen tres tipos de modificadores de acceso:
++ public: en este caso, public especifica que no hay ninguna restricción de acceso.
++ private: nadie puede acceder a la clase.
++ protected: permite a las clases de este paquete acceder.</p>
+<hr />
 <ul>
-<li>public: es un modificador de acceso, determina qué acceso queremos permitir a otros en la clase. Existen tres tipos de modificadores de acceso:</li>
-<li>public: en este caso, public especifica que no hay ninguna restricción de acceso.</li>
-<li>private: nadie puede acceder a la clase.</li>
-<li>protected: permite a las clases de este paquete acceder.</li>
 <li>class: identificador de clase.</li>
 </ul>
 <p>¿De qué forma nos ayudan las clases en nuestro código?
