@@ -2158,12 +2158,24 @@ Es decir, usamos el concepto de encapsulación que es una clave fundamental de l
 Significa que la representación del objeto se ocultará a la vista, es decir, el funcionamiento interno del objeto.</p>
 <p>Existen los siguientes tipos de modificadores, ordenados de menor a mayor restricción:</p>
 <ul>
-<li><strong>public</strong>: son accesibles desde cualquier lugar.</li>
+<li><strong>public</strong>: son accesibles desde cualquier lugar. </li>
 <li><strong>protected</strong>: son accesibles desde dentro del mismo paquete y en clases heredadas.</li>
 <li><strong>sin modificador</strong>: son accesibles desde la propia clase y clases dentro del mismo paquete.</li>
 <li><strong>private</strong>: solo son accesibles desde la propia clase, no son accesibles desde fuera.</li>
 </ul>
 <p><img alt="oop" src="../../img/ud3/2modifier.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//modificador público</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">speed</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">//modificador protegido</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">speed</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">//sin modificador</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">speed</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">//modificador privado</span><span class="w"></span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">speed</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 <h4 id="consejos-para-elegir-un-nivel-de-acceso">Consejos para elegir un nivel de acceso</h4>
 <ul>
 <li>Utiliza el nivel de acceso más restrictivo que tenga sentido para un miembro en particular. Usa private a menos que tengas una buena razón para no hacerlo.</li>
