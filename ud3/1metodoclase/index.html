@@ -1007,6 +1007,19 @@
     Modificadores de acceso de atributos
   </a>
   
+    <nav class="md-nav" aria-label="Modificadores de acceso de atributos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consejos-para-elegir-un-nivel-de-acceso" class="md-nav__link">
+    Consejos para elegir un nivel de acceso
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2006,6 +2019,19 @@
     Modificadores de acceso de atributos
   </a>
   
+    <nav class="md-nav" aria-label="Modificadores de acceso de atributos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consejos-para-elegir-un-nivel-de-acceso" class="md-nav__link">
+    Consejos para elegir un nivel de acceso
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2077,7 +2103,7 @@ Para crear un clase en Java utilizamos la palabra reservada <code>class</code>.<
 <ul>
 <li><strong>public</strong>: en este caso, public especifica que no hay ninguna restricción de acceso.</li>
 <li><strong>private</strong>: nadie puede acceder a la clase.</li>
-<li><strong>protected</strong>: permite a las clases de este paquete acceder.</li>
+<li><strong>protected</strong>: permite a las clases de este paquete acceder y subclases.</li>
 </ul>
 <hr />
 <ul>
@@ -2134,7 +2160,14 @@ Significa que la representación del objeto se ocultará a la vista, es decir, e
 <ul>
 <li><strong>public</strong>: son accesibles desde cualquier lugar.</li>
 <li><strong>protected</strong>: son accesibles desde dentro del mismo paquete y en clases heredadas.</li>
+<li><strong>sin modificador</strong>: son accesibles desde la propia clase y clases dentro del mismo paquete.</li>
 <li><strong>private</strong>: solo son accesibles desde la propia clase, no son accesibles desde fuera.</li>
+</ul>
+<p><img alt="oop" src="../../img/ud3/2modifier.png" /></p>
+<h4 id="consejos-para-elegir-un-nivel-de-acceso">Consejos para elegir un nivel de acceso</h4>
+<ul>
+<li>Utiliza el nivel de acceso más restrictivo que tenga sentido para un miembro en particular. Usa private a menos que tengas una buena razón para no hacerlo.</li>
+<li>Evita los campos públicos a excepción de las constantes.</li>
 </ul>
 <h3 id="metodos-de-instancia">Métodos de instancia</h3>
 <p>Para actualizar los campos de la clase, como su acceso es privado se utilizan los <strong>métodos de instancia</strong>.
