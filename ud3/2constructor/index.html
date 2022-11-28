@@ -2065,6 +2065,20 @@ Por tanto si tenemos código como Coche coche = new Coche(); nos lanzará un err
 <p>Cuando igualamos dos objetos, <strong>no estamos haciendo una copia del objeto</strong>, lo que hacemos es apuntar a ese mismo objeto en memoria. En el siguiente ejemplo tenemos dos variables <code>book</code> y <code>book2</code> apuntando al mismo objeto en memoria, es decir, cualquier cambio que realice alguna de las variables, afectará al objeto en sí apuntado por las mismas.</p>
 <p>|<img alt="oop" src="../../img/ud3/3constructorcopia.png" />|<img alt="oop" src="../../img/ud3/3constructorcopia2.png" />|
 |Variables <code>book</code> y <code>book2</code> apuntando a un mismo objeto|Modificación del isbn por la variable <code>book2</code>, pero <code>book</code> también se ve reflejada|</p>
+<table>
+<thead>
+<tr>
+<th><img alt="oop" src="../../img/ud3/3constructorcopia.png" /></th>
+<th><img alt="oop" src="../../img/ud3/3constructorcopia2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variables <code>book</code> y <code>book2</code> apuntando a un mismo objeto</td>
+<td>Modificación del isbn por la variable <code>book2</code>, pero <code>book</code> también se ve reflejada</td>
+</tr>
+</tbody>
+</table>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">Book</span><span class="w"> </span><span class="n">book</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Book</span><span class="p">(</span><span class="s">&quot;1234ASICK&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;War and Fire&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;David Haig&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="n">Book</span><span class="w"> </span><span class="n">book2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">book</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">book2</span><span class="p">.</span><span class="na">setIsbn</span><span class="p">(</span><span class="s">&quot;9000ISBN234&quot;</span><span class="p">);</span><span class="w"></span>
