@@ -1368,6 +1368,19 @@
     ❇️ Novedades
   </a>
   
+    <nav class="md-nav" aria-label="❇️ Novedades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-el-uso-de-default-o-static-methods-en-el-interior-de-una-interfaz" class="md-nav__link">
+    ⚜️ ¿Por qué el uso de default o static methods en el interior de una interfaz?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1964,6 +1977,19 @@
     ❇️ Novedades
   </a>
   
+    <nav class="md-nav" aria-label="❇️ Novedades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-el-uso-de-default-o-static-methods-en-el-interior-de-una-interfaz" class="md-nav__link">
+    ⚜️ ¿Por qué el uso de default o static methods en el interior de una interfaz?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2063,7 +2089,12 @@
 <h2 id="novedades">❇️ Novedades</h2>
 <p>Desde Java 8 podemos incluir en una interfaz:</p>
 <ul>
-<li><strong>métodos estáticos</strong> con cuerpo o implementación. Por tanto, estos métodos no pueden ser sobreescritos o cambiar en ninguna clase que implemente la interfaz.</li>
+<li>
+<p><strong>métodos con cuerpo o implementación</strong>: se denominan <strong><em>default methods</em></strong>. Estos métodos se heredan como cualquier método ordinario más y se puede sobreescribir en la clase que implementa esa interfaz o sobreescribir en la interfaz que hereda de esa interfaz.</p>
+</li>
+<li>
+<p><strong>métodos estáticos</strong> con cuerpo o implementación. Por tanto, estos métodos no pueden ser sobreescritos o cambiar en ninguna clase que implemente la interfaz. Estos métodos no se pueden sobreescribir, aunque si se heredan.</p>
+</li>
 </ul>
 <div class="highlight"><span class="filename">Impuesto.java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Impuesto</span><span class="w"> </span><span class="p">{</span>
 
@@ -2075,19 +2106,20 @@
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">imprimirImpuesto</span><span class="p">();</span>
 
+<span class="w">    </span><span class="c1">//default methods</span>
+<span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">imprimirTasa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La tasa de impuesto es &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">TASA_DE_IMPUESTO</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
 <span class="w">    </span><span class="c1">//métodos estáticos</span>
 <span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">tax</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">precio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">TASA_DE_IMPUESTO</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<h3 id="por-que-el-uso-de-default-o-static-methods-en-el-interior-de-una-interfaz">⚜️ ¿Por qué el uso de default o static methods en el interior de una interfaz?</h3>
 <ul>
-<li>
-<p><strong>métodos default</strong>: </p>
-</li>
-<li>
-<p>Desde Java 9, podemos tener <strong>métodos privados</strong> en una interfaz.</p>
-</li>
+<li>Desde Java 9, podemos tener <strong>métodos privados</strong> en una interfaz.</li>
 </ul>
 
 
