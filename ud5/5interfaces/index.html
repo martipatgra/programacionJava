@@ -2063,9 +2063,25 @@
 <h2 id="novedades">❇️ Novedades</h2>
 <p>Desde Java 8 podemos incluir en una interfaz:</p>
 <ul>
-<li>
-<p><strong>métodos estáticos</strong> con cuerpo o implementación. Por tanto, estos métodos no pueden ser sobreescritos o cambiar en ninguna clase que implemente la interfaz.</p>
-</li>
+<li><strong>métodos estáticos</strong> con cuerpo o implementación. Por tanto, estos métodos no pueden ser sobreescritos o cambiar en ninguna clase que implemente la interfaz.</li>
+</ul>
+<div class="highlight"><span class="filename">Impuesto.java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Impuesto</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">//constantes</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">TASA_DE_IMPUESTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.06</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//métodos abstractos</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">calcularImpuestoAnual</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">imprimirImpuesto</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//métodos estáticos</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">tax</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">precio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">TASA_DE_IMPUESTO</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
 <li>
 <p><strong>métodos default</strong>: </p>
 </li>
