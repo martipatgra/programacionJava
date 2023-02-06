@@ -1350,6 +1350,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#relaciones-entre-interfaces-y-clases" class="md-nav__link">
+    ❇️ Relaciones entre interfaces y clases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo" class="md-nav__link">
+    ❇️ Ejemplo de código
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#novedades" class="md-nav__link">
     ❇️ Novedades
   </a>
@@ -1932,6 +1946,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#relaciones-entre-interfaces-y-clases" class="md-nav__link">
+    ❇️ Relaciones entre interfaces y clases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo" class="md-nav__link">
+    ❇️ Ejemplo de código
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#novedades" class="md-nav__link">
     ❇️ Novedades
   </a>
@@ -1971,7 +1999,7 @@
 <h2 id="interfaz-vs-herencia">❇️ Interfaz vs Herencia</h2>
 <p>Una clase puede extender de una clase padre para heredar los métodos y las variables de instancia de ese padre. </p>
 <p>Una clase también puede implementar una interfaz al incluir métodos y constantes adicionales. Sin embargo, los métodos en la interfaz deben escribirse explícitamente como parte de la definición de la clase. La interfaz es una lista de requisitos que debe incluir la definición de clase (a través de código explícito, no a través de herencia).</p>
-<p>Por ejemplo, una clase <code>Coche</code> podría extender de la clase <code>Vehiculo</code>. La herencia le da todos los métodos y variables de instancia. Pero si <code>Coche</code> también implementa la interfaz <code>Impuestos</code>, entonces su definición debe contener código para todos los métodos enumerados en <code>Impuestos</code>.</p>
+<p>Por ejemplo, una clase <code>Coche</code> podría extender de la clase <code>Vehiculo</code>. La herencia le da todos los métodos y variables de instancia. Pero si <code>Coche</code> también implementa la interfaz <code>Impuestos</code>, entonces su definición debe contener código <strong>para TODOS los métodos enumerados en</strong> <code>Impuestos</code>.</p>
 <p>En Java las interfaces también representan una relación ES-UN.</p>
 <p><ins class="critic">Una clase extiende de un solo padre, pero puede implementar varias interfaces.</ins></p>
 <h2 id="como-crear-una-interfaz">❇️ Cómo crear una interfaz</h2>
@@ -1983,8 +2011,7 @@
 <p><img alt="Interface" src="../../img/ud5/11interfaces.png" /></p>
 <p>En Java, los nombres de las interfaces, por lo general, deberían ser <strong>adjetivos</strong> o <strong>nombres que describen el concepto abstracto</strong> que representa la interfaz. La primera letra de cada palabra separada en mayúscula. En algunos casos, las interfaces también pueden ser sustantivos cuando presentan una familia de clases, p. <code>List</code> o <code>Map</code>.</p>
 <p><img alt="Interface" src="../../img/ud5/10interfaces.png" /></p>
-<p>Una vez creada la interfaz definiremos los métodos que desarrollarán las clases que implementen esta interfaz.</p>
-<p>El compilador de Java agrega las palabras clave:</p>
+<p>Una vez creada la interfaz definiremos los métodos que desarrollarán las clases que implementen esta interfaz teniendo en cuenta que, <strong>el compilador de Java agrega las palabras clave</strong>:</p>
 <ul>
 <li><code>public abstract</code> cuando se define un método, por lo que se puede omitir en los encabezados de los métodos. </li>
 <li><code>public static final</code> en el caso de las constantes.</li>
@@ -1998,7 +2025,15 @@
 <p>Si ponemos <code>public</code> IntelliJ nos avisa:</p>
 <p><img alt="Interface" src="../../img/ud5/4interfaces.png" /></p>
 <p><img alt="Interface" src="../../img/ud5/12interfaces.png" /></p>
-<p>Una vez creada la interfaz, necesitaremos clases que la implementen, para ello usaremos la palabra reservada <strong>implements</strong> en la nueva clase. Por ejemplo, vamos a crear la clase TelefonoMovil:</p>
+<h2 id="relaciones-entre-interfaces-y-clases">❇️ Relaciones entre interfaces y clases</h2>
+<p>Tenemos tres tipos de relaciones:</p>
+<ul>
+<li><code>class</code> <strong>extends</strong> <code>class</code>: una clase hereda de otra clase.</li>
+<li><code>class</code> <strong>implements</strong> <code>interface1</code>, <code>interface2</code>: una clase puede implementar una o varias interfaces, para ello usaremos la palabra reservada implements.</li>
+<li><code>interface</code> <strong>extends</strong> <code>interface</code>: una interfaz puede heredar los métodos de otra interfaz.</li>
+</ul>
+<h2 id="ejemplo-de-codigo">❇️ Ejemplo de código</h2>
+<p>Por ejemplo, vamos a crear la clase TelefonoMovil:</p>
 <p><img alt="Interface" src="../../img/ud5/5interfaces.png" /></p>
 <p>Observamos que IntelliJ nos genera un error, ya que debemos definir o implementar los métodos que habíamos declarado en la interfaz. Si hacemos click en el error, IntelliJ nos ofrece crearlos:</p>
 <p><img alt="Interface" src="../../img/ud5/6interfaces.png" /></p>
@@ -2019,7 +2054,7 @@
 </code></pre></div>
 <div class="admonition warning warning">
 <p class="admonition-title">Warning</p>
-<p>Las interfaces <em>NO PUEDEN INSTANCIARSE</em>, tienes que usar una clase que haya implementado la funcionalidad definida por la interfaz.</p>
+<p>Las interfaces <em>NO PUEDEN INSTANCIARSE</em>, es decir, no podemos crear objetos de interfaces. Hay que usar una clase que haya implementado la funcionalidad definida por la interfaz.</p>
 </div>
 <h2 id="novedades">❇️ Novedades</h2>
 <ul>
