@@ -2028,9 +2028,13 @@
 <h2 id="relaciones-entre-interfaces-y-clases">❇️ Relaciones entre interfaces y clases</h2>
 <p>Tenemos tres tipos de relaciones:</p>
 <ul>
-<li><code>class</code> <strong>extends</strong> <code>class</code>: una clase hereda de otra clase.</li>
-<li><code>class</code> <strong>implements</strong> <code>interface1</code>, <code>interface2</code>: una clase puede implementar una o varias interfaces, para ello usaremos la palabra reservada implements.</li>
-<li><code>interface</code> <strong>extends</strong> <code>interface</code>: una interfaz puede heredar los métodos de otra interfaz.</li>
+<li><code>classB</code> <strong>extends</strong> <code>classA</code>: una clase B hereda de una clase A.</li>
+<li><code>class</code> <strong>implements</strong> <code>interface1</code>, <code>interface2</code>, ...: una clase puede implementar una o varias interfaces, para ello usaremos la palabra reservada implements.</li>
+<li><code>interfaceB</code> <strong>extends</strong> <code>interfaceA</code>: una interfaz B puede heredar los métodos de otra interfaz A.</li>
+</ul>
+<p>También podemos combinar algunas relaciones:</p>
+<ul>
+<li><code>classB</code> <strong>extends</strong> <code>classA</code> <strong>implements</strong> <code>interface1</code>, <code>interface2</code>, ...:  una clase B hereda de una clase A y también implementa los métodos definidos en las interfaces. (Simulación de la herencia múltiple)</li>
 </ul>
 <h2 id="ejemplo-de-codigo">❇️ Ejemplo de código</h2>
 <p>Por ejemplo, vamos a crear la clase TelefonoMovil:</p>
