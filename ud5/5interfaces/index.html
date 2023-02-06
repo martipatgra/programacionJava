@@ -2118,10 +2118,53 @@
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="por-que-el-uso-de-default-o-static-methods-en-el-interior-de-una-interfaz">⚜️ ¿Por qué el uso de default o static methods en el interior de una interfaz?</h3>
-<p>Imagina que creamos una interfaz en el proyecto. Pasado un tiempo, queremos añadir un nuevo método a esta interfaz. Realizar este cambio supone que todas las clases que implementen esa interfaz se verán afectadas con errores, hasta que implementen o le den cuerpo a ese nuevo método.</p>
+<p>Imagina que creamos una interfaz en el proyecto. Pasado un tiempo, un gran número de clases implementan esa interfaz.</p>
+<p>Si ahora añadimos un nuevo método a esta interfaz, desencadena en que, todas las clases que implementen esa interfaz se verán afectadas con errores, hasta que implementen o le den cuerpo a ese nuevo método. Aunque no es una tarea complicada puede llegar a ser tediosa, o que no sepamos todavía como implementarlo en todas las clases.</p>
+<p>Para solventar esto, Java introdujo los <em>default methods</em> y <em>métodos estáticos</em>.</p>
+<hr />
 <ul>
 <li>Desde Java 9, podemos tener <strong>métodos privados</strong> en una interfaz.</li>
 </ul>
+<p>Los métodos privados se pueden implementar estáticos o no. </p>
+<p><em>¿Cuáles son las ventajas de tener métodos privados?</em></p>
+<p>Las interfaces pueden usar métodos privados para ocultar detalles sobre la implementación de las clases que implementan la interfaz. Como resultado, uno de los principales beneficios de tenerlos en las interfaces es la encapsulación.</p>
+<div class="highlight"><span class="filename">Impuesto.java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Impuesto</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">//constantes</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">TASA_DE_IMPUESTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.06</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//métodos abstractos</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">calcularImpuestoAnual</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">imprimirImpuesto</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//default methods</span>
+<span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">imprimirTasa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La tasa de impuesto es &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">TASA_DE_IMPUESTO</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">aumentarTasa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">duplicarTasa</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//métodos privados de instancia</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">duplicarTasa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">TASA_DE_IMPUESTO</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//métodos estáticos</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">tax</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">precio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mostrarPrecio</span><span class="p">(</span><span class="n">precio</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">TASA_DE_IMPUESTO</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//métodos privados estáticos</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarPrecio</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">precio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El precio es &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">precio</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
 
 
   
