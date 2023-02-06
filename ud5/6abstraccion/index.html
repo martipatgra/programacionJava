@@ -1961,10 +1961,11 @@
 </div>
 <h2 id="interfaces-vs-clases-abstractas">Interfaces vs Clases abstractas</h2>
 <ul>
-<li>Las clases abstractas pueden tener variables de instancia que se heredan, al contrario que las interfaces, que no permiten definir variables solo constantes estáticas, porque como bien sabemos, una constante no estática necesitaría una instancia de la clase y las interfaces no se pueden instanciar.</li>
+<li>Las clases abstractas pueden tener variables de instancia (atributos) que se heredan, al contrario que las interfaces, que no permiten definir variables <strong>solo constantes estáticas</strong>.</li>
+<li>Ni las interfaces ni las clases abstractas se puede instanciar.</li>
 <li>Las interfaces no pueden tener constructores y las clases abstractas si.</li>
-<li>Todos los métodos definidos en una interfaz son automáticamente declarados como <code>public</code>, mientras que, en un clase abstracta podemos tener tanto métodos <code>public</code> como <code>private</code> como <code>protected</code>.</li>
-<li>Las clases abstractas pueden implementar y desarrollar métodos, mientras que las interfaces solo especifican la signatura sin código.</li>
+<li>Todos los métodos definidos en una interfaz son por defecto <strong>públicos y abstractos</strong>, mientras que, en un clase abstracta podemos tener métodos con diferentes visibilidades (<code>public</code>, <code>private</code> o <code>protected</code>) y abstractos o con cuerpo.</li>
+<li>Si implementas una interfaz debes sobreescribir todos sus métodos, si heredas de una clase abstractas solo estás obligado a sobreescribir los métodos abstractos.</li>
 </ul>
 
 
