@@ -1984,7 +1984,7 @@
 </code></pre></div>
 <p>Estamos creando objetos de la clase <code>Box</code>, tanto de tipo Integer como String.</p>
 <p>A veces querremos limitar los tipos que pueden ser usados empleando lo que se denomina <strong>bounded type</strong>. Con \&lt;T extends Number> el tipo T debe extender la clase Number.
-Java permite múltiples límites o bounded type: <code>&lt;T extends Box &amp; B1 &amp; B2&gt;</code>.
+Java permite múltiples límites o bounded type: <code>&lt;T extends Number &amp; B1 &amp; B2&gt;</code>.
 <code>Box</code> es una clase y <code>B1</code> y <code>B2</code> son interfaces. Primero siempre debe ir la clase y luego las interfaces.
 Recuerda que Java NO permite la herencia múltiple, por tanto, SOLO se puede extender de una clase, pero puede implementar varias interfaces en la declaración del bounded type.</p>
 
