@@ -2025,7 +2025,8 @@
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">accept</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>La expresión lambda asignada a un objeto de tipo <code>Consumer</code> se usa para definir su método <code>accept()</code> que eventualmente aplica la operación dada en su argumento. Los <code>Consumer</code> son útiles cuando no necesitan devolver ningún valor, ya que se espera que operen a través de efectos secundarios.</p>
+<p>La expresión lambda asignada a un objeto de tipo <code>Consumer</code> se usa para definir su método <code>**accept(T t)**</code> que eventualmente aplica la operación dada en su argumento. Los <code>Consumer</code> son útiles cuando no necesitan devolver ningún valor, ya que se espera que operen a través de efectos secundarios.</p>
+<p>Existen también las interfaces <code>IntConsumer</code>, <code>LongConsumer</code> y <code>DoubleConsumer</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
 <span class="n">numero</span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 </code></pre></div>
