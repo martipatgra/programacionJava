@@ -1553,6 +1553,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#metodos-genericos" class="md-nav__link">
+    🦄 Métodos genéricos
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1897,6 +1904,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#metodos-genericos" class="md-nav__link">
+    🦄 Métodos genéricos
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1956,13 +1970,14 @@
 <p><strong>Algo a tener en cuenta es que el tipo parámetro debe ser una clase; no podemos utilizar tipos primitivos.</strong></p>
 </div>
 <h2 id="clases-genericas">🦄 Clases genéricas</h2>
-<p>Para declarar una clase como genérica tenemos que añadir el tipo de parámetro de tipo después del nombre de la clase, y utilizar el nombre de este tipo genérico donde usaríamos un tipo concreto (con algunas excepciones). Por convención se suele utilizar una sola letra mayúscula para el tipo genérico.</p>
+<p>Al crear una clase que utiliza o contiene algún atributo genérico, me obliga a añadir este tipo de genérico en la definición de clase. <strong>Por convención se suele utilizar una sola letra mayúscula para el tipo genérico</strong>.</p>
+<p>Es decir, si mi clase tiene un atributo <code>T elemento</code> genérico que no sé qué tipo de dato va a ser, entero, double, float.... le pongo una letra y con esto le digo que ese atributo es de tipo genérico, puede ser cualquier tipo de dato.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Box</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">elemento</span><span class="p">;</span>
 
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">get</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">set</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">get</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">elemento</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">set</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">elemento</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">elemento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">elemento</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 
 <span class="p">}</span>
 </code></pre></div>
@@ -1987,6 +2002,17 @@
 Java permite múltiples límites o bounded type: <code>&lt;T extends B1 &amp; B2 &amp; B3&gt;</code>.
 <code>Box</code> es una clase y <code>B1</code> y <code>B2</code> son interfaces. Primero siempre debe ir la clase y luego las interfaces.
 Recuerda que Java NO permite la herencia múltiple, por tanto, SOLO se puede extender de una clase, pero puede implementar varias interfaces en la declaración del bounded type.</p>
+<h2 id="metodos-genericos">🦄 Métodos genéricos</h2>
+<p>Al igual que ocurre con las clases, si me creo un método genérico, es decir, que recibe tipos de datos genéricos únicos que no están definidos en la clase, tengo que especificar en la signatura del método esos genéricos:</p>
+<blockquote>
+<p>Ejemplo</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="o">&gt;</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">executeFunction</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="p">,</span><span class="w"> </span><span class="n">Function</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">R</span><span class="o">&gt;</span><span class="w"> </span><span class="n">function</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">:</span><span class="w"> </span><span class="n">lista</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">function</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">t</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
   
