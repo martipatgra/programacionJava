@@ -1966,7 +1966,7 @@ Podemos asignarle final a un campo de la clase y declararlo por primera vez en e
 <p>Cuando declaramos un atributo como final, IntelliJ es listo y no nos deja implementar el método setter de ese atributo.</p>
 <p>Cuando queremos crear una variable constante de la que ya conocemos su valor, normalmente usamos <code>static final</code> y la nombramos en mayúsculas. Pero una variable final que cambia para cada instancia de la clase, no se nombra en mayúsculas.</p>
 <h2 id="final-en-la-definicion-de-clase">Final en la definición de clase</h2>
-<p>Si añadimos la palabra <code>final</code> al crear una clase, lo que hacemos es NO permitir que se pueda extender de esa clase. Es decir, no puede tener hijos que hereden de ella.</p>
+<p>Si añadimos la palabra <code>final</code> al crear una clase, lo que hacemos es <strong>NO permitir que se pueda extender de esa clase</strong>. Es decir, no puede tener hijos que hereden de ella.</p>
 <p>Ejemplo:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Coche</span><span class="w"> </span><span class="p">{</span>
 
@@ -1974,6 +1974,7 @@ Podemos asignarle final a un campo de la clase y declararlo por primera vez en e
 </code></pre></div>
 <h2 id="final-en-la-definicion-de-metodos">Final en la definición de métodos</h2>
 <p>A veces queremos, heredar de una clase, pero no queremos que se puedan sobreescribir o anular todos los métodos de la clase padre en los hijos porque a lo mejor son métodos que tienen una cierta funcionalidad que no cambia. Es decir, queremos prevenir que modifiquen su comportamiento. Para realizar esto declaramos los métodos como final.</p>
+<p><ins class="critic">Los únicos métodos que no pueden declararse como final son los constructores.</ins></p>
 <div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Perro</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="nd">@Override</span>
