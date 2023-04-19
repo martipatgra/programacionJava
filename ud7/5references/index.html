@@ -2047,8 +2047,8 @@
 <p>La expresión lambda creada por la segunda de las dos líneas hace referencia al método convertToInt de la instancia de StringConverter creada en la primera línea.</p>
 <h2 id="referencias-a-constructores">Referencias a constructores</h2>
 <p>Finalmente, es posible hacer referencia a un constructor de una clase. Para ello, se escribe el nombre de la clase seguido de <strong>::new</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="nl">MiClase</span><span class="p">::</span><span class="k">new</span>
-<span class="n">Usuario</span><span class="w"> </span><span class="n">usuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Usuario</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="o">--</span><span class="w"> </span><span class="n">Nomenclatura</span>
+<span class="nl">MiClase</span><span class="p">::</span><span class="k">new</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="n">Supplier</span><span class="o">&lt;</span><span class="n">Usuario</span><span class="o">&gt;</span><span class="w"> </span><span class="n">usu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Usuario</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
 <span class="c1">//Construye un objeto de tipo usuario que es devuelto por método get();</span>
