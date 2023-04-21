@@ -1646,20 +1646,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#map" class="md-nav__link">
-    Map()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flatmap" class="md-nav__link">
-    FlatMap
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#foreach" class="md-nav__link">
     ForEach()
   </a>
@@ -1711,6 +1697,20 @@
           <li class="md-nav__item">
   <a href="#distinct" class="md-nav__link">
     Distinct()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    Map()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flatmap" class="md-nav__link">
+    FlatMap
   </a>
   
 </li>
@@ -2017,20 +2017,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#map" class="md-nav__link">
-    Map()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flatmap" class="md-nav__link">
-    FlatMap
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#foreach" class="md-nav__link">
     ForEach()
   </a>
@@ -2082,6 +2068,20 @@
           <li class="md-nav__item">
   <a href="#distinct" class="md-nav__link">
     Distinct()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    Map()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flatmap" class="md-nav__link">
+    FlatMap
   </a>
   
 </li>
@@ -2144,6 +2144,27 @@
 <span class="w">  </span><span class="p">.</span><span class="na">peek</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mapped value: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">))</span>
 <span class="w">  </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
 </code></pre></div>
+<h3 id="foreach"><code>ForEach()</code></h3>
+<p>Recorremos cada elemento del <em>stream</em> para realizar alguna acción con él. Como bien sabemos recibe como parámetro una exprsión lambda de tipo <code>Consumer</code>.</p>
+<h3 id="filter"><code>Filter()</code></h3>
+<p>Como su nombre indica lo que hacemos es filtrar de todos los elementos del <em>stream</em> solo aquellos que cumplan una determinada condición.
+Recibe como parámetro una expresión lambda <code>Predicate</code> la cual debe devolver <code>true</code> solo en aquellos elementos que se quedarán en el <em>stream</em> y <code>false</code> para aquellos elementos que se deben eliminar.</p>
+<h3 id="findfirst"><code>FindFirst()</code></h3>
+<p>Se utiliza para devolver el primer elemento encontrado del <em>stream</em>. Se suele utilizar en combinación con otras funciones cuando hay que seleccionar un único valor del <em>stream</em> que cumpla determinadas condiciones.</p>
+<p><code>findFirst</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devovler ningún elemento del <em>stream</em>.</p>
+<h3 id="toarray"><code>ToArray()</code></h3>
+<p>Con este método se puede convertir cualquier tipo de <code>Collection</code> en un array de forma sencilla.</p>
+<h3 id="sorted"><code>Sorted()</code></h3>
+<p>Se utiliza para ordenar los elementos del <em>stream</em>. Recibe como parámetro una expresión lambda de tipo <code>Comparator</code> para que podamos indicar la lógica de la ordenación.</p>
+<h3 id="min"><code>Min()</code></h3>
+<p>Con <code>min</code> se obtiene el elemento del <em>stream</em> con el valor mínimo calculado a partir de una expresión lambda de tipo <code>Comparator</code> que indicamos como parámetro.</p>
+<p><code>min</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del <em>stream</em>.</p>
+<h3 id="max"><code>Max()</code></h3>
+<p>Con <code>max</code> se obtiene el elemento del <em>stream</em> con el valor máximo calculado a partir de una expresión lambda de tipo <code>Comparator</code> que indicamos como parámetro de la expresión.</p>
+<p><code>max</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del <em>stream</em>.</p>
+<h3 id="distinct"><code>Distinct()</code></h3>
+<p>Con <code>distinct</code> se seleccionan los elementos distintos dentro del <em>stream</em> eliminando los duplicados.
+Los elementos se comparan utilizando el método equals().</p>
 <h3 id="map"><code>Map()</code></h3>
 <p>El método <code>map</code> recibe como parámetro una expresión lambda de tipo <code>Function</code>, por lo que debemos especificar una función que recibe como parámetro de entrada cada elemento del <em>stream</em>, y devuelve un objeto que puede ser un tipo de dato distinto o el mismo.</p>
 <p>La función se aplica a cada uno de los elementos del <em>stream</em> para realizar alguna transformación sobre cada elemento y devuelve <strong>otro Stream</strong> sobre el cual puedes seguir trabajando.
@@ -2175,27 +2196,6 @@ La función de mapeo utilizada para la transformación en <code>flatMap()</code>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">listOfAllIntegers</span><span class="p">);</span>
 <span class="c1">//[1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
 </code></pre></div>
-<h3 id="foreach"><code>ForEach()</code></h3>
-<p>Recorremos cada elemento del <em>stream</em> para realizar alguna acción con él. Como bien sabemos recibe como parámetro una exprsión lambda de tipo <code>Consumer</code>.</p>
-<h3 id="filter"><code>Filter()</code></h3>
-<p>Como su nombre indica lo que hacemos es filtrar de todos los elementos del <em>stream</em> solo aquellos que cumplan una determinada condición.
-Recibe como parámetro una expresión lambda <code>Predicate</code> la cual debe devolver <code>true</code> solo en aquellos elementos que se quedarán en el <em>stream</em> y <code>false</code> para aquellos elementos que se deben eliminar.</p>
-<h3 id="findfirst"><code>FindFirst()</code></h3>
-<p>Se utiliza para devolver el primer elemento encontrado del <em>stream</em>. Se suele utilizar en combinación con otras funciones cuando hay que seleccionar un único valor del <em>stream</em> que cumpla determinadas condiciones.</p>
-<p><code>findFirst</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devovler ningún elemento del <em>stream</em>.</p>
-<h3 id="toarray"><code>ToArray()</code></h3>
-<p>Con este método se puede convertir cualquier tipo de <code>Collection</code> en un array de forma sencilla.</p>
-<h3 id="sorted"><code>Sorted()</code></h3>
-<p>Se utiliza para ordenar los elementos del <em>stream</em>. Recibe como parámetro una expresión lambda de tipo <code>Comparator</code> para que podamos indicar la lógica de la ordenación.</p>
-<h3 id="min"><code>Min()</code></h3>
-<p>Con <code>min</code> se obtiene el elemento del <em>stream</em> con el valor mínimo calculado a partir de una expresión lambda de tipo <code>Comparator</code> que indicamos como parámetro.</p>
-<p><code>min</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del <em>stream</em>.</p>
-<h3 id="max"><code>Max()</code></h3>
-<p>Con <code>max</code> se obtiene el elemento del <em>stream</em> con el valor máximo calculado a partir de una expresión lambda de tipo <code>Comparator</code> que indicamos como parámetro de la expresión.</p>
-<p><code>max</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del <em>stream</em>.</p>
-<h3 id="distinct"><code>Distinct()</code></h3>
-<p>Con <code>distinct</code> se seleccionan los elementos distintos dentro del <em>stream</em> eliminando los duplicados.
-Los elementos se comparan utilizando el método equals().</p>
 
 
   
