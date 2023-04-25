@@ -2164,11 +2164,10 @@
 </ol>
 <p><img alt="Streams" src="../../img/ud7/streams2.png" /></p>
 <p>La fuente proporciona los elementos a la tubería.</p>
-<p>Las operaciones intermedias obtienen elementos uno por uno y los procesan. Todas las operaciones intermedias son perezosas (lazy) y, como resultado, ninguna operación tendrá ningún efecto hasta que la tubería comience a funcionar.</p>
-<p>Las operaciones terminales significan el final del ciclo de vida del steam. Lo más importante para nuestro escenario es que inician el trabajo en la tubería.</p>
 <h2 id="funciones-de-stream">Funciones de Stream</h2>
 <p><img alt="Streams" src="../../img/ud7/streams31.png" /></p>
 <h2 id="operaciones-intermedias">Operaciones intermedias</h2>
+<p>Las operaciones intermedias obtienen elementos uno por uno y los procesan. Todas las operaciones intermedias son perezosas (lazy) y, como resultado, ninguna operación tendrá ningún efecto hasta que la tubería comience a funcionar.</p>
 <h3 id="peek"><code>Peek()</code></h3>
 <p>El método <code>peek</code> recibe como parámetro una expresión lambda de tipo <code>Consumer</code> para poder utilizar cada elemento del stream. Normalmente se utilizar para mostrar por consola el contenido del <em>stream</em>.</p>
 <p>Este método existe principalmente para la depuración del programa, donde se desea ver los elementos a medida que pasan por un punto determinado en el pipeline.</p>
@@ -2220,6 +2219,7 @@ La función de mapeo utilizada para la transformación en <code>flatMap()</code>
 <span class="c1">//[1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
 </code></pre></div>
 <h2 id="operaciones-terminales">Operaciones terminales</h2>
+<p>Las operaciones terminales significan el final del ciclo de vida del steam. Lo más importante para nuestro escenario es que inician el trabajo en la tubería.</p>
 <h3 id="foreach"><code>ForEach()</code></h3>
 <p>Recorremos cada elemento del <em>stream</em> para realizar alguna acción con él. Como bien sabemos recibe como parámetro una exprsión lambda de tipo <code>Consumer</code>.</p>
 <h3 id="collect"><code>Collect()</code></h3>
