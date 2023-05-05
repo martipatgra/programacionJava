@@ -1840,44 +1840,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tipos-de-acceso-a-ficheros" class="md-nav__link">
-    Tipos de acceso a ficheros
+  <a href="#ficheros" class="md-nav__link">
+    Ficheros
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#escribir-datos-en-un-fichero-binario" class="md-nav__link">
-    Escribir datos en un fichero binario
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#escritura-en-un-fichero-binario-usando-el-bufer" class="md-nav__link">
-    Escritura en un fichero binario usando el búfer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lectura-de-datos-en-un-fichero-binario" class="md-nav__link">
-    Lectura de datos en un fichero binario
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#path-vs-file" class="md-nav__link">
-    Path vs File
-  </a>
-  
-    <nav class="md-nav" aria-label="Path vs File">
+    <nav class="md-nav" aria-label="Ficheros">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#javaiofile" class="md-nav__link">
-    java.io.File
+  <a href="#tipos-de-acceso-a-ficheros" class="md-nav__link">
+    Tipos de acceso a ficheros
   </a>
   
 </li>
@@ -1986,44 +1958,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tipos-de-acceso-a-ficheros" class="md-nav__link">
-    Tipos de acceso a ficheros
+  <a href="#ficheros" class="md-nav__link">
+    Ficheros
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#escribir-datos-en-un-fichero-binario" class="md-nav__link">
-    Escribir datos en un fichero binario
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#escritura-en-un-fichero-binario-usando-el-bufer" class="md-nav__link">
-    Escritura en un fichero binario usando el búfer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lectura-de-datos-en-un-fichero-binario" class="md-nav__link">
-    Lectura de datos en un fichero binario
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#path-vs-file" class="md-nav__link">
-    Path vs File
-  </a>
-  
-    <nav class="md-nav" aria-label="Path vs File">
+    <nav class="md-nav" aria-label="Ficheros">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#javaiofile" class="md-nav__link">
-    java.io.File
+  <a href="#tipos-de-acceso-a-ficheros" class="md-nav__link">
+    Tipos de acceso a ficheros
   </a>
   
 </li>
@@ -2051,9 +1995,9 @@
 
 <h1 id="io-inputoutput-entradasalida-de-la-informacion">I/O Input/Output - Entrada/Salida de la información</h1>
 <p>Todo dato tiene un origen de entrada o un destino de salida (convenientemente en inglés: I/O). <strong>Input</strong> o entrada implica leer datos de una fuente y <strong>Output</strong> o salida implica escribirlos en un destino. Un programa trabaja con datos que provienen de una entrada la cual puede ser un teclado, un archivo en disco o un socket a través de la red. Así mismo un programa genera resultados enviándolos a una salida la cual puede ser la pantalla, un archivo en disco o un socket a través de la red. En Java, la conexión entre un programa y un origen o destino de datos se denomina <strong>flujo</strong> (en inglés: <strong>stream</strong>).</p>
-<p><img alt="JavaIO" src="../../img/ud9/stream.png" /></p>
+<p><img alt="JavaIO" src="../img/ud1/stream.png" /></p>
 <p>Un flujo de entrada <em>(input stream)</em> maneja los datos que fluyen hacia un programa. Un flujo de salida <em>(output stream)</em> maneja los datos que salen de un programa.</p>
-<p><img alt="JavaIO" src="../../img/ud9/1javaio.png" /></p>
+<p><img alt="JavaIO" src="../img/ud1/1javaio.png" /></p>
 <p>En las primeras versiones de Java el sistema de entrada/salida proporcionado en el paquete <code>java.io</code> era básico. En la versión 1.4 de Java se añadió un nuevo sistema de entrada/salida llamado <code>java.NIO</code> (New IO) para suplir algunas de sus deficiencias que posteriormente en Java 7 se mejoró aún más <code>java.NIO</code>. Entre las mejoras se incluyen permitir navegación de directorios sencillo, soporte para reconocer enlaces simbólicos, leer atributos de ficheros como permisos e información como última fecha de modificación, soporte de entrada/salida asíncrona y soporte para operaciones básicas sobre ficheros como copiar y mover ficheros.</p>
 <h2 id="tipos-de-datos-caracteres-y-bytes">Tipos de Datos - Caracteres y bytes</h2>
 <p>Existen dos tipos de flujos (streams) según el tipo de datos, flujos binarios y flujos de caracteres. Los tipos de datos que se pueden leer/escribir suelen ser bytes o caracteres y los métodos que se utilizan son similares, pero se utilizan clases diferentes.</p>
@@ -2063,19 +2007,19 @@
 <li>Flujos binarios (byte streams): almacenan variables, clases del programa, archivos de imagen, sonido, etc. Por ejemplo, el archivo de código de bytes creado por el compilador de Java contiene instrucciones de máquina para la máquina virtual de Java. Estos no están destinados a representar caracteres, y la entrada y salida de ellos debe usar flujos de bytes. Las clases principales para manejar estos flujos son las clases abstractas <strong>InputStream</strong> y <strong>OutputStream</strong>.</li>
 </ul>
 <p><em>Clases principales de InputStream:</em></p>
-<p><img alt="JavaIO" src="../../img/ud9/2javaio.png" /></p>
+<p><img alt="JavaIO" src="../img/ud1/2javaio.png" /></p>
 <p><em>Clases principales de OutputStream:</em></p>
-<p><img alt="JavaIO" src="../../img/ud9/3javaio.png" /></p>
+<p><img alt="JavaIO" src="../img/ud1/3javaio.png" /></p>
 <ul>
 <li>Flujos de caracteres (character streams): están optimizados para datos de caracteres. Se utilizan con frecuencia para leer/escribir ficheros de texto, xml y json. Las clases principales para manejar estos flujos son las clases abstractas <strong>Reader</strong> y <strong>Writer</strong>.</li>
 </ul>
 <p><em>Clases principales de Reader</em>:</p>
-<p><img alt="JavaIO" src="../../img/ud9/4javaio.png" /></p>
+<p><img alt="JavaIO" src="../img/ud1/4javaio.png" /></p>
 <p><em>Clases principales de Writer:</em></p>
-<p><img alt="JavaIO" src="../../img/ud9/5javaio.png" /></p>
+<p><img alt="JavaIO" src="../img/ud1/5javaio.png" /></p>
 <p>La siguiente figura muestra la jerarquía del paquete <code>java.io</code>.
 Los streams pueden estar orientados a bytes u orientados a caracteres. Cada tipo tiene flujos de entrada y flujos de salida.</p>
-<p><img alt="JavaIO" src="../../img/ud9/2stream.png" /></p>
+<p><img alt="JavaIO" src="../img/ud1/2stream.png" /></p>
 <h3 id="flujos-orientados-a-bytes">Flujos orientados a bytes</h3>
 <ul>
 <li>Diseñado para entrada y salida de propósito general.</li>
@@ -2086,85 +2030,18 @@ Los streams pueden estar orientados a bytes u orientados a caracteres. Cada tipo
 <li>Destinado a datos de caracteres.</li>
 <li>Los datos se transforman de/a caracteres Java de 16 bits utilizados dentro de los programas al formato utilizado externamente.</li>
 </ul>
-<h2 id="tipos-de-acceso-a-ficheros">Tipos de acceso a ficheros</h2>
+<h2 id="ficheros">Ficheros</h2>
+<p>Un fichero es un conjunto lógico de información o de datos que se designa con un nombre y se configura como una unidad autónoma completa para el sistema o el usuario. Un archivo o fichero informático es un conjunto de bits que son almacenados en un dispositivo. Para poder acceder a ellos haremos uso de una ruta (path) ya sea relativa o absoluta.</p>
+<p><img alt="JavaIO" src="../img/ud1/6path.png" /></p>
+<h3 id="tipos-de-acceso-a-ficheros">Tipos de acceso a ficheros</h3>
 <ol>
 <li>
-<p>Acceso secuencial: Una lectura secuencial implica tener que acceder a un elemento antes de acceder al siguiente, es decir, de una manera lineal (sin saltos).</p>
+<p>Acceso secuencial: Una lectura secuencial implica tener que acceder a un elemento antes de acceder al siguiente, es decir, de una manera lineal (sin saltos). Las clases <code>InputStream</code> y <code>OutputStream</code> son secuenciales.</p>
 </li>
 <li>
 <p>Acceso aleatorio: los ficheros de acceso aleatorio permiten acceder a sus datos de una forma aleatoria, esto es indicando una determinada posición desde la que leer/escribir.</p>
 </li>
 </ol>
-<h2 id="escribir-datos-en-un-fichero-binario">Escribir datos en un fichero binario</h2>
-<p>La escritura en ficheros binarios representa el flujo de salida de bytes, es decir, necesitamos utilizar las clases que derivan de <code>OutputStream</code>. Se puede escribir datos en un fichero binario de muchas formas. Veamos un ejemplo utilizando la clase <code>FileOutputStream</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">DataOutputStream</span><span class="w"> </span><span class="n">fos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&quot;datos.dat&quot;</span><span class="p">));</span>
-<span class="w">        </span><span class="n">fos</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="w">        </span><span class="n">fos</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="w">        </span><span class="n">fos</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="mi">33</span><span class="p">);</span>
-<span class="w">        </span><span class="n">fos</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="o">-</span><span class="mi">77</span><span class="p">);</span>
-<span class="w">        </span><span class="n">fos</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//todas pueden derivar de IOException</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>En el ejemplo, el constructor <code>FileOutputStream</code> abre el fichero <code>datos.dat</code> para escritura. Se crea un nuevo fichero; si un fichero antiguo tiene el mismo nombre, se eliminará. Luego, un <code>DataOutputStream</code> se conecta al <code>FileOutputStream</code>.</p>
-<p><code>DataOutputStream</code> tiene métodos para escribir datos primitivos en un flujo de salida. El método writeInt() escribe los cuatro bytes de un tipo de datos int en la secuencia.</p>
-<p>El programa escribe cuatro enteros en el flujo de salida y luego cierra el flujo.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Siempre hay que cerrar el flujo para asegurarse de liberar todos los recursos asociados a él y que el sistema operativo no consuma recursos.</p>
-</div>
-<h2 id="escritura-en-un-fichero-binario-usando-el-bufer">Escritura en un fichero binario usando el búfer</h2>
-<p>Ahora vamos a escribir más enteros en el fichero. Para ello utilizamos <code>BufferedOutputStream</code>. Este búfer almacena los bytes antes de que se escriban en el disco. Recuerda que un búfer es un bloque de memoria que se usa para ensamblar datos antes de que se escriban todos a la vez.</p>
-<p><strong>El almacenamiento en búfer hace que las operaciones de E/S sean más eficientes.</strong> Para un programa que realiza E/S masivas, el almacenamiento en búfer es esencial. La E/S es muy lenta en comparación con las operaciones con almacenamiento principal. Sin almacenamiento en búfer, la E/S sería muy, muy lenta.</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">writeBuffer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">DataOutputStream</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataOutputStream</span><span class="p">(</span>
-<span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedOutputStream</span><span class="p">(</span>
-<span class="w">                        </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&quot;datosBufer.dat&quot;</span><span class="p">)));</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">out</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="lectura-de-datos-en-un-fichero-binario">Lectura de datos en un fichero binario</h2>
-<p>Para leer un fichero, primero hemos de preguntarnos un poco sobre él, es decir, si fue escrito por un programa Java, entonces necesitaremos saber qué tipos de datos se usaron, y así poder usar una subclase de <code>InputStream</code> para leer bytes para ese tipo de datos.</p>
-<p><code>InputStream</code>, como hemos visto en los diagramas, es una clase abstracta para objetos que leen flujos de bytes. Aunque, no todas las clases que derivan de ella están relacionadas con la entrada de ficheros de disco. Por ejemplo, <code>PipedInputStream</code> representa datos provenientes de otro programa en ejecución.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">DataInputStream</span><span class="w"> </span><span class="n">dis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataInputStream</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">&quot;datos.dat&quot;</span><span class="p">));</span>
-
-<span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span>
-<span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span>
-<span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span>
-<span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span>
-
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span>
-<span class="w">        </span><span class="n">dis</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//todas pueden derivar de IOException</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Al igual que en la escritura para la lectura también disponemos de la clase <code>BufferedInputStream</code>.</p>
-<h2 id="path-vs-file">Path vs File</h2>
-<p>En Java, <code>Path</code> y <code>File</code> son clases responsables de las operaciones de E/S de ficheros. Realizan las mismas funciones pero pertenecen a diferentes paquetes.</p>
-<h3 id="javaiofile"><code>java.io.File</code></h3>
-<p>Las primeras versiones de Java incluyen el paquete <code>java.io</code>, que contiene casi todas las clases que podríamos necesitar para realizar operaciones de entrada y salida. La clase <code>File</code> es una representación abstracta de nombres de rutas de archivos y directorios.</p>
 
 
   
