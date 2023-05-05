@@ -2093,7 +2093,7 @@
 <p>El puntero se puede mover utilizando el método <code>seek()</code>.</p>
 <p>Cuando se crea un fichero por primera vez, el puntero se establece en 0, lo que indica el comienzo del archivo. Cuando leemos o escribimos datos en el archivo usando métodos de lectura o escritura, el puntero del archivo avanza al siguiente elemento de datos (es decir, el siguiente byte).</p>
 <p>Por ejemplo, si leemos un valor int usando el método readInt() del archivo, JVM lee 4 bytes usando el puntero, y ahora el puntero del archivo está 4 bytes por delante de la posición anterior, como se muestra en la figura a continuación.</p>
-<p><img alt="JavaIO" src="../img/ud1/7randomfile.png" /></p>
+<p><img alt="JavaIO" src="../../img/ud9/7randomfile.png" /></p>
 <div class="highlight"><pre><span></span><code><span class="n">RandomAccessFile</span><span class="w"> </span><span class="n">raf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">....</span>
 
 <span class="n">raf</span><span class="p">.</span><span class="na">seek</span><span class="p">(</span><span class="n">position</span><span class="p">);</span><span class="w"> </span><span class="c1">//mueve el puntero a una posición</span>

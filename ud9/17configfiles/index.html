@@ -2099,7 +2099,7 @@
 <p>En Java es habitual guardar algunos parámetros de configuración de nuestro programa en un fichero de propiedades. Un fichero de propiedades no es más que un fichero de texto, habitualmente con la extensión <strong>“.properties”</strong>, en donde cada línea tiene una pareja <em>clave=valor</em>.</p>
 <p>En la API de Java se incluyen librerías para trabajar con los ficheros de configuración. Puesto que todos siguen un mismo patrón, es la librería la que se encarga de acceder al fichero a bajo nivel y el programador sólo tiene que indicar a que propiedad quiere acceder o que propiedad quiere modificar, sin tener que añadir nada de código para leer o escribir el fichero tal.</p>
 <p>Aquí se muestra un ejemplo de fichero de configuración, llamado <code>datasource.properties</code>, que almacena información sobre la base de datos:</p>
-<p><img alt="JavaIO" src="../img/ud1/10propertiesfile.png" /></p>
+<p><img alt="JavaIO" src="../../img/ud9/10propertiesfile.png" /></p>
 <p>La primera línea del ejemplo es un comentario, que se indica con #, y las posteriores cada clave, parte izquierda del =, será un parámetro de nuestra configuración separado por un igual donde está su valor correspondiente, parte derecha del =.</p>
 <p>Java nos proporciona la clase <code>Properties</code>, para leer de forma sencilla los ficheros de configuración.</p>
 <h2 id="cargar-el-fichero-de-configuracion">Cargar el fichero de configuración</h2>
@@ -2131,7 +2131,7 @@
 <div class="highlight"><pre><span></span><code><span class="n">properties</span><span class="p">.</span><span class="na">store</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="s">&quot;datasource.properties&quot;</span><span class="p">),</span><span class="s">&quot;Added database port&quot;</span><span class="p">);</span>
 </code></pre></div>
 <p>El método <code>store()</code> admite un segundo parámetro que es un comentario que se añadirá como una línea de cabecera en el fichero. El resultado de esta llamada es un fichero con un contenido como el siguiente:</p>
-<p><img alt="JavaIO" src="../img/ud1/10propertiesfile2.png" /></p>
+<p><img alt="JavaIO" src="../../img/ud9/10propertiesfile2.png" /></p>
 <p>Contiene el comentario que pusimos en la llamada a <code>store()</code> y la fecha, que la inserta de regalo.</p>
 
 
