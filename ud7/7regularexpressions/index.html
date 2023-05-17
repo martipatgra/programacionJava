@@ -2469,7 +2469,11 @@
 <p>El operador <strong>and</strong> es implícito. Si dos caracteres (u otros subpatrones) se suceden en una expresión regular, eso significa que tanto el primer como el segundo subpatrón coinciden en gran medida con la cadena de destino.</p>
 <p>El operador <strong>or</strong> es explícito y está representado por el carácter vertical <strong>|</strong>.</p>
 <p>El operador <strong>not</strong> es explícito, está representado por el símbolo <strong>!</strong>, brinda la posibilidad de excluir un patrón. Con esto se puede decir que una cadena no debe ir seguida de otra cadena.</p>
-<p>La anticipación negativa (negative look ahead) se define a través de <strong>(?!patrón)</strong>, el operador ? delante del paréntesis es parte de la sintaxis look ahead, que siempre comienzan con un paréntesis y un signo de interrogación. Esta operación no consume ningún carácter.</p>
+<p>In regex, there is positive lookahead (?=) and negative lookahead (?!):</p>
+<p>Positive lookahead (?=) ensures something followed by something else.
+Negative lookahead (?!) ensures something NOT followed by something else.</p>
+<p>For example, b(?=c) matches a b that is followed by a c. (positive lookahead)
+For example, b(?!c) matches a b that is NOT followed by a c. (negative lookahead)</p>
 <h2 id="ejemplo-expresion-regular-telefono-movil">Ejemplo expresión regular teléfono móvil</h2>
 <div class="highlight"><pre><span></span><code><span class="c1">//(+34) 655-555-555</span>
 <span class="n">String</span><span class="w"> </span><span class="n">regexTelefono</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;^([\\(]{1}[\\+]{1}34[\\)]{1}[ ]{1}[0-9]{3}[\\-]{1}[0-9]{3}[\\-]{1}[0-9]{3})$&quot;</span><span class="p">;</span>
