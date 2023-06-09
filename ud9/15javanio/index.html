@@ -2278,8 +2278,8 @@
 <p>Es importante utilizar el try with resources para cerrar el stream. Viene especificado en la documentación oficial</p>
 <div class="admonition note nota">
 <p class="admonition-title">Note</p>
-</div>
 <p>This method must be used within a try-with-resources statement or similar control structure to ensure that the stream's open directories are closed promptly after the stream's operations have completed.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
 <span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Stream</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span><span class="w"> </span><span class="n">walk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Files</span><span class="p">.</span><span class="na">walk</span><span class="p">(</span><span class="n">path</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">walk</span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">Files</span><span class="p">::</span><span class="n">isDirectory</span><span class="p">)</span>
