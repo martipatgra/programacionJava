@@ -1896,6 +1896,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#listar-todos-los-directorios-con-fileswalk" class="md-nav__link">
+    Listar todos los directorios con Files.walk
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2198,6 +2205,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#listar-todos-los-directorios-con-fileswalk" class="md-nav__link">
+    Listar todos los directorios con Files.walk
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2258,6 +2272,18 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="listar-todos-los-directorios-con-fileswalk">Listar todos los directorios con Files.walk</h2>
+<p>Es importante utilizar el try with resources para cerrar el stream. Viene especificado en la documentación oficial</p>
+<div class="admonition note nota">
+<p class="admonition-title">Note</p>
+</div>
+<p>This method must be used within a try-with-resources statement or similar control structure to ensure that the stream's open directories are closed promptly after the stream's operations have completed.</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Stream</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span><span class="w"> </span><span class="n">walk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Files</span><span class="p">.</span><span class="na">walk</span><span class="p">(</span><span class="n">path</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">walk</span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">Files</span><span class="p">::</span><span class="n">isDirectory</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
 <span class="p">}</span>
 </code></pre></div>
 
