@@ -1,16 +1,153 @@
 site_name: Programación
 nav:
-    - Inicio: index.md
-    - 1.- Elementos de un programa informático: elementos.md
-    - Sobre : about.md
+    - 🔥 Inicio: index.md
+    - 💾 Elementos de un programa informático: 
+      - 💾 Programa y lenguajes de programación: ud1/1elementos.md
+      - 💾 El lenguaje Java:
+        - Conceptos básicos del lenguaje: ud1/121conceptosbasicos.md
+        - Setup: ud1/122setup.md
+        - Proyecto Hola Mundo: ud1/123holamundo.md
+      - 💾 Variables, sentencias y paquetes:
+        - Variables: ud1/131variables.md
+        - Sentencias y paquetes: ud1/132sentencias.md
+      - 💾 Tipos de datos: 
+        - Datos primitivos: ud1/14datatypejava.md
+        - Datos no primitivos: ud1/142noprimitive.md
+        - String: ud1/143string.md
+      - 💾 Operadores y expresiones: ud1/15operators.md
+      - 💾 Comentarios en Java: ud1/16comments.md
+      - 💾 Constantes y literales: ud1/17constantesliterales.md
+      - 💾 Entrada y salida de información por consola: ud1/18inputoutputconsole.md
+      - 💾 Introducción a la programación orientada a objetos: ud1/19poo.md
+    - 🖲️ Estructuras básicas de control:
+      - 🖲️ Estructuras de selección: 
+        - If Statement: ud2/1seleccion.md
+        - Expresiones booleanas: ud2/11booleanexpressions.md
+        - Switch Statement: ud2/2switch.md
+      - 🖲️ Estructuras de repetición:
+        - Bucle while: ud2/22while.md
+        - Bucle do while: ud2/22dowhile.md
+        - Bucles while con if: ud2/22whileif.md
+        - Bucle for: ud2/22for.md
+        - Bucles anidados: ud2/22nestedloop.md
+        - Principios del diseño de bucles: ud2/22principlesloop.md
+      - 🖲️ Estructuras de salto:
+        - Sentencias break y continue: ud2/23breakcontinue.md
+      - 🖲️ Control de excepciones: ud2/24exceptions.md
+      - 🖲️ Prueba y depuración de aplicaciones: ud2/25fallos.md
+      - 🖲️ Introducción a los métodos en Java: ud2/26methods.md 
+    - 🌎 Programación orientada a objetos POO:
+      - 🌎 Clases en Java: ud3/1metodoclase.md
+      - 🌎 Constructores y destructores: ud3/2constructor.md
+      - 🌎 Métodos y sobrecarga de métodos: ud3/3sobrecargametodos.md
+      - 🌎 Paso de parámetros por valor y referencia: ud3/4referencevalue.md
+      - 🌎 Variables, métodos y clases estáticas: ud3/5static.md
+      - 🌎 Null value: ud3/7nullvalue.md
+    - ♾️ Recursividad: ud3/6recursion.md
+    - 📅 Arrays:
+      - 📅 Introducción: ud4/1arrays.md
+      - 📅 Algoritmos útiles en arrays: ud4/2usefularrays.md
+      - 📅 Tipos de referencia y tipos de valor: ud4/3referencetypearrays.md
+      - 📅 Array de objetos: ud4/4arrayobjects.md
+      - 📅 Algoritmos de ordenación: ud4/5sortarrays.md
+      - 📅 Algoritmos de búsqueda: ud4/6searcharrays.md
+      - 📅 Arrays multidimensionales: ud4/7twodimensionarray.md
+    - ✨ Herencia y polimorfismo: 
+      - ✨ Herencia: 
+        - Concepto de herencia: ud5/1herencia.md
+        - This vs super: ud5/1thisvssuper.md
+      - ✨ Composición: ud5/2composicion.md
+      - ✨ Encapsulación: ud5/3encapsulacion.md
+      - ✨ Polimorfismo: ud5/4polimorfismo.md
+      - ✨ Interfaces: ud5/5interfaces.md
+      - ✨ Abstracción: ud5/6abstraccion.md
+      - ✨ Excepciones: ud5/7exceptions.md
+    - 🧆 Colecciones:
+      - 🧆 List y ArrayList: ud6/1list.md
+      - 🧆 Linked List: ud6/2linkedlist.md
+      - 🧆 Clases Anidadas: ud6/3innerclass.md
+      - 🧆 Map: ud6/4map.md
+      - 🧆 Set: ud6/5set.md
+      - 🧆 Colecciones ordenadas: ud6/6ordercollections.md
+      - 🧆 Keyword Final: ud6/7final.md
+      - 🧆 Equals & hashcode: ud6/8hashcode_equals.md 
+    - 🦄 Programación avanzada:
+      - 🦄 Genéricos: ud7/1generics.md
+      - 🦄 Expresiones lambda: ud7/2lambda.md
+      - 🦄 Predicate, Supplier and Consumer: ud7/3predicates.md
+      - 🦄 Functions: ud7/4functions.md
+      - 🦄 Referencia a métodos: ud7/5references.md
+      - 🦄 Streams: ud7/6streams.md
+      - 🦄 Expresiones regulares: ud7/7regularexpressions.md
+    - 🤩 Interfaces de usuario:
+      - 🤩 Java FX: ud8/1javafx.md
+      - 🤩 Stage: ud8/2stage.md
+      - 🤩 Scene: ud8/3scene.md
+      - 🤩 Node: ud8/4node.md
+      - 🤩 Layouts: ud8/6layouts.md
+      - 🤩 Controles UI: ud8/5uicontrols.md
+      - 🤩 Eventos: ud8/7events.md
+    - 📝 Entrada/Salida (I/O) de la información:
+      - 📝 Input/Output: ud9/1io.md
+      - 📝 Ficheros binarios: ud9/12binaryfiles.md
+      - 📝 Ficheros de caracteres: ud9/13characterfiles.md
+      - 📝 Clase File: ud9/14fileclass.md
+      - 📝 java.nio: ud9/15javanio.md
+      - 📝 Ficheros de acceso aleatorio: ud9/16randomaccessfile.md
+      - 📝 Ficheros de configuración: ud9/17configfiles.md
+      - 📝 XML: ud9/18xmlfiles.md
+      - 📝 JSON: ud9/19jsonfiles.md
+      - 📝 Crear un .jar: ud9/20createjar.md
+      - 📝 try-with-resources: ud9/21tryresources.md
+    - 🧠 Persistencia de la información:
+      - 🧠 Persistencia: ud10/1persistence.md
+      - 🧠 Desfase objeto-relacional: ud10/2mapeo.md
+      - 🧠 Manejo de conectores - JDBC: ud10/3conectores.md
+      - 🧠 Transacciones: ud10/4transactions.md
+      - 🧠 Mejora del rendimiento: ud10/6rendimiento.md
+      - 🧠 Estructura de los proyectos: ud10/7projectstructure.md
+    - 🔣 Atajos de teclado para IntelliJ: shortcuts.md
+    - About : about.md
 theme:
   name: material
   language: es
   custom_dir: overrides
   #logo: assets/logo.png
+  
   palette:
-    primary: teal
+    - scheme: default
+      primary: teal
+      accent: "Teal"
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Cambiar a modo noche
+    - scheme: slate
+      primary: teal
+      accent: "Teal"
+      toggle:
+        icon: material/toggle-switch
+        name: Cambiar a modo día
+  
   extra:
-    generator: false
+    #generator: false
+  
   copyright: Copyright &copy; 2021 - Patricia Martí
   
+  features:
+    - content.code.annotate
+    - navitagion.tabs
+    #- navigation.sections
+    - navigation.top
+
+markdown_extensions:
+  - admonition
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+
+extra:  
+  analytics:
+    provider: google
+    property: G-FTWMZYNBPC
