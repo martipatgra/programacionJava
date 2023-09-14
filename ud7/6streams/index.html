@@ -2540,6 +2540,8 @@ La función de mapeo utilizada para la transformación en <code>flatMap()</code>
 <p>Con <code>max</code> se obtiene el elemento del <em>stream</em> con el valor máximo calculado a partir de una expresión lambda de tipo <code>Comparator</code> que indicamos como parámetro de la expresión.</p>
 <p><code>max</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del <em>stream</em>.</p>
 <h3 id="anymatch"><code>anyMatch()</code></h3>
+<p>El método <code>anyMatch</code> devuelve verdadero si al menos un elemento satisface la condición proporcionada por el predicado; en caso contrario, es falso. No evalúa el predicado sobre todos los elementos si no es necesario para determinar el resultado. El método devuelve verdadero tan pronto como se encuentra el primer elemento coincidente.
+Si la secuencia está vacía, se devuelve falso y el predicado no se evalúa.</p>
 <table>
 <thead>
 <tr>
