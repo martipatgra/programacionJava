@@ -1617,71 +1617,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#partes-de-un-stream" class="md-nav__link">
-    Partes de un Stream
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#funciones-de-stream" class="md-nav__link">
-    Funciones de Stream
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operaciones-intermedias" class="md-nav__link">
-    Operaciones intermedias
-  </a>
-  
-    <nav class="md-nav" aria-label="Operaciones intermedias">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#peek" class="md-nav__link">
-    Peek()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#filter" class="md-nav__link">
     Filter()
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#sorted" class="md-nav__link">
     Sorted()
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#distinct" class="md-nav__link">
     Distinct()
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#map" class="md-nav__link">
     Map()
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#flatmap" class="md-nav__link">
     FlatMap
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2288,71 +2254,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#partes-de-un-stream" class="md-nav__link">
-    Partes de un Stream
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#funciones-de-stream" class="md-nav__link">
-    Funciones de Stream
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operaciones-intermedias" class="md-nav__link">
-    Operaciones intermedias
-  </a>
-  
-    <nav class="md-nav" aria-label="Operaciones intermedias">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#peek" class="md-nav__link">
-    Peek()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#filter" class="md-nav__link">
     Filter()
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#sorted" class="md-nav__link">
     Sorted()
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#distinct" class="md-nav__link">
     Distinct()
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#map" class="md-nav__link">
     Map()
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#flatmap" class="md-nav__link">
     FlatMap
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2449,37 +2381,59 @@
 
 
 <h1 id="streams">Streams</h1>
-<p>Los Streams fueron introducidos en Java 8 para abrir la puerta a la programación funcional al igual que con las expresiones lambda.</p>
-<p>La API <code>Stream</code> permite manipular las colecciones como nunca antes. Nos permite realizar operaciones sobre la colección, como por ejemplo, buscar, filtrar, reordenar, etc.</p>
-<p>Con Streams podemos utilizar cualquier clase que implemente la interfaz <code>Collection</code> como si fuese un <code>Stream</code> con la ventaja que nos ofrecen las expresiones lambda.</p>
-<p>Con streams hay que tener el cuenta que la fuente o colección que utilicemos no se puede modificar y no debe afectar al estado de la misma. Cada operación dentro del stream debe verse como una operación independiente que opera sobre el argumento (colección).</p>
-<p>A través del API Stream podemos trabajar sobre colecciones como si estuviéramos realizando sentencias SQL pero de una manera limpia y clara, evitando bucles y algoritmos que ralentizan los programas e incluso hacen que el código se torne inmanejable.</p>
-<p><strong>Cada operación del stream debe verse como un paso independiente, es decir, no se puede usar variables intermedias</strong>.</p>
-<h2 id="partes-de-un-stream">Partes de un Stream</h2>
-<p><img alt="Streams" src="../../img/ud7/7streams.png" /></p>
-<p>De forma genérica existen 3 partes que componen un Stream:</p>
-<ol>
-<li>Un Stream funciona a partir de una lista o colección, que también se la conoce <strong>como la fuente de donde obtienen información</strong>.</li>
-<li><strong>Operaciones intermedias</strong> como por ejemplo el método filter, que permite hacer una selección a partir de un predicado.</li>
-<li><strong>Operaciones terminales</strong>, como por ejemplo los métodos max, min, forEach, findFirst etc.</li>
-</ol>
-<p><img alt="Streams" src="../../img/ud7/streams2.png" /></p>
-<p>La fuente proporciona los elementos a la tubería.</p>
-<h2 id="funciones-de-stream">Funciones de Stream</h2>
-<p><img alt="Streams" src="../../img/ud7/streams31.png" /></p>
-<h2 id="operaciones-intermedias">Operaciones intermedias</h2>
-<p>Las operaciones intermedias obtienen elementos uno por uno y los procesan. Todas las operaciones intermedias son perezosas (lazy) y, como resultado, ninguna operación tendrá ningún efecto hasta que la tubería comience a funcionar.</p>
-<h3 id="peek"><code>Peek()</code></h3>
-<p>El método <code>peek</code> recibe como parámetro una expresión lambda de tipo <code>Consumer</code> para poder utilizar cada elemento del stream. Normalmente se utilizar para mostrar por consola el contenido del <em>stream</em>.</p>
-<p>Este método existe principalmente para la depuración del programa, donde se desea ver los elementos a medida que pasan por un punto determinado en el pipeline.</p>
-<p><code>peek()</code> también se utiliza cuando queremos <strong>alterar el estado interno de un elemento</strong> (aunque esto no es muy común).</p>
-<div class="highlight"><pre><span></span><code><span class="n">Stream</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;one&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;two&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;three&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;four&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
-<span class="w">  </span><span class="p">.</span><span class="na">peek</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Filtered value: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">))</span>
-<span class="w">  </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">String</span><span class="p">::</span><span class="n">toUpperCase</span><span class="p">)</span>
-<span class="w">  </span><span class="p">.</span><span class="na">peek</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mapped value: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">))</span>
-<span class="w">  </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
-</code></pre></div>
+<p>Los Streams fueron introducidos en Java 8 para abrir la puerta a la programación funcional al igual que con las expresiones lambda.
+No hay que confundirlos con los streams de entrada/salida, como un buffer stream de entrada o un fichero de salida.</p>
+<p>Según Oracle:
+<div class="highlight"><pre><span></span><code>   A stream is a sequence of elements supporting sequential and parallel aggregate operations.
+
+La API `Stream` permite manipular las colecciones como nunca antes. Nos permite realizar operaciones sobre la colección, como por ejemplo, buscar, filtrar, reordenar, etc.
+
+Con Streams podemos utilizar cualquier clase que implemente la interfaz `Collection` como si fuese un `Stream` con la ventaja que nos ofrecen las expresiones lambda.
+
+Con streams hay que tener el cuenta que la fuente o colección que utilicemos no se puede modificar y no debe afectar al estado de la misma. Cada operación dentro del stream debe verse como una operación independiente que opera sobre el argumento (colección).
+
+A través del API Stream podemos trabajar sobre colecciones como si estuviéramos realizando sentencias SQL pero de una manera limpia y clara, evitando bucles y algoritmos que ralentizan los programas e incluso hacen que el código se torne inmanejable.
+
+**Cada operación del stream debe verse como un paso independiente, es decir, no se puede usar variables intermedias**.
+
+## Partes de un Stream
+
+![Streams](../img/ud7/7streams.png)
+
+De forma genérica existen 3 partes que componen un Stream:
+
+1. Un Stream funciona a partir de una lista o colección, que también se la conoce **como la fuente de donde obtienen información**.
+2. **Operaciones intermedias** como por ejemplo el método filter, que permite hacer una selección a partir de un predicado.
+3. **Operaciones terminales**, como por ejemplo los métodos max, min, forEach, findFirst etc.
+
+![Streams](../img/ud7/streams2.png)
+
+La fuente proporciona los elementos a la tubería.
+
+## Funciones de Stream
+
+![Streams](../img/ud7/streams31.png)
+
+## Operaciones intermedias
+
+Las operaciones intermedias obtienen elementos uno por uno y los procesan. Todas las operaciones intermedias son perezosas (lazy) y, como resultado, ninguna operación tendrá ningún efecto hasta que la tubería comience a funcionar.
+
+### `Peek()`
+
+El método `peek` recibe como parámetro una expresión lambda de tipo `Consumer` para poder utilizar cada elemento del stream. Normalmente se utilizar para mostrar por consola el contenido del _stream_.
+
+Este método existe principalmente para la depuración del programa, donde se desea ver los elementos a medida que pasan por un punto determinado en el pipeline.
+
+`peek()` también se utiliza cuando queremos **alterar el estado interno de un elemento** (aunque esto no es muy común).
+
+```java
+Stream.of(&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;)
+  .filter(e -&gt; e.length() &gt; 3)
+  .peek(e -&gt; System.out.println(&quot;Filtered value: &quot; + e))
+  .map(String::toUpperCase)
+  .peek(e -&gt; System.out.println(&quot;Mapped value: &quot; + e))
+  .collect(Collectors.toList());
+</code></pre></div></p>
 <h3 id="filter"><code>Filter()</code></h3>
 <p>Como su nombre indica lo que hacemos es filtrar de todos los elementos del <em>stream</em> solo aquellos que cumplan una determinada condición.
 Recibe como parámetro una expresión lambda <code>Predicate</code> la cual debe devolver <code>true</code> solo en aquellos elementos que se quedarán en el <em>stream</em> y <code>false</code> para aquellos elementos que se deben eliminar.</p>
