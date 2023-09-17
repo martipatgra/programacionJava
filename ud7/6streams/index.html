@@ -2503,7 +2503,7 @@ No hay que confundirlos con los streams de entrada/salida, como un buffer stream
 <tr>
 <td>Stream <T></td>
 <td>filter(Predicate) takeWhile(Predicate) dropWhile(Predicate)</td>
-<td>Los elementos que coinciden con el filtro de Predicate se mantienen en el stream de salida para las operaciones de filter y takeWhile. Los elementos se eliminarán hasta que el predicate de dropwhile no sea verdadero.</td>
+<td>Los elementos que coinciden con el filtro de Predicate se mantienen en el stream de salida para las operaciones de filter y takeWhile. <code>dropWhile</code>: eliminará o filtrará cualquier elemento mientras coincida con la condición del Predicate. Cuando la condición se evalúa como falso la primera vez, la condición ya no se comprueba.</td>
 </tr>
 <tr>
 <td>Stream <T></td>
