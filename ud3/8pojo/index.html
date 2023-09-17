@@ -2414,9 +2414,9 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <p><img alt="POJO" src="../../img/ud3/pojo5.png" /></p>
 <p>Los constructores de Record pueden ser de tres tipos:</p>
 <ol>
-<li>Constructor canónico o largo (canonical constructor): es el constructor implícito generado con los mismos componentes que hay en la cabecera. Se puede crear uno explícitamente, por lo que no se generará entonces el implícito. Si se declara uno explícito, se debe asignar a todos los campos un valor.</li>
-<li>Constructor personalizado (custom constructor): es un constructor sobrecargado. Su primera sentencia debe ser una llamada al canónico.</li>
-<li>Constructor compacto o corto (compact constructor): solo se utiliza en los records. Es una forma concisa de declarar un constructor canónico.</li>
+<li><strong>Constructor canónico o largo</strong> (canonical constructor): es el constructor implícito generado con los mismos componentes que hay en la cabecera. Se puede crear uno explícitamente, por lo que no se generará entonces el implícito. Si se declara uno explícito, se debe asignar a todos los campos un valor.</li>
+<li><strong>Constructor personalizado</strong> (custom constructor): es un constructor sobrecargado. Su primera sentencia debe ser una llamada al canónico.</li>
+<li><strong>Constructor compacto o corto</strong> (compact constructor): solo se utiliza en los records. Es una forma concisa de declarar un constructor canónico.</li>
 </ol>
 <div class="highlight"><span class="filename">JavaStudent.java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">JavaStudent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">//Canonical constructor</span>
@@ -2437,11 +2437,13 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <span class="p">}</span>
 </code></pre></div>
 <h4 id="compact-constructor">Compact constructor</h4>
-<p>No se pueden tener ambos constructores, el compact más el canónico explícito.
-El compact constructor se declara sin paréntesis y sin parámetros o argumentos.
-Tiene acceso a todos los argumentos o parámetros del constructor canónico, no confundir con los campos de la clase o variables de instancia de la clase.
-No se pueden hacer asignaciones a los campos de instancia de la clase en este constructor.
-Todas las asignaciones implícitas del constructor canónico ocurren después de la ejecución del código del constructor compacto.</p>
+<ul>
+<li>No se pueden tener ambos constructores, el compact más el canónico explícito.</li>
+<li>El compact constructor se declara sin paréntesis y sin parámetros o argumentos.</li>
+<li>Tiene acceso a todos los argumentos o parámetros del constructor canónico, no confundir con los campos de la clase o variables de instancia de la clase.</li>
+<li>No se pueden hacer asignaciones a los campos de instancia de la clase en este constructor.</li>
+<li>Todas las asignaciones implícitas del constructor canónico ocurren después de la ejecución del código del constructor compacto.</li>
+</ul>
 <p>Ejemplo:</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Compact constructor</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">JavaStudent</span><span class="w"> </span><span class="p">{</span>
