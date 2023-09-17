@@ -31,6 +31,6 @@ Podemos asignar el valor null a cualquier variable de tipo referencia, ya sea un
 
 Una variable de referencia a veces hace referencia a un objeto y otras veces no, y puede referirse a diferentes objetos en diferentes momentos. Por tanto, necesitamos una forma de decir que una variable ahora no se refiere a un objeto. Para ello, se le asigna un valor _null_ a la variable.
 
-![Arrays](../img/ud4/nullvalue.png)
+![nullValue](../img/ud4/nullvalue.png)
 
 El objeto Persona con el nombre de Patricia se destruirá eventualmente por el _garbage collector_ ya que no es referenciado por nadie.
