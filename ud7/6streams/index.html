@@ -2468,8 +2468,8 @@ No hay que confundirlos con los streams de entrada/salida, como un buffer stream
 <p>Según Oracle:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p><strong>A stream is a sequence of elements supporting sequential and parallel aggregate operations.</strong></p>
 </div>
-<p>A stream is a sequence of elements supporting sequential and parallel aggregate operations.</p>
 <p>La API <code>Stream</code> permite manipular las colecciones como nunca antes. Nos permite realizar operaciones sobre la colección, como por ejemplo, buscar, filtrar, reordenar, etc. Pero no nos permite manipular los elementos individualmente en el flujo, sino que se trata el flujo como un todo, a menudo agregando o reduciendo los datos, o quizás contando o agrupando elementos de alguna manera.</p>
 <p>Con Streams podemos utilizar cualquier clase que implemente la interfaz <code>Collection</code> como si fuese un <code>Stream</code> con la ventaja que nos ofrecen las expresiones lambda.</p>
 <p>Con streams hay que tener el cuenta que la fuente o colección que utilicemos no se puede modificar y no debe afectar al estado de la misma. Cada operación dentro del stream debe verse como una operación independiente que opera sobre el argumento (colección).</p>
