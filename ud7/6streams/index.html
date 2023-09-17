@@ -1617,6 +1617,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cuando-querria-utilizar-streams-en-vez-de-colecciones" class="md-nav__link">
+    ¿Cuándo querría utilizar Streams en vez de colecciones?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#partes-de-un-stream" class="md-nav__link">
     Partes de un Stream
   </a>
@@ -2288,6 +2295,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cuando-querria-utilizar-streams-en-vez-de-colecciones" class="md-nav__link">
+    ¿Cuándo querría utilizar Streams en vez de colecciones?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#partes-de-un-stream" class="md-nav__link">
     Partes de un Stream
   </a>
@@ -2456,11 +2470,15 @@ No hay que confundirlos con los streams de entrada/salida, como un buffer stream
 <p class="admonition-title">Note</p>
 </div>
 <p>A stream is a sequence of elements supporting sequential and parallel aggregate operations.</p>
-<p>La API <code>Stream</code> permite manipular las colecciones como nunca antes. Nos permite realizar operaciones sobre la colección, como por ejemplo, buscar, filtrar, reordenar, etc.</p>
+<p>La API <code>Stream</code> permite manipular las colecciones como nunca antes. Nos permite realizar operaciones sobre la colección, como por ejemplo, buscar, filtrar, reordenar, etc. Pero no nos permite manipular los elementos individualmente en el flujo, sino que se trata el flujo como un todo, a menudo agregando o reduciendo los datos, o quizás contando o agrupando elementos de alguna manera.</p>
 <p>Con Streams podemos utilizar cualquier clase que implemente la interfaz <code>Collection</code> como si fuese un <code>Stream</code> con la ventaja que nos ofrecen las expresiones lambda.</p>
 <p>Con streams hay que tener el cuenta que la fuente o colección que utilicemos no se puede modificar y no debe afectar al estado de la misma. Cada operación dentro del stream debe verse como una operación independiente que opera sobre el argumento (colección).</p>
 <p>A través del API Stream podemos trabajar sobre colecciones como si estuviéramos realizando sentencias SQL pero de una manera limpia y clara, evitando bucles y algoritmos que ralentizan los programas e incluso hacen que el código se torne inmanejable.</p>
 <p><strong>Cada operación del stream debe verse como un paso independiente, es decir, no se puede usar variables intermedias</strong>.</p>
+<h2 id="cuando-querria-utilizar-streams-en-vez-de-colecciones">¿Cuándo querría utilizar Streams en vez de colecciones?</h2>
+<p>Los Streams son una interesante incorporación a Java, ya que me aportan varias ventajas:
++ 1. Hacen que el código para procesar los datos sea uniforme, conciso y legible. Tiene una forma similar a SQL.
++ 2. Cuando se trabaja con grances colecciones, los flujos paralelos proporcionan una ventaja de rendimiento.</p>
 <h2 id="partes-de-un-stream">Partes de un Stream</h2>
 <p><img alt="Streams" src="../../img/ud7/7streams.png" /></p>
 <p>De forma genérica existen 3 partes que componen un Stream:</p>
