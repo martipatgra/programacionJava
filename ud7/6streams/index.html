@@ -2475,6 +2475,10 @@ No hay que confundirlos con los streams de entrada/salida, como un buffer stream
 <p>Con streams hay que tener el cuenta que la fuente o colección que utilicemos no se puede modificar y no debe afectar al estado de la misma. Cada operación dentro del stream debe verse como una operación independiente que opera sobre el argumento (colección).</p>
 <p>A través del API Stream podemos trabajar sobre colecciones como si estuviéramos realizando sentencias SQL pero de una manera limpia y clara, evitando bucles y algoritmos que ralentizan los programas e incluso hacen que el código se torne inmanejable.</p>
 <p><strong>Cada operación del stream debe verse como un paso independiente, es decir, no se puede usar variables intermedias</strong>.</p>
+<div class="admonition warning importante">
+<p class="admonition-title">Warning</p>
+<p>Streams are lazy! Es decir, se inicia con la operación terminal, y los elementos de origen se consumen sólo cuando es necesario.</p>
+</div>
 <h2 id="cuando-querria-utilizar-streams-en-vez-de-colecciones">¿Cuándo querría utilizar Streams en vez de colecciones?</h2>
 <p>Los Streams son una interesante incorporación a Java, ya que me aportan varias ventajas:</p>
 <ol>
