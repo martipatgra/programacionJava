@@ -2496,22 +2496,27 @@ No hay que confundirlos con los streams de entrada/salida, como un buffer stream
 </thead>
 <tbody>
 <tr>
-<td>Stream <T></td>
+<td>Stream<T></td>
 <td>distinct()</td>
-<td>Elimina los valores duplicados del Stream. Los elementos se comparan utilizando el método equals().</td>
+<td>Elimina los valores duplicados del Stream.</td>
 </tr>
 <tr>
-<td>Stream <T></td>
-<td>filter(Predicate) takeWhile(Predicate) dropWhile(Predicate)</td>
-<td>Los elementos que coinciden con el filtro de Predicate se mantienen en el stream de salida para las operaciones de filter y takeWhile. <code>dropWhile</code>: eliminará o filtrará cualquier elemento mientras coincida con la condición del Predicate. Cuando la condición se evalúa como falso la primera vez, la condición ya no se comprueba.</td>
+<td>Stream<T></td>
+<td>filter(Predicate) takeWhile(Predicate)</td>
+<td>Los elementos que coinciden con el filtro de Predicate se mantienen en el stream de salida para las operaciones de filter y takeWhile.</td>
 </tr>
 <tr>
-<td>Stream <T></td>
+<td>Stream<T></td>
+<td>dropWhile(Predicate)</td>
+<td>Eliminará o filtrará cualquier elemento mientras coincida con la condición del Predicate. Cuando la condición se evalúa como falso la primera vez, la condición ya no se comprueba.</td>
+</tr>
+<tr>
+<td>Stream<T></td>
 <td>limit(long maxSize)</td>
-<td>Reduce el stream al tamaño especificado en el parámetro.</td>
+<td>Reduce el stream al tamaño especificados en el parámetro.</td>
 </tr>
 <tr>
-<td>Stream <T></td>
+<td>Stream<T></td>
 <td>skip(long n)</td>
 <td>Este metodo omite elementos, es decir, no formarán parte del stream resultante.</td>
 </tr>
