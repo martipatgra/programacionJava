@@ -2502,8 +2502,13 @@ No hay que confundirlos con los streams de entrada/salida, como un buffer stream
 </tr>
 <tr>
 <td>Stream<T></td>
-<td>filter(Predicate) takeWhile(Predicate)</td>
-<td>Los elementos que coinciden con el filtro de Predicate se mantienen en el stream de salida para las operaciones de filter y takeWhile.</td>
+<td>filter(Predicate)</td>
+<td>Los elementos que coinciden con el filtro de Predicate se mantienen en el stream de salida para las operaciones.</td>
+</tr>
+<tr>
+<td>Stream<T></td>
+<td>takeWhile(Predicate)</td>
+<td>Similar a filter. Con la diferencia de que la primera vez que se evalúa a falsa la condición, deja de comprobar el resto de elementos.</td>
 </tr>
 <tr>
 <td>Stream<T></td>
