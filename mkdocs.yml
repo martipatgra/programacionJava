@@ -36,6 +36,7 @@ nav:
       - 🖲️ Control de excepciones: ud2/24exceptions.md
       - 🖲️ Prueba y depuración de aplicaciones: ud2/25fallos.md
       - 🖲️ Introducción a los métodos en Java: ud2/26methods.md 
+    - ♾️ Recursividad: ud3/6recursion.md
     - 🌎 Programación orientada a objetos POO:
       - 🌎 Clases en Java: ud3/1metodoclase.md
       - 🌎 Constructores y destructores: ud3/2constructor.md
@@ -43,7 +44,7 @@ nav:
       - 🌎 Paso de parámetros por valor y referencia: ud3/4referencevalue.md
       - 🌎 Variables, métodos y clases estáticas: ud3/5static.md
       - 🌎 Null value: ud3/7nullvalue.md
-    - ♾️ Recursividad: ud3/6recursion.md
+      - 🌎 POJO, Record: ud3/8pojo.md
     - 📅 Arrays:
       - 📅 Introducción: ud4/1arrays.md
       - 📅 Algoritmos útiles en arrays: ud4/2usefularrays.md
@@ -52,7 +53,7 @@ nav:
       - 📅 Algoritmos de ordenación: ud4/5sortarrays.md
       - 📅 Algoritmos de búsqueda: ud4/6searcharrays.md
       - 📅 Arrays multidimensionales: ud4/7twodimensionarray.md
-    - ✨ Herencia y polimorfismo: 
+    - ✨ POO avanzada: 
       - ✨ Herencia: 
         - Concepto de herencia: ud5/1herencia.md
         - This vs super: ud5/1thisvssuper.md
@@ -107,7 +108,7 @@ nav:
       - 🧠 Mejora del rendimiento: ud10/6rendimiento.md
       - 🧠 Estructura de los proyectos: ud10/7projectstructure.md
     - 🔣 Atajos de teclado para IntelliJ: shortcuts.md
-    - About : about.md
+    - ❤️‍🔥 About me : about.md
 theme:
   name: material
   language: es

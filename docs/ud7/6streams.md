@@ -1,8 +1,14 @@
 # Streams
 
 Los Streams fueron introducidos en Java 8 para abrir la puerta a la programación funcional al igual que con las expresiones lambda.
+No hay que confundirlos con los streams de entrada/salida, como un buffer stream de entrada o un fichero de salida.
 
-La API `Stream` permite manipular las colecciones como nunca antes. Nos permite realizar operaciones sobre la colección, como por ejemplo, buscar, filtrar, reordenar, etc.
+Según Oracle:
+
+!!! Note
+    **A stream is a sequence of elements supporting sequential and parallel aggregate operations.**
+
+La API `Stream` permite manipular las colecciones como nunca antes. Nos permite realizar operaciones sobre la colección, como por ejemplo, buscar, filtrar, reordenar, etc. Pero no nos permite manipular los elementos individualmente en el flujo, sino que se trata el flujo como un todo, a menudo agregando o reduciendo los datos, o quizás contando o agrupando elementos de alguna manera.
 
 Con Streams podemos utilizar cualquier clase que implemente la interfaz `Collection` como si fuese un `Stream` con la ventaja que nos ofrecen las expresiones lambda.
 
@@ -11,6 +17,16 @@ Con streams hay que tener el cuenta que la fuente o colección que utilicemos no
 A través del API Stream podemos trabajar sobre colecciones como si estuviéramos realizando sentencias SQL pero de una manera limpia y clara, evitando bucles y algoritmos que ralentizan los programas e incluso hacen que el código se torne inmanejable.
 
 **Cada operación del stream debe verse como un paso independiente, es decir, no se puede usar variables intermedias**.
+
+!!! Warning Importante
+    Streams are lazy! Es decir, se inicia con la operación terminal, y los elementos de origen se consumen sólo cuando es necesario.
+
+## ¿Cuándo querría utilizar Streams en vez de colecciones?
+
+Los Streams son una interesante incorporación a Java, ya que me aportan varias ventajas:
+
+1. Hacen que el código para procesar los datos sea uniforme, conciso y legible. Tiene una forma similar a SQL.
+2. Cuando se trabaja con grances colecciones, los flujos paralelos proporcionan una ventaja de rendimiento.
 
 ## Partes de un Stream
 
@@ -34,6 +50,17 @@ La fuente proporciona los elementos a la tubería.
 
 Las operaciones intermedias obtienen elementos uno por uno y los procesan. Todas las operaciones intermedias son perezosas (lazy) y, como resultado, ninguna operación tendrá ningún efecto hasta que la tubería comience a funcionar.
 
+### Operaciones intermedias que tienen un efecto en el tamaño del stream resultante
+
+| Tipo de retorno | Operación            | Descripción                                                                                                                                                                         |
+|-----------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Stream<T>       | distinct()           | Elimina los valores duplicados del Stream.                                                                                                                                          |
+| Stream<T>       | filter(Predicate)    | Los elementos que coinciden con el filtro de Predicate se mantienen en el stream de salida para las operaciones.                                                                    |
+| Stream<T>       | takeWhile(Predicate) | Similar a filter. Con la diferencia de que la primera vez que se evalúa a falsa la condición, deja de comprobar el resto de elementos.                                              |
+| Stream<T>       | dropWhile(Predicate) | Eliminará o filtrará cualquier elemento mientras coincida con la condición del Predicate. Cuando la condición se evalúa como falso la primera vez, la condición ya no se comprueba. |
+| Stream<T>       | limit(long maxSize)  | Reduce el stream al tamaño especificados en el parámetro.                                                                                                                           |
+| Stream<T>       | skip(long n)         | Este metodo omite elementos, es decir, no formarán parte del stream resultante.                                                                                                     |
+
 ### `Peek()`
 
 El método `peek` recibe como parámetro una expresión lambda de tipo `Consumer` para poder utilizar cada elemento del stream. Normalmente se utilizar para mostrar por consola el contenido del _stream_.
@@ -51,19 +78,9 @@ Stream.of("one", "two", "three", "four")
   .collect(Collectors.toList());
 ```
 
-### `Filter()`
-
-Como su nombre indica lo que hacemos es filtrar de todos los elementos del _stream_ solo aquellos que cumplan una determinada condición.
-Recibe como parámetro una expresión lambda `Predicate` la cual debe devolver `true` solo en aquellos elementos que se quedarán en el _stream_ y `false` para aquellos elementos que se deben eliminar.
-
 ### `Sorted()`
 
 Se utiliza para ordenar los elementos del _stream_. Recibe como parámetro una expresión lambda de tipo `Comparator` para que podamos indicar la lógica de la ordenación.
-
-### `Distinct()`
-
-Con `distinct` se seleccionan los elementos distintos dentro del _stream_ eliminando los duplicados.
-Los elementos se comparan utilizando el método equals().
 
 ### `Map()`
 
@@ -112,11 +129,11 @@ System.out.println(listOfAllIntegers);
 
 Las operaciones terminales significan el final del ciclo de vida del steam. Lo más importante para nuestro escenario es que inician el trabajo en la tubería.
 
-### `ForEach()`
+### `forEach()`
 
 Recorremos cada elemento del _stream_ para realizar alguna acción con él. Como bien sabemos recibe como parámetro una exprsión lambda de tipo `Consumer`.
 
-### `Collect()`
+### `collect()`
 
 Es una operación terminal, se utiliza para indicar el tipo de colección en la que se devolverá el resultado final de todas las operaciones realizadas en el _stream_.
 
@@ -125,27 +142,36 @@ List<String> lista = Arrays.asList("Texto1", "Texto2");
 Set<String> set = lista.stream().collect(Collectors.toSet());
 ```
 
-### `FindFirst()`
+### `findFirst()`
 
 Se utiliza para devolver el primer elemento encontrado del _stream_. Se suele utilizar en combinación con otras funciones cuando hay que seleccionar un único valor del _stream_ que cumpla determinadas condiciones.
 
 `findFirst` devuelve un objeto de tipo `Optional` para poder indicar un valor por defecto en caso de que no se pueda devovler ningún elemento del _stream_.
 
-### `ToArray()`
+### `toArray()`
 
 Con este método se puede convertir cualquier tipo de `Collection` en un array de forma sencilla.
 
-### `Min()`
+### `min()`
 
 Con `min` se obtiene el elemento del _stream_ con el valor mínimo calculado a partir de una expresión lambda de tipo `Comparator` que indicamos como parámetro.
 
 `min` devuelve un objeto de tipo `Optional` para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del _stream_.
 
-### `Max()`
+### `max()`
 
 Con `max` se obtiene el elemento del _stream_ con el valor máximo calculado a partir de una expresión lambda de tipo `Comparator` que indicamos como parámetro de la expresión.
 
 `max` devuelve un objeto de tipo `Optional` para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del _stream_.
+
+### `anyMatch()`
+
+El método `anyMatch` devuelve verdadero si al menos un elemento satisface la condición proporcionada por el predicado; en caso contrario, es falso. No evalúa el predicado sobre todos los elementos si no es necesario para determinar el resultado. El método devuelve verdadero tan pronto como se encuentra el primer elemento coincidente.
+Si la secuencia está vacía, se devuelve falso y el predicado no se evalúa.
+
+| Sintaxis    |
+| ----------- |
+| **boolean anyMatch(Predicate<? super T> predicate)**       |
 
 ## Ventajas de Streams
 
