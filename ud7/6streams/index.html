@@ -1646,6 +1646,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#operaciones-intermedias-que-tienen-un-efecto-en-el-tamano-del-stream-resultante" class="md-nav__link">
+    Operaciones intermedias que tienen un efecto en el tamaño del stream resultante
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#peek" class="md-nav__link">
     Peek()
   </a>
@@ -1653,22 +1660,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#filter" class="md-nav__link">
-    Filter()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sorted" class="md-nav__link">
     Sorted()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#distinct" class="md-nav__link">
-    Distinct()
   </a>
   
 </li>
@@ -2324,6 +2317,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#operaciones-intermedias-que-tienen-un-efecto-en-el-tamano-del-stream-resultante" class="md-nav__link">
+    Operaciones intermedias que tienen un efecto en el tamaño del stream resultante
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#peek" class="md-nav__link">
     Peek()
   </a>
@@ -2331,22 +2331,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#filter" class="md-nav__link">
-    Filter()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sorted" class="md-nav__link">
     Sorted()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#distinct" class="md-nav__link">
-    Distinct()
   </a>
   
 </li>
@@ -2499,6 +2485,38 @@ No hay que confundirlos con los streams de entrada/salida, como un buffer stream
 <p><img alt="Streams" src="../../img/ud7/streams31.png" /></p>
 <h2 id="operaciones-intermedias">Operaciones intermedias</h2>
 <p>Las operaciones intermedias obtienen elementos uno por uno y los procesan. Todas las operaciones intermedias son perezosas (lazy) y, como resultado, ninguna operación tendrá ningún efecto hasta que la tubería comience a funcionar.</p>
+<h3 id="operaciones-intermedias-que-tienen-un-efecto-en-el-tamano-del-stream-resultante">Operaciones intermedias que tienen un efecto en el tamaño del stream resultante</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo de retorno</th>
+<th>Operación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stream<T></td>
+<td>distinct()</td>
+<td>Elimina los valores duplicados del Stream. Los elementos se comparan utilizando el método equals().</td>
+</tr>
+<tr>
+<td>Stream<T></td>
+<td>filter(Predicate) takeWhile(Predicate) dropWhile(Predicate)</td>
+<td>Los elementos que coinciden con el filtro de Predicate se mantienen en el stream de salida para las operaciones de filter y takeWhile. Los elementos se eliminarán hasta que el predicate de dropwhile no sea verdadero.</td>
+</tr>
+<tr>
+<td>Stream<T></td>
+<td>limit(long maxSize)</td>
+<td>Reduce el stream al tamaño especificados en el parámetro.</td>
+</tr>
+<tr>
+<td>Stream<T></td>
+<td>skip(long n)</td>
+<td>Este metodo omite elementos, es decir, no formarán parte del stream resultante.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="peek"><code>Peek()</code></h3>
 <p>El método <code>peek</code> recibe como parámetro una expresión lambda de tipo <code>Consumer</code> para poder utilizar cada elemento del stream. Normalmente se utilizar para mostrar por consola el contenido del <em>stream</em>.</p>
 <p>Este método existe principalmente para la depuración del programa, donde se desea ver los elementos a medida que pasan por un punto determinado en el pipeline.</p>
@@ -2510,14 +2528,8 @@ No hay que confundirlos con los streams de entrada/salida, como un buffer stream
 <span class="w">  </span><span class="p">.</span><span class="na">peek</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mapped value: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">))</span>
 <span class="w">  </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
 </code></pre></div>
-<h3 id="filter"><code>Filter()</code></h3>
-<p>Como su nombre indica lo que hacemos es filtrar de todos los elementos del <em>stream</em> solo aquellos que cumplan una determinada condición.
-Recibe como parámetro una expresión lambda <code>Predicate</code> la cual debe devolver <code>true</code> solo en aquellos elementos que se quedarán en el <em>stream</em> y <code>false</code> para aquellos elementos que se deben eliminar.</p>
 <h3 id="sorted"><code>Sorted()</code></h3>
 <p>Se utiliza para ordenar los elementos del <em>stream</em>. Recibe como parámetro una expresión lambda de tipo <code>Comparator</code> para que podamos indicar la lógica de la ordenación.</p>
-<h3 id="distinct"><code>Distinct()</code></h3>
-<p>Con <code>distinct</code> se seleccionan los elementos distintos dentro del <em>stream</em> eliminando los duplicados.
-Los elementos se comparan utilizando el método equals().</p>
 <h3 id="map"><code>Map()</code></h3>
 <p>El método <code>map</code> recibe como parámetro una expresión lambda de tipo <code>Function</code>, por lo que debemos especificar una función que recibe como parámetro de entrada cada elemento del <em>stream</em>, y devuelve un objeto que puede ser un tipo de dato distinto o el mismo.</p>
 <p>La función se aplica a cada uno de los elementos del <em>stream</em> para realizar alguna transformación sobre cada elemento y devuelve <strong>otro Stream</strong> sobre el cual puedes seguir trabajando.
