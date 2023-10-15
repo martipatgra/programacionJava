@@ -2304,6 +2304,27 @@ Veamos que pasa, cuando devuelve vacío:</p>
 <blockquote>
 <p>Exception in thread "main" java.util.NoSuchElementException: No value present</p>
 </blockquote>
+<p>El código anterior nos lanza una excepción porque <strong>sólo podemos llamar al método get() si el método isPresent es verdadero, es decir, si tengo valor</strong>. Para corregir el error tendríamos que realizar lo siguiente:</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">Student</span><span class="w"> </span><span class="n">studentNull</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="n">Optional</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">ofNullable</span><span class="p">(</span><span class="n">studentNull</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">op</span><span class="p">.</span><span class="na">isPresent</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">op</span><span class="p">.</span><span class="na">get</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="c1">// también puedes hacerlo en una sola línea de código</span>
+<span class="n">op</span><span class="p">.</span><span class="na">ifPresent</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+</code></pre></div>
+Ahora vemos que no imprime nada porque isPresent() devuelve false, ya que optional es vacío. Si queremos mostrar algo cuando tengamos un Optional vacío, podemos usar el método <code>ifPresentOrElse</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Student</span><span class="w"> </span><span class="n">studentNull</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="n">Optional</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">ofNullable</span><span class="p">(</span><span class="n">studentNull</span><span class="p">);</span>
+<span class="n">op</span><span class="p">.</span><span class="na">ifPresentOrElse</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;empty object&quot;</span><span class="p">));</span>
+</code></pre></div>
+<p>El método ifPresentOrElse, recibe un <code>Consumer</code>, que es si el objeto no está vacío, y un <code>Runnable</code> que se llamará si está vacío.
+Como <code>Runnable</code> es una interfaz funcional, podemos usar lambda para implementar el método <code>run</code>, que será la acción que se realice si el objeto <code>Optional</code> es vacío.</p>
+<p>Output</p>
+<blockquote>
+<p>empty object</p>
+</blockquote>
 
 
   
