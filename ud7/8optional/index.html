@@ -2213,8 +2213,8 @@
 </code></pre></div>
 <p>Output</p>
 <blockquote>
-<p>Optional[Patricia,32,2023-10-15]
-Empty: false Present: true</p>
+<p>Optional[Patricia,32,2023-10-15]</p>
+<p>Empty: false Present: true</p>
 </blockquote>
 <p>Hay que tener cuidado con Optional.of(object), ya que si lo usamos y puede llegar un valor <code>null</code>, dará una excepción <code>NullPointerException</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
@@ -2234,8 +2234,8 @@ Empty: false Present: true</p>
 </code></pre></div>
 <p>Output</p>
 <blockquote>
-<p>Optional.empty
-Empty: true Present: false</p>
+<p>Optional.empty</p>
+<p>Empty: true Present: false</p>
 </blockquote>
 <mark class="critic block">
 <p>La primera regla para los desarrolladores que utilizan <code>Optional</code>, es que cualquier método que devuelva un <code>Optional</code>, nunca debe devolver null. En su lugar, debería devolver un optional vacío.</p>
