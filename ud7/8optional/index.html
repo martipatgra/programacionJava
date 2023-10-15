@@ -1579,6 +1579,19 @@
     Crear una instancia de Optional
   </a>
   
+    <nav class="md-nav" aria-label="Crear una instancia de Optional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-con-optionalof" class="md-nav__link">
+    Ejemplo con Optional.of
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2182,6 +2195,19 @@
     Crear una instancia de Optional
   </a>
   
+    <nav class="md-nav" aria-label="Crear una instancia de Optional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-con-optionalof" class="md-nav__link">
+    Ejemplo con Optional.of
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2207,6 +2233,7 @@
 <h2 id="crear-una-instancia-de-optional">Crear una instancia de <code>Optional</code></h2>
 <p><code>Optional</code> es una clase genérica que se declara como cualquier otra, indicando el tipo. Aunque, no se puede construir un <code>Optional</code>. En su lugar, se usa uno de sus métodos estáticos: <code>empty</code>, <code>of</code> or <code>ofNullable</code>.</p>
 <p><img alt="Optional" src="../../img/ud7/8optional.png" /></p>
+<h3 id="ejemplo-con-optionalof">Ejemplo con <code>Optional.of</code></h3>
 <div class="highlight"><pre><span></span><code><span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="n">LocalDate</span><span class="p">.</span><span class="na">now</span><span class="p">());</span><span class="w">        </span>
 <span class="n">Optional</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Empty: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; Present: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="na">isPresent</span><span class="p">());</span>
