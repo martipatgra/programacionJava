@@ -784,6 +784,19 @@
     Ejemplo: Imprime cualquier texto por pantalla 4 veces
   </a>
   
+    <nav class="md-nav" aria-label="Ejemplo: Imprime cualquier texto por pantalla 4 veces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-suma-digitos-de-un-numero" class="md-nav__link">
+    Ejemplo suma dígitos de un número
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2184,6 +2197,19 @@
     Ejemplo: Imprime cualquier texto por pantalla 4 veces
   </a>
   
+    <nav class="md-nav" aria-label="Ejemplo: Imprime cualquier texto por pantalla 4 veces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-suma-digitos-de-un-numero" class="md-nav__link">
+    Ejemplo suma dígitos de un número
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2318,6 +2344,18 @@ Ejemplo:</p>
 <mark class="critic block">
 <p>Una variable declarada en una instrucción for solo se puede usar en esa instrucción y en el cuerpo del bucle.</p>
 </mark>
+<h3 id="ejemplo-suma-digitos-de-un-numero">Ejemplo suma dígitos de un número</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">479</span><span class="p">;</span><span class="w"> </span><span class="mi">4</span><span class="o">+</span><span class="mi">7</span><span class="o">+</span><span class="mi">9</span><span class="o">=</span><span class="mi">20</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">digito</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">while</span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">digito</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="c1">//obtengo el último dígito, menos significativo</span>
+<span class="w">    </span><span class="n">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">digito</span><span class="p">;</span>
+<span class="w">    </span><span class="n">numero</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="c1">//hago el número más pequeño, le quito el último dígito</span>
+<span class="p">}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">suma</span><span class="p">);</span>
+</code></pre></div>
 <h2 id="bucle-infinito">Bucle infinito</h2>
 <p>Un límite de bucle es un valor que controla cuántas veces se repite un bucle. Un bucle se repetirá hasta que se alcance su límite de bucle. La condición del bucle debe ser una expresión booleana que pruebe si se ha alcanzado el límite del bucle. De manera similar, el actualizador debe modificar el contador del bucle para que avance hacia su límite.</p>
 <p>Si nunca se alcanza el límite del bucle, la condición del bucle nunca se volverá falsa y el bucle se repetirá para siempre. Esto se conoce como <strong>bucle infinito</strong>.</p>
