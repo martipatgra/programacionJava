@@ -2294,7 +2294,7 @@
 <p>Empty: false Present: true</p>
 </blockquote>
 <p>En el ejemplo anterior, ha funcionado correctamente, hemos obtenido el objeto Student al hacer op.get().
-Veamos que pasa, cuando devuelve vacío:</p>
+Veamos que pasa, cuando <code>Optional.ofNullable()</code> devuelve un optional vacío:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Student</span><span class="w"> </span><span class="n">studentNull</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 <span class="n">Optional</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">ofNullable</span><span class="p">(</span><span class="n">studentNull</span><span class="p">);</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">op</span><span class="p">.</span><span class="na">get</span><span class="p">());</span>
