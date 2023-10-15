@@ -1594,6 +1594,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#como-obtener-el-objeto-o-valor-del-optional" class="md-nav__link">
+    Cómo obtener el objeto o valor del Optional
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2210,6 +2217,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#como-obtener-el-objeto-o-valor-del-optional" class="md-nav__link">
+    Cómo obtener el objeto o valor del Optional
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2267,6 +2281,29 @@
 <mark class="critic block">
 <p>La primera regla para los desarrolladores que utilizan <code>Optional</code>, es que cualquier método que devuelva un <code>Optional</code>, nunca debe devolver null. En su lugar, debería devolver un optional vacío.</p>
 </mark>
+<h2 id="como-obtener-el-objeto-o-valor-del-optional">Cómo obtener el objeto o valor del <code>Optional</code></h2>
+<p>El tipo <code>Optional</code> tiene un método <code>get()</code>, que devuelve el valor.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Student</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="n">LocalDate</span><span class="p">.</span><span class="na">now</span><span class="p">());</span>
+<span class="n">Optional</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">ofNullable</span><span class="p">(</span><span class="n">student</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">op</span><span class="p">.</span><span class="na">get</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Empty: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; Present: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="na">isPresent</span><span class="p">());</span>
+</code></pre></div>
+<p>Output</p>
+<blockquote>
+<p>Patricia,32,2023-10-15</p>
+<p>Empty: false Present: true</p>
+</blockquote>
+<p>En el ejemplo anterior, ha funcionado correctamente, hemos obtenido el objeto Student al hacer op.get().
+Veamos que pasa, cuando devuelve vacío:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Student</span><span class="w"> </span><span class="n">studentNull</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="n">Optional</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">ofNullable</span><span class="p">(</span><span class="n">studentNull</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">op</span><span class="p">.</span><span class="na">get</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Empty: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; Present: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="na">isPresent</span><span class="p">());</span>
+</code></pre></div>
+<p>Output</p>
+<blockquote>
+<p>Exception in thread "main" java.util.NoSuchElementException: No value present</p>
+</blockquote>
 
 
   
