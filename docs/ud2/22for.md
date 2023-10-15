@@ -122,8 +122,7 @@ public static void main(String[] args) {
 
 !!! Note Nota
     Si creo un bucle de la siguiente forma `for(int i = 0; i < 10; i++);` ese bucle no hará nada, porque acaba en `;`.
-    Con el `;` estamos indicando fin de statement o sentencia, es decir, fin de bucle, cualquier línea detrás del ; no será parte del bucle.
-
+    Con el `;` estamos indicando fin de statement o sentencia, es decir, fin de bucle, cualquier línea detrás del ; no será parte del bucle. Esto no solo se aplica para el bucle `for`, también para la sentencia `if` o `while`.
 
 ## Bucle infinito
 

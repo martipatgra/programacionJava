@@ -78,6 +78,7 @@ nav:
       - 🦄 Predicate, Supplier and Consumer: ud7/3predicates.md
       - 🦄 Functions: ud7/4functions.md
       - 🦄 Referencia a métodos: ud7/5references.md
+      - 🦄 Optional: ud7/8optional.md
       - 🦄 Streams: ud7/6streams.md
       - 🦄 Expresiones regulares: ud7/7regularexpressions.md
     - 🤩 Interfaces de usuario:
