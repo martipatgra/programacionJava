@@ -91,6 +91,40 @@ Una variable declarada en una instrucción for solo se puede usar en esa instruc
 
 ==}
 
+### Ejemplo suma dígitos de un número
+
+```java
+//con un bucle while
+public static void main(String[] args) {
+    int numero = 479; //4+7+9=20
+    int suma = 0;
+    int digito = 0;
+
+    while(numero > 0) {
+        digito = numero % 10;//obtengo el último dígito, menos significativo
+        suma += digito;
+        numero /= 10;//hago el número más pequeño, le quito el último dígito
+    }
+    System.out.println(suma);
+}
+
+//con un bucle for
+public static void main(String[] args) {
+    int suma = 0;
+    int digito = 0;
+    for (int numero = 479; numero > 0; numero/=10) {
+        digito = numero % 10;
+        suma+=digito;
+    }
+    System.out.println(suma);
+}
+```
+
+!!! Note Nota
+    Si creo un bucle de la siguiente forma `for(int i = 0; i < 10; i++);` ese bucle no hará nada, porque acaba en `;`.
+    Con el `;` estamos indicando fin de statement o sentencia, es decir, fin de bucle, cualquier línea detrás del ; no será parte del bucle.
+
+
 ## Bucle infinito
 
 Un límite de bucle es un valor que controla cuántas veces se repite un bucle. Un bucle se repetirá hasta que se alcance su límite de bucle. La condición del bucle debe ser una expresión booleana que pruebe si se ha alcanzado el límite del bucle. De manera similar, el actualizador debe modificar el contador del bucle para que avance hacia su límite.
