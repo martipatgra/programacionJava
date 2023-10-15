@@ -2155,7 +2155,7 @@
 <p>Optional[Patricia,32,2023-10-15]
 Empty: false Present: true</p>
 </blockquote>
-<p>Hay que tener cuidado con Optional.of(), ya que si lo usamos y puede llegar un valor null, dará una excepción <code>NullPointerException</code>:</p>
+<p>Hay que tener cuidado con Optional.of(object), ya que si lo usamos y puede llegar un valor <code>null</code>, dará una excepción <code>NullPointerException</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 <span class="n">Optional</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">op</span><span class="p">);</span>
@@ -2165,7 +2165,7 @@ Empty: false Present: true</p>
 <blockquote>
 <p><code>NullPointerException</code></p>
 </blockquote>
-<p>Por tanto, no habremos solucionado el problema, en vez de eso, debemos usar el método Optional.ofNullable():</p>
+<p>Por tanto, no habremos solucionado el problema, en vez de eso, debemos usar el método Optional.ofNullable(object), que si el objeto que se pasa es <code>null</code>, devolverá un <code>Optional</code> vacío.</p>
 <div class="highlight"><pre><span></span><code><span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 <span class="n">Optional</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">ofNullable</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">op</span><span class="p">);</span>
