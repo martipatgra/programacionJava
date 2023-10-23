@@ -2217,9 +2217,6 @@
 <h1 id="introduccion-a-los-metodos-en-java">Introducción a los métodos en Java</h1>
 <p>Los métodos en Java son bloques de código que realizan una tarea en concreto, se utilizan para encapsular la lógica de un programa en funciones o procedimientos reutilizables. Los métodos sirven para hacer nuestro código más legible, más fácil de mantener y sin código duplicado.</p>
 <p>Todo el tiempo hemos estado usando un método llamado main, dentro de él se encuentran todas las sentencias que hemos ido ejecutando, ahora vamos a crear nuestros propios métodos teniendo en cuenta:</p>
-<p><img alt="Método" src="../../img/ud26method2.png" /></p>
-<p><img alt="Método" src="../../img/ud26method.png" /></p>
-<p><strong>Los métodos se alinean unos debajo de otros, no se puede insertar un método dentro de otro método, y además deben estar dentro de la clase.</strong></p>
 <h2 id="caracteristicas-de-los-metodos">Características de los métodos</h2>
 <ul>
 <li>Tienen que estar dentro de una clase</li>
@@ -2231,6 +2228,11 @@
 </li>
 <li>Invocación a métodos: los métodos se invocan desde otros métodos o desde el main, para llamar a un método se utiliza el nombre y paréntesis, y si tiene se añaden los argumentos.</li>
 </ul>
+<p><img alt="Método" src="../../img/ud26method2.png" /></p>
+<p><img alt="Método" src="../../img/ud26method.png" /></p>
+<p>{
+    ==Los métodos se alinean unos debajo de otros, no se puede insertar un método dentro de otro método, y además deben estar dentro de la clase.==
+}</p>
 <h2 id="sentencia-return-valores-devueltos">Sentencia <strong><code>Return</code></strong> - Valores devueltos</h2>
 <p>Un valor devuelto es información que un método <strong>devuelve al código que lo llamó</strong>. Cada método solo puede devolver un valor: cuando un método regresa, deja de ejecutarse (y continuamos donde lo dejamos antes de llamar al método). Para que el código que llamó al método use el valor devuelto, <strong>el valor devuelto debe almacenarse en una variable</strong> o <strong>usarse inmediatamente</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="nf">methodName</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// llamar a nombre de método devuelve expresión</span>
