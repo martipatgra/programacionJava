@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#variables" class="md-skip">
+        <a href="#que-son-las-variables" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -440,22 +440,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#visibilidad" class="md-nav__link">
-    Visibilidad
+  <a href="#visibilidad-de-las-variables" class="md-nav__link">
+    Visibilidad de las variables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mutacion-de-las-variables" class="md-nav__link">
-    Mutación de las variables
+  <a href="#mutacion-o-manipulacion-de-las-variables" class="md-nav__link">
+    Mutación o manipulación de las variables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope-ambito" class="md-nav__link">
-    Scope - Ámbito
+  <a href="#creacion-de-una-variable" class="md-nav__link">
+    Creación de una variable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicializacion-de-las-variables" class="md-nav__link">
+    Inicialización de las variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope-ambito-de-las-variables" class="md-nav__link">
+    Scope - Ámbito de las variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-con-variables" class="md-nav__link">
+    Buenas prácticas con variables
   </a>
   
 </li>
@@ -2236,22 +2257,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#visibilidad" class="md-nav__link">
-    Visibilidad
+  <a href="#visibilidad-de-las-variables" class="md-nav__link">
+    Visibilidad de las variables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mutacion-de-las-variables" class="md-nav__link">
-    Mutación de las variables
+  <a href="#mutacion-o-manipulacion-de-las-variables" class="md-nav__link">
+    Mutación o manipulación de las variables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope-ambito" class="md-nav__link">
-    Scope - Ámbito
+  <a href="#creacion-de-una-variable" class="md-nav__link">
+    Creación de una variable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicializacion-de-las-variables" class="md-nav__link">
+    Inicialización de las variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope-ambito-de-las-variables" class="md-nav__link">
+    Scope - Ámbito de las variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-con-variables" class="md-nav__link">
+    Buenas prácticas con variables
   </a>
   
 </li>
@@ -2272,7 +2314,7 @@
 
 
 
-<h1 id="variables">💾 Variables</h1>
+<h1 id="que-son-las-variables">💾 ¿Qué son las variables?</h1>
 <p style='text-align: justify;'>Las variables en Java es una forma de almacenar información en nuestro ordenador. Definimos variables asignándoles un nombre. De igual manera se puede acceder a la información que guardar las variable, simplemente accediendo por el nombre que le hemos dado.
 Es el ordenador el que se encarga de averiguar dónde se almacena internamente en la memoria RAM del ordenador.
 Como su nombre indica "variable", se puede modificar el contenido que ésta almacena, es decir, es variable. Lo único que tenemos que hacer es decirle al PC qué tipo de información queremos guardar en nuestra variable y darle un nombre.
@@ -2305,7 +2347,7 @@ Para definir una variable, necesitamos especificar el tipo de datos, luego darle
 <img alt="Java" src="../../img/myfirstint.png" /></p>
 <p>La línea que acabamos de escribir se conoce como <strong>sentencia de declaración</strong>.</p>
 <h2 id="keywords">Keywords</h2>
-<p>Son palabras reservadas del lenguaje. Es decir, son palabras que tienen un significado especial en Java y no puedes usarlas fuera de ese contexto.
+<p>Son palabras reservadas del lenguaje. Es decir, son palabras que tienen un significado especial en Java y no puedes usarlas fuera de ese contexto. Es decir, <strong>no se puede declarar variables utilizando palabras reservadas como nombre.</strong>
 Ejemplos: public, class, void, static, etc.
 Existen 61 <a href="https://en.wikipedia.org/wiki/List_of_Java_keywords">keywords</a> en Java.</p>
 <h2 id="vida-de-las-variables">Vida de las variables</h2>
@@ -2315,11 +2357,11 @@ Existen 61 <a href="https://en.wikipedia.org/wiki/List_of_Java_keywords">keyword
 <p><strong>3. Variables estáticas</strong>: es como una variable global. Declarado como estático en la clase pero fuera de los métodos.</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="visibilidad">Visibilidad</h2>
+<h2 id="visibilidad-de-las-variables">Visibilidad de las variables</h2>
 <p>En las variables locales, su ámbito y uso se encuentra dentro del método o bloque en el que se definió y se destruyen después de la ejecución del método. Es decir, no se puede usar una variable local fuera del método actual.</p>
 <p>A las variables de instancia se puede acceder solo a través de objetos de la clase para la que se definió.</p>
 <p>Un campo / variable estático pertenece a la clase y se cargará en la memoria junto con la clase. Se invocan sin crear un objeto. (Usando el nombre de la clase como referencia). Solo hay una copia de la variable estática disponible en toda la clase, es decir, el valor de la variable estática será el mismo en todos los objetos. Puede definir una variable estática utilizando la palabra clave <strong>static</strong>.</p>
-<h2 id="mutacion-de-las-variables">Mutación de las variables</h2>
+<h2 id="mutacion-o-manipulacion-de-las-variables">Mutación o manipulación de las variables</h2>
 <p>Supongamos que hemos ejecutado la siguiente línea de código:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
@@ -2341,8 +2383,19 @@ Existen 61 <a href="https://en.wikipedia.org/wiki/List_of_Java_keywords">keyword
 <span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="c1">// como resultado se asigna el valor 11 a x</span>
 </code></pre></div>
 <p>Aquí, hemos usado el valor de <code>x</code> para calcular y almacenar un nuevo valor en la variable <code>x</code>; en este caso, 11.</p>
-<h2 id="scope-ambito">Scope - Ámbito</h2>
+<h2 id="creacion-de-una-variable">Creación de una variable</h2>
+<p>Para crear una variable se especifica el tipo de dato y se le da un nombre descriptivo que de información sobre esa variable.
+Ejemplo de creación de una variable:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="inicializacion-de-las-variables">Inicialización de las variables</h2>
+<p>La variable anterior <code>numero</code> no tiene un valor inicial asignado, es decir, no está inicializada. Inicializar una variable significa darle un valor inicial acorde al tipo de dato definido para esa variable en el momento de su creación. En Java además, las variables deben ser inicializadas antes de poder ser usadas.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span><span class="w"> </span><span class="c1">//Se crea y se inicializa</span>
+</code></pre></div>
+<h2 id="scope-ambito-de-las-variables">Scope - Ámbito de las variables</h2>
 <p>El alcance o ámbito (<strong>scope</strong>) de una variable es la parte de un programa <em>en la que existe.</em> En Java, el alcance de una variable comienza donde se declara y termina cuando se alcanza la llave de cierre del bloque que la contiene.</p>
+<p>Ejemplo de variables en programación Java</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 <span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2357,6 +2410,51 @@ Existen 61 <a href="https://en.wikipedia.org/wiki/List_of_Java_keywords">keyword
 <li><code>y</code> está dentro del alcance entre su declaración en la línea 4 y la llave que la encierra en la línea 6.</li>
 <li>Las variables de bucle están dentro del alcance entre sus bucles <code>for</code> { }. Entonces, <code>i</code> está dentro del alcance entre las líneas 3 - 6.
 Nota: Dos variables con el mismo nombre no pueden existir dentro del mismo ámbito (scope).</li>
+</ul>
+<h2 id="buenas-practicas-con-variables">Buenas prácticas con variables</h2>
+<ul>
+<li>
+<p><strong>Utiliza nombres descriptivos</strong> que reflejen el propósito de la variable. Evita nombres genéricos como "x" o "temp". Un nombre descriptivo como "numeroDeEstudiantes" es más claro y evita futuros comentarios en código. Recuerda que un código muy comentado significa que está mal escrito. Y un código bien escrito tendrá muy pocos comentarios, solo cosas significativas para aclarar código complejo.</p>
+</li>
+<li>
+<p><strong>Evita el uso de abreviaturas confusas</strong> que puedan confundir a otros desarrolladores. Usa nombres completos y legibles en su lugar.</p>
+</li>
+<li>
+<p><strong>Convenio de nombres</strong>. Sigue un convenio de nombres consistente, como CamelCase o snake_case, según las convenciones de estilo de tu lenguaje de programación.</p>
+</li>
+<li>
+<p><strong>No uses palabras reservadas</strong> del lenguaje como nombres de variables, ya que puede causar conflictos y errores.</p>
+</li>
+<li>
+<p><strong>Manten buen alcance (scope)</strong>, limita el alcance de las variables al mínimo necesario. Declarar variables en el ámbito más cercano a su uso mejora la legibilidad y reduce la posibilidad de errores.</p>
+</li>
+<li>
+<p><strong>Inicialización oportuna</strong>, inicializa las variables en el momento de la declaración o antes de su primer uso. Evita dejar variables sin inicializar, ya que puede causar comportamientos inesperados.</p>
+</li>
+<li>
+<p><strong>Comentarios significativos</strong>. Agrega comentarios relevantes cuando el propósito de una variable no sea obvio. Esto ayuda a otros programadores a entender tu código.</p>
+</li>
+<li>
+<p><strong>Evita variables globales</strong>. Limita el uso de variables globales, ya que pueden causar problemas de mantenimiento y depuración. Usa variables locales siempre que sea posible.</p>
+</li>
+<li>
+<p><strong>Evita variables reutilizadas</strong> para diferentes propósitos en diferentes partes de tu código. Esto puede causar confusión y errores.</p>
+</li>
+<li>
+<p><strong>Usa constantes para valores fijos</strong>. Si un valor es constante y no debe cambiar, decláralo como una constante en lugar de una variable.</p>
+</li>
+<li>
+<p><strong>Evita magia numérica</strong>, es decir, evita usar valores numéricos sin explicación directa en el código. Usa constantes descriptivas o comenta el propósito de los números mágicos.</p>
+</li>
+<li>
+<p><strong>Refactoriza nombres cuando sea necesario</strong>. Si el propósito de una variable cambia, renómbrala para reflejar el nuevo propósito en lugar de reutilizarla.</p>
+</li>
+<li>
+<p><strong>Evita variables muertas</strong>. Elimina variables que ya no se utilizan en el código. Las variables inactivas dificultan la lectura y pueden llevar a confusiones.</p>
+</li>
+<li>
+<p><strong>No crear variables demasiado largas</strong>. Si una variable tiene un nombre excesivamente largo, puede ser difícil de leer. Encuentra un equilibrio entre la claridad y la concisión.</p>
+</li>
 </ul>
 
 
