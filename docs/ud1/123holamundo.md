@@ -3,7 +3,7 @@
 Cada vez que estás aprendiendo un nuevo lenguaje de programación es una *tradición* crear un nuevo programa muy simple que genera el texto **Hola mundo**.
 Veamos como podemos hacer esto en IntelliJ.
 
-1. Hacemos click en crear nuevo proyecto y elegimos el JDK 11 que hemos instalado.
+1. Hacemos click en crear nuevo proyecto y elegimos el JDK que hemos instalado.
 ![IntelliJ](../img/selectjdk.png)
 2. Luego en Next, Next, añadimos nombre al proyecto y Finish.
 ![IntelliJ](../img/projectname.png)

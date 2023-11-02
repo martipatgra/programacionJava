@@ -80,3 +80,23 @@ El objeto debe ser creado previamente sino dará error de compilación.
 ```
 
 Más adelante veremos la visibilidad de los métodos y atributos de los objetos.
+
+## Ejemplo completo de clase Coche
+
+```java
+public class Coche {
+
+    //atributos, campos o estado
+    private String marca;
+    private String modelo;
+    private int km;
+    private LocalDate fabricacion;
+
+    //acciones o comportamiento
+    public void arrancar(){}
+
+    public void frenar() {}
+
+    public void repostar(){}
+}
+```
