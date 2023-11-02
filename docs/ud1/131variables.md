@@ -61,36 +61,36 @@ Un campo / variable estático pertenece a la clase y se cargará en la memoria j
 Supongamos que hemos ejecutado la siguiente línea de código:
 
 ```java
-int x = 5;
+int number = 5;
 ```
 
-¿Cómo podríamos sumar 6 al valor actualmente almacenado en `x`? Un enfoque ingenuo podría ser probar esta línea de código:
+¿Cómo podríamos sumar 6 al valor actualmente almacenado en `number`? Un enfoque ingenuo podría ser probar esta línea de código:
 
 ```java
-    x + 6;
+    number + 6;
 ```
 
-Sin embargo, esta línea de código es una expresión que da como resultado un valor: **no hemos alterado el valor de x**.
+Sin embargo, esta línea de código es una expresión que da como resultado un valor: **no hemos alterado el valor de `number`**.
 
 ```java
-// Recuerda, x es una variable que contiene el valor 5
-x + 6; // se evalúa como:
+// Recuerda, number es una variable que contiene el valor 5
+number + 6; // se evalúa como:
 5 + 6; // y luego da como resultado:
 11;
 
 // Pero 11; no es una declaración que Java entienda,
-// entonces el compilador lanza un error cuando ve: x + 6;
+// entonces el compilador lanza un error cuando ve: number + 6;
 ```
 
-Para aumentar el valor de `x` en 6, necesitamos reasignar el valor de `x` para que sea el resultado de `x + 6`:
+Para aumentar el valor de `number` en 6, necesitamos reasignar el valor de `number` para que sea el resultado de `number + 6`:
 
 ```java
-x = x + 6; // se evalúa como:
-x = 5 + 6; // y luego se suman los valores
-x = 11;// como resultado se asigna el valor 11 a x
+number = number + 6; // se evalúa como:
+number = 5 + 6; // y luego se suman los valores
+number = 11;// como resultado se asigna el valor 11 a number
 ```
 
-Aquí, hemos usado el valor de `x` para calcular y almacenar un nuevo valor en la variable `x`; en este caso, 11.
+Aquí, hemos usado el valor de `number` para calcular y almacenar un nuevo valor en la variable `number`; en este caso, 11.
 
 ## Creación de una variable
 
@@ -120,16 +120,16 @@ Ejemplo de variables en programación Java
 
 ```java
 public static void main(String[] args) {
-     int x = 5;
+     int valor = 5;
      for (int i = 1; i <= 5; i++) {
         int y = 10;
-        System.out.println(x) // ¡x todavía está dentro del alcance aquí!
+        System.out.println(valor) // ¡valor todavía está dentro del alcance aquí!
      }
-     System.out.println(x) // ¡x todavía está dentro del alcance aquí también!
+     System.out.println(valor) // ¡valor todavía está dentro del alcance aquí también!
 }
 ```
 
-+ `x` está dentro del alcance entre su declaración en la línea 2 y la llave que la encierra en la línea 8.
++ `valor` está dentro del alcance entre su declaración en la línea 2 y la llave que la encierra en la línea 8.
 + `y` está dentro del alcance entre su declaración en la línea 4 y la llave que la encierra en la línea 6.
 + Las variables de bucle están dentro del alcance entre sus bucles `for` { }. Entonces, `i` está dentro del alcance entre las líneas 3 - 6.
 Nota: Dos variables con el mismo nombre no pueden existir dentro del mismo ámbito (scope).
