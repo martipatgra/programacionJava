@@ -2,7 +2,7 @@
 
 ¡Hola! Este es el repositorio dedicado a enseñarte a programar en Java. Si eres un principiante en la programación, deseas aprender un nuevo lenguaje o simplemente quieres refrescar o mantenerte actualizado en el lenguaje, has llegado al lugar correcto.
 
-[URL del curso https](//martipatgra.github.io/programacion/)
+[URL del curso](https://martipatgra.github.io/programacion/)
 
 ## ¿Por qué Java?
 
