@@ -2363,26 +2363,26 @@ Existen 61 <a href="https://en.wikipedia.org/wiki/List_of_Java_keywords">keyword
 <p>Un campo / variable estático pertenece a la clase y se cargará en la memoria junto con la clase. Se invocan sin crear un objeto. (Usando el nombre de la clase como referencia). Solo hay una copia de la variable estática disponible en toda la clase, es decir, el valor de la variable estática será el mismo en todos los objetos. Puede definir una variable estática utilizando la palabra clave <strong>static</strong>.</p>
 <h2 id="mutacion-o-manipulacion-de-las-variables">Mutación o manipulación de las variables</h2>
 <p>Supongamos que hemos ejecutado la siguiente línea de código:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
-<p>¿Cómo podríamos sumar 6 al valor actualmente almacenado en <code>x</code>? Un enfoque ingenuo podría ser probar esta línea de código:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<p>¿Cómo podríamos sumar 6 al valor actualmente almacenado en <code>number</code>? Un enfoque ingenuo podría ser probar esta línea de código:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
 </code></pre></div>
-<p>Sin embargo, esta línea de código es una expresión que da como resultado un valor: <strong>no hemos alterado el valor de x</strong>.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Recuerda, x es una variable que contiene el valor 5</span>
-<span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// se evalúa como:</span>
+<p>Sin embargo, esta línea de código es una expresión que da como resultado un valor: <strong>no hemos alterado el valor de <code>number</code></strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Recuerda, number es una variable que contiene el valor 5</span>
+<span class="n">number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// se evalúa como:</span>
 <span class="mi">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// y luego da como resultado:</span>
 <span class="mi">11</span><span class="p">;</span>
 
 <span class="c1">// Pero 11; no es una declaración que Java entienda,</span>
-<span class="c1">// entonces el compilador lanza un error cuando ve: x + 6;</span>
+<span class="c1">// entonces el compilador lanza un error cuando ve: number + 6;</span>
 </code></pre></div>
-<p>Para aumentar el valor de <code>x</code> en 6, necesitamos reasignar el valor de <code>x</code> para que sea el resultado de <code>x + 6</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// se evalúa como:</span>
-<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// y luego se suman los valores</span>
-<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="c1">// como resultado se asigna el valor 11 a x</span>
+<p>Para aumentar el valor de <code>number</code> en 6, necesitamos reasignar el valor de <code>number</code> para que sea el resultado de <code>number + 6</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// se evalúa como:</span>
+<span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// y luego se suman los valores</span>
+<span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="c1">// como resultado se asigna el valor 11 a number</span>
 </code></pre></div>
-<p>Aquí, hemos usado el valor de <code>x</code> para calcular y almacenar un nuevo valor en la variable <code>x</code>; en este caso, 11.</p>
+<p>Aquí, hemos usado el valor de <code>number</code> para calcular y almacenar un nuevo valor en la variable <code>number</code>; en este caso, 11.</p>
 <h2 id="creacion-de-una-variable">Creación de una variable</h2>
 <p>Para crear una variable se especifica el tipo de dato y se le da un nombre descriptivo que de información sobre esa variable.
 Ejemplo de creación de una variable:</p>
@@ -2397,16 +2397,16 @@ Ejemplo de creación de una variable:</p>
 <p>El alcance o ámbito (<strong>scope</strong>) de una variable es la parte de un programa <em>en la que existe.</em> En Java, el alcance de una variable comienza donde se declara y termina cuando se alcanza la llave de cierre del bloque que la contiene.</p>
 <p>Ejemplo de variables en programación Java</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 <span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="c1">// ¡x todavía está dentro del alcance aquí!</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="c1">// ¡valor todavía está dentro del alcance aquí!</span>
 <span class="w">     </span><span class="p">}</span>
-<span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="c1">// ¡x todavía está dentro del alcance aquí también!</span>
+<span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="c1">// ¡valor todavía está dentro del alcance aquí también!</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
-<li><code>x</code> está dentro del alcance entre su declaración en la línea 2 y la llave que la encierra en la línea 8.</li>
+<li><code>valor</code> está dentro del alcance entre su declaración en la línea 2 y la llave que la encierra en la línea 8.</li>
 <li><code>y</code> está dentro del alcance entre su declaración en la línea 4 y la llave que la encierra en la línea 6.</li>
 <li>Las variables de bucle están dentro del alcance entre sus bucles <code>for</code> { }. Entonces, <code>i</code> está dentro del alcance entre las líneas 3 - 6.
 Nota: Dos variables con el mismo nombre no pueden existir dentro del mismo ámbito (scope).</li>
