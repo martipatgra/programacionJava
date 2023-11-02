@@ -1,6 +1,6 @@
 # Bienvenido al curso de Programación en ![Java Logo](https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/50px-Java_programming_language_logo.svg.png)
 
-¡Hola! Este es el repositorio dedicado a enseñarte a programar en Java. Si eres un principiante en la programación o deseas aprender un nuevo lenguaje, has llegado al lugar correcto.
+¡Hola! Este es el repositorio dedicado a enseñarte a programar en Java. Si eres un principiante en la programación, deseas aprender un nuevo lenguaje o simplemente quieres refrescar o mantenerte actualizado en el lenguaje, has llegado al lugar correcto.
 
 ## ¿Por qué Java?
 
