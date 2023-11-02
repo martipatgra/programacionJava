@@ -16,6 +16,16 @@ En este repositorio, encontrarás una variedad de recursos diseñados para ayuda
 
 - **Documentación**: Encuentra guías detalladas y explicaciones paso a paso para comprender los conceptos clave de Java.
 
+## Niveles de Aprendizaje
+
+Este repositorio está organizado en varios niveles de aprendizaje:
+
+- **Nivel Principiante**: Comienza con los fundamentos de Java, incluyendo la sintaxis básica, estructuras de control y tipos de datos.
+
+- **Nivel Intermedio**: Avanza hacia conceptos más avanzados como recursividad, arrays, objetos, clases, herencia, encapsulamiento, interfaces, etc.
+
+- **Nivel Avanzado**: Explora temas más profundos, como lambdas, streams, generics.
+
 ## Empezar
 
 Para comenzar a aprender Java, te recomiendo seguir estos pasos:
