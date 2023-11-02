@@ -2,6 +2,8 @@
 
 ¡Hola! Este es el repositorio dedicado a enseñarte a programar en Java. Si eres un principiante en la programación, deseas aprender un nuevo lenguaje o simplemente quieres refrescar o mantenerte actualizado en el lenguaje, has llegado al lugar correcto.
 
+[URL del curso https](//martipatgra.github.io/programacion/)
+
 ## ¿Por qué Java?
 
 Java es un lenguaje de programación ampliamente utilizado y versátil que se ha mantenido relevante durante décadas. Aprender Java te abrirá las puertas a un mundo de oportunidades en desarrollo de software, aplicaciones móviles, desarrollo web y más.
@@ -18,8 +20,8 @@ En este repositorio, encontrarás una variedad de recursos diseñados para ayuda
 
 Para comenzar a aprender Java, te recomiendo seguir estos pasos:
 
-1. Consula en Inicio, de que consta el curso y qué objetivos se pretenden alcanzar.
-2. Explora la sección de `https://martipatgra.github.io/programacion/ud1/122setup/` para empezar a instalar las herramientas necesarias para crear tu primer proyecto Java.
+1. Consula en [Inicio](https://martipatgra.github.io/programacion/), de que consta el curso y qué objetivos se pretenden alcanzar.
+2. Explora la sección de [Setup](https://martipatgra.github.io/programacion/ud1/122setup/) para empezar a instalar las herramientas necesarias para crear tu primer proyecto Java.
 3. Sumérgete en los distintos apartados para familiarizarte con la sintaxis de Java.
 
 ## Colaboración
