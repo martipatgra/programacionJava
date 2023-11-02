@@ -2,7 +2,9 @@
 
 <p style='text-align: justify;'>
 Un programa es una secuencia de instrucciones que un ordenador ejecuta para realizar alguna tarea.
-Parece una idea bastante simple, pero para que el ordenador pueda hacer uso de las instrucciones, deben estar escritas de forma que las pueda usar. Esto significa que los programas deben estar escritos en lenguajes de programación. Los lenguajes de programación se diferencian de los lenguajes humanos ordinarios en que son completamente inequívocos y muy estrictos sobre lo que está y no está permitido en un programa. Las reglas que determinan lo que está permitido se denominan sintaxis del lenguaje. Las reglas de sintaxis especifican el vocabulario básico del lenguaje y cómo se pueden construir los programas.
+Parece una idea bastante simple, pero para que el ordenador pueda hacer uso de las instrucciones, deben estar escritas de forma que las pueda usar. Esto significa que los programas deben estar escritos en lenguajes de programación. 
+
+Los lenguajes de programación se diferencian de los lenguajes humanos ordinarios en que son completamente inequívocos y muy estrictos sobre lo que está y no está permitido en un programa. Las reglas que determinan lo que está permitido se denominan **sintaxis del lenguaje**. Las reglas de sintaxis especifican el vocabulario básico del lenguaje y cómo se pueden construir los programas.
 </p>
 ***
 ## Lenguajes de programación
