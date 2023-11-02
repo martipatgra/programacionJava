@@ -7,9 +7,3 @@ Actualmente, soy docente en el campo de la programación, donde puedo compartir 
 _Mi objetivo es inspirar a la próxima generación de desarrolladores y ayudarles a adentrarse en el emocionante mundo de la programación y la tecnología._
 
 Para cualquier consulta o mejora, pueden escribirme a través de mi correo electrónico **p.marti2@edu.gva.es**.
-
-## ❤️‍🔥 Bibliografía y webgrafía
-
-https://docs.oracle.com/en/java/
-
-Java, Java, Java- Object-Oriented Problem Solving - Third Edition R. Morelli and R. Walde
