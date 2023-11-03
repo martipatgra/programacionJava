@@ -1057,6 +1057,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#creacion-de-una-instancia-de-la-clase" class="md-nav__link">
+    Creación de una instancia de la clase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#palabra-reservada-this" class="md-nav__link">
     Palabra reservada this
   </a>
@@ -2370,6 +2377,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#creacion-de-una-instancia-de-la-clase" class="md-nav__link">
+    Creación de una instancia de la clase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#palabra-reservada-this" class="md-nav__link">
     Palabra reservada this
   </a>
@@ -2486,14 +2500,7 @@ Ejemplo:</p>
 <span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<p><div class="highlight"><span class="filename">Main.java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//ford es un objeto de la clase Coche, es una INSTANCIA de la clase</span>
-<span class="w">        </span><span class="n">Coche</span><span class="w"> </span><span class="n">ford</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Coche</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-Estamos definiendo el estado del coche, es decir, sus características.</p>
+<p>Estamos definiendo el estado del coche, es decir, sus características.</p>
 <h3 id="modificadores-de-acceso-de-atributos">Modificadores de acceso de atributos</h3>
 <p>Un buen diseño de software refuerza la encapsulación. Aquí es donde las variables de instancia de un objeto son visibles solo para los propios métodos del objeto. El código fuera del objeto no puede acceder directamente a estas variables. Se utiliza para hacer esto el modificador de visibilidad privada.
 Como regla general, cuando definimos campos para la clase el modificador de acceso será <strong>privado</strong>.
@@ -2549,6 +2556,7 @@ Para crear los métodos que actualizan los campos debemos usar la siguiente nome
 <span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">modelo</span><span class="p">;</span>
 <span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
 
+<span class="w">        </span><span class="c1">//métodos de instancia</span>
 <span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPuertas</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">puertas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">puertas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">puertas</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
@@ -2582,6 +2590,14 @@ Para crear los métodos que actualizan los campos debemos usar la siguiente nome
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="creacion-de-una-instancia-de-la-clase">Creación de una instancia de la clase</h3>
+<div class="highlight"><span class="filename">Main.java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//ford es un objeto de la clase Coche, es una INSTANCIA de la clase</span>
+<span class="w">        </span><span class="n">Coche</span><span class="w"> </span><span class="n">ford</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Coche</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <h3 id="palabra-reservada-this"><strong>Palabra reservada this</strong></h3>
 <p>En un método set como el nombre del parámetro del método es igual al del campo de la clase, necesitamos algo que nos permita distinguir entre uno u otro. Para esto se utiliza la palabra reservada <strong><em>this</em></strong> que hace alusión al campo de la clase.</p>
