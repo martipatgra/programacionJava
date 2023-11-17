@@ -1113,6 +1113,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#campos-estaticos-y-metodos-estaticos" class="md-nav__link">
+    Campos estáticos y métodos estáticos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#record-immutable" class="md-nav__link">
     Record immutable
   </a>
@@ -2307,6 +2314,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#campos-estaticos-y-metodos-estaticos" class="md-nav__link">
+    Campos estáticos y métodos estáticos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#record-immutable" class="md-nav__link">
     Record immutable
   </a>
@@ -2463,6 +2477,20 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">JavaStudent</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Unknown&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="campos-estaticos-y-metodos-estaticos">Campos estáticos y métodos estáticos</h3>
+<p>Los record pueden tener campos y métodos estáticos. <strong>Pero sólo se permiten campos estáticos</strong>. <strong>Los record no pueden declarar campos de instancia</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">Vehicle</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">wheels</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">wheels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printWheels</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">wheels</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <h3 id="record-immutable">Record immutable</h3>
 <p>Con Record no tenemos setters, ni forma de modificar nuestros datos. Esto es debido a que, Record ha sido diseñado para ser inmutable, para que los datos se mantengan encapsulados y protegidos de mutaciones involuntarias. Por tanto, si necesitas modificar los datos de tu clase, nunca usaremos un Record, sino que crearemos un POJO como hicimos anteriormente.</p>
