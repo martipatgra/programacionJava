@@ -1093,12 +1093,26 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#constructores-record" class="md-nav__link">
-    Constructores Record
+  <a href="#constructores-de-un-record" class="md-nav__link">
+    Constructores de un Record
   </a>
   
-    <nav class="md-nav" aria-label="Constructores Record">
+    <nav class="md-nav" aria-label="Constructores de un Record">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canonical-constructor-constructor-canonico" class="md-nav__link">
+    Canonical constructor - Constructor canónico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructor-personalizado" class="md-nav__link">
+    Constructor personalizado
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#compact-constructor" class="md-nav__link">
@@ -2294,12 +2308,26 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#constructores-record" class="md-nav__link">
-    Constructores Record
+  <a href="#constructores-de-un-record" class="md-nav__link">
+    Constructores de un Record
   </a>
   
-    <nav class="md-nav" aria-label="Constructores Record">
+    <nav class="md-nav" aria-label="Constructores de un Record">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canonical-constructor-constructor-canonico" class="md-nav__link">
+    Canonical constructor - Constructor canónico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructor-personalizado" class="md-nav__link">
+    Constructor personalizado
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#compact-constructor" class="md-nav__link">
@@ -2435,7 +2463,7 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <li>Un constructor con los mismos argumentos y en el mismo orden descritos dentro de la cabecera de record.</li>
 <li>Java genera un método toString que imprime cada atributo formateado.</li>
 </ul>
-<h3 id="constructores-record">Constructores Record</h3>
+<h3 id="constructores-de-un-record">Constructores de un Record</h3>
 <p>Si queremos generar un constructor, dentro de la clase record podemos hacer click botón derecho del ratón -&gt; constructor:</p>
 <p><img alt="POJO" src="../../img/ud3/pojo4.png" /></p>
 <p>IntelliJ me ofrece tres opciones para generar un constructor:</p>
@@ -2446,6 +2474,8 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <li><strong>Constructor personalizado</strong> (custom constructor): es un constructor sobrecargado. Su primera sentencia debe ser una llamada al canónico.</li>
 <li><strong>Constructor compacto o corto</strong> (compact constructor): solo se utiliza en los records. Es una forma concisa de declarar un constructor canónico.</li>
 </ol>
+<h4 id="canonical-constructor-constructor-canonico">Canonical constructor - Constructor canónico</h4>
+<p>Es el constructor con todos los parámetros o componentes. En el siguiente ejemplo se ha creado un constructor canónico que <strong>NO es necesario crear porque ya se crea de manera implícita. Crearlo es redundante</strong>. El constructor canónico solo tiene sentido crearlo cuado quiero añadir alguna validación en algún campo, es decir, cuando le voy a dar un comportamiento diferente al de por defecto.</p>
 <div class="highlight"><span class="filename">JavaStudent.java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">JavaStudent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">//Canonical constructor</span>
 <span class="w">    </span><span class="c1">//Hacer esto no tiene sentido, porque ya está implícito cuando poner los componentes en la cabecera</span>
@@ -2461,6 +2491,18 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;Unknown&quot;</span><span class="p">:</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">dateOfBirth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="constructor-personalizado">Constructor personalizado</h4>
+<p>Es lo que conocemos como constructor sobrecargado. Creamos constructores personalizados con un número menor de elementos que el constructor canónico. El único requisito con este constructor es, <strong>que la primera línea tiene que ser una llamada al constructor canónico para que se inicialicen los campos o componentes</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">JavaStudent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">JavaStudent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">JavaStudent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
