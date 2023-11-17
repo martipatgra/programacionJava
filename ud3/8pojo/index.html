@@ -2511,15 +2511,24 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <h4 id="compact-constructor">Compact constructor</h4>
 <ul>
 <li>No se pueden tener ambos constructores, el compact más el canónico explícito.</li>
-<li>El compact constructor se declara sin paréntesis y sin parámetros o argumentos.</li>
+<li><strong>El compact constructor se declara sin paréntesis y sin parámetros o argumentos.</strong></li>
 <li>Tiene acceso a todos los argumentos o parámetros del constructor canónico, no confundir con los campos de la clase o variables de instancia de la clase.</li>
 <li>No se pueden hacer asignaciones a los campos de instancia de la clase en este constructor.</li>
 <li>Todas las asignaciones implícitas del constructor canónico ocurren después de la ejecución del código del constructor compacto.</li>
 </ul>
+<p>Este constructor está entrelazado con el constructor canónico. El código que se inserte en este constructor será llamado antes que el código en el constructor implícito(canónico), es decir, antes de asignar cualquier valor a las variables de isntancia finales. Por eso este constructor tiene acceso a todos los argumentos o componentes del constructor canónico. Este constructor se utiliza para realizar validaciones en los argumentos o componentes antes de asignarlos a las variables de instancia de la clase.</p>
+<div class="admonition warning importante">
+<p class="admonition-title">Warning</p>
+<p>Si se ha definido un constructor compacto, no se puede crear o definir explícitamente el constructor canónico.</p>
+</div>
 <p>Ejemplo:</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Compact constructor</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">JavaStudent</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Unknown&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//id = this.id; //NO podría hacer esto, porque this.id todavía no se ha inicializado</span>
+<span class="w">        </span><span class="c1">//this.id = id; //TAMPOCO podría hacer esto porque se hará más tarde en el constructor</span>
+<span class="w">                        </span><span class="c1">//implícito (canónico), y como las variables de instancia son finales, no </span>
+<span class="w">                        </span><span class="c1">//puedo reasignarles valores.</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 <h3 id="campos-estaticos-y-metodos-estaticos">Campos estáticos y métodos estáticos</h3>
@@ -2538,6 +2547,11 @@ El desarrollador no tiene que escribir nada de este código.</p>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printWheels</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">wheels</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//también podemos tener métodos de instancia</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculate</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9.99</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
