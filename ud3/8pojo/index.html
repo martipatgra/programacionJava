@@ -2475,7 +2475,9 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <li><strong>Constructor compacto o corto</strong> (compact constructor): solo se utiliza en los records. Es una forma concisa de declarar un constructor canónico.</li>
 </ol>
 <h4 id="canonical-constructor-constructor-canonico">Canonical constructor - Constructor canónico</h4>
-<p>Es el constructor con todos los parámetros o componentes. En el siguiente ejemplo se ha creado un constructor canónico que <strong>NO es necesario crear porque ya se crea de manera implícita. Crearlo es redundante</strong>. El constructor canónico solo tiene sentido crearlo cuado quiero añadir alguna validación en algún campo, es decir, cuando le voy a dar un comportamiento diferente al de por defecto.</p>
+<p>Es el constructor con todos los parámetros o componentes. Este constructor está implícitamente creado, pero podemos sobreescribirlo.</p>
+<p>En el siguiente ejemplo se ha creado un constructor canónico que <strong>NO es necesario crear porque ya se crea de manera implícita. Crearlo es redundante ya que no hace nada nuevo</strong>. </p>
+<p>El constructor canónico solo tiene sentido crearlo cuado quiero añadir alguna validación en algún campo o dar un comportamiento diferente al de por defecto.</p>
 <div class="highlight"><span class="filename">JavaStudent.java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">JavaStudent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">//Canonical constructor</span>
 <span class="w">    </span><span class="c1">//Hacer esto no tiene sentido, porque ya está implícito cuando poner los componentes en la cabecera</span>
