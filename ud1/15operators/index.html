@@ -2860,33 +2860,33 @@ El valor de la derecha se almacena en la variable de la izquierda.</p>
 </code></pre></div>
 ⚠️ El tipo char también se convierte en int al entrar en operaciones.</p>
 <h4 id="ejemplos">Ejemplos</h4>
-<ol>
+<ul>
 <li>Enteros pequeños se convierten a int</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="kt">byte</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 <span class="kt">short</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <span class="c1">// Resultado de a+b es int, no byte o short</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
 <p>➡️ Aunque ambos sean <code>byte</code>, Java los convierte en <code>int</code> antes de sumar.</p>
-<ol>
+<ul>
 <li>Mezcla de int y long</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
 <span class="kt">long</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// a se convierte en long automáticamente</span>
 </code></pre></div>
-<ol>
+<ul>
 <li>Mezcla de enteros con decimales</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// a se convierte en double</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2.5</span>
 </code></pre></div>
-<ol>
+<ul>
 <li>char en operaciones</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// código 65 en Unicode</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">letra</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// letra se convierte en int</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">resultado</span><span class="p">);</span><span class="w"> </span><span class="c1">// 66</span>
