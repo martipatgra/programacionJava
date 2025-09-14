@@ -2309,7 +2309,8 @@ Sirven para explicar <strong>qué hace el programa</strong> o <strong>por qué s
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// asigna 10 a x</span>
 </code></pre></div></p>
 <p>Ejemplo bueno ✅:
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">maxUsuarios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Límite máximo de usuarios en el sistema</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Regla de negocio: un usuario solo puede cambiar su email 1 vez cada 24h</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">puedeCambiar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ultimaModificacion</span><span class="p">.</span><span class="na">plusHours</span><span class="p">(</span><span class="mi">24</span><span class="p">).</span><span class="na">isBefore</span><span class="p">(</span><span class="n">now</span><span class="p">);</span>
 </code></pre></div></p>
 
 
