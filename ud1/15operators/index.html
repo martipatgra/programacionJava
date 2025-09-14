@@ -2942,14 +2942,15 @@ ya que se puede perder información.</p>
 <h3 id="buenas-practicas-regla-de-oro">Buenas prácticas (regla de oro):</h3>
 <ul>
 <li>✅ Mejor usar widening (casteo automático) cuando sea posible.</li>
-<li>✅ Haz cast narrowing solo cuando:    </li>
+<li>✅ Haz cast narrowing solo cuando:    <ul>
 <li>Sabes que el valor cabe en el tipo destino, y </li>
 <li>Aceptas conscientemente la pérdida (truncamiento/overflow).   </li>
+</ul>
+</li>
 <li>✅ Documenta con un comentario corto el porqué del cast cuando no sea obvio.</li>
 <li>❌ No uses cast para silenciar errores del compilador si no controlas el rango.</li>
 <li>❌ No uses cast para “arreglar” divisiones: si quieres decimales, promociona antes.</li>
 </ul>
-<p>--</p>
 <div class="admonition note">
 <p class="admonition-title">Otros operadores</p>
 <p>Existen más operadores que no se han mencionado en el curso. Si se desea consultar todos los operadores de Java se pueden ver en su documentación oficial. <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html">More information</a></p>
