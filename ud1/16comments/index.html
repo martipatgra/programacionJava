@@ -543,14 +543,21 @@
       
         <li class="md-nav__item">
   <a href="#comentarios-de-una-linea" class="md-nav__link">
-    Comentarios de una línea
+    💬 Comentarios de una línea
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#comentarios-multilinea" class="md-nav__link">
-    Comentarios multilínea
+    📝 Comentarios multilínea
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios-de-documentacion-javadoc" class="md-nav__link">
+    📖 Comentarios de documentación (JavaDoc)
   </a>
   
 </li>
@@ -2200,14 +2207,21 @@
       
         <li class="md-nav__item">
   <a href="#comentarios-de-una-linea" class="md-nav__link">
-    Comentarios de una línea
+    💬 Comentarios de una línea
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#comentarios-multilinea" class="md-nav__link">
-    Comentarios multilínea
+    📝 Comentarios multilínea
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios-de-documentacion-javadoc" class="md-nav__link">
+    📖 Comentarios de documentación (JavaDoc)
   </a>
   
 </li>
@@ -2229,14 +2243,24 @@
 
 
 <h1 id="comentarios-en-java">💾 Comentarios en Java</h1>
-<p>Los comentarios son ignorados por el ordenador y se usan en el programa para ayudar a describir alguna funcionalidad o explicación del código fuente.
-Existen dos tipos de comentarios.</p>
-<h2 id="comentarios-de-una-linea">Comentarios de una línea</h2>
-<p>Usamos la doble barra <em>//</em> para realizar un comentario de una sola línea. Lo podemos usar en una línea en blanco o detrás del código.</p>
-<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">gravity</span><span class="p">;</span><span class="w"> </span><span class="c1">//variable para calcular la gravedad</span>
+<p>Los <strong>comentarios</strong> son ignorados por el compilador y se usan para añadir notas dentro del código.<br />
+Sirven para explicar <strong>qué hace el programa</strong> o <strong>por qué se ha hecho algo de cierta manera</strong>.  </p>
+<p>👉 Sin embargo:<br />
+- ✨ Un <strong>código bien escrito</strong> no necesita casi comentarios.<br />
+- 🌀 Un código <strong>muy comentado</strong> puede ser difícil de leer.<br />
+- ⚠️ Los <strong>códigos mal escritos</strong> necesitan comentarios para poder entenderlos.  </p>
+<hr />
+<h2 id="comentarios-de-una-linea">💬 Comentarios de una línea</h2>
+<p>Se escriben con <code>//</code> y terminan al final de la línea. </p>
+<div class="highlight"><pre><span></span><code><span class="c1">//Variable que almacena la gravedad</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">gravity</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variable que almacena la gravedad</span>
 </code></pre></div>
-<h2 id="comentarios-multilinea">Comentarios multilínea</h2>
-<p>Usamos la barra con asterisco doble para realizar comentarios que afecten a más de una línea. De forma que cuando abramos un comentario usaremos <em>/*</em>, para cerrarlo <em>*/</em>.</p>
+<p>Puedes usarlos: <br />
+- En una línea independiente.
+- Al final de una instrucción.</p>
+<hr />
+<h2 id="comentarios-multilinea">📝 Comentarios multilínea</h2>
+<p>Se escriben con <code>/* ... */</code> y pueden ocupar varias líneas.</p>
 <div class="highlight"><pre><span></span><code><span class="w">   </span><span class="cm">/*</span>
 <span class="cm">      Clase que almacena en la base de datos</span>
 <span class="cm">      los datos de una persona.</span>
@@ -2245,6 +2269,48 @@ Existen dos tipos de comentarios.</p>
 <span class="w">      </span><span class="p">...</span>
 <span class="w">   </span><span class="p">}</span>
 </code></pre></div>
+<hr />
+<h2 id="comentarios-de-documentacion-javadoc">📖 Comentarios de documentación (JavaDoc)</h2>
+<p>En Java existe un tercer tipo de comentarios: los JavaDoc, que empiezan con <code>/**</code> y se usan para generar documentación automática.</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Clase Persona que representa a un individuo.</span>
+<span class="cm"> * @author TuNombre</span>
+<span class="cm"> * @version 1.0</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Constructor de Persona.</span>
+<span class="cm">     * @param nombre Nombre de la persona</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Devuelve el nombre de la persona.</span>
+<span class="cm">     * @return nombre</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<p>📌 Buenas prácticas</p>
+<ul>
+<li>✅ Usa comentarios para explicar el “por qué”, no el “qué”.</li>
+<li>✅ Mantén los comentarios actualizados: un comentario desactualizado es peor que ninguno.</li>
+<li>✅ <strong>Utiliza nombres de variables, métodos y clases claros</strong> antes que añadir comentarios innecesarios. Un código bien escrito no necesita comentarios.</li>
+<li>❌ <strong>No uses comentarios para repetir lo que el código ya dice por sí mismo.</strong></li>
+</ul>
+<p>Ejemplo malo ❌:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// asigna 10 a x</span>
+</code></pre></div></p>
+<p>Ejemplo bueno ✅:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">maxUsuarios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Límite máximo de usuarios en el sistema</span>
+</code></pre></div></p>
 
 
   

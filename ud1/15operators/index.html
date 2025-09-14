@@ -2496,10 +2496,12 @@ Uno de los más usados es el operador <strong>suma (+)</strong> como ya vimos en
 </code></pre></div>
 <p>➡️ Java evalúa la parte derecha del <code>=</code> y asigna el resultado a la variable.</p>
 <p>📌 <strong>Reglas:</strong>
-1. Cada operador debe tener el número correcto de operandos.<br />
-   - <code>*</code>, <code>/</code>, <code>+</code>, <code>-</code> → necesitan dos operandos.<br />
-   - <code>-</code> unario y <code>+</code> unario → van delante de un único operando.<br />
-2. Los <strong>paréntesis</strong> pueden agrupar expresiones y alterar la precedencia.</p>
+1. Cada operador debe tener el número correcto de operandos.  <br />
+- <code>*</code>, <code>/</code>, <code>+</code>, <code>-</code> → necesitan dos operandos.<br />
+- <code>-</code> unario y <code>+</code> unario → van delante de un único operando.  </p>
+<ol>
+<li>Los <strong>paréntesis</strong> pueden agrupar expresiones y alterar la precedencia.</li>
+</ol>
 <p><img alt="Java" src="../../img/expressions.png" /></p>
 <hr />
 <h3 id="expresiones-mixtas-con-int-y-double">🔀 Expresiones mixtas con <code>int</code> y <code>double</code></h3>
@@ -2598,12 +2600,12 @@ El valor de la derecha se almacena en la variable de la izquierda.</p>
 </tr>
 </tbody>
 </table>
-<p>🔹 <strong>Pre-incremento/decremento</strong>: el valor se aumenta/disminuye primero y luego se calcula el resultado.
-<img alt="Java" src="../../img/preincrement.png" /></p>
-<p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<p>🔹 <strong>Pre-incremento/decremento</strong>: el valor se aumenta/disminuye primero y luego se calcula el resultado.</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">//b=9, a=9</span>
 </code></pre></div>
-🔹 <strong>Post-incremento/decremento</strong>: el valor se usa por primera vez para calcular el resultado y luego se incrementa/decrementa.</p>
+<p><img alt="Java" src="../../img/preincrement.png" /></p>
+<p>🔹 <strong>Post-incremento/decremento</strong>: el valor se usa por primera vez para calcular el resultado y luego se incrementa/decrementa.</p>
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">++</span><span class="p">;</span><span class="c1">//b = 8, a = 9</span>
 </code></pre></div>
@@ -2758,7 +2760,7 @@ El valor de la derecha se almacena en la variable de la izquierda.</p>
 <span class="n">String</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;Aprobado&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Suspendido&quot;</span><span class="p">;</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notaFinal</span><span class="p">);</span><span class="w"> </span><span class="c1">//muestra Aprobado</span>
 </code></pre></div>
-<p>---                                          |</p>
+<hr />
 <h2 id="abreviaciones-compound-operators">⚡ Abreviaciones (compound operators)</h2>
 <p>Permiten escribir expresiones más cortas:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
