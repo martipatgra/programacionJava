@@ -549,13 +549,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#wrapper-classes-clases-contenedores" class="md-nav__link">
-    Wrapper classes (clases contenedores)
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2331,13 +2324,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#wrapper-classes-clases-contenedores" class="md-nav__link">
-    Wrapper classes (clases contenedores)
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2443,11 +2429,82 @@ Se pueden clasificar en primitivos y objetos.
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isMyNamePatri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 </code></pre></div>
 <hr />
+<h1 id="tipos-de-datos-primitivos-en-java">Tipos de datos primitivos en Java</h1>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Tamaño en bits</th>
+<th>Valor mínimo</th>
+<th>Valor máximo</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>8</td>
+<td>-128</td>
+<td>127</td>
+<td><code>byte b = 100;</code></td>
+</tr>
+<tr>
+<td>short</td>
+<td>16</td>
+<td>-32,768</td>
+<td>32,767</td>
+<td><code>short s = 1000;</code></td>
+</tr>
+<tr>
+<td>int</td>
+<td>32</td>
+<td>-2,147,483,648</td>
+<td>2,147,483,647</td>
+<td><code>int i = 100000;</code></td>
+</tr>
+<tr>
+<td>long</td>
+<td>64</td>
+<td>-9,223,372,036,854,775,808</td>
+<td>9,223,372,036,854,775,807</td>
+<td><code>long l = 100000L;</code></td>
+</tr>
+<tr>
+<td>float</td>
+<td>32</td>
+<td>≈ ±1.4E-45</td>
+<td>≈ ±3.4028235E38</td>
+<td><code>float f = 3.14f;</code></td>
+</tr>
+<tr>
+<td>double</td>
+<td>64</td>
+<td>≈ ±4.9E-324</td>
+<td>≈ ±1.7976931348623157E308</td>
+<td><code>double d = 3.14;</code></td>
+</tr>
+<tr>
+<td>char</td>
+<td>16</td>
+<td>0 ( '\u0000' )</td>
+<td>65,535 ( '\uffff' )</td>
+<td><code>char c = 'A';</code></td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>1 bit*</td>
+<td><code>true</code> / <code>false</code></td>
+<td>—</td>
+<td><code>boolean b = true;</code></td>
+</tr>
+</tbody>
+</table>
+<p>* El tamaño de <code>boolean</code> no está especificado exactamente en Java; internamente depende de la JVM, pero conceptualmente ocupa 1 bit.</p>
+<hr />
 <h2 id="wrapper-classes-clases-contenedores">Wrapper classes (clases contenedores)</h2>
 <p>Las clases contenedoras proporcionan una forma de utilizar tipos de datos primitivos como objetos. En Java, tenemos una Wrapper class para cada uno de los 8 tipos de datos primitivos. Gracias a esto, podemos realizar operaciones en un dato primitivo como por ejemplo en un int:</p>
 <div class="highlight"><pre><span></span><code><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">minimoValorInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">MIN_VALUE</span><span class="p">;</span>
 </code></pre></div>
-<hr />
 
 
   
