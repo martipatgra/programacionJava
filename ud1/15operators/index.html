@@ -643,6 +643,33 @@
     ✅ Conversiones automáticas
   </a>
   
+    <nav class="md-nav" aria-label="✅ Conversiones automáticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-general" class="md-nav__link">
+    📌 Regla general
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    Ejemplos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-resumen" class="md-nav__link">
+    📊 Tabla resumen
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2437,6 +2464,33 @@
     ✅ Conversiones automáticas
   </a>
   
+    <nav class="md-nav" aria-label="✅ Conversiones automáticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-general" class="md-nav__link">
+    📌 Regla general
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    Ejemplos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-resumen" class="md-nav__link">
+    📊 Tabla resumen
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2781,7 +2835,50 @@ El valor de la derecha se almacena en la variable de la izquierda.</p>
 <hr />
 <h2 id="conversiones-de-tipo">🔄 Conversiones de tipo</h2>
 <h3 id="conversiones-automaticas">✅ Conversiones automáticas</h3>
-<p>Cuando hay mezcla de tipos, Java aplica reglas de promoción:</p>
+<p>👉 Cuando combinas diferentes tipos de datos en una expresión Java convierte automáticamente al tipo más grande o más “seguro” para no perder información.</p>
+<h4 id="regla-general">📌 Regla general</h4>
+<p>Cuando hay mezcla de tipos en una operación, Java:</p>
+<ul>
+<li>Mira los operandos (los valores implicados).</li>
+<li>“Sube” el más pequeño al tipo más grande, siguiendo este orden de promoción:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="kt">byte</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">double</span>
+</code></pre></div>
+⚠️ El tipo char también se convierte en int al entrar en operaciones.</p>
+<h4 id="ejemplos">Ejemplos</h4>
+<ol>
+<li>Enteros pequeños se convierten a int</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kt">byte</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="c1">// Resultado de a+b es int, no byte</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span>
+</code></pre></div>
+<p>➡️ Aunque ambos sean <code>byte</code>, Java los convierte en <code>int</code> antes de sumar.</p>
+<ol>
+<li>Mezcla de int y long</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="kt">long</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// a se convierte en long automáticamente</span>
+</code></pre></div>
+<ol>
+<li>Mezcla de enteros con decimales</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// a se convierte en double</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2.5</span>
+</code></pre></div>
+<ol>
+<li>char en operaciones</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// código 65 en Unicode</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">letra</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// letra se convierte en int</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">resultado</span><span class="p">);</span><span class="w"> </span><span class="c1">// 66</span>
+</code></pre></div>
+<hr />
+<h4 id="tabla-resumen">📊 Tabla resumen</h4>
 <table>
 <thead>
 <tr>
