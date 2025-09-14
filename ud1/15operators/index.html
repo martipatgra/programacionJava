@@ -679,6 +679,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#buenas-practicas-regla-de-oro" class="md-nav__link">
+    Buenas prácticas (regla de oro):
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2500,6 +2507,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#buenas-practicas-regla-de-oro" class="md-nav__link">
+    Buenas prácticas (regla de oro):
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2850,8 +2864,8 @@ El valor de la derecha se almacena en la variable de la izquierda.</p>
 <li>Enteros pequeños se convierten a int</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="kt">byte</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-<span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<span class="c1">// Resultado de a+b es int, no byte</span>
+<span class="kt">short</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="c1">// Resultado de a+b es int, no byte o short</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
 <p>➡️ Aunque ambos sean <code>byte</code>, Java los convierte en <code>int</code> antes de sumar.</p>
@@ -2915,11 +2929,27 @@ El valor de la derecha se almacena en la variable de la izquierda.</p>
 </ul>
 <hr />
 <h3 id="conversiones-forzadas-casting">🛠️ Conversiones forzadas (casting)</h3>
-<p>Forzamos el tipo de un valor. Para hacerlo ponemos en paréntesis el tipo de dato al que queremos convertirlo.</p>
+<p>Conversión forzosa es decirle explícitamente a Java: <strong>“trata este valor como si fuera de otro tipo”</strong>. Se escribe poniendo el tipo entre paréntesis delante del valor o expresión.</p>
+<p>Se suele llamar <strong>Narrowing (reducción)</strong>: a un tipo “más pequeño/menos preciso”. No se recomienda su uso,
+ya que se puede perder información.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8.5f</span><span class="p">;</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// convierte float a int</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">130</span><span class="p">;</span>
+<span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
 </code></pre></div>
 <hr />
+<h3 id="buenas-practicas-regla-de-oro">Buenas prácticas (regla de oro):</h3>
+<ul>
+<li>✅ Mejor usar widening (casteo automático) cuando sea posible.</li>
+<li>✅ Haz cast narrowing solo cuando:    </li>
+<li>Sabes que el valor cabe en el tipo destino, y </li>
+<li>Aceptas conscientemente la pérdida (truncamiento/overflow).   </li>
+<li>✅ Documenta con un comentario corto el porqué del cast cuando no sea obvio.</li>
+<li>❌ No uses cast para silenciar errores del compilador si no controlas el rango.</li>
+<li>❌ No uses cast para “arreglar” divisiones: si quieres decimales, promociona antes.</li>
+</ul>
+<p>--</p>
 <div class="admonition note">
 <p class="admonition-title">Otros operadores</p>
 <p>Existen más operadores que no se han mencionado en el curso. Si se desea consultar todos los operadores de Java se pueden ver en su documentación oficial. <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html">More information</a></p>
