@@ -2906,6 +2906,13 @@ El valor de la derecha se almacena en la variable de la izquierda.</p>
 </tbody>
 </table>
 <p>Si se aplican dos regla, se elige la que aparece primero en la tabla.</p>
+<p>👉 En resumen:</p>
+<ul>
+<li>Cualquier operación con <code>byte</code>, <code>short</code> o <code>char</code> → se convierte a <code>int</code>.</li>
+<li>Si mezclas enteros con <code>long</code>, el resultado es <code>long</code>.</li>
+<li>Si mezclas con <code>float</code>, todo se convierte a <code>float</code>.</li>
+<li>Si hay un <code>double</code>, todo se convierte a <code>double</code>.</li>
+</ul>
 <hr />
 <h3 id="conversiones-forzadas-casting">🛠️ Conversiones forzadas (casting)</h3>
 <p>Forzamos el tipo de un valor. Para hacerlo ponemos en paréntesis el tipo de dato al que queremos convertirlo.</p>
