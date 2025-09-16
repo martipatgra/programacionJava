@@ -637,6 +637,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mala-practica-demasiados-literales" class="md-nav__link">
+    🚫 Mala práctica: demasiados literales
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 Mala práctica: demasiados literales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemas-de-usar-muchos-literales" class="md-nav__link">
+    ⚠️ Problemas de usar muchos literales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas-en-lugar-de-literales" class="md-nav__link">
+    ✅ Buenas prácticas en lugar de literales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excepciones" class="md-nav__link">
+    🟢 Excepciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resumen" class="md-nav__link">
     📋 Resumen
   </a>
@@ -2354,6 +2388,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mala-practica-demasiados-literales" class="md-nav__link">
+    🚫 Mala práctica: demasiados literales
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 Mala práctica: demasiados literales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemas-de-usar-muchos-literales" class="md-nav__link">
+    ⚠️ Problemas de usar muchos literales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas-en-lugar-de-literales" class="md-nav__link">
+    ✅ Buenas prácticas en lugar de literales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excepciones" class="md-nav__link">
+    🟢 Excepciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resumen" class="md-nav__link">
     📋 Resumen
   </a>
@@ -2457,12 +2525,49 @@ Suelen escribirse en mayúsculas y con guiones bajos.</p>
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Configuracion</span><span class="p">.</span><span class="na">VERSION</span><span class="p">);</span>
 </code></pre></div></p>
 <hr />
+<h2 id="mala-practica-demasiados-literales">🚫 Mala práctica: demasiados literales</h2>
+<p>En Java (y en programación en general), <strong>tener muchos literales dispersos en el código se considera una mala práctica</strong>.<br />
+Estos valores se llaman <em>números mágicos</em> o <em>cadenas mágicas</em> porque no explican claramente su propósito.</p>
+<h3 id="problemas-de-usar-muchos-literales">⚠️ Problemas de usar muchos literales</h3>
+<ul>
+<li><strong>Falta de claridad</strong>: <code>if (x &gt; 37)</code> no dice nada; en cambio <code>if (x &gt; TEMPERATURA_UMBRAL)</code> es mucho más comprensible.  </li>
+<li><strong>Mantenimiento costoso</strong>: si un valor cambia, hay que buscar y modificar todas las apariciones en el código.  </li>
+<li><strong>Duplicación y errores</strong>: dos literales iguales pueden significar cosas distintas y generar confusión.  </li>
+<li><strong>Dependencia rígida</strong>: valores que deberían venir de configuración (como URLs, contraseñas, rutas o timeouts) quedan fijos en el código.  </li>
+</ul>
+<h3 id="buenas-practicas-en-lugar-de-literales">✅ Buenas prácticas en lugar de literales</h3>
+<ol>
+<li>
+<p><strong>Constantes (<code>static final</code>)</strong>:<br />
+   <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">TEMPERATURA_UMBRAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">37</span><span class="p">;</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">IVA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.21</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Enums</strong> para estados o categorías:<br />
+   <div class="highlight"><pre><span></span><code><span class="kd">enum</span><span class="w"> </span><span class="n">Rol</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">ADMIN</span><span class="p">,</span><span class="w"> </span><span class="n">PROFESOR</span><span class="p">,</span><span class="w"> </span><span class="n">ALUMNO</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Ficheros de configuración</strong> (properties, variables de entorno, etc.) para valores que cambian según el entorno.  </p>
+</li>
+<li>
+<p><strong>Resource bundles</strong> para textos (internacionalización).  </p>
+</li>
+<li>
+<p><strong>Objetos de valor</strong> para representar magnitudes específicas: dinero, porcentajes, duraciones, etc.</p>
+</li>
+</ol>
+<h3 id="excepciones">🟢 Excepciones</h3>
+<p>No pasa nada por usar literales obvios como <code>0</code>, <code>1</code>, <code>-1</code>, <code>true</code>, <code>false</code> o <code>""</code> (cadena vacía), siempre que tengan un significado universal y claro.  </p>
+<hr />
 <h2 id="resumen">📋 Resumen</h2>
 <ul>
 <li>🔒 Las <strong>constantes</strong> se definen con <code>final</code> y no cambian su valor.  </li>
 <li>💡 Los <strong>literales</strong> son los valores directos que se asignan (números, caracteres, cadenas, booleanos, <code>null</code>).  </li>
 <li>🔢 Se pueden usar sufijos (<code>L</code>, <code>f</code>, <code>d</code>) para indicar el tipo de un literal.  </li>
-<li>🎯 Usar constantes mejora la claridad, seguridad y mantenimiento del código.</li>
+<li>🎯 Usar constantes mejora la claridad, seguridad y mantenimiento del código.  </li>
+<li>🚫 Evita abusar de los literales: conviértelos en constantes o configúralos externamente para un código más limpio y profesional.</li>
 </ul>
 <hr />
 <p><img alt="Java" src="../../img/literals.png" /></p>
