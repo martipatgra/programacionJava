@@ -2421,10 +2421,12 @@ Las dos formas más habituales:</p>
 
 <span class="c1">//Ejemplos:</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Hola %s, tienes %d años%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">);</span>
+<span class="c1">//Hola Ana, tienes 27 años</span>
 <span class="c1">//           ^^^^^^ 1º arg → &quot;Ana&quot;  (%s)</span>
 <span class="c1">//                         ^^^ 2º arg → 27    (%d)</span>
 
 <span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Precio: %.2f€&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">12.5</span><span class="p">);</span>
+<span class="c1">//&quot;Precio: 12.50€&quot;</span>
 <span class="c1">//                                  ^^^^ 1º arg → 12.5 (%.2f → 2 decimales)</span>
 </code></pre></div>
 <h3 id="conversores-mas-comunes">🔠 Conversores más comunes</h3>
@@ -2567,7 +2569,9 @@ Las dos formas más habituales:</p>
 </ul>
 <p>Ejemplos:
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;|%10s|%10s|%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Nombre&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Puntos&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// ancho campos</span>
+<span class="c1">//|    Nombre|    Puntos|</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;|%-10s|%010d|%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">);</span>
+<span class="c1">//|Ana       |0000000042|</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%+8.2f%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">);</span><span class="w">   </span><span class="c1">//   +3.14</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%(,12.2f%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1234567.89</span><span class="p">);</span><span class="w"> </span><span class="c1">// (1,234,567.89) con Locale.US</span>
 </code></pre></div></p>
