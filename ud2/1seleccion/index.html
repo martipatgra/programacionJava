@@ -2324,28 +2324,28 @@ La sentencia simple condicional if tiene la siguiente estructura:</p>
 </code></pre></div>
 <h2 id="sentencia-condicional-if-else-multiple">Sentencia condicional <em>if-else</em> múltiple</h2>
 <p>Lo que se ejecuta dentro de los if or else, es decir las sentencias pueden ser a su vez sentencias if-else. En otras palabras, es posible incrustar una o más sentencias if-else dentro de otra sentencia if-else, creando así una estructura de control anidada. Como ocurre con la mayoría de las cosas, hacer una estructura de control demasiado compleja no es una buena idea, pero existe una estructura de control estándar anidada ifelse que es muy útil. Se conoce como selección de múltiples vías.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">condición</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//sentencias 1</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Se evalúa en orden: la primera condición que sea verdadera ejecuta su bloque y se ignoran las demás</span>
+<span class="w">    </span><span class="c1">// condiciones y los demás bloques.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">condición</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//bloque 1</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">condición</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//sentencias 2</span>
+<span class="w">        </span><span class="c1">//bloque 2</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">condición</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="p">...</span>
+<span class="w">        </span><span class="c1">//bloque 3</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//sentencias</span>
+<span class="w">        </span><span class="c1">//bloque 4</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 <p><img alt="Java" src="../../img/ud2ifelseif.png" /></p>
 <p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Se evalúa en orden: la primera condición que sea verdadera ejecuta su bloque y se ignoran las demás</span>
-<span class="w">    </span><span class="c1">// condiciones y los demás bloques.</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numJugadores</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Single player&quot;</span><span class="p">);</span><span class="c1">//bloque 1</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numJugadores</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Single player&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numJugadores</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Two player&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//bloque 2</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Two player&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numJugadores</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Multiplayer&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//bloque 3</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Multiplayer&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Not possible, too many players&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//bloque 4</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Not possible, too many players&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 
