@@ -2550,9 +2550,11 @@ Se introdujo en las primeras versiones de Java y desde <strong>Java 14</strong> 
 <li><code>enum</code>  </li>
 <li><strong>Pattern Matching</strong> (desde Java 21)  </li>
 </ul>
-<p>⚠️ Si el valor es <strong><code>null</code></strong>:
-- En el switch clásico → lanza <code>NullPointerException</code>.<br />
-- En el moderno con <em>pattern matching</em> → se puede usar <code>case null</code>.</p>
+<p>⚠️ Si el valor es <strong><code>null</code></strong>:           </p>
+<ul>
+<li>En el switch clásico → lanza <code>NullPointerException</code>.  </li>
+<li>En el moderno con <em>pattern matching</em> → se puede usar <code>case null</code>.</li>
+</ul>
 <hr />
 <h2 id="pattern-matching-en-switch-java-21">🧠 Pattern Matching en switch (Java 21)</h2>
 <p>Ahora el <code>switch</code> entiende <strong>tipos</strong> y <strong>guardas (<code>when</code>)</strong>:</p>
