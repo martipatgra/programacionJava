@@ -2490,12 +2490,14 @@ Se introdujo en las primeras versiones de Java y desde <strong>Java 14</strong> 
 <span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Not possible, too many players&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<p>✅ Características:
-- Cada <code>case</code> necesita un <strong><code>break</code></strong> para evitar el <em>fall-through</em> (ejecución en cascada).
-- El bloque <code>default</code> se ejecuta si no coincide ningún <code>case</code>.  </p>
-<blockquote>
+<p>✅ Características:     </p>
+<ul>
+<li>Cada <code>case</code> necesita un <strong><code>break</code></strong> para evitar el <em>fall-through</em> (ejecución en cascada).</li>
+<li>El bloque <code>default</code> se ejecuta si no coincide ningún <code>case</code>.  <blockquote>
 <p>Aunque suele colocarse al final, puede ir en cualquier posición.</p>
 </blockquote>
+</li>
+</ul>
 <hr />
 <h2 id="switch-expression-java-14">🚀 Switch expression (Java 14+)</h2>
 <p>Un <em>switch expression</em> devuelve directamente un valor. <strong>Con las flechas no hay fall-through</strong>, cada case ejecuta lo de la derecha y nada más.</p>
