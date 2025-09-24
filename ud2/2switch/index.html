@@ -2620,7 +2620,8 @@ Se introdujo en las primeras versiones de Java y desde <strong>Java 14</strong> 
 <hr />
 <h2 id="resumen">✅ Resumen</h2>
 <ul>
-<li>El <code>switch</code> clásico sigue existiendo, pero <strong>hoy se recomienda usar la sintaxis moderna</strong> (<code>-&gt;</code>).  </li>
+<li>El <code>switch</code> clásico sigue existiendo, pero <strong>hoy se recomienda usar la sintaxis moderna</strong> (<code>-&gt;</code>). Ya que el <code>switch</code> clásico tiene fall-through y puede ser accidental y hacer el código más frágil/confuso.</li>
+<li>Con flechas -&gt; no hay fall-through, el código es más declarativo y seguro. </li>
 <li>Las <em>switch expressions</em> devuelven valores y obligan a ser exhaustivas.  </li>
 <li>Desde Java 21, con <em>pattern matching</em>, el <code>switch</code> se convierte en una herramienta muy potente para trabajar con tipos.</li>
 </ul>
