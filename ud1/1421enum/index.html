@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#no-primitivos-u-objetos" class="md-skip">
+        <a href="#enumeraciones-enum-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -509,8 +509,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#enum-en-java" class="md-nav__link">
-    Enum en Java
+  <a href="#definicion-basica" class="md-nav__link">
+    ✅ Definición básica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-un-enum" class="md-nav__link">
+    🔹 Uso de un enum
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recorrer-todos-los-valores" class="md-nav__link">
+    🔹 Recorrer todos los valores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enum-con-atributos-y-metodos" class="md-nav__link">
+    🔹 Enum con atributos y métodos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-en-switch" class="md-nav__link">
+    🔹 Uso en switch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    📌 Resumen
   </a>
   
 </li>
@@ -2208,8 +2243,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#enum-en-java" class="md-nav__link">
-    Enum en Java
+  <a href="#definicion-basica" class="md-nav__link">
+    ✅ Definición básica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-un-enum" class="md-nav__link">
+    🔹 Uso de un enum
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recorrer-todos-los-valores" class="md-nav__link">
+    🔹 Recorrer todos los valores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enum-con-atributos-y-metodos" class="md-nav__link">
+    🔹 Enum con atributos y métodos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-en-switch" class="md-nav__link">
+    🔹 Uso en switch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    📌 Resumen
   </a>
   
 </li>
@@ -2230,26 +2300,97 @@
 
 
 
-<h1 id="no-primitivos-u-objetos">💾 No primitivos u objetos</h1>
-<h2 id="enum-en-java">Enum en Java</h2>
-<p>El tipo enumerado es un tipo de datos especial que permite que una variable sea un conjunto de constantes predefinidas. La variable debe ser igual a uno de los valores que se han predefinido para ella.</p>
-<p>Debido a que son constantes, los nombres de los campos del tipo enum deben estar en letras mayúsculas.</p>
-<p>En Java, se define un enumerado utilizando la palabra clave <strong>enum</strong> seguido del nombre siguiendo la convención del nombrado de clases. Primera letra en mayúscula y CamelCase.</p>
-<p>Para crear un enum en Java, botón derecho en el paquete --&gt; new Java class y seleccionamos enum.</p>
-<p>Ejemplo de enumerado:</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">PuntosCardinales</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">NORTE</span><span class="p">,</span><span class="w"> </span><span class="n">SUR</span><span class="p">,</span><span class="w"> </span><span class="n">ESTE</span><span class="p">,</span><span class="w"> </span><span class="n">OESTE</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-
+<h1 id="enumeraciones-enum-en-java">💾 Enumeraciones (enum) en Java</h1>
+<p>En Java, un <strong>enum</strong> (abreviatura de <em>enumeration</em>) es un <strong>tipo especial de clase</strong> que representa un conjunto fijo y finito de <strong>constantes</strong>.</p>
+<p>Se usa cuando sabemos que una variable solo puede tomar un conjunto limitado de valores.</p>
+<hr />
+<h2 id="definicion-basica">✅ Definición básica</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">enum</span><span class="w"> </span><span class="n">Dia</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">LUNES</span><span class="p">,</span><span class="w"> </span><span class="n">MARTES</span><span class="p">,</span><span class="w"> </span><span class="n">MIERCOLES</span><span class="p">,</span><span class="w"> </span><span class="n">JUEVES</span><span class="p">,</span><span class="w"> </span><span class="n">VIERNES</span><span class="p">,</span><span class="w"> </span><span class="n">SABADO</span><span class="p">,</span><span class="w"> </span><span class="n">DOMINGO</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Aquí hemos creado un tipo <code>Dia</code> que solo puede tomar uno de esos 7 valores.</p>
+<hr />
+<h2 id="uso-de-un-enum">🔹 Uso de un enum</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploEnum</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">PuntosCardinales</span><span class="w"> </span><span class="n">myVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PuntosCardinales</span><span class="p">.</span><span class="na">ESTE</span><span class="p">;</span>
-<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myVar</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Dia</span><span class="w"> </span><span class="n">hoy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hoy</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Ánimo, empieza la semana!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="recorrer-todos-los-valores">🔹 Recorrer todos los valores</h2>
+<p>Cada enum tiene un método <code>values()</code> que devuelve un array con todos los valores.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Dia</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Dia</span><span class="p">.</span><span class="na">values</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>LUNES
+MARTES
+MIERCOLES
+JUEVES
+VIERNES
+SABADO
+DOMINGO
+</code></pre></div>
+<hr />
+<h2 id="enum-con-atributos-y-metodos">🔹 Enum con atributos y métodos</h2>
+<p>Un enum también puede tener <strong>campos, constructores y métodos</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">enum</span><span class="w"> </span><span class="n">Semaforo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ROJO</span><span class="p">(</span><span class="s">&quot;Detente&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">AMARILLO</span><span class="p">(</span><span class="s">&quot;Precaución&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">VERDE</span><span class="p">(</span><span class="s">&quot;Avanza&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">accion</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Constructor</span>
+<span class="w">    </span><span class="n">Semaforo</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">accion</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accion</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">  </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getAccion</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">accion</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploSemaforo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Semaforo</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Semaforo</span><span class="p">.</span><span class="na">ROJO</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">getAccion</span><span class="p">());</span><span class="w"> </span><span class="c1">// &quot;Detente&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
+<hr />
+<h2 id="uso-en-switch">🔹 Uso en switch</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">enum</span><span class="w"> </span><span class="n">Talla</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">XL</span><span class="w"> </span><span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploSwitch</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Talla</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Talla</span><span class="p">.</span><span class="na">M</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pequeña&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mediana&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Grande&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">XL</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Extra grande&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="resumen">📌 Resumen</h2>
+<ul>
+<li>Un <code>enum</code> es un tipo que define un conjunto fijo de constantes.</li>
+<li>Se usa para mejorar <strong>legibilidad</strong> y <strong>seguridad</strong> en el código.</li>
+<li>Puede tener atributos, constructores y métodos.</li>
+<li>Funciona muy bien en <code>switch</code>.</li>
+</ul>
+<p>👉 Los enums son ideales para representar <strong>opciones fijas</strong>: días de la semana, colores, tallas, estados de un pedido, etc.</p>
 
 
   
