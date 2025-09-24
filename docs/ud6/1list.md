@@ -229,8 +229,8 @@ Si nos fijamos, el método para modificar un ítem de la lista espera recibir un
 Una buena práctica es crear otro método que se le pase el nombre, buscarlo y devolver la posición en la lista:
 
 ```java
-public void modifyProductItem(String newItem) {
-    int index = findItem(newItem);
+public void modifyProductItem(String actualItem, String newItem) {
+    int index = findItem(actualItem);
     if (index >= 0) {
         modifyProductItem(index, newItem);
     }

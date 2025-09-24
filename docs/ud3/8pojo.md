@@ -105,7 +105,7 @@ A los parámetros que están dentro de la record header se les llama componentes
 + Un constructor con los mismos argumentos y en el mismo orden descritos dentro de la cabecera de record.
 + Java genera un método toString que imprime cada atributo formateado.
 
-### Constructores Record
+### Constructores de un Record
 
 Si queremos generar un constructor, dentro de la clase record podemos hacer click botón derecho del ratón -> constructor:
 
@@ -120,6 +120,14 @@ Los constructores de Record pueden ser de tres tipos:
 1. **Constructor canónico o largo** (canonical constructor): es el constructor implícito generado con los mismos componentes que hay en la cabecera. Se puede crear uno explícitamente, por lo que no se generará entonces el implícito. Si se declara uno explícito, se debe asignar a todos los campos un valor.
 2. **Constructor personalizado** (custom constructor): es un constructor sobrecargado. Su primera sentencia debe ser una llamada al canónico.
 3. **Constructor compacto o corto** (compact constructor): solo se utiliza en los records. Es una forma concisa de declarar un constructor canónico.
+
+#### Canonical constructor - Constructor canónico
+
+Es el constructor con todos los parámetros o componentes. Este constructor está implícitamente creado, pero podemos sobreescribirlo.
+
+En el siguiente ejemplo se ha creado un constructor canónico que **NO es necesario crear porque ya se crea de manera implícita. Crearlo es redundante ya que no hace nada nuevo**. 
+
+El constructor canónico solo tiene sentido crearlo cuado quiero añadir alguna validación en algún campo o dar un comportamiento diferente al de por defecto.
 
 ```java title="JavaStudent.java"
 public record JavaStudent(String id, String name, String dateOfBirth) {
@@ -140,14 +148,34 @@ public record JavaStudent(String id, String name, String dateOfBirth) {
     }
 }
 ```
+#### Constructor personalizado
+
+Es lo que conocemos como constructor sobrecargado. Creamos constructores personalizados con un número menor de elementos que el constructor canónico. El único requisito con este constructor es, **que la primera línea tiene que ser una llamada al constructor canónico para que se inicialicen los campos o componentes**.
+
+```java
+public record JavaStudent(String id, String name, String dateOfBirth) {
+    public JavaStudent(String id, String name) {
+        this(id, name, null);
+    }
+
+    public JavaStudent(String id, String dateOfBirth) {
+        this(id, null, dateOfBirth);
+    }
+}
+```
 
 #### Compact constructor
 
 + No se pueden tener ambos constructores, el compact más el canónico explícito.
-+ El compact constructor se declara sin paréntesis y sin parámetros o argumentos.
++ **El compact constructor se declara sin paréntesis y sin parámetros o argumentos.**
 + Tiene acceso a todos los argumentos o parámetros del constructor canónico, no confundir con los campos de la clase o variables de instancia de la clase.
 + No se pueden hacer asignaciones a los campos de instancia de la clase en este constructor.
 + Todas las asignaciones implícitas del constructor canónico ocurren después de la ejecución del código del constructor compacto.
+
+Este constructor está entrelazado con el constructor canónico. El código que se inserte en este constructor será llamado antes que el código en el constructor implícito(canónico), es decir, antes de asignar cualquier valor a las variables de isntancia finales. Por eso este constructor tiene acceso a todos los argumentos o componentes del constructor canónico. Este constructor se utiliza para realizar validaciones en los argumentos o componentes antes de asignarlos a las variables de instancia de la clase.
+
+!!! warning Importante
+    Si se ha definido un constructor compacto, no se puede crear o definir explícitamente el constructor canónico.
 
 Ejemplo:
 
@@ -155,7 +183,39 @@ Ejemplo:
     //Compact constructor
     public JavaStudent {
         if (id.isEmpty())  id ="Unknown";
+        //id = this.id; //NO podría hacer esto, porque this.id todavía no se ha inicializado
+        //this.id = id; //TAMPOCO podría hacer esto porque se hará más tarde en el constructor
+                        //implícito (canónico), y como las variables de instancia son finales, no 
+                        //puedo reasignarles valores.
     }
+```
+
+### Campos estáticos y métodos estáticos
+
+Los record pueden tener campos y métodos estáticos. **Pero sólo se permiten campos estáticos**. **Los record no pueden declarar campos de instancia**.
+
+```java
+public record Vehicle(int price) {
+    private static int wheels;
+    private static final int ZERO = 0;
+
+    static {
+        wheels = 4;
+    }
+
+    public Vehicle() {
+        this(ZERO);
+    }
+
+    public static void printWheels() {
+        System.out.println(wheels);
+    }
+
+    //también podemos tener métodos de instancia
+    public double calculate(int x) {
+        return x * 9.99;
+    }
+}
 ```
 
 ### Record immutable

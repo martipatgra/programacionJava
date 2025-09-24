@@ -1,4 +1,4 @@
-site_name: Programación
+site_name: Programación en Java
 nav:
     - 🔥 Inicio: index.md
     - 💾 Elementos de un programa informático: 
@@ -73,6 +73,7 @@ nav:
       - 🧆 Keyword Final: ud6/7final.md
       - 🧆 Equals & hashcode: ud6/8hashcode_equals.md 
     - 🦄 Programación avanzada:
+      - 🦄 Keyword var: ud7/9var.md
       - 🦄 Genéricos: ud7/1generics.md
       - 🦄 Expresiones lambda: ud7/2lambda.md
       - 🦄 Predicate, Supplier and Consumer: ud7/3predicates.md

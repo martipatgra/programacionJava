@@ -1,102 +1,133 @@
-# 💾 Introducción a la programación orientada a objetos
+# 💾 Introducción a la Programación Orientada a Objetos (POO)
 
-La programación modular es un paradigma que consiste en dividir un programa en módulos con el fin de hacerlo más legible y manejable. Enfatiza este concepto mediante la construcción de aplicaciones a partir de su división en componentes independientes que llevan a cabo tareas concretas.
+La **programación modular** consiste en dividir un programa en módulos para hacerlo más legible y manejable.  
+La **POO (Programación Orientada a Objetos)** parte de esa idea, pero da un paso más allá al introducir el **concepto de objeto**, lo que supone un gran avance en **modularización, reutilización y organización del código**.
 
-Al aplicar programación modular, un problema complejo debe ser dividido en otros subproblemas más simples aún.
+---
 
-Un módulo es cada una de las partes de un programa que resuelve uno de los subproblemas.
+## 🔑 Fundamentos de la POO
+Los cuatro pilares básicos de la POO son:
 
-La programación orientada a objetos (POO) se basa en la programación modular, aunque supone una ruptura respecto a ésta al introducir el concepto de objeto, lo que supone un gran avance en términos de modularización y reutilización de código.
-
-## Fundamentos de la POO
-
-+ **Abstracción**: es el pilar de la POO, un principio por el cual se aísla toda aquella información que no resulta relevante a un determinado nivel de conocimiento. Consiste en captar las características esenciales de un objeto, asi como su comportamiento.
-+ **Encapsulación**: se centra en ocultad la complejidad de la clase. Significa proteger a los miembros de una clase de un acceso ilegal o no autorizado.
-+ **Herencia**: es el pilar más fuerte que asegura la reutilización de código. Permite la definición de nuevas clases a partir de otras ya existentes.
-+ **Polimorfismo**: posibilita que una misma operación pueda realizar tareas diferentes, dependiendo del tipo de objeto sobre el cual se ha invocado.
+- **Abstracción** 🧩: simplificar la realidad representando solo los aspectos esenciales de un objeto.  
+- **Encapsulación** 🔒: ocultar los detalles internos y exponer solo lo necesario mediante atributos privados y métodos públicos.  
+- **Herencia** 🧬: crear nuevas clases basadas en clases existentes, reutilizando y extendiendo su funcionalidad.  
+- **Polimorfismo** 🎭: capacidad de un objeto de comportarse de diferentes formas según el contexto (sobrecarga y sobreescritura de métodos).  
 
 ![Java](../img/Object-Oriented-Programming.png)
 
-## Concepto de objeto
+---
 
-Entonces, ¿qué es un objeto? Al igual que en el mundo real, un objeto es cualquier cosa. Un objeto puede ser una cosa física, como un coche, o una cosa mental, como una idea. Puede ser algo natural, como un animal, o algo artificial hecho por el hombre, como un cajero automático. Un programa que administra un cajero automático involucraría cuentas bancarias y objetos de cliente. Un programa de ajedrez involucraría un objeto tablero y objetos piezas de ajedrez.
+## 🟢 Concepto de objeto
+Entonces, ¿qué es un objeto? Al igual que en el mundo real, un objeto es cualquier cosa. Un objeto puede ser una cosa física, como un coche, o una cosa mental, como una idea.
 
-## Atributos y acciones
+Un **objeto** es una entidad que combina **atributos** (datos), **métodos** (comportamientos) e **identidad** (nombre único a un objeto y permite que un objeto interactúe con otros objetos) 
 
-### Atributos
-
-Al igual que con los objetos reales, los objetos de nuestros programas tienen ciertos atributos o propiedades característicos. Por ejemplo, un objeto de cajero automático tendría una cantidad actual de efectivo que podría dispensar. Un objeto pieza ajedrez puede tener un par de atributos de fila y columna que especifiquen su posición en el tablero de ajedrez. Observe que los atributos de un objeto son en sí mismos objetos. El atributo de efectivo del cajero automático y los atributos de fila y columna de la pieza de ajedrez son números.
-
-A veces nos referimos a la colección de atributos y valores de un objeto como su **estado**.
-
-### Acciones o Métodos
-
-Además de sus atributos o propiedades, los objetos también tienen acciones o comportamientos característicos. Como ya dijimos, los objetos en los programas son dinámicos. Hacen cosas o les hacen cosas.
-
-Por ejemplo, en un programa de ajedrez, ChessPieces tiene la capacidad de moveTo () a una nueva posición en el tablero de ajedrez. De manera similar, cuando un cliente presiona el botón "Saldo actual" en un cajero automático, esto le está diciendo al cajero automático que informe () el saldo bancario actual del cliente. (Observe cómo usamos paréntesis para distinguir acciones de objetos y atributos).
-
-Las acciones asociadas con un objeto se pueden utilizar para enviar mensajes a los objetos y recuperar información de los objetos. Un mensaje es el paso de información o datos de un objeto a otro.
-En este ejemplo, le decimos a peón1: Pieza de ajedrez que se mueva a (3,4).
+Ejemplo en Java:
 
 ```java
-    chessPiece.move(3, 4);
+public class Coche {
+    // Atributos
+    String marca;
+    int velocidad;
+
+    // Método
+    void acelerar() {
+        velocidad += 10;
+    }
+}
 ```
 
-Los números 3 y 4 en este caso son argumentos que le dicen al peón a qué casilla moverse. (Un tablero de ajedrez tiene 8 filas y 8 columnas y cada cuadrado se identifica por sus coordenadas de fila y columna). En general, un argumento es un valor de datos que especializa el contenido de un mensaje de alguna manera.
-
-Responder a un mensaje o realizar una acción a veces provoca un cambio en el estado de un objeto. Por ejemplo, después de realizar moveTo (3,4), el peón estará en una casilla diferente. Su posición habrá cambiado.
-
-Por otro lado, algunos mensajes (o acciones) no modifican el estado del objeto. Informar el saldo de la cuenta bancaria del cliente no cambia el saldo.
-
-## Características básicas
-
-+ **Estado**: está representado por atributos de un objeto.
-+ **Comportamiento**: se representa mediante métodos de un objeto. También refleja la respuesta de un objeto con otros objetos.
-+ **Identidad**: le da un nombre único a un objeto y permite que un objeto interactúe con otros objetos.
-
-## Creación y destrucción de objetos
-
-### Creación
-
-Para crear un objeto utilizamos la palabra reservada **_new_**, que asigna memoria del Heap.
-Se usa el nombre de la clase (constructor) seguido por paréntesis. Se le llama instanciar un objeto.
+Aquí, `Coche` es una **clase**, y a partir de ella podremos crear **objetos** (instancias).
 
 ```java
-    ATM atm = new ATM();
+Coche miCoche = new Coche();
+miCoche.marca = "Toyota";
+miCoche.acelerar();
 ```
 
-### Destrucción
+---
 
-En Java no es posible destruir objetos de forma explícita, los objetos se destruyen de forma automática por el recolector de basura. Java busca objetos inalcanzables y los destruye, normalmente cuando falta memoria. Los convierte de nuevo en memoria binaria no utilizada.
+## 🏗️ Atributos y acciones
+- **Atributos**: describen el estado del objeto.  
+  Ejemplo: `marca`, `modelo`, `color`.  
+- **Acciones (métodos)**: describen lo que el objeto sabe hacer.  
+  Ejemplo: `acelerar()`, `frenar()`, `arrancar()`.  
 
-## Uso de objetos: acceso a atributos y métodos
+---
 
-Para acceder a los atributos y métodos de un objeto utilizamos la notación "." detrás del nombre del objeto.
-El objeto debe ser creado previamente sino dará error de compilación.
+## 🌟 Características básicas de la POO
+- Modularidad (el código se organiza en clases).  
+- Reutilización (herencia y polimorfismo).  
+- Facilidad de mantenimiento (encapsulación y abstracción).  
+- Mayor legibilidad y cercanía con el mundo real.  
+
+---
+
+## ⚙️ Creación y destrucción de objetos
+- **Creación**: con la palabra clave `new`.  
+  ```java
+  Coche coche1 = new Coche();
+  ```
+
+- **Destrucción**: en Java, los objetos que ya no se usan son eliminados automáticamente por el **Garbage Collector** (no hace falta liberarlos manualmente).  
+
+---
+
+## 🖥️ Uso de objetos
+Para acceder a **atributos** y **métodos** se utiliza el operador `.`:
 
 ```java
-    double cantidad = atm.efectivo;
-    atm.mostrarEfectivo();
+Coche coche2 = new Coche();
+coche2.marca = "Ford";   // acceso a atributo
+coche2.acelerar();       // llamada a método
 ```
 
 Más adelante veremos la visibilidad de los métodos y atributos de los objetos.
 
-## Ejemplo completo de clase Coche
+---
 
+## 🚗 Ejemplo completo: Clase `Coche`
 ```java
 public class Coche {
+    // Atributos
+    String marca;
+    int velocidad;
 
-    //atributos, campos o estado
-    private String marca;
-    private String modelo;
-    private int km;
-    private LocalDate fabricacion;
+    // Constructor
+    public Coche(String marca) {
+        this.marca = marca;
+        this.velocidad = 0;
+    }
 
-    //acciones o comportamiento
-    public void arrancar(){}
+    // Métodos
+    public void acelerar() {
+        velocidad += 10;
+    }
 
-    public void frenar() {}
+    public void frenar() {
+        velocidad -= 10;
+    }
 
-    public void repostar(){}
+    public void mostrarInfo() {
+        System.out.println("Marca: " + marca + " | Velocidad: " + velocidad);
+    }
+}
+
+// Uso en main
+public class Main {
+    public static void main(String[] args) {
+        Coche coche1 = new Coche("Toyota");
+        coche1.acelerar();
+        coche1.mostrarInfo();
+    }
 }
 ```
+
+---
+
+## 📋 Resumen
+- La POO organiza programas en **clases** y **objetos**.  
+- Un objeto combina **estado** (atributos) y **comportamiento** (métodos).  
+- Sus pilares son **abstracción, encapsulación, herencia y polimorfismo**.  
+- En Java, los objetos se crean con `new` y se gestionan automáticamente con el **Garbage Collector**.  
+- Permite escribir código más **modular, reutilizable y cercano al mundo real**.

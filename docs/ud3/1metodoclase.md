@@ -102,11 +102,11 @@ El modificador de acceso funciona de la misma forma a como lo hemos explicado an
 ```java
     public class Coche {
         
+        //campos, atributos o variables de instancia
         private int puertas;
         private int ruedas;
         private String modelo;
         private String color;
-
     }
 ```
 
@@ -167,6 +167,7 @@ Para crear los métodos que actualizan los campos debemos usar la siguiente nome
         private String modelo;
         private String color;
 
+        //métodos de instancia
         public void setPuertas(int puertas) {
             this.puertas = puertas;
         }
@@ -200,6 +201,17 @@ Para crear los métodos que actualizan los campos debemos usar la siguiente nome
         }
 
     }
+```
+
+### Creación de una instancia de la clase
+
+```java title='Main.java'
+public class Main {
+    public static void main(String[] args) {
+        //ford es un objeto de la clase Coche, es una INSTANCIA de la clase
+        Coche ford = new Coche();
+    }
+}
 ```
 
 ### **Palabra reservada this**

@@ -1,21 +1,28 @@
-# 💾 Operadores
+# 💾 Operadores en Java
 
-Los operadores son símbolos especiales en Java que realizan operaciones entre uno o varios operandos y devuelve un resultado. Uno de los más usados es el operador suma (+) como hemos visto en clases anteriores.
+Los **operadores** son símbolos especiales que realizan operaciones entre uno o varios **operandos** y devuelven un resultado.  
+Uno de los más usados es el operador **suma (+)** como ya vimos en clases anteriores.
 
-## Operando
+---
 
-Es cualquier término, que puede ser una variable o valor y que es manipulado por un operador.
+## 🧱 Operando
+
+Un **operando** es cualquier término (una variable o un valor) que es manipulado por un operador.
 
 ```java
-   int valor = 8;
-   int numero = valor + 12;
+int valor = 8;
+int numero = valor + 12; // operador: + ; operandos: valor y 12
 ```
 
-En el ejemplo anterior, _+_ es el operador y _valor_ y _12_ son los operandos. _valor + 12_ es una expresión que devuelve el resultado de 20.
+En este ejemplo:  
 
-## Expresiones
+- `+` es el operador
+- `valor` y `12` son los operandos
+- `valor + 12` es la expresión, que devuelve 20.
 
-Una expresión es una combinación de literales, operadores, nombres de variables y paréntesis que se utilizan para calcular un valor.
+## 🧮 Expresiones
+
+Una **expresión** es una combinación de literales, operadores, nombres de variables y paréntesis que se utilizan para calcular un valor.
 
 ```java
   int miPrimerEntero = 7 + 5;
@@ -24,72 +31,92 @@ Una expresión es una combinación de literales, operadores, nombres de variable
   resultado = (miPrimerEntero * 10) / (32 + 12);
 ```
 
-Java examina la expresión de la derecha del signo igual y realiza el cálculo de una expresión matemática. Después asigna ese valor a la variable resultado.
-Podríamos complicar más la expresión utilizando **operadores** como paréntesis, multiplicaciones, divisiones, etc.
+➡️ Java evalúa la parte derecha del `=` y asigna el resultado a la variable.
 
-Las partes de una expresión deben estar ordenadas correctamente. Las reglas para las expresiones Java correctas son casi las mismas que las del álgebra:
+📌 **Reglas:**
 
-1. Cada operador debe tener el número correcto de operandos.
-
-      + Multiplicación *, División /, Suma +, Resta: debe tener dos operandos, uno en cada lado.
-      + La negación - y unario más + deben ir seguidos de un operando.
-
-2. Los paréntesis () pueden rodear una expresión legal para convertirla en operando.
+1. Cada operador debe tener el número correcto de operandos.    
+    - `*`, `/`, `+`, `-` → necesitan dos operandos.  
+    - `-` unario y `+` unario → van delante de un único operando.  
+2. Los **paréntesis** pueden agrupar expresiones y alterar la precedencia.
 
 ![Java](../img/expressions.png)
 
-### Expresiones mixtas con int y double
+---
 
-{==
+### 🔀 Expresiones mixtas con `int` y `double`
 
-Si ambos operandos de un operador aritmético son de tipo int, entonces la operación es una operación entera. Si algún operando es de punto flotante, entonces la operación es de punto flotante.
+- Si ambos operandos son `int` → resultado entero.  
+- Si uno es decimal (`float` o `double`) → resultado decimal.
 
-==}
+```java
+int a = 5;
+double b = 2.0;
+double c = a / b; // 2.5 (porque b es double)
+```
 
-## Tipos de operadores en Java
+---
 
-Java proporciona muchos tipos de operadores que se pueden usar según la necesidad. Se clasifican según la funcionalidad que brindan. Algunos de los tipos son los siguientes:
+## 🔖 Tipos de operadores en Java
 
-Operadores aritméticos, unarios, de asignación, relacionales, lógicos, etc.
+Java ofrece muchos tipos de operadores, que se clasifican en:
 
-## Operador de asignación (=)
+- 📝 Asignación  
+- ➕ Aritméticos  
+- ➖ Unarios  
+- ⚖️ Relacionales  
+- 🔗 Lógicos  
+- 🔢 De bits  
+- ❓ Ternario  
+- ⚡ Abreviaciones (compound)  
 
-Es uno de los operadores más usados. Se usa para asignar un valor a cualquier variable. Tiene una asociación de derecha a izquierda, es decir, el valor dado en el lado derecho del operador se asigna a la variable de la izquierda y, por lo tanto, el valor del lado derecho debe declararse antes de usarlo o debe ser una constante.
+---
 
-## Operadores aritméticos
+### 📝 Operador de asignación (`=`)
 
-Se utilizan para realizar operaciones aritméticas simples.
+Asigna un valor a una variable.  
+El valor de la derecha se almacena en la variable de la izquierda.
 
-| Símbolo | Operación | Descripción                        |
-|---------|-----------|------------------------------------|
-| +       | Suma      | Realiza la suma de los operandos.  |
-| -       | Resta     | Realiza la resta de los operandos. |
-| *       | Producto  | Multiplica los operandos.          |
-| /       | División  | Realiza la división.               |
-| %       | Módulo    | Calcula el resto.                  |
+```java
+int x = 10;
+```
 
-## Operadores unarios
+---
 
-Los operadores unarios solo necesitan un operando. Se usan para incrementar, disminuir o negar un valor.
+### ➕ Operadores aritméticos
 
-| Símbolo | Operación  | Descripción                      |
-|---------|------------|----------------------------------|
-| ++      | Incremento | Incrementa el valor en 1 unidad. |
-| --      | Decremento | El valor disminuye en 1 unidad.  |
-| !       | NOT lógico | Invierte un valor booleano.      |
+Se usan para operaciones matemáticas básicas.
 
-Existen dos versiones de estos operadores:
+| Símbolo | Operación | Ejemplo         |
+|---------|-----------|-----------------|
+| +       | Suma      | `a + b`         |
+| -       | Resta     | `a - b`         |
+| *       | Producto  | `a * b`         |
+| /       | División  | `a / b`         |
+| %       | Módulo(resto)    | `a % b` → resto |
 
-+ Pre-incremento y pre-decremento. El valor se aumenta/disminuye primero y luego se calcula el resultado.
+---
 
-![Java](../img/preincrement.png)
+### 🔄 Operadores unarios
+
+Solo necesitan un operando.
+
+| Símbolo | Operación        | Ejemplo        |
+|---------|------------------|----------------|
+| ++      | Incremento (+1)  | `a++`, `++a`   |
+| --      | Decremento (-1)  | `a--`, `--a`   |
+| !       | NOT lógico       | `!true` → false|
+
+🔹 **Pre-incremento/decremento**: el valor se aumenta/disminuye primero y luego se calcula el resultado.
 
   ```java
    int a = 8, b = 1;
    b = ++a; //b=9, a=9
   ```
-  
-+ Post-Incremento y post-decremento: el valor se usa por primera vez para calcular el resultado y luego se incrementa/decrementa.
+
+![Java](../img/preincrement.png)
+
+🔹 **Post-incremento/decremento**: el valor se usa por primera vez para calcular el resultado y luego se incrementa/decrementa.
 
   ```java
    int a = 8, b = 1;
@@ -98,33 +125,37 @@ Existen dos versiones de estos operadores:
 
 ![Java](../img/postincrement.png)
 
-## Operadores relacionales
+---
 
-Estos operadores se utilizan para verificar relaciones como igualdad, mayor que, menor que. Devuelven el resultado booleano después de la comparación.
+### ⚖️ Operadores relacionales
 
-| Símbolo | Operación         | Descripción                                                                           |
-|---------|-------------------|---------------------------------------------------------------------------------------|
-| ==      | Igual a           | Devuelve verdadero si el valor de la izquierda del símbolo es igual al de la derecha. |
-| !=      | Distinto a        | Devuelve verdadero si el valor de la izquierda es distinto al de la derecha.          |
-| <       | Menor que         | Devuelve verdadero si el valor de la izquierda es menor que el de la derecha.         |
-| <=      | Menor o igual que | Devuelve verdadero si el valor de la izquierda es menor o igual que el de la derecha. |
-| \>      | Mayor que         | Devuelve verdadero si el valor de la izquierda es mayor que el de la derecha.         |
-| \>=     | Mayor o igual que | Devuelve verdadero si el valor de la izquierda es mayor o igual al de la derecha.     |                                                                                 |
+Comparan dos valores y devuelven `true` o `false`.
+
+| Símbolo | Operación         | Ejemplo   | Descripción                                                |
+|---------|-------------------|-----------|------------------------------------------------------------|
+| ==      | Igual a           | `a == b`  | Devuelve `true` si ambos operandos son **iguales**.        |
+| !=      | Distinto de       | `a != b`  | Devuelve `true` si los operandos son **diferentes**.       |
+| <       | Menor que         | `a < b`   | Devuelve `true` si el operando izquierdo es **menor**.     |
+| <=      | Menor o igual que | `a <= b`  | Devuelve `true` si el izquierdo es **menor o igual**.      |
+| >       | Mayor que         | `a > b`   | Devuelve `true` si el operando izquierdo es **mayor**.     |
+| >=      | Mayor o igual que | `a >= b`  | Devuelve `true` si el izquierdo es **mayor o igual**.      |
 
 ```java
   int a = 20, b = 10;
   System.out.println("a == b :" + (a == b));//Devuelve falso, porque a no es igual a b
 ```
 
-## Operadores lógicos
+---
 
-Estos operadores se utilizan para realizar operaciones lógicas **AND** y **OR**. Se usa ampliamente en sentencias if-then o bucles para verificar condiciones, establecer un punto de salida de un bucle o la toma de  decisiones.
-Los operadores condicionales son:
+### 🔗 Operadores lógicos
 
-| Símbolo | Operación  | Descripción                                              |
-|---------|------------|----------------------------------------------------------|
-| &&      | AND lógico | Devuelve verdadero cuando ambas condiciones son ciertas. |
-| \|\|    | OR lógico  | Devuelve verdadero si al menos una condición es cierta.  |
+Se usan en condiciones booleanas.
+
+| Símbolo | Operación | Ejemplo           | Descripción                                           |
+|---------|-----------|-------------------|-------------------------------------------------------|
+| &&      | AND       | `a > b && b > 0`  | Devuelve `true` si **ambas** condiciones son ciertas. |
+| \|\|    | OR        | `a > b \|\| b > 0`| Devuelve `true` si **al menos una** condición es cierta. |
+| !       | NOT       | `!(a > b)`        | Invierte el valor: si es `true` → `false`, y viceversa. |
 
 ![Java](../img/OR.png)
 
@@ -135,112 +166,184 @@ Los operadores condicionales son:
     System.out.println((a == b || b == c)); //True
 ```
 
-## Operadores de bits
+---
 
-| Símbolo | Operación | Descripción                                                                                                      |
-|---------|-----------|------------------------------------------------------------------------------------------------------------------|
-| &       | AND       | Si ambos bits de entrada son 1, establece como resultado 1. De lo contrario 0.                                   |
-| \|      | OR        | Si por lo menos uno de los bits de entrada es 1, establece como resultado 1. De lo contrario 0.                  |
-| ^       | XOR       | Si uno de los bits de entrada es 1 y el otro 0, establece como resultado 1. Si los bits son iguales establece 0. |
-| ~       | NOT       | Invierte todos los bits y devuelve el resultado en complemento a 2.                                              |
+### 🔢 Operadores de bits
 
-## Operador ternario (?:)
+Trabajan a nivel binario (bit a bit).
 
-Ternario es una versión abreviada de la sentencia if-else. Tiene tres operandos y de ahí el nombre ternario. El formato general es:
+| Símbolo | Operación | Descripción          |
+|---------|-----------|----------------------|
+| &       | AND       | Ambos bits = 1 → 1   |
+| \|      | OR        | Al menos un 1 → 1    |
+| ^       | XOR       | Distintos → 1        |
+| ~       | NOT       | Invierte los bits    |
+| <<      | Shift izq | Desplaza a la izquierda |
+| >>      | Shift der | Desplaza a la derecha |
+| >>>     | Shift der lógico | Rellena con 0 |
+
+---
+
+### ❓ Operador ternario (`?:`)
+
+Versión corta de un `if-else`. Tiene tres operandos y de ahí el nombre ternario. El formato general es:
 
 ![Java](../img/ternaryoperator.png)
 
-La declaración anterior significa que si la condición se evalúa como verdadera, entonces ejecuta las instrucciones después del ‘?‘ de lo contrario, ejecuta las instrucciones después de ‘:‘.
-
 ```java
-  int nota = 7;
-  String notaFinal = (nota >= 5) ? "Aprobado" : "Suspendido";
-  System.out.println(notaFinal); //muestra Aprobado
+int nota = 7;
+String resultado = (nota >= 5) ? "Aprobado" : "Suspendido";
+System.out.println(notaFinal); //muestra Aprobado
 ```
 
-## Abreviaciones
+---
 
-En muchos casos, el operador de asignación se puede combinar con otros operadores para construir una versión más corta de la declaración llamada Declaración Compuesta (Compound Statement).
+## ⚡ Abreviaciones (compound operators)
 
-+ += , para sumar el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.
-  
-  ```java
-    int a = 5;
-    a += 5; // a = a + 5;
-  ```
+Permiten escribir expresiones más cortas:
 
-+ – = , para restar el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.
+```java
+int a = 5;
+a += 5; // a = a + 5
+a -= 5; // a = a - 5
+a *= 5; // a = a * 5
+a /= 5; // a = a / 5
+a %= 5; // a = a % 5
+```
 
-  ```java
-    int a = 5;
-    a -= 5; // a = a - 5;
-  ```
+---
 
-+ *= , para multiplicar el operando izquierdo con el operando derecho y luego asignándolo a la variable de la izquierda.
+## 📊 Precedencia de operadores
 
-  ```java
-    int a = 5;
-    a *= 5; // a = a * 5;
-  ```
+El **orden de precedencia** indica qué operador se evalúa antes.  
+📎 Consulta la tabla completa aquí: [Java Operator Precedence Table](http://www.cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html)
 
-+ / = , para dividir el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.
+---
 
-  ```java
-    int a = 5;
-    a /= 5; // a = a / 5;
-  ```
+## 🔄 Conversiones de tipo
 
-+ % = , para asignar el módulo del operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.
+### ✅ Conversiones automáticas (widening)
 
-  ```java
-    int a = 5;
-    a %= 5; // a = a % 5;
-  ```
+👉 Cuando combinas diferentes tipos de datos en una expresión Java convierte automáticamente al tipo más grande o más “seguro” para no perder información.
 
-## Precedencia de operadores
+#### 📌 Regla general
 
-El orden de precedencia, es decir, como Java decide la prioridad al evaluar los operadores en una expresión, se puede ver en [Java Operator Precedence Table](http://www.cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html)
+Cuando hay mezcla de tipos en una operación, Java:
 
-## Conversiones de tipo
+- Mira los operandos (los valores implicados).
+- “Sube” el más pequeño al tipo más grande, siguiendo este orden de promoción:
 
-### Conversiones por defecto
+```java
+byte/short/char → int → long → float → double
+```
+⚠️ El tipo char también se convierte en int al entrar en operaciones.
 
-Las reglas de Java para saber el tipo de datos resultante de una expresión se siguen las siguientes reglas:
+#### Ejemplos
 
-| Si algún operando es | El otro operando se transforma a |
-|----------------------|----------------------------------|
-| double               | double                           |
-| float                | float                            |
-| long                 | long                             |
-| byte or short        | int                              |
+- Enteros pequeños se convierten a int
+
+```java
+byte a = 5;
+short b = 10;
+// Resultado de a+b es int, no byte o short
+int c = a + b; 
+```
+
+➡️ Aunque ambos sean `byte`, Java los convierte en `int` antes de sumar.
+
+- Mezcla de int y long
+
+```java
+int a = 10;
+long b = 20;
+long c = a + b; // a se convierte en long automáticamente
+```
+
+- Mezcla de enteros con decimales
+
+```java
+int a = 5;
+double b = 2.0;
+double c = a / b; // a se convierte en double
+System.out.println(c); // 2.5
+```
+
+- char en operaciones
+
+```java
+char letra = 'A'; // código 65 en Unicode
+int resultado = letra + 1; // letra se convierte en int
+System.out.println(resultado); // 66
+```
+
+---
+
+#### 📊 Tabla resumen
+
+| Si un operando es | El otro se convierte en |
+|-------------------|-------------------------|
+| double            | double                  |
+| float             | float                   |
+| long              | long                    |
+| byte / short      | int                     |
 
 Si se aplican dos regla, se elige la que aparece primero en la tabla.
 
-### Conversiones forzosas (casting entre tipos nativos)
+👉 En resumen:
 
-Es una forma de convertir un número de un tipo a otro tipo de dato. Para hacerlo ponemos en paréntesis el tipo de dato al que queremos convertirlo.
+- Cualquier operación con `byte`, `short` o `char` → se convierte a `int`.
+- Si mezclas enteros con `long`, el resultado es `long`.
+- Si mezclas con `float`, todo se convierte a `float`.
+- Si hay un `double`, todo se convierte a `double`.
+
+---
+
+### 🛠️ Conversiones forzadas (casting, narrowing)
+
+Conversión forzosa es decirle explícitamente a Java: **“trata este valor como si fuera de otro tipo”**. Se escribe poniendo el tipo entre paréntesis delante del valor o expresión.
+
+Se suele llamar **Narrowing (reducción)**: a un tipo “más pequeño/menos preciso”. No se recomienda su uso,
+ya que se puede perder información.
+
 
 ```java
-    byte miByte = (byte) (14 / 2); //conviero la operación división que devuelve un int a byte
+float a = 8.5f;
+int b = (int) a; // convierte float a int
 
-    //Otra forma
-    float a = 8.0f;
-    int b = 10;
-    b = (int) a;//convierto el tipo float a int
+int a = 130;
+byte b = (byte) a;
 ```
+
+---
+
+### Buenas prácticas (regla de oro):
+
+- ✅ Mejor usar widening (casteo automático) cuando sea posible.
+- ✅ Haz cast narrowing solo cuando:    
+    - Sabes que el valor cabe en el tipo destino, y 
+    - Aceptas conscientemente la pérdida (truncamiento/overflow).   
+- ✅ Documenta con un comentario corto el porqué del cast cuando no sea obvio.
+- ❌ No uses cast para silenciar errores del compilador si no controlas el rango.
+- ❌ No uses cast para “arreglar” divisiones: si quieres decimales, promociona antes.
+
+---
 
 !!! Note "Otros operadores"
     Existen más operadores que no se han mencionado en el curso. Si se desea consultar todos los operadores de Java se pueden ver en su documentación oficial. [More information](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html)
 
-## Sintaxis de las expresiones matemáticas
+---
 
-| Método    | Returns         | Ejemplo                          |
-|-----------|-----------------|----------------------------------|
-| Math.abs  | valor absoluto  | Math.abs(-308) returns 308       |
-| Math.ceil  | redondeo hacia arriba  | Math.ceil(2.13) returns 3.0       |
-| Math.floor  | redondeo hacia abajo  | Math.floor(2.93) returns 2.0       |
-| Math.max  | valor máx. de dos valores  | Math.max(45, 207) returns 207       |
-| Math.min  | valor min. de dos valores  | Math.min(3.8, 2.75) returns 2.75       |
-| Math.pow  | potencia  | Math.pow(3, 4) returns 81.0       |
-| Math.round  | redondear al entero más cercano  | Math.round(2.718) returns 3       |
-| Math.sqrt  | raíz cuadrada  | Math.sqrt(81) returns 9.0       |
+## 🧮 Métodos de la clase `Math`
+
+| Método      | Descripción                     | Ejemplo                   |
+|-------------|---------------------------------|---------------------------|
+| Math.abs    | Valor absoluto                  | `Math.abs(-308)` → 308    |
+| Math.ceil   | Redondeo hacia arriba           | `Math.ceil(2.13)` → 3.0   |
+| Math.floor  | Redondeo hacia abajo            | `Math.floor(2.93)` → 2.0  |
+| Math.max    | Máximo de dos valores           | `Math.max(45, 207)` → 207 |
+| Math.min    | Mínimo de dos valores           | `Math.min(3.8, 2.75)` → 2.75 |
+| Math.pow    | Potencia                        | `Math.pow(3, 4)` → 81.0   |
+| Math.round  | Redondeo al entero más cercano  | `Math.round(2.718)` → 3   |
+| Math.sqrt   | Raíz cuadrada                   | `Math.sqrt(81)` → 9.0     |
+
+---

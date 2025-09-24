@@ -46,7 +46,7 @@ La declaración if es la más básica de todas las declaraciones de flujo de con
 La sentencia simple condicional if tiene la siguiente estructura:
 
 ```java
-    if (*condición*) {
+    if (*condición*) { //La condición debe ser siempre una expresión booleana que devuelva true o false.
         //sentencias
     }
 ```
@@ -106,14 +106,16 @@ Ejemplo:
 Lo que se ejecuta dentro de los if or else, es decir las sentencias pueden ser a su vez sentencias if-else. En otras palabras, es posible incrustar una o más sentencias if-else dentro de otra sentencia if-else, creando así una estructura de control anidada. Como ocurre con la mayoría de las cosas, hacer una estructura de control demasiado compleja no es una buena idea, pero existe una estructura de control estándar anidada ifelse que es muy útil. Se conoce como selección de múltiples vías.
 
 ```java
+    //Se evalúa en orden: la primera condición que sea verdadera ejecuta su bloque y se ignoran las demás
+    // condiciones y los demás bloques.
     if (*condición*) {
-        //sentencias 1
+        //bloque 1
     } else if (*condición*) {
-        //sentencias 2
+        //bloque 2
     } else if (*condición*) {
-        ...
+        //bloque 3
     } else {
-        //sentencias
+        //bloque 4
     }
 ```
 

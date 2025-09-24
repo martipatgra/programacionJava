@@ -22,7 +22,7 @@ El constructor por normal general da valor a los campos de la clase.
 
 ## Constructor por defecto
 
-En Java cuando creamos un objeto con la sentencia new Coche(), se lanza el llamado contructor por defecto. Si no se ha definido este en la clase, **Java lo crea y lo lanza automáticamente** e iniciliza los campos de la clase con valores por defecto.
+En Java cuando creamos un objeto con la sentencia new Coche(), se lanza el llamado constructor por defecto. Si no se ha definido este en la clase, **Java lo crea y lo lanza automáticamente** e inicializa los campos de la clase con valores por defecto.
 
 Si queremos definirlo nosotros tenemos que usar public más el nombre de la clase.
 
