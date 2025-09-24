@@ -528,13 +528,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#enum-en-java" class="md-nav__link">
-    Enum en Java
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2275,13 +2268,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#enum-en-java" class="md-nav__link">
-    Enum en Java
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2356,25 +2342,6 @@ Por ejemplo, las clases existentes (como <em>java.util.Date</em> y <em>SimpleDat
 <span class="w">  </span><span class="n">DateTimeFormatter</span><span class="w"> </span><span class="n">formatter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTimeFormatter</span><span class="p">.</span><span class="na">ofPattern</span><span class="p">(</span><span class="s">&quot;dd-MM-yyyy HH:mm:ss&quot;</span><span class="p">);</span>
 <span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">formatted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">formatter</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">ldt</span><span class="p">);</span>
 <span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">formatted</span><span class="p">);</span>
-</code></pre></div>
-<h2 id="enum-en-java">Enum en Java</h2>
-<p>El tipo enumerado es un tipo de datos especial que permite que una variable sea un conjunto de constantes predefinidas. La variable debe ser igual a uno de los valores que se han predefinido para ella.</p>
-<p>Debido a que son constantes, los nombres de los campos del tipo enum deben estar en letras mayúsculas.</p>
-<p>En Java, se define un enumerado utilizando la palabra clave <strong>enum</strong> seguido del nombre siguiendo la convención del nombrado de clases. Primera letra en mayúscula y CamelCase.</p>
-<p>Para crear un enum en Java, botón derecho en el paquete --&gt; new Java class y seleccionamos enum.</p>
-<p>Ejemplo de enumerado:</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">PuntosCardinales</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">NORTE</span><span class="p">,</span><span class="w"> </span><span class="n">SUR</span><span class="p">,</span><span class="w"> </span><span class="n">ESTE</span><span class="p">,</span><span class="w"> </span><span class="n">OESTE</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">PuntosCardinales</span><span class="w"> </span><span class="n">myVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PuntosCardinales</span><span class="p">.</span><span class="na">ESTE</span><span class="p">;</span>
-<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myVar</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 
 
