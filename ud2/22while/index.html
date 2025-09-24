@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sentencia-while" class="md-skip">
+        <a href="#bucle-while-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -752,8 +752,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-mostrar-los-3-primeros-numeros" class="md-nav__link">
-    Ejemplo: Mostrar los 3 primeros números
+  <a href="#sintaxis-basica" class="md-nav__link">
+    📌 Sintaxis básica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-sencillo" class="md-nav__link">
+    🧩 Ejemplo sencillo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importante-riesgo-de-bucle-infinito" class="md-nav__link">
+    ⚠️ Importante: riesgo de bucle infinito
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-tipicos" class="md-nav__link">
+    🎯 Casos de uso típicos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-pedir-contrasena" class="md-nav__link">
+    🖥️ Ejemplo práctico: pedir contraseña
   </a>
   
 </li>
@@ -761,6 +789,13 @@
         <li class="md-nav__item">
   <a href="#ejemplo-sumar-los-numeros-del-0-al-10" class="md-nav__link">
     Ejemplo: Sumar los números del 0 al 10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consejos-para-no-liarte" class="md-nav__link">
+    💡 Consejos para no liarte
   </a>
   
 </li>
@@ -2215,8 +2250,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-mostrar-los-3-primeros-numeros" class="md-nav__link">
-    Ejemplo: Mostrar los 3 primeros números
+  <a href="#sintaxis-basica" class="md-nav__link">
+    📌 Sintaxis básica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-sencillo" class="md-nav__link">
+    🧩 Ejemplo sencillo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importante-riesgo-de-bucle-infinito" class="md-nav__link">
+    ⚠️ Importante: riesgo de bucle infinito
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-tipicos" class="md-nav__link">
+    🎯 Casos de uso típicos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-pedir-contrasena" class="md-nav__link">
+    🖥️ Ejemplo práctico: pedir contraseña
   </a>
   
 </li>
@@ -2224,6 +2287,13 @@
         <li class="md-nav__item">
   <a href="#ejemplo-sumar-los-numeros-del-0-al-10" class="md-nav__link">
     Ejemplo: Sumar los números del 0 al 10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consejos-para-no-liarte" class="md-nav__link">
+    💡 Consejos para no liarte
   </a>
   
 </li>
@@ -2244,97 +2314,94 @@
 
 
 
-<h1 id="sentencia-while">Sentencia <em>WHILE</em></h1>
-<p>Una estructura de repetición es una estructura de control que repite una declaración o secuencia de declaraciones de forma controlada. Las estructuras de repetición también se denominan estructuras de <strong><em>bucle</em></strong>. Muchos tipos de tareas de programación requieren una estructura de repetición. Por ejemplo:</p>
-<ul>
-<li>Sumar los cuadrados de los números del 1 al 100.</li>
-<li>Un empleado de seguridad informática quiere probar todas las contraseñas posibles para entrar en la cuenta de un presunto espía.</li>
-<li>Quieres que los jugadores inserten movimientos durante un turno en un juego hasta que el juego ha terminado.</li>
-</ul>
-<p><img alt="Java" src="../../img/while.png" /></p>
-<p>La instrucción <strong>while</strong> es una instrucción de bucle en la que la condición de bucle ocurre antes que el cuerpo del bucle. Tiene la siguiente estructura:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condición</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//cuerpo del bucle</span>
-<span class="w">        </span><span class="c1">//bloque de código: sentencia(s)</span>
-<span class="w">    </span><span class="p">}</span>
+<h1 id="bucle-while-en-java">🖲️ Bucle <code>while</code> en Java</h1>
+<p>El bucle <code>while</code> nos permite <strong>repetir</strong> un bloque de instrucciones <strong>mientras se cumpla una condición</strong>.</p>
+<hr />
+<h2 id="sintaxis-basica">📌 Sintaxis básica</h2>
+<div class="highlight"><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condición</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//cuerpo del bucle</span>
+<span class="w">    </span><span class="c1">// bloque de sentencias</span>
+<span class="p">}</span>
 
-<span class="w">    </span><span class="c1">//VARIANTES: Si solo tiene una sentencia en el cuerpo </span>
-<span class="w">    </span><span class="c1">//también se puede escribir así</span>
+<span class="c1">//VARIANTES: Si solo tiene una sentencia en el cuerpo </span>
+<span class="w">    </span><span class="c1">//también se puede escribir así sin llaves</span>
 <span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condición</span><span class="p">)</span>
 <span class="w">        </span><span class="c1">//sentencia;</span>
 </code></pre></div>
-<p>Contiene la palabra reservada <em>while</em> seguida de un bloque de código. Un bloque es un conjunto de sentencias encerradas entre corchetes { y }.</p>
-<p>Cuando se ejecuta la instrucción while, se evalúa la condición del bucle, que es una expresión booleana y sucede alguno de los siguientes escenarios:</p>
-<ol>
-<li>Si esto se evalúa como falso, la ejecución continúa en la instrucción inmediatamente después del cuerpo del bucle(fuera del bloque).</li>
-<li>Si la condición de bucle se evalúa como verdadero, el cuerpo del bucle se ejecuta y luego la condición se evalúa nuevamente y se repite el proceso.</li>
-</ol>
-<p>El cuerpo del bucle continúa ejecutándose hasta que la condición se evalúa como falsa.</p>
-<p>Para que una declaración while realice una tarea, la variable o variables en la condición de entrada de bucle deben inicializarse correctamente antes; y además estas variables deben actualizarse correctamente al final del cuerpo de bucle. Podemos reformular las pautas anteriores como un principio de diseño:</p>
-<div class="admonition warning">
-<p class="admonition-title">Una estructura while correctamente diseñada debe incluir 3 partes:</p>
+<p><img alt="Java" src="../../img/while.png" /></p>
 <ul>
-<li>un inicializador,</li>
-<li>una condición de bucle y</li>
-<li>un actualizador. El actualizador debe garantizar que la condición de entrada del bucle finalmente falle, <strong>permitiendo así que el bucle termine</strong>.</li>
+<li>La <strong>condición</strong> debe ser de tipo <code>boolean</code> (<code>true</code> o <code>false</code>).</li>
+<li>Primero se ejecuta la condición.</li>
+<li>El bloque o cuerpo del bucle se ejecuta <strong>solo si la condición es verdadera</strong>.</li>
+<li>Se repite hasta que la condición sea falsa.</li>
 </ul>
-</div>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//inicializadores</span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">condición</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//sentencias</span>
-<span class="w">        </span><span class="c1">//actualizador</span>
-<span class="w">    </span><span class="p">}</span>
-</code></pre></div>
-<h2 id="ejemplo-mostrar-los-3-primeros-numeros">Ejemplo: <em>Mostrar los 3 primeros números</em></h2>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">//inicializador</span>
+<hr />
+<h2 id="ejemplo-sencillo">🧩 Ejemplo sencillo</h2>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="c1">//Sentencia</span>
-<span class="w">        </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="c1">//actualizador</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de i: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Salida:</strong></p>
+<div class="highlight"><pre><span></span><code>Valor de i: 1
+Valor de i: 2
+Valor de i: 3
+Valor de i: 4
+Valor de i: 5
+</code></pre></div>
+<hr />
+<h2 id="importante-riesgo-de-bucle-infinito">⚠️ Importante: riesgo de bucle infinito</h2>
+<p>Una estructura while correctamente diseñada debe incluir 3 partes para no tener un bucle infinito:    <br />
++ un inicializador,
++ una condición de bucle y
++ un actualizador. El actualizador debe garantizar que la condición de entrada del bucle finalmente falle, <strong>permitiendo así que el bucle termine</strong>.</p>
+<p>Si la condición <strong>nunca llega a ser falsa</strong>, el bucle <strong>no termina</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//WHILE CORRECTO</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">//inicializador</span>
+
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//condición</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="c1">//Sentencia</span>
+<span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="c1">//actualizador</span>
+<span class="p">}</span>
+
+<span class="c1">//WHILE INCORRECTO</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="c1">//inicializador</span>
+
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//condición</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;i vale: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="c1">//Sentencia</span>
+<span class="w">    </span><span class="c1">// ❌ Falta incrementar i → bucle infinito, no hay actualizador</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>👉 Recuerda siempre que el valor de la condición debe <strong>cambiar en algún momento</strong>.</p>
+<hr />
+<h2 id="casos-de-uso-tipicos">🎯 Casos de uso típicos</h2>
+<ul>
+<li>🔢 <strong>Contadores:</strong> recorrer números de un rango.  </li>
+<li>🎮 <strong>Lectura de datos:</strong> repetir hasta que el usuario introduzca algo válido.  </li>
+<li>📂 <strong>Procesamiento:</strong> recorrer una estructura hasta que se acabe.  </li>
+</ul>
+<hr />
+<h2 id="ejemplo-practico-pedir-contrasena">🖥️ Ejemplo práctico: pedir contraseña</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;java123&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">intento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">intento</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">password</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Introduce la contraseña: &quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">intento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Acceso concedido!&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>Salida</p>
-<div class="highlight"><pre><span></span><code>    1
-    2
-    3
-</code></pre></div>
-<p>Traza</p>
-<table>
-<thead>
-<tr>
-<th>Iteración</th>
-<th>Variable</th>
-<th>i &lt;= 3</th>
-<th>Acción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1a</td>
-<td>i = 1</td>
-<td>true</td>
-<td>imprime 1, incrementa i=2</td>
-</tr>
-<tr>
-<td>2a</td>
-<td>i = 2</td>
-<td>true</td>
-<td>imprime 2, incrementa i = 3</td>
-</tr>
-<tr>
-<td>3a</td>
-<td>i = 3</td>
-<td>true</td>
-<td>imprime 3, incrementa i = 4</td>
-</tr>
-<tr>
-<td>4a</td>
-<td>i = 4</td>
-<td>false</td>
-<td>termina el bucle</td>
-</tr>
-</tbody>
-</table>
+<hr />
 <h2 id="ejemplo-sumar-los-numeros-del-0-al-10">Ejemplo: <em>Sumar los números del 0 al 10</em></h2>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">//inicializador</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -2404,6 +2471,14 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="consejos-para-no-liarte">💡 Consejos para no liarte</h2>
+<ul>
+<li>Asegúrate de que la <strong>condición cambiará</strong> en algún momento.  </li>
+<li>Empieza siempre con ejemplos <strong>muy simples</strong>.  </li>
+<li>Si el bucle no termina: revisa <strong>incrementos</strong> o <strong>condiciones lógicas</strong>.  </li>
+<li>Úsalo cuando <strong>no sepas cuántas repeticiones exactas</strong> habrá.  </li>
+</ul>
 
 
   
