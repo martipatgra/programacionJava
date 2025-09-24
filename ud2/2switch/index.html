@@ -471,6 +471,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ud1/1421enum/" class="md-nav__link">
+        Enum
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ud1/143string/" class="md-nav__link">
         String
       </a>
@@ -781,8 +795,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pattern-matching-con-guarda" class="md-nav__link">
-    Pattern matching con guarda
+  <a href="#pattern-matching-con-guarda-when" class="md-nav__link">
+    Pattern matching con guarda (when)
   </a>
   
 </li>
@@ -2402,8 +2416,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pattern-matching-con-guarda" class="md-nav__link">
-    Pattern matching con guarda
+  <a href="#pattern-matching-con-guarda-when" class="md-nav__link">
+    Pattern matching con guarda (when)
   </a>
   
 </li>
@@ -2600,8 +2614,12 @@ Se introdujo en las primeras versiones de Java y desde <strong>Java 14</strong> 
 <span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">};</span>
 </code></pre></div>
-<h3 id="pattern-matching-con-guarda">Pattern matching con guarda</h3>
-<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<h3 id="pattern-matching-con-guarda-when">Pattern matching con guarda (when)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">//Object obj = null;</span>
+<span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="c1">//Object obj = &quot;Esto es un texto&quot;; Otra opción con String</span>
+
+<span class="n">String</span><span class="w"> </span><span class="n">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Número par&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Número impar&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Texto&quot;</span><span class="p">;</span>
