@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sentencia-do-while" class="md-skip">
+        <a href="#bucle-do-while-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -766,8 +766,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-muestra-los-numeros-del-0-al-4" class="md-nav__link">
-    Ejemplo: Muestra los números del 0 al 4
+  <a href="#sintaxis-basica" class="md-nav__link">
+    📌 Sintaxis básica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-usar-do-while" class="md-nav__link">
+    🧭 ¿Cuándo usar do-while?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#while-vs-do-while-comparativa-rapida" class="md-nav__link">
+    🆚 while vs do-while (comparativa rápida) ⚖️
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-minimo-muestra-los-numeros-del-0-al-4" class="md-nav__link">
+    🔍 Ejemplo mínimo : Muestra los números del 0 al 4
   </a>
   
 </li>
@@ -775,6 +796,41 @@
         <li class="md-nav__item">
   <a href="#ejemplo-sumar-los-numeros-del-0-al-10" class="md-nav__link">
     Ejemplo: Sumar los números del 0 al 10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validacion-de-entrada-patron-clasico" class="md-nav__link">
+    🧪 Validación de entrada (patrón clásico) ✅
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menu-interactivo-loop-de-aplicacion" class="md-nav__link">
+    🧰 Menú interactivo (loop de aplicación) 📋
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patron-reintento-hasta-exito-contrasenas-conexiones-etc" class="md-nav__link">
+    🎯 Patrón “reintento hasta éxito” (contraseñas, conexiones, etc.)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-tipicos-y-como-evitarlos" class="md-nav__link">
+    🧠 Errores típicos y cómo evitarlos 🚧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    ✅ Resumen
   </a>
   
 </li>
@@ -2215,8 +2271,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-muestra-los-numeros-del-0-al-4" class="md-nav__link">
-    Ejemplo: Muestra los números del 0 al 4
+  <a href="#sintaxis-basica" class="md-nav__link">
+    📌 Sintaxis básica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-usar-do-while" class="md-nav__link">
+    🧭 ¿Cuándo usar do-while?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#while-vs-do-while-comparativa-rapida" class="md-nav__link">
+    🆚 while vs do-while (comparativa rápida) ⚖️
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-minimo-muestra-los-numeros-del-0-al-4" class="md-nav__link">
+    🔍 Ejemplo mínimo : Muestra los números del 0 al 4
   </a>
   
 </li>
@@ -2224,6 +2301,41 @@
         <li class="md-nav__item">
   <a href="#ejemplo-sumar-los-numeros-del-0-al-10" class="md-nav__link">
     Ejemplo: Sumar los números del 0 al 10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validacion-de-entrada-patron-clasico" class="md-nav__link">
+    🧪 Validación de entrada (patrón clásico) ✅
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menu-interactivo-loop-de-aplicacion" class="md-nav__link">
+    🧰 Menú interactivo (loop de aplicación) 📋
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patron-reintento-hasta-exito-contrasenas-conexiones-etc" class="md-nav__link">
+    🎯 Patrón “reintento hasta éxito” (contraseñas, conexiones, etc.)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-tipicos-y-como-evitarlos" class="md-nav__link">
+    🧠 Errores típicos y cómo evitarlos 🚧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    ✅ Resumen
   </a>
   
 </li>
@@ -2244,25 +2356,67 @@
 
 
 
-<h1 id="sentencia-do-while">Sentencia <em>DO-WHILE</em></h1>
-<p>El bucle <em><strong>do-while</strong></em> es una variante del bucle while que proporciona el lenguaje de programación Java. Se puede expresar de la siguiente forma:</p>
+<h1 id="bucle-do-while-en-java">🖲️ Bucle <code>do-while</code> en Java</h1>
+<p>Un <code>do-while</code> en Java es un bucle de control que <strong>ejecuta un bloque de instrucciones al menos una vez</strong>, y <strong>luego</strong> comprueba la condición para decidir si debe repetirse.</p>
+<hr />
+<h2 id="sintaxis-basica">📌 Sintaxis básica</h2>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//inicializadores</span>
 <span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">//bloque de código: sentencia(s)</span>
 <span class="w">        </span><span class="c1">//actualizador</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condición</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condición</span><span class="p">);</span><span class="w">  </span><span class="c1">// ← OJO: aquí hay punto y coma</span>
 </code></pre></div>
-<p><img alt="Java" src="../../img/dowhile.png" /></p>
-<p>La diferencia entre do-while y while es que do-while evalúa la condición después de ejecutar el cuerpo del bucle. Por lo tanto, las sentencias dentro del bloque do-while se ejecutan <strong>al menos una vez</strong>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Una estructura while correctamente diseñada debe incluir 3 partes:</p>
 <ul>
-<li>un inicializador,</li>
-<li>una condición de bucle y</li>
-<li>un actualizador. El actualizador debe garantizar que la condición de entrada del bucle finalmente falle, <strong>permitiendo así que el bucle termine</strong>.</li>
+<li><strong>El <code>;</code> final es obligatorio.</strong>  </li>
+<li>La <strong>condición</strong> es booleana; si es <code>true</code> se repite, si es <code>false</code> se detiene.</li>
+<li>El <strong>bloque se ejecuta siempre al menos UNA VEZ</strong>, incluso si la condición era falsa desde el principio.</li>
 </ul>
-</div>
-<h2 id="ejemplo-muestra-los-numeros-del-0-al-4">Ejemplo: <em>Muestra los números del 0 al 4</em></h2>
+<p><img alt="Java" src="../../img/dowhile.png" /></p>
+<hr />
+<h2 id="cuando-usar-do-while">🧭 ¿Cuándo usar <code>do-while</code>?</h2>
+<ul>
+<li>✅ <strong>Necesitas ejecutar una acción mínimo una vez</strong> (mostrar un menú, pedir un dato, lanzar una partida…).</li>
+<li>✅ <strong>Validación de entrada</strong>: repetir hasta que el usuario introduzca algo correcto.</li>
+<li>✅ <strong>Bucles con “salida controlada”</strong> al final del ciclo.</li>
+</ul>
+<blockquote>
+<p>Si <strong>no</strong> necesitas que el bloque se ejecute la primera vez sin comprobar, suele bastar un <code>while</code> normal.</p>
+</blockquote>
+<hr />
+<h2 id="while-vs-do-while-comparativa-rapida">🆚 <code>while</code> vs <code>do-while</code> (comparativa rápida) ⚖️</h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th><code>while</code></th>
+<th><code>do-while</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comprobación</td>
+<td><strong>Antes</strong> del bloque</td>
+<td><strong>Después</strong> del bloque</td>
+</tr>
+<tr>
+<td>Mínimo de iteraciones</td>
+<td>0</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>Uso típico</td>
+<td>Repetir si ya sé que la condición es true</td>
+<td><strong>Menus</strong>, <strong>validaciones</strong>, <strong>intentos</strong></td>
+</tr>
+<tr>
+<td>Sintaxis final <code>;</code></td>
+<td>No</td>
+<td><strong>Sí</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ejemplo-minimo-muestra-los-numeros-del-0-al-4">🔍 Ejemplo mínimo : <em>Muestra los números del 0 al 4</em></h2>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
@@ -2326,6 +2480,7 @@
 </tr>
 </tbody>
 </table>
+<hr />
 <h2 id="ejemplo-sumar-los-numeros-del-0-al-10">Ejemplo: <em>Sumar los números del 0 al 10</em></h2>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">//inicializador</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -2340,6 +2495,82 @@
 <p>Salida</p>
 <div class="highlight"><pre><span></span><code>    55
 </code></pre></div>
+<hr />
+<h2 id="validacion-de-entrada-patron-clasico">🧪 Validación de entrada (patrón clásico) ✅</h2>
+<div class="highlight"><pre><span></span><code><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Edad (0-120): &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">120</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tu edad es: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edad</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Tips Scanner</strong>: si mezclas <code>nextInt()</code> con <code>nextLine()</code>, limpia el salto de línea (intro) con un <code>sc.nextLine()</code> tras leer el entero.</p>
+</blockquote>
+<hr />
+<h2 id="menu-interactivo-loop-de-aplicacion">🧰 Menú interactivo (loop de aplicación) 📋</h2>
+<div class="highlight"><pre><span></span><code><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">opcion</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;=== MENÚ ===&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1) Alta&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2) Baja&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3) Listar&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;0) Salir&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Opción: &quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">opcion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">opcion</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Alta...&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Baja...&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Listado...&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Saliendo...&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">default</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Opción inválida.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opcion</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Regla de oro</strong>: la condición de salida debe <strong>cambiar dentro</strong> del bucle o el bucle se hará infinito.</p>
+</blockquote>
+<hr />
+<h2 id="patron-reintento-hasta-exito-contrasenas-conexiones-etc">🎯 Patrón “reintento hasta éxito” (contraseñas, conexiones, etc.)</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">CLAVE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;secreto&quot;</span><span class="p">;</span>
+<span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">intento</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">reintentos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Clave: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">intento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">intento</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">CLAVE</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">reintentos</span><span class="o">--</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error. Te quedan &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">reintentos</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; intento(s).&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">intento</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">CLAVE</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">reintentos</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">intento</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">CLAVE</span><span class="p">))</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Acceso permitido&quot;</span><span class="p">);</span>
+<span class="k">else</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Acceso denegado&quot;</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="errores-tipicos-y-como-evitarlos">🧠 Errores típicos y cómo evitarlos 🚧</h2>
+<ul>
+<li>❌ <strong>Olvidar el <code>;</code></strong> al final del <code>while (condición);</code></li>
+<li>❌ <strong>Nunca cambiar las variables</strong> que afectan a la condición → <strong>bucle infinito</strong>.</li>
+<li>❌ <strong>Condición al revés</strong>: <code>while (opcion == 0)</code> cuando querías <code>!= 0</code>.</li>
+<li>❌ Mezclar <code>nextInt()</code> y <code>nextLine()</code> sin limpiar el salto.</li>
+<li>❌ Validar mal rangos: usar <code>&amp;&amp;</code> donde necesitas <code>||</code> (o viceversa).</li>
+</ul>
+<hr />
+<h2 id="resumen">✅ Resumen</h2>
+<ul>
+<li><code>while</code>: puede no ejecutarse nunca.</li>
+<li><code>do-while</code>: siempre al menos una vez.</li>
+<li><code>do-while</code>: Ideal para menus, validaciones, reintentos.</li>
+</ul>
 
 
   
