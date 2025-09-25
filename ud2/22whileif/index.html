@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bucles-while-con-sentencias-if" class="md-skip">
+        <a href="#bucles-while-y-do-while-con-condicionales-if-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -780,15 +780,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
-    STEP 1
+  <a href="#usar-if-dentro-de-un-bucle" class="md-nav__link">
+    📌 Usar if dentro de un bucle
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2" class="md-nav__link">
-    STEP 2
+  <a href="#ejemplo-con-do-while-e-if" class="md-nav__link">
+    🔍 Ejemplo con do-while e if
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-tipico-menus-con-opciones" class="md-nav__link">
+    🧰 Uso típico: Menús con opciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-contar-positivos-y-negativos" class="md-nav__link">
+    🧪 Ejemplo práctico: contar positivos y negativos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-con-condiciones-compuestas" class="md-nav__link">
+    🎯 Ejemplo con condiciones compuestas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-tipicos-a-evitar" class="md-nav__link">
+    🧠 Errores típicos a evitar 🚧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-expres" class="md-nav__link">
+    ✅ Resumen exprés
   </a>
   
 </li>
@@ -2215,15 +2250,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
-    STEP 1
+  <a href="#usar-if-dentro-de-un-bucle" class="md-nav__link">
+    📌 Usar if dentro de un bucle
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2" class="md-nav__link">
-    STEP 2
+  <a href="#ejemplo-con-do-while-e-if" class="md-nav__link">
+    🔍 Ejemplo con do-while e if
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-tipico-menus-con-opciones" class="md-nav__link">
+    🧰 Uso típico: Menús con opciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-contar-positivos-y-negativos" class="md-nav__link">
+    🧪 Ejemplo práctico: contar positivos y negativos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-con-condiciones-compuestas" class="md-nav__link">
+    🎯 Ejemplo con condiciones compuestas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-tipicos-a-evitar" class="md-nav__link">
+    🧠 Errores típicos a evitar 🚧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-expres" class="md-nav__link">
+    ✅ Resumen exprés
   </a>
   
 </li>
@@ -2244,32 +2314,126 @@
 
 
 
-<h1 id="bucles-while-con-sentencias-if">Bucles <em>WHILE</em> con sentencias <em>IF</em></h1>
-<p>Este capítulo muestra cómo los bucles while y las instrucciones if se usan juntas para implementar la lógica de un programa.</p>
-<p>El siguiente código muestra un esqueleto de un programa que suma todos los números enteros hasta un límite y suma también los que son números pares.</p>
-<p><img alt="Java" src="../../img/ud22whileif1.png" /></p>
-<h2 id="step-1"><em>STEP 1</em></h2>
-<p>Primero, inicializamos la variable count. El bucle debe contar desde uno hasta el límite(incluido).
-En este programa, la mayor parte de la lógica está contenida dentro del cuerpo del bucle.</p>
-<p><img alt="Java" src="../../img/ud22whileif2.png" /></p>
-<p>Comprobamos que el programa se puede compilar y ejecutar. Si no fuera así, corrige los errores de sintaxis (si los hay) y busca qué errores tienes. Inserta algunas sentencias println temporales para ayudarte en la búsqueda de errores. (O usa un depurador).</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Es mejor escribir un programa por etapas. Escriba y depura cada etapa antes de construir sobre el. En un programa con un bucle principal, la primera etapa es construir el bucle.</p>
-</div>
-<h2 id="step-2"><em>STEP 2</em></h2>
-<p>El bucle de momento solo cuenta números hasta un límite, pero todavía no hace nada con ellos. Esto es lo que queremos que suceda:</p>
+<h1 id="bucles-while-y-do-while-con-condicionales-if-en-java">🖲️ Bucles <code>while</code> y <code>do-while</code> con condicionales <code>if</code> en Java</h1>
+<p>En muchos programas se combinan <strong>bucles de repetición</strong> (<code>while</code>, <code>do-while</code>) con <strong>sentencias condicionales</strong> (<code>if</code>, <code>if-else</code>).<br />
+Esto permite ejecutar <strong>diferentes acciones dentro del bucle</strong> dependiendo de las condiciones. E implementar la lógica de un programa.</p>
+<hr />
+<h2 id="usar-if-dentro-de-un-bucle">📌 Usar <code>if</code> dentro de un bucle</h2>
+<p>El <code>if</code> se utiliza para <strong>tomar decisiones</strong> en cada iteración del bucle.<br />
+De esta forma, el flujo dentro del bucle puede variar según los datos.</p>
+<p>Ejemplo sencillo:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; es par&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; es impar&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<strong>Salida:</strong>
+<div class="highlight"><pre><span></span><code>0 es par
+1 es impar
+2 es par
+3 es impar
+4 es par
+</code></pre></div></p>
+<hr />
+<h2 id="ejemplo-con-do-while-e-if">🔍 Ejemplo con <code>do-while</code> e <code>if</code></h2>
+<p><div class="highlight"><pre><span></span><code><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Introduce un número (0 para salir): &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Es positivo&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Es negativo&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fin del programa&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div>
+👉 El programa <strong>se repite mientras <code>numero != 0</code></strong>. Dentro del bucle, con <code>if</code> comprobamos si el número es positivo, negativo o cero.</p>
+<hr />
+<h2 id="uso-tipico-menus-con-opciones">🧰 Uso típico: Menús con opciones</h2>
+<p>Los menús suelen combinar <code>do-while</code> con <code>if</code> o <code>switch</code>.<br />
+Ejemplo con <code>if</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">opcion</span><span class="p">;</span>
+
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;=== MENÚ ===&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1. Saludar&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2. Despedir&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;0. Salir&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Elige opción: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">opcion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">opcion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Hola!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">opcion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Adiós!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">opcion</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Opción inválida&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opcion</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>🔑 Muy usado en <strong>programas interactivos</strong> donde el usuario puede elegir acciones.</p>
+</blockquote>
+<hr />
+<h2 id="ejemplo-practico-contar-positivos-y-negativos">🧪 Ejemplo práctico: contar positivos y negativos</h2>
+<p><div class="highlight"><pre><span></span><code><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">,</span><span class="w"> </span><span class="n">positivos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">negativos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introduce números (0 para salir):&quot;</span><span class="p">);</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">positivos</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">negativos</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Positivos: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">positivos</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Negativos: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">negativos</span><span class="p">);</span>
+</code></pre></div>
+👉 Aquí el <code>if</code> <strong>diferencia casos</strong> dentro del bucle y acumula estadísticas.</p>
+<hr />
+<h2 id="ejemplo-con-condiciones-compuestas">🎯 Ejemplo con condiciones compuestas</h2>
+<p>Podemos usar operadores lógicos (<code>&amp;&amp;</code>, <code>||</code>) dentro del <code>if</code>:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; es múltiplo de 2 y de 3&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<strong>Salida:</strong>
+<div class="highlight"><pre><span></span><code>6 es múltiplo de 2 y de 3
+</code></pre></div></p>
+<hr />
+<h2 id="errores-tipicos-a-evitar">🧠 Errores típicos a evitar 🚧</h2>
 <ul>
-<li>Sumar cada entero y asignarlo a sumaTotal.</li>
-<li>Sumar cada entero par y asginarlo a sumaPar.</li>
+<li>❌ <strong>Olvidar actualizar la variable</strong> → bucle infinito.</li>
+<li>❌ <strong>Confundir condición del bucle y del if</strong> (ej: <code>while (x &gt; 0)</code> pero dentro restamos sin control).</li>
+<li>❌ No cubrir todos los casos en el <code>if</code> → situaciones sin tratar.</li>
 </ul>
-<p><strong>¿Cómo decidimos cuando agregar un número entero a sumaPar?</strong>
-Para ello necesitaremos la sentencia <strong><em>if</em></strong>.</p>
-<p>El cuerpo del bucle en este programa contiene una instrucción if. Una instrucción if dentro de un cuerpo de bucle se denomina if anidado. No tiene nada de especial funciona igual que fuera del cuerpo del bucle.</p>
-<p><img alt="Java" src="../../img/ud22whileif3.png" /></p>
-<p>¿Cómo calculamos los números que son pares? Los números pares son aquellos que son divisibles por 2.
-Podemos hacerlo usando el operador %. Si el resto al dividir entre 2 da 0, entonces obtenemos un número par.</p>
-<p><img alt="Java" src="../../img/ud22whileif4.png" /></p>
+<hr />
+<h2 id="resumen-expres">✅ Resumen exprés</h2>
+<ul>
+<li><code>while</code> y <code>do-while</code> permiten repetir código.  </li>
+<li><code>if</code> dentro de un bucle decide <strong>qué hacer en cada vuelta</strong>.  </li>
+<li>Muy útil para <strong>menus, validaciones, contadores, juegos</strong>.  </li>
+<li>Vigila las condiciones y actualizadores para evitar bucles infinitos.  </li>
+</ul>
 
 
   
