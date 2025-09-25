@@ -2572,15 +2572,21 @@ Se introdujo en las primeras versiones de Java y desde <strong>Java 14</strong> 
 <hr />
 <h2 id="pattern-matching-en-switch-java-21">🧠 Pattern Matching en switch (Java 21)</h2>
 <p>Ahora el <code>switch</code> entiende <strong>tipos</strong> y <strong>guardas (<code>when</code>)</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">describe</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Object obj = &quot;Soy texto&quot;;</span>
+<span class="w">    </span><span class="c1">//Object obj = &#39;A&#39;;</span>
+<span class="w">    </span><span class="c1">//Object obj = (byte) 14; //lo mismo con short</span>
+<span class="w">    </span><span class="c1">//Object obj = DiaSemana.JUEVES;</span>
+
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;es null&quot;</span><span class="p">;</span>
 <span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Cadena de longitud &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
 <span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Entero grande&quot;</span><span class="p">;</span>
 <span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Entero pequeño&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="n">Character</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Letra&quot;</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="n">DiaSemana</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Día semana&quot;</span>
 <span class="w">        </span><span class="k">default</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Otro tipo&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="p">};</span>
-<span class="p">}</span>
 </code></pre></div>
 <p>👉 Beneficios:      </p>
 <ul>
