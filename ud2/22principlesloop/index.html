@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#principios-del-diseno-de-bucles" class="md-skip">
+        <a href="#principios-y-buenas-practicas-de-bucles-en-java-while-do-while-for" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -797,9 +797,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Principios del diseño de bucles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Principios del diseño de bucles
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elegir-el-tipo-de-bucle-adecuado" class="md-nav__link">
+    🧭 Elegir el tipo de bucle adecuado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patron-universal-de-un-bucle" class="md-nav__link">
+    🧰 Patrón universal de un bucle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-expres" class="md-nav__link">
+    ✅ Resumen exprés
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2170,6 +2215,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elegir-el-tipo-de-bucle-adecuado" class="md-nav__link">
+    🧭 Elegir el tipo de bucle adecuado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patron-universal-de-un-bucle" class="md-nav__link">
+    🧰 Patrón universal de un bucle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-expres" class="md-nav__link">
+    ✅ Resumen exprés
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2184,14 +2258,41 @@
 
 
 
-<h1 id="principios-del-diseno-de-bucles">Principios del diseño de bucles</h1>
+<h1 id="principios-y-buenas-practicas-de-bucles-en-java-while-do-while-for">🖲️ Principios y buenas prácticas de bucles en Java (while, do-while, for)</h1>
+<h2 id="elegir-el-tipo-de-bucle-adecuado">🧭 Elegir el tipo de bucle adecuado</h2>
 <ul>
-<li>Un bucle de conteo se utiliza siempre que se sepa de antemano exactamente cuántas iteraciones se necesitan. La instrucción <strong><em>for</em></strong> de Java es una estructura apropiada para codificar un bucle de conteo.</li>
-<li>Se debe usar una estructura <strong><em>while</em></strong> cuando el problema sugiera que el cuerpo del bucle puede omitirse por completo.</li>
-<li>Una estructura <strong><em>do-while</em></strong> debe usarse solo cuando un bucle requiere al menos una o más iteraciones.</li>
-<li>La variable de bucle se utiliza para especificar la condición de entrada de bucle. Debe inicializarse a un valor inicial apropiado y debe actualizarse en cada iteración del bucle.</li>
-<li>El límite de un bucle puede ser un recuento, un centinela o, de manera más general, un límite condicional. Debe estar correctamente especificado en la expresión de entrada de bucle y el progreso hacia el límite debe realizarse en el actualizador.</li>
-<li>Puede producirse un bucle infinito si el inicializador, la expresión de entrada de bucle o la expresión del actualizador no se especifican correctamente.</li>
+<li><strong><code>for</code></strong> ➜ sabes (o puedes calcular) <strong>cuántas iteraciones</strong> habrá. Índice claro.</li>
+<li><strong><code>while</code></strong> ➜ repites <strong>mientras</strong> se cumpla una condición que <strong>puede empezar falsa</strong>.</li>
+<li><strong><code>do-while</code></strong> ➜ necesitas <strong>ejecutar al menos una vez</strong> (menús, validaciones iniciales).</li>
+<li><strong><code>for-each</code> (enhanced)</strong> ➜ recorrer colecciones/arrays <strong>sin usar índice</strong> ni modificar la colección.</li>
+</ul>
+<blockquote>
+<p>🔑 <em>Regla práctica</em>: “<strong>¿Conozco el número de pasos?</strong>” → <code>for</code>. “<strong>¿Depende de una condición externa?</strong>” → <code>while</code> / <code>do-while</code>.</p>
+</blockquote>
+<hr />
+<h2 id="patron-universal-de-un-bucle">🧰 Patrón universal de un bucle</h2>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// 1) Inicialización (estado)</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// ...</span>
+
+<span class="c1">// 2) Condición (permite continuar)</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 3) Trabajo (procesar 1 paso)</span>
+<span class="w">    </span><span class="n">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">datos</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// 4) Actualización (acercarse al fin)</span>
+<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+- <strong>Inicialización</strong>: qué vamos a recorrer y hasta dónde, se define el valor inicial de las variables que se usarán y modificarán dentro del bucle.   <br />
+- <strong>Invariante</strong>: propiedad que <strong>se mantiene</strong> en cada vuelta (p.ej., “<code>suma</code> contiene la suma de los <code>i</code> primeros elementos”).<br />
+- <strong>Condición de salida</strong>: debe <strong>volverse falsa</strong> con el tiempo.<br />
+- <strong>Actualización</strong>: cambia el estado para <strong>acercarse al final</strong>.</p>
+<hr />
+<h2 id="resumen-expres">✅ Resumen exprés</h2>
+<ul>
+<li><strong>Antes</strong>: define <em>inicialización</em>, <em>invariante</em>, <em>condición de salida</em>, <em>actualización</em>.</li>
+<li><strong>Durante</strong>: vigila límites e índices; evita off‑by‑one y mezcla peligrosa de <code>Scanner</code>.</li>
+<li><strong>Después</strong>: comprueba resultados con casos pequeños y añade <em>tests</em>.</li>
 </ul>
 
 
