@@ -917,6 +917,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#atajos-utiles" class="md-nav__link">
+    ⌨️ Atajos útiles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#como-empezar-a-depurar-en-intellij-idea" class="md-nav__link">
     ⚙️ Cómo empezar a depurar en IntelliJ IDEA
   </a>
@@ -948,6 +955,47 @@
   <a href="#tipos-de-breakpoints" class="md-nav__link">
     🧠 Tipos de breakpoints
   </a>
+  
+    <nav class="md-nav" aria-label="🧠 Tipos de breakpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakpoint-normal-linea" class="md-nav__link">
+    🔴 Breakpoint normal (línea)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakpoint-condicional" class="md-nav__link">
+    🟡 Breakpoint condicional
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakpoint-de-excepcion" class="md-nav__link">
+    🟢 Breakpoint de excepción
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logpoint-sin-detener-el-programa" class="md-nav__link">
+    🟣 Logpoint (sin detener el programa)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakpoints-avanzados" class="md-nav__link">
+    🧩 Breakpoints avanzados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2317,6 +2365,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#atajos-utiles" class="md-nav__link">
+    ⌨️ Atajos útiles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#como-empezar-a-depurar-en-intellij-idea" class="md-nav__link">
     ⚙️ Cómo empezar a depurar en IntelliJ IDEA
   </a>
@@ -2348,6 +2403,47 @@
   <a href="#tipos-de-breakpoints" class="md-nav__link">
     🧠 Tipos de breakpoints
   </a>
+  
+    <nav class="md-nav" aria-label="🧠 Tipos de breakpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakpoint-normal-linea" class="md-nav__link">
+    🔴 Breakpoint normal (línea)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakpoint-condicional" class="md-nav__link">
+    🟡 Breakpoint condicional
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakpoint-de-excepcion" class="md-nav__link">
+    🟢 Breakpoint de excepción
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logpoint-sin-detener-el-programa" class="md-nav__link">
+    🟣 Logpoint (sin detener el programa)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakpoints-avanzados" class="md-nav__link">
+    🧩 Breakpoints avanzados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2471,6 +2567,49 @@ Mientras que las <strong>pruebas</strong> (<em>testing</em>) verifican los resul
 </tbody>
 </table>
 <hr />
+<h2 id="atajos-utiles">⌨️ Atajos útiles</h2>
+<table>
+<thead>
+<tr>
+<th>Acción</th>
+<th>Windows / Linux</th>
+<th>macOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alternar breakpoint</td>
+<td>Ctrl + F8</td>
+<td>⌘ + F8</td>
+</tr>
+<tr>
+<td>Ver todos los breakpoints</td>
+<td>Ctrl + Shift + F8</td>
+<td>⌘ ⇧ F8</td>
+</tr>
+<tr>
+<td>Debug (iniciar)</td>
+<td>Shift + Alt + F9</td>
+<td>⌘ D (según keymap)</td>
+</tr>
+<tr>
+<td>Step Over</td>
+<td>F8</td>
+<td>F8</td>
+</tr>
+<tr>
+<td>Step Into</td>
+<td>F7</td>
+<td>F7</td>
+</tr>
+<tr>
+<td>Resume</td>
+<td>F9</td>
+<td>F9</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="como-empezar-a-depurar-en-intellij-idea">⚙️ Cómo empezar a depurar en IntelliJ IDEA</h2>
 <ol>
 <li><strong>Abre tu clase principal</strong> (la que tiene el <code>main</code>).  </li>
@@ -2552,6 +2691,63 @@ aplicación.</p>
 <blockquote>
 <p><code>acumulado &gt; 50 &amp;&amp; nombre.equals("admin")</code></p>
 </blockquote>
+<h3 id="breakpoint-normal-linea">🔴 Breakpoint normal (línea)</h3>
+<p>🪄 <strong>Cómo se crea:</strong>
+- Haz clic en el <strong>margen izquierdo</strong> de la línea → aparece un punto rojo.<br />
+- O usa el atajo: <strong>Ctrl + F8</strong> (Windows/Linux) · <strong>⌘ + F8</strong> (macOS).</p>
+<p>⚙️ <strong>Opciones disponibles (clic derecho sobre el punto):</strong>
+- ✅ <strong>Enabled</strong>: activar o desactivar sin eliminarlo.<br />
+- ⏸️ <strong>Suspend:</strong> elige si se detiene <strong>todo el programa (All)</strong> o solo el <strong>hilo actual (Thread)</strong>.<br />
+- 🔢 <strong>Hit count:</strong> haz que solo se active a partir de la <em>n</em>-ésima vez que pasa por esa línea.  </p>
+<p>📍 <strong>Uso típico:</strong> detener el programa justo antes de una línea que sospechas que tiene un error.</p>
+<hr />
+<h3 id="breakpoint-condicional">🟡 Breakpoint condicional</h3>
+<p>🪄 <strong>Cómo se crea:</strong>
+1. Coloca un breakpoint normal.<br />
+2. Haz <strong>clic derecho</strong> sobre él → en el campo <strong>Condition</strong> escribe una expresión Java que devuelva <code>true</code> o <code>false</code>.</p>
+<p>🧮 <strong>Ejemplos de condición:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span>
+<span class="n">contador</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span>
+<span class="n">usuario</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;admin&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">intentos</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span>
+</code></pre></div></p>
+<p>💡 <strong>Truco:</strong> puedes combinar con <em>Hit count</em> (ej. “activa solo cuando <code>i &gt; 10</code> y sea la 3ª vez que pasa”).</p>
+<p>📍 <strong>Uso típico:</strong> detenerte solo cuando ocurre algo específico, sin parar en cada iteración.</p>
+<hr />
+<h3 id="breakpoint-de-excepcion">🟢 Breakpoint de excepción</h3>
+<p>🪄 <strong>Cómo se crea:</strong>
+1. Abre <strong>Run → View Breakpoints…</strong><br />
+   o usa el atajo <strong>Ctrl + Shift + F8</strong> / <strong>⌘ ⇧ F8</strong>.<br />
+2. Pulsa <strong>+ → Java Exception Breakpoint</strong>.<br />
+3. Escribe el tipo de excepción (ejemplo: <code>NullPointerException</code>).</p>
+<p>⚙️ <strong>Opciones útiles:</strong>
+- <strong>Caught / Uncaught:</strong> elige si parar también en excepciones capturadas (<code>try-catch</code>) o solo en las no capturadas.<br />
+- <strong>Condition:</strong> para filtrar casos (por ejemplo: <code>obj == null</code>).<br />
+- <strong>Class filters:</strong> limitar a una clase o paquete específico.</p>
+<p>📍 <strong>Uso típico:</strong> detectar exactamente dónde se lanza una excepción, incluso dentro de librerías.</p>
+<hr />
+<h3 id="logpoint-sin-detener-el-programa">🟣 Logpoint (sin detener el programa)</h3>
+<p>🪄 <strong>Cómo se crea:</strong>
+1. Coloca un breakpoint normal.<br />
+2. Haz <strong>clic derecho</strong> sobre el punto.<br />
+3. <strong>Desmarca</strong> la casilla <em>Suspend</em> (para que no se detenga).<br />
+4. Marca <em>Log message to console</em> y escribe tu mensaje personalizado.</p>
+<p>✍️ <strong>Ejemplo de mensaje:</strong>
+<div class="highlight"><pre><span></span><code>i={i}, acumulado={acumulado}
+</code></pre></div></p>
+<p>💡 Puedes incluir expresiones entre llaves <code>{}</code> para mostrar valores en tiempo real.</p>
+<p>📍 <strong>Uso típico:</strong> imprimir trazas o valores de variables sin usar <code>System.out.println()</code> ni detener la ejecución.</p>
+<hr />
+<h3 id="breakpoints-avanzados">🧩 Breakpoints avanzados</h3>
+<p>⚙️ <strong>Dependientes entre sí</strong>
+- En <em>View Breakpoints…</em> puedes hacer que un breakpoint B <strong>solo se active</strong> si antes saltó el A.<br />
+  👉 Usa la opción <em>“Disable until breakpoint is hit”</em>.</p>
+<p>⚙️ <strong>De método o campo</strong>
+- En <em>View Breakpoints… → +</em> puedes añadir:
+  - <strong>Method Breakpoint:</strong> se activa al <strong>entrar o salir</strong> de un método.
+  - <strong>Field Breakpoint:</strong> se activa cuando cambia el valor de un atributo.<br />
+  ⚠️ Son más pesados: úsalos solo para casos puntuales.</p>
+<p>⚙️ <strong>Mute Breakpoints</strong>
+- En la barra de depuración hay un icono de 🔇 para <strong>silenciar</strong> todos los breakpoints temporalmente sin borrarlos.</p>
 <hr />
 <h2 id="experimenta-con-estos-pasos">🧪 Experimenta con estos pasos</h2>
 <h3 id="a-deteccion-de-excepciones">🧩 A. Detección de excepciones</h3>
