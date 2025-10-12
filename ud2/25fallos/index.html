@@ -2692,17 +2692,17 @@ aplicación.</p>
 <p><code>acumulado &gt; 50 &amp;&amp; nombre.equals("admin")</code></p>
 </blockquote>
 <h3 id="breakpoint-normal-linea">🔴 Breakpoint normal (línea)</h3>
-<p>🪄 <strong>Cómo se crea:</strong>
+<p>🪄 <strong>Cómo se crea:</strong>      <br />
 - Haz clic en el <strong>margen izquierdo</strong> de la línea → aparece un punto rojo.<br />
 - O usa el atajo: <strong>Ctrl + F8</strong> (Windows/Linux) · <strong>⌘ + F8</strong> (macOS).</p>
-<p>⚙️ <strong>Opciones disponibles (clic derecho sobre el punto):</strong>
+<p>⚙️ <strong>Opciones disponibles (clic derecho sobre el punto):</strong>    <br />
 - ✅ <strong>Enabled</strong>: activar o desactivar sin eliminarlo.<br />
 - ⏸️ <strong>Suspend:</strong> elige si se detiene <strong>todo el programa (All)</strong> o solo el <strong>hilo actual (Thread)</strong>.<br />
 - 🔢 <strong>Hit count:</strong> haz que solo se active a partir de la <em>n</em>-ésima vez que pasa por esa línea.  </p>
 <p>📍 <strong>Uso típico:</strong> detener el programa justo antes de una línea que sospechas que tiene un error.</p>
 <hr />
 <h3 id="breakpoint-condicional">🟡 Breakpoint condicional</h3>
-<p>🪄 <strong>Cómo se crea:</strong>
+<p>🪄 <strong>Cómo se crea:</strong>      <br />
 1. Coloca un breakpoint normal.<br />
 2. Haz <strong>clic derecho</strong> sobre él → en el campo <strong>Condition</strong> escribe una expresión Java que devuelva <code>true</code> o <code>false</code>.</p>
 <p>🧮 <strong>Ejemplos de condición:</strong>
@@ -2714,19 +2714,19 @@ aplicación.</p>
 <p>📍 <strong>Uso típico:</strong> detenerte solo cuando ocurre algo específico, sin parar en cada iteración.</p>
 <hr />
 <h3 id="breakpoint-de-excepcion">🟢 Breakpoint de excepción</h3>
-<p>🪄 <strong>Cómo se crea:</strong>
+<p>🪄 <strong>Cómo se crea:</strong>      <br />
 1. Abre <strong>Run → View Breakpoints…</strong><br />
    o usa el atajo <strong>Ctrl + Shift + F8</strong> / <strong>⌘ ⇧ F8</strong>.<br />
 2. Pulsa <strong>+ → Java Exception Breakpoint</strong>.<br />
 3. Escribe el tipo de excepción (ejemplo: <code>NullPointerException</code>).</p>
-<p>⚙️ <strong>Opciones útiles:</strong>
+<p>⚙️ <strong>Opciones útiles:</strong>   <br />
 - <strong>Caught / Uncaught:</strong> elige si parar también en excepciones capturadas (<code>try-catch</code>) o solo en las no capturadas.<br />
 - <strong>Condition:</strong> para filtrar casos (por ejemplo: <code>obj == null</code>).<br />
 - <strong>Class filters:</strong> limitar a una clase o paquete específico.</p>
 <p>📍 <strong>Uso típico:</strong> detectar exactamente dónde se lanza una excepción, incluso dentro de librerías.</p>
 <hr />
 <h3 id="logpoint-sin-detener-el-programa">🟣 Logpoint (sin detener el programa)</h3>
-<p>🪄 <strong>Cómo se crea:</strong>
+<p>🪄 <strong>Cómo se crea:</strong>      <br />
 1. Coloca un breakpoint normal.<br />
 2. Haz <strong>clic derecho</strong> sobre el punto.<br />
 3. <strong>Desmarca</strong> la casilla <em>Suspend</em> (para que no se detenga).<br />
@@ -2738,15 +2738,15 @@ aplicación.</p>
 <p>📍 <strong>Uso típico:</strong> imprimir trazas o valores de variables sin usar <code>System.out.println()</code> ni detener la ejecución.</p>
 <hr />
 <h3 id="breakpoints-avanzados">🧩 Breakpoints avanzados</h3>
-<p>⚙️ <strong>Dependientes entre sí</strong>
+<p>⚙️ <strong>Dependientes entre sí</strong>      <br />
 - En <em>View Breakpoints…</em> puedes hacer que un breakpoint B <strong>solo se active</strong> si antes saltó el A.<br />
   👉 Usa la opción <em>“Disable until breakpoint is hit”</em>.</p>
-<p>⚙️ <strong>De método o campo</strong>
-- En <em>View Breakpoints… → +</em> puedes añadir:
+<p>⚙️ <strong>De método o campo</strong>      <br />
+- En <em>View Breakpoints… → +</em> puedes añadir:   <br />
   - <strong>Method Breakpoint:</strong> se activa al <strong>entrar o salir</strong> de un método.
   - <strong>Field Breakpoint:</strong> se activa cuando cambia el valor de un atributo.<br />
   ⚠️ Son más pesados: úsalos solo para casos puntuales.</p>
-<p>⚙️ <strong>Mute Breakpoints</strong>
+<p>⚙️ <strong>Mute Breakpoints</strong>   <br />
 - En la barra de depuración hay un icono de 🔇 para <strong>silenciar</strong> todos los breakpoints temporalmente sin borrarlos.</p>
 <hr />
 <h2 id="experimenta-con-estos-pasos">🧪 Experimenta con estos pasos</h2>
