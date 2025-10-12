@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#prueba-y-depuracion-de-aplicaciones" class="md-skip">
+        <a href="#guia-de-depuracion-en-intellij-idea" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -903,43 +903,105 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#debug-en-intellij" class="md-nav__link">
-    Debug en IntelliJ
+  <a href="#que-significa-depurar" class="md-nav__link">
+    💡 ¿Qué significa depurar?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-basicos-del-depurador" class="md-nav__link">
+    🧩 Elementos básicos del depurador
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-empezar-a-depurar-en-intellij-idea" class="md-nav__link">
+    ⚙️ Cómo empezar a depurar en IntelliJ IDEA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecutar-debug" class="md-nav__link">
+    🐞 Ejecutar Debug
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#breakpoint-punto-de-ruptura" class="md-nav__link">
-    Breakpoint / Punto de ruptura
+    🐞 Breakpoint / Punto de ruptura
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tipos-de-ejecucion" class="md-nav__link">
-    Tipos de ejecución
+  <a href="#ejemplo-sencillo" class="md-nav__link">
+    🎯 Ejemplo sencillo
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examinador-de-variables" class="md-nav__link">
-    Examinador de variables
+  <a href="#tipos-de-breakpoints" class="md-nav__link">
+    🧠 Tipos de breakpoints
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#proceso-de-depuracion" class="md-nav__link">
-    Proceso de depuración
+  <a href="#experimenta-con-estos-pasos" class="md-nav__link">
+    🧪 Experimenta con estos pasos
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Experimenta con estos pasos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-deteccion-de-excepciones" class="md-nav__link">
+    🧩 A. Detección de excepciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-localiza-el-fallo-logico" class="md-nav__link">
+    ⚙️ B. Localiza el fallo lógico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-usa-breakpoints-condicionales" class="md-nav__link">
+    🕵️‍♂️ C. Usa breakpoints condicionales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pila-de-llamadas-y-variables" class="md-nav__link">
+    🧭 Pila de llamadas y variables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cambiar-codigo-en-caliente" class="md-nav__link">
-    Cambiar código en caliente
+  <a href="#hotswap-cambiar-codigo-sin-reiniciar" class="md-nav__link">
+    🔥 HotSwap: cambiar código sin reiniciar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-recomendado-al-depurar" class="md-nav__link">
+    🧭 Flujo recomendado al depurar
   </a>
   
 </li>
@@ -2241,43 +2303,105 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#debug-en-intellij" class="md-nav__link">
-    Debug en IntelliJ
+  <a href="#que-significa-depurar" class="md-nav__link">
+    💡 ¿Qué significa depurar?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-basicos-del-depurador" class="md-nav__link">
+    🧩 Elementos básicos del depurador
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-empezar-a-depurar-en-intellij-idea" class="md-nav__link">
+    ⚙️ Cómo empezar a depurar en IntelliJ IDEA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecutar-debug" class="md-nav__link">
+    🐞 Ejecutar Debug
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#breakpoint-punto-de-ruptura" class="md-nav__link">
-    Breakpoint / Punto de ruptura
+    🐞 Breakpoint / Punto de ruptura
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tipos-de-ejecucion" class="md-nav__link">
-    Tipos de ejecución
+  <a href="#ejemplo-sencillo" class="md-nav__link">
+    🎯 Ejemplo sencillo
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examinador-de-variables" class="md-nav__link">
-    Examinador de variables
+  <a href="#tipos-de-breakpoints" class="md-nav__link">
+    🧠 Tipos de breakpoints
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#proceso-de-depuracion" class="md-nav__link">
-    Proceso de depuración
+  <a href="#experimenta-con-estos-pasos" class="md-nav__link">
+    🧪 Experimenta con estos pasos
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Experimenta con estos pasos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-deteccion-de-excepciones" class="md-nav__link">
+    🧩 A. Detección de excepciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-localiza-el-fallo-logico" class="md-nav__link">
+    ⚙️ B. Localiza el fallo lógico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-usa-breakpoints-condicionales" class="md-nav__link">
+    🕵️‍♂️ C. Usa breakpoints condicionales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pila-de-llamadas-y-variables" class="md-nav__link">
+    🧭 Pila de llamadas y variables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cambiar-codigo-en-caliente" class="md-nav__link">
-    Cambiar código en caliente
+  <a href="#hotswap-cambiar-codigo-sin-reiniciar" class="md-nav__link">
+    🔥 HotSwap: cambiar código sin reiniciar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-recomendado-al-depurar" class="md-nav__link">
+    🧭 Flujo recomendado al depurar
   </a>
   
 </li>
@@ -2298,21 +2422,76 @@
 
 
 
-<h1 id="prueba-y-depuracion-de-aplicaciones">🖲️ Prueba y depuración de aplicaciones</h1>
-<p>Todo IDE ofrece un conjunto de herramientas
-para hacer debug.</p>
-<p>El debug permite supervisar la ejecución de los
-programas, para localizar y eliminar los errores
-de programación.</p>
-<p>Es necesario que un programa compile para poder
-depurarlo.</p>
-<ul>
-<li>Permite suspender la ejecución de un programa, examinar y establecer los valores de las variables, comprobar los valores devueltos por un determinado método, el resultado de una comparación lógica o relacional, etc...</li>
-</ul>
-<h2 id="debug-en-intellij">Debug en IntelliJ</h2>
+<h1 id="guia-de-depuracion-en-intellij-idea">🖲️ Guía de Depuración en IntelliJ IDEA</h1>
+<blockquote>
+<p>💬 <strong>Objetivo:</strong> Comprender qué significa <em>depurar un programa</em> y aprender a usar el depurador de IntelliJ IDEA paso a paso. 
+Este material está diseñado para que entiendas no solo <strong>cómo usarlo</strong>, sino <strong>por qué</strong> la depuración es una herramienta esencial para programadores.</p>
+</blockquote>
+<hr />
+<h2 id="que-significa-depurar">💡 ¿Qué significa depurar?</h2>
+<p>Depurar (o <em>debugging</em>) es <strong>ejecutar un programa paso a paso</strong> para encontrar la causa exacta de un error.<br />
+Mientras que las <strong>pruebas</strong> (<em>testing</em>) verifican los resultados, la <strong>depuración</strong> te permite <strong>ver qué ocurre dentro del código</strong> mientras se ejecuta.</p>
+<p>🔍 <strong>En resumen:</strong>
+- Sirve para encontrar <strong>errores de lógica</strong>, no solo de sintaxis.
+- Te deja <strong>ver los valores de las variables</strong> y el <strong>flujo del programa</strong>.
+- Se hace con herramientas llamadas <strong>depuradores</strong> (debuggers).</p>
+<hr />
+<h2 id="elementos-basicos-del-depurador">🧩 Elementos básicos del depurador</h2>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Breakpoint (punto de interrupción)</strong></td>
+<td>Marca dónde se detiene el programa.</td>
+</tr>
+<tr>
+<td><strong>Step Over (<code>F8</code>)</strong></td>
+<td>Avanza a la siguiente línea sin entrar en métodos.</td>
+</tr>
+<tr>
+<td><strong>Step Into (<code>F7</code>)</strong></td>
+<td>Entra dentro del método que se está llamando.</td>
+</tr>
+<tr>
+<td><strong>Step Out (<code>Shift+F8</code>)</strong></td>
+<td>Sale del método actual.</td>
+</tr>
+<tr>
+<td><strong>Resume (<code>F9</code>)</strong></td>
+<td>Reanuda la ejecución hasta el siguiente breakpoint.</td>
+</tr>
+<tr>
+<td><strong>Evaluate / Watch</strong></td>
+<td>Permite ver y evaluar expresiones o variables.</td>
+</tr>
+<tr>
+<td><strong>Call Stack</strong></td>
+<td>Muestra qué métodos se han llamado unos a otros.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="como-empezar-a-depurar-en-intellij-idea">⚙️ Cómo empezar a depurar en IntelliJ IDEA</h2>
+<ol>
+<li><strong>Abre tu clase principal</strong> (la que tiene el <code>main</code>).  </li>
+<li><strong>Coloca un breakpoint</strong> en el margen izquierdo de la línea que quieras analizar.  </li>
+<li>Atajo: <code>Ctrl + F8</code> (Windows/Linux).</li>
+<li>Haz clic en el icono del 🪲 o elige <strong>Run → Debug</strong>.  </li>
+<li>Cuando el programa se detenga, verás:</li>
+<li>Variables locales.</li>
+<li>Pila de llamadas (<em>Call Stack</em>).</li>
+<li>Botones para avanzar (Step Into, Step Over, etc.).</li>
+</ol>
+<hr />
+<h2 id="ejecutar-debug">🐞 Ejecutar Debug</h2>
 <p><img alt="Debug" src="../../img/22debug.png" /></p>
 <p><em>Run</em> --&gt; <em>Debug</em></p>
-<h2 id="breakpoint-punto-de-ruptura">Breakpoint / Punto de ruptura</h2>
+<h2 id="breakpoint-punto-de-ruptura">🐞 Breakpoint / Punto de ruptura</h2>
 <p><img alt="Debug" src="../../img/22debug2.png" /></p>
 <ul>
 <li>
@@ -2333,34 +2512,94 @@ aplicación.</p>
 <p>2) O continuar su ejecución hasta el final.</p>
 </li>
 </ul>
-<h2 id="tipos-de-ejecucion">Tipos de ejecución</h2>
-<ul>
-<li>Primero hemos de lanzar el Debug (ALT + SHIFT + F9)</li>
-<li>Step Over (F8) / Paso a paso:</li>
-<li>Step Into (F7) / Paso a paso entrando en el método/procedimiento</li>
-<li>Resume (F9) / Continuar</li>
-<li>Step Out (SHIFT + F8) / Ejecución de un programa hasta el final</li>
-</ul>
-<h2 id="examinador-de-variables">Examinador de variables</h2>
-<ul>
-<li>En cualquier momento podemos inspeccionar el valor y tipo de una variable</li>
-<li>Si queremos evaluar esas variables más de una vez, es mejor crear un “Watchpoint” sobre ellas</li>
-<li>Botón derecho + Add to Watches o pestaña variables</li>
-</ul>
-<h2 id="proceso-de-depuracion">Proceso de depuración</h2>
-<p>1) Localizar el problema</p>
-<p>2) Poner un breakpoint en la línea del error o en la entrada a la llamada</p>
-<div class="highlight"><pre><span></span><code>● Poner watchpoint sobre los datos más sensibles
+<hr />
+<h2 id="ejemplo-sencillo">🎯 Ejemplo sencillo</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DepuracionIntro</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leerEnteroSeguro</span><span class="p">(</span><span class="s">&quot;7&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// prueba a pasar &quot;siete&quot;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">suma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Resultado: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">leerEnteroSeguro</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">suma</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// bug intencionado</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>3) Lanzar el Debug y utilizar Step Over o Step Into. En cada paso, evaluar el contenido de las
-variables o expresiones fijadas.</p>
-<p>4) Una vez localizado el error, detener el debug.</p>
-<h2 id="cambiar-codigo-en-caliente">Cambiar código en caliente</h2>
+<p>👁️‍🗨️ <strong>Pasos guiados:</strong>
+1. Coloca un breakpoint en la línea de <code>int z = suma(x, y);</code>
+2. Inicia el modo depuración.
+3. Usa <code>F7</code> para entrar en el método <code>suma</code>.
+4. Observa cómo cambian los valores de las variables.
+5. Comprueba por qué el resultado no es el esperado.</p>
+<hr />
+<h2 id="tipos-de-breakpoints">🧠 Tipos de breakpoints</h2>
 <ul>
-<li>Al detener un programa mediante un breakpoint, podemos modificar el valor de cualquier variable y ver cómo actúa nuestro código.</li>
-<li>Pestaña Variables → campo botón derecho → set value...</li>
+<li>🔴 <strong>Normal:</strong> detiene la ejecución en esa línea.  </li>
+<li>🟡 <strong>Condicional:</strong> solo se activa si se cumple una condición (ej: <code>i &gt; 10</code>).  </li>
+<li>🟢 <strong>De excepción:</strong> se activa cuando se lanza una excepción (por ejemplo <code>NullPointerException</code>).  </li>
+<li>🟣 <strong>Logpoint:</strong> no detiene, solo imprime un mensaje con el valor de una variable.</li>
 </ul>
+<p>💬 Ejemplo de breakpoint condicional:</p>
+<blockquote>
+<p><code>acumulado &gt; 50 &amp;&amp; nombre.equals("admin")</code></p>
+</blockquote>
+<hr />
+<h2 id="experimenta-con-estos-pasos">🧪 Experimenta con estos pasos</h2>
+<h3 id="a-deteccion-de-excepciones">🧩 A. Detección de excepciones</h3>
+<ul>
+<li>Pasa <code>"siete"</code> como argumento a <code>leerEnteroSeguro</code>.  </li>
+<li>Crea un <em>breakpoint de excepción</em> para <code>NumberFormatException</code>.  </li>
+<li>Observa <strong>dónde se lanza</strong> y <strong>dónde se captura</strong> la excepción.</li>
+</ul>
+<h3 id="b-localiza-el-fallo-logico">⚙️ B. Localiza el fallo lógico</h3>
+<ul>
+<li>Ejecuta el programa con <code>x=5</code> y <code>y=7</code>.  </li>
+<li>Depura paso a paso y analiza por qué devuelve <code>11</code> en lugar de <code>12</code>.  </li>
+<li>Corrige el error en el método <code>suma</code>.</li>
+</ul>
+<h3 id="c-usa-breakpoints-condicionales">🕵️‍♂️ C. Usa breakpoints condicionales</h3>
+<ul>
+<li>Crea un bucle que sume del 1 al 20.  </li>
+<li>Detén el programa solo cuando <code>acumulado &gt; 50</code>.  </li>
+<li>Usa la condición en el breakpoint y verifica el comportamiento.</li>
+</ul>
+<hr />
+<h2 id="pila-de-llamadas-y-variables">🧭 Pila de llamadas y variables</h2>
+<p>Durante la depuración podrás ver:
+- <strong>Variables locales</strong> y sus valores.
+- <strong>Expresiones observadas</strong> (Watch).
+- <strong>Evaluaciones rápidas</strong> (<code>Alt+F8</code>).
+- <strong>Call Stack:</strong> la secuencia exacta de métodos llamados.</p>
+<p>Esto te permite entender <em>quién llama a quién</em> y <em>en qué orden</em> se ejecuta el código.</p>
+<hr />
+<h2 id="hotswap-cambiar-codigo-sin-reiniciar">🔥 HotSwap: cambiar código sin reiniciar</h2>
+<p>IntelliJ permite modificar ligeramente el código durante una sesión de depuración.<br />
+Puedes cambiar el contenido de un método y aplicar los cambios con <strong>Ctrl + F9</strong>.<br />
+⚠️ Si cambias estructuras grandes (clases, firmas de métodos…), tendrás que reiniciar.</p>
 <p><img alt="Debug" src="../../img/22debug1.png" /></p>
+<hr />
+<h2 id="flujo-recomendado-al-depurar">🧭 Flujo recomendado al depurar</h2>
+<ol>
+<li>Reproduce el error con los mismos datos.  </li>
+<li>Coloca breakpoints cerca del problema.  </li>
+<li>Observa los valores de las variables.  </li>
+<li>Usa Step Over / Step Into para entender el flujo.  </li>
+<li>Ajusta condiciones y vuelve a probar.  </li>
+<li>Una vez localizado el fallo, corrígelo y verifica que desaparece.</li>
+</ol>
+<hr />
 
 
   
