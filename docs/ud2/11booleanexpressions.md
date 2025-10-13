@@ -1,4 +1,4 @@
-# Expresiones booleanas
+# 🖲️ Expresiones booleanas
 
 Las sentencias if del capítulo anterior incluían preguntas simples de verdadero / falso (expresiones booleanas) como num<10 o jugadores==1. A menudo, las expresiones booleanas simples no son suficientes. Este capítulo trata sobre expresiones booleanas más complicadas.
 

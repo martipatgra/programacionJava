@@ -1,4 +1,4 @@
-# Excepciones
+# 🖲️ Excepciones
 
 ## Jerarquía de excepciones en Java
 

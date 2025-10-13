@@ -1,60 +1,126 @@
-# Sentencia _WHILE_
+# 🖲️ Bucle `while` en Java
 
-Una estructura de repetición es una estructura de control que repite una declaración o secuencia de declaraciones de forma controlada. Las estructuras de repetición también se denominan estructuras de **_bucle_**. Muchos tipos de tareas de programación requieren una estructura de repetición. Por ejemplo:
+El bucle `while` nos permite **repetir** un bloque de instrucciones **mientras se cumpla una condición**.
 
-+ Sumar los cuadrados de los números del 1 al 100.
-+ Un empleado de seguridad informática quiere probar todas las contraseñas posibles para entrar en la cuenta de un presunto espía.
-+ Quieres que los jugadores inserten movimientos durante un turno en un juego hasta que el juego ha terminado.
+---
 
-![Java](../img/while.png)
-
-La instrucción **while** es una instrucción de bucle en la que la condición de bucle ocurre antes que el cuerpo del bucle. Tiene la siguiente estructura:
+## 📌 Sintaxis básica
 
 ```java
-    while (condición) {
-        //cuerpo del bucle
-        //bloque de código: sentencia(s)
-    }
+while (condición) {
+    //cuerpo del bucle
+    // bloque de sentencias
+}
 
-    //VARIANTES: Si solo tiene una sentencia en el cuerpo 
-    //también se puede escribir así
+//VARIANTES: Si solo tiene una sentencia en el cuerpo 
+    //también se puede escribir así sin llaves
     while (condición)
         //sentencia;
 ```
 
-Contiene la palabra reservada _while_ seguida de un bloque de código. Un bloque es un conjunto de sentencias encerradas entre corchetes { y }.
+![Java](../img/while.png)
 
-Cuando se ejecuta la instrucción while, se evalúa la condición del bucle, que es una expresión booleana y sucede alguno de los siguientes escenarios:
+- La **condición** debe ser de tipo `boolean` (`true` o `false`).
+- Primero se ejecuta la condición.
+- El bloque o cuerpo del bucle se ejecuta **solo si la condición es verdadera**.
+- Se repite hasta que la condición sea falsa.
 
-1. Si esto se evalúa como falso, la ejecución continúa en la instrucción inmediatamente después del cuerpo del bucle(fuera del bloque).
-2. Si la condición de bucle se evalúa como verdadero, el cuerpo del bucle se ejecuta y luego la condición se evalúa nuevamente y se repite el proceso.
+---
 
-El cuerpo del bucle continúa ejecutándose hasta que la condición se evalúa como falsa.
-
-Para que una declaración while realice una tarea, la variable o variables en la condición de entrada de bucle deben inicializarse correctamente antes; y además estas variables deben actualizarse correctamente al final del cuerpo de bucle. Podemos reformular las pautas anteriores como un principio de diseño:
-
-!!! warning "Una estructura while correctamente diseñada debe incluir 3 partes:"
-    + un inicializador,
-    + una condición de bucle y
-    + un actualizador. El actualizador debe garantizar que la condición de entrada del bucle finalmente falle, **permitiendo así que el bucle termine**.
+## 🧩 Ejemplo sencillo
 
 ```java
-    //inicializadores
-    while ( condición ) {
-        //sentencias
-        //actualizador
-    }
+int i = 1;
+
+while (i <= 5) {
+    System.out.println("Valor de i: " + i);
+    i++;
+}
 ```
 
-## Ejemplo: _Mostrar los 3 primeros números_
+**Salida:**
+
+```
+Valor de i: 1
+Valor de i: 2
+Valor de i: 3
+Valor de i: 4
+Valor de i: 5
+```
+
+---
+
+## ⚠️ Importante: riesgo de bucle infinito
+
+Una estructura while correctamente diseñada debe incluir 3 partes para no tener un bucle infinito:      
++ un inicializador,
++ una condición de bucle y
++ un actualizador. El actualizador debe garantizar que la condición de entrada del bucle finalmente falle, **permitiendo así que el bucle termine**.
+
+Si la condición **nunca llega a ser falsa**, el bucle **no termina**.
 
 ```java
-    int i = 1; //inicializador
+//WHILE CORRECTO
+int i = 1; //inicializador
 
-    while (i <= 3) {
-        System.out.println(i);//Sentencia
-        i = i + 1;//actualizador
+while (i <= 3) { //condición
+    System.out.println(i);//Sentencia
+    i = i + 1;//actualizador
+}
+
+//WHILE INCORRECTO
+int i = 1;//inicializador
+
+while (i <= 5) { //condición
+    System.out.println("i vale: " + i);//Sentencia
+    // ❌ Falta incrementar i → bucle infinito, no hay actualizador
+}
+```
+
+👉 Recuerda siempre que el valor de la condición debe **cambiar en algún momento**.
+
+---
+
+## 🎯 Casos de uso típicos
+
+- 🔢 **Contadores:** recorrer números de un rango.  
+- 🎮 **Lectura de datos:** repetir hasta que el usuario introduzca algo válido.  
+- 📂 **Procesamiento:** recorrer una estructura hasta que se acabe.  
+
+---
+
+## 🖥️ Ejemplo práctico: pedir contraseña
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String password = "java123";
+        String intento = "";
+
+        while (!intento.equals(password)) {
+            System.out.print("Introduce la contraseña: ");
+            intento = sc.nextLine();
+        }
+
+        System.out.println("¡Acceso concedido!");
     }
+}
+```
+
+---
+
+## Ejemplo: _Mostrar los 3 primero números_
+
+```java
+int i = 1;
+
+while (i <= 3) {
+    System.out.println(i);
+    i = i + 1;
+}
 ```
 
 Salida
@@ -67,12 +133,12 @@ Salida
 
 Traza
 
-| Iteración | Variable | i <= 3 | Acción                         |
-|-----------|----------|--------|--------------------------------|
-| 1a        | i = 1    | true   | imprime 1, incrementa i=2 |
-| 2a        | i = 2    | true   | imprime 2, incrementa i = 3             |
-| 3a        | i = 3    | true   | imprime 3, incrementa i = 4             |
-| 4a        | i = 4    | false  | termina el bucle               |
+| Iteración | Variable     | i <= 3 | Acción          |
+|-----------|--------------|--------|-----------------|
+|1a         | i=1          | true   |imprime 1, incrementa i=2    |
+|2a         |	i = 2      | true   |imprime 2, incrementa i = 3  |
+|3a         |	i = 3	   | true	|imprime 3, incrementa i = 4  |
+|4a         |	i = 4	   | false	|termina el bucle             |
 
 ## Ejemplo: _Sumar los números del 0 al 10_
 
@@ -105,3 +171,12 @@ Traza
 | 5a        | suma=6, i=4  | true    | suma=10, incrementa i(5)     |
 | ..        | ..           | ..      | ..              |
 | 12a       | suma=55, i=11 | false   | termina         |
+
+---
+
+## 💡 Consejos para no liarte
+
+- Asegúrate de que la **condición cambiará** en algún momento.  
+- Empieza siempre con ejemplos **muy simples**.  
+- Si el bucle no termina: revisa **incrementos** o **condiciones lógicas**.  
+- Úsalo cuando **no sepas cuántas repeticiones exactas** habrá.  

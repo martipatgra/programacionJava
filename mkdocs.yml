@@ -13,6 +13,7 @@ nav:
       - 💾 Tipos de datos: 
         - Datos primitivos: ud1/14datatypejava.md
         - Datos no primitivos: ud1/142noprimitive.md
+        - Enum: ud1/1421enum.md
         - String: ud1/143string.md
       - 💾 Operadores y expresiones: ud1/15operators.md
       - 💾 Comentarios en Java: ud1/16comments.md

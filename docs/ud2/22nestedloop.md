@@ -1,6 +1,40 @@
-# Bucles anidados
+# 🖲️ Bucles anidados en Java
 
-Un bucle anidado es una estructura en la que un bucle está contenido dentro del cuerpo de otro bucle.
+Los **bucles anidados** son bucles **dentro de otros bucles**. Se usan para recorrer **estructuras bidimensionales** (tablas, matrices), generar **patrones** o repetir acciones por **filas y columnas**.
+
+> 🧠 **Idea mental**: piensa en **dos contadores**: el de **fuera** controla la *fila* y el de **dentro** controla la *columna*.
+
+---
+
+## 🧱 Estructura general (for de filas y columnas)
+
+```java
+for (int fila = 0; fila < nFil; fila++) {        // bucle exterior: filas
+    for (int col = 0; col < nCol; col++) {       // bucle interior: columnas
+        // acción para la celda (fila, col)
+    }
+}
+```
+- El **exterior** se ejecuta **nFil** veces.        
+- Por **cada** vuelta del exterior, el **interior** se ejecuta **nCol** veces.      
+- Total de iteraciones: **nFil × nCol**.        
+
+---
+
+## 🧭 Orden de ejecución (traza por capas)
+
+Para `nFil=2`, `nCol=3`:
+
+```
+fila=0 → col=0,1,2
+fila=1 → col=0,1,2
+```
+
+**El interior recorre todas las columnas por cada fila.**
+
+---
+
+## 🔍 Ejemplo 1 — Imprimir una matriz de número
 
 Por ejemplo, imagina que quieres imprimir algo como la siguiente tabla de números, donde en la fila y columnas superiores aparecen las posiciones y dentro de las filas tenemos fila x columna.
 
@@ -16,20 +50,44 @@ Para producir esta tabla de multiplicar, podríamos usar los siguientes bucles _
 5    }
 ```
 
-Indentamos el código para hacer que sea más legible. En este ejemplo, el bucle externo controla el número de filas en la tabla, es decir, nuestra elección de fila como su contador de bucle.
+---
 
-La instrucción println() (línea 4) se ejecuta después de que el bucle interno haya terminado de iterar, lo que nos permite imprimir una nueva fila en cada iteración del bucle externo.
+## 🔍 Ejemplo 2 — Imprimir una rejilla F×C de asteriscos
 
-El bucle interno imprime los nueve valores en cada fila imprimiendo la expresión _col * fila_. Obviamente, el valor de esta expresión depende de ambas variables de bucle.
+```java
+int F = 3, C = 5;
+for (int fila = 0; fila < F; fila++) {
+    for (int col = 0; col < C; col++) {
+        System.out.print("*");
+    }
+    System.out.println(); // salto de línea al acabar la fila
+}
+```
+**Salida (3 filas x 5 columnas):**
+```
+*****
+*****
+*****
+```
 
-Analicemos un poco el ejemplo anterior:
+---
 
-1. ¿Cuántas veces se ejecuta la instrucción for en la línea 2? El bucle interno se ejecuta una vez por cada iteración del bucle externo. Por lo tanto, se ejecuta cuatro veces, que es el mismo número de veces que se ejecuta la línea 4.
-2. ¿Cuántas veces se ejecuta la declaración de la línea 3? El cuerpo del bucle interno se ejecuta 36 veces, 9 veces por cada ejecución de la línea 2.
+## 🎯 Ejemplo 3 — Tabla de multiplicar (1..10)
 
-## Patrones de FOR anidado
+```java
+for (int i = 1; i <= 10; i++) {
+    for (int j = 1; j <= 10; j++) {
+        System.out.printf("%4d", i * j);
+    }
+    System.out.println();
+}
+```
 
-A veces es útil usar la variable del bucle externo como límite para el bucle interno. Por ejemplo, veamos el siguiente patrón:
+---
+
+## 🧩 Triángulos (patrones de texto)
+
+Ejemplo de patrón:
 
 ![Java](../img/ud22forfor.png)
 
@@ -86,3 +144,132 @@ A menudo los literales que aparecen como límites en los bucles for se denominan
         System.out.println();
     }
 ```
+
+### Triángulo creciente
+```java
+int n = 5;
+for (int fila = 1; fila <= n; fila++) {
+    for (int col = 1; col <= fila; col++) {
+        System.out.print("#");
+    }
+    System.out.println();
+}
+```
+**Salida:**
+```
+#
+##
+###
+####
+#####
+```
+
+### Triángulo alineado a la derecha
+```java
+int n = 5;
+for (int fila = 1; fila <= n; fila++) {
+    for (int esp = 1; esp <= n - fila; esp++) System.out.print(" ");
+    for (int col = 1; col <= fila; col++) System.out.print("#");
+    System.out.println();
+}
+```
+
+**Salida:**
+```
+    #
+   ##
+  ###
+ ####
+#####
+```
+
+---
+
+
+## 🧠 Errores típicos (y cómo evitarlos) 🚧
+
+- ❌ **No reiniciar el índice interior**.  
+  ✅ El `for` interior reinicia su **contador** al inicio de **cada fila**; si usas `while`, **recoloca** la variable.
+- ❌ **Límites incorrectos** (`<=` en lugar de `<` o al revés).  
+  ✅ Para `0..n-1` usa `< n`. Para `1..n` usa `<= n`.
+- ❌ **Imprimir saltos de línea mal situados** (dentro del interior).  
+  ✅ El salto de línea va **después** del interior, al cerrar cada fila.
+- ❌ **Usar la longitud de la fila equivocada** en matrices irregulares.  
+  ✅ Usa `m[f].length` para la columna.
+- ❌ **Complejidad sin control**: anidar más bucles de la cuenta.  
+  ✅ Recuerda: **O(n·m)**, **O(n³)**, etc. Evita grandes anidamientos si no es necesario.
+
+---
+
+## 🔁 while + for (o viceversa): equivalencias
+
+```java
+// while exterior y for interior
+int fila = 0, F = 3, C = 4;
+while (fila < F) {
+    for (int col = 0; col < C; col++) {
+        System.out.print("*");
+    }
+    System.out.println();
+    fila++;
+}
+```
+
+```java
+// for exterior y while interior
+for (int f = 0; f < F; f++) {
+    int c = 0;
+    while (c < C) {
+        System.out.print("*");
+        c++;
+    }
+    System.out.println();
+}
+```
+
+---
+
+## 🧰 Plantillas (copia/pega)
+
+```java
+// Rejilla F x C
+for (int f = 0; f < F; f++) {
+    for (int c = 0; c < C; c++) {
+        // ...
+    }
+}
+
+// Rectángulo hueco
+for (int f = 0; f < F; f++) {
+    for (int c = 0; c < C; c++) {
+        boolean borde = (f == 0 || f == F-1 || c == 0 || c == C-1);
+        System.out.print(borde ? "#" : " ");
+    }
+    System.out.println();
+}
+
+// Recorrer matriz irregular
+for (int f = 0; f < m.length; f++) {
+    for (int c = 0; c < m[f].length; c++) {
+        // usar m[f][c]
+    }
+}
+```
+
+---
+
+## 🐞 Depuración rápida
+
+- **Trazas** con coordenadas: `System.out.println("f=" + f + ", c=" + c);`
+- **Imprime solo algunas celdas** para no saturar la consola.
+- **Comprueba límites** antes de acceder: `0 ≤ f < m.length` y `0 ≤ c < m[f].length`.
+- **Aísla el problema**: prueba primero el interior con 1 fila, luego aumenta filas.
+
+---
+
+## ✅ Resumen exprés
+
+- Un bucle **exterior** (filas) y uno **interior** (columnas).  
+- Piensa en **coordenadas** `(fila, col)`; al terminar el interior, cambia de fila.  
+- Úsalos para **tablas, matrices, patrones y búsquedas 2D**.  
+- Respeta límites y reinicios; ojo con **O(n·m)**.

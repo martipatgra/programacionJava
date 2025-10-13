@@ -1,4 +1,4 @@
-# Break y continue
+# 🖲️ Break y continue
 
 Las sentencias break y continue son las sentencias de salto que se utilizan para omitir algunas sentencias dentro del bucle o terminar el bucle inmediatamente sin comprobar la condición. Estas instrucciones se pueden usar dentro de cualquier bucle, como for, while, do-while.
 

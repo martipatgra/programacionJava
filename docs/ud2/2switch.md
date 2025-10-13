@@ -137,15 +137,21 @@ String tipo = switch (dia) {
 Ahora el `switch` entiende **tipos** y **guardas (`when`)**:
 
 ```java
-static String describe(Object obj) {
-    return switch (obj) {
+    Object obj = Integer.valueOf(100);
+    //Object obj = "Soy texto";
+    //Object obj = 'A';
+    //Object obj = (byte) 14; //lo mismo con short
+    //Object obj = DiaSemana.JUEVES;
+
+    String resultado = switch (obj) {
         case null -> "es null";
         case String s -> "Cadena de longitud " + s.length();
         case Integer i when i > 100 -> "Entero grande";
         case Integer i -> "Entero pequeño";
+        case Character l -> "Letra"
+        case DiaSemana d -> "Día semana"
         default -> "Otro tipo";
     };
-}
 ```
 
 👉 Beneficios:      
@@ -189,8 +195,12 @@ int resultado = switch (valor) {
 };
 ```
 
-### Pattern matching con guarda
+### Pattern matching con guarda (when)
 ```java
+//Object obj = null;
+Object obj = Integer.valueOf(3);
+//Object obj = "Esto es un texto"; Otra opción con String
+
 String kind = switch (obj) {
     case Integer i when i % 2 == 0 -> "Número par";
     case Integer i -> "Número impar";

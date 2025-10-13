@@ -1,4 +1,4 @@
-# Sentencia _IF_
+# 🖲️ Instrucción `if-else` en Java
 
 Este apartado analiza cómo los programas del ordenador toman decisiones utilizando la sentencia **_if_**. Esta sentencia es uno de los bloques de construcción fundamentales de la programación.
 

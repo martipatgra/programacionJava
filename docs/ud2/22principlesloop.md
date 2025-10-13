@@ -1,8 +1,37 @@
-# Principios del diseño de bucles
+# 🖲️ Principios y buenas prácticas de bucles en Java (while, do-while, for)
 
-+ Un bucle de conteo se utiliza siempre que se sepa de antemano exactamente cuántas iteraciones se necesitan. La instrucción **_for_** de Java es una estructura apropiada para codificar un bucle de conteo.
-+ Se debe usar una estructura **_while_** cuando el problema sugiera que el cuerpo del bucle puede omitirse por completo.
-+ Una estructura **_do-while_** debe usarse solo cuando un bucle requiere al menos una o más iteraciones.
-+ La variable de bucle se utiliza para especificar la condición de entrada de bucle. Debe inicializarse a un valor inicial apropiado y debe actualizarse en cada iteración del bucle.
-+ El límite de un bucle puede ser un recuento, un centinela o, de manera más general, un límite condicional. Debe estar correctamente especificado en la expresión de entrada de bucle y el progreso hacia el límite debe realizarse en el actualizador.
-+ Puede producirse un bucle infinito si el inicializador, la expresión de entrada de bucle o la expresión del actualizador no se especifican correctamente.
+## 🧭 Elegir el tipo de bucle adecuado
+- **`for`** ➜ sabes (o puedes calcular) **cuántas iteraciones** habrá. Índice claro.
+- **`while`** ➜ repites **mientras** se cumpla una condición que **puede empezar falsa**.
+- **`do-while`** ➜ necesitas **ejecutar al menos una vez** (menús, validaciones iniciales).
+- **`for-each` (enhanced)** ➜ recorrer colecciones/arrays **sin usar índice** ni modificar la colección.
+
+> 🔑 *Regla práctica*: “**¿Conozco el número de pasos?**” → `for`. “**¿Depende de una condición externa?**” → `while` / `do-while`.
+
+---
+
+## 🧰 Patrón universal de un bucle
+```java
+// 1) Inicialización (estado)
+int i = 0; int suma = 0; // ...
+
+// 2) Condición (permite continuar)
+while (i < n) {
+    // 3) Trabajo (procesar 1 paso)
+    suma += datos[i];
+
+    // 4) Actualización (acercarse al fin)
+    i++;
+}
+```
+- **Inicialización**: qué vamos a recorrer y hasta dónde, se define el valor inicial de las variables que se usarán y modificarán dentro del bucle.     
+- **Invariante**: propiedad que **se mantiene** en cada vuelta (p.ej., “`suma` contiene la suma de los `i` primeros elementos”).  
+- **Condición de salida**: debe **volverse falsa** con el tiempo.  
+- **Actualización**: cambia el estado para **acercarse al final**.
+
+---
+
+## ✅ Resumen exprés
+- **Antes**: define *inicialización*, *invariante*, *condición de salida*, *actualización*.
+- **Durante**: vigila límites e índices; evita off‑by‑one y mezcla peligrosa de `Scanner`.
+- **Después**: comprueba resultados con casos pequeños y añade *tests*.

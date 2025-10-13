@@ -68,30 +68,3 @@ Ejemplo de código para mostara la fecha y la hora:
   String formatted = formatter.format(ldt);
   System.out.println(formatted);
 ```
-
-## Enum en Java
-
-El tipo enumerado es un tipo de datos especial que permite que una variable sea un conjunto de constantes predefinidas. La variable debe ser igual a uno de los valores que se han predefinido para ella.
-
-Debido a que son constantes, los nombres de los campos del tipo enum deben estar en letras mayúsculas.
-
-En Java, se define un enumerado utilizando la palabra clave **enum** seguido del nombre siguiendo la convención del nombrado de clases. Primera letra en mayúscula y CamelCase.
-
-Para crear un enum en Java, botón derecho en el paquete --> new Java class y seleccionamos enum.
-
-Ejemplo de enumerado:
-
-```java
-  public enum PuntosCardinales {
-    NORTE, SUR, ESTE, OESTE
-  }
-
-  public class Main {
-
-    public static void main(String[] args) {
-      PuntosCardinales myVar = PuntosCardinales.ESTE;
-      System.out.println(myVar);
-    }
-
-  }
-```

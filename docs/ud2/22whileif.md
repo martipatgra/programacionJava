@@ -1,38 +1,145 @@
-# Bucles _WHILE_ con sentencias _IF_
+# 🖲️ Bucles `while` y `do-while` con condicionales `if` en Java
 
-Este capítulo muestra cómo los bucles while y las instrucciones if se usan juntas para implementar la lógica de un programa.
+En muchos programas se combinan **bucles de repetición** (`while`, `do-while`) con **sentencias condicionales** (`if`, `if-else`).  
+Esto permite ejecutar **diferentes acciones dentro del bucle** dependiendo de las condiciones. E implementar la lógica de un programa.
 
-El siguiente código muestra un esqueleto de un programa que suma todos los números enteros hasta un límite y suma también los que son números pares.
+---
 
-![Java](../img/ud22whileif1.png)
+## 📌 Usar `if` dentro de un bucle
 
-## _STEP 1_
+El `if` se utiliza para **tomar decisiones** en cada iteración del bucle.  
+De esta forma, el flujo dentro del bucle puede variar según los datos.
 
-Primero, inicializamos la variable count. El bucle debe contar desde uno hasta el límite(incluido).
-En este programa, la mayor parte de la lógica está contenida dentro del cuerpo del bucle.
+Ejemplo sencillo:
 
-![Java](../img/ud22whileif2.png)
+```java
+int i = 0;
+while (i < 5) {
+    if (i % 2 == 0) {
+        System.out.println(i + " es par");
+    } else {
+        System.out.println(i + " es impar");
+    }
+    i++;
+}
+```
+**Salida:**
+```
+0 es par
+1 es impar
+2 es par
+3 es impar
+4 es par
+```
 
-Comprobamos que el programa se puede compilar y ejecutar. Si no fuera así, corrige los errores de sintaxis (si los hay) y busca qué errores tienes. Inserta algunas sentencias println temporales para ayudarte en la búsqueda de errores. (O usa un depurador).
+---
 
-!!! tip
-    Es mejor escribir un programa por etapas. Escriba y depura cada etapa antes de construir sobre el. En un programa con un bucle principal, la primera etapa es construir el bucle.
+## 🔍 Ejemplo con `do-while` e `if`
 
-## _STEP 2_
+```java
+Scanner sc = new Scanner(System.in);
+int numero;
+do {
+    System.out.print("Introduce un número (0 para salir): ");
+    numero = sc.nextInt();
 
-El bucle de momento solo cuenta números hasta un límite, pero todavía no hace nada con ellos. Esto es lo que queremos que suceda:
+    if (numero > 0) {
+        System.out.println("Es positivo");
+    } else if (numero < 0) {
+        System.out.println("Es negativo");
+    } else {
+        System.out.println("Fin del programa");
+    }
 
-+ Sumar cada entero y asignarlo a sumaTotal.
-+ Sumar cada entero par y asginarlo a sumaPar.
+} while (numero != 0);
+```
+👉 El programa **se repite mientras `numero != 0`**. Dentro del bucle, con `if` comprobamos si el número es positivo, negativo o cero.
 
-**¿Cómo decidimos cuando agregar un número entero a sumaPar?**
-Para ello necesitaremos la sentencia **_if_**.
+---
 
-El cuerpo del bucle en este programa contiene una instrucción if. Una instrucción if dentro de un cuerpo de bucle se denomina if anidado. No tiene nada de especial funciona igual que fuera del cuerpo del bucle.
+## 🧰 Uso típico: Menús con opciones
 
-![Java](../img/ud22whileif3.png)
+Los menús suelen combinar `do-while` con `if` o `switch`.  
+Ejemplo con `if`:
 
-¿Cómo calculamos los números que son pares? Los números pares son aquellos que son divisibles por 2.
-Podemos hacerlo usando el operador %. Si el resto al dividir entre 2 da 0, entonces obtenemos un número par.
+```java
+Scanner sc = new Scanner(System.in);
+int opcion;
 
-![Java](../img/ud22whileif4.png)
+do {
+    System.out.println("=== MENÚ ===");
+    System.out.println("1. Saludar");
+    System.out.println("2. Despedir");
+    System.out.println("0. Salir");
+    System.out.print("Elige opción: ");
+    opcion = sc.nextInt();
+
+    if (opcion == 1) {
+        System.out.println("¡Hola!");
+    } else if (opcion == 2) {
+        System.out.println("¡Adiós!");
+    } else if (opcion != 0) {
+        System.out.println("Opción inválida");
+    }
+
+} while (opcion != 0);
+```
+> 🔑 Muy usado en **programas interactivos** donde el usuario puede elegir acciones.
+
+---
+
+## 🧪 Ejemplo práctico: contar positivos y negativos
+
+```java
+Scanner sc = new Scanner(System.in);
+int numero, positivos = 0, negativos = 0;
+
+System.out.println("Introduce números (0 para salir):");
+do {
+    numero = sc.nextInt();
+    if (numero > 0) {
+        positivos++;
+    } else if (numero < 0) {
+        negativos++;
+    }
+} while (numero != 0);
+
+System.out.println("Positivos: " + positivos);
+System.out.println("Negativos: " + negativos);
+```
+👉 Aquí el `if` **diferencia casos** dentro del bucle y acumula estadísticas.
+
+---
+
+## 🎯 Ejemplo con condiciones compuestas
+
+Podemos usar operadores lógicos (`&&`, `||`) dentro del `if`:
+
+```java
+int i = 1;
+while (i <= 10) {
+    if (i % 2 == 0 && i % 3 == 0) {
+        System.out.println(i + " es múltiplo de 2 y de 3");
+    }
+    i++;
+}
+```
+**Salida:**
+```
+6 es múltiplo de 2 y de 3
+```
+
+---
+
+## 🧠 Errores típicos a evitar 🚧
+- ❌ **Olvidar actualizar la variable** → bucle infinito.
+- ❌ **Confundir condición del bucle y del if** (ej: `while (x > 0)` pero dentro restamos sin control).
+- ❌ No cubrir todos los casos en el `if` → situaciones sin tratar.
+
+---
+
+## ✅ Resumen exprés
+- `while` y `do-while` permiten repetir código.  
+- `if` dentro de un bucle decide **qué hacer en cada vuelta**.  
+- Muy útil para **menus, validaciones, contadores, juegos**.  
+- Vigila las condiciones y actualizadores para evitar bucles infinitos.  
