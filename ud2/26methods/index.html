@@ -985,6 +985,89 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-con-metodos" class="md-nav__link">
+    🧰 Buenas prácticas con métodos
+  </a>
+  
+    <nav class="md-nav" aria-label="🧰 Buenas prácticas con métodos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uno-o-varios-return" class="md-nav__link">
+    🔁 ¿Uno o varios return?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-sola-responsabilidad" class="md-nav__link">
+    🧩 Una sola responsabilidad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nombres-claros-lowercamelcase" class="md-nav__link">
+    🏷️ Nombres claros (lowerCamelCase)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-mezclar-responsabilidades-de-es" class="md-nav__link">
+    🧪 No mezclar responsabilidades de E/S
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-pocos-y-relevantes" class="md-nav__link">
+    🎛️ Parámetros: pocos y relevantes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salidas-tempranas-guard-clauses" class="md-nav__link">
+    🚪 Salidas tempranas (guard clauses)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errores-y-valores-especiales" class="md-nav__link">
+    🔒 Errores y valores especiales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutaciones-y-efectos-secundarios" class="md-nav__link">
+    🧼 Mutaciones y efectos secundarios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamano-y-anidacion" class="md-nav__link">
+    📏 Tamaño y anidación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coherencia-con-static" class="md-nav__link">
+    🔁 Coherencia con static
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2336,6 +2419,89 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-con-metodos" class="md-nav__link">
+    🧰 Buenas prácticas con métodos
+  </a>
+  
+    <nav class="md-nav" aria-label="🧰 Buenas prácticas con métodos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uno-o-varios-return" class="md-nav__link">
+    🔁 ¿Uno o varios return?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-sola-responsabilidad" class="md-nav__link">
+    🧩 Una sola responsabilidad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nombres-claros-lowercamelcase" class="md-nav__link">
+    🏷️ Nombres claros (lowerCamelCase)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-mezclar-responsabilidades-de-es" class="md-nav__link">
+    🧪 No mezclar responsabilidades de E/S
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-pocos-y-relevantes" class="md-nav__link">
+    🎛️ Parámetros: pocos y relevantes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salidas-tempranas-guard-clauses" class="md-nav__link">
+    🚪 Salidas tempranas (guard clauses)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errores-y-valores-especiales" class="md-nav__link">
+    🔒 Errores y valores especiales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutaciones-y-efectos-secundarios" class="md-nav__link">
+    🧼 Mutaciones y efectos secundarios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamano-y-anidacion" class="md-nav__link">
+    📏 Tamaño y anidación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coherencia-con-static" class="md-nav__link">
+    🔁 Coherencia con static
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2525,6 +2691,79 @@
 
 <span class="p">}</span>
 </code></pre></div>
+<hr />
+<h2 id="buenas-practicas-con-metodos">🧰 Buenas prácticas con métodos</h2>
+<h3 id="uno-o-varios-return">🔁 ¿Uno o varios return?</h3>
+<ul>
+<li>Varios <code>return</code> <strong>están bien</strong> cuando <strong>aclaran</strong> el flujo (guard clauses / salidas tempranas).       </li>
+<li><strong>Evita</strong> múltiples <code>return</code> si eso <strong>oculta</strong> casos o complica leer la función.</li>
+</ul>
+<p>Regla práctica:   <br />
+- Métodos cortos → <strong>OK</strong> varios <code>return</code> (más legibles).   <br />
+- Métodos largos/condicionados → intenta <strong>simplificar</strong> primero; si no, considera 1 <code>return</code> al final.       </p>
+<p>Ejemplo (mejor con salidas tempranas)</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">puntuacionFinal</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">gameOver</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bonus</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">gameOver</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w">        </span><span class="c1">// guard clause: caso inválido, salimos</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nivel</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bonus</span><span class="p">;</span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">total</span><span class="p">;</span><span class="w">                     </span><span class="c1">// return principal</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El mismo ejemplo con un único return (correcto pero más verboso)</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">puntuacionFinalUno</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">gameOver</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bonus</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gameOver</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nivel</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">total</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="una-sola-responsabilidad">🧩 Una sola responsabilidad</h3>
+<ul>
+<li>Un método debería hacer una cosa y hacerla bien.</li>
+<li>Si el nombre necesita “y”, probablemente hay dos métodos ahí.</li>
+</ul>
+<h3 id="nombres-claros-lowercamelcase">🏷️ Nombres claros (lowerCamelCase)</h3>
+<ul>
+<li>Verbos para acciones: calcularTotal, imprimirMenu.</li>
+<li>Booleanos que lean como pregunta: esPar, tienePermiso.</li>
+</ul>
+<h3 id="no-mezclar-responsabilidades-de-es">🧪 No mezclar responsabilidades de E/S</h3>
+<ul>
+<li>Si devuelves un resultado, evita imprimir dentro del mismo método.</li>
+<li>Mejor: un método calcula y devuelve; otro método imprime.</li>
+</ul>
+<h3 id="parametros-pocos-y-relevantes">🎛️ Parámetros: pocos y relevantes</h3>
+<ul>
+<li>Apunta a ≤ 3 parámetros (si necesitas más, quizá falta una clase/estructura o dividir el método).</li>
+<li>Evita parámetros bandera (true/false) que cambian el comportamiento interno; separa en dos métodos (calcularConImpuestos vs calcularSinImpuestos).</li>
+</ul>
+<h3 id="salidas-tempranas-guard-clauses">🚪 Salidas tempranas (guard clauses)</h3>
+<ul>
+<li>Úsalas para validaciones y casos borde al inicio:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarAlumno</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w">  </span><span class="c1">// salida temprana: dato inválido</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Alumno: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="errores-y-valores-especiales">🔒 Errores y valores especiales</h3>
+<ul>
+<li>Evita valores “mágicos” como -1 si pueden confundir. Si el temario aún no cubre excepciones, documenta claramente qué significa el valor especial.</li>
+</ul>
+<h3 id="mutaciones-y-efectos-secundarios">🧼 Mutaciones y efectos secundarios</h3>
+<ul>
+<li>Prefiere métodos puros (que no cambian estado global) cuando sea posible; son más fáciles de probar.</li>
+<li>Si un método modifica algo, que el nombre lo sugiera: actualizarPuntuacion().</li>
+</ul>
+<h3 id="tamano-y-anidacion">📏 Tamaño y anidación</h3>
+<ul>
+<li>Métodos cortos (10–20 líneas) y con poca anidación son más legibles. Si aparecen varios if anidados, extrae métodos o usa salidas tempranas.</li>
+</ul>
+<h3 id="coherencia-con-static">🔁 Coherencia con static</h3>
+<ul>
+<li>Mientras trabajes en main, usar static simplifica las llamadas. Más adelante (POO) moverás lógica a métodos de instancia.</li>
+</ul>
 
 
   
