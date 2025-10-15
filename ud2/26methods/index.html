@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion-a-los-metodos-en-java" class="md-skip">
+        <a href="#introduccion-y-practica-con-metodos-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -917,15 +917,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#caracteristicas-de-los-metodos" class="md-nav__link">
-    Características de los métodos
+  <a href="#que-es-un-metodo" class="md-nav__link">
+    🧠 ¿Qué es un método?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sentencia-return-valores-devueltos" class="md-nav__link">
-    Sentencia Return - Valores devueltos
+  <a href="#anatomia-de-un-metodo" class="md-nav__link">
+    🧱 Anatomía de un método
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-void-sin-retorno" class="md-nav__link">
+    👋 Métodos void (sin retorno)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-con-valor-de-retorno" class="md-nav__link">
+    🎯 Métodos con valor de retorno
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-patrones-habituales" class="md-nav__link">
+    ↩️ return: patrones habituales
+  </a>
+  
+    <nav class="md-nav" aria-label="↩️ return: patrones habituales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-salidas-tempranas-evitar-else-anidados" class="md-nav__link">
+    1) Salidas tempranas (evitar else anidados)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-valor-por-defecto-actualizacion-condicional" class="md-nav__link">
+    2) Valor “por defecto” + actualización condicional
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametros-vs-argumentos-y-paso-por-valor" class="md-nav__link">
+    🧭 Parámetros vs. argumentos (y paso por valor)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-frecuentes" class="md-nav__link">
+    ⚠️ Errores frecuentes
   </a>
   
 </li>
@@ -2213,15 +2268,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#caracteristicas-de-los-metodos" class="md-nav__link">
-    Características de los métodos
+  <a href="#que-es-un-metodo" class="md-nav__link">
+    🧠 ¿Qué es un método?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sentencia-return-valores-devueltos" class="md-nav__link">
-    Sentencia Return - Valores devueltos
+  <a href="#anatomia-de-un-metodo" class="md-nav__link">
+    🧱 Anatomía de un método
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-void-sin-retorno" class="md-nav__link">
+    👋 Métodos void (sin retorno)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-con-valor-de-retorno" class="md-nav__link">
+    🎯 Métodos con valor de retorno
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-patrones-habituales" class="md-nav__link">
+    ↩️ return: patrones habituales
+  </a>
+  
+    <nav class="md-nav" aria-label="↩️ return: patrones habituales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-salidas-tempranas-evitar-else-anidados" class="md-nav__link">
+    1) Salidas tempranas (evitar else anidados)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-valor-por-defecto-actualizacion-condicional" class="md-nav__link">
+    2) Valor “por defecto” + actualización condicional
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametros-vs-argumentos-y-paso-por-valor" class="md-nav__link">
+    🧭 Parámetros vs. argumentos (y paso por valor)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-frecuentes" class="md-nav__link">
+    ⚠️ Errores frecuentes
   </a>
   
 </li>
@@ -2242,33 +2352,128 @@
 
 
 
-<h1 id="introduccion-a-los-metodos-en-java">🖲️ Introducción a los métodos en Java</h1>
-<p>Los métodos en Java son bloques de código que realizan una tarea en concreto, se utilizan para encapsular la lógica de un programa en funciones o procedimientos reutilizables. Los métodos sirven para hacer nuestro código más legible, más fácil de mantener y sin código duplicado.</p>
-<p>Todo el tiempo hemos estado usando un método llamado main, dentro de él se encuentran todas las sentencias que hemos ido ejecutando, ahora vamos a crear nuestros propios métodos teniendo en cuenta:</p>
-<h2 id="caracteristicas-de-los-metodos">Características de los métodos</h2>
+<h1 id="introduccion-y-practica-con-metodos-en-java">🖲️ Introducción y práctica con <strong>métodos en Java</strong></h1>
+<h2 id="que-es-un-metodo">🧠 ¿Qué es un método?</h2>
+<p>Un <strong>método</strong> es un bloque de código con un <strong>nombre</strong> que ejecuta una tarea. Sirve para <strong>reutilizar</strong> lógica, <strong>organizar</strong> el programa y <strong>evitar duplicidad</strong>.</p>
 <ul>
-<li>Tienen que estar dentro de una clase</li>
-<li>Tienen una definición: visibilidad [static] tipoDeRetorno nombreMetodo ([parámetros])<ul>
-<li>tipoDeRetorno, indica el tipo de dato que devuelve el método. Si no devuelve ningún valor se pone void</li>
-<li>nombreDelMetodo</li>
-<li>parámetros: lista de variables que acepta el método, esto es opcional.</li>
+<li>Están <strong>siempre dentro de una clase</strong>.</li>
+<li>Se <strong>invocan</strong> con su nombre y paréntesis: <code>saludar();</code></li>
+<li>Pueden <strong>recibir parámetros</strong> y <strong>devolver</strong> un valor con <code>return</code>.</li>
 </ul>
-</li>
-<li>Invocación a métodos: los métodos se invocan desde otros métodos o desde el main, para llamar a un método se utiliza el nombre y paréntesis, y si tiene se añaden los argumentos.</li>
-</ul>
+<hr />
+<h2 id="anatomia-de-un-metodo">🧱 Anatomía de un método</h2>
 <p><img alt="Método" src="../../img/ud26method2.png" /></p>
-<p><img alt="Método" src="../../img/ud26method.png" /></p>
-<p><mark class="critic">
-Los métodos se alinean unos debajo de otros, no se puede insertar un método dentro de otro método, y además deben estar dentro de la clase.
-</mark></p>
-<h2 id="sentencia-return-valores-devueltos">Sentencia <strong><code>Return</code></strong> - Valores devueltos</h2>
-<p>Un valor devuelto es información que un método <strong>devuelve al código que lo llamó</strong>. Cada método solo puede devolver un valor: cuando un método regresa, deja de ejecutarse (y continuamos donde lo dejamos antes de llamar al método). Para que el código que llamó al método use el valor devuelto, <strong>el valor devuelto debe almacenarse en una variable</strong> o <strong>usarse inmediatamente</strong>.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="nf">methodName</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// llamar a nombre de método devuelve expresión</span>
-<span class="w">     </span><span class="p">...</span>
-<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">expression</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">modificador</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="kd">static</span><span class="o">]</span><span class="w"> </span><span class="n">tipoDeRetorno</span><span class="w"> </span><span class="nf">nombreMetodo</span><span class="p">(</span><span class="o">[</span><span class="n">parámetros</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// cuerpo</span>
+<span class="w">    </span><span class="c1">// opcionalmente: return valor;  // si tipoDeRetorno no es void</span>
 <span class="p">}</span>
-<span class="n">type</span><span class="w"> </span><span class="n">variableName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">methodName</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span><span class="w">  </span><span class="c1">// variableName almacena el valor de retorno</span>
 </code></pre></div>
+<ul>
+<li><strong>Modificador</strong> (visibilidad): <code>public</code>, <code>private</code>, <code>protected</code>.</li>
+<li><strong><code>static</code></strong>: si lo añades, el método <strong>pertenece a la clase</strong> (se llama como <code>Clase.metodo()</code>).</li>
+<li><strong><code>tipoDeRetorno</code></strong>: tipo del valor devuelto. Usa <code>void</code> si <strong>no devuelve</strong> nada.</li>
+<li><strong>Nombre</strong>: en <em>lowerCamelCase</em>, claro y expresivo.</li>
+<li><strong>Parámetros</strong>: variables de entrada, separadas por comas.</li>
+</ul>
+<blockquote>
+<p>🔎 <em>Regla útil</em>: si un método <strong>hace más de una cosa</strong>, probablemente deba <strong>dividirse</strong> en varios.</p>
+</blockquote>
+<p><img alt="Método" src="../../img/ud26method.png" /></p>
+<hr />
+<h2 id="metodos-void-sin-retorno">👋 Métodos <code>void</code> (sin retorno)</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">saludar</span><span class="p">();</span><span class="w">                 </span><span class="c1">// invocación</span>
+<span class="w">        </span><span class="n">repetirSaludo</span><span class="p">(</span><span class="s">&quot;Ada&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">   </span><span class="c1">// invocación con parámetros</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Hola!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">repetirSaludo</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">veces</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">veces</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
+<span class="w">            </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>No llevan <code>return</code> con valor (pueden llevar <code>return;</code> a secas para <strong>salir antes del método</strong>).</li>
+</ul>
+<hr />
+<h2 id="metodos-con-valor-de-retorno">🎯 Métodos con <strong>valor de retorno</strong></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumar</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 12</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">esPar</span><span class="p">(</span><span class="n">total</span><span class="p">);</span><span class="w"> </span><span class="c1">// true si total % 2 == 0</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El total es par&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w">  </span><span class="c1">// 👈 devuelve el valor</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esPar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 👈 return “directo”</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>💡 <em>Tras ejecutar <code>return</code>, el método termina</em>. El código que haya después <strong>no se ejecuta</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="return-patrones-habituales">↩️ <code>return</code>: patrones habituales</h2>
+<h3 id="1-salidas-tempranas-evitar-else-anidados">1) Salidas tempranas (evitar <code>else</code> anidados)</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">puntuacionFinal</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">gameOver</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bonus</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">gameOver</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w">            </span><span class="c1">// salida temprana</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">nivel</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bonus</span><span class="p">);</span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">total</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="2-valor-por-defecto-actualizacion-condicional">2) Valor “por defecto” + actualización condicional</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">puntuacionFinal2</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">gameOver</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bonus</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w">                       </span><span class="c1">// valor por defecto</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gameOver</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">nivel</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bonus</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">total</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="parametros-vs-argumentos-y-paso-por-valor">🧭 Parámetros vs. argumentos (y paso <strong>por valor</strong>)</h2>
+<ul>
+<li>Los <strong>parámetros</strong> son las variables de la <strong>declaración</strong> del método, dentro de los paréntesis.</li>
+<li>Los <strong>argumentos</strong> son los <strong>valores</strong> concretos que pasas al <strong>invocar</strong>, cuando llamas al método.</li>
+<li>En Java todo se <strong>pasa por valor</strong>: el método recibe <strong>copias</strong> de los valores (para tipos primitivos).</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">incrementar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// ← aquí &#39;n&#39; es un PARÁMETRO</span>
+<span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="n">incrementar</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// ← aquí &#39;x&#39; es un ARGUMENTO</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// 5 → no cambió</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="errores-frecuentes">⚠️ Errores frecuentes</h2>
+<ul>
+<li>❌ <strong>Olvidar</strong> <code>return</code> cuando el método <strong>no es</strong> <code>void</code>.</li>
+<li>❌ Escribir código <strong>después</strong> de un <code>return</code> (es <strong>inaccesible</strong>).</li>
+<li>❌ Usar <code>==</code> para comparar <strong><code>String</code></strong> en lugar de <code>equals</code>.</li>
+<li>❌ Crear un método que <strong>hace demasiadas cosas</strong> (difícil de testear/reutilizar).</li>
+</ul>
+<hr />
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 
