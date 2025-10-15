@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#recursividad" class="md-skip">
+        <a href="#recursividad-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -937,31 +937,107 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#recursividad-como-un-enfoque-de-resolucion-de-problemas" class="md-nav__link">
-    Recursividad como un enfoque de resolución de problemas
+  <a href="#que-es-la-recursividad" class="md-nav__link">
+    🧠 ¿Qué es la recursividad?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parte-recursiva-y-caso-base" class="md-nav__link">
-    Parte recursiva y caso base
+  <a href="#estructura-basica-de-un-metodo-recursivo" class="md-nav__link">
+    🪜 Estructura básica de un método recursivo
   </a>
   
-    <nav class="md-nav" aria-label="Parte recursiva y caso base">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-funciona-paso-a-paso" class="md-nav__link">
+    ⚙️ Cómo funciona paso a paso
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peligro-recursion-infinita" class="md-nav__link">
+    🚫 Peligro: recursión infinita
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-clasico-factorial" class="md-nav__link">
+    🧩 Ejemplo clásico: factorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otro-ejemplo-suma-de-numeros" class="md-nav__link">
+    🧮 Otro ejemplo: suma de números
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-usar-recursividad" class="md-nav__link">
+    🧭 Cuándo usar recursividad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-visual-arbol-de-llamadas" class="md-nav__link">
+    🌳 Ejemplo visual: árbol de llamadas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-verificar-si-un-numero-es-palindromo" class="md-nav__link">
+    Ejemplo: Verificar si un número es palíndromo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-revertir-un-string" class="md-nav__link">
+    Ejemplo: Revertir un String
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-final" class="md-nav__link">
+    🧠 Resumen final
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursividad-vs-iteracion" class="md-nav__link">
+    🔁 Recursividad vs Iteración
+  </a>
+  
+    <nav class="md-nav" aria-label="🔁 Recursividad vs Iteración">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-1-factorial-n" class="md-nav__link">
-    EJEMPLO 1: Factorial: N!
+  <a href="#en-teoria" class="md-nav__link">
+    ✅ En teoría
   </a>
   
-    <nav class="md-nav" aria-label="EJEMPLO 1: Factorial: N!">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#traza" class="md-nav__link">
-    Traza
+  <a href="#en-la-practica" class="md-nav__link">
+    ⚙️ En la práctica
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-elegir-una-u-otra" class="md-nav__link">
+    🧩 Cuándo elegir una u otra
   </a>
   
 </li>
@@ -970,23 +1046,11 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-2-verificar-si-un-numero-es-palindromo" class="md-nav__link">
-    EJEMPLO 2: Verificar si un número es palíndromo
+      
+        <li class="md-nav__item">
+  <a href="#por-que-la-recursividad-es-importante" class="md-nav__link">
+    🧭 ¿Por qué la recursividad es importante?
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-3-revertir-un-string" class="md-nav__link">
-    EJEMPLO 3: Revertir un String
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2251,31 +2315,107 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#recursividad-como-un-enfoque-de-resolucion-de-problemas" class="md-nav__link">
-    Recursividad como un enfoque de resolución de problemas
+  <a href="#que-es-la-recursividad" class="md-nav__link">
+    🧠 ¿Qué es la recursividad?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parte-recursiva-y-caso-base" class="md-nav__link">
-    Parte recursiva y caso base
+  <a href="#estructura-basica-de-un-metodo-recursivo" class="md-nav__link">
+    🪜 Estructura básica de un método recursivo
   </a>
   
-    <nav class="md-nav" aria-label="Parte recursiva y caso base">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-funciona-paso-a-paso" class="md-nav__link">
+    ⚙️ Cómo funciona paso a paso
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peligro-recursion-infinita" class="md-nav__link">
+    🚫 Peligro: recursión infinita
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-clasico-factorial" class="md-nav__link">
+    🧩 Ejemplo clásico: factorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otro-ejemplo-suma-de-numeros" class="md-nav__link">
+    🧮 Otro ejemplo: suma de números
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-usar-recursividad" class="md-nav__link">
+    🧭 Cuándo usar recursividad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-visual-arbol-de-llamadas" class="md-nav__link">
+    🌳 Ejemplo visual: árbol de llamadas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-verificar-si-un-numero-es-palindromo" class="md-nav__link">
+    Ejemplo: Verificar si un número es palíndromo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-revertir-un-string" class="md-nav__link">
+    Ejemplo: Revertir un String
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-final" class="md-nav__link">
+    🧠 Resumen final
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursividad-vs-iteracion" class="md-nav__link">
+    🔁 Recursividad vs Iteración
+  </a>
+  
+    <nav class="md-nav" aria-label="🔁 Recursividad vs Iteración">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-1-factorial-n" class="md-nav__link">
-    EJEMPLO 1: Factorial: N!
+  <a href="#en-teoria" class="md-nav__link">
+    ✅ En teoría
   </a>
   
-    <nav class="md-nav" aria-label="EJEMPLO 1: Factorial: N!">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#traza" class="md-nav__link">
-    Traza
+  <a href="#en-la-practica" class="md-nav__link">
+    ⚙️ En la práctica
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-elegir-una-u-otra" class="md-nav__link">
+    🧩 Cuándo elegir una u otra
   </a>
   
 </li>
@@ -2284,23 +2424,11 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-2-verificar-si-un-numero-es-palindromo" class="md-nav__link">
-    EJEMPLO 2: Verificar si un número es palíndromo
+      
+        <li class="md-nav__item">
+  <a href="#por-que-la-recursividad-es-importante" class="md-nav__link">
+    🧭 ¿Por qué la recursividad es importante?
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-3-revertir-un-string" class="md-nav__link">
-    EJEMPLO 3: Revertir un String
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2320,75 +2448,137 @@
 
 
 
-<h1 id="recursividad">♾️ Recursividad</h1>
-<p><strong>Un método recursivo es un método que se llama a sí mismo</strong>. Un método iterativo es un método que usa un bucle para repetir una acción. En cierto sentido, la recursividad es una alternativa a las estructuras de control iterativas (en bucle).</p>
-<p>Por ejemplo, tenemos el siguiente método iterativo:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hola</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">);</span>
+<h1 id="recursividad-en-java">♾️ Recursividad en Java</h1>
+<h2 id="que-es-la-recursividad">🧠 ¿Qué es la recursividad?</h2>
+<p>La recursividad es una técnica de programación en la que <strong>un método se llama a sí mismo</strong> para resolver un problema.
+Cada llamada debe acercarse <strong>un poco más a la solución final</strong>, hasta llegar a un <strong>caso base</strong> que detiene el proceso.</p>
+<p>💬 En resumen:
+Un método recursivo es aquel que se repite a sí mismo, pero con un problema cada vez más pequeño, hasta que ya no necesita seguir repitiéndose.</p>
+<hr />
+<h2 id="estructura-basica-de-un-metodo-recursivo">🪜 Estructura básica de un método recursivo</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">metodoRecursivo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 1️⃣ Caso base: condición que detiene la recursión</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condición_de_parada</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="p">}</span><span class="w"> </span>
-</code></pre></div>
-<p>Una versión recursiva de ese método sería:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hola</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">hola</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="err">−</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">//Llamada recursiva</span>
-<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 2️⃣ Caso recursivo: llamada al propio método con un problema más pequeño</span>
+<span class="w">    </span><span class="n">metodoRecursivo</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Este método es recursivo porque se llama a sí mismo cuando <em>n</em> es mayor que 0. Sin embargo, ten en cuenta que cuando se llama a sí mismo, pasa <em>n - 1</em> como el valor de su parámetro. Si este método se llama inicialmente con n igual a 5, lo siguiente es una pila de lo que sucede. Las indentaciones indican cada vez que el método se llama a sí mismo:</p>
-<div class="highlight"><pre><span></span><code>hola(5)
-    imprime &quot;Hola&quot;
-    hola(4)
-        imprime &quot;Hola&quot;
-        hola(3)
-            imprime &quot;Hola&quot;
-            hola(2)
-                imprime &quot;Hola&quot;
-                hola(1)
-                    imprime &quot;Hola&quot;
-                    hola(0)
+<p>🔍 <strong>Ejemplo sencillo:</strong> contar hacia atrás</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cuentaAtras</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="c1">// 🛑 Caso base</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="w">    </span><span class="n">cuentaAtras</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 🔁 Llamada recursiva</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>En el ejemplo anterior, es mucho menos eficiente llamar a un método cinco veces que repetir un bucle <em>for</em> cinco veces. Las llamadas a métodos ocupan más memoria que los bucles e implican más sobrecarga computacional, en tareas como pasar parámetros, asignar almacenamiento para las variables locales del método y devolver los resultados del método.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Los algoritmos y métodos iterativos son generalmente más eficientes que los algoritmos recursivos que hacen lo mismo.</p>
-</div>
-<h2 id="recursividad-como-un-enfoque-de-resolucion-de-problemas">Recursividad como un enfoque de resolución de problemas</h2>
-<p>Dado que la recursividad no es realmente necesaria, si un lenguaje de programación tiene bucles, y no es más eficiente que los bucles, ¿por qué es tan importante?</p>
-<p>Porque la recursividad es un enfoque eficaz para la resolución de problemas. Es una forma de ver un problema.</p>
-<p>La recursividad se basa en dos conceptos clave de resolución de problemas: divide y vencerás y auto-similaridad. En la resolución de problemas recursivos, utilizamos la estrategia de divide y vencerás repetidamente para dividir un gran problema en una secuencia de problemas cada vez más pequeños hasta que llegamos a un problema que es prácticamente trivial de resolver. Lo que nos permite crear esta serie de subproblemas es que cada subproblema es similar al problema original, es decir, cada subproblema es solo una versión más pequeña del problema original.</p>
-<p>La capacidad de ver un problema, por uno compuesto por problemas más pequeños y similares es el núcleo del enfoque recursivo.</p>
-<h2 id="parte-recursiva-y-caso-base">Parte recursiva y caso base</h2>
-<p>Una definición recursiva consta de dos partes: <strong>una parte recursiva</strong> que se repite y reduce el problema en una versión más pequeña del problema original, y un <strong>caso base</strong> o límite no recursivo, que define una condición límite y se utiliza para detener la recursividad.</p>
-<p>Veamos esto con un ejemplo:</p>
-<h3 id="ejemplo-1-factorial-n">EJEMPLO 1: Factorial: N!</h3>
-<p>Recordamos como se hacía el cálculo de n!:</p>
-<p>n! = n * (n-1) * n(n-2) * .... mientras n &gt; 0</p>
-<p>Además, 0! se define como 1.</p>
-<p>Ejemplos:</p>
-<ul>
-<li>4! = 4 * 3 * 2 * 1 = 24</li>
-<li>3! = 3 * 2 * 1 = 6</li>
-<li>1! = 1</li>
-<li>0! = 1</li>
-</ul>
-<p>Como vemos en el ejemplo, podemos deducir que el factorial se repite en términos de (n-1) y el único caso donde no se calcula el factorial es 0!, esto nos lleva a que:</p>
-<blockquote>
-<p>n! = 1             --&gt; if n = 0 //caso base</p>
-<p>n! = n * (n-1)     --&gt; if n &gt; 0 //caso recursivo</p>
-</blockquote>
-<p>De forma que el factorial de un número quedaría codificado de la siguiente forma:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
+<p>📤 <strong>Llamada:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">cuentaAtras</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre></div></p>
+<p>📥 <strong>Salida:</strong>
+<div class="highlight"><pre><span></span><code>5
+4
+3
+2
+1
+0
+</code></pre></div></p>
+<hr />
+<h2 id="como-funciona-paso-a-paso">⚙️ Cómo funciona paso a paso</h2>
+<p>📈 <strong>Ejemplo visual:</strong><br />
+<code>cuentaAtras(3)</code> se ejecuta así:</p>
+<table>
+<thead>
+<tr>
+<th>Llamada</th>
+<th>Acción</th>
+<th>Próxima llamada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cuentaAtras(3)</code></td>
+<td>imprime 3</td>
+<td>llama a <code>cuentaAtras(2)</code></td>
+</tr>
+<tr>
+<td><code>cuentaAtras(2)</code></td>
+<td>imprime 2</td>
+<td>llama a <code>cuentaAtras(1)</code></td>
+</tr>
+<tr>
+<td><code>cuentaAtras(1)</code></td>
+<td>imprime 1</td>
+<td>llama a <code>cuentaAtras(0)</code></td>
+</tr>
+<tr>
+<td><code>cuentaAtras(0)</code></td>
+<td>imprime 0</td>
+<td>termina ✅</td>
+</tr>
+</tbody>
+</table>
+<p>💡 <strong>Importante:</strong> la recursión crea una <strong>pila de llamadas</strong> (<em>stack</em>).<br />
+Cada llamada espera a que la siguiente termine antes de continuar.</p>
+<hr />
+<h2 id="peligro-recursion-infinita">🚫 Peligro: recursión infinita</h2>
+<p>Si <strong>olvidas el caso base</strong>, el método <strong>nunca se detiene</strong> y provocará un error de tipo:</p>
+<div class="highlight"><pre><span></span><code>java.lang.StackOverflowError
 </code></pre></div>
-<h4 id="traza">Traza</h4>
+<p>⚠️ <strong>Ejemplo incorrecto:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">infinito</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">infinito</span><span class="p">();</span><span class="w"> </span><span class="c1">// ❌ No hay caso base</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="ejemplo-clasico-factorial">🧩 Ejemplo clásico: factorial</h2>
+<p>El factorial de un número (n!) se define como:</p>
+<div class="highlight"><pre><span></span><code>n! = n × (n-1) × (n-2) × ... × 1
+</code></pre></div>
+<p>En Java con recursividad:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">        </span><span class="c1">// 🛑 Caso base</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 🔁 Llamada recursiva</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>📤 <strong>Llamada:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+</code></pre></div></p>
+<p>📥 <strong>Salida:</strong>
+<div class="highlight"><pre><span></span><code>120
+</code></pre></div></p>
+<p>📚 <strong>Proceso interno:</strong></p>
+<div class="highlight"><pre><span></span><code>factorial(5)
+= 5 * factorial(4)
+= 5 * 4 * factorial(3)
+= 5 * 4 * 3 * factorial(2)
+= 5 * 4 * 3 * 2 * factorial(1)
+= 5 * 4 * 3 * 2 * 1
+= 120 ✅
+</code></pre></div>
+<hr />
+<h2 id="otro-ejemplo-suma-de-numeros">🧮 Otro ejemplo: suma de números</h2>
+<p>Sumar los números del 1 al n:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sumaRecursiva</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 🛑 Caso base</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sumaRecursiva</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 🔁</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="cuando-usar-recursividad">🧭 Cuándo usar recursividad</h2>
+<p>✅ <strong>Úsala cuando:</strong>
+- El problema pueda dividirse en <strong>subproblemas más pequeños del mismo tipo</strong>.<br />
+- Sea <strong>más natural o legible</strong> escribirlo de forma recursiva (por ejemplo, árboles o laberintos).
+- No sepas cuántas iteraciones necesitas (la profundidad depende del problema).</p>
+<p>❌ <strong>Evítala cuando:</strong>
+- Puedas resolverlo fácilmente con un bucle (for, while).
+- La recursión sea muy profunda (puede agotar la memoria de la pila).
+- Necesites máxima eficiencia en rendimiento.</p>
+<hr />
+<h2 id="ejemplo-visual-arbol-de-llamadas">🌳 Ejemplo visual: árbol de llamadas</h2>
+<p>Ejemplo para <code>factorial(4)</code>:</p>
 <div class="highlight"><pre><span></span><code>factorial(4)
     4 * factorial(3)
         3 * factorial(2)
@@ -2401,7 +2591,8 @@
     return 4 * 6 --&gt; 24
 return 24
 </code></pre></div>
-<h3 id="ejemplo-2-verificar-si-un-numero-es-palindromo">EJEMPLO 2: Verificar si un número es palíndromo</h3>
+<hr />
+<h2 id="ejemplo-verificar-si-un-numero-es-palindromo">Ejemplo: Verificar si un número es palíndromo</h2>
 <p>Un número es palíndromo si al leerse en ambos sentidos, tanto de izquierda a derecha como de derecha a izquierda, se obtiene el mismo número. Por ejemplo: 121, 1001, etc.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">revertir</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">reverso</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2422,7 +2613,8 @@ return 24
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No lo son&quot;</span><span class="w"> </span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="ejemplo-3-revertir-un-string">EJEMPLO 3: Revertir un String</h3>
+<hr />
+<h2 id="ejemplo-revertir-un-string">Ejemplo: Revertir un String</h2>
 <p>Para revertir un String, nos quedamos con el primer carácter que iremos añadiendo al final de la recursividad, y vamos acortando el String para llegar al caso base.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">reverseRecursive</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//caso base</span>
@@ -2431,6 +2623,128 @@ return 24
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">reverseRecursive</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
+<hr />
+<h2 id="resumen-final">🧠 Resumen final</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🪞 <strong>Recursividad</strong></td>
+<td>Un método se llama a sí mismo.</td>
+</tr>
+<tr>
+<td>🧱 <strong>Caso base</strong></td>
+<td>Condición que detiene la recursión.</td>
+</tr>
+<tr>
+<td>🔁 <strong>Caso recursivo</strong></td>
+<td>Llamada al método con un problema más pequeño.</td>
+</tr>
+<tr>
+<td>🧮 <strong>Ejemplo típico</strong></td>
+<td>Factorial, potencias, sumas, conteos.</td>
+</tr>
+<tr>
+<td>⚠️ <strong>Error común</strong></td>
+<td>No definir un caso base → StackOverflowError.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="recursividad-vs-iteracion">🔁 Recursividad vs Iteración</h2>
+<p>Aunque la recursividad y la iteración pueden parecer distintas, ambas son formas de <strong>repetir acciones</strong>.<br />
+De hecho, <strong>todo método iterativo puede expresarse de forma recursiva</strong>, aunque no siempre sea lo más eficiente.</p>
+<h3 id="en-teoria">✅ En teoría</h3>
+<p>Cualquier bucle (<code>for</code>, <code>while</code>) puede convertirse en un método recursivo equivalente.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Versión iterativa</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Versión recursiva</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">imprimir</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="c1">// 🛑 Caso base</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">imprimir</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">   </span><span class="c1">// 🔁 Llamada recursiva</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="en-la-practica">⚙️ En la práctica</h3>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Iterativo</th>
+<th>Recursivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔁 Repetición</td>
+<td>Usa bucles (<code>for</code>, <code>while</code>)</td>
+<td>Se llama a sí mismo</td>
+</tr>
+<tr>
+<td>💾 Memoria</td>
+<td>Usa una sola pila de ejecución</td>
+<td>Crea una nueva pila por llamada</td>
+</tr>
+<tr>
+<td>🚀 Velocidad</td>
+<td>Suele ser más eficiente</td>
+<td>Puede ser más lenta si hay muchas llamadas</td>
+</tr>
+<tr>
+<td>🧠 Legibilidad</td>
+<td>Más directa en problemas simples</td>
+<td>Más clara en estructuras jerárquicas (árboles, laberintos, etc.)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cuando-elegir-una-u-otra">🧩 Cuándo elegir una u otra</h3>
+<p>✅ <strong>Usa recursividad</strong> cuando:
+- El problema se puede dividir en <strong>subproblemas similares</strong> (divide y vencerás).<br />
+- Trabajas con <strong>estructuras jerárquicas o anidadas</strong> (carpetas, árboles, fractales).<br />
+- El código resulta más legible y natural recursivamente.</p>
+<p>❌ <strong>Prefiere la iteración</strong> cuando:
+- El proceso es <strong>lineal o repetitivo</strong> (sumas, bucles simples).<br />
+- Buscas <strong>eficiencia y bajo consumo de memoria</strong>.<br />
+- La recursión puede ser muy profunda (riesgo de StackOverflow).</p>
+<hr />
+<h2 id="por-que-la-recursividad-es-importante">🧭 ¿Por qué la recursividad es importante?</h2>
+<p>1️⃣ Porque enseña a pensar de otra forma</p>
+<p>La recursividad no solo es una técnica: es una forma de razonar sobre los problemas.
+Te obliga a:      <br />
+- Dividir un problema grande en subproblemas más pequeños del mismo tipo.
+- Pensar en términos de auto-referencia (“¿cómo resolvería una versión más simple de esto?”).</p>
+<p>💬 En programación, aprender recursividad entrena el pensamiento algorítmico. <br />
+Es una habilidad mental que luego aplicas incluso en problemas iterativos. </p>
+<hr />
+<p>2️⃣ Porque hay problemas que son naturalmente recursivos
+Hay estructuras o algoritmos donde la recursividad no solo es elegante, sino natural.</p>
+<hr />
+<p>3️⃣ Porque mejora la claridad del código</p>
+<p>Una función recursiva bien escrita puede ser más corta, más expresiva y más fácil de leer que su versión iterativa.</p>
+<p>Por ejemplo, recorrer un árbol con bucles requeriría estructuras auxiliares (pilas, colas, etc.),
+mientras que recursivamente basta con llamar al mismo método sobre los hijos del nodo.</p>
+<hr />
+<p>4️⃣ Porque forma parte del lenguaje universal de los algoritmos</p>
+<p>En programación, inteligencia artificial, teoría de lenguajes o matemáticas computacionales,
+la recursividad es una herramienta base.</p>
+<p>Lenguajes como Python, Lisp, Haskell, Prolog o frameworks modernos de JavaScript (React, por ejemplo)
+usan estructuras y conceptos basados en funciones recursivas o auto-referenciales.</p>
+<hr />
+<p>5️⃣ Porque ayuda a entender la memoria y la pila de ejecución</p>
+<p>Cada llamada recursiva ocupa un espacio en la pila de ejecución (stack).
+Comprender cómo funciona ayuda a entender:    <br />
+- cómo se gestionan las variables locales,    <br />
+- qué es un StackOverflowError,   <br />
+- y cómo los lenguajes manejan el flujo de ejecución.       </p>
+<p>Es decir, estudiar recursividad te enseña cómo funciona el programa “por dentro”.</p>
 
 
   
