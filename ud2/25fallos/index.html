@@ -2694,36 +2694,35 @@ aplicación.</p>
 </blockquote>
 <h3 id="breakpoint-normal-linea">🔴 Breakpoint normal (línea)</h3>
 <p>🪄 <strong>Cómo se crea:</strong>      <br />
-- Haz clic en el <strong>margen izquierdo</strong> de la línea → aparece un punto rojo.<br />
-- O usa el atajo: <strong>Ctrl + F8</strong> (Windows/Linux) · <strong>⌘ + F8</strong> (macOS).</p>
-<p>⚙️ <strong>Opciones disponibles (clic derecho sobre el punto):</strong>    <br />
-- ✅ <strong>Enabled</strong>: activar o desactivar sin eliminarlo.<br />
+- Haz clic en el <strong>margen izquierdo</strong> de la línea → aparece un punto rojo.    <br />
+- O usa el atajo: <strong>Ctrl + F8</strong> (Windows/Linux) · <strong>⌘ + F8</strong> (macOS).           </p>
+<p>⚙️ <strong>Opciones disponibles (clic derecho sobre el punto):</strong>      <br />
+- ✅ <strong>Enabled</strong>: activar o desactivar sin eliminarlo.        <br />
 - ⏸️ <strong>Suspend:</strong> elige si se detiene <strong>todo el programa (All)</strong> o solo el <strong>hilo actual (Thread)</strong>.<br />
 - 🔢 <strong>Hit count:</strong> haz que solo se active a partir de la <em>n</em>-ésima vez que pasa por esa línea.  </p>
 <p>📍 <strong>Uso típico:</strong> detener el programa justo antes de una línea que sospechas que tiene un error.</p>
 <hr />
 <h3 id="breakpoint-condicional">🟡 Breakpoint condicional</h3>
-<p>🪄 <strong>Cómo se crea:</strong>      <br />
-1. Coloca un breakpoint normal.<br />
-2. Haz <strong>clic derecho</strong> sobre él → en el campo <strong>Condition</strong> escribe una expresión Java que devuelva <code>true</code> o <code>false</code>.</p>
+<p>🪄 <strong>Cómo se crea:</strong>              <br />
+1. Coloca un breakpoint normal.       <br />
+2. Haz <strong>clic derecho</strong> sobre él → en el campo <strong>Condition</strong> escribe una expresión Java que devuelva <code>true</code> o <code>false</code>.      </p>
 <p>🧮 <strong>Ejemplos de condición:</strong>
 <div class="highlight"><pre><span></span><code><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span>
 <span class="n">contador</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span>
 <span class="n">usuario</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;admin&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">intentos</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span>
 </code></pre></div></p>
-<p>💡 <strong>Truco:</strong> puedes combinar con <em>Hit count</em> (ej. “activa solo cuando <code>i &gt; 10</code> y sea la 3ª vez que pasa”).</p>
+<p>💡 <strong>Truco:</strong> puedes combinar con <em>Hit count</em> o <em>Pass count</em> (ej. “activa solo cuando <code>i &gt; 10</code> y sea la 3ª vez que pasa”).</p>
 <p>📍 <strong>Uso típico:</strong> detenerte solo cuando ocurre algo específico, sin parar en cada iteración.</p>
 <hr />
 <h3 id="breakpoint-de-excepcion">🟢 Breakpoint de excepción</h3>
 <p>🪄 <strong>Cómo se crea:</strong>      <br />
-1. Abre <strong>Run → View Breakpoints…</strong><br />
-   o usa el atajo <strong>Ctrl + Shift + F8</strong> / <strong>⌘ ⇧ F8</strong>.<br />
-2. Pulsa <strong>+ → Java Exception Breakpoint</strong>.<br />
-3. Escribe el tipo de excepción (ejemplo: <code>NullPointerException</code>).</p>
-<p>⚙️ <strong>Opciones útiles:</strong>   <br />
-- <strong>Caught / Uncaught:</strong> elige si parar también en excepciones capturadas (<code>try-catch</code>) o solo en las no capturadas.<br />
-- <strong>Condition:</strong> para filtrar casos (por ejemplo: <code>obj == null</code>).<br />
-- <strong>Class filters:</strong> limitar a una clase o paquete específico.</p>
+1. Abre <strong>Run → View Breakpoints…</strong> o usa el atajo <strong>Ctrl + Shift + F8</strong> / <strong>⌘ ⇧ F8</strong>.     <br />
+2. Pulsa <strong>+ → Java Exception Breakpoint</strong>.   <br />
+3. Escribe el tipo de excepción (ejemplo: <code>NullPointerException</code>).      </p>
+<p>⚙️ <strong>Opciones útiles:</strong>       <br />
+- <strong>Caught / Uncaught:</strong> elige si parar también en excepciones capturadas (<code>try-catch</code>) o solo en las no capturadas.  <br />
+- <strong>Condition:</strong> para filtrar casos (por ejemplo: <code>obj == null</code>). <br />
+- <strong>Class filters:</strong> limitar a una clase o paquete específico.  </p>
 <p>📍 <strong>Uso típico:</strong> detectar exactamente dónde se lanza una excepción, incluso dentro de librerías.</p>
 <hr />
 <h3 id="logpoint-sin-detener-el-programa">🟣 Logpoint (sin detener el programa)</h3>
