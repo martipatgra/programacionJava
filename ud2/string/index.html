@@ -1075,12 +1075,53 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#plantillas-utiles" class="md-nav__link">
-    📎 Plantillas útiles
+  <a href="#clase-character-guia-rapida" class="md-nav__link">
+    🔤 Clase Character (guía rápida)
   </a>
   
-    <nav class="md-nav" aria-label="📎 Plantillas útiles">
+    <nav class="md-nav" aria-label="🔤 Clase Character (guía rápida)">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve" class="md-nav__link">
+    🧩 ¿Para qué sirve?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-mas-usados" class="md-nav__link">
+    🧰 Métodos más usados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplitos-rapidos" class="md-nav__link">
+    ⚡ Ejemplitos rápidos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-code-point" class="md-nav__link">
+    🧩 Qué es un code point
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Qué es un code point">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    🧠 Ejemplos
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
@@ -2522,12 +2563,53 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#plantillas-utiles" class="md-nav__link">
-    📎 Plantillas útiles
+  <a href="#clase-character-guia-rapida" class="md-nav__link">
+    🔤 Clase Character (guía rápida)
   </a>
   
-    <nav class="md-nav" aria-label="📎 Plantillas útiles">
+    <nav class="md-nav" aria-label="🔤 Clase Character (guía rápida)">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve" class="md-nav__link">
+    🧩 ¿Para qué sirve?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-mas-usados" class="md-nav__link">
+    🧰 Métodos más usados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplitos-rapidos" class="md-nav__link">
+    ⚡ Ejemplitos rápidos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-code-point" class="md-nav__link">
+    🧩 Qué es un code point
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Qué es un code point">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    🧠 Ejemplos
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
@@ -2839,13 +2921,120 @@ Las comillas triples de apertura deben ir solas en la línea. El cierre también
 <span class="s">    &quot;&quot;&quot;</span><span class="p">;</span>
 </code></pre></div>
 <hr />
-<h2 id="plantillas-utiles">📎 Plantillas útiles</h2>
-<div class="highlight"><pre><span></span><code><span class="c1">// Normalizar espacios</span>
-<span class="n">String</span><span class="w"> </span><span class="nf">normaliza</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">stream</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">strip</span><span class="p">().</span><span class="na">split</span><span class="p">(</span><span class="s">&quot;\\s+&quot;</span><span class="p">))</span>
-<span class="w">               </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">joining</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">));</span>
-<span class="p">}</span>
+<h2 id="clase-character-guia-rapida">🔤 Clase <code>Character</code> (guía rápida)</h2>
+<h3 id="para-que-sirve">🧩 ¿Para qué sirve?</h3>
+<p>La clase <code>Character</code> permite <strong>analizar y transformar caracteres individuales</strong> según las reglas de <strong>Unicode</strong>.<br />
+Sirve para saber si algo es una letra, un dígito o un espacio; comprobar mayúsculas/minúsculas; convertir entre mayúsculas y minúsculas; validar identificadores; o trabajar correctamente con acentos, <code>Ñ</code> y otros alfabetos.</p>
+<hr />
+<h3 id="metodos-mas-usados">🧰 Métodos más usados</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Método</th>
+<th align="left">Descripción</th>
+<th align="left">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">🅰️ <code>isLetter(cp)</code></td>
+<td align="left">¿Es una letra? (categorías Unicode L*)</td>
+<td align="left"><code>'A'</code>, <code>'ñ'</code>, <code>'漢'</code> → ✅</td>
+</tr>
+<tr>
+<td align="left">🔠 <code>isAlphabetic(cp)</code></td>
+<td align="left">¿Es alfabético? (más amplio que <code>isLetter</code>)</td>
+<td align="left">incluye números romanos tipo <code>Ⅻ</code></td>
+</tr>
+<tr>
+<td align="left">🔢 <code>isDigit(cp)</code></td>
+<td align="left">¿Es dígito? (0–9 y otros sistemas)</td>
+<td align="left"><code>'3'</code>, <code>'٣'</code> → ✅</td>
+</tr>
+<tr>
+<td align="left">🔡 <code>isLowerCase(cp)</code> / 🔼 <code>isUpperCase(cp)</code></td>
+<td align="left">¿Minúscula o mayúscula?</td>
+<td align="left"><code>'a'</code> → minúscula</td>
+</tr>
+<tr>
+<td align="left">🔤 <code>toLowerCase(cp)</code> / <code>toUpperCase(cp)</code> / <code>toTitleCase(cp)</code></td>
+<td align="left">Convertir mayúsculas/minúsculas/título</td>
+<td align="left"><code>'ñ' → 'Ñ'</code></td>
+</tr>
+<tr>
+<td align="left">␣ <code>isWhitespace(cp)</code></td>
+<td align="left">¿Es espacio en blanco? (incluye tab, salto de línea, NBSP)</td>
+<td align="left"><code>' '</code> o <code>'\n'</code> → ✅</td>
+</tr>
+<tr>
+<td align="left">🔣 <code>isLetterOrDigit(cp)</code></td>
+<td align="left">¿Letra o dígito?</td>
+<td align="left"><code>'A'</code>, <code>'5'</code> → ✅</td>
+</tr>
+<tr>
+<td align="left">🧩 <code>isJavaIdentifierStart(cp)</code> / <code>isJavaIdentifierPart(cp)</code></td>
+<td align="left">¿Forma parte de un identificador Java?</td>
+<td align="left"><code>_</code>, <code>'x'</code>, <code>'1'</code> → ✅</td>
+</tr>
+</tbody>
+</table>
+<p>💡 <strong>Tip Unicode:</strong> Recorre <em>code points</em> con <code>String#codePoints()</code> para que los métodos funcionen correctamente incluso con emojis u otros caracteres fuera del BMP.</p>
+<hr />
+<h3 id="ejemplitos-rapidos">⚡ Ejemplitos rápidos</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Character</span><span class="p">.</span><span class="na">isLetter</span><span class="p">(</span><span class="sc">&#39;ñ&#39;</span><span class="p">);</span><span class="w">         </span><span class="c1">// true</span>
+<span class="n">Character</span><span class="p">.</span><span class="na">isAlphabetic</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">);</span><span class="w">    </span><span class="c1">// true</span>
+<span class="n">Character</span><span class="p">.</span><span class="na">isAlphabetic</span><span class="p">(</span><span class="mh">0x216B</span><span class="p">);</span><span class="w">  </span><span class="c1">// Ⅻ (Roman Numeral Twelve)</span>
+<span class="n">Character</span><span class="p">.</span><span class="na">isDigit</span><span class="p">(</span><span class="sc">&#39;2&#39;</span><span class="p">);</span><span class="w">          </span><span class="c1">// true</span>
+<span class="n">Character</span><span class="p">.</span><span class="na">isWhitespace</span><span class="p">(</span><span class="sc">&#39; &#39;</span><span class="p">);</span><span class="w">    </span><span class="c1">// true</span>
+<span class="n">Character</span><span class="p">.</span><span class="na">isUpperCase</span><span class="p">(</span><span class="sc">&#39;U&#39;</span><span class="p">);</span><span class="w">      </span><span class="c1">// true</span>
+<span class="n">Character</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">(</span><span class="sc">&#39;U&#39;</span><span class="p">);</span><span class="w">     </span><span class="c1">// false </span>
 </code></pre></div>
+<hr />
+<h2 id="que-es-un-code-point">🧩 Qué es un code point</h2>
+<p>Un code point (en español, punto de código) es el número que identifica un carácter en Unicode.
+Cada carácter (letra, símbolo, emoji, etc.) tiene asignado un valor entero único, como una especie de DNI universal.</p>
+<h3 id="ejemplos">🧠 Ejemplos</h3>
+<table>
+<thead>
+<tr>
+<th>Carácter</th>
+<th>Nombre</th>
+<th>Código Unicode</th>
+<th>Notación Java</th>
+<th>Valor decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'A'</code></td>
+<td>Latin Capital Letter A</td>
+<td>U+0041</td>
+<td><code>'\u0041'</code></td>
+<td>65</td>
+</tr>
+<tr>
+<td><code>'ñ'</code></td>
+<td>Latin Small Letter Ñ</td>
+<td>U+00F1</td>
+<td><code>'\u00F1'</code></td>
+<td>241</td>
+</tr>
+<tr>
+<td><code>'漢'</code></td>
+<td>Han Character</td>
+<td>U+6F22</td>
+<td><code>'\u6F22'</code></td>
+<td>28450</td>
+</tr>
+<tr>
+<td><code>'😀'</code></td>
+<td>Grinning Face Emoji</td>
+<td>U+1F600</td>
+<td><code>'\uD83D\uDE00'</code> (par sustituto)</td>
+<td>128512</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h3 id="conclusion">📌 Conclusión</h3>
 <p>Los <code>String</code> son <strong>fundamentales</strong> en Java. Entender <strong>inmutabilidad</strong>, <strong>pool</strong>, <strong>regex</strong> y <strong><code>StringBuilder</code></strong> te ahorra errores y <strong>mejora rendimiento</strong>. Usa esta hoja como guía rápida y <strong>practica</strong> los mini‑retos.</p>
