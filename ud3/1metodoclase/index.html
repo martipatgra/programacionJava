@@ -1085,6 +1085,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#llamar-a-otro-constructor-con-this" class="md-nav__link">
+    🔄 Llamar a otro constructor con this()
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Llamar a otro constructor con this()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reglas-importantes" class="md-nav__link">
+    📘 Reglas importantes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2500,6 +2520,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#llamar-a-otro-constructor-con-this" class="md-nav__link">
+    🔄 Llamar a otro constructor con this()
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Llamar a otro constructor con this()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reglas-importantes" class="md-nav__link">
+    📘 Reglas importantes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2838,6 +2878,69 @@ Su función es inicializar los atributos del objeto, garantizando que empiece su
 <ul>
 <li>En Java no hay <strong><em>destructores</em></strong>; la memoria la gestiona el <strong>GC</strong> (garbage collector).</li>
 </ul>
+<hr />
+<h3 id="llamar-a-otro-constructor-con-this">🔄 Llamar a otro constructor con <code>this()</code></h3>
+<p>En Java, <strong>una clase puede tener varios constructores</strong> (por ejemplo, con distintos parámetros).
+A veces queremos <strong>reutilizar código</strong> entre ellos para no repetir la misma inicialización.</p>
+<p>Para eso existe la llamada especial <code>this()</code>, <strong>que invoca otro constructor de la misma clase</strong>.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Coche</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">modelo</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Constructor 1</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Coche</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">modelo</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">modelo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">modelo</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Constructor 2: usa el anterior con un valor por defecto</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Coche</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">modelo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//primera línea tiene que ser this</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">modelo</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;blanco&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 👈 Llama al constructor de arriba</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Coche</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">modelo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Creando coche...&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// ❌ Error: no puede ir antes</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">modelo</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;blanco&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="reglas-importantes">📘 Reglas importantes</h4>
+<ul>
+<li>🔹 La llamada a otro constructor con this(...) <strong>debe ser la primera instrucción</strong> dentro del constructor.        </li>
+<li>❌ No puedes escribir nada antes de ella.     </li>
+<li>🔹 Puedes <strong>encadenar</strong> varias llamadas entre constructores (uno llama a otro, y así sucesivamente). Pero <strong>evita bucles</strong> (no puede haber un this() que indirectamente se llame a sí mismo).     </li>
+<li>🔹 No se puede usar this() para llamar a un constructor <strong>de otra clase</strong>.      </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ciudad</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Constructor principal (todos los parámetros)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ciudad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">ciudad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ciudad</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Constructor intermedio</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Desconocida&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// llama al principal</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Constructor mínimo</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// llama al intermedio</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; años) de &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ciudad</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
 <h2 id="que-son-las-invariantes">🔐 ¿Qué son las invariantes?</h2>
 <p>Las <strong>invariantes</strong> son <strong>condiciones que siempre deben cumplirse</strong> en los objetos de una clase.
