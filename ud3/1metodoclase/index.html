@@ -1058,6 +1058,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3-bloques-de-inicializacion-de-instancia-poco-usados" class="md-nav__link">
+    ⚙️ 3. Bloques de inicialización de instancia (poco usados)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2480,6 +2487,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3-bloques-de-inicializacion-de-instancia-poco-usados" class="md-nav__link">
+    ⚙️ 3. Bloques de inicialización de instancia (poco usados)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2695,6 +2709,7 @@ Para una persona será comer, beber, dormir, etc.</p>
 <p>En Java, los miembros principales de una clase son:   <br />
 - <strong>Campos</strong> (estado) — preferiblemente <code>private</code> y, si es posible, <code>final</code>.      <br />
 - <strong>Métodos</strong> (comportamiento).   <br />
+- <strong>Bloques de inicialización</strong>.      <br />
 - <strong>Constructores</strong>.        </p>
 <h3 id="1-campos-o-atributos-o-variables-de-instancia">🧩 1. Campos o atributos o variables de instancia</h3>
 <p>Los <strong>campos</strong> (también llamados <em>atributos</em> o <em>variables de instancia</em>) son las <strong>variables que almacenan el estado</strong> de un objeto.<br />
@@ -2730,6 +2745,22 @@ Cada método puede acceder a los campos de la clase y modificarlos si es necesar
 - Empieza los nombres con verbos (<code>acelerar</code>, <code>frenar</code>, <code>calcularTotal</code>…).<br />
 - Usa <code>public</code> solo si necesitas que sea accesible desde fuera.<br />
 - Devuelve valores con <code>return</code> si el método calcula algo.</p>
+<hr />
+<h3 id="3-bloques-de-inicializacion-de-instancia-poco-usados">⚙️ 3. Bloques de inicialización de instancia (poco usados)</h3>
+<p>Los <strong>bloques de inicialización</strong> ejecutan código automáticamente <strong>antes del constructor</strong>.<br />
+Son poco usados, pero sirven para inicializar estructuras complejas o contadores.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Bloque de instancia → se ejecuta cada vez que se crea un objeto</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nuevo objeto con id &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>🟢 <strong>Consejos:</strong>
+- Prefiere inicializar directamente en el campo o dentro del constructor.<br />
+- Usa los bloques solo si realmente lo necesitas.</p>
 <hr />
 <h2 id="que-es-un-constructor">🛠️ ¿Qué es un constructor?</h2>
 <p>Un constructor es un método especial que se ejecuta automáticamente cuando se crea un objeto con new.
