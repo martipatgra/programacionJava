@@ -1212,6 +1212,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#metodo-tostring" class="md-nav__link">
+    🗣️ Método toString()
+  </a>
+  
+    <nav class="md-nav" aria-label="🗣️ Método toString()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace-por-defecto" class="md-nav__link">
+    🔍 ¿Qué hace por defecto?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobrescribir-tostring" class="md-nav__link">
+    ✏️ Sobrescribir toString()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2647,6 +2674,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#metodo-tostring" class="md-nav__link">
+    🗣️ Método toString()
+  </a>
+  
+    <nav class="md-nav" aria-label="🗣️ Método toString()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace-por-defecto" class="md-nav__link">
+    🔍 ¿Qué hace por defecto?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobrescribir-tostring" class="md-nav__link">
+    ✏️ Sobrescribir toString()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3207,6 +3261,30 @@ Proporciona comportamientos básicos que <strong>todas las clases comparten</str
 - Aprendes a <strong>sobrescribirlos correctamente</strong> cuando necesites personalizar el comportamiento.<br />
 - Es la base para usar estructuras como <code>ArrayList</code>, <code>HashSet</code> o <code>Map</code>, que dependen de <code>equals()</code> y <code>hashCode()</code>.</p>
 <hr />
+<h2 id="metodo-tostring">🗣️ Método toString()</h2>
+<p>En Java, como ya hemos comentado <code>toString()</code> es un <strong>método heredado</strong> por la clases <code>Object</code>.
+Este método devuelve una representación en texto del objeto, y se ejecuta <strong>automáticamente</strong> cuando intentamos imprimir un objeto, por ejemplo con <code>System.out.println(objeto)</code>. </p>
+<h3 id="que-hace-por-defecto">🔍 ¿Qué hace por defecto?</h3>
+<p>Si no lo sobrescribimos, el toString() heredado de Object devuelve algo así:
+<div class="highlight"><pre><span></span><code><span class="err">`</span><span class="n">Coche</span><span class="err">@</span><span class="mf">6f</span><span class="mi">2</span><span class="n">b958e</span><span class="err">`</span>
+</code></pre></div></p>
+<p>Es decir, <strong>el nombre de la clase y una referencia interna (hash)</strong> —nada legible para los humanos. Por eso, casi siempre lo sobrescribimos para <strong>mostrar información útil</strong> del objeto.</p>
+<h3 id="sobrescribir-tostring">✏️ Sobrescribir toString()</h3>
+<p>Podemos redefinirlo en nuestra clase así:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Override</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Coche{modelo=&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">modelo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;, color=&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;, velocidad=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">velocidad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;}&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>🔸 Aunque todavía no hemos visto herencia, la anotación <code>@Override</code> indica que estamos reescribiendo (sobrescribiendo) un método heredado de Object.</p>
+<p>Ahora cuando imprimamos el objeto, se llamará a este método:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Coche</span><span class="w"> </span><span class="n">miCoche</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Coche</span><span class="p">(</span><span class="s">&quot;Focus&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Rojo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">miCoche</span><span class="p">);</span><span class="w"> </span><span class="c1">// se llama automáticamente a toString()</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Coche<span class="o">{</span><span class="nv">modelo</span><span class="o">=</span><span class="s1">&#39;Focus&#39;</span>,<span class="w"> </span><span class="nv">color</span><span class="o">=</span><span class="s1">&#39;Rojo&#39;</span>,<span class="w"> </span><span class="nv">velocidad</span><span class="o">=</span><span class="m">120</span><span class="w"> </span>km/h<span class="o">}</span>
+</code></pre></div>
 
 
   
