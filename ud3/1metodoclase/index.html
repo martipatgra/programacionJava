@@ -3262,15 +3262,15 @@ Proporciona comportamientos básicos que <strong>todas las clases comparten</str
 - Aprendes a <strong>sobrescribirlos correctamente</strong> cuando necesites personalizar el comportamiento.<br />
 - Es la base para usar estructuras como <code>ArrayList</code>, <code>HashSet</code> o <code>Map</code>, que dependen de <code>equals()</code> y <code>hashCode()</code>.</p>
 <hr />
-<h2 id="metodo-tostring">🗣️ Método toString()</h2>
+<h2 id="metodo-tostring">🗣️ Método <code>toString()</code></h2>
 <p>En Java, como ya hemos comentado <code>toString()</code> es un <strong>método heredado</strong> por la clases <code>Object</code>.
 Este método devuelve una representación en texto del objeto, y se ejecuta <strong>automáticamente</strong> cuando intentamos imprimir un objeto, por ejemplo con <code>System.out.println(objeto)</code>. </p>
 <h3 id="que-hace-por-defecto">🔍 ¿Qué hace por defecto?</h3>
-<p>Si no lo sobrescribimos, el toString() heredado de Object devuelve algo así:
+<p>Si no lo sobrescribimos, el <code>toString()</code> heredado de <code>Object</code> devuelve algo así:
 <div class="highlight"><pre><span></span><code><span class="err">`</span><span class="n">Coche</span><span class="err">@</span><span class="mf">6f</span><span class="mi">2</span><span class="n">b958e</span><span class="err">`</span>
 </code></pre></div></p>
 <p>Es decir, <strong>el nombre de la clase y una referencia interna (hash)</strong> —nada legible para los humanos. Por eso, casi siempre lo sobrescribimos para <strong>mostrar información útil</strong> del objeto.</p>
-<h3 id="sobrescribir-tostring">✏️ Sobrescribir toString()</h3>
+<h3 id="sobrescribir-tostring">✏️ Sobrescribir <code>toString()</code></h3>
 <p>Podemos redefinirlo en nuestra clase así:</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@Override</span>
 <span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
