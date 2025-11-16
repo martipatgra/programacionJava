@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../1metodoclase/">
+        <link rel="prev" href="../varargs/">
       
       
         <link rel="next" href="../5static/">
@@ -960,6 +960,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../varargs/" class="md-nav__link">
+        🌎 varargs en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -994,33 +1008,6 @@
       Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#que-son-los-varargs-en-java" class="md-nav__link">
-    ✨ ¿Qué son los varargs en Java?
-  </a>
-  
-    <nav class="md-nav" aria-label="✨ ¿Qué son los varargs en Java?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-como-funciona" class="md-nav__link">
-    🎒 1. ¿Cómo funciona?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-reglas-importantes-de-varargs" class="md-nav__link">
-    ⚠️ 2. Reglas importantes de varargs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#que-es-la-sobrecarga-de-metodos" class="md-nav__link">
@@ -2361,33 +2348,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-son-los-varargs-en-java" class="md-nav__link">
-    ✨ ¿Qué son los varargs en Java?
-  </a>
-  
-    <nav class="md-nav" aria-label="✨ ¿Qué son los varargs en Java?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-como-funciona" class="md-nav__link">
-    🎒 1. ¿Cómo funciona?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-reglas-importantes-de-varargs" class="md-nav__link">
-    ⚠️ 2. Reglas importantes de varargs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#que-es-la-sobrecarga-de-metodos" class="md-nav__link">
     🔤 ¿Qué es la sobrecarga de métodos?
   </a>
@@ -2567,52 +2527,6 @@
 
 <h1 id="sobrecarga-de-metodos-y-paso-por-valor-vs-referencia-en-java">⚙️ Sobrecarga de Métodos y Paso por Valor vs Referencia en Java</h1>
 <p>En el punto <a href="../../ud2/26methods/">2.6</a> del curso vimos una los métodos en Java, qué son, cómo definirlos y sus partes. En los siguientes puntos vamos estudiar conceptos relacionados con los métodos.</p>
-<h2 id="que-son-los-varargs-en-java">✨ ¿Qué son los varargs en Java?</h2>
-<p><strong>Varargs</strong> significa <em>“variable arguments”</em>, es decir:
-👉 <strong>un método que puede recibir un número variable de argumentos</strong>, sin necesitar sobrecarga.</p>
-<p>Se declaran con tres puntos <code>...</code> detrás del tipo.</p>
-<h3 id="1-como-funciona">🎒 1. ¿Cómo funciona?</h3>
-<p>Un método con varargs acepta <strong>cero, uno o muchos valores del mismo tipo</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarNombres</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">nombres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nombres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>El método anterior podrías llamarlo así para ejecutarlo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">mostrarNombres</span><span class="p">();</span><span class="w">                     </span><span class="c1">// 0 argumentos</span>
-<span class="n">mostrarNombres</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span><span class="w">                </span><span class="c1">// 1 argumento</span>
-<span class="n">mostrarNombres</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">);</span><span class="w">        </span><span class="c1">// 2 argumentos</span>
-<span class="n">mostrarNombres</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Eva&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3 argumentos</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sumarTodos</span><span class="p">(</span><span class="kt">int</span><span class="p">...</span><span class="w"> </span><span class="n">numeros</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numeros</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">suma</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">sumarTodos</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">           </span><span class="c1">// suma 1+2+3</span>
-<span class="w">    </span><span class="n">sumarTodos</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span><span class="w">            </span><span class="c1">// suma 10+20</span>
-<span class="w">    </span><span class="n">sumarTodos</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w">     </span><span class="c1">// suma 5 cinco veces</span>
-<span class="w">    </span><span class="n">sumarTodos</span><span class="p">();</span><span class="w">                  </span><span class="c1">// sin argumentos: suma = 0</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>👉 Internamente, <strong>Java convierte los varargs en un array (String[])</strong>.</p>
-<h3 id="2-reglas-importantes-de-varargs">⚠️ 2. Reglas importantes de varargs</h3>
-<p>✔️ <strong>Solo puede haber un varargs por método</strong></p>
-<p>Esto no se permite:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">ejemplo</span><span class="p">(</span><span class="kt">int</span><span class="p">...</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w">  </span><span class="c1">// ❌ Error</span>
-</code></pre></div>
-<p>✔️ <strong>El varargs debe ser el último parámetro</strong></p>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">ejemplo</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">titulo</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">...</span><span class="w"> </span><span class="n">valores</span><span class="p">)</span><span class="w">  </span><span class="c1">// ✔️</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">ejemplo</span><span class="p">(</span><span class="kt">int</span><span class="p">...</span><span class="w"> </span><span class="n">valores</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">titulo</span><span class="p">)</span><span class="w">  </span><span class="c1">// ❌ Error</span>
-</code></pre></div>
-<hr />
 <h2 id="que-es-la-sobrecarga-de-metodos">🔤 ¿Qué es la sobrecarga de métodos?</h2>
 <p>La <strong>sobrecarga de métodos</strong> (<em>method overloading</em>) consiste en definir varios métodos con el <strong>mismo nombre</strong> pero <strong>distintos parámetros</strong> dentro de una misma clase. El compilador decide cuál ejecutar dependiendo de la firma del método.</p>
 <p><strong>La firma de un método en Java</strong> es la combinación del nombre del método y la lista de parámetros en su orden y tipo.</p>
