@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../metodosinstancia/">
+        <link rel="prev" href="../1metodoclase/">
       
       
-        <link rel="next" href="../7nullvalue/">
+        <link rel="next" href="../5static/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>🌎 Variables, métodos y clases estáticas - Programación en Java</title>
+        <title>🌎 Métodos de instancia. Sobrecarga de Métodos y Paso por Valor vs Referencia en Java - Programación en Java</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#variables-metodos-y-clases-estaticas" class="md-skip">
+        <a href="#metodos-de-instancia-sobrecarga-de-metodos-y-paso-por-valor-vs-referencia-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🌎 Variables, métodos y clases estáticas
+              🌎 Métodos de instancia. Sobrecarga de Métodos y Paso por Valor vs Referencia en Java
             
           </span>
         </div>
@@ -960,20 +960,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../metodosinstancia/" class="md-nav__link">
-        🌎 Métodos de instancia. Sobrecarga de Métodos y Paso por Valor vs Referencia en Java
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -986,12 +972,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          🌎 Variables, métodos y clases estáticas
+          🌎 Métodos de instancia. Sobrecarga de Métodos y Paso por Valor vs Referencia en Java
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        🌎 Variables, métodos y clases estáticas
+        🌎 Métodos de instancia. Sobrecarga de Métodos y Paso por Valor vs Referencia en Java
       </a>
       
         
@@ -1010,16 +996,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#variables-estaticas" class="md-nav__link">
-    Variables estáticas
+  <a href="#que-son-los-varargs-en-java" class="md-nav__link">
+    ✨ ¿Qué son los varargs en Java?
   </a>
   
-    <nav class="md-nav" aria-label="Variables estáticas">
+    <nav class="md-nav" aria-label="✨ ¿Qué son los varargs en Java?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#variables-constantes-estaticas" class="md-nav__link">
-    Variables constantes estáticas
+  <a href="#1-como-funciona" class="md-nav__link">
+    🎒 1. ¿Cómo funciona?
   </a>
   
 </li>
@@ -1030,50 +1016,170 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-de-instancia" class="md-nav__link">
-    Variables de instancia
+  <a href="#2-reglas-importantes-de-varargs" class="md-nav__link">
+    ⚠️ 2. Reglas importantes de varargs
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodos-estaticos" class="md-nav__link">
-    Métodos estáticos
+  <a href="#1-que-es-la-sobrecarga-de-metodos" class="md-nav__link">
+    1️⃣ ¿Qué es la sobrecarga de métodos?
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ ¿Qué es la sobrecarga de métodos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reglas-de-la-sobrecarga" class="md-nav__link">
+    📐 Reglas de la sobrecarga
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-actualizado-java-21" class="md-nav__link">
+    💻 Ejemplo actualizado (Java 21)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ventajas-de-la-sobrecarga" class="md-nav__link">
+    2️⃣ Ventajas de la sobrecarga
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Ventajas de la sobrecarga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-con-constructores" class="md-nav__link">
+    🧱 Ejemplo con constructores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-como-decide-java-que-metodo-elegir" class="md-nav__link">
+    3️⃣ ¿Cómo decide Java qué método elegir?
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ ¿Cómo decide Java qué método elegir?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    🔍 Ejemplo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-por-valor-y-referencias-en-java" class="md-nav__link">
+    🔁 Paso por valor y referencias en Java
+  </a>
+  
+    <nav class="md-nav" aria-label="🔁 Paso por valor y referencias en Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-paso-por-valor-con-variables-locales-de-tipos-primitivos" class="md-nav__link">
+    🧮 1 Paso por valor con variables locales de tipos primitivos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-paso-por-valor-con-objetos-referencias" class="md-nav__link">
+    📦 2 Paso por valor con objetos (referencias)
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 2 Paso por valor con objetos (referencias)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-una-referencia-en-java" class="md-nav__link">
+    🧠 ¿Qué es una referencia en Java?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pero-no-podemos-reasignar-la-referencia-original" class="md-nav__link">
+    🚫 PERO: no podemos reasignar la referencia original
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilizar-varargs-con-moderacion" class="md-nav__link">
+    🧷 Utilizar varargs con moderación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-pasa-con-la-sobrecarga-y-varargs" class="md-nav__link">
+    🚨 ¿Qué pasa con la sobrecarga y varargs?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodos-de-instancia" class="md-nav__link">
-    Métodos de instancia
+  <a href="#por-que-confunden-a-veces" class="md-nav__link">
+    🤓 ¿Por qué confunden a veces?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodo-estatico-o-metodo-de-instancia" class="md-nav__link">
-    ¿Método estático o método de instancia?
+  <a href="#ejemplo-de-varargs-sobrecarga" class="md-nav__link">
+    🎯 Ejemplo de varargs + sobrecarga
   </a>
+  
+    <nav class="md-nav" aria-label="🎯 Ejemplo de varargs + sobrecarga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-esta-pasando-aqui" class="md-nav__link">
+    🔍 ¿Qué está pasando aquí?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#clases-estaticas" class="md-nav__link">
-    Clases estáticas
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bloques-estaticos" class="md-nav__link">
-    Bloques estáticos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#imports-estaticos" class="md-nav__link">
-    Imports estáticos
+  <a href="#resumen-final" class="md-nav__link">
+    🧾 Resumen Final
   </a>
   
 </li>
@@ -1082,6 +1188,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5static/" class="md-nav__link">
+        🌎 Variables, métodos y clases estáticas
+      </a>
     </li>
   
 
@@ -2241,16 +2361,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#variables-estaticas" class="md-nav__link">
-    Variables estáticas
+  <a href="#que-son-los-varargs-en-java" class="md-nav__link">
+    ✨ ¿Qué son los varargs en Java?
   </a>
   
-    <nav class="md-nav" aria-label="Variables estáticas">
+    <nav class="md-nav" aria-label="✨ ¿Qué son los varargs en Java?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#variables-constantes-estaticas" class="md-nav__link">
-    Variables constantes estáticas
+  <a href="#1-como-funciona" class="md-nav__link">
+    🎒 1. ¿Cómo funciona?
   </a>
   
 </li>
@@ -2261,50 +2381,170 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-de-instancia" class="md-nav__link">
-    Variables de instancia
+  <a href="#2-reglas-importantes-de-varargs" class="md-nav__link">
+    ⚠️ 2. Reglas importantes de varargs
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodos-estaticos" class="md-nav__link">
-    Métodos estáticos
+  <a href="#1-que-es-la-sobrecarga-de-metodos" class="md-nav__link">
+    1️⃣ ¿Qué es la sobrecarga de métodos?
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ ¿Qué es la sobrecarga de métodos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reglas-de-la-sobrecarga" class="md-nav__link">
+    📐 Reglas de la sobrecarga
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-actualizado-java-21" class="md-nav__link">
+    💻 Ejemplo actualizado (Java 21)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ventajas-de-la-sobrecarga" class="md-nav__link">
+    2️⃣ Ventajas de la sobrecarga
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Ventajas de la sobrecarga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-con-constructores" class="md-nav__link">
+    🧱 Ejemplo con constructores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-como-decide-java-que-metodo-elegir" class="md-nav__link">
+    3️⃣ ¿Cómo decide Java qué método elegir?
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ ¿Cómo decide Java qué método elegir?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    🔍 Ejemplo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-por-valor-y-referencias-en-java" class="md-nav__link">
+    🔁 Paso por valor y referencias en Java
+  </a>
+  
+    <nav class="md-nav" aria-label="🔁 Paso por valor y referencias en Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-paso-por-valor-con-variables-locales-de-tipos-primitivos" class="md-nav__link">
+    🧮 1 Paso por valor con variables locales de tipos primitivos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-paso-por-valor-con-objetos-referencias" class="md-nav__link">
+    📦 2 Paso por valor con objetos (referencias)
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 2 Paso por valor con objetos (referencias)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-una-referencia-en-java" class="md-nav__link">
+    🧠 ¿Qué es una referencia en Java?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pero-no-podemos-reasignar-la-referencia-original" class="md-nav__link">
+    🚫 PERO: no podemos reasignar la referencia original
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilizar-varargs-con-moderacion" class="md-nav__link">
+    🧷 Utilizar varargs con moderación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-pasa-con-la-sobrecarga-y-varargs" class="md-nav__link">
+    🚨 ¿Qué pasa con la sobrecarga y varargs?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodos-de-instancia" class="md-nav__link">
-    Métodos de instancia
+  <a href="#por-que-confunden-a-veces" class="md-nav__link">
+    🤓 ¿Por qué confunden a veces?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodo-estatico-o-metodo-de-instancia" class="md-nav__link">
-    ¿Método estático o método de instancia?
+  <a href="#ejemplo-de-varargs-sobrecarga" class="md-nav__link">
+    🎯 Ejemplo de varargs + sobrecarga
   </a>
+  
+    <nav class="md-nav" aria-label="🎯 Ejemplo de varargs + sobrecarga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-esta-pasando-aqui" class="md-nav__link">
+    🔍 ¿Qué está pasando aquí?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#clases-estaticas" class="md-nav__link">
-    Clases estáticas
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bloques-estaticos" class="md-nav__link">
-    Bloques estáticos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#imports-estaticos" class="md-nav__link">
-    Imports estáticos
+  <a href="#resumen-final" class="md-nav__link">
+    🧾 Resumen Final
   </a>
   
 </li>
@@ -2325,174 +2565,272 @@
 
 
 
-<h1 id="variables-metodos-y-clases-estaticas">🌎 Variables, métodos y clases estáticas</h1>
-<p>Una clase, método o campo declarado como estático puede ser accedido o invocado sin la necesidad de tener que instanciar un objeto de la clase.</p>
-<p>Para entender mejor que son las variables y métodos estáticos vamos a ver las diferencias de cada uno de ellos con variables y métodos de instancia.</p>
-<h2 id="variables-estaticas">Variables estáticas</h2>
-<p>Si una variable se declara estática, hay exactamente una copia de esa variable creada sin importar cuántas veces se instancia su clase.</p>
-<ul>
-<li>Se declaran usando la palabra reservada <strong>static</strong>.</li>
-<li><strong>Cada instancia de la clase comparte la misma variable estática</strong>, por lo que si se realizan cambios en esa variable estática todas las demás instancias de esa clase verá el efecto de ese cambio.</li>
-<li>No se usan muy amenudo.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Persona</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Persona</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">Persona</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Maxi&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">p1</span><span class="p">.</span><span class="na">printName</span><span class="p">();</span><span class="c1">//imprime Maxi</span>
-<span class="w">        </span><span class="n">p2</span><span class="p">.</span><span class="na">printName</span><span class="p">();</span><span class="c1">//imprime Maxi</span>
+<h1 id="metodos-de-instancia-sobrecarga-de-metodos-y-paso-por-valor-vs-referencia-en-java">⚙️ Métodos de instancia. Sobrecarga de Métodos y Paso por Valor vs Referencia en Java</h1>
+<p>En el punto <a href="../../ud2/26methods/">2.6</a> del curso vimos una los métodos en Java, qué son, cómo definirlos y sus partes. En los siguientes puntos vamos estudiar conceptos relacionados con los métodos.</p>
+<h2 id="que-son-los-varargs-en-java">✨ ¿Qué son los varargs en Java?</h2>
+<p><strong>Varargs</strong> significa <em>“variable arguments”</em>, es decir:
+👉 <strong>un método que puede recibir un número variable de argumentos</strong>, sin necesitar sobrecarga.</p>
+<p>Se declaran con tres puntos <code>...</code> detrás del tipo.</p>
+<h3 id="1-como-funciona">🎒 1. ¿Cómo funciona?</h3>
+<p>Un método con varargs acepta <strong>cero, uno o muchos valores del mismo tipo</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarNombres</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">nombres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nombres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="variables-constantes-estaticas">Variables constantes estáticas</h3>
-<p>También se puede declarar un variable constante (final) como estática, esto significa que solo habrá una copia de la constante aunque hayan muchas instancias de esa clase.
-Son también llamadas <strong>constantes de clase</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">NUMERO_JUGADORES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<p>El método anterior podrías llamarlo así para ejecutarlo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">mostrarNombres</span><span class="p">();</span><span class="w">                     </span><span class="c1">// 0 argumentos</span>
+<span class="n">mostrarNombres</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span><span class="w">                </span><span class="c1">// 1 argumento</span>
+<span class="n">mostrarNombres</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">);</span><span class="w">        </span><span class="c1">// 2 argumentos</span>
+<span class="n">mostrarNombres</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Eva&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3 argumentos</span>
 </code></pre></div>
-<p>No todas las constantes son constantes de clase. Es decir, no todas las constantes se declaran estáticas. Sin embargo, la idea de asociar constantes con una clase tiene sentido. Ya que te permite ahorrar recursos de memoria, al crear una única copia de la constante.</p>
-<p>Otra ventaja de las constantes de clase es que se pueden usar antes de que existan instancias de la clase. Por ejemplo, una constante de clase (a diferencia de una constante de instancia) se puede usar durante la instanciación de objetos:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Game</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MULTIPLAYER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ONE_PLAYER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numeroJugadores</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Game</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">jugadores</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">numeroJugadores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jugadores</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Game</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">MULTIPLAYER</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<p>👉 Internamente, <strong>Java convierte los varargs en un array (String[])</strong>.</p>
+<h2 id="2-reglas-importantes-de-varargs">⚠️ 2. Reglas importantes de varargs</h2>
+<p>✔️ <strong>Solo puede haber un varargs por método</strong></p>
+<p>Esto no se permite:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">ejemplo</span><span class="p">(</span><span class="kt">int</span><span class="p">...</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w">  </span><span class="c1">// ❌ Error</span>
 </code></pre></div>
-<h2 id="variables-de-instancia">Variables de instancia</h2>
-<ul>
-<li>Las variables de instancia también son conocidas como campos o atributos.</li>
-<li>Las variables de instancia <strong>pertenecen a una instancia de la clase</strong>.</li>
-<li><strong>Cada instancia tiene su propia copia</strong> de una variable de instancia, así que cada instancia puede tener un valor(estado) diferente.</li>
-<li>Las variables de instancia <strong>representan el estado de una instancia</strong>.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Persona</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">Persona</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Maxi&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">p1</span><span class="p">.</span><span class="na">printName</span><span class="p">();</span><span class="c1">//imprime Patricia</span>
-<span class="w">        </span><span class="n">p2</span><span class="p">.</span><span class="na">printName</span><span class="p">();</span><span class="c1">//imprime Maxi</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<p>✔️ <strong>El varargs debe ser el último parámetro</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">ejemplo</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">titulo</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">...</span><span class="w"> </span><span class="n">valores</span><span class="p">)</span><span class="w">  </span><span class="c1">// ✔️</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">ejemplo</span><span class="p">(</span><span class="kt">int</span><span class="p">...</span><span class="w"> </span><span class="n">valores</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">titulo</span><span class="p">)</span><span class="w">  </span><span class="c1">// ❌ Error</span>
 </code></pre></div>
-<h2 id="metodos-estaticos">Métodos estáticos</h2>
-<ul>
-<li>Los métodos estáticos son declarados usando el modificador <strong>static</strong>.</li>
-<li>No se puede acceder desde los métodos estáticos a métodos de instancia o variables de instancia directamente.</li>
-<li>Para invocar a un método estático se utiliza el nombre de la clase + "." + el nombre del método, o solamente el nombre del método si está en la misma clase.(VEASE EJEMPLO)</li>
-<li>Normalmente se usan para operaciones que no requieren ningún dato de instancia de la clase, es decir, nada que venga de this.</li>
-<li>Dentro de un método estático no podemos usar la palabra <em>this</em>.</li>
-<li>Cada vez que veas un método que <strong>no utilice variables de instancia</strong>, significa que ese método debería declararse como estático.</li>
-<li>Por ejemplo, el main es declarado como estático y es llamado por la JVM cuando se lanza la aplicación.</li>
-</ul>
+<hr />
+<h2 id="1-que-es-la-sobrecarga-de-metodos">1️⃣ ¿Qué es la sobrecarga de métodos?</h2>
+<p>La <strong>sobrecarga de métodos</strong> (<em>method overloading</em>) consiste en definir varios métodos con el <strong>mismo nombre</strong> pero <strong>distintos parámetros</strong> dentro de una misma clase. El compilador decide cuál ejecutar dependiendo de la firma del método.</p>
+<p><strong>La firma de un método en Java</strong> es la combinación del nombre del método y la lista de parámetros en su orden y tipo.</p>
+<p><img alt="POO" src="../../img/ud33methodsignature.png" /></p>
+<p>En el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">veces</span><span class="p">)</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">veces</span><span class="p">)</span>
+</code></pre></div>
+<p>Sus firmas son:   <br />
+- <code>saludar(String)</code>     <br />
+- <code>saludar(int)</code>        <br />
+- <code>saludar(String, int)</code>          </p>
+<p>Son válidas porque todas son distintas.</p>
+<h3 id="reglas-de-la-sobrecarga">📐 Reglas de la sobrecarga</h3>
+<ol>
+<li>Debe cambiar <strong>número</strong>, <strong>tipo</strong> u <strong>orden</strong> de parámetros.</li>
+<li><strong>NO</strong> puede diferenciarse solo por el tipo de retorno.</li>
+<li>Puede tener diferentes modificadores de acceso.</li>
+<li>Puede lanzar excepciones distintas.</li>
+</ol>
+<h3 id="ejemplo-actualizado-java-21">💻 Ejemplo actualizado (Java 21)</h3>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Calculadora</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printSuma</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// 🛑 Ejemplo inválido misma firma: sumar(int, int)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="2-ventajas-de-la-sobrecarga">2️⃣ Ventajas de la sobrecarga</h2>
+<ul>
+<li>✅ Mejora la legibilidad: mismo método, distintos usos.</li>
+<li>✅ Reduce nombres innecesarios.</li>
+<li>✅ Permite usar <strong>constructores sobrecargados</strong> para inicializar objetos con datos opcionales.</li>
+</ul>
+<h3 id="ejemplo-con-constructores">🧱 Ejemplo con constructores</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Calculadora</span><span class="p">.</span><span class="na">printSuma</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
-<span class="w">        </span><span class="n">printHolaMundo</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printHolaMundo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola mundo.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">(</span><span class="s">&quot;Sin nombre&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="metodos-de-instancia">Métodos de instancia</h2>
+<hr />
+<h2 id="3-como-decide-java-que-metodo-elegir">3️⃣ ¿Cómo decide Java qué método elegir?</h2>
+<p>Cuando llamamos a un método sobrecargado, Java utiliza reglas de resolución:</p>
+<ol>
+<li>🎯 Coincidencia exacta de tipos.     </li>
+<li>🔁 Ampliación de tipos (widening)      <br />
+<code>int → long → float → double</code></li>
+<li>🧱 Autoboxing      <br />
+<code>int ↔ Integer</code>, <code>double ↔ Double</code></li>
+<li>📦 Varargs como última opción.       </li>
+</ol>
+<h3 id="ejemplo">🔍 Ejemplo</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;int&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Integer&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="kt">int</span><span class="p">...</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;varargs&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <ul>
-<li>Los métodos de instancia pertenecen a una instancia específica de la clase.</li>
-<li>Para usar un método de instancia tenemos que instanciar un objeto de la clase primero, normalmente utilizando la palabra resevada <strong>new</strong>.</li>
-<li>Los métodos de instancia pueden acceder a otros métodos de instancia y variables de instancia directamente.</li>
-<li>Los métodos de instancia pueden también acceder a <strong>métodos estáticos y variables estáticas</strong>.</li>
+<li><code>test(5)</code> llama al método <code>test(int)</code> --&gt; Coincidencia exacta     </li>
+<li><code>byte b = 9; test(b)</code> llama al método <code>test(int)</code> --&gt; Widening        </li>
+<li><code>test(Integer.valueOf(5))</code> llama al de tipo <code>Integer</code> --&gt; Autoboxing      </li>
+<li><code>test()</code> llama al de varargs      </li>
 </ul>
-<h2 id="metodo-estatico-o-metodo-de-instancia">¿Método estático o método de instancia?</h2>
-<p>Cuando voy a crear un método y tengo dudas sobre si crearlo estático o de instancia debo seguir la siguiente lógica:</p>
-<p>¿El método usa algún campo o variable de instancia o invoca en su interior a algún método de instancia?</p>
-<ul>
-<li>SI --&gt; Entonces debería crear un método de instancia.</li>
-<li>NO --&gt; Debería crear un método estático.</li>
-</ul>
-<h2 id="clases-estaticas">Clases estáticas</h2>
-<p>En el lenguaje Java, no podemos crear una clase externa como una clase estática, pero existe el privilegio de crear una clase interna anidada como una clase estática.</p>
-<ul>
-<li>Una clase interna estática nunca puede acceder a un miembro no estático de la clase externa.</li>
-<li>Una clase interna estática no necesita ninguna referencia de clase externa para acceder a las variables miembro.</li>
-<li>La clase estática nunca se puede instanciar. Por lo tanto, los métodos son directamente accesibles por el nombre de la clase.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Estatica</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<hr />
+<h2 id="paso-por-valor-y-referencias-en-java">🔁 Paso por valor y referencias en Java</h2>
+<p>Java <strong>siempre</strong> usa <strong>paso por valor</strong> (<em>pass by value</em>) cuando llamamos a un método como ya hemos visto.</p>
+<p>Esto significa que:</p>
+<blockquote>
+<p>🔹 <strong>Lo que Java pasa al método es una COPIA del valor original</strong>, nunca el original directamente.</p>
+</blockquote>
+<p>!!! Warning Pero ojo:         <br />
+    - Si el valor es un tipo de dato <strong>primitivo</strong>, la copia es el <strong>número</strong>, <strong>boolean</strong>, etc.      <br />
+    - Si el valor es un <strong>objeto</strong>, la copia es la <strong>referencia</strong> que apunta al objeto.         </p>
+<h3 id="1-paso-por-valor-con-variables-locales-de-tipos-primitivos">🧮 1 Paso por valor con variables locales de tipos primitivos</h3>
+<p>Se pasa una <strong>copia</strong> del valor real.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">incrementar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//se pasa una copia del valor 5 y se asigna a x</span>
+<span class="w">    </span><span class="n">x</span><span class="o">++</span><span class="p">;</span><span class="c1">//se le suma 1 a x</span>
+<span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Estatica</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Estatica</span><span class="p">();</span>
-<span class="w">        </span><span class="c1">//s.ClaseInterna.printNum(); NO ES CORRECTO</span>
-<span class="w">        </span><span class="c1">//Estatica.ClaseInterna.printNum(); SI se podría hacer</span>
-<span class="w">        </span><span class="n">ClaseInterna</span><span class="p">.</span><span class="na">printNum</span><span class="p">();</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="n">incrementar</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="c1">// no se pasa n, se pasa una copia de su valor</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="c1">// n sigue valiendo 5, imprime 5</span>
+</code></pre></div>
+<p>📝 <strong>Explicación:</strong>   <br />
+- <code>n</code> no cambia porque el método recibe <strong>una copia con valor 5</strong>.   <br />
+- <strong>Cambia esa copia, no la variable original</strong>.        </p>
+<hr />
+<h3 id="2-paso-por-valor-con-objetos-referencias">📦 2 Paso por valor con objetos (referencias)</h3>
+<p>Se pasa una <strong>copia de la referencia</strong>, no del objeto.<br />
+Por tanto, dentro del método podemos modificar el objeto al que apunta.</p>
+<h4 id="que-es-una-referencia-en-java">🧠 ¿Qué es una referencia en Java?</h4>
+<p>Una <strong>referencia</strong> es la <strong>dirección de memoria</strong> donde está guardado un objeto. 👉 <strong>Es un puntero que señala dónde está el objeto real</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Definimos una clase sencilla con un solo atributo</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Caja</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"> </span><span class="c1">//// atributo que guarda un número entero</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainCaja</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Método que recibe una Caja y le suma 1 a su atributo &#39;valor&#39;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">modificar</span><span class="p">(</span><span class="n">Caja</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// &#39;c&#39; es una COPIA de la referencia a la Caja original</span>
+<span class="w">        </span><span class="c1">// Accedemos al objeto al que apunta y modificamos su campo &#39;valor&#39;</span>
+<span class="w">        </span><span class="n">c</span><span class="p">.</span><span class="na">valor</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// equivalente a: c.valor = c.valor + 1;</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ClaseInterna</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printNum</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-<span class="w">            </span><span class="c1">//System.out.println(j); //NO PODEMOS ACCEDER A ATRIBUTOS NO ESTÁTICOS</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Creamos una nueva instancia de Caja</span>
+<span class="w">        </span><span class="n">Caja</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Caja</span><span class="p">();</span><span class="w">  </span><span class="c1">// aquí &#39;c&#39; es una referencia a un objeto Caja en memoria</span>
+
+<span class="w">        </span><span class="c1">// Asignamos el valor 10 al atributo &#39;valor&#39; de esa caja</span>
+<span class="w">        </span><span class="n">c</span><span class="p">.</span><span class="na">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">         </span><span class="c1">// ahora dentro del objeto c, valor = 10</span>
+
+<span class="w">        </span><span class="c1">// Llamamos al método &#39;modificar&#39; pasando la referencia &#39;c&#39;</span>
+<span class="w">        </span><span class="n">modificar</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="c1">// se pasa una COPIA de la referencia, pero ambas apuntan al MISMO objeto</span>
+
+<span class="w">        </span><span class="c1">// Imprimimos el atributo &#39;valor&#39; de la caja</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">valor</span><span class="p">);</span><span class="w"> </span><span class="c1">// imprime 11, porque dentro de &#39;sumar&#39; se incrementó el valor</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>🔑 Idea clave para entender qué sucede:   <br />
+- Java sigue siendo <strong>paso por valor</strong>: al método modificar se le pasa una <strong>copia</strong> de la referencia.
+- Pero esa copia apunta al <strong>mismo objeto</strong>, así que cualquier cambio en c.valor <strong>modifica el objeto real</strong> que luego imprimimos.</p>
+<h3 id="pero-no-podemos-reasignar-la-referencia-original">🚫 PERO: no podemos reasignar la referencia original</h3>
+<p>Recuerda <strong>Java pasa una COPIA de la referencia, no la referencia original</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainCaja</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//Se recibe una copia de la referencia del objeto c</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="n">Caja</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Caja</span><span class="p">();</span><span class="w">   </span><span class="c1">// solo cambia la copia de la referencia a una nueva</span>
+<span class="w">        </span><span class="n">c</span><span class="p">.</span><span class="na">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">//le cambia el valor a esa nueva referencia</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Creamos una nueva instancia de Caja</span>
+<span class="w">        </span><span class="n">Caja</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Caja</span><span class="p">();</span><span class="w">  </span><span class="c1">// aquí &#39;c&#39; es una referencia a un objeto Caja en memoria</span>
+
+<span class="w">        </span><span class="c1">// Asignamos el valor 10 al atributo &#39;valor&#39; de esa caja</span>
+<span class="w">        </span><span class="n">c</span><span class="p">.</span><span class="na">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">         </span><span class="c1">// ahora dentro del objeto c, valor = 10</span>
+
+<span class="w">        </span><span class="n">reset</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="c1">//se pasa una COPIA de la referencia</span>
+
+<span class="w">        </span><span class="c1">// Imprimimos el atributo &#39;valor&#39; de la caja</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">valor</span><span class="p">);</span><span class="w"> </span><span class="c1">// sigue siendo 10, NO 0</span>
+<span class="w">        </span><span class="c1">//Dentro del método puedes modificar el OBJETO,</span>
+<span class="w">        </span><span class="c1">//pero NO puedes cambiar la referencia original porque solo recibes una copia.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="o">---</span>
+
+<span class="err">##</span><span class="w"> </span><span class="err">🧠</span><span class="w"> </span><span class="n">Buenas</span><span class="w"> </span><span class="n">prácticas</span><span class="w"> </span><span class="nf">modernas</span><span class="w"> </span><span class="p">(</span><span class="n">Java</span><span class="w"> </span><span class="mi">17</span><span class="err">–</span><span class="mi">21</span><span class="p">)</span>
+
+<span class="err">###</span><span class="w"> </span><span class="err">⚠️</span><span class="w"> </span><span class="n">Evitar</span><span class="w"> </span><span class="n">sobrecarga</span><span class="w"> </span><span class="n">excesiva</span>
+<span class="n">Si</span><span class="w"> </span><span class="n">sobrecargas</span><span class="w"> </span><span class="n">más</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="mi">4</span><span class="err">–</span><span class="mi">5</span><span class="w"> </span><span class="n">métodos</span><span class="p">,</span><span class="w"> </span><span class="n">puede</span><span class="w"> </span><span class="n">volverse</span><span class="w"> </span><span class="n">confuso</span><span class="p">.</span><span class="w"> </span><span class="n">Considera</span><span class="w"> </span><span class="n">usar</span><span class="w"> </span><span class="o">**</span><span class="n">métodos</span><span class="w"> </span><span class="n">estáticos</span><span class="w"> </span><span class="n">auxiliares</span><span class="o">**</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">constructores</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="n">builder</span><span class="o">**</span><span class="p">,</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">**</span><span class="n">Optional</span><span class="o">**</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="n">parámetros</span><span class="w"> </span><span class="n">opcionales</span><span class="p">.</span>
+
+<span class="err">###</span><span class="w"> </span><span class="err">🧊</span><span class="w"> </span><span class="n">Usar</span><span class="w"> </span><span class="nf">registros</span><span class="w"> </span><span class="p">(</span><span class="n">records</span><span class="p">)</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="n">objetos</span><span class="w"> </span><span class="nf">inmutables</span><span class="w"> </span><span class="p">(</span><span class="n">los</span><span class="w"> </span><span class="n">veremos</span><span class="w"> </span><span class="n">más</span><span class="w"> </span><span class="n">adelante</span><span class="p">)</span>
+<span class="err">```</span><span class="n">java</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nf">Punto</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="utilizar-varargs-con-moderacion">🧷 Utilizar varargs con moderación</h3>
+<p>El compilador puede confundir sobrecargas con varargs.</p>
+<hr />
+<h2 id="que-pasa-con-la-sobrecarga-y-varargs">🚨 ¿Qué pasa con la sobrecarga y varargs?</h2>
+<p>Java usa <em>varargs</em> como <strong>última opción</strong> cuando no hay coincidencia exacta.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="kt">int</span><span class="p">...</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>Llamada:
+<div class="highlight"><pre><span></span><code><span class="n">test</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">//👉 Llama a test(int) porque es coincidencia exacta.</span>
+</code></pre></div></p>
+<p>Pero si hacemos:
+<div class="highlight"><pre><span></span><code><span class="n">test</span><span class="p">();</span><span class="w"> </span><span class="c1">//👉 Llama a test(int...) porque el varargs permite cero argumentos.</span>
+</code></pre></div></p>
+<h2 id="por-que-confunden-a-veces">🤓 ¿Por qué confunden a veces?</h2>
+<p>Porque un método con varargs puede aceptar muchos patrones diferentes:
+<div class="highlight"><pre><span></span><code><span class="n">imprimir</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">imprimir</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="n">imprimir</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="n">imprimir</span><span class="p">();</span><span class="w"> </span><span class="c1">// también válido</span>
+</code></pre></div></p>
+<p>Y si además tienes otros métodos sobrecargados, Java aplicará sus reglas de resolución de métodos, lo que puede resultar confuso.</p>
+<h2 id="ejemplo-de-varargs-sobrecarga">🎯 Ejemplo de <em>varargs</em> + sobrecarga</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploVarargs</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// 1) Método normal con un solo parámetro</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 👋&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 2) Método sobrecargado con VARARGS (puede recibir muchos nombres)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">nombres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Saludos a todos:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nombres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; - &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="bloques-estaticos">Bloques estáticos</h2>
-<p>Es posible declarar bloques de código como estáticos, de tal manera que sean ejecutados cuando se cargue la clase. Este tipo de bloques se conocen como bloques de inicialización estáticos (static initializer block). Si no se declara un bloque de este tipo de forma explícita, el compilador Just-in-Time combina todos los campos estáticos en un bloque y los ejecuta durante la carga de clases.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Objeto</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">campo1</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">campo1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">saludar</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span><span class="w">                    </span><span class="c1">// 👉 Llama al método (1)</span>
+<span class="w">        </span><span class="n">saludar</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marta&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// 👉 Llama al método (2)</span>
+<span class="w">        </span><span class="n">saludar</span><span class="p">();</span><span class="w">                         </span><span class="c1">// 👉 Llama al método (2) con 0 nombres</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="imports-estaticos">Imports estáticos</h2>
-<p>Una de las características incluidas en Java 5 fué la capacidad de importar los métodos y variables estáticas de un módulo y acceder a ellos como si hubieran sido declarados en la propia clase. Es especialmente útil, y mejora la legibilidad, cuando se están definiendo test unitarios, ya que la mayoría de los métodos de aserción de JUnit son estáticos.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import static</span><span class="w"> </span><span class="nn">java.lang.Math.PI</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PI</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<h3 id="que-esta-pasando-aqui">🔍 ¿Qué está pasando aquí?</h3>
+<p>Cuando llamas a <code>saludar("Ana")</code>: Java ve dos candidatos:     <br />
+- <code>saludar(String nombre)</code>    <br />
+- <code>saludar(String... nombres)</code>            </p>
+<p><strong>Elige el más específico</strong>, es decir, el que recibe un solo String, no el de varargs.</p>
+<p>Cuando llamas a <code>saludar("Ana", "Luis", "Marta")</code>: Solo encaja el de String... nombres, así que elige ese.</p>
+<p>Cuando llamas a <code>saludar()</code>: Solo encaja el de String... nombres (varargs admite 0 argumentos).</p>
+<hr />
+<h2 id="resumen-final">🧾 Resumen Final</h2>
+<ul>
+<li>🔁 La <strong>sobrecarga</strong> permite métodos con el mismo nombre y distintas firmas.</li>
+<li>🎯 Java siempre pasa <strong>copias</strong> de los valores.</li>
+<li>📦 Para objetos, la copia contiene la <strong>referencia</strong>, permitiendo modificar el interior del objeto.</li>
+<li>🔒 No se puede reasignar la referencia original desde un método.</li>
+<li>🧩 Arrays y colecciones también pueden ser modificados dentro del método.</li>
+<li>🧮 Las reglas de resolución de métodos incluyen: coincidencia exacta, widening, autoboxing y varargs.</li>
+</ul>
+<hr />
 
 
   
