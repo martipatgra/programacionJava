@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#variables-metodos-y-clases-estaticas" class="md-skip">
+        <a href="#variables-metodos-y-clases-estaticas-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1024,16 +1024,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#variables-estaticas" class="md-nav__link">
-    Variables estáticas
+  <a href="#1-variables-de-instancia-vs-variables-estaticas" class="md-nav__link">
+    🧱 1. Variables de instancia vs variables estáticas
   </a>
   
-    <nav class="md-nav" aria-label="Variables estáticas">
+    <nav class="md-nav" aria-label="🧱 1. Variables de instancia vs variables estáticas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#variables-constantes-estaticas" class="md-nav__link">
-    Variables constantes estáticas
+  <a href="#variables-de-instancia" class="md-nav__link">
+    🔹 Variables de instancia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-estaticas" class="md-nav__link">
+    🔸 Variables estáticas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen-rapido" class="md-nav__link">
+    📊 Resumen rápido
   </a>
   
 </li>
@@ -1044,50 +1058,84 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-de-instancia" class="md-nav__link">
-    Variables de instancia
+  <a href="#2-constantes-de-clase-static-final" class="md-nav__link">
+    💎 2. Constantes de clase (static final)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodos-estaticos" class="md-nav__link">
-    Métodos estáticos
+  <a href="#3-metodos-estaticos" class="md-nav__link">
+    ⚙️ 3. Métodos estáticos
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodos-de-instancia" class="md-nav__link">
-    Métodos de instancia
+  <a href="#4-metodos-de-instancia" class="md-nav__link">
+    🧍‍♀️ 4. Métodos de instancia
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodo-estatico-o-metodo-de-instancia" class="md-nav__link">
-    ¿Método estático o método de instancia?
+  <a href="#5-metodo-estatico-o-de-instancia" class="md-nav__link">
+    ❓ 5. ¿Método estático o de instancia?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#clases-estaticas" class="md-nav__link">
-    Clases estáticas
+  <a href="#6-clases-internas-estaticas" class="md-nav__link">
+    🧱 6. Clases internas estáticas
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bloques-estaticos" class="md-nav__link">
-    Bloques estáticos
+  <a href="#7-bloques-estaticos-de-inicializacion" class="md-nav__link">
+    ⚡ 7. Bloques estáticos de inicialización
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#imports-estaticos" class="md-nav__link">
-    Imports estáticos
+  <a href="#8-imports-estaticos" class="md-nav__link">
+    📦 8. Imports estáticos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-detalles-modernos-de-java-relacionados-con-static" class="md-nav__link">
+    🆕 9. Detalles modernos de Java relacionados con static
+  </a>
+  
+    <nav class="md-nav" aria-label="🆕 9. Detalles modernos de Java relacionados con static">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodos-estaticos-en-interfaces-desde-java-8" class="md-nav__link">
+    🧪 Métodos estáticos en interfaces (desde Java 8)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-static-privados-en-interfaces-desde-java-9" class="md-nav__link">
+    🔐 Métodos static privados en interfaces (desde Java 9)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-errores-tipicos-con-static" class="md-nav__link">
+    🚨 9. Errores típicos con static
   </a>
   
 </li>
@@ -2255,16 +2303,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#variables-estaticas" class="md-nav__link">
-    Variables estáticas
+  <a href="#1-variables-de-instancia-vs-variables-estaticas" class="md-nav__link">
+    🧱 1. Variables de instancia vs variables estáticas
   </a>
   
-    <nav class="md-nav" aria-label="Variables estáticas">
+    <nav class="md-nav" aria-label="🧱 1. Variables de instancia vs variables estáticas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#variables-constantes-estaticas" class="md-nav__link">
-    Variables constantes estáticas
+  <a href="#variables-de-instancia" class="md-nav__link">
+    🔹 Variables de instancia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-estaticas" class="md-nav__link">
+    🔸 Variables estáticas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen-rapido" class="md-nav__link">
+    📊 Resumen rápido
   </a>
   
 </li>
@@ -2275,50 +2337,84 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-de-instancia" class="md-nav__link">
-    Variables de instancia
+  <a href="#2-constantes-de-clase-static-final" class="md-nav__link">
+    💎 2. Constantes de clase (static final)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodos-estaticos" class="md-nav__link">
-    Métodos estáticos
+  <a href="#3-metodos-estaticos" class="md-nav__link">
+    ⚙️ 3. Métodos estáticos
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodos-de-instancia" class="md-nav__link">
-    Métodos de instancia
+  <a href="#4-metodos-de-instancia" class="md-nav__link">
+    🧍‍♀️ 4. Métodos de instancia
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodo-estatico-o-metodo-de-instancia" class="md-nav__link">
-    ¿Método estático o método de instancia?
+  <a href="#5-metodo-estatico-o-de-instancia" class="md-nav__link">
+    ❓ 5. ¿Método estático o de instancia?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#clases-estaticas" class="md-nav__link">
-    Clases estáticas
+  <a href="#6-clases-internas-estaticas" class="md-nav__link">
+    🧱 6. Clases internas estáticas
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bloques-estaticos" class="md-nav__link">
-    Bloques estáticos
+  <a href="#7-bloques-estaticos-de-inicializacion" class="md-nav__link">
+    ⚡ 7. Bloques estáticos de inicialización
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#imports-estaticos" class="md-nav__link">
-    Imports estáticos
+  <a href="#8-imports-estaticos" class="md-nav__link">
+    📦 8. Imports estáticos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-detalles-modernos-de-java-relacionados-con-static" class="md-nav__link">
+    🆕 9. Detalles modernos de Java relacionados con static
+  </a>
+  
+    <nav class="md-nav" aria-label="🆕 9. Detalles modernos de Java relacionados con static">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodos-estaticos-en-interfaces-desde-java-8" class="md-nav__link">
+    🧪 Métodos estáticos en interfaces (desde Java 8)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-static-privados-en-interfaces-desde-java-9" class="md-nav__link">
+    🔐 Métodos static privados en interfaces (desde Java 9)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-errores-tipicos-con-static" class="md-nav__link">
+    🚨 9. Errores típicos con static
   </a>
   
 </li>
@@ -2339,25 +2435,40 @@
 
 
 
-<h1 id="variables-metodos-y-clases-estaticas">🌎 Variables, métodos y clases estáticas</h1>
-<p>Una clase, método o campo declarado como estático puede ser accedido o invocado sin la necesidad de tener que instanciar un objeto de la clase.</p>
-<p>Para entender mejor que son las variables y métodos estáticos vamos a ver las diferencias de cada uno de ellos con variables y métodos de instancia.</p>
-<h2 id="variables-estaticas">Variables estáticas</h2>
-<p>Si una variable se declara estática, hay exactamente una copia de esa variable creada sin importar cuántas veces se instancia su clase.</p>
+<h1 id="variables-metodos-y-clases-estaticas-en-java">🧲 Variables, métodos y clases estáticas en Java</h1>
+<blockquote>
+<p><strong>Idea clave:</strong> <code>static</code> significa <em>“de la clase”</em>, no <em>“del objeto”</em>.</p>
+</blockquote>
+<p>Una <strong>clase, método o campo estático</strong> se puede usar <strong>sin crear objetos</strong> de esa clase.<br />
+En esta página veremos:</p>
 <ul>
-<li>Se declaran usando la palabra reservada <strong>static</strong>.</li>
-<li><strong>Cada instancia de la clase comparte la misma variable estática</strong>, por lo que si se realizan cambios en esa variable estática todas las demás instancias de esa clase verá el efecto de ese cambio.</li>
-<li>No se usan muy amenudo.</li>
+<li>🧱 Diferencias entre <strong>miembros estáticos</strong> y <strong>de instancia</strong></li>
+<li>🧊 <strong>Constantes de clase</strong> (<code>static final</code>)</li>
+<li>🧮 <strong>Métodos estáticos</strong> (como <code>main</code>)</li>
+<li>🧩 <strong>Clases internas estáticas</strong></li>
+<li>⚡ <strong>Bloques estáticos de inicialización</strong></li>
+<li>📦 <strong>Imports estáticos</strong></li>
+<li>🆕 Detalles modernos de Java relacionados con <code>static</code></li>
+<li>🧪 Pequeños ejercicios para practicar</li>
+</ul>
+<hr />
+<h2 id="1-variables-de-instancia-vs-variables-estaticas">🧱 1. Variables de instancia vs variables estáticas</h2>
+<h3 id="variables-de-instancia">🔹 Variables de instancia</h3>
+<p>Son los <strong>atributos normales</strong> de un objeto:</p>
+<ul>
+<li>Pertenecen a <strong>cada objeto</strong>.</li>
+<li>Cada objeto tiene <strong>su propia copia</strong>.</li>
+<li>Representan el <strong>estado</strong> de ese objeto.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"> </span><span class="c1">// variable de instancia</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Persona</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
@@ -2365,148 +2476,313 @@
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">Persona</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="n">Persona</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Maxi&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">p1</span><span class="p">.</span><span class="na">printName</span><span class="p">();</span><span class="c1">//imprime Maxi</span>
-<span class="w">        </span><span class="n">p2</span><span class="p">.</span><span class="na">printName</span><span class="p">();</span><span class="c1">//imprime Maxi</span>
+
+<span class="w">        </span><span class="n">p1</span><span class="p">.</span><span class="na">printNombre</span><span class="p">();</span><span class="w"> </span><span class="c1">// imprime Patricia</span>
+<span class="w">        </span><span class="n">p2</span><span class="p">.</span><span class="na">printNombre</span><span class="p">();</span><span class="w"> </span><span class="c1">// imprime Maxi</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="variables-constantes-estaticas">Variables constantes estáticas</h3>
-<p>También se puede declarar un variable constante (final) como estática, esto significa que solo habrá una copia de la constante aunque hayan muchas instancias de esa clase.
-Son también llamadas <strong>constantes de clase</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">NUMERO_JUGADORES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-</code></pre></div>
-<p>No todas las constantes son constantes de clase. Es decir, no todas las constantes se declaran estáticas. Sin embargo, la idea de asociar constantes con una clase tiene sentido. Ya que te permite ahorrar recursos de memoria, al crear una única copia de la constante.</p>
-<p>Otra ventaja de las constantes de clase es que se pueden usar antes de que existan instancias de la clase. Por ejemplo, una constante de clase (a diferencia de una constante de instancia) se puede usar durante la instanciación de objetos:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Game</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MULTIPLAYER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ONE_PLAYER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numeroJugadores</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Game</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">jugadores</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">numeroJugadores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jugadores</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Game</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">MULTIPLAYER</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="variables-de-instancia">Variables de instancia</h2>
+<p>👉 Cada persona tiene su <strong>propio nombre</strong>.</p>
+<hr />
+<h3 id="variables-estaticas">🔸 Variables estáticas</h3>
+<p>Son <strong>compartidas por todas las instancias</strong> de la clase, porque pertenecen a la clase:</p>
 <ul>
-<li>Las variables de instancia también son conocidas como campos o atributos.</li>
-<li>Las variables de instancia <strong>pertenecen a una instancia de la clase</strong>.</li>
-<li><strong>Cada instancia tiene su propia copia</strong> de una variable de instancia, así que cada instancia puede tener un valor(estado) diferente.</li>
-<li>Las variables de instancia <strong>representan el estado de una instancia</strong>.</li>
+<li>Se declaran con la palabra reservada <code>static</code>.</li>
+<li><strong>Solo existe UNA copia</strong> en memoria, aunque haya muchos objetos.</li>
+<li>Todas las instancias ven <strong>el mismo valor</strong>.</li>
+<li>Se suelen usar poco: solo cuando de verdad tiene sentido compartir el dato.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Contador</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalObjetos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// variable estática</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w">               </span><span class="c1">// variable de instancia</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Contador</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="n">totalObjetos</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// cada vez que se crea uno, suma 1</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Soy &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                           </span><span class="s">&quot; y se han creado &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalObjetos</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; objetos.&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Persona</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">Persona</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Maxi&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">p1</span><span class="p">.</span><span class="na">printName</span><span class="p">();</span><span class="c1">//imprime Patricia</span>
-<span class="w">        </span><span class="n">p2</span><span class="p">.</span><span class="na">printName</span><span class="p">();</span><span class="c1">//imprime Maxi</span>
+<span class="w">        </span><span class="n">Contador</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Contador</span><span class="p">(</span><span class="s">&quot;Primero&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Contador</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Contador</span><span class="p">(</span><span class="s">&quot;Segundo&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">c1</span><span class="p">.</span><span class="na">printInfo</span><span class="p">();</span><span class="w"> </span><span class="c1">// Soy Primero y se han creado 2 objetos.</span>
+<span class="w">        </span><span class="n">c2</span><span class="p">.</span><span class="na">printInfo</span><span class="p">();</span><span class="w"> </span><span class="c1">// Soy Segundo y se han creado 2 objetos.</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="metodos-estaticos">Métodos estáticos</h2>
+<p>👉 <code>totalObjetos</code> es <strong>de la clase</strong> (compartido).<br />
+👉 <code>nombre</code> es <strong>de cada objeto</strong>.</p>
+<hr />
+<h3 id="resumen-rapido">📊 Resumen rápido</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo de miembro</th>
+<th>¿De quién es?</th>
+<th>Nº de copias</th>
+<th>Acceso habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable de instancia</td>
+<td>De cada <strong>objeto</strong></td>
+<td>Una por <strong>objeto</strong></td>
+<td><code>objeto.atributo</code></td>
+</tr>
+<tr>
+<td>Variable estática</td>
+<td>De la <strong>clase</strong></td>
+<td>Una para <strong>toda la clase</strong></td>
+<td><code>NombreClase.atributo</code> o desde métodos estáticos</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-constantes-de-clase-static-final">💎 2. Constantes de clase (<code>static final</code>)</h2>
+<p>Una <strong>constante de clase</strong> es un campo:</p>
 <ul>
-<li>Los métodos estáticos son declarados usando el modificador <strong>static</strong>.</li>
-<li>No se puede acceder desde los métodos estáticos a métodos de instancia o variables de instancia directamente.</li>
-<li>Para invocar a un método estático se utiliza el nombre de la clase + "." + el nombre del método, o solamente el nombre del método si está en la misma clase.(VEASE EJEMPLO)</li>
-<li>Normalmente se usan para operaciones que no requieren ningún dato de instancia de la clase, es decir, nada que venga de this.</li>
-<li>Dentro de un método estático no podemos usar la palabra <em>this</em>.</li>
-<li>Cada vez que veas un método que <strong>no utilice variables de instancia</strong>, significa que ese método debería declararse como estático.</li>
-<li>Por ejemplo, el main es declarado como estático y es llamado por la JVM cuando se lanza la aplicación.</li>
+<li><code>static</code> ➜ es de la clase, hay una sola copia.</li>
+<li><code>final</code> ➜ no se puede cambiar su valor (constante).</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Calculadora</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printSuma</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Juego</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MODO_UN_JUGADOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MODO_MULTIJUGADOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">modo</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Juego</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">modo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">modo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">modo</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Juego</span><span class="w"> </span><span class="n">juego</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Juego</span><span class="p">(</span><span class="n">Juego</span><span class="p">.</span><span class="na">MODO_MULTIJUGADOR</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>✅ Ventajas:</p>
+<ul>
+<li>Ahorra memoria: solo hay <strong>una copia</strong> de la constante.</li>
+<li>Se puede usar <strong>sin crear objetos</strong>.</li>
+<li>Hace el código más <strong>legible</strong> (<code>MODO_MULTIJUGADOR</code> es más claro que <code>2</code>).</li>
+</ul>
+<hr />
+<h2 id="3-metodos-estaticos">⚙️ 3. Métodos estáticos</h2>
+<p>Un método estático:</p>
+<ul>
+<li>Se declara con <code>static</code>.</li>
+<li><strong>No</strong> puede acceder directamente a <strong>atributos ni métodos de instancia</strong>.</li>
+<li>Se puede llamar con <code>NombreClase.metodo()</code> o directamente <code>metodo()</code> si está en la misma clase.</li>
+<li>Se suele usar para:</li>
+<li>Funciones <strong>auxiliares / utilidades</strong></li>
+<li>Cálculos que <strong>no dependen del estado</strong> de ningún objeto.</li>
+<li>El famoso <code>main</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Calculadora</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Calculadora</span><span class="p">.</span><span class="na">printSuma</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
-<span class="w">        </span><span class="n">printHolaMundo</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printHolaMundo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola mundo.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Calculadora</span><span class="p">.</span><span class="na">sumar</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">resultado</span><span class="p">);</span><span class="w"> </span><span class="c1">// 11</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="metodos-de-instancia">Métodos de instancia</h2>
+<p>🚫 Dentro de un método estático:</p>
 <ul>
-<li>Los métodos de instancia pertenecen a una instancia específica de la clase.</li>
-<li>Para usar un método de instancia tenemos que instanciar un objeto de la clase primero, normalmente utilizando la palabra resevada <strong>new</strong>.</li>
-<li>Los métodos de instancia pueden acceder a otros métodos de instancia y variables de instancia directamente.</li>
-<li>Los métodos de instancia pueden también acceder a <strong>métodos estáticos y variables estáticas</strong>.</li>
+<li><strong>No puedes usar</strong> <code>this</code>.</li>
+<li>No puedes acceder directamente a variables de instancia.</li>
 </ul>
-<h2 id="metodo-estatico-o-metodo-de-instancia">¿Método estático o método de instancia?</h2>
-<p>Cuando voy a crear un método y tengo dudas sobre si crearlo estático o de instancia debo seguir la siguiente lógica:</p>
-<p>¿El método usa algún campo o variable de instancia o invoca en su interior a algún método de instancia?</p>
-<ul>
-<li>SI --&gt; Entonces debería crear un método de instancia.</li>
-<li>NO --&gt; Debería crear un método estático.</li>
-</ul>
-<h2 id="clases-estaticas">Clases estáticas</h2>
-<p>En el lenguaje Java, no podemos crear una clase externa como una clase estática, pero existe el privilegio de crear una clase interna anidada como una clase estática.</p>
-<ul>
-<li>Una clase interna estática nunca puede acceder a un miembro no estático de la clase externa.</li>
-<li>Una clase interna estática no necesita ninguna referencia de clase externa para acceder a las variables miembro.</li>
-<li>La clase estática nunca se puede instanciar. Por lo tanto, los métodos son directamente accesibles por el nombre de la clase.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Estatica</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Ejemplo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Estatica</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Estatica</span><span class="p">();</span>
-<span class="w">        </span><span class="c1">//s.ClaseInterna.printNum(); NO ES CORRECTO</span>
-<span class="w">        </span><span class="c1">//Estatica.ClaseInterna.printNum(); SI se podría hacer</span>
-<span class="w">        </span><span class="n">ClaseInterna</span><span class="p">.</span><span class="na">printNum</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">metodoEstatico</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// System.out.println(numero); // ❌ ERROR: numero es de instancia</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="4-metodos-de-instancia">🧍‍♀️ 4. Métodos de instancia</h2>
+<ul>
+<li>Necesitan un <strong>objeto</strong> para usarse.      </li>
+<li>Pueden acceder tanto a:       </li>
+<li>Variables y métodos <strong>de instancia</strong>        </li>
+<li>Como a variables y métodos <strong>estáticos</strong>        </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Cuenta</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">saldo</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">interesAnual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.02</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cuenta</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">saldoInicial</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">saldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saldoInicial</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ClaseInterna</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printNum</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-<span class="w">            </span><span class="c1">//System.out.println(j); //NO PODEMOS ACCEDER A ATRIBUTOS NO ESTÁTICOS</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">aplicarInteres</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">         </span><span class="c1">// método de instancia</span>
+<span class="w">        </span><span class="n">saldo</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">interesAnual</span><span class="p">;</span><span class="w">     </span><span class="c1">// usa saldo (instancia) e interesAnual (estático)</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cambiarInteres</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">nuevoInteres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// método estático</span>
+<span class="w">        </span><span class="n">interesAnual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nuevoInteres</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="5-metodo-estatico-o-de-instancia">❓ 5. ¿Método estático o de instancia?</h2>
+<p><strong>Regla práctica:</strong></p>
+<blockquote>
+<p>🔍 Pregunta: “¿Este método necesita datos del objeto (<code>this</code>)?”</p>
+<ul>
+<li>✅ <strong>Sí</strong> ➜ Método <strong>de instancia</strong>.</li>
+<li>❌ <strong>No</strong> ➜ Método <strong>estático</strong>.</li>
+</ul>
+</blockquote>
+<p>Ejemplos típicos de métodos estáticos:</p>
+<ul>
+<li>Conversión de tipos (<code>parseInt</code>, etc.).</li>
+<li>Funciones matemáticas (<code>Math.sqrt</code>, <code>Math.random</code>…).</li>
+<li>Utilidades que no dependen del estado (<code>Collections.sort</code>, etc.).</li>
+</ul>
+<hr />
+<h2 id="6-clases-internas-estaticas">🧱 6. Clases internas estáticas</h2>
+<p>Java <strong>no permite</strong> que una clase “normal” externa sea estática, pero <strong>sí</strong> permite que una <strong>clase interna</strong> lo sea.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Contenedor</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">valorEstatico</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">valorInstancia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Interna</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">imprimir</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">valorEstatico</span><span class="p">);</span><span class="w"> </span><span class="c1">// ✅ puede acceder a estáticos de Contenedor</span>
+<span class="w">            </span><span class="c1">// System.out.println(valorInstancia); // ❌ NO puede acceder a no estáticos</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="bloques-estaticos">Bloques estáticos</h2>
-<p>Es posible declarar bloques de código como estáticos, de tal manera que sean ejecutados cuando se cargue la clase. Este tipo de bloques se conocen como bloques de inicialización estáticos (static initializer block). Si no se declara un bloque de este tipo de forma explícita, el compilador Just-in-Time combina todos los campos estáticos en un bloque y los ejecuta durante la carga de clases.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Objeto</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">campo1</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">campo1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Contenedor</span><span class="p">.</span><span class="na">Interna</span><span class="p">.</span><span class="na">imprimir</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="imports-estaticos">Imports estáticos</h2>
-<p>Una de las características incluidas en Java 5 fué la capacidad de importar los métodos y variables estáticas de un módulo y acceder a ellos como si hubieran sido declarados en la propia clase. Es especialmente útil, y mejora la legibilidad, cuando se están definiendo test unitarios, ya que la mayoría de los métodos de aserción de JUnit son estáticos.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import static</span><span class="w"> </span><span class="nn">java.lang.Math.PI</span><span class="p">;</span>
+<p>📌 Recuerda:</p>
+<ul>
+<li>Una <strong>clase interna estática</strong>:           </li>
+<li>No necesita una instancia de la clase externa.          </li>
+<li>Solo puede acceder a <strong>miembros estáticos</strong> de la clase externa.            </li>
+</ul>
+<hr />
+<h2 id="7-bloques-estaticos-de-inicializacion">⚡ 7. Bloques estáticos de inicialización</h2>
+<p>Un <strong>bloque estático</strong> se ejecuta <strong>una sola vez</strong>, cuando la clase se carga en memoria.</p>
+<p>Se usa para <strong>inicializar campos estáticos</strong> de forma más compleja que con una simple asignación.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Configuracion</span><span class="w"> </span><span class="p">{</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PI</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">URL_BD</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Este código se ejecuta UNA sola vez, al cargarse la clase</span>
+<span class="w">        </span><span class="n">URL_BD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3306/mi_bd&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Inicializando configuración...&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getUrlBd</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">URL_BD</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>⚠️ Úsalos con moderación: pueden hacer que el código sea más difícil de seguir.</p>
+<hr />
+<h2 id="8-imports-estaticos">📦 8. Imports estáticos</h2>
+<p>Desde Java 5 se pueden <strong>importar miembros estáticos</strong> de otras clases:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import static</span><span class="w"> </span><span class="nn">java.lang.Math.PI</span><span class="p">;</span>
+<span class="kn">import static</span><span class="w"> </span><span class="nn">java.lang.Math.sqrt</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Circulo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">radio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radio</span><span class="p">;</span><span class="w">     </span><span class="c1">// uso PI sin Math.</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">raiz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w">               </span><span class="c1">// uso sqrt sin Math.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>✅ Útil para:</p>
+<ul>
+<li>Test unitarios (métodos estáticos de <code>Assertions</code>, <code>Assert</code>, etc.).</li>
+<li>Código matemático.</li>
+</ul>
+<p>⚠️ No abuses: si llenas un archivo de imports estáticos puede perder legibilidad.</p>
+<hr />
+<h2 id="9-detalles-modernos-de-java-relacionados-con-static">🆕 9. Detalles modernos de Java relacionados con <code>static</code></h2>
+<p>Aunque la palabra <code>static</code> existe desde las primeras versiones de Java, hay algunas <strong>novedades o matices modernos</strong>:</p>
+<h3 id="metodos-estaticos-en-interfaces-desde-java-8">🧪 Métodos estáticos en interfaces (desde Java 8)</h3>
+<p>Desde Java 8, una <strong>interface</strong> puede tener <strong>métodos estáticos</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Conversor</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">aEntero</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">valor</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Conversor</span><span class="p">.</span><span class="na">aEntero</span><span class="p">(</span><span class="s">&quot;123&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>👉 Se llaman con <code>NombreInterfaz.metodoEstatico()</code>.<br />
+👉 No se heredan como métodos de instancia de las clases que implementan la interfaz.</p>
+<h3 id="metodos-static-privados-en-interfaces-desde-java-9">🔐 Métodos <code>static</code> privados en interfaces (desde Java 9)</h3>
+<p>También se pueden crear métodos <code>static</code> <strong>privados</strong> dentro de interfaces para reutilizar código entre otros métodos <code>default</code> o <code>static</code> de la interfaz.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Mensajes</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">imprimir</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">despedir</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">imprimir</span><span class="p">(</span><span class="s">&quot;Adiós&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">imprimir</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">texto</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// método estático privado</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">texto</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="9-errores-tipicos-con-static">🚨 9. Errores típicos con <code>static</code></h2>
+<ol>
+<li><strong>Usar <code>static</code> “porque sí”</strong></li>
+<li>Poner todo como <code>static</code> para “acceder desde main” es una mala práctica.</li>
+<li>
+<p>Pierdes la gracia de la POO (objetos, estado, encapsulación…).</p>
+</li>
+<li>
+<p><strong>Acceder a miembros de instancia desde un método estático</strong></p>
+</li>
+<li>Da error de compilación.</li>
+<li>
+<p>Solución: crear un objeto y trabajar con él, o convertir el método en método de instancia.</p>
+</li>
+<li>
+<p><strong>Usar variables estáticas para guardar estado “global” sin pensar</strong></p>
+</li>
+<li>
+<p>Puede complicar pruebas, mantenimiento y comportamiento en programas grandes.</p>
+</li>
+<li>
+<p><strong>Confundir constante de clase con literal mágico</strong></p>
+</li>
+<li>Mejor <code>static final int MAX_INTENTOS = 3;</code> que usar <code>3</code> suelto por todas partes.</li>
+</ol>
+<p>Recuerda: <strong>si un método no necesita acceder a datos del objeto, probablemente debería ser estático</strong> 😉</p>
+<hr />
 
 
   
