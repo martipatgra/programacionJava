@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pojo-record" class="md-skip">
+        <a href="#que-es-un-pojo-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1005,7 +1005,7 @@
   
     <li class="md-nav__item">
       <a href="../7nullvalue/" class="md-nav__link">
-        🌎 Null value
+        🌎 Valor `null` en Java
       </a>
     </li>
   
@@ -1052,11 +1052,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pojo" class="md-nav__link">
-    POJO
+  <a href="#definicion" class="md-nav__link">
+    🧩 Definición
   </a>
   
-    <nav class="md-nav" aria-label="POJO">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas-de-un-pojo" class="md-nav__link">
+    ✔ Características de un POJO
+  </a>
+  
+    <nav class="md-nav" aria-label="✔ Características de un POJO">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1068,6 +1075,27 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-que-sirve-un-pojo" class="md-nav__link">
+    🎯 ¿Para qué sirve un POJO?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-es-importante" class="md-nav__link">
+    🔍 ¿Por qué es importante?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-con-pojos" class="md-nav__link">
+    🌟 Buenas prácticas con POJOs
+  </a>
   
 </li>
       
@@ -2281,11 +2309,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pojo" class="md-nav__link">
-    POJO
+  <a href="#definicion" class="md-nav__link">
+    🧩 Definición
   </a>
   
-    <nav class="md-nav" aria-label="POJO">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas-de-un-pojo" class="md-nav__link">
+    ✔ Características de un POJO
+  </a>
+  
+    <nav class="md-nav" aria-label="✔ Características de un POJO">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2297,6 +2332,27 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-que-sirve-un-pojo" class="md-nav__link">
+    🎯 ¿Para qué sirve un POJO?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-es-importante" class="md-nav__link">
+    🔍 ¿Por qué es importante?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-con-pojos" class="md-nav__link">
+    🌟 Buenas prácticas con POJOs
+  </a>
   
 </li>
       
@@ -2391,10 +2447,24 @@
 
 
 
-<h1 id="pojo-record">🌎 POJO, Record</h1>
-<h2 id="pojo">POJO</h2>
-<p>Un <em>Plain old Java object (POJO)</em> o objeto simple de Java es una clase que generalmente solo tiene campos o variables de instancia.</p>
-<p>Se utiliza para alojar datos y pasar datos entre clases funcionales. Normalmente tiene pocos métodos o ninguno, además de los getters y setters. Se utiliza mayoritariamente para leer o escribir datos a partir de bases de datos, flujos o ficheros. Se podría decir que es un tipo de datos.</p>
+<h1 id="que-es-un-pojo-en-java">☕ ¿Qué es un POJO en Java?</h1>
+<h2 id="definicion">🧩 Definición</h2>
+<p>Un <strong>POJO</strong> (Plain Old Java Object) es una <strong>clase simple</strong>, sin depender de frameworks, que solo contiene:
+- Atributos
+- Constructores
+- Getters y Setters
+- Opcionalmente: <code>toString()</code>, <code>equals()</code>, <code>hashCode()</code></p>
+<p>Son los “bloques básicos” de datos en Java.</p>
+<hr />
+<h2 id="caracteristicas-de-un-pojo">✔ Características de un POJO</h2>
+<ul>
+<li>No extiende clases raras.</li>
+<li>No implementa interfaces obligatorias.</li>
+<li>No tiene anotaciones avanzadas.</li>
+<li>No tiene lógica compleja.</li>
+</ul>
+<p><strong>Es solo una clase de datos simple.</strong></p>
+<hr />
 <h3 id="ejemplos-de-pojos">Ejemplos de POJOS</h3>
 <ul>
 <li>A veces pueden ser llamados bean, o JavaBean. JavaBean es un POJO con extra reglas aplicadas a ellos.</li>
@@ -2453,6 +2523,30 @@
 <p class="admonition-title">Note</p>
 <p>Casi todo el código es generado con el IDE, es este caso, IntelliJ, que hace gran parte del trabajo por nosotros. Este tipo de código tiene un nombre, es lo que se conoce como <strong>boilerplate code</strong>, o código repetitivo que sigue un patrón.</p>
 </div>
+<hr />
+<h2 id="para-que-sirve-un-pojo">🎯 ¿Para qué sirve un POJO?</h2>
+<ul>
+<li>Para representar entidades del mundo real: Alumno, Producto, Usuario…</li>
+<li>Para transportar datos dentro de la aplicación.</li>
+<li>Para separar <strong>lógica</strong> de <strong>datos</strong> (muy importante en POO).</li>
+</ul>
+<hr />
+<h2 id="por-que-es-importante">🔍 ¿Por qué es importante?</h2>
+<p>Porque más adelante usaréis JPA, Hibernate, Spring…<br />
+Y <strong>todos ellos trabajan sobre POJOs</strong>.</p>
+<p>Si entiendes cómo funciona un POJO, entenderás:
+- Cómo funcionan las entidades.
+- Cómo se mapean tablas a clases.
+- Cómo se mueven datos por el programa.</p>
+<hr />
+<h2 id="buenas-practicas-con-pojos">🌟 Buenas prácticas con POJOs</h2>
+<ul>
+<li>Mantén los atributos <code>private</code>.</li>
+<li>Crea constructores útiles.</li>
+<li>Implementa <code>toString()</code> para depurar.</li>
+<li>Añade getters y setters para controlar el acceso.</li>
+<li>No metas lógica compleja dentro.</li>
+</ul>
 <h2 id="record">Record</h2>
 <p>Java introdujo un nuevo tipo llamado Record (registro) que pasó a formar parte oficialmente en el JDK 16. Su propósito es reemplazar el código boilerplate del POJO y ser más restrictivo.</p>
 <p>Java llama a los Record, "plain data carriers", soporte de datos simples.</p>
