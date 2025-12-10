@@ -1136,13 +1136,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#resumen-constructores" class="md-nav__link">
-    🧩 Resumen constructores
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#como-generar-los-constructores-desde-el-intellij" class="md-nav__link">
     🧠 ¿Cómo generar los constructores desde el IntelliJ?
   </a>
@@ -2387,13 +2380,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#resumen-constructores" class="md-nav__link">
-    🧩 Resumen constructores
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#como-generar-los-constructores-desde-el-intellij" class="md-nav__link">
     🧠 ¿Cómo generar los constructores desde el IntelliJ?
   </a>
@@ -2633,43 +2619,6 @@ No repites <code>this.nombre = nombre</code>.</p>
 - Validaciones del constructor compacto   <br />
 - Asignación automática de los campos (this.nombre = nombre)      </p>
 <hr />
-<h3 id="resumen-constructores">🧩 Resumen constructores</h3>
-<table>
-<thead>
-<tr>
-<th>Caso</th>
-<th>¿Canónico existe?</th>
-<th>¿Compacto existe?</th>
-<th>¿Quién manda?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Record sin constructores</td>
-<td>✔ generado auto</td>
-<td>❌</td>
-<td>Canónico auto</td>
-</tr>
-<tr>
-<td>Añades <strong>compacto</strong></td>
-<td>✔ generado a partir del compacto</td>
-<td>✔</td>
-<td>Compacto</td>
-</tr>
-<tr>
-<td>Añades <strong>canónico completo</strong></td>
-<td>✔ el tuyo</td>
-<td>❌</td>
-<td>Tu canónico</td>
-</tr>
-<tr>
-<td>Añades <strong>sobrecargados</strong></td>
-<td>✔ depende del caso</td>
-<td>✔/❌</td>
-<td>El canónico siempre</td>
-</tr>
-</tbody>
-</table>
 <h3 id="como-generar-los-constructores-desde-el-intellij">🧠 ¿Cómo generar los constructores desde el IntelliJ?</h3>
 <p>Si queremos generar un constructor, dentro de la clase record podemos hacer click botón derecho del ratón -&gt; constructor:</p>
 <p><img alt="POJO" src="../../img/ud3/pojo4.png" /></p>
