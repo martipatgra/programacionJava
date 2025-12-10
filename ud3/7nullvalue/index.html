@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#valor-nulo" class="md-skip">
+        <a href="#valor-null-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1013,9 +1013,75 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          🌎 Null value
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         🌎 Null value
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-null" class="md-nav__link">
+    🧩 ¿Qué es null?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nullpointerexception-npe" class="md-nav__link">
+    ❗ NullPointerException (NPE)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-evitar-npe" class="md-nav__link">
+    ✔ Cómo evitar NPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#null-no-es-lo-mismo-que" class="md-nav__link">
+    ⚠ null NO es lo mismo que:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-se-usa-null" class="md-nav__link">
+    🧠 ¿Cuándo se usa null?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    🌟 Buenas prácticas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2155,6 +2221,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-null" class="md-nav__link">
+    🧩 ¿Qué es null?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nullpointerexception-npe" class="md-nav__link">
+    ❗ NullPointerException (NPE)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-evitar-npe" class="md-nav__link">
+    ✔ Cómo evitar NPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#null-no-es-lo-mismo-que" class="md-nav__link">
+    ⚠ null NO es lo mismo que:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-se-usa-null" class="md-nav__link">
+    🧠 ¿Cuándo se usa null?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    🌟 Buenas prácticas
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2169,26 +2285,78 @@
 
 
 
-<h1 id="valor-nulo">🌎 Valor nulo</h1>
-<p>Una variable de referencia contiene información sobre la ubicación de un objeto. No contiene el objeto en sí.</p>
-<p>Por ejemplo el siguiente código:</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="p">;</span>
-<span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<h1 id="valor-null-en-java">✨ Valor <code>null</code> en Java</h1>
+<h2 id="que-es-null">🧩 ¿Qué es <code>null</code>?</h2>
+<p>En Java, <strong><code>null</code> representa la ausencia de un objeto</strong>.<br />
+No es una cadena vacía, no es cero, no es “nada”: es <strong>la referencia que indica que no hay ninguna instancia creada</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// la variable existe, pero no apunta a ningún objeto</span>
 </code></pre></div>
-<p>declara dos variables de referencia pero no construye ningún objeto. Con el siguiente código:</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Programación&quot;</span><span class="p">;</span>
-<span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Patricia&quot;</span><span class="p">);</span>
-</code></pre></div>
-<p>se construyen los objetos y se colocan referencias en las variables.</p>
-<p><strong><em>null</em></strong> es un valor especial que significa "sin objeto". Se establece una variable de referencia a <em>null</em> cuando no se refiere a ningún objeto. Las variables a menudo se asignan en nulas cuando se declaran:</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-</code></pre></div>
-<p><em>str</em> y <em>p</em> todavía no son objetos, son variables que en un futuro pueden referenciar a objetos.</p>
-<p>Podemos asignar el valor null a cualquier variable de tipo referencia, ya sea un objeto, string, array, etc.</p>
-<p>Una variable de referencia a veces hace referencia a un objeto y otras veces no, y puede referirse a diferentes objetos en diferentes momentos. Por tanto, necesitamos una forma de decir que una variable ahora no se refiere a un objeto. Para ello, se le asigna un valor <em>null</em> a la variable.</p>
 <p><img alt="nullValue" src="../../img/ud4/nullvalue.png" /></p>
 <p>El objeto Persona con el nombre de Patricia se destruirá eventualmente por el <em>garbage collector</em> ya que no es referenciado por nadie.</p>
+<hr />
+<h2 id="nullpointerexception-npe">❗ NullPointerException (NPE)</h2>
+<p>Ocurre cuando intentas usar un método o atributo sobre una variable que es <code>null</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="c1">// ❌ NPE</span>
+</code></pre></div>
+<hr />
+<h2 id="como-evitar-npe">✔ Cómo evitar NPE</h2>
+<ul>
+<li>
+<p>Comprobar antes de usar:
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Inicializar siempre las variables.</p>
+</li>
+<li>Usar valores por defecto razonables.</li>
+<li>Evitar devolver <code>null</code> si puedes devolver algo útil.</li>
+</ul>
+<hr />
+<h2 id="null-no-es-lo-mismo-que">⚠ <code>null</code> NO es lo mismo que:</h2>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Significa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>""</code></td>
+<td>Cadena vacía</td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td>Número cero</td>
+</tr>
+<tr>
+<td><code>" "</code></td>
+<td>Espacio en blanco</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>Boolean falso</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cuando-se-usa-null">🧠 ¿Cuándo se usa <code>null</code>?</h2>
+<ul>
+<li>Para indicar que un objeto <strong>no se ha creado aún</strong>.</li>
+<li>Para variables de instancia invisibles hasta que el constructor las inicializa.</li>
+<li>Para valores opcionales.</li>
+</ul>
+<hr />
+<h2 id="buenas-practicas">🌟 Buenas prácticas</h2>
+<ul>
+<li>Evita <code>null</code> en colecciones (cuando las veáis más adelante).</li>
+<li>Usa nombres descriptivos y estados por defecto.</li>
+<li>Si un atributo es obligatorio, <strong>nunca</strong> permitas <code>null</code> en él.</li>
+</ul>
 
 
   
