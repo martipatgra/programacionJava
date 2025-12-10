@@ -2586,9 +2586,8 @@ Como record no soporta modificaciones en sus variables de instancia porque son f
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">JavaStudent</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Unknown&quot;</span><span class="p">;</span>
 <span class="w">        </span><span class="c1">//id = this.id; //NO podría hacer esto, porque this.id todavía no se ha inicializado</span>
-<span class="w">        </span><span class="c1">//this.id = id; //TAMPOCO podría hacer esto porque se hará más tarde en el constructor</span>
-<span class="w">                        </span><span class="c1">//implícito (canónico), y como las variables de instancia son finales, no </span>
-<span class="w">                        </span><span class="c1">//puedo reasignarles valores.</span>
+<span class="w">        </span><span class="c1">//this.id = id; //TAMPOCO podría hacer esto porque se hará más tarde de manera implícita,</span>
+<span class="w">                        </span><span class="c1">//y como las variables de instancia son finales, no puedo reasignarles valores.</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 <p>Te permite validar datos sin reescribir parámetros:</p>
