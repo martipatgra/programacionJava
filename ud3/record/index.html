@@ -9,13 +9,17 @@
       
       
       
+        <link rel="prev" href="../8pojo/">
+      
+      
+        <link rel="next" href="../../ud4/1arrays/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>☕ ¿Qué es un POJO en Java? - Programación en Java</title>
+        <title>🌎 Records en Java - Programación en Java</title>
       
     
     
@@ -112,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ☕ ¿Qué es un POJO en Java?
+              🌎 Records en Java
             
           </span>
         </div>
@@ -913,14 +917,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
       
       
       
@@ -929,7 +935,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           🌎 Programación orientada a objetos POO
@@ -1024,11 +1030,168 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../8pojo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          🌎 Records en Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         🌎 Records en Java
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    🧩 Definición
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas-de-un-pojo" class="md-nav__link">
+    ✔ Características de un POJO
+  </a>
+  
+    <nav class="md-nav" aria-label="✔ Características de un POJO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-pojos" class="md-nav__link">
+    Ejemplos de POJOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-que-sirve-un-pojo" class="md-nav__link">
+    🎯 ¿Para qué sirve un POJO?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-es-importante" class="md-nav__link">
+    🔍 ¿Por qué es importante?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-con-pojos" class="md-nav__link">
+    🌟 Buenas prácticas con POJOs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#record" class="md-nav__link">
+    Record
+  </a>
+  
+    <nav class="md-nav" aria-label="Record">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-crear-un-record" class="md-nav__link">
+    Cómo crear un Record
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#record-header" class="md-nav__link">
+    Record header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructores-de-un-record" class="md-nav__link">
+    Constructores de un Record
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructores de un Record">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canonical-constructor-constructor-canonico" class="md-nav__link">
+    Canonical constructor - Constructor canónico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructor-personalizado" class="md-nav__link">
+    Constructor personalizado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compact-constructor" class="md-nav__link">
+    Compact constructor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos-estaticos-y-metodos-estaticos" class="md-nav__link">
+    Campos estáticos y métodos estáticos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#record-immutable" class="md-nav__link">
+    Record immutable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
