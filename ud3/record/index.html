@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#que-es-un-pojo-en-java" class="md-skip">
+        <a href="#records-en-java-ud3" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1066,100 +1066,72 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#definicion" class="md-nav__link">
-    🧩 Definición
+  <a href="#que-es-un-record" class="md-nav__link">
+    🧩 ¿Qué es un record?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#caracteristicas-de-un-pojo" class="md-nav__link">
-    ✔ Características de un POJO
-  </a>
-  
-    <nav class="md-nav" aria-label="✔ Características de un POJO">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ejemplos-de-pojos" class="md-nav__link">
-    Ejemplos de POJOS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#para-que-sirve-un-pojo" class="md-nav__link">
-    🎯 ¿Para qué sirve un POJO?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#por-que-es-importante" class="md-nav__link">
-    🔍 ¿Por qué es importante?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#buenas-practicas-con-pojos" class="md-nav__link">
-    🌟 Buenas prácticas con POJOs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#record" class="md-nav__link">
-    Record
-  </a>
-  
-    <nav class="md-nav" aria-label="Record">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#como-crear-un-record" class="md-nav__link">
-    Cómo crear un Record
+    🌟 Cómo crear un Record
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#record-header" class="md-nav__link">
-    Record header
+      
+        <li class="md-nav__item">
+  <a href="#que-genera-automaticamente-un-record" class="md-nav__link">
+    🧱 ¿Qué genera automáticamente un record?
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#constructores-de-un-record" class="md-nav__link">
-    Constructores de un Record
+      
+        <li class="md-nav__item">
+  <a href="#como-usar-un-record" class="md-nav__link">
+    🧰 Cómo usar un record
   </a>
   
-    <nav class="md-nav" aria-label="Constructores de un Record">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-constructores-en-un-record" class="md-nav__link">
+    🏗 Tipos de constructores en un record
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗 Tipos de constructores en un record">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#canonical-constructor-constructor-canonico" class="md-nav__link">
-    Canonical constructor - Constructor canónico
+  <a href="#constructor-canonico-completo-con-todos-los-parametros" class="md-nav__link">
+    ✔ Constructor canónico (completo, con todos los parámetros)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#constructor-personalizado" class="md-nav__link">
-    Constructor personalizado
+  <a href="#constructores-adicionales-personalizados-sobrecarga" class="md-nav__link">
+    ✔ Constructores adicionales, personalizados (sobrecarga)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#compact-constructor" class="md-nav__link">
-    Compact constructor
+  <a href="#constructor-compacto-el-mas-habitual" class="md-nav__link">
+    ✔ Constructor compacto (el más habitual)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen-constructores" class="md-nav__link">
+    🧩 Resumen constructores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-generar-los-constructores-desde-el-intellij" class="md-nav__link">
+    🧠 ¿Cómo generar los constructores desde el IntelliJ?
   </a>
   
 </li>
@@ -1168,23 +1140,32 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#metodos-dentro-de-un-record" class="md-nav__link">
+    🔧 Métodos dentro de un record
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#campos-estaticos-y-metodos-estaticos" class="md-nav__link">
-    Campos estáticos y métodos estáticos
+    ✨ Campos estáticos y métodos estáticos
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#record-immutable" class="md-nav__link">
-    Record immutable
+      
+        <li class="md-nav__item">
+  <a href="#que-no-puede-hacer-un-record" class="md-nav__link">
+    🚫 Qué NO puede hacer un record
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-usar-un-record" class="md-nav__link">
+    🎯 ¿Cuándo usar un record?
+  </a>
   
 </li>
       
@@ -2323,100 +2304,72 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#definicion" class="md-nav__link">
-    🧩 Definición
+  <a href="#que-es-un-record" class="md-nav__link">
+    🧩 ¿Qué es un record?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#caracteristicas-de-un-pojo" class="md-nav__link">
-    ✔ Características de un POJO
-  </a>
-  
-    <nav class="md-nav" aria-label="✔ Características de un POJO">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ejemplos-de-pojos" class="md-nav__link">
-    Ejemplos de POJOS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#para-que-sirve-un-pojo" class="md-nav__link">
-    🎯 ¿Para qué sirve un POJO?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#por-que-es-importante" class="md-nav__link">
-    🔍 ¿Por qué es importante?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#buenas-practicas-con-pojos" class="md-nav__link">
-    🌟 Buenas prácticas con POJOs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#record" class="md-nav__link">
-    Record
-  </a>
-  
-    <nav class="md-nav" aria-label="Record">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#como-crear-un-record" class="md-nav__link">
-    Cómo crear un Record
+    🌟 Cómo crear un Record
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#record-header" class="md-nav__link">
-    Record header
+      
+        <li class="md-nav__item">
+  <a href="#que-genera-automaticamente-un-record" class="md-nav__link">
+    🧱 ¿Qué genera automáticamente un record?
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#constructores-de-un-record" class="md-nav__link">
-    Constructores de un Record
+      
+        <li class="md-nav__item">
+  <a href="#como-usar-un-record" class="md-nav__link">
+    🧰 Cómo usar un record
   </a>
   
-    <nav class="md-nav" aria-label="Constructores de un Record">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-constructores-en-un-record" class="md-nav__link">
+    🏗 Tipos de constructores en un record
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗 Tipos de constructores en un record">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#canonical-constructor-constructor-canonico" class="md-nav__link">
-    Canonical constructor - Constructor canónico
+  <a href="#constructor-canonico-completo-con-todos-los-parametros" class="md-nav__link">
+    ✔ Constructor canónico (completo, con todos los parámetros)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#constructor-personalizado" class="md-nav__link">
-    Constructor personalizado
+  <a href="#constructores-adicionales-personalizados-sobrecarga" class="md-nav__link">
+    ✔ Constructores adicionales, personalizados (sobrecarga)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#compact-constructor" class="md-nav__link">
-    Compact constructor
+  <a href="#constructor-compacto-el-mas-habitual" class="md-nav__link">
+    ✔ Constructor compacto (el más habitual)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen-constructores" class="md-nav__link">
+    🧩 Resumen constructores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-generar-los-constructores-desde-el-intellij" class="md-nav__link">
+    🧠 ¿Cómo generar los constructores desde el IntelliJ?
   </a>
   
 </li>
@@ -2425,23 +2378,32 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#metodos-dentro-de-un-record" class="md-nav__link">
+    🔧 Métodos dentro de un record
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#campos-estaticos-y-metodos-estaticos" class="md-nav__link">
-    Campos estáticos y métodos estáticos
+    ✨ Campos estáticos y métodos estáticos
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#record-immutable" class="md-nav__link">
-    Record immutable
+      
+        <li class="md-nav__item">
+  <a href="#que-no-puede-hacer-un-record" class="md-nav__link">
+    🚫 Qué NO puede hacer un record
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-usar-un-record" class="md-nav__link">
+    🎯 ¿Cuándo usar un record?
+  </a>
   
 </li>
       
@@ -2461,113 +2423,29 @@
 
 
 
-<h1 id="que-es-un-pojo-en-java">☕ ¿Qué es un POJO en Java?</h1>
-<h2 id="definicion">🧩 Definición</h2>
-<p>Un <strong>POJO</strong> (Plain Old Java Object) es una <strong>clase simple</strong>, sin depender de frameworks, que solo contiene:   <br />
-- Atributos   <br />
-- Constructores   <br />
-- Getters y Setters   <br />
-- Opcionalmente: <code>toString()</code>, <code>equals()</code>, <code>hashCode()</code>     </p>
-<p>Son los “bloques básicos” de datos en Java.</p>
-<hr />
-<h2 id="caracteristicas-de-un-pojo">✔ Características de un POJO</h2>
-<ul>
-<li>No extiende clases raras.</li>
-<li>No implementa interfaces obligatorias.</li>
-<li>No tiene anotaciones avanzadas.</li>
-<li>No tiene lógica compleja.</li>
-</ul>
-<p><strong>Es solo una clase de datos simple.</strong></p>
-<hr />
-<h3 id="ejemplos-de-pojos">Ejemplos de POJOS</h3>
-<ul>
-<li>A veces pueden ser llamados bean, o JavaBean. JavaBean es un POJO con extra reglas aplicadas a ellos.</li>
-<li>Otras veces un POJO puede ser un Entity, relacionado con base de datos porque contiene los datos de las entidades de base de datos.</li>
-<li>Otro acrónimo usando con los POJOS puede ser un DTO (data transfer object), objeto de transferencia de datos, que es una descripción de un objeto, que puede modelarse como simples datos.</li>
-</ul>
-<blockquote>
-<p>Ejemplo de POJO que contiene el código necesario para manipular datos de un estudiante:</p>
-</blockquote>
-<div class="highlight"><span class="filename">Student.java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">dateOfBirth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getId</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setId</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getDateOfBirth</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDateOfBirth</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">dateOfBirth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Student{&quot;</span><span class="w"> </span><span class="o">+</span>
-<span class="w">                </span><span class="s">&quot;id=&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;\&#39;&#39;</span><span class="w"> </span><span class="o">+</span>
-<span class="w">                </span><span class="s">&quot;, name=&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;\&#39;&#39;</span><span class="w"> </span><span class="o">+</span>
-<span class="w">                </span><span class="s">&quot;, dateOfBirth=&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;\&#39;&#39;</span><span class="w"> </span><span class="o">+</span>
-<span class="w">                </span><span class="sc">&#39;}&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="admonition note importante">
-<p class="admonition-title">Note</p>
-<p>Casi todo el código es generado con el IDE, es este caso, IntelliJ, que hace gran parte del trabajo por nosotros. Este tipo de código tiene un nombre, es lo que se conoce como <strong>boilerplate code</strong>, o código repetitivo que sigue un patrón.</p>
-</div>
-<hr />
-<h2 id="para-que-sirve-un-pojo">🎯 ¿Para qué sirve un POJO?</h2>
-<ul>
-<li>Para representar entidades del mundo real: Alumno, Producto, Usuario…</li>
-<li>Para transportar datos dentro de la aplicación.</li>
-<li>Para separar <strong>lógica</strong> de <strong>datos</strong> (muy importante en POO).</li>
-</ul>
-<hr />
-<h2 id="por-que-es-importante">🔍 ¿Por qué es importante?</h2>
-<p>Porque más adelante usaréis JPA, Hibernate, Spring…<br />
-Y <strong>todos ellos trabajan sobre POJOs</strong>.</p>
-<p>Si entiendes cómo funciona un POJO, entenderás:       <br />
-- Cómo funcionan las entidades.   <br />
-- Cómo se mapean tablas a clases.     <br />
-- Cómo se mueven datos por el programa.         </p>
-<hr />
-<h2 id="buenas-practicas-con-pojos">🌟 Buenas prácticas con POJOs</h2>
-<ul>
-<li>Mantén los atributos <code>private</code>.</li>
-<li>Crea constructores útiles.</li>
-<li>Implementa <code>toString()</code> para depurar.</li>
-<li>Añade getters y setters para controlar el acceso.</li>
-<li>No metas lógica compleja dentro.</li>
-</ul>
-<h2 id="record">Record</h2>
+<h1 id="records-en-java-ud3">📦 Records en Java (UD3)</h1>
 <p>Java introdujo un nuevo tipo llamado Record (registro) que pasó a formar parte oficialmente en el JDK 16. Su propósito es reemplazar el código boilerplate del POJO y ser más restrictivo.</p>
-<p>Java llama a los Record, "plain data carriers", soporte de datos simples.</p>
-<p><ins class="critic">Record es una clase especial que contiene datos y no está pensada para ser alterada.</ins> Sólo contiene los métodos más fundamentales, como constructores y getters.
-El desarrollador no tiene que escribir nada de este código.</p>
-<h3 id="como-crear-un-record">Cómo crear un Record</h3>
-<p>Vamos a crear un record de estudiante como hicimos en el POJO anterior. Para ello, En el IntelliJ, dentro del proyecto, en un directorio hacemos botón derecho del ratón, <em>"New -&gt; Java class"</em>.</p>
+<p>Los <strong>records</strong> ofrecen una forma compacta, clara y segura de crear clases cuyo propósito principal es <strong>almacenar datos</strong>.</p>
+<p>Son ideales para representar objetos inmutables sin escribir código repetitivo.</p>
+<hr />
+<h2 id="que-es-un-record">🧩 ¿Qué es un record?</h2>
+<p>Un <strong>record</strong> es una clase especial de Java que:</p>
+<ul>
+<li>Es <strong>inmutable</strong> por defecto. (No está pensada para ser alterada)  </li>
+<li>Declara automáticamente:      </li>
+<li>Atributos <code>private final</code>       </li>
+<li>Un <strong>constructor compacto</strong>     </li>
+<li>Getters (llamados <em>accessors</em>)      </li>
+<li><code>equals()</code>, <code>hashCode()</code>            </li>
+<li><code>toString()</code>            </li>
+</ul>
+<p>Ejemplo básico:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</code></pre></div>
+<p>Esto equivale a escribir <em>muchísimo</em> código en una clase normal. El desarrollador no tiene que escribir nada de este código.</p>
+<hr />
+<h2 id="como-crear-un-record">🌟 Cómo crear un Record</h2>
+<p>Vamos a crear un record de estudiante como hicimos en el POJO. Para ello, En el IntelliJ, dentro del proyecto, en un directorio hacemos botón derecho del ratón, <em>"New -&gt; Java class"</em>.</p>
 <p><img alt="POJO" src="../../img/ud3/pojo1.png" /></p>
 <p>Seleccionamos la opción <em>"Record"</em> (Necesito tener instalado JDK 16 o superiores)</p>
 <p><img alt="POJO" src="../../img/ud3/pojo2.png" /></p>
@@ -2578,29 +2456,56 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <span class="p">}</span>
 </code></pre></div>
 <p><strong>Hemos modificado todo el código anterior, por estas dos líneas. Teniendo en cuenta, que Record no soporta modificaciones, por tanto, no hay setters</strong>.</p>
-<h3 id="record-header">Record header</h3>
-<p>A los parámetros que están dentro de la record header se les llama componentes. Por cada componente Java genera el siguiente código implícito:</p>
-<ul>
-<li>Un campo o atributo con el mismo nombre <code>private</code> y <code>final</code>. A este atributo se le conoce como <strong>component field</strong>.</li>
-<li>Un método de acceso público que tiene el mismo nombre y tipo del componente. Lo que sería un getter, pero no tiene ningún prefijo tipo <em>get</em> o <em>is</em> delante.</li>
-<li>Un constructor con los mismos argumentos y en el mismo orden descritos dentro de la cabecera de record.</li>
-<li>Java genera un método toString que imprime cada atributo formateado.</li>
-</ul>
-<h3 id="constructores-de-un-record">Constructores de un Record</h3>
-<p>Si queremos generar un constructor, dentro de la clase record podemos hacer click botón derecho del ratón -&gt; constructor:</p>
-<p><img alt="POJO" src="../../img/ud3/pojo4.png" /></p>
-<p>IntelliJ me ofrece tres opciones para generar un constructor:</p>
-<p><img alt="POJO" src="../../img/ud3/pojo5.png" /></p>
-<p>Los constructores de Record pueden ser de tres tipos:</p>
-<ol>
-<li><strong>Constructor canónico o largo</strong> (canonical constructor): es el constructor implícito generado con los mismos componentes que hay en la cabecera. Se puede crear uno explícitamente, por lo que no se generará entonces el implícito. Si se declara uno explícito, se debe asignar a todos los campos un valor.</li>
-<li><strong>Constructor personalizado</strong> (custom constructor): es un constructor sobrecargado. Su primera sentencia debe ser una llamada al canónico.</li>
-<li><strong>Constructor compacto o corto</strong> (compact constructor): solo se utiliza en los records. Es una forma concisa de declarar un constructor canónico.</li>
-</ol>
-<h4 id="canonical-constructor-constructor-canonico">Canonical constructor - Constructor canónico</h4>
+<hr />
+<h2 id="que-genera-automaticamente-un-record">🧱 ¿Qué genera automáticamente un record?</h2>
+<p><strong>Record header</strong>: a los parámetros que están dentro de la record header se les llama <strong>componentes</strong>.</p>
+<p>Para el ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</code></pre></div>
+<p>Java genera por cada componente el siguiente código implícito:        <br />
+- Atributos privados y finales con el mismo nombre, son los <strong>component field</strong>:          <br />
+  - <code>private final String nombre;</code>    <br />
+  - <code>private final int edad;</code>     <br />
+- Getters, un método de acceso público que tiene el mismo nombre y tipo del componente. Lo que sería un getter, pero no tiene ningún prefijo tipo <em>get</em> o <em>is</em> delante:       <br />
+  - <code>nombre()</code>    <br />
+  - <code>edad()</code>      <br />
+- Un constructor con los mismos componentes y en el mismo orden descritos dentro de la cabecera de record:        <br />
+  <div class="highlight"><pre><span></span><code><span class="c1">//constructor principal del record</span>
+<span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+- <code>equals()</code>, <code>hashCode()</code>, <code>toString()</code>      <br />
+  basados en los componentes definidos.</p>
+<hr />
+<h2 id="como-usar-un-record">🧰 Cómo usar un record</h2>
+<div class="highlight"><pre><span></span><code><span class="n">Persona</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">nombre</span><span class="p">());</span><span class="w"> </span><span class="c1">// Ana</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">edad</span><span class="p">());</span><span class="w">   </span><span class="c1">// 25</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="w"> </span><span class="c1">// Persona[nombre=Ana, edad=25]</span>
+</code></pre></div>
+<p>⚠ No puedes modificar sus atributos porque son <strong>final</strong>.</p>
+<hr />
+<h2 id="tipos-de-constructores-en-un-record">🏗 Tipos de constructores en un record</h2>
+<p>Aunque los records generan un constructor automáticamente, puedes definir 3 tipos de constructores:</p>
+<hr />
+<h3 id="constructor-canonico-completo-con-todos-los-parametros">✔ Constructor canónico (completo, con todos los parámetros)</h3>
 <p>Es el constructor con todos los parámetros o componentes. Este constructor está implícitamente creado, pero podemos sobreescribirlo.</p>
-<p>En el siguiente ejemplo se ha creado un constructor canónico que <strong>NO es necesario crear porque ya se crea de manera implícita. Crearlo es redundante ya que no hace nada nuevo</strong>. </p>
-<p>El constructor canónico solo tiene sentido crearlo cuado quiero añadir alguna validación en algún campo o dar un comportamiento diferente al de por defecto.</p>
+<p>El constructor canónico solo tiene sentido crearlo cuado quiero añadir alguna validación en algún campo o dar un comportamiento diferente al de por defecto. Si no hace nada nuevo <strong>crearlo es redundante</strong>.</p>
+<p>Lo declaras como en una clase normal:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">Libro</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">titulo</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">paginas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Libro</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">titulo</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">paginas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">paginas</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Páginas inválidas&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">titulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">titulo</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">paginas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paginas</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <div class="highlight"><span class="filename">JavaStudent.java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">JavaStudent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">//Canonical constructor</span>
 <span class="w">    </span><span class="c1">//Hacer esto no tiene sentido, porque ya está implícito cuando poner los componentes en la cabecera</span>
@@ -2619,9 +2524,12 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h4 id="constructor-personalizado">Constructor personalizado</h4>
-<p>Es lo que conocemos como constructor sobrecargado. Creamos constructores personalizados con un número menor de elementos que el constructor canónico. El único requisito con este constructor es, <strong>que la primera línea tiene que ser una llamada al constructor canónico para que se inicialicen los campos o componentes</strong>.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">JavaStudent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<p>Solo se recomienda si necesitas lógica extensa dentro, ya que el te lo crea automáticamente.</p>
+<hr />
+<h3 id="constructores-adicionales-personalizados-sobrecarga">✔ Constructores adicionales, personalizados (sobrecarga)</h3>
+<p>Es lo que conocemos como constructor sobrecargado. Creamos constructores personalizados con un número menor de elementos que el constructor canónico. </p>
+<p>El único requisito con este constructor es, <strong>que la primera línea tiene que ser una llamada al constructor canónico para que se inicialicen los campos o componentes</strong>.</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">JavaStudent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateOfBirth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">JavaStudent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
@@ -2631,15 +2539,29 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h4 id="compact-constructor">Compact constructor</h4>
+- El constructor sobrecargado <strong>NO elimina el canónico</strong>.     <br />
+- El sobrecargado <strong>SIEMPRE</strong> debe llamar al constructor canónico (implícito o escrito por ti)</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">Punto</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Punto</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// constructor por defecto</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Punto</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="constructor-compacto-el-mas-habitual">✔ Constructor compacto (el más habitual)</h3>
+<p><strong>Este constructor está entrelazado con el constructor canónico</strong>. El código que se inserte en este constructor será llamado antes que el código en el constructor implícito(canónico), es decir, antes de asignar cualquier valor a las variables de isntancia finales. Por eso este constructor tiene acceso a todos los argumentos o componentes del constructor canónico. </p>
+<p><ins class="critic">Este constructor se utiliza para realizar validaciones en los argumentos o componentes antes de asignarlos a las variables de instancia de la clase.</ins></p>
 <ul>
-<li>No se pueden tener ambos constructores, el compact más el canónico explícito.</li>
+<li>❗No se pueden tener ambos constructores, el compacto más el canónico explícito.</li>
 <li><strong>El compact constructor se declara sin paréntesis y sin parámetros o argumentos.</strong></li>
 <li>Tiene acceso a todos los argumentos o parámetros del constructor canónico, no confundir con los campos de la clase o variables de instancia de la clase.</li>
-<li>No se pueden hacer asignaciones a los campos de instancia de la clase en este constructor.</li>
+<li>❗<strong>No se pueden hacer asignaciones a los campos de instancia de la clase en este constructor</strong>.</li>
 <li>Todas las asignaciones implícitas del constructor canónico ocurren después de la ejecución del código del constructor compacto.</li>
 </ul>
-<p>Este constructor está entrelazado con el constructor canónico. El código que se inserte en este constructor será llamado antes que el código en el constructor implícito(canónico), es decir, antes de asignar cualquier valor a las variables de isntancia finales. Por eso este constructor tiene acceso a todos los argumentos o componentes del constructor canónico. Este constructor se utiliza para realizar validaciones en los argumentos o componentes antes de asignarlos a las variables de instancia de la clase.</p>
 <div class="admonition warning importante">
 <p class="admonition-title">Warning</p>
 <p>Si se ha definido un constructor compacto, no se puede crear o definir explícitamente el constructor canónico.</p>
@@ -2654,7 +2576,72 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <span class="w">                        </span><span class="c1">//puedo reasignarles valores.</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<h3 id="campos-estaticos-y-metodos-estaticos">Campos estáticos y métodos estáticos</h3>
+<p>Te permite validar datos sin reescribir parámetros:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">Producto</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Producto</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">precio</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;El precio no puede ser negativo&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Beneficio:<br />
+No repites <code>this.nombre = nombre</code>.</p>
+<hr />
+<h3 id="resumen-constructores">🧩 Resumen constructores</h3>
+<table>
+<thead>
+<tr>
+<th>Caso</th>
+<th>¿Canónico existe?</th>
+<th>¿Compacto existe?</th>
+<th>¿Quién manda?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Record sin constructores</td>
+<td>✔ generado auto</td>
+<td>❌</td>
+<td>Canónico auto</td>
+</tr>
+<tr>
+<td>Añades <strong>compacto</strong></td>
+<td>✔ generado a partir del compacto</td>
+<td>✔</td>
+<td>Compacto</td>
+</tr>
+<tr>
+<td>Añades <strong>canónico completo</strong></td>
+<td>✔ el tuyo</td>
+<td>❌</td>
+<td>Tu canónico</td>
+</tr>
+<tr>
+<td>Añades <strong>sobrecargados</strong></td>
+<td>✔ depende del caso</td>
+<td>✔/❌</td>
+<td>El canónico siempre</td>
+</tr>
+</tbody>
+</table>
+<h3 id="como-generar-los-constructores-desde-el-intellij">🧠 ¿Cómo generar los constructores desde el IntelliJ?</h3>
+<p>Si queremos generar un constructor, dentro de la clase record podemos hacer click botón derecho del ratón -&gt; constructor:</p>
+<p><img alt="POJO" src="../../img/ud3/pojo4.png" /></p>
+<p>IntelliJ me ofrece tres opciones para generar un constructor:</p>
+<p><img alt="POJO" src="../../img/ud3/pojo5.png" /></p>
+<hr />
+<h2 id="metodos-dentro-de-un-record">🔧 Métodos dentro de un record</h2>
+<p>Los records <strong>sí</strong> permiten métodos:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">Alumno</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">nota</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">aprobado</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="campos-estaticos-y-metodos-estaticos">✨ Campos estáticos y métodos estáticos</h2>
 <p>Los record pueden tener campos y métodos estáticos. <strong>Pero sólo se permiten campos estáticos</strong>. <strong>Los record no pueden declarar campos de instancia</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">Vehicle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">price</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">wheels</span><span class="p">;</span>
@@ -2678,8 +2665,31 @@ El desarrollador no tiene que escribir nada de este código.</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="record-immutable">Record immutable</h3>
-<p>Con Record no tenemos setters, ni forma de modificar nuestros datos. Esto es debido a que, Record ha sido diseñado para ser inmutable, para que los datos se mantengan encapsulados y protegidos de mutaciones involuntarias. Por tanto, si necesitas modificar los datos de tu clase, nunca usaremos un Record, sino que crearemos un POJO como hicimos anteriormente.</p>
+<hr />
+<h2 id="que-no-puede-hacer-un-record">🚫 Qué NO puede hacer un record</h2>
+<ul>
+<li>No puede tener <strong>atributos mutables</strong> (solo final).  </li>
+<li>No puede extender clases (pero sí implementar interfaces).  </li>
+<li>No puedes reasignar atributos.</li>
+</ul>
+<hr />
+<h2 id="cuando-usar-un-record">🎯 ¿Cuándo usar un record?</h2>
+<p>Con Record no tenemos setters, ni forma de modificar nuestros datos. Esto es debido a que, Record ha sido diseñado para ser inmutable, para que <strong>los datos se mantengan encapsulados y protegidos de mutaciones involuntarias</strong>. </p>
+<p>Por tanto, si necesitas modificar los datos de tu clase, <em>nunca usaremos un Record</em>, sino que crearemos un POJO como hicimos en el apartado anterior.</p>
+<p>Úsalo cuando:</p>
+<ul>
+<li>Quieres representar datos inmutables.</li>
+<li>Necesitas transportar información entre clases.</li>
+<li>Quieres evitar escribir getters, <code>toString</code>, etc.</li>
+<li>Necesitas un objeto simple que represente algo: <code>Punto</code>, <code>Producto</code>, <code>Usuario</code>, etc.</li>
+</ul>
+<p>No lo uses cuando:</p>
+<ul>
+<li>Necesitas mutabilidad.</li>
+<li>La clase requiere herencia clásica.</li>
+<li>La lógica es compleja.</li>
+</ul>
+<hr />
 
 
   
