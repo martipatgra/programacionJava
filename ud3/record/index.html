@@ -2432,12 +2432,14 @@
 <p>Un <strong>record</strong> es una clase especial de Java que:</p>
 <ul>
 <li>Es <strong>inmutable</strong> por defecto. (No está pensada para ser alterada)  </li>
-<li>Declara automáticamente:      </li>
+<li>Declara automáticamente:          <ul>
 <li>Atributos <code>private final</code>       </li>
 <li>Un <strong>constructor compacto</strong>     </li>
 <li>Getters (llamados <em>accessors</em>)      </li>
 <li><code>equals()</code>, <code>hashCode()</code>            </li>
-<li><code>toString()</code>            </li>
+<li><code>toString()</code>                </li>
+</ul>
+</li>
 </ul>
 <p>Ejemplo básico:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
