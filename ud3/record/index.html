@@ -2584,15 +2584,16 @@ Como record no soporta modificaciones en sus variables de instancia porque son f
 <h3 id="constructor-compacto-el-mas-habitual">✔ Constructor compacto (el más habitual)</h3>
 <p><ins class="critic">Este constructor se utiliza para realizar validaciones en los argumentos o componentes antes de asignarlos a las variables de instancia de la clase.</ins></p>
 <ul>
-<li>❗No se pueden tener ambos constructores, el compacto más el canónico explícito.</li>
-<li><strong>El compact constructor se declara sin paréntesis y sin parámetros o argumentos.</strong></li>
+<li>❗<strong>No se pueden tener ambos constructores, el compacto más el canónico explícito</strong>.</li>
+<li>El compact constructor se declara sin paréntesis y sin parámetros o argumentos.</li>
 <li>Tiene acceso a todos los argumentos o parámetros del constructor canónico, no confundir con los campos de la clase o variables de instancia de la clase.</li>
 <li>❗<strong>No se pueden hacer asignaciones a los campos de instancia de la clase en este constructor</strong>.</li>
 <li>Todas las asignaciones implícitas del constructor canónico ocurren después de la ejecución del código del constructor compacto.</li>
+<li>Si defines un constructor compacto, pasa a ser el canónico ya que después se harán las asignaciones implícitas. Por eso no puedes tener ambos constructores.</li>
 </ul>
 <div class="admonition warning importante">
 <p class="admonition-title">Warning</p>
-<p>Si defines un constructor canónico completo, <strong>el compacto desaparece</strong>. YA no puedes usar un compacto, porque el canónico lo has escrito tú. El compacto no existe. Tú controlas toda la lógica, incluida la asignación.</p>
+<p>Si defines un constructor canónico completo, <strong>el compacto desaparece</strong>. YA no puedes usar un compacto, porque el canónico lo has escrito tú. El compacto no existe. Tú controlas toda la lógica, incluida la validación y asignación.</p>
 </div>
 <p>Ejemplo:</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Compact constructor</span>
