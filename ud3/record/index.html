@@ -2467,11 +2467,11 @@ Como record no soporta modificaciones en sus variables de instancia porque son f
 </code></pre></div>
 <p>Java genera el siguiente código implícito:        <br />
 - Por cada componente, atributos privados y finales con el mismo nombre, son los <strong>component field</strong>:          <br />
-  - <code>private final String nombre;</code>    <br />
-  - <code>private final int edad;</code>     <br />
+    - <code>private final String nombre;</code>    <br />
+    - <code>private final int edad;</code>     <br />
 - Getters, un método de acceso público que tiene el mismo nombre y tipo del componente. Lo que sería un getter, pero no tiene ningún prefijo tipo <em>get</em> o <em>is</em> delante:       <br />
-  - <code>nombre()</code>    <br />
-  - <code>edad()</code>      <br />
+    - <code>nombre()</code>    <br />
+    - <code>edad()</code>      <br />
 - Un constructor con los mismos componentes y en el mismo orden descritos dentro de la cabecera de record:        <br />
   <div class="highlight"><pre><span></span><code><span class="c1">//constructor principal del record</span>
 <span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
