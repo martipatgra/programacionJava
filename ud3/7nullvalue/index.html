@@ -1073,6 +1073,60 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#autoboxing-y-unboxing-en-java-el-peligro-del-null" class="md-nav__link">
+    📦 Autoboxing y Unboxing en Java: El Peligro del null
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Autoboxing y Unboxing en Java: El Peligro del null">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-autoboxing" class="md-nav__link">
+    🔹 ¿Qué es autoboxing?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-unboxing" class="md-nav__link">
+    🔹 ¿Qué es unboxing?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-relacion-tiene-esto-con-null" class="md-nav__link">
+    🔹 ¿Qué relación tiene esto con null?
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 ¿Qué relación tiene esto con null?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nullpointerexception-por-unboxing" class="md-nav__link">
+    ❗ NullPointerException por unboxing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-puede-ocurrir-este-error-sin-darnos-cuenta" class="md-nav__link">
+    🔹 ¿Cuándo puede ocurrir este error sin darnos cuenta?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#buenas-practicas" class="md-nav__link">
     🌟 Buenas prácticas
   </a>
@@ -2277,6 +2331,60 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#autoboxing-y-unboxing-en-java-el-peligro-del-null" class="md-nav__link">
+    📦 Autoboxing y Unboxing en Java: El Peligro del null
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Autoboxing y Unboxing en Java: El Peligro del null">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-autoboxing" class="md-nav__link">
+    🔹 ¿Qué es autoboxing?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-unboxing" class="md-nav__link">
+    🔹 ¿Qué es unboxing?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-relacion-tiene-esto-con-null" class="md-nav__link">
+    🔹 ¿Qué relación tiene esto con null?
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 ¿Qué relación tiene esto con null?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nullpointerexception-por-unboxing" class="md-nav__link">
+    ❗ NullPointerException por unboxing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-puede-ocurrir-este-error-sin-darnos-cuenta" class="md-nav__link">
+    🔹 ¿Cuándo puede ocurrir este error sin darnos cuenta?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#buenas-practicas" class="md-nav__link">
     🌟 Buenas prácticas
   </a>
@@ -2365,11 +2473,54 @@ No es una cadena vacía, no es cero, no es “nada”: es <strong>la referencia 
 <li>Para valores opcionales.</li>
 </ul>
 <hr />
+<h2 id="autoboxing-y-unboxing-en-java-el-peligro-del-null">📦 Autoboxing y Unboxing en Java: El Peligro del <code>null</code></h2>
+<h3 id="que-es-autoboxing">🔹 ¿Qué es <em>autoboxing</em>?</h3>
+<p>El <strong>autoboxing</strong> es el proceso automático mediante el cual Java convierte un <strong>tipo primitivo</strong> en su <strong>clase envolvente (wrapper)</strong> correspondiente.</p>
+<p>Ejemplo:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="n">Integer</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">   </span><span class="c1">// autoboxing: de int → Integer</span>
+</code></pre></div></p>
+<p>Java realiza esta conversión sin que el programador tenga que escribir código explícito.</p>
+<hr />
+<h3 id="que-es-unboxing">🔹 ¿Qué es <em>unboxing</em>?</h3>
+<p>El <strong>unboxing</strong> es el proceso inverso: Java convierte un <strong>wrapper</strong> en su <strong>tipo primitivo</strong>.</p>
+<p>Ejemplo:
+<div class="highlight"><pre><span></span><code><span class="n">Integer</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">   </span><span class="c1">// unboxing: de Integer → int</span>
+</code></pre></div></p>
+<hr />
+<h3 id="que-relacion-tiene-esto-con-null">🔹 ¿Qué relación tiene esto con <code>null</code>?</h3>
+<p>Las clases envolventes (como <code>Integer</code>, <code>Double</code>, <code>Boolean</code>, etc.) <strong>pueden ser null</strong>.<br />
+Los tipos primitivos (<code>int</code>, <code>double</code>, <code>boolean</code>…) <strong>no pueden ser null</strong>.</p>
+<p>Esto provoca un riesgo importante:</p>
+<h4 id="nullpointerexception-por-unboxing">❗ NullPointerException por unboxing</h4>
+<div class="highlight"><pre><span></span><code><span class="n">Integer</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">   </span><span class="c1">// ERROR: NullPointerException</span>
+</code></pre></div>
+<p>El programa intenta convertir un wrapper <code>null</code> a un primitivo, lo cual es imposible.</p>
+<hr />
+<h3 id="cuando-puede-ocurrir-este-error-sin-darnos-cuenta">🔹 ¿Cuándo puede ocurrir este error sin darnos cuenta?</h3>
+<p>Muy fácilmente:</p>
+<ul>
+<li>Al devolver wrappers desde métodos que pueden devolver <code>null</code>     </li>
+<li>Al usar colecciones que almacenan wrappers            </li>
+<li>Al asignar wrappers a primitivos mediante unboxing implícito      </li>
+<li>Al usar comparaciones con operadores <code>&gt;</code>, <code>&lt;</code>, <code>==</code> sobre wrappers            </li>
+</ul>
+<p>Ejemplo peligroso:
+<div class="highlight"><pre><span></span><code><span class="n">Integer</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obtenerEdad</span><span class="p">();</span><span class="w"> </span><span class="c1">// puede ser null</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">              </span><span class="c1">// unboxing automático</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Si <code>edad</code> es null → ❌ <em>NullPointerException</em>.</p>
+<hr />
 <h2 id="buenas-practicas">🌟 Buenas prácticas</h2>
 <ul>
 <li>Evita <code>null</code> en colecciones (cuando las veáis más adelante).</li>
 <li>Usa nombres descriptivos y estados por defecto.</li>
-<li>Si un atributo es obligatorio, <strong>nunca</strong> permitas <code>null</code> en él.</li>
+<li>Si un atributo es obligatorio, <strong>nunca</strong> permitas <code>null</code> en él.       </li>
+<li>✔️ Usar <strong>tipos primitivos</strong> cuando sepamos que nunca habrá null  </li>
 </ul>
 
 
