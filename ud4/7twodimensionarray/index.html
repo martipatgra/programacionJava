@@ -2571,6 +2571,7 @@
 
 <h1 id="arrays-multidimensionales-2d">🧩 Arrays multidimensionales (2D)</h1>
 <p>Un <strong>array bidimensional</strong> (o <strong>matriz 2D</strong>) es un array cuyos elementos <strong>son a su vez arrays</strong>.</p>
+<p>⚠️ <strong>IMPORTANTE</strong>: <strong><em>recuerda que un array es un objeto</em></strong>, y se accede a él mediante una <strong>referencia</strong> en la memoria.</p>
 <p>📌 Ejemplo típico: <strong>notas</strong> de una clase → filas = alumnos, columnas = notas de las diferentes asignaturas.</p>
 <blockquote>
 <p>✅ Regla de oro: <strong>primero fila, luego columna</strong></p>
@@ -2611,7 +2612,8 @@
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="mi">7</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 5 filas, 7 columnas. Todo se inicializa a 0</span>
 </code></pre></div>
 <h3 id="3-matriz-irregular-filas-con-longitudes-distintas">✅ 3) Matriz irregular (filas con longitudes distintas)</h3>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][]</span><span class="p">;</span><span class="w">  </span><span class="c1">// 3 filas, pero todavía sin columnas</span>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][]</span><span class="p">;</span><span class="w">  </span><span class="c1">// 3 filas, pero todavía sin columnas, cada fila</span>
+<span class="c1">//apunta a null</span>
 
 <span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span><span class="w">         </span><span class="c1">// fila 0 tiene 2 columnas</span>
 <span class="n">m</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w">         </span><span class="c1">// fila 1 tiene 5 columnas</span>
