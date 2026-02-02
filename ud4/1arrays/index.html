@@ -2484,7 +2484,7 @@ System.out.println(Arrays.toString(arr));
 <hr />
 <h2 id="declaracion-de-un-array">🧱 Declaración de un array</h2>
 <p>Para declarar un array, se hace de la misma forma que haríamos si quisiéramos declarar una variable pero añadiendo <strong><em>[ ]</em></strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numeros</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numeros</span><span class="p">;</span><span class="w"> </span><span class="c1">//apunta a null porque todavía no hemos hecho new</span>
 </code></pre></div>
 <p>🔎 Aquí solo <strong>declaramos</strong> el array, pero <strong>no tiene tamaño todavía</strong>.</p>
 <hr />
@@ -2506,10 +2506,13 @@ System.out.println(Arrays.toString(arr));
 </div>
 <hr />
 <h2 id="declarar-y-crear-en-una-sola-linea">⚡ Declarar y crear en una sola línea</h2>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">edades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">edades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="c1">//aquí se inicializa todo a 0</span>
 </code></pre></div>
 <p>O directamente, también se puede con valores iniciales:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">edades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">};</span>
+
+<span class="c1">//o también se puede crear así</span>
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">edades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="p">{</span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">};</span>
 </code></pre></div>
 <p>De esa forma, también le indicamos indirectamente el tamaño del array. Java cuenta el número de elementos que hay entre {} y crea un array de ese tamaño y además los asigna en posiciones consecutivas dentro del array.</p>
 <hr />
