@@ -2576,26 +2576,26 @@
 <li>🧩 <strong>Especializar</strong> comportamientos (añadir o modificar cosas)</li>
 <li>🏗️ Mantener una estructura jerárquica (más general → más específica)</li>
 </ul>
-<p>📌 Ejemplo mental:<br />
+<p>📌 Ejemplo mental:    <br />
 Un <strong>Ordenador</strong> tiene RAM, CPU, disco...<br />
-Una <strong>Tablet</strong> comparte muchas de esas características pero tiene otras propias.<br />
-Con herencia evitamos copiar/pegar todo (y luego sufrir para mantenerlo).</p>
-<p>✅ Terminología equivalente:
-- 👨‍👧 Padre / hijo
-- 🧱 Clase base / clase derivada
-- ⬆️ Superclase / subclase</p>
+Una <strong>Tablet</strong> comparte muchas de esas características pero tiene otras propias.  <br />
+Con herencia evitamos copiar/pegar todo (y luego sufrir para mantenerlo).   </p>
+<p>✅ Terminología equivalente:  <br />
+- 👨‍👧 Padre / hijo <br />
+- 🧱 Clase base / clase derivada  <br />
+- ⬆️ Superclase / subclase   </p>
 <p><img alt="Arrays" src="../../img/ud5/1herencia.png" /></p>
 <hr />
 <h2 id="2-jerarquia-de-clases-en-java-object">🌳 2) Jerarquía de clases en Java: <code>Object</code></h2>
 <p>En Java, <strong>todas las clases heredan de <code>java.lang.Object</code></strong>, directa o indirectamente.</p>
-<p>Eso significa que todos los objetos tienen (como mínimo) métodos como:
-- <code>toString()</code>
-- <code>equals(Object o)</code>
-- <code>hashCode()</code>
-- <code>getClass()</code></p>
-<p>🔎 Idea importante: una jerarquía de clases se parece a un <strong>árbol invertido</strong>:
-- arriba → clases <strong>muy generales</strong>
-- abajo → clases <strong>más específicas</strong></p>
+<p>Eso significa que todos los objetos tienen (como mínimo) métodos como:<br />
+- <code>toString()</code><br />
+- <code>equals(Object o)</code>  <br />
+- <code>hashCode()</code><br />
+- <code>getClass()</code>  </p>
+<p>🔎 Idea importante: una jerarquía de clases se parece a un <strong>árbol invertido</strong>: 
+- arriba → clases <strong>muy generales</strong> 
+- abajo → clases <strong>más específicas</strong>    </p>
 <hr />
 <h2 id="3-es-un-vs-tiene-un-cuando-usar-herencia">🧩 3) “Es-un” vs “tiene-un” (cuándo usar herencia)</h2>
 <p>✅ La herencia modela una relación <strong>“es-un”</strong> (<em>is-a</em>).</p>
@@ -2624,9 +2624,9 @@ Con herencia evitamos copiar/pegar todo (y luego sufrir para mantenerlo).</p>
 <span class="w">    </span><span class="c1">// miembros nuevos + constructores de Hija</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>✅ La clase hija hereda:
-- atributos (estado)
-- métodos (comportamiento)</p>
+<p>✅ La clase hija hereda:  <br />
+- atributos (estado)  <br />
+- métodos (comportamiento)  </p>
 <p>⚠️ <strong>No se heredan los constructores</strong> (pero sí se pueden llamar con <code>super(...)</code>).</p>
 <mark class="critic block">
 <p>🚫 Si una clase es declarada como <code>final</code>, <strong>no se puede extender</strong>.</p>
@@ -2664,11 +2664,11 @@ Con herencia evitamos copiar/pegar todo (y luego sufrir para mantenerlo).</p>
 </tr>
 </tbody>
 </table>
-<p>📌 Corrección importante (muy típica):</p>
+<p>📌 Corrección importante (muy típica):  </p>
 <blockquote>
-<p>Los <code>private</code> <strong>sí forman parte del objeto</strong> (están “heredados” en el sentido de que existen en memoria),
-pero <strong>no puedes acceder a ellos desde la subclase</strong>.<br />
-Para eso se usan <strong>getters/setters</strong> o <code>protected</code> cuando proceda.</p>
+<p>Los <code>private</code> <strong>sí forman parte del objeto</strong> (están “heredados” en el sentido de que existen en memoria), 
+pero <strong>no puedes acceder a ellos desde la subclase</strong>.    <br />
+Para eso se usan <strong>getters/setters</strong> o <code>protected</code> cuando proceda.    </p>
 </blockquote>
 <hr />
 <h2 id="7-constructores-y-cadena-de-inicializacion-super">🏗️ 7) Constructores y cadena de inicialización (<code>super()</code>)</h2>
@@ -2680,11 +2680,11 @@ Para eso se usan <strong>getters/setters</strong> o <code>protected</code> cuand
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>📌 Reglas:
-- <code>super(...)</code> <strong>solo</strong> se usa dentro de un constructor.
-- Si aparece, <strong>debe ser la primera sentencia</strong> del constructor.
-- Si no escribes <code>super(...)</code>, Java intenta insertar <strong><code>super()</code></strong> automáticamente.
-- ⚠️ Si el padre <strong>no tiene constructor vacío</strong>, y tú no llamas a <code>super(...)</code>, <strong>error de compilación</strong>.</p>
+<p>📌 Reglas:<br />
+- <code>super(...)</code> <strong>solo</strong> se usa dentro de un constructor.  <br />
+- Si aparece, <strong>debe ser la primera sentencia</strong> del constructor.  <br />
+- Si no escribes <code>super(...)</code>, Java intenta insertar <strong><code>super()</code></strong> automáticamente. 
+- ⚠️ Si el padre <strong>no tiene constructor vacío</strong>, y tú no llamas a <code>super(...)</code>, <strong>error de compilación</strong>.   </p>
 <hr />
 <h2 id="8-ejemplo-completo-animal-dog">🐾 8) Ejemplo completo: <code>Animal</code> → <code>Dog</code></h2>
 <h3 id="clase-padre-animal">🐾 Clase padre <code>Animal</code></h3>
@@ -2740,20 +2740,20 @@ Para eso se usan <strong>getters/setters</strong> o <code>protected</code> cuand
 <hr />
 <h2 id="9-sobrescritura-de-metodos-override">🔁 9) Sobrescritura de métodos (<code>@Override</code>)</h2>
 <p>La <strong>sobrescritura</strong> (override) permite que la clase hija <strong>redefina</strong> un método del padre.</p>
-<p>✅ Reglas básicas:
-- <strong>Mismo nombre</strong>
-- <strong>Misma lista de parámetros</strong>
-- <strong>Mismo tipo de retorno</strong> (o compatible)
-- No se puede reducir visibilidad (no pasar de <code>public</code> a <code>protected</code>, por ejemplo)</p>
-<p>📌 <code>@Override</code> te protege de errores:
-- si te equivocas en la firma → <strong>compila mal</strong> (y es lo que quieres)</p>
+<p>✅ Reglas básicas:<br />
+- <strong>Mismo nombre</strong><br />
+- <strong>Misma lista de parámetros</strong> 
+- <strong>Mismo tipo de retorno</strong> (o compatible)<br />
+- No se puede reducir visibilidad (no pasar de <code>public</code> a <code>protected</code>, por ejemplo) </p>
+<p>📌 <code>@Override</code> te protege de errores: <br />
+- si te equivocas en la firma → <strong>compila mal</strong> (y es lo que quieres)   </p>
 <hr />
 <h2 id="10-this-vs-super-atributos-y-metodos">🧷 10) <code>this</code> vs <code>super</code> (atributos y métodos)</h2>
 <h3 id="this">🪞 <code>this</code></h3>
 <p><code>this</code> apunta al <strong>objeto actual</strong> (la instancia actual).</p>
-<p>Se usa mucho para:
-- diferenciar atributo vs parámetro
-- llamar a métodos del propio objeto</p>
+<p>Se usa mucho para:<br />
+- diferenciar atributo vs parámetro 
+- llamar a métodos del propio objeto    </p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Coche</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ruedas</span><span class="p">;</span>
 
