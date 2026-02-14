@@ -2840,9 +2840,9 @@ Si declaras uno con la misma firma en la subclase, lo que ocurre es <strong>ocul
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>🧠 Idea clave:
-- Con métodos <strong>de instancia</strong>, manda el <strong>objeto real</strong> (polimorfismo).
-- Con métodos <strong><code>static</code></strong>, manda el <strong>tipo de la referencia</strong>.</p>
+<p>🧠 Idea clave:<br />
+- Con métodos <strong>de instancia</strong>, manda el <strong>objeto real</strong> (polimorfismo).  <br />
+- Con métodos <strong><code>static</code></strong>, manda el <strong>tipo de la referencia</strong>. </p>
 <hr />
 <h3 id="atributos-static-tambien-se-pueden-ocultar-mala-idea">🫥 Atributos <code>static</code>: también se pueden “ocultar” (mala idea)</h3>
 <p>Con campos <code>static</code> pasa lo mismo: se resuelven por <strong>tipo de referencia</strong>.</p>
@@ -2866,18 +2866,18 @@ Si declaras uno con la misma firma en la subclase, lo que ocurre es <strong>ocul
 <hr />
 <h3 id="resumen-rapido-para-memorizar">🧾 Resumen rápido (para memorizar)</h3>
 <ul>
-<li>✅ <code>static</code> se <strong>puede acceder</strong> desde la subclase, pero <strong>pertenece a la clase</strong>.</li>
-<li>❌ <code>static</code> <strong>NO se overridea</strong> → se <strong>oculta (hiding)</strong>.</li>
-<li>🧠 En <code>Padre p = new Hija()</code>, un <code>static</code> se resuelve por <strong>tipo <code>Padre</code></strong>, no por el objeto.</li>
+<li>✅ <code>static</code> se <strong>puede acceder</strong> desde la subclase, pero <strong>pertenece a la clase</strong>.    </li>
+<li>❌ <code>static</code> <strong>NO se overridea</strong> → se <strong>oculta (hiding)</strong>. </li>
+<li>🧠 En <code>Padre p = new Hija()</code>, un <code>static</code> se resuelve por <strong>tipo <code>Padre</code></strong>, no por el objeto. </li>
 </ul>
 <hr />
 <h2 id="13-errores-tipicos-y-reglas-clave">⚠️ 13) Errores típicos y reglas clave</h2>
-<p>✅ Checklist rápido:
-- 🧱 <strong>No se heredan constructores</strong> (pero sí se llama al del padre con <code>super</code>)
-- 🔒 <code>private</code> <strong>no es accesible</strong> desde la hija (usa getters/setters o <code>protected</code>)
-- 🧾 Usa <code>@Override</code> siempre que sobrescribas
-- 🧯 Los métodos <code>static</code> <strong>no se sobrescriben</strong> (se <em>ocultan</em>), y no hay polimorfismo ahí
-- 🧠 Herencia = <strong>“es-un”</strong>, si es “tiene-un” → composición</p>
+<p>✅ Checklist rápido:  <br />
+- 🧱 <strong>No se heredan constructores</strong> (pero sí se llama al del padre con <code>super</code>)  <br />
+- 🔒 <code>private</code> <strong>no es accesible</strong> desde la hija (usa getters/setters o <code>protected</code>)  <br />
+- 🧾 Usa <code>@Override</code> siempre que sobrescribas <br />
+- 🧯 Los métodos <code>static</code> <strong>no se sobrescriben</strong> (se <em>ocultan</em>), y no hay polimorfismo ahí<br />
+- 🧠 Herencia = <strong>“es-un”</strong>, si es “tiene-un” → composición </p>
 <hr />
 
 
