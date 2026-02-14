@@ -1414,6 +1414,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#por-que-se-llama-ocultar-hiding" class="md-nav__link">
+    ¿Por qué se llama “ocultar” hiding?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#atributos-static-tambien-se-pueden-ocultar-mala-idea" class="md-nav__link">
     🫥 Atributos static: también se pueden “ocultar” (mala idea)
   </a>
@@ -2510,6 +2517,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#por-que-se-llama-ocultar-hiding" class="md-nav__link">
+    ¿Por qué se llama “ocultar” hiding?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#atributos-static-tambien-se-pueden-ocultar-mala-idea" class="md-nav__link">
     🫥 Atributos static: también se pueden “ocultar” (mala idea)
   </a>
@@ -2827,7 +2841,7 @@ Si declaras uno con la misma firma en la subclase, lo que ocurre es <strong>ocul
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Hija</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Padre</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hija&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// oculta, NO override</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hija&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// oculta (hiding), NO override</span>
 <span class="p">}</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
@@ -2840,9 +2854,17 @@ Si declaras uno con la misma firma en la subclase, lo que ocurre es <strong>ocul
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<h3 id="por-que-se-llama-ocultar-hiding">¿Por qué se llama “ocultar” hiding?</h3>
+<p>Porque en <code>Hija</code> has declarado otro <code>static saludar()</code> con el mismo nombre, y cuando escribes:<br />
+- <code>Padre.saludar()</code> → llamas al de Padre<br />
+- <code>Hija.saludar()</code> → llamas al de Hija    </p>
+<p>No es “el mismo método reescrito”, son <strong>dos métodos distintos</strong> (uno en cada clase).
+El de <code>Hija</code> no “reemplaza” al de <code>Padre</code> en tiempo de ejecución, solo <strong>lo tapa</strong> cuando usas el nombre <code>Hija</code>.</p>
 <p>🧠 Idea clave:<br />
 - Con métodos <strong>de instancia</strong>, manda el <strong>objeto real</strong> (polimorfismo).  <br />
-- Con métodos <strong><code>static</code></strong>, manda el <strong>tipo de la referencia</strong>. </p>
+- Con métodos <strong><code>static</code></strong>, manda el <strong>tipo de la referencia</strong>.   <br />
+- <strong>Override</strong>: se decide por el <strong>objeto real</strong> (runtime).   <br />
+- <strong>Static (hiding)</strong>: se decide por el <strong>tipo de la variable / clase</strong> (compile-time).     </p>
 <hr />
 <h3 id="atributos-static-tambien-se-pueden-ocultar-mala-idea">🫥 Atributos <code>static</code>: también se pueden “ocultar” (mala idea)</h3>
 <p>Con campos <code>static</code> pasa lo mismo: se resuelven por <strong>tipo de referencia</strong>.</p>
