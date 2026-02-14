@@ -2768,10 +2768,10 @@ Para eso se usan <strong>getters/setters</strong> o <code>protected</code> cuand
 </code></pre></div>
 <h3 id="super">🧭 <code>super</code></h3>
 <p><code>super</code> apunta a la <strong>parte padre</strong> del objeto.</p>
-<p>Se usa para:
-- acceder a un método del padre cuando lo has sobrescrito
-- acceder a un atributo del padre si está oculto (no recomendado ocultar campos)
-- llamar al constructor del padre (<code>super(...)</code>)</p>
+<p>Se usa para:  <br />
+- acceder a un método del padre cuando lo has sobrescrito <br />
+- acceder a un atributo del padre si está oculto (no recomendado ocultar campos)  <br />
+- llamar al constructor del padre (<code>super(...)</code>)    </p>
 <div class="highlight"><pre><span></span><code><span class="nd">@Override</span>
 <span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">eat</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog eat&quot;</span><span class="p">);</span>
@@ -2806,9 +2806,9 @@ Para eso se usan <strong>getters/setters</strong> o <code>protected</code> cuand
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>📌 Regla clave:
-- Un constructor puede tener <strong><code>this()</code> o <code>super()</code></strong>, pero <strong>nunca ambos</strong>.
-- Y el que haya, debe ser <strong>la primera sentencia</strong>.</p>
+<p>📌 Regla clave: 
+- Un constructor puede tener <strong><code>this()</code> o <code>super()</code></strong>, pero <strong>nunca ambos</strong>.  <br />
+- Y el que haya, debe ser <strong>la primera sentencia</strong>. </p>
 <hr />
 <h2 id="12-miembros-static-y-herencia">🧨 12) Miembros <code>static</code> y herencia</h2>
 <p>En Java, los miembros <code>static</code> <strong>no funcionan “como” la herencia normal</strong> porque <strong>pertenecen a la clase</strong>, no a la instancia.</p>
