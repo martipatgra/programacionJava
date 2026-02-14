@@ -1392,8 +1392,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#12-errores-tipicos-y-reglas-clave" class="md-nav__link">
-    ⚠️ 12) Errores típicos y reglas clave
+  <a href="#12-miembros-static-y-herencia" class="md-nav__link">
+    🧨 12) Miembros static y herencia
+  </a>
+  
+    <nav class="md-nav" aria-label="🧨 12) Miembros static y herencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#se-heredan-los-static" class="md-nav__link">
+    🧱 ¿Se heredan los static?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-static-no-hay-override-hay-hiding" class="md-nav__link">
+    🎭 Métodos static: NO hay @Override (hay hiding)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos-static-tambien-se-pueden-ocultar-mala-idea" class="md-nav__link">
+    🫥 Atributos static: también se pueden “ocultar” (mala idea)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen-rapido-para-memorizar" class="md-nav__link">
+    🧾 Resumen rápido (para memorizar)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-errores-tipicos-y-reglas-clave" class="md-nav__link">
+    ⚠️ 13) Errores típicos y reglas clave
   </a>
   
 </li>
@@ -2447,8 +2488,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#12-errores-tipicos-y-reglas-clave" class="md-nav__link">
-    ⚠️ 12) Errores típicos y reglas clave
+  <a href="#12-miembros-static-y-herencia" class="md-nav__link">
+    🧨 12) Miembros static y herencia
+  </a>
+  
+    <nav class="md-nav" aria-label="🧨 12) Miembros static y herencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#se-heredan-los-static" class="md-nav__link">
+    🧱 ¿Se heredan los static?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-static-no-hay-override-hay-hiding" class="md-nav__link">
+    🎭 Métodos static: NO hay @Override (hay hiding)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos-static-tambien-se-pueden-ocultar-mala-idea" class="md-nav__link">
+    🫥 Atributos static: también se pueden “ocultar” (mala idea)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen-rapido-para-memorizar" class="md-nav__link">
+    🧾 Resumen rápido (para memorizar)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-errores-tipicos-y-reglas-clave" class="md-nav__link">
+    ⚠️ 13) Errores típicos y reglas clave
   </a>
   
 </li>
@@ -2483,7 +2565,8 @@
 <li><a href="#9-sobrescritura-de-metodos-override">🔁 Sobrescritura de métodos (@Override)</a></li>
 <li><a href="#10-this-vs-super-atributos-y-metodos">🧷 <code>this</code> vs <code>super</code> (atributos y métodos)</a></li>
 <li><a href="#11-this-vs-super-constructores">🧷 <code>this()</code> vs <code>super()</code> (constructores)</a></li>
-<li><a href="#️12-errores-tipicos-y-reglas-clave">⚠️ Errores típicos y reglas clave</a></li>
+<li><a href="#12-miembros-static-y-herencia">🧨 Miembros <code>static</code> y herencia</a></li>
+<li><a href="#️13-errores-tipicos-y-reglas-clave">⚠️ Errores típicos y reglas clave</a></li>
 </ol>
 <hr />
 <h2 id="1-que-es-la-herencia">🧠 1) ¿Qué es la herencia?</h2>
@@ -2727,7 +2810,68 @@ Para eso se usan <strong>getters/setters</strong> o <code>protected</code> cuand
 - Un constructor puede tener <strong><code>this()</code> o <code>super()</code></strong>, pero <strong>nunca ambos</strong>.
 - Y el que haya, debe ser <strong>la primera sentencia</strong>.</p>
 <hr />
-<h2 id="12-errores-tipicos-y-reglas-clave">⚠️ 12) Errores típicos y reglas clave</h2>
+<h2 id="12-miembros-static-y-herencia">🧨 12) Miembros <code>static</code> y herencia</h2>
+<p>En Java, los miembros <code>static</code> <strong>no funcionan “como” la herencia normal</strong> porque <strong>pertenecen a la clase</strong>, no a la instancia.</p>
+<h3 id="se-heredan-los-static">🧱 ¿Se heredan los <code>static</code>?</h3>
+<ul>
+<li>✅ <strong>Existen</strong> en la jerarquía y desde una subclase <strong>puedes referenciarlos</strong>.</li>
+<li>📌 Pero <strong>siguen perteneciendo a la clase donde fueron declarados</strong> (normalmente la superclase).</li>
+<li>✅ Buen hábito: acceder siempre con el <strong>nombre de la clase que lo declara</strong> (<code>Padre.CONSTANTE</code>) para evitar confusión.</li>
+</ul>
+<hr />
+<h3 id="metodos-static-no-hay-override-hay-hiding">🎭 Métodos <code>static</code>: NO hay <code>@Override</code> (hay <em>hiding</em>)</h3>
+<p>Los métodos <code>static</code> <strong>no se sobrescriben</strong> (<em>no override</em>).<br />
+Si declaras uno con la misma firma en la subclase, lo que ocurre es <strong>ocultación (hiding)</strong>, y <strong>no hay polimorfismo</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Padre</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Padre&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Hija</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Padre</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hija&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// oculta, NO override</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Padre</span><span class="p">.</span><span class="na">saludar</span><span class="p">();</span><span class="w"> </span><span class="c1">// Padre</span>
+<span class="w">        </span><span class="n">Hija</span><span class="p">.</span><span class="na">saludar</span><span class="p">();</span><span class="w">  </span><span class="c1">// Hija</span>
+
+<span class="w">        </span><span class="n">Padre</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Hija</span><span class="p">();</span>
+<span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">saludar</span><span class="p">();</span><span class="w">     </span><span class="c1">// Padre  (se decide por el TIPO de referencia)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>🧠 Idea clave:
+- Con métodos <strong>de instancia</strong>, manda el <strong>objeto real</strong> (polimorfismo).
+- Con métodos <strong><code>static</code></strong>, manda el <strong>tipo de la referencia</strong>.</p>
+<hr />
+<h3 id="atributos-static-tambien-se-pueden-ocultar-mala-idea">🫥 Atributos <code>static</code>: también se pueden “ocultar” (mala idea)</h3>
+<p>Con campos <code>static</code> pasa lo mismo: se resuelven por <strong>tipo de referencia</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Padre</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">class</span> <span class="nc">Hija</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Padre</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Padre</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Hija</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w">  </span><span class="c1">// 2</span>
+
+<span class="w">        </span><span class="n">Padre</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Hija</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w">     </span><span class="c1">// 1  (por tipo de referencia)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>✅ Recomendación:</p>
+<blockquote>
+<p>Evita redeclarar campos <code>static</code> con el mismo nombre en la subclase.</p>
+</blockquote>
+<hr />
+<h3 id="resumen-rapido-para-memorizar">🧾 Resumen rápido (para memorizar)</h3>
+<ul>
+<li>✅ <code>static</code> se <strong>puede acceder</strong> desde la subclase, pero <strong>pertenece a la clase</strong>.</li>
+<li>❌ <code>static</code> <strong>NO se overridea</strong> → se <strong>oculta (hiding)</strong>.</li>
+<li>🧠 En <code>Padre p = new Hija()</code>, un <code>static</code> se resuelve por <strong>tipo <code>Padre</code></strong>, no por el objeto.</li>
+</ul>
+<hr />
+<h2 id="13-errores-tipicos-y-reglas-clave">⚠️ 13) Errores típicos y reglas clave</h2>
 <p>✅ Checklist rápido:
 - 🧱 <strong>No se heredan constructores</strong> (pero sí se llama al del padre con <code>super</code>)
 - 🔒 <code>private</code> <strong>no es accesible</strong> desde la hija (usa getters/setters o <code>protected</code>)
