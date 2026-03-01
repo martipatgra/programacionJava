@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../3scene/">
+        <link rel="prev" href="../1herencia/">
       
       
-        <link rel="next" href="../6layouts/">
+        <link rel="next" href="../2composicion/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>🤩 Node - Programación en Java</title>
+        <title>✨ Encapsulación, Composición, Polimorfismo y Abstracción en Java - Programación en Java</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#javafx-node" class="md-skip">
+        <a href="#encapsulacion-composicion-polimorfismo-y-abstraccion-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🤩 Node
+              ✨ Encapsulación, Composición, Polimorfismo y Abstracción en Java
             
           </span>
         </div>
@@ -1183,14 +1183,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
       
       
       
@@ -1199,7 +1201,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           ✨ POO avanzada
@@ -1212,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud5/1herencia/" class="md-nav__link">
+      <a href="../1herencia/" class="md-nav__link">
         ✨ Herencia
       </a>
     </li>
@@ -1224,11 +1226,209 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ud5/2encomabspoli/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ✨ Encapsulación, Composición, Polimorfismo y Abstracción en Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         ✨ Encapsulación, Composición, Polimorfismo y Abstracción en Java
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    📚 Índice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-encapsulacion" class="md-nav__link">
+    🔐 1. Encapsulación
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 1. Encapsulación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-la-encapsulacion" class="md-nav__link">
+    🧠 ¿Qué es la encapsulación?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    🎯 Objetivos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sin-encapsulacion" class="md-nav__link">
+    ❌ Sin encapsulación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#con-encapsulacion" class="md-nav__link">
+    ✅ Con encapsulación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-abstraccion" class="md-nav__link">
+    🧠 2. Abstracción
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 2. Abstracción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es" class="md-nav__link">
+    🧩 ¿Qué es?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-java" class="md-nav__link">
+    🏗 En Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve" class="md-nav__link">
+    🎯 ¿Para qué sirve?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-composicion" class="md-nav__link">
+    🧩 3. Composición
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 3. Composición">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es_1" class="md-nav__link">
+    🧠 ¿Qué es?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    📌 Ejemplo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-polimorfismo" class="md-nav__link">
+    🎭 4. Polimorfismo
+  </a>
+  
+    <nav class="md-nav" aria-label="🎭 4. Polimorfismo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es_2" class="md-nav__link">
+    🧠 ¿Qué es?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobreescritura" class="md-nav__link">
+    📌 Sobreescritura
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polimorfismo-real" class="md-nav__link">
+    🔥 Polimorfismo real
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ejemplo-completo-gympro" class="md-nav__link">
+    🚀 5. Ejemplo Completo: GymPro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-final" class="md-nav__link">
+    🎯 Resumen Final
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    🏁 Conclusión
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1240,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud5/2composicion/" class="md-nav__link">
+      <a href="../2composicion/" class="md-nav__link">
         ✨ Composición
       </a>
     </li>
@@ -1254,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud5/3encapsulacion/" class="md-nav__link">
+      <a href="../3encapsulacion/" class="md-nav__link">
         ✨ Encapsulación
       </a>
     </li>
@@ -1268,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud5/4polimorfismo/" class="md-nav__link">
+      <a href="../4polimorfismo/" class="md-nav__link">
         ✨ Polimorfismo
       </a>
     </li>
@@ -1282,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud5/5interfaces/" class="md-nav__link">
+      <a href="../5interfaces/" class="md-nav__link">
         ✨ Interfaces
       </a>
     </li>
@@ -1296,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud5/6abstraccion/" class="md-nav__link">
+      <a href="../6abstraccion/" class="md-nav__link">
         ✨ Abstracción
       </a>
     </li>
@@ -1310,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud5/7exceptions/" class="md-nav__link">
+      <a href="../7exceptions/" class="md-nav__link">
         ✨ Excepciones
       </a>
     </li>
@@ -1638,16 +1838,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
       
       
       
@@ -1656,7 +1854,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
           🤩 Interfaces de usuario
@@ -1669,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1javafx/" class="md-nav__link">
+      <a href="../../ud8/1javafx/" class="md-nav__link">
         🤩 Java FX
       </a>
     </li>
@@ -1683,7 +1881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2stage/" class="md-nav__link">
+      <a href="../../ud8/2stage/" class="md-nav__link">
         🤩 Stage
       </a>
     </li>
@@ -1697,7 +1895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3scene/" class="md-nav__link">
+      <a href="../../ud8/3scene/" class="md-nav__link">
         🤩 Scene
       </a>
     </li>
@@ -1709,121 +1907,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          🤩 Node
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ud8/4node/" class="md-nav__link">
         🤩 Node
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#conceptos-basicos-de-node" class="md-nav__link">
-    Conceptos básicos de Node
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#propiedades-de-javafx-node" class="md-nav__link">
-    Propiedades de JavaFX Node
-  </a>
-  
-    <nav class="md-nav" aria-label="Propiedades de JavaFX Node">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sistema-de-coordenadas-coordinate-system" class="md-nav__link">
-    1. Sistema de coordenadas (Coordinate System)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cuadro-delimitador-bounding-box" class="md-nav__link">
-    2. Cuadro delimitador (Bounding Box)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-layoutx-y-layouty" class="md-nav__link">
-    3. layoutX y layoutY
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-preferred-height-and-width" class="md-nav__link">
-    4. Preferred height and width
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-minimum-height-and-minimum-width" class="md-nav__link">
-    5. Minimum height and Minimum width
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-maximum-height-and-maximum-width" class="md-nav__link">
-    6. Maximum height and Maximum width
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-user-data" class="md-nav__link">
-    7. User data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-items-child-nodes" class="md-nav__link">
-    8. Items (Child nodes)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1835,7 +1923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6layouts/" class="md-nav__link">
+      <a href="../../ud8/6layouts/" class="md-nav__link">
         🤩 Layouts
       </a>
     </li>
@@ -1849,7 +1937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5uicontrols/" class="md-nav__link">
+      <a href="../../ud8/5uicontrols/" class="md-nav__link">
         🤩 Controles UI
       </a>
     </li>
@@ -1863,7 +1951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../7events/" class="md-nav__link">
+      <a href="../../ud8/7events/" class="md-nav__link">
         🤩 Eventos
       </a>
     </li>
@@ -2242,78 +2330,166 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#conceptos-basicos-de-node" class="md-nav__link">
-    Conceptos básicos de Node
+  <a href="#indice" class="md-nav__link">
+    📚 Índice
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#propiedades-de-javafx-node" class="md-nav__link">
-    Propiedades de JavaFX Node
+  <a href="#1-encapsulacion" class="md-nav__link">
+    🔐 1. Encapsulación
   </a>
   
-    <nav class="md-nav" aria-label="Propiedades de JavaFX Node">
+    <nav class="md-nav" aria-label="🔐 1. Encapsulación">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-sistema-de-coordenadas-coordinate-system" class="md-nav__link">
-    1. Sistema de coordenadas (Coordinate System)
+  <a href="#que-es-la-encapsulacion" class="md-nav__link">
+    🧠 ¿Qué es la encapsulación?
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-cuadro-delimitador-bounding-box" class="md-nav__link">
-    2. Cuadro delimitador (Bounding Box)
+  <a href="#objetivos" class="md-nav__link">
+    🎯 Objetivos
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-layoutx-y-layouty" class="md-nav__link">
-    3. layoutX y layoutY
+  <a href="#sin-encapsulacion" class="md-nav__link">
+    ❌ Sin encapsulación
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-preferred-height-and-width" class="md-nav__link">
-    4. Preferred height and width
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-minimum-height-and-minimum-width" class="md-nav__link">
-    5. Minimum height and Minimum width
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-maximum-height-and-maximum-width" class="md-nav__link">
-    6. Maximum height and Maximum width
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-user-data" class="md-nav__link">
-    7. User data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-items-child-nodes" class="md-nav__link">
-    8. Items (Child nodes)
+  <a href="#con-encapsulacion" class="md-nav__link">
+    ✅ Con encapsulación
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-abstraccion" class="md-nav__link">
+    🧠 2. Abstracción
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 2. Abstracción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es" class="md-nav__link">
+    🧩 ¿Qué es?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-java" class="md-nav__link">
+    🏗 En Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve" class="md-nav__link">
+    🎯 ¿Para qué sirve?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-composicion" class="md-nav__link">
+    🧩 3. Composición
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 3. Composición">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es_1" class="md-nav__link">
+    🧠 ¿Qué es?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    📌 Ejemplo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-polimorfismo" class="md-nav__link">
+    🎭 4. Polimorfismo
+  </a>
+  
+    <nav class="md-nav" aria-label="🎭 4. Polimorfismo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es_2" class="md-nav__link">
+    🧠 ¿Qué es?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobreescritura" class="md-nav__link">
+    📌 Sobreescritura
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polimorfismo-real" class="md-nav__link">
+    🔥 Polimorfismo real
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ejemplo-completo-gympro" class="md-nav__link">
+    🚀 5. Ejemplo Completo: GymPro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-final" class="md-nav__link">
+    🎯 Resumen Final
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    🏁 Conclusión
+  </a>
   
 </li>
       
@@ -2333,43 +2509,292 @@
 
 
 
-<h1 id="javafx-node">JavaFX Node</h1>
-<p>La clase <code>Node</code>, javafx.scene.Node, es la clase base (superclase) para todos los componentes agregados a <strong>JavaFX Scene Graph</strong>. La clase <code>Node</code> es abstracta, por lo que solo agregará subclases de la clase Node al Scene Graph. Todas las instancias de <code>Node</code> en el escenario gráfico comparten un conjunto de propiedades comunes que están definidas por la clase JavaFX <code>Node</code> y que veremos a continuación.</p>
-<h2 id="conceptos-basicos-de-node">Conceptos básicos de <code>Node</code></h2>
-<p>Cada instancia de <code>Node</code> (subclase) solo se puede agregar al Scene Graph una vez. En otras palabras, cada instancia de Node solo puede aparecer en un lugar en el escenario gráfico. <strong>Si intenta agregar la misma instancia de Node, o instancia de subclase de Node, al gráfico de escena más de una vez, se generará una excepción.</strong></p>
-<p>Un nodo JavaFX a veces puede tener subelementos, que también se denominan elementos secundarios.</p>
-<p>Una vez que se adjunta una instancia de node al gráfico de escena, solo el hilo de la aplicación JavaFX puede modificar la instancia de node.</p>
-<h2 id="propiedades-de-javafx-node">Propiedades de JavaFX <code>Node</code></h2>
-<p>La clase <code>Node</code> y, por lo tanto, todas las subclases de Node, tienen las siguientes propiedades comunes:</p>
-<h3 id="1-sistema-de-coordenadas-coordinate-system">1. Sistema de coordenadas (Coordinate System)</h3>
-<p>Cada nodo JavaFX tiene su propio sistema de coordenadas cartesianas. La única diferencia con un sistema de coordenadas cartesianas regular es que <strong>el eje Y está invertido</strong>. Eso significa que el origen del sistema de coordenadas está en la esquina superior izquierda del sistema de coordenadas. A medida que aumentan los valores de Y, el punto se mueve hacia abajo desde la parte superior del sistema de coordenadas. Esta inversión del eje Y es normal en los sistemas de coordenadas de gráficos 2D.</p>
-<p><img alt="JavaFx" src="../../img/ud8/1node.png" /></p>
-<p>Es posible que un nodo JavaFX tenga coordenadas X e Y negativas.</p>
-<p>Cada nodo tiene su propio sistema de coordenadas. Este sistema de coordenadas se utiliza para colocar instancias de nodos secundarios dentro del nodo principal o al dibujar en un lienzo JavaFX. Eso significa que un nodo que es hijo de otro nodo tiene su propio sistema de coordenadas y una ubicación (X,Y) dentro del sistema de coordenadas de su nodo principal.</p>
-<p>A continuación se muestra un ejemplo de un sistema de coordenadas de nodo principal en el que un nodo secundario está ubicado en (25,25) en el sistema de coordenadas del nodo principal. El nodo secundario también tiene su propio sistema de coordenadas que tiene su (0,0) donde el nodo secundario se encuentra en el sistema de coordenadas principal, es decir, en (25,25) en el sistema de coordenadas del nodo principal.</p>
-<p><img alt="JavaFx" src="../../img/ud8/2node.png" /></p>
-<h3 id="2-cuadro-delimitador-bounding-box">2. Cuadro delimitador (Bounding Box)</h3>
-<p>Un nodo JavaFX tiene un cuadro delimitador. El cuadro delimitador es un cuadro lógico alrededor de la forma del nodo. El nodo completo se encuentra dentro del cuadro delimitador, es decir, gráficamente. En otras palabras, todas las esquinas y bordes del Nodo están contenidos dentro del cuadro delimitador, y no hay espacio adicional alrededor del Nodo, a menos que se agregue a través de un efecto, relleno u otra cosa aplicada al Nodo.</p>
-<p>En realidad, un nodo tiene 3 cuadros delimitadores:</p>
+<h1 id="encapsulacion-composicion-polimorfismo-y-abstraccion-en-java">🧱 Encapsulación, Composición, Polimorfismo y Abstracción en Java</h1>
+<h2 id="indice">📚 Índice</h2>
+<ol>
+<li><a href="#1-encapsulación">🔐 Encapsulación</a></li>
+<li><a href="#2-abstracción">🧠 Abstracción</a></li>
+<li><a href="#3-composición">🧩 Composición</a></li>
+<li><a href="#4-polimorfismo">🎭 Polimorfismo</a></li>
+<li><a href="#5-ejemplo-completo-gympro">🚀 Ejemplo completo integrando TODO (GymPro)</a></li>
+</ol>
+<hr />
+<h2 id="1-encapsulacion">🔐 1. Encapsulación</h2>
+<h3 id="que-es-la-encapsulacion">🧠 ¿Qué es la encapsulación?</h3>
+<p>La <strong>encapsulación</strong> es uno de los pilares fundamentales de la POO.\
+Consiste en <strong>ocultar los detalles internos de una clase</strong> y permitir el
+acceso únicamente mediante métodos controlados.</p>
+<p>👉 Idea clave: > "Los datos no deben modificarse directamente desde
+fuera de la clase."</p>
+<hr />
+<h3 id="objetivos">🎯 Objetivos</h3>
 <ul>
-<li><strong>layoutBounds</strong> Los límites del nodo en su propio espacio de coordenadas, sin aplicar ningún efecto, recorte o transformación.</li>
-<li><strong>boundsInLocal</strong> Los límites del nodo en su propio espacio de coordenadas, con efectos y clip aplicados, pero sin transformaciones.</li>
-<li><strong>boundsInParent</strong> Los límites del nodo en su espacio de coordenadas principal, con efectos, recorte y transformaciones aplicadas.</li>
+<li>🔒 Proteger los datos\</li>
+<li>🧹 Mantener coherencia del objeto\</li>
+<li>🛠 Controlar modificaciones\</li>
+<li>🧩 Facilitar mantenimiento</li>
 </ul>
-<p>Cada una de estas dimensiones del cuadro delimitador se puede leer desde sus propiedades correspondientes con el mismo nombre, es decir, propiedades denominadas layoutBounds,boundsInLocal yboundsInParent.</p>
-<p>El cuadro boundsInParent es utilizado por el nodo padre (padre) para diseñar sus hijos. El nodo principal necesita conocer el espacio total, incluidos todos los efectos, clips y transformaciones de un nodo para poder asignarle espacio.</p>
-<h3 id="3-layoutx-y-layouty">3. layoutX y layoutY</h3>
-<p>Las propiedades layoutX y layoutY de un objeto de nodo contienen la X y la Y del nodo dentro de su padre.</p>
-<h3 id="4-preferred-height-and-width">4. Preferred height and width</h3>
-<p>Las propiedades de ancho y alto preferidas de un objeto de nodo especifican el ancho y alto preferidos del objeto de nodo dado (normalmente subclase de nodo). No todas las clases de nodos principales respetarán el ancho preferido y la altura preferida de un nodo secundario. Depende de la implementación concreta del nodo padre.</p>
-<h3 id="5-minimum-height-and-minimum-width">5. Minimum height and Minimum width</h3>
-<p>Las propiedades mínimas de ancho y alto de un objeto de nodo JavaFX especifican el ancho y el alto mínimos que un nodo quiere (o necesita) para mostrarse. No todas las clases de nodos principales pueden respetar estas propiedades. Depende de la implementación concreta del nodo padre.</p>
-<h3 id="6-maximum-height-and-maximum-width">6. Maximum height and Maximum width</h3>
-<p>Las propiedades máximas de ancho y alto de un objeto de nodo especifican el ancho y alto máximo que un nodo quiere (o necesita) para mostrarse. No todas las clases de nodos principales pueden respetar estas propiedades. Depende de la implementación concreta del nodo padre.</p>
-<h3 id="7-user-data">7. User data</h3>
-<p>Puede establecer datos de usuario en un nodo utilizando el método <code>setUserData()</code>. Este método toma cualquier objeto Java de su elección. De esta manera puede adjuntar, por ejemplo objetos de instancias de nodo.</p>
-<h3 id="8-items-child-nodes">8. Items (Child nodes)</h3>
-<p>Muchas subclases de nodos pueden contener elementos o nodos secundarios. La forma exacta en que agrega y accede a estos nodos secundarios depende de la subclase de nodo concreta. Algunas clases tienen un método <code>getItems()</code> que devuelve una lista de elementos. Otras clases tienen un método <code>getChildren()</code> que hace lo mismo. Se tendrá que comprobar la subclase de Nodo concreta para averiguar si puede tener elementos o nodos secundarios, y cómo los agrega y accede a ellos.</p>
+<hr />
+<h3 id="sin-encapsulacion">❌ Sin encapsulación</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">persona</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// ❌ Dato inválido</span>
+</code></pre></div>
+<hr />
+<h3 id="con-encapsulacion">✅ Con encapsulación</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">setNombre</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
+<span class="w">        </span><span class="n">setEdad</span><span class="p">(</span><span class="n">edad</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNombre</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Nombre inválido&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getEdad</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setEdad</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Edad inválida&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="2-abstraccion">🧠 2. Abstracción</h2>
+<h3 id="que-es">🧩 ¿Qué es?</h3>
+<p>La <strong>abstracción</strong> consiste en quedarse con lo esencial y ocultar los
+detalles de implementación.</p>
+<p>👉 Pensar en el <em>qué hace</em>, no en el <em>cómo lo hace</em>.</p>
+<hr />
+<h3 id="en-java">🏗 En Java</h3>
+<ul>
+<li>Clases <code>abstract</code></li>
+<li>Métodos abstractos</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hacerSonido</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>No sabemos cómo suena un animal genérico, pero sabemos que todos hacen
+sonido.</p>
+<hr />
+<h3 id="para-que-sirve">🎯 ¿Para qué sirve?</h3>
+<ul>
+<li>Definir comportamientos comunes\</li>
+<li>Obligar a las clases hijas a implementar métodos\</li>
+<li>Diseñar jerarquías más claras</li>
+</ul>
+<hr />
+<h2 id="3-composicion">🧩 3. Composición</h2>
+<h3 id="que-es_1">🧠 ¿Qué es?</h3>
+<p>Relación basada en:</p>
+<p>👉 "Tiene un" (has-a)</p>
+<p>Ejemplos: - Un coche tiene un motor\
+- Una reserva tiene un socio\
+- Un equipo tiene jugadores</p>
+<hr />
+<h3 id="ejemplo">📌 Ejemplo</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Motor</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">potencia</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Motor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">potencia</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">potencia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">potencia</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getPotencia</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">potencia</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Coche</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Motor</span><span class="w"> </span><span class="n">motor</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Coche</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">potenciaMotor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">motor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Motor</span><span class="p">(</span><span class="n">potenciaMotor</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getPotenciaMotor</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">motor</span><span class="p">.</span><span class="na">getPotencia</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="4-polimorfismo">🎭 4. Polimorfismo</h2>
+<h3 id="que-es_2">🧠 ¿Qué es?</h3>
+<p>Permite que un mismo método tenga distintos comportamientos según el
+objeto real.</p>
+<hr />
+<h3 id="sobreescritura">📌 Sobreescritura</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hacerSonido</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sonido genérico&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Perro</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hacerSonido</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Guau&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="polimorfismo-real">🔥 Polimorfismo real</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Perro</span><span class="p">();</span>
+<span class="n">a</span><span class="p">.</span><span class="na">hacerSonido</span><span class="p">();</span><span class="w"> </span><span class="c1">// Ejecuta método de Perro</span>
+</code></pre></div>
+<hr />
+<h2 id="5-ejemplo-completo-gympro">🚀 5. Ejemplo Completo: GymPro</h2>
+<p>Este ejemplo integra:</p>
+<ul>
+<li>🔐 Encapsulación\</li>
+<li>🧠 Abstracción\</li>
+<li>🧩 Composición\</li>
+<li>🎭 Polimorfismo</li>
+</ul>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="c1">// =====================</span>
+<span class="c1">// 🧠 + 🔐 Clase abstracta</span>
+<span class="c1">// =====================</span>
+<span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ClaseFitness</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">precioBase</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ClaseFitness</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">precioBase</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">isBlank</span><span class="p">())</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Nombre inválido&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">precioBase</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Precio inválido&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">precioBase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">precioBase</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getPrecioBase</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">precioBase</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calcularPrecioFinal</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="c1">// =====================</span>
+<span class="c1">// 🎭 Clases hijas</span>
+<span class="c1">// =====================</span>
+<span class="kd">class</span> <span class="nc">Fuerza</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ClaseFitness</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Fuerza</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">precioBase</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">precioBase</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calcularPrecioFinal</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">getPrecioBase</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Cardio</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ClaseFitness</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cardio</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">precioBase</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">precioBase</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calcularPrecioFinal</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">getPrecioBase</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">getPrecioBase</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="c1">// =====================</span>
+<span class="c1">// 🔐 Socio</span>
+<span class="c1">// =====================</span>
+<span class="kd">class</span> <span class="nc">Socio</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Socio</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Edad inválida&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getEdad</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="c1">// =====================</span>
+<span class="c1">// 🧩 Reserva (composición)</span>
+<span class="c1">// =====================</span>
+<span class="kd">class</span> <span class="nc">Reserva</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Socio</span><span class="w"> </span><span class="n">socio</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ClaseFitness</span><span class="w"> </span><span class="n">clase</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Reserva</span><span class="p">(</span><span class="n">Socio</span><span class="w"> </span><span class="n">socio</span><span class="p">,</span><span class="w"> </span><span class="n">ClaseFitness</span><span class="w"> </span><span class="n">clase</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">socio</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">clase</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Datos inválidos&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">socio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socio</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">clase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clase</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">precioReserva</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 🎭 Aquí ocurre el polimorfismo</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">clase</span><span class="p">.</span><span class="na">calcularPrecioFinal</span><span class="p">(</span><span class="n">socio</span><span class="p">.</span><span class="na">getEdad</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="c1">// =====================</span>
+<span class="c1">// 🧪 Main</span>
+<span class="c1">// =====================</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainGymPro</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Socio</span><span class="w"> </span><span class="n">ana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Socio</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">ClaseFitness</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cardio</span><span class="p">(</span><span class="s">&quot;Spinning&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="w">        </span><span class="n">ClaseFitness</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Fuerza</span><span class="p">(</span><span class="s">&quot;CrossFit&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">Reserva</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Reserva</span><span class="p">(</span><span class="n">ana</span><span class="p">,</span><span class="w"> </span><span class="n">c1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Reserva</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Reserva</span><span class="p">(</span><span class="n">ana</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Precio Spinning: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r1</span><span class="p">.</span><span class="na">precioReserva</span><span class="p">());</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Precio CrossFit: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r2</span><span class="p">.</span><span class="na">precioReserva</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="resumen-final">🎯 Resumen Final</h2>
+<p>Concepto           Idea Clave</p>
+<hr />
+<p>🔐 Encapsulación   Proteger datos
+  🧠 Abstracción     Definir comportamiento esencial
+  🧩 Composición     Una clase contiene otra
+  🎭 Polimorfismo    Mismo método, distinto comportamiento</p>
+<hr />
+<h2 id="conclusion">🏁 Conclusión</h2>
+<p>Si entiendes este ejemplo completo, ya estás trabajando con los pilares
+reales de la POO.</p>
 
 
   
