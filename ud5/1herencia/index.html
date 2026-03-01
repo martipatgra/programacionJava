@@ -1392,11 +1392,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#12-miembros-static-y-herencia" class="md-nav__link">
-    🧨 12) Miembros static y herencia
+  <a href="#12-upcasting-vs-downcasting" class="md-nav__link">
+    🔄 12) Upcasting vs Downcasting
   </a>
   
-    <nav class="md-nav" aria-label="🧨 12) Miembros static y herencia">
+    <nav class="md-nav" aria-label="🔄 12) Upcasting vs Downcasting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-upcasting" class="md-nav__link">
+    1️⃣ Upcasting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-downcasting" class="md-nav__link">
+    2️⃣ Downcasting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-miembros-static-y-herencia" class="md-nav__link">
+    🧨 13) Miembros static y herencia
+  </a>
+  
+    <nav class="md-nav" aria-label="🧨 13) Miembros static y herencia">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1440,8 +1467,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#13-errores-tipicos-y-reglas-clave" class="md-nav__link">
-    ⚠️ 13) Errores típicos y reglas clave
+  <a href="#14-errores-tipicos-y-reglas-clave" class="md-nav__link">
+    ⚠️ 14) Errores típicos y reglas clave
   </a>
   
 </li>
@@ -2467,11 +2494,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#12-miembros-static-y-herencia" class="md-nav__link">
-    🧨 12) Miembros static y herencia
+  <a href="#12-upcasting-vs-downcasting" class="md-nav__link">
+    🔄 12) Upcasting vs Downcasting
   </a>
   
-    <nav class="md-nav" aria-label="🧨 12) Miembros static y herencia">
+    <nav class="md-nav" aria-label="🔄 12) Upcasting vs Downcasting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-upcasting" class="md-nav__link">
+    1️⃣ Upcasting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-downcasting" class="md-nav__link">
+    2️⃣ Downcasting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-miembros-static-y-herencia" class="md-nav__link">
+    🧨 13) Miembros static y herencia
+  </a>
+  
+    <nav class="md-nav" aria-label="🧨 13) Miembros static y herencia">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2515,8 +2569,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#13-errores-tipicos-y-reglas-clave" class="md-nav__link">
-    ⚠️ 13) Errores típicos y reglas clave
+  <a href="#14-errores-tipicos-y-reglas-clave" class="md-nav__link">
+    ⚠️ 14) Errores típicos y reglas clave
   </a>
   
 </li>
@@ -2551,6 +2605,7 @@
 <li><a href="#9-sobrescritura-de-metodos-override">🔁 Sobrescritura de métodos (@Override)</a></li>
 <li><a href="#10-this-vs-super-atributos-y-metodos">🧷 <code>this</code> vs <code>super</code> (atributos y métodos)</a></li>
 <li><a href="#11-this-vs-super-constructores">🧷 <code>this()</code> vs <code>super()</code> (constructores)</a></li>
+<li><a href="#12-upcasting-vs-downcasting">🔄 Upcasting vs Downcasting</a></li>
 <li><a href="#12-miembros-static-y-herencia">🧨 Miembros <code>static</code> y herencia</a></li>
 <li><a href="#13-errores-tipicos-y-reglas-clave">⚠️ Errores típicos y reglas clave</a></li>
 </ol>
@@ -2796,7 +2851,65 @@ Para eso se usan <strong>getters/setters</strong> o <code>protected</code> cuand
 - Un constructor puede tener <strong><code>this()</code> o <code>super()</code></strong>, pero <strong>nunca ambos</strong>.  <br />
 - Y el que haya, debe ser <strong>la primera sentencia</strong>. </p>
 <hr />
-<h2 id="12-miembros-static-y-herencia">🧨 12) Miembros <code>static</code> y herencia</h2>
+<h2 id="12-upcasting-vs-downcasting">🔄 12) Upcasting vs Downcasting</h2>
+<p><code>Upcasting</code> y <code>Downcasting</code> son términos usados para conversión de tipos dentro de una jerarquía de herencia.</p>
+<p>En Java el <strong>tipo real</strong> es:    </p>
+<blockquote>
+<p>🔹 La clase con la que se creó el objeto usando <code>new</code>.</p>
+</blockquote>
+<p>Es fijo.
+No cambia nunca.</p>
+<p><strong>La referencia</strong> es:</p>
+<blockquote>
+<p>🔹 La variable que apunta al objeto.</p>
+</blockquote>
+<p>Es el “tipo declarado” de la variable.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Perro</span><span class="p">();</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Variable (referencia)     Objeto real en memoria
+------------------------------------------------
+Animal a  ─────────────→  Perro
+</code></pre></div>
+<ul>
+<li>Tipo de la referencia → Animal    </li>
+<li>Tipo real del objeto → Perro  </li>
+<li>a es la referencia    </li>
+<li>El objeto es un Perro </li>
+<li>a solo “ve” lo que Animal permite ver (lo que tiene declarado en su clase) </li>
+</ul>
+<h3 id="1-upcasting">1️⃣ Upcasting</h3>
+<p>Convertir <strong>una referencia de tipo hijo</strong> en una <strong>referencia de tipo padre</strong>.</p>
+<p>👉 <em>De hijo → padre</em>. También llamado conversión implícita.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Perro</span><span class="w"> </span><span class="n">perro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Perro</span><span class="p">();</span>
+<span class="n">Animal</span><span class="w"> </span><span class="n">animal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">perro</span><span class="p">;</span><span class="w">  </span><span class="c1">// Upcasting</span>
+
+<span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Perro</span><span class="p">();</span><span class="w"> </span><span class="c1">//upcasting más directo</span>
+</code></pre></div>
+<p>El objeto sigue siendo Perro.
+Solo cambia cómo lo miramos (como Animal).</p>
+<p>📌 No hace falta escribir nada especial. Java lo permite automáticamente.
+Siempre es seguro. <strong>Es la base del polimorfismo</strong>.</p>
+<h3 id="2-downcasting">2️⃣ Downcasting</h3>
+<p>Convertir <strong>una referencia de tipo padre</strong> en una <strong>referencia de tipo hijo</strong>.</p>
+<p>👉 <em>De padre → hijo</em>. Aquí sí hace falta cast explícito.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Perro</span><span class="p">();</span>
+<span class="n">Perro</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Perro</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">  </span><span class="c1">// Downcasting OK</span>
+</code></pre></div>
+<p>El objeto sigue siendo Perro.
+Solo estamos recuperando la vista específica.</p>
+<p>📌 Esto puede ser peligroso. Solo es seguro si el objeto realmente es de ese tipo.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gato</span><span class="p">();</span>
+<span class="n">Perro</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Perro</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">   </span><span class="c1">// ❌ ClassCastException</span>
+</code></pre></div>
+<ul>
+<li>🛡 Cómo hacerlo seguro</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Perro</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Perro</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Perro</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="13-miembros-static-y-herencia">🧨 13) Miembros <code>static</code> y herencia</h2>
 <p>En Java, los miembros <code>static</code> <strong>no funcionan “como” la herencia normal</strong> porque <strong>pertenecen a la clase</strong>, no a la instancia.</p>
 <h3 id="se-heredan-los-static">🧱 ¿Se heredan los <code>static</code>?</h3>
 <ul>
@@ -2865,7 +2978,7 @@ El de <code>Hija</code> no “reemplaza” al de <code>Padre</code> en tiempo de
 <li>🧠 En <code>Padre p = new Hija()</code>, un <code>static</code> se resuelve por <strong>tipo <code>Padre</code></strong>, no por el objeto. </li>
 </ul>
 <hr />
-<h2 id="13-errores-tipicos-y-reglas-clave">⚠️ 13) Errores típicos y reglas clave</h2>
+<h2 id="14-errores-tipicos-y-reglas-clave">⚠️ 14) Errores típicos y reglas clave</h2>
 <p>✅ Checklist rápido:  <br />
 - 🧱 <strong>No se heredan constructores</strong> (pero sí se llama al del padre con <code>super</code>)  <br />
 - 🔒 <code>private</code> <strong>no es accesible</strong> desde la hija (usa getters/setters o <code>protected</code>)  <br />
