@@ -1329,6 +1329,26 @@
     🏗 En Java
   </a>
   
+    <nav class="md-nav" aria-label="🏗 En Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clases-abstractac-abstract-class" class="md-nav__link">
+    Clases abstractac abstract class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-abstractos" class="md-nav__link">
+    Métodos abstractos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2397,6 +2417,26 @@
     🏗 En Java
   </a>
   
+    <nav class="md-nav" aria-label="🏗 En Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clases-abstractac-abstract-class" class="md-nav__link">
+    Clases abstractac abstract class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-abstractos" class="md-nav__link">
+    Métodos abstractos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2583,26 +2623,37 @@ fuera de la clase."</p>
 <h2 id="2-abstraccion">🧠 2. Abstracción</h2>
 <h3 id="que-es">🧩 ¿Qué es?</h3>
 <p>La <strong>abstracción</strong> consiste en quedarse con lo esencial y ocultar los
-detalles de implementación.</p>
+detalles de implementación. Es mostrar solo la funcionalidad al usuario.</p>
 <p>👉 Pensar en el <em>qué hace</em>, no en el <em>cómo lo hace</em>.</p>
 <hr />
 <h3 id="en-java">🏗 En Java</h3>
-<ul>
-<li>Clases <code>abstract</code></li>
-<li>Métodos abstractos</li>
-</ul>
+<p>En Java podemos tener tanto:   </p>
+<h4 id="clases-abstractac-abstract-class">Clases abstractac <code>abstract class</code></h4>
+<p>Una clase abstracta es una clase que <strong>NO se puede instanciar</strong> pero que puede ser el padre de otras clases. Esto es útil, por ejemplo, cuando tenemos un concepto abstracto o amplio como Vehículo o Animal pero en realidad los objetos reales serían tipos específicos como Coche, Avión, Perro, etc.</p>
+<p>Las clases abstractas pueden opcionalmente contener métodos abstractos. También pueden contener métodos no abstractos, que serán heredados por los hijos.</p>
+<p>Aunque no se puedan instanciar <strong>las clases abstractas también poseen constructores</strong>. La mayoría de las veces se utilizan cuando quieres realizar alguna inicialización de los campos de la clase abstracta antes de la instanciación de una clase hija.</p>
+<h4 id="metodos-abstractos">Métodos abstractos</h4>
+<p>Un método abstracto <strong>no tiene cuerpo. (No tiene código)</strong>. Solo se escribe la signatura del método con la palabra reservada abstract.</p>
+<p>Una clase hija <em>no abstracta</em> heredará el método o los métodos abstractos del padre y deberá desarrollarlos e implementarlo como métodos no abstractos, es decir, <strong>con código</strong>. Si no lo hace debe declararse como abstracta.</p>
+<p>Un hijo abstracto de un padre abstracto no tiene que definir métodos no abstractos para los métodos abstractas que hereda. </p>
+<p>Esto significa que puede haber varios pasos entre una clase base abstracta y una clase secundaria que no es completamente abstracta.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hacerSonido</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>No sabemos cómo suena un animal genérico, pero sabemos que todos hacen
 sonido.</p>
+<p>No todo lo definido en una clase abstracta debe ser abstracto. Sin embargo, <strong>si una clase contiene incluso un método abstracto, entonces la clase en sí debe declararse abstracta</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Cuando se invoca un método, <strong>es la clase del objeto</strong> (no de la variable) <strong>la que determina qué método se ejecuta</strong>.</p>
+</div>
 <hr />
 <h3 id="para-que-sirve">🎯 ¿Para qué sirve?</h3>
 <ul>
-<li>Definir comportamientos comunes\</li>
-<li>Obligar a las clases hijas a implementar métodos\</li>
-<li>Diseñar jerarquías más claras</li>
+<li>Definir comportamientos comunes     </li>
+<li>Obligar a las clases hijas a implementar métodos    </li>
+<li>Diseñar jerarquías más claras   </li>
 </ul>
 <hr />
 <h2 id="3-composicion">🧩 3. Composición</h2>
