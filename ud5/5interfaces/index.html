@@ -12,7 +12,7 @@
         <link rel="prev" href="../4polimorfismo/">
       
       
-        <link rel="next" href="../6abstraccion/">
+        <link rel="next" href="../7exceptions/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
@@ -1256,20 +1256,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../3encapsulacion/" class="md-nav__link">
-        ✨ Encapsulación
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../4polimorfismo/" class="md-nav__link">
         ✨ Polimorfismo
       </a>
@@ -1379,24 +1365,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#interfaces-vs-clases-abstractas" class="md-nav__link">
+    Interfaces vs Clases abstractas
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../6abstraccion/" class="md-nav__link">
-        ✨ Abstracción
-      </a>
     </li>
   
 
@@ -2289,6 +2268,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#interfaces-vs-clases-abstractas" class="md-nav__link">
+    Interfaces vs Clases abstractas
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2462,6 +2448,14 @@
 
 <span class="p">}</span>
 </code></pre></div>
+<h2 id="interfaces-vs-clases-abstractas">Interfaces vs Clases abstractas</h2>
+<ul>
+<li>Las clases abstractas pueden tener variables de instancia (atributos) que se heredan, al contrario que las interfaces, que no permiten definir variables <strong>solo constantes estáticas</strong>.</li>
+<li>Ni las interfaces ni las clases abstractas se puede instanciar.</li>
+<li>Las interfaces no pueden tener constructores y las clases abstractas si.</li>
+<li>Todos los métodos definidos en una interfaz son por defecto <strong>públicos y abstractos</strong>, mientras que, en un clase abstracta podemos tener métodos con diferentes visibilidades (<code>public</code>, <code>private</code> o <code>protected</code>) y abstractos o con cuerpo.</li>
+<li>Si implementas una interfaz debes sobreescribir todos sus métodos, si heredas de una clase abstractas solo estás obligado a sobreescribir los métodos abstractos.</li>
+</ul>
 
 
   
