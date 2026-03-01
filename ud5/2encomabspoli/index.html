@@ -2530,9 +2530,9 @@ fuera de la clase."</p>
 <hr />
 <h3 id="objetivos">🎯 Objetivos</h3>
 <ul>
-<li>🔒 Proteger los datos\</li>
-<li>🧹 Mantener coherencia del objeto\</li>
-<li>🛠 Controlar modificaciones\</li>
+<li>🔒 Proteger los datos   </li>
+<li>🧹 Mantener coherencia del objeto</li>
+<li>🛠 Controlar modificaciones</li>
 <li>🧩 Facilitar mantenimiento</li>
 </ul>
 <hr />
@@ -2542,7 +2542,9 @@ fuera de la clase."</p>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">persona</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// ❌ Dato inválido</span>
+<div class="highlight"><pre><span></span><code><span class="c1">//Desde otra clase</span>
+<span class="n">Persona</span><span class="w"> </span><span class="n">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(...);</span>
+<span class="n">persona</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// ❌ Dato inválido</span>
 </code></pre></div>
 <hr />
 <h3 id="con-encapsulacion">✅ Con encapsulación</h3>
@@ -2572,6 +2574,10 @@ fuera de la clase."</p>
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">//Desde otra clase</span>
+<span class="n">Persona</span><span class="w"> </span><span class="n">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(...);</span>
+<span class="n">persona</span><span class="p">.</span><span class="na">setEdad</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// Lanza excepción</span>
 </code></pre></div>
 <hr />
 <h2 id="2-abstraccion">🧠 2. Abstracción</h2>
