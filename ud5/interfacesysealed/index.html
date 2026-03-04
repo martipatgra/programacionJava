@@ -2693,9 +2693,9 @@ Normalmente una interfaz puede ser implementada por <strong>cualquier clase</str
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Dollar</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">importe</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">(</span><span class="n">importe</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>📌 <strong>Reglas importantes:</strong>
-- <code>permits</code> puede omitirse si las clases están en el <strong>mismo fichero</strong> y el compilador lo deduce.
-- Lo normal es que estén en el <strong>mismo módulo/paquete</strong> (según configuración del proyecto).</p>
+<p>📌 <strong>Reglas importantes:</strong><br />
+- <code>permits</code> puede omitirse si las clases están en el <strong>mismo fichero</strong> y el compilador lo deduce. <br />
+- Lo normal es que estén en el <strong>mismo módulo/paquete</strong> (según configuración del proyecto). </p>
 <hr />
 <h2 id="ventaja-con-pattern-matching">🧠 Ventaja con pattern matching</h2>
 <p>Con <em>jerarquías selladas</em>, el compilador puede ayudarte a que tus <code>switch</code>/<code>if</code> sean “exhaustivos” y <strong>verificar todos los casos</strong>.</p>
