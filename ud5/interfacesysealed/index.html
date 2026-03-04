@@ -2200,6 +2200,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#tipos-de-metodos-y-que-ocurre-con-ellos" class="md-nav__link">
+    ✅ Tipos de métodos y qué ocurre con ellos
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2375,6 +2382,12 @@ Se llaman con el nombre de la interfaz.</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<h3 id="tipos-de-metodos-y-que-ocurre-con-ellos">✅ Tipos de métodos y qué ocurre con ellos</h3>
+<p>👉 Una clase que implementa una interfaz <strong>hereda los métodos <code>default</code></strong>, <strong>pero está obligada a implementar sus métodos abstractos</strong>.</p>
+<p>Es decir: <br />
+- Los <strong>métodos abstractos</strong> → la clase <strong>está obligada a implementarlos</strong>
+- Los <strong>métodos <code>default</code></strong> → la clase <strong>los recibe automáticamente</strong>, como si los heredara. Si quiere cambiar el comportamiento, la clase puede <strong>sobrescribir el <code>default</code></strong>. <br />
+- Los <strong>métodos static</strong> → <strong>no se heredan</strong>, se llaman desde la interfaz </p>
 <hr />
 <h2 id="6-conflictos-con-default-diamante">⚔️ 6) Conflictos con <code>default</code> (diamante)</h2>
 <p>Si una clase implementa <strong>dos interfaces</strong> que tienen el <strong>mismo default method</strong>, hay conflicto y <strong>debes resolverlo</strong>:</p>
@@ -2434,15 +2447,25 @@ Se llaman con el nombre de la interfaz.</p>
 - Si necesitas <strong>estado compartido</strong> → abstracta.
 - Si necesitas <strong>contrato + desacoplamiento + múltiples capacidades</strong> → interfaz.</p>
 <hr />
-<h1 id="10-sealed-classes-e-interfaces-java-17">🧊 10) Sealed classes e interfaces (Java 17)</h1>
+<h1 id="10-sealed-interfaces-java-17">🧊 10) Sealed interfaces (Java 17)</h1>
 <blockquote>
-<p>🎯 Objetivo: <strong>restringir</strong> quién puede implementar/extender un tipo.</p>
+<p>🎯 Objetivo: permiten <strong>restringir qué clases o interfaces pueden implementarlas</strong>.</p>
 </blockquote>
 <h2 id="sealed-interface">✅ Sealed interface</h2>
+<p>Una <strong>sealed interface</strong> controla <strong>qué clases pueden implementarla</strong>.
+Normalmente una interfaz puede ser implementada por <strong>cualquier clase</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">interface</span> <span class="nc">Pago</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="kd">class</span> <span class="nc">Bizum</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Pago</span><span class="w"> </span><span class="p">{}</span>
+<span class="kd">class</span> <span class="nc">Tarjeta</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Pago</span><span class="w"> </span><span class="p">{}</span>
+<span class="kd">class</span> <span class="nc">Bitcoin</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Pago</span><span class="w"> </span><span class="p">{}</span>
+</code></pre></div>
+<p>Con <strong>sealed interface</strong> decides <strong>quién puede implementarla</strong>:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">sealed</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Pago</span><span class="w"> </span><span class="n">permits</span><span class="w"> </span><span class="n">Bizum</span><span class="p">,</span><span class="w"> </span><span class="n">Tarjeta</span><span class="p">,</span><span class="w"> </span><span class="n">Efectivo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">importe</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>Ahora <strong>solo esas clases pueden implementar la interfaz</strong>.</p>
 <h3 id="implementaciones-permitidas">Implementaciones permitidas</h3>
 <p>Las clases permitidas deben ser una de estas:
 - <code>final</code> (no se puede extender),
@@ -2460,24 +2483,31 @@ Se llaman con el nombre de la interfaz.</p>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">importe</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">importe</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Efectivo</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Pago</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">sealed</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Efectivo</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Pago</span><span class="w"> </span><span class="n">permits</span><span class="w"> </span><span class="n">Euro</span><span class="p">,</span><span class="w"> </span><span class="n">Dollar</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">importe</span><span class="p">;</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Efectivo</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">importe</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">importe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">importe</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">importe</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">importe</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Euro</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Efectivo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Euro</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">importe</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">(</span><span class="n">importe</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dollar</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Efectivo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Dollar</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">importe</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">(</span><span class="n">importe</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>📌 <strong>Reglas importantes:</strong>
 - <code>permits</code> puede omitirse si las clases están en el <strong>mismo fichero</strong> y el compilador lo deduce.
 - Lo normal es que estén en el <strong>mismo módulo/paquete</strong> (según configuración del proyecto).</p>
 <hr />
-<h2 id="bonus-sealed-switch-mas-seguro">🧠 Bonus: sealed + <code>switch</code> más “seguro”</h2>
-<p>Con jerarquías selladas, el compilador puede ayudarte a que tus <code>switch</code>/<code>if</code> sean “exhaustivos” (especialmente con pattern matching en versiones modernas).</p>
+<h2 id="ventaja-con-pattern-matching">🧠 Ventaja con pattern matching</h2>
+<p>Con <em>jerarquías selladas</em>, el compilador puede ayudarte a que tus <code>switch</code>/<code>if</code> sean “exhaustivos” y <strong>verificar todos los casos</strong>.</p>
 <p>Ejemplo clásico:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">etiqueta</span><span class="p">(</span><span class="n">Pago</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Bizum</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;BIZUM&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Tarjeta</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;TARJETA&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Efectivo</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;EFECTIVO&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;DESCONOCIDO&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// con sealed, esto debería ser innecesario si cubres todo</span>
+<span class="w">    </span><span class="p">...</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
