@@ -2473,11 +2473,11 @@
 <hr />
 <h2 id="2-por-que-se-usan-interfaces">🧠 2) ¿Por qué se usan interfaces?</h2>
 <h3 id="caso-tipico-capacidad">✅ Caso típico: “capacidad”</h3>
-<p>Cuando <em>quieres modelar capacidades independientes</em>:
-- <code>Imprimible</code>
-- <code>Pagable</code>
-- <code>Serializable</code>
-- <code>Comparable&lt;T&gt;</code></p>
+<p>Cuando <em>quieres modelar capacidades independientes</em>:  <br />
+- <code>Imprimible</code><br />
+- <code>Pagable</code> 
+- <code>Serializable</code>  <br />
+- <code>Comparable&lt;T&gt;</code>   </p>
 <p>Ejemplo mental: un <code>Coche</code> <em>es-un</em> <code>Vehiculo</code> (herencia), pero además <em>puede-ser</em> <code>Asegurable</code>, <code>Matriculable</code>, <code>Imponible</code> (interfaces).</p>
 <hr />
 <h2 id="3-interfaz-vs-herencia-cual-uso">🧬 3) Interfaz vs herencia: ¿cuál uso?</h2>
@@ -2581,10 +2581,10 @@ Se llaman con el nombre de la interfaz.</p>
 </code></pre></div>
 <h3 id="tipos-de-metodos-y-que-ocurre-con-ellos">✅ Tipos de métodos y qué ocurre con ellos</h3>
 <p>👉 Una clase que implementa una interfaz <strong>hereda los métodos <code>default</code></strong>, <strong>pero está obligada a implementar sus métodos abstractos</strong>.</p>
-<p>Es decir: <br />
-- Los <strong>métodos abstractos</strong> → la clase <strong>está obligada a implementarlos</strong>
-- Los <strong>métodos <code>default</code></strong> → la clase <strong>los recibe automáticamente</strong>, como si los heredara. Si quiere cambiar el comportamiento, la clase puede <strong>sobrescribir el <code>default</code></strong>. <br />
-- Los <strong>métodos static</strong> → <strong>no se heredan</strong>, se llaman desde la interfaz </p>
+<p>Es decir:     <br />
+- Los <strong>métodos abstractos</strong> → la clase <strong>está obligada a implementarlos</strong>.<br />
+- Los <strong>métodos <code>default</code></strong> → la clase <strong>los recibe automáticamente</strong>, como si los heredara. Si quiere cambiar el comportamiento, la clase puede <strong>sobrescribir el <code>default</code></strong>.   <br />
+- Los <strong>métodos static</strong> → <strong>no se heredan</strong>, se llaman desde la interfaz.   </p>
 <hr />
 <h2 id="6-conflictos-con-default-diamante">⚔️ 6) Conflictos con <code>default</code> (diamante)</h2>
 <p>Si una clase implementa <strong>dos interfaces</strong> que tienen el <strong>mismo default method</strong>, hay conflicto y <strong>debes resolverlo</strong>:</p>
@@ -2602,9 +2602,9 @@ Se llaman con el nombre de la interfaz.</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>✅ Regla rápida:
-- “<strong>La clase gana</strong>” si hay método en clase.
-- Si hay conflicto de dos <code>default</code>, <strong>tú decides</strong>.</p>
+<p>✅ Regla rápida:  <br />
+- “<strong>La clase gana</strong>” si hay método en clase. <br />
+- Si hay conflicto de dos <code>default</code>, <strong>tú decides</strong>.    </p>
 <hr />
 <h2 id="7-interfaces-funcionales-muy-utiles-con-lambdas">🧪 7) Interfaces funcionales (muy útiles con lambdas)</h2>
 <p>Una <strong>interfaz funcional</strong> tiene <strong>un único método abstracto</strong>. Se usa en lambdas y streams.</p>
@@ -2617,32 +2617,32 @@ Se llaman con el nombre de la interfaz.</p>
 <div class="highlight"><pre><span></span><code><span class="n">Validador</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="na">test</span><span class="p">(</span><span class="s">&quot;hola&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
 </code></pre></div>
-<p>📌 Ojo:
-- Puede tener <code>default</code> y <code>static</code>, y <strong>seguir siendo funcional</strong>.
-- Lo que cuenta es <strong>métodos abstractos</strong>.</p>
+<p>📌 Ojo: 
+- Puede tener <code>default</code> y <code>static</code>, y <strong>seguir siendo funcional</strong>.<br />
+- Lo que cuenta es <strong>métodos abstractos</strong>.  </p>
 <hr />
 <h2 id="8-marker-interfaces-interfaces-marca">🧷 8) Marker interfaces (interfaces “marca”)</h2>
 <p>Son interfaces vacías para “marcar” una clase con una característica.</p>
-<p>Ejemplos típicos del JDK:
-- <code>Serializable</code>
-- <code>Cloneable</code></p>
+<p>Ejemplos típicos del JDK: <br />
+- <code>Serializable</code>  <br />
+- <code>Cloneable</code>   </p>
 <blockquote>
 <p>📌 Hoy en día, muchas veces se prefiere una <strong>anotación</strong>, pero conviene conocer el concepto.</p>
 </blockquote>
 <hr />
 <h2 id="9-interfaces-vs-clases-abstractas">🆚 9) Interfaces vs clases abstractas</h2>
-<p>✅ <strong>Clase abstracta</strong>:
-- Puede tener <strong>atributos de instancia</strong>.
-- Puede tener <strong>constructores</strong>.
-- Puede mezclar métodos <strong>abstractos y con cuerpo</strong> con cualquier visibilidad.</p>
-<p>✅ <strong>Interfaz</strong>:
-- No tiene estado por objeto (solo constantes).
-- No tiene constructores.
-- Permite <strong>herencia múltiple de tipo</strong>.
-- Puede tener <code>default/static/private</code> (Java 8/9).</p>
-<p>📌 Regla práctica:
-- Si necesitas <strong>estado compartido</strong> → abstracta.
-- Si necesitas <strong>contrato + desacoplamiento + múltiples capacidades</strong> → interfaz.</p>
+<p>✅ <strong>Clase abstracta</strong>: 
+- Puede tener <strong>atributos de instancia</strong>. <br />
+- Puede tener <strong>constructores</strong>.  <br />
+- Puede mezclar métodos <strong>abstractos y con cuerpo</strong> con cualquier visibilidad.  </p>
+<p>✅ <strong>Interfaz</strong>:  <br />
+- No tiene estado por objeto (solo constantes). 
+- No tiene constructores. <br />
+- Permite <strong>herencia múltiple de tipo</strong>.  <br />
+- Puede tener <code>default/static/private</code> (Java 8/9).  </p>
+<p>📌 Regla práctica:<br />
+- Si necesitas <strong>estado compartido</strong> → abstracta. <br />
+- Si necesitas <strong>contrato + desacoplamiento + múltiples capacidades</strong> → interfaz.   </p>
 <hr />
 <h1 id="10-sealed-interfaces-java-17">🧊 10) Sealed interfaces (Java 17)</h1>
 <blockquote>
@@ -2664,10 +2664,10 @@ Normalmente una interfaz puede ser implementada por <strong>cualquier clase</str
 </code></pre></div>
 <p>Ahora <strong>solo esas clases pueden implementar la interfaz</strong>.</p>
 <h3 id="implementaciones-permitidas">Implementaciones permitidas</h3>
-<p>Las clases permitidas deben ser una de estas:
-- <code>final</code> (no se puede extender),
-- <code>sealed</code> (sigue restringiendo),
-- <code>non-sealed</code> (abre la jerarquía).</p>
+<p>Las clases permitidas deben ser una de estas: <br />
+- <code>final</code> (no se puede extender), <br />
+- <code>sealed</code> (sigue restringiendo), <br />
+- <code>non-sealed</code> (abre la jerarquía). </p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bizum</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Pago</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">importe</span><span class="p">;</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Bizum</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">importe</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">importe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">importe</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
