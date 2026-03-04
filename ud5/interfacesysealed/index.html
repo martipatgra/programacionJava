@@ -9,13 +9,17 @@
       
       
       
+        <link rel="prev" href="../sealedclasses/">
+      
+      
+        <link rel="next" href="../7exceptions/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>✨ Interfaces (y **sealed** interfaces) en Java - Programación en Java</title>
+        <title>✨ Interfaces en Java - Programación en Java</title>
       
     
     
@@ -112,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ✨ Interfaces (y **sealed** interfaces) en Java
+              ✨ Interfaces en Java
             
           </span>
         </div>
@@ -1179,14 +1183,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
       
       
       
@@ -1195,7 +1201,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           ✨ POO avanzada
@@ -1248,11 +1254,202 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../5interfaces/" class="md-nav__link">
-        ✨ Interfaces
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ✨ Interfaces en Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ✨ Interfaces en Java
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-una-interfaz" class="md-nav__link">
+    🧩 1) ¿Qué es una interfaz?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-por-que-se-usan-interfaces" class="md-nav__link">
+    🧠 2) ¿Por qué se usan interfaces?
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 2) ¿Por qué se usan interfaces?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-tipico-capacidad" class="md-nav__link">
+    ✅ Caso típico: “capacidad”
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-interfaz-vs-herencia-cual-uso" class="md-nav__link">
+    🧬 3) Interfaz vs herencia: ¿cuál uso?
+  </a>
+  
+    <nav class="md-nav" aria-label="🧬 3) Interfaz vs herencia: ¿cuál uso?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usa-herencia-cuando" class="md-nav__link">
+    🧱 Usa herencia cuando…
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usa-interfaces-cuando" class="md-nav__link">
+    🧩 Usa interfaces cuando…
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones-entre-interfaces-y-clases" class="md-nav__link">
+    ❇️ Relaciones entre interfaces y clases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-que-puede-haber-dentro-de-una-interfaz" class="md-nav__link">
+    🧷 4) ¿Qué puede haber dentro de una interfaz?
+  </a>
+  
+    <nav class="md-nav" aria-label="🧷 4) ¿Qué puede haber dentro de una interfaz?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodos-abstractos" class="md-nav__link">
+    📌 Métodos abstractos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constantes" class="md-nav__link">
+    📌 Constantes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-novedades-importantes-en-interfaces-java-8" class="md-nav__link">
+    🆕 5) Novedades importantes en interfaces (Java 8+)
+  </a>
+  
+    <nav class="md-nav" aria-label="🆕 5) Novedades importantes en interfaces (Java 8+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java-8-default-methods" class="md-nav__link">
+    ✅ Java 8 — default methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-8-static-methods" class="md-nav__link">
+    ✅ Java 8 — static methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-9-private-methods-y-private-static" class="md-nav__link">
+    ✅ Java 9 — private methods (y private static)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-metodos-y-que-ocurre-con-ellos" class="md-nav__link">
+    ✅ Tipos de métodos y qué ocurre con ellos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conflictos-con-default-diamante" class="md-nav__link">
+    ⚔️ 6) Conflictos con default (diamante)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-interfaces-funcionales-muy-utiles-con-lambdas" class="md-nav__link">
+    🧪 7) Interfaces funcionales (muy útiles con lambdas)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-marker-interfaces-interfaces-marca" class="md-nav__link">
+    🧷 8) Marker interfaces (interfaces “marca”)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-interfaces-vs-clases-abstractas" class="md-nav__link">
+    🆚 9) Interfaces vs clases abstractas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
