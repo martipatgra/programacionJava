@@ -2461,15 +2461,15 @@
 <h2 id="1-que-es-una-interfaz">🧩 1) ¿Qué es una interfaz?</h2>
 <p>Una <strong>interfaz</strong> define un conjunto de <strong>métodos</strong> pero <strong>NO los implementa</strong>. Las clases que la implementan son las que <strong>deben implementar esos métodos</strong> (salvo que el método sea <code>default</code> o <code>static</code>).</p>
 <p>La idea es <strong>proporcionar un comportamiento común</strong> que pueda ser utilizado por varias clases que implemente una interfaz.</p>
-<p>✅ Sirve para:
-- <strong>Abstracción</strong> (programar contra un contrato).
-- <strong>Desacoplamiento</strong> (cambiar implementaciones sin romper el código).
-- <strong>Herencia múltiple de tipo</strong> (una clase puede implementar <em>varias</em> interfaces).</p>
-<p>📌 <strong>Reglas básicas:</strong>
-- Una interfaz <strong>no se instancia</strong>.
-- Una clase puede <strong>implementar</strong> muchas interfaces: <code>class A implements I1, I2 { ... }</code>
-- Una interfaz puede <strong>extender</strong> varias interfaces: <code>interface I3 extends I1, I2 { ... }</code>
-- Una interfaz <strong>no puede extender</strong> una clase.</p>
+<p>✅ Sirve para:<br />
+- <strong>Abstracción</strong> (programar contra un contrato). <br />
+- <strong>Desacoplamiento</strong> (cambiar implementaciones sin romper el código).<br />
+- <strong>Herencia múltiple de tipo</strong> (una clase puede implementar <em>varias</em> interfaces).  </p>
+<p>📌 <strong>Reglas básicas:</strong><br />
+- Una interfaz <strong>no se instancia</strong>. 
+- Una clase puede <strong>implementar</strong> muchas interfaces: <code>class A implements I1, I2 { ... }</code> <br />
+- Una interfaz puede <strong>extender</strong> varias interfaces: <code>interface I3 extends I1, I2 { ... }</code> 
+- Una interfaz <strong>no puede extender</strong> una clase. </p>
 <hr />
 <h2 id="2-por-que-se-usan-interfaces">🧠 2) ¿Por qué se usan interfaces?</h2>
 <h3 id="caso-tipico-capacidad">✅ Caso típico: “capacidad”</h3>
