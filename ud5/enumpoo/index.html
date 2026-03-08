@@ -2109,11 +2109,31 @@
     🧩 1. Enum con comportamiento
   </a>
   
+    <nav class="md-nav" aria-label="🧩 1. Enum con comportamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-simple" class="md-nav__link">
+    ✨ Ejemplo simple
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-simple" class="md-nav__link">
-    ✨ Ejemplo simple
+  <a href="#2-por-que-usar-comportamiento-en-enum" class="md-nav__link">
+    🧠 2. ¿Por qué usar comportamiento en enum?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ejemplo-real-sistema-de-pagos" class="md-nav__link">
+    💳 3. Ejemplo real: sistema de pagos
   </a>
   
 </li>
@@ -2141,17 +2161,13 @@
 <li>🧩 Enum con comportamiento  </li>
 <li>🧠 ¿Por qué usar comportamiento en <code>enum</code>?  </li>
 <li>💳 Ejemplo completo: sistema de pagos   </li>
-<li>🧱 Introducción a SOLID </li>
-<li>🔹 Los 5 principios SOLID   </li>
-<li>🎯 Ejemplo práctico aplicando SOLID </li>
 </ol>
 <hr />
 <h2 id="1-enum-con-comportamiento">🧩 1. Enum con comportamiento</h2>
-<p>En Java, un <strong>enum</strong> no es solo una lista de constantes.
-También puede <strong>tener atributos, métodos e incluso comportamiento distinto para cada constante</strong>.</p>
+<p>En Java, un <strong>enum</strong> no es solo una lista de constantes. También puede <strong>tener atributos, métodos e incluso comportamiento distinto para cada constante</strong>.</p>
 <p>Esto permite aplicar <strong>polimorfismo dentro de un enum</strong>.</p>
 <hr />
-<h2 id="ejemplo-simple">✨ Ejemplo simple</h2>
+<h3 id="ejemplo-simple">✨ Ejemplo simple</h3>
 <div class="highlight"><pre><span></span><code><span class="kd">enum</span><span class="w"> </span><span class="n">Operacion</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="n">SUMA</span><span class="w"> </span><span class="p">{</span>
@@ -2183,7 +2199,7 @@ También puede <strong>tener atributos, métodos e incluso comportamiento distin
 </code></pre></div>
 <p>📌 Cada constante del enum <strong>implementa su propio comportamiento</strong>.</p>
 <hr />
-<h1 id="2-por-que-usar-comportamiento-en-enum">🧠 2. ¿Por qué usar comportamiento en enum?</h1>
+<h2 id="2-por-que-usar-comportamiento-en-enum">🧠 2. ¿Por qué usar comportamiento en enum?</h2>
 <p>Ventajas:</p>
 <ul>
 <li>🎯 Evita <code>if</code> o <code>switch</code> gigantes   </li>
@@ -2192,7 +2208,7 @@ También puede <strong>tener atributos, métodos e incluso comportamiento distin
 <li>🧹 Código más limpio y mantenible   </li>
 </ul>
 <hr />
-<h1 id="3-ejemplo-real-sistema-de-pagos">💳 3. Ejemplo real: sistema de pagos</h1>
+<h2 id="3-ejemplo-real-sistema-de-pagos">💳 3. Ejemplo real: sistema de pagos</h2>
 <div class="highlight"><pre><span></span><code><span class="kd">enum</span><span class="w"> </span><span class="n">TipoPago</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="n">TARJETA</span><span class="w"> </span><span class="p">{</span>
