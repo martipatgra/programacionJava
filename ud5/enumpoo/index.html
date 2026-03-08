@@ -2637,12 +2637,14 @@ Por eso, además de constantes, puede tener <strong>métodos</strong>, igual que
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">.</span><span class="na">ordinal</span><span class="p">());</span><span class="c1">//0</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">MARTES</span><span class="p">.</span><span class="na">ordinal</span><span class="p">());</span><span class="c1">//1</span>
 </code></pre></div></p>
-<p>🔧 5. compareTo() -&gt; Permite comparar dos constantes según su orden en el <code>enum</code>. <br />
-- 0 --&gt; si son iguales    <br />
-- -1 --&gt; si el que comparas va antes que el que pones entre los ()    <br />
-- 1 --&gt; si el que comparas va después que el que pones entre los ()    <br />
+<p>🔧 5. compareTo() -&gt; Permite comparar dos constantes según su orden en el <code>enum</code>:   </p>
+<ul>
+<li>0 --&gt; si son iguales      </li>
+<li>-1 --&gt; si el que comparas va antes que el que pones entre los ()      </li>
+<li>1 --&gt; si el que comparas va después que el que pones entre los ()     </li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">MARTES</span><span class="p">));</span><span class="c1">//-1, Significa que LUNES aparece antes que MARTES.</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr />
 <h2 id="8-uso-con-switch-moderno">🔀 8. Uso con switch moderno</h2>
 <p>Los enum funcionan muy bien con <code>switch</code>.</p>
