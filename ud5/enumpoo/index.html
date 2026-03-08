@@ -2637,13 +2637,25 @@ Por eso, además de constantes, puede tener <strong>métodos</strong>, igual que
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">.</span><span class="na">ordinal</span><span class="p">());</span><span class="c1">//0</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">MARTES</span><span class="p">.</span><span class="na">ordinal</span><span class="p">());</span><span class="c1">//1</span>
 </code></pre></div></p>
-<p>🔧 5. compareTo() -&gt; Permite comparar dos constantes según su orden en el <code>enum</code>:   </p>
+<p>🔧 5. compareTo() -&gt; Compara enums según su posición en el enum, es decir, según su ordinal().   </p>
 <ul>
 <li>0 --&gt; si son iguales      </li>
-<li>-1 --&gt; si el que comparas va antes que el que pones entre los ()      </li>
-<li>1 --&gt; si el que comparas va después que el que pones entre los ()     </li>
+<li>&lt; 0 --&gt; significa que el que comparas va antes que el que pones entre los ()  </li>
+<li>
+<blockquote>
+<p>0 --&gt; si el que comparas va después que el que pones entre los ()     </p>
+</blockquote>
+</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">MARTES</span><span class="p">));</span><span class="c1">//-1, Significa que LUNES aparece antes que MARTES.</span>
+<div class="highlight"><pre><span></span><code><span class="cm">/*LUNES --&gt; 0</span>
+<span class="cm">MARTES --&gt; 1</span>
+<span class="cm">MIERCOLES --&gt; 2*/</span>
+
+<span class="c1">//0 - 1 = -1</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">MARTES</span><span class="p">));</span><span class="c1">//-1, Significa que LUNES aparece antes que MARTES.</span>
+
+<span class="c1">//0 - 2 = -2</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">MIERCOLES</span><span class="p">));</span><span class="c1">//-2</span>
 </code></pre></div>
 <hr />
 <h2 id="8-uso-con-switch-moderno">🔀 8. Uso con switch moderno</h2>
