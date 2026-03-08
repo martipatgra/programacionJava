@@ -2637,9 +2637,9 @@ Por eso, además de constantes, puede tener <strong>métodos</strong>, igual que
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">.</span><span class="na">ordinal</span><span class="p">());</span><span class="c1">//0</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">MARTES</span><span class="p">.</span><span class="na">ordinal</span><span class="p">());</span><span class="c1">//1</span>
 </code></pre></div></p>
-<p>🔧 5. compareTo() -&gt; Permite comparar dos constantes según su orden en el <code>enum</code>.
-- 0--&gt; si son iguales <br />
-- -1 --&gt; si el que comparas va antes que el que pones entre los () <br />
+<p>🔧 5. compareTo() -&gt; Permite comparar dos constantes según su orden en el <code>enum</code>. <br />
+- 0 --&gt; si son iguales    <br />
+- -1 --&gt; si el que comparas va antes que el que pones entre los ()    <br />
 - 1 --&gt; si el que comparas va después que el que pones entre los ()    <br />
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">MARTES</span><span class="p">));</span><span class="c1">//-1, Significa que LUNES aparece antes que MARTES.</span>
 </code></pre></div></p>
@@ -2658,21 +2658,21 @@ Por eso, además de constantes, puede tener <strong>métodos</strong>, igual que
 <h2 id="9-restricciones-de-los-enum">⚠️ 9. Restricciones de los enum</h2>
 <p>Los enum tienen algunas limitaciones:</p>
 <ul>
-<li>❌ No pueden extender otra clase</li>
-<li>✅ Sí pueden implementar interfaces</li>
-<li>⚠️ Los constructores siempre son privados</li>
-<li>⚠️ No se pueden crear instancias con <code>new</code></li>
-<li>⚠️ El orden de las constantes define <code>ordinal()</code></li>
+<li>❌ No pueden extender otra clase  </li>
+<li>✅ Sí pueden implementar interfaces   </li>
+<li>⚠️ Los constructores siempre son privados </li>
+<li>⚠️ No se pueden crear instancias con <code>new</code>    </li>
+<li>⚠️ El orden de las constantes define <code>ordinal()</code>  </li>
 </ul>
 <hr />
 <h2 id="10-buenas-practicas-modernas">🚀 10. Buenas prácticas modernas</h2>
 <p>Usa enums cuando representes:</p>
 <ul>
-<li>🎯 Estados</li>
-<li>🎯 Tipos de operación</li>
-<li>🎯 Roles</li>
-<li>🎯 Categorías</li>
-<li>🎯 Modos de funcionamiento</li>
+<li>🎯 Estados    </li>
+<li>🎯 Tipos de operación </li>
+<li>🎯 Roles  </li>
+<li>🎯 Categorías </li>
+<li>🎯 Modos de funcionamiento    </li>
 </ul>
 <p>Ejemplos reales:</p>
 <div class="highlight"><pre><span></span><code>EstadoPedido
@@ -2686,7 +2686,7 @@ ModoJuego
 <p>Los <code>enum</code> en Java son mucho más que constantes.</p>
 <p>Permiten:</p>
 <ul>
-<li>🧱 Modelar dominios cerrados  </li>
+<li>🧱 Modelar dominios cerrados      </li>
 <li>🎭 Aplicar polimorfismo   </li>
 <li>🧠 Escribir código más claro  </li>
 </ul>
