@@ -9,13 +9,17 @@
       
       
       
+        <link rel="prev" href="../7exceptions/">
+      
+      
+        <link rel="next" href="../solid/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>🧭 Enum en Java - Programación en Java</title>
+        <title>✨ Enum en Java - Programación en Java</title>
       
     
     
@@ -112,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🧭 Enum en Java
+              ✨ Enum en Java
             
           </span>
         </div>
@@ -1179,14 +1183,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
       
       
       
@@ -1195,7 +1201,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           ✨ POO avanzada
@@ -1267,6 +1273,171 @@
       <a href="../7exceptions/" class="md-nav__link">
         ✨ Excepciones en Java
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ✨ Enum en Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ✨ Enum en Java
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    📚 Índice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-realmente-un-enum" class="md-nav__link">
+    🔰 1. ¿Qué es realmente un enum?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-enum-basico" class="md-nav__link">
+    🧱 2. Enum básico
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-enum-con-atributos-y-constructor" class="md-nav__link">
+    📦 3. Enum con atributos y constructor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-enum-con-metodos" class="md-nav__link">
+    ⚙️ 4. Enum con métodos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-enum-con-comportamiento-polimorfismo" class="md-nav__link">
+    🎭 5. Enum con comportamiento (polimorfismo)
+  </a>
+  
+    <nav class="md-nav" aria-label="🎭 5. Enum con comportamiento (polimorfismo)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-simple" class="md-nav__link">
+    ✨ Ejemplo simple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-usar-comportamiento-en-enum" class="md-nav__link">
+    🧠 ¿Por qué usar comportamiento en enum?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-enum-implementando-interfaces" class="md-nav__link">
+    🔌 6. Enum implementando interfaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-metodos-especiales-de-los-enum" class="md-nav__link">
+    🧠 7. Métodos especiales de los enum
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-uso-con-switch-moderno" class="md-nav__link">
+    🔀 8. Uso con switch moderno
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-restricciones-de-los-enum" class="md-nav__link">
+    ⚠️ 9. Restricciones de los enum
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-buenas-practicas-modernas" class="md-nav__link">
+    🚀 10. Buenas prácticas modernas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    🧠 Conclusión
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Conclusión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-real-sistema-de-pagos" class="md-nav__link">
+    💳 Ejemplo real: sistema de pagos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
