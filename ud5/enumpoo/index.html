@@ -15,7 +15,7 @@
     
     
       
-        <title>🧭 Enum con comportamiento y principios SOLID - Programación en Java</title>
+        <title>🧭 Enum en Java - Programación en Java</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#enum-con-comportamiento-y-principios-solid" class="md-skip">
+        <a href="#enum-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🧭 Enum con comportamiento y principios SOLID
+              🧭 Enum en Java
             
           </span>
         </div>
@@ -2105,16 +2105,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-enum-con-comportamiento" class="md-nav__link">
-    🧩 1. Enum con comportamiento
+  <a href="#1-que-es-realmente-un-enum" class="md-nav__link">
+    🔰 1. ¿Qué es realmente un enum?
   </a>
   
-    <nav class="md-nav" aria-label="🧩 1. Enum con comportamiento">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-enum-basico" class="md-nav__link">
+    🧱 2. Enum básico
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-enum-con-atributos-y-constructor" class="md-nav__link">
+    📦 3. Enum con atributos y constructor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-enum-con-metodos" class="md-nav__link">
+    ⚙️ 4. Enum con métodos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-enum-con-comportamiento-polimorfismo" class="md-nav__link">
+    🎭 5. Enum con comportamiento (polimorfismo)
+  </a>
+  
+    <nav class="md-nav" aria-label="🎭 5. Enum con comportamiento (polimorfismo)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ejemplo-simple" class="md-nav__link">
     ✨ Ejemplo simple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-usar-comportamiento-en-enum" class="md-nav__link">
+    🧠 ¿Por qué usar comportamiento en enum?
   </a>
   
 </li>
@@ -2125,16 +2160,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-por-que-usar-comportamiento-en-enum" class="md-nav__link">
-    🧠 2. ¿Por qué usar comportamiento en enum?
+  <a href="#6-enum-implementando-interfaces" class="md-nav__link">
+    🔌 6. Enum implementando interfaces
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-ejemplo-real-sistema-de-pagos" class="md-nav__link">
-    💳 3. Ejemplo real: sistema de pagos
+  <a href="#7-metodos-especiales-de-los-enum" class="md-nav__link">
+    🧠 7. Métodos especiales de los enum
   </a>
+  
+    <nav class="md-nav" aria-label="🧠 7. Métodos especiales de los enum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-real-sistema-de-pagos" class="md-nav__link">
+    💳 Ejemplo real: sistema de pagos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2154,17 +2202,111 @@
 
 
 
-<h1 id="enum-con-comportamiento-y-principios-solid">🧭 Enum con comportamiento y principios SOLID</h1>
+<h1 id="enum-en-java">🧭 Enum en Java</h1>
 <hr />
 <h2 id="indice">📚 Índice</h2>
 <ol>
-<li>🧩 Enum con comportamiento  </li>
-<li>🧠 ¿Por qué usar comportamiento en <code>enum</code>?  </li>
-<li>💳 Ejemplo completo: sistema de pagos   </li>
+<li>🔰 ¿Qué es realmente un <code>enum</code>?</li>
+<li>🧱 Enum básico</li>
+<li>📦 Enum con atributos y constructor</li>
+<li>⚙️ Enum con métodos</li>
+<li>🎭 Enum con comportamiento (polimorfismo)</li>
+<li>🔌 Enum implementando interfaces</li>
+<li>🧠 Métodos especiales de los enum</li>
+<li>🔀 Uso de enum con <code>switch</code> moderno</li>
+<li>🗂 <code>EnumSet</code></li>
+<li>🗺 <code>EnumMap</code></li>
+<li>⚠️ Restricciones de los enum</li>
+<li>🚀 Buenas prácticas modernas</li>
 </ol>
 <hr />
-<h2 id="1-enum-con-comportamiento">🧩 1. Enum con comportamiento</h2>
-<p>En Java, un <strong>enum</strong> no es solo una lista de constantes. También puede <strong>tener atributos, métodos e incluso comportamiento distinto para cada constante</strong>.</p>
+<h2 id="1-que-es-realmente-un-enum">🔰 1. ¿Qué es realmente un <code>enum</code>?</h2>
+<p>En Java, un <code>enum</code> es <strong>una clase especial</strong> que representa un conjunto fijo de constantes.</p>
+<p>Pero además puede tener:    </p>
+<ul>
+<li>📦 Atributos  </li>
+<li>🏗 Constructores  </li>
+<li>⚙️ Métodos    </li>
+<li>🎭 Polimorfismo   </li>
+<li>🔌 Implementar interfaces </li>
+</ul>
+<p>Todos los <code>enum</code> <strong>extienden (heredan) implícitamente <code>java.lang.Enum</code></strong>.</p>
+<hr />
+<h2 id="2-enum-basico">🧱 2. Enum básico</h2>
+<p>Este enum ya lo vimos en el tema de tipos de datos, de forma básica. </p>
+<div class="highlight"><pre><span></span><code><span class="kd">enum</span><span class="w"> </span><span class="n">Dia</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">LUNES</span><span class="p">,</span><span class="w"> </span><span class="n">MARTES</span><span class="p">,</span><span class="w"> </span><span class="n">MIERCOLES</span><span class="p">,</span><span class="w"> </span><span class="n">JUEVES</span><span class="p">,</span><span class="w"> </span><span class="n">VIERNES</span><span class="p">,</span><span class="w"> </span><span class="n">SABADO</span><span class="p">,</span><span class="w"> </span><span class="n">DOMINGO</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Uso:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Dia</span><span class="w"> </span><span class="n">hoy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="3-enum-con-atributos-y-constructor">📦 3. Enum con atributos y constructor</h2>
+<p>Aunque muchas veces se usan los <code>enum</code> solo como una lista de constantes, en realidad <strong>cada constante es un objeto</strong>.
+Por eso, un <code>enum</code> <strong>puede tener atributos, constructores y métodos, igual que una clase normal</strong>.</p>
+<ul>
+<li>🔹 <strong>Los constructores de un <code>enum</code> siempre son privados</strong> (aunque no lo escribas).</li>
+</ul>
+<p><em>Esto permite asociar información adicional a cada constante.</em></p>
+<p>Por ejemplo, imagina que queremos representar niveles de prioridad y asignar a cada uno un número:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">enum</span><span class="w"> </span><span class="n">Prioridad</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">//1️⃣ Cada constante del enum se crea como si fuera un objeto:</span>
+<span class="w">    </span><span class="n">BAJA</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="w">    </span><span class="n">MEDIA</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">    </span><span class="n">ALTA</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/*</span>
+<span class="cm">    Eso significa que Java está haciendo algo conceptualmente parecido a esto:</span>
+<span class="cm">        new Prioridad(1)</span>
+<span class="cm">        new Prioridad(2)</span>
+<span class="cm">        new Prioridad(3)</span>
+<span class="cm">    */</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//2️⃣ El valor que aparece entre paréntesis se pasa al constructor del enum.</span>
+<span class="w">    </span><span class="n">Prioridad</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//3️⃣ Ese constructor guarda el valor en el atributo nivel.</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//4️⃣ Después podemos acceder a ese dato con un método:</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNivel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Prioridad</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Prioridad</span><span class="p">.</span><span class="na">ALTA</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">getNivel</span><span class="p">());</span><span class="w">  </span><span class="c1">// 3</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="4-enum-con-metodos">⚙️ 4. Enum con métodos</h2>
+<p>Un <code>enum</code> en Java es realmente <strong>una clase especial</strong>.
+Por eso, además de constantes, puede tener <strong>métodos</strong>, igual que cualquier otra clase.</p>
+<p>Esto permite que cada constante del enum tenga comportamientos asociados.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">enum</span><span class="w"> </span><span class="n">EstadoPedido</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="n">PENDIENTE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ENVIADO</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ENTREGADO</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esFinal</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//this representa la constante actual del enum.</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ENTREGADO</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">EstadoPedido</span><span class="w"> </span><span class="n">estado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EstadoPedido</span><span class="p">.</span><span class="na">ENVIADO</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">estado</span><span class="p">.</span><span class="na">esFinal</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="5-enum-con-comportamiento-polimorfismo">🎭 5. Enum con comportamiento (polimorfismo)</h2>
+<p><code>enum</code> también puede <strong>tener comportamiento distinto para cada constante</strong>.</p>
 <p>Esto permite aplicar <strong>polimorfismo dentro de un enum</strong>.</p>
 <hr />
 <h3 id="ejemplo-simple">✨ Ejemplo simple</h3>
@@ -2199,7 +2341,7 @@
 </code></pre></div>
 <p>📌 Cada constante del enum <strong>implementa su propio comportamiento</strong>.</p>
 <hr />
-<h2 id="2-por-que-usar-comportamiento-en-enum">🧠 2. ¿Por qué usar comportamiento en enum?</h2>
+<h3 id="por-que-usar-comportamiento-en-enum">🧠 ¿Por qué usar comportamiento en enum?</h3>
 <p>Ventajas:</p>
 <ul>
 <li>🎯 Evita <code>if</code> o <code>switch</code> gigantes   </li>
@@ -2208,7 +2350,102 @@
 <li>🧹 Código más limpio y mantenible   </li>
 </ul>
 <hr />
-<h2 id="3-ejemplo-real-sistema-de-pagos">💳 3. Ejemplo real: sistema de pagos</h2>
+<h2 id="6-enum-implementando-interfaces">🔌 6. Enum implementando interfaces</h2>
+<p><code>enum</code> también puede implementar interfaces. Esto significa que el <strong>enum puede comprometerse a implementar ciertos métodos definidos en una interfaz</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">interface</span> <span class="nc">Calculable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">aplicar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">enum</span><span class="w"> </span><span class="n">Operacion</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Calculable</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="n">MULTIPLICAR</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">aplicar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+
+<span class="w">    </span><span class="n">DIVIDIR</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">aplicar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Calculable</span><span class="w"> </span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Operacion</span><span class="p">.</span><span class="na">MULTIPLICAR</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">op</span><span class="p">.</span><span class="na">aplicar</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="7-metodos-especiales-de-los-enum">🧠 7. Métodos especiales de los enum</h2>
+<p>Los <code>enum</code> en Java tienen <strong>varios métodos útiles automáticamente disponibles</strong>.</p>
+<p>Algunos <strong>se heredan de la clase <code>Enum</code></strong> y otros <strong>los genera el compilador automáticamente para cada enum</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>De dónde sale</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>values()</code></td>
+<td>generado por el compilador</td>
+<td>Devuelve todas las constantes del enum</td>
+</tr>
+<tr>
+<td><code>valueOf(String)</code></td>
+<td>generado por el compilador</td>
+<td>Convierte un <code>String</code> en su constante</td>
+</tr>
+<tr>
+<td><code>name()</code></td>
+<td>heredado de <code>Enum</code></td>
+<td>Devuelve el nombre exacto de la constante</td>
+</tr>
+<tr>
+<td><code>ordinal()</code></td>
+<td>heredado de <code>Enum</code></td>
+<td>Devuelve la posición en el enum</td>
+</tr>
+<tr>
+<td><code>compareTo()</code></td>
+<td>heredado de <code>Enum</code></td>
+<td>Permite comparar enums</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<p>🔧 1. values() --&gt; Devuelve todas las constantes del <code>enum</code> en un array.</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/*LUNES</span>
+<span class="cm">MARTES</span>
+<span class="cm">MIERCOLES*/</span>
+
+<span class="k">for</span><span class="p">(</span><span class="n">Dia</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Dia</span><span class="p">.</span><span class="na">values</span><span class="p">()){</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//📌 El orden corresponde al orden en que aparecen en el enum.</span>
+</code></pre></div>
+<p>🔧 2. valueOf(String) --&gt; Convierte un texto en una constante del <code>enum</code>.
+<div class="highlight"><pre><span></span><code><span class="n">Dia</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dia</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="s">&quot;LUNES&quot;</span><span class="p">);</span>
+</code></pre></div></p>
+<p>🔧 3. name() --&gt; Devuelve el nombre exacto de la constante.
+<div class="highlight"><pre><span></span><code><span class="n">Dia</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dia</span><span class="p">.</span><span class="na">MARTES</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="na">name</span><span class="p">());</span>
+</code></pre></div></p>
+<p>🔧 4. ordinal() --&gt; Devuelve la posición de la constante en el <code>enum</code>, empezando en 0.
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">.</span><span class="na">ordinal</span><span class="p">());</span><span class="c1">//0</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">MARTES</span><span class="p">.</span><span class="na">ordinal</span><span class="p">());</span><span class="c1">//1</span>
+</code></pre></div></p>
+<p>🔧 5. compareTo() -&gt; Permite comparar dos constantes según su orden en el <code>enum</code>.
+- 0--&gt; si son iguales <br />
+- -1 --&gt; si el que comparas va antes que el que pones entre los () <br />
+- 1 --&gt; si el que comparas va después que el que pones entre los ()    <br />
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">MARTES</span><span class="p">));</span><span class="c1">//-1, Significa que LUNES aparece antes que MARTES.</span>
+</code></pre></div></p>
+<hr />
+<h3 id="ejemplo-real-sistema-de-pagos">💳 Ejemplo real: sistema de pagos</h3>
 <div class="highlight"><pre><span></span><code><span class="kd">enum</span><span class="w"> </span><span class="n">TipoPago</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="n">TARJETA</span><span class="w"> </span><span class="p">{</span>
