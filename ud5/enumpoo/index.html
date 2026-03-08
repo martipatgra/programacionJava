@@ -2171,7 +2171,35 @@
     🧠 7. Métodos especiales de los enum
   </a>
   
-    <nav class="md-nav" aria-label="🧠 7. Métodos especiales de los enum">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-uso-con-switch-moderno" class="md-nav__link">
+    🔀 8. Uso con switch moderno
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-restricciones-de-los-enum" class="md-nav__link">
+    ⚠️ 9. Restricciones de los enum
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-buenas-practicas-modernas" class="md-nav__link">
+    🚀 10. Buenas prácticas modernas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    🧠 Conclusión
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Conclusión">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2206,18 +2234,17 @@
 <hr />
 <h2 id="indice">📚 Índice</h2>
 <ol>
-<li>🔰 ¿Qué es realmente un <code>enum</code>?</li>
-<li>🧱 Enum básico</li>
-<li>📦 Enum con atributos y constructor</li>
-<li>⚙️ Enum con métodos</li>
-<li>🎭 Enum con comportamiento (polimorfismo)</li>
-<li>🔌 Enum implementando interfaces</li>
-<li>🧠 Métodos especiales de los enum</li>
-<li>🔀 Uso de enum con <code>switch</code> moderno</li>
-<li>🗂 <code>EnumSet</code></li>
-<li>🗺 <code>EnumMap</code></li>
-<li>⚠️ Restricciones de los enum</li>
-<li>🚀 Buenas prácticas modernas</li>
+<li><a href="#1-que-es-realmente-un-enum">🔰 ¿Qué es realmente un <code>enum</code>?</a></li>
+<li><a href="#2-enum-basico">🧱 Enum básico</a></li>
+<li><a href="#3-enum-con-atributos-y-constructor">📦 Enum con atributos y constructor</a></li>
+<li><a href="#️4-enum-con-metodos">⚙️ Enum con métodos</a></li>
+<li><a href="#5-enum-con-comportamiento-polimorfismo">🎭 Enum con comportamiento (polimorfismo)</a></li>
+<li><a href="#6-enum-implementando-interfaces">🔌 Enum implementando interfaces</a></li>
+<li><a href="#7-metodos-especiales-de-los-enum">🧠 Métodos especiales de los enum</a></li>
+<li><a href="#8-uso-con-switch-moderno">🔀 Uso de enum con <code>switch</code> moderno</a></li>
+<li><a href="#️9-restricciones-de-los-enum">⚠️ Restricciones de los enum</a></li>
+<li><a href="#10-buenas-practicas-modernas">🚀 Buenas prácticas modernas</a></li>
+<li><a href="#ejemplo-real-sistema-de-pagos">💳 Ejemplo real: sistema de pagos</a></li>
 </ol>
 <hr />
 <h2 id="1-que-es-realmente-un-enum">🔰 1. ¿Qué es realmente un <code>enum</code>?</h2>
@@ -2444,6 +2471,54 @@ Por eso, además de constantes, puede tener <strong>métodos</strong>, igual que
 - 1 --&gt; si el que comparas va después que el que pones entre los ()    <br />
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">LUNES</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">Dia</span><span class="p">.</span><span class="na">MARTES</span><span class="p">));</span><span class="c1">//-1, Significa que LUNES aparece antes que MARTES.</span>
 </code></pre></div></p>
+<hr />
+<h2 id="8-uso-con-switch-moderno">🔀 8. Uso con switch moderno</h2>
+<p>Los enum funcionan muy bien con <code>switch</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">tipo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">switch</span><span class="p">(</span><span class="n">dia</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">SABADO</span><span class="p">,</span><span class="w"> </span><span class="n">DOMINGO</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Fin de semana&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">LUNES</span><span class="p">,</span><span class="w"> </span><span class="n">MARTES</span><span class="p">,</span><span class="w"> </span><span class="n">MIERCOLES</span><span class="p">,</span><span class="w"> </span><span class="n">JUEVES</span><span class="p">,</span><span class="w"> </span><span class="n">VIERNES</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Laborable&quot;</span><span class="p">;</span>
+
+<span class="p">};</span>
+</code></pre></div>
+<p>Esto es una <strong>switch expression moderna (Java 14+)</strong>.</p>
+<hr />
+<h2 id="9-restricciones-de-los-enum">⚠️ 9. Restricciones de los enum</h2>
+<p>Los enum tienen algunas limitaciones:</p>
+<ul>
+<li>❌ No pueden extender otra clase</li>
+<li>✅ Sí pueden implementar interfaces</li>
+<li>⚠️ Los constructores siempre son privados</li>
+<li>⚠️ No se pueden crear instancias con <code>new</code></li>
+<li>⚠️ El orden de las constantes define <code>ordinal()</code></li>
+</ul>
+<hr />
+<h2 id="10-buenas-practicas-modernas">🚀 10. Buenas prácticas modernas</h2>
+<p>Usa enums cuando representes:</p>
+<ul>
+<li>🎯 Estados</li>
+<li>🎯 Tipos de operación</li>
+<li>🎯 Roles</li>
+<li>🎯 Categorías</li>
+<li>🎯 Modos de funcionamiento</li>
+</ul>
+<p>Ejemplos reales:</p>
+<div class="highlight"><pre><span></span><code>EstadoPedido
+TipoPago
+NivelPrioridad
+TipoUsuario
+ModoJuego
+</code></pre></div>
+<hr />
+<h2 id="conclusion">🧠 Conclusión</h2>
+<p>Los <code>enum</code> en Java son mucho más que constantes.</p>
+<p>Permiten:</p>
+<ul>
+<li>🧱 Modelar dominios cerrados  </li>
+<li>🎭 Aplicar polimorfismo   </li>
+<li>🧠 Escribir código más claro  </li>
+</ul>
+<p>Dominar bien <code>enum</code> es un paso importante hacia <strong>POO profesional en Java</strong>.</p>
 <hr />
 <h3 id="ejemplo-real-sistema-de-pagos">💳 Ejemplo real: sistema de pagos</h3>
 <div class="highlight"><pre><span></span><code><span class="kd">enum</span><span class="w"> </span><span class="n">TipoPago</span><span class="w"> </span><span class="p">{</span>
