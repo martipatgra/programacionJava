@@ -19,7 +19,7 @@
     
     
       
-        <title>✨ Excepciones - Programación en Java</title>
+        <title>✨ Excepciones en Java - Programación en Java</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#excepciones" class="md-skip">
+        <a href="#excepciones-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ✨ Excepciones
+              ✨ Excepciones en Java
             
           </span>
         </div>
@@ -1280,12 +1280,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          ✨ Excepciones
+          ✨ Excepciones en Java
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        ✨ Excepciones
+        ✨ Excepciones en Java
       </a>
       
         
@@ -1304,72 +1304,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#checked-exceptions" class="md-nav__link">
-    Checked exceptions
+  <a href="#que-es-una-excepcion" class="md-nav__link">
+    🎯 ¿Qué es una excepción?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#unchecked-exceptions" class="md-nav__link">
-    Unchecked exceptions
+  <a href="#jerarquia-basica-de-excepciones" class="md-nav__link">
+    🧱 Jerarquía básica de excepciones
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diferencias-entre-checked-y-unchecked-exceptions" class="md-nav__link">
-    Diferencias entre checked y unchecked exceptions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#throwable" class="md-nav__link">
-    Throwable
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#excecpciones-personalizadas" class="md-nav__link">
-    Excecpciones personalizadas
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#buenas-practicas-para-definir-excepciones-personalizadas" class="md-nav__link">
-    Buenas prácticas para definir excepciones personalizadas
-  </a>
-  
-    <nav class="md-nav" aria-label="Buenas prácticas para definir excepciones personalizadas">
+    <nav class="md-nav" aria-label="🧱 Jerarquía básica de excepciones">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#haz-que-tenga-sentido" class="md-nav__link">
-    Haz que tenga sentido
+  <a href="#throwable" class="md-nav__link">
+    🔹 Throwable
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sigue-la-convencion-de-nomenclatura-estandar" class="md-nav__link">
-    Sigue la convención de nomenclatura estándar
+  <a href="#error" class="md-nav__link">
+    🔹 Error
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#anade-javadoc-a-tu-clase-de-excepcion-personalizada" class="md-nav__link">
-    Añade Javadoc a tu clase de excepción personalizada
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#proporciona-un-constructor" class="md-nav__link">
-    Proporciona un constructor
+  <a href="#exception" class="md-nav__link">
+    🔹 Exception
   </a>
   
 </li>
@@ -1380,9 +1345,483 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#checked-exceptions" class="md-nav__link">
+    ✅ Checked exceptions
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Checked exceptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    🧠 Idea clave
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-habituales" class="md-nav__link">
+    📌 Ejemplos habituales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unchecked-exceptions" class="md-nav__link">
+    ⚠️ Unchecked exceptions
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Unchecked exceptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-habituales_1" class="md-nav__link">
+    📌 Ejemplos habituales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checked-vs-unchecked" class="md-nav__link">
+    🆚 Checked vs Unchecked
+  </a>
+  
+    <nav class="md-nav" aria-label="🆚 Checked vs Unchecked">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-practica" class="md-nav__link">
+    🧠 Regla práctica
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-catch-y-finally" class="md-nav__link">
+    🛠️ try, catch y finally
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ try, catch y finally">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#try" class="md-nav__link">
+    🔹 try
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catch" class="md-nav__link">
+    🔹 catch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finally" class="md-nav__link">
+    🔹 finally
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-with-resources" class="md-nav__link">
+    🧰 try-with-resources
+  </a>
+  
+    <nav class="md-nav" aria-label="🧰 try-with-resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    ✅ Ventajas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throw-vs-throws" class="md-nav__link">
+    🎯 throw vs throws
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 throw vs throws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#throw" class="md-nav__link">
+    🔹 throw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throws" class="md-nav__link">
+    🔹 throws
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captura-multiple-multi-catch" class="md-nav__link">
+    🧪 Captura múltiple (multi-catch)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-de-los-catch" class="md-nav__link">
+    📍 Orden de los catch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hay-que-capturar-siempre-las-excepciones" class="md-nav__link">
+    🚫 ¿Hay que capturar siempre las excepciones?
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 ¿Hay que capturar siempre las excepciones?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mejor" class="md-nav__link">
+    ✅ Mejor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-utiles-de-las-excepciones" class="md-nav__link">
+    🧾 Métodos útiles de las excepciones
+  </a>
+  
+    <nav class="md-nav" aria-label="🧾 Métodos útiles de las excepciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodos-frecuentes" class="md-nav__link">
+    Métodos frecuentes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excepciones-personalizadas" class="md-nav__link">
+    🧩 Excepciones personalizadas
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Excepciones personalizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-tiene-sentido-crear-una" class="md-nav__link">
+    📌 ¿Cuándo tiene sentido crear una?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-crear-una-excepcion-personalizada-checked" class="md-nav__link">
+    🏗️ Cómo crear una excepción personalizada checked
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pasos-para-implementar-una-excepcion-personalizada" class="md-nav__link">
     Pasos para implementar una excepción personalizada
   </a>
+  
+    <nav class="md-nav" aria-label="Pasos para implementar una excepción personalizada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uso" class="md-nav__link">
+    Uso
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-crear-una-excepcion-personalizada-unchecked" class="md-nav__link">
+    ⚡ Cómo crear una excepción personalizada unchecked
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ Cómo crear una excepción personalizada unchecked">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uso_1" class="md-nav__link">
+    Uso
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extiendo-de-exception-o-de-runtimeexception" class="md-nav__link">
+    🧠 ¿Extiendo de Exception o de RuntimeException?
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 ¿Extiendo de Exception o de RuntimeException?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extiende-de-exception-si" class="md-nav__link">
+    Extiende de Exception si...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extiende-de-runtimeexception-si" class="md-nav__link">
+    Extiende de RuntimeException si...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encadenamiento-de-excepciones" class="md-nav__link">
+    🪜 Encadenamiento de excepciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-con-excepciones" class="md-nav__link">
+    🧼 Buenas prácticas con excepciones
+  </a>
+  
+    <nav class="md-nav" aria-label="🧼 Buenas prácticas con excepciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-usa-excepciones-estandar-cuando-ya-encajen" class="md-nav__link">
+    ✅ 1. Usa excepciones estándar cuando ya encajen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-no-captures-throwable" class="md-nav__link">
+    ✅ 2. No captures Throwable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-no-captures-exception-salvo-que-tengas-un-motivo-claro" class="md-nav__link">
+    ✅ 3. No captures Exception salvo que tengas un motivo claro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-escribe-mensajes-utiles" class="md-nav__link">
+    ✅ 4. Escribe mensajes útiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-no-uses-excepciones-para-controlar-el-flujo-normal" class="md-nav__link">
+    ✅ 5. No uses excepciones para controlar el flujo normal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-manten-la-causa-original-cuando-relances" class="md-nav__link">
+    ✅ 6. Mantén la causa original cuando relances
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-crea-excepciones-de-dominio-cuando-aporten-claridad" class="md-nav__link">
+    ✅ 7. Crea excepciones de dominio cuando aporten claridad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excepciones-y-diseno-orientado-a-objetos" class="md-nav__link">
+    🧱 Excepciones y diseño orientado a objetos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excepciones-y-solid" class="md-nav__link">
+    🧭 Excepciones y SOLID
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Excepciones y SOLID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s-single-responsibility-principle" class="md-nav__link">
+    🔹 S — Single Responsibility Principle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-openclosed-principle" class="md-nav__link">
+    🔹 O — Open/Closed Principle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l-liskov-substitution-principle" class="md-nav__link">
+    🔹 L — Liskov Substitution Principle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-interface-segregation-principle" class="md-nav__link">
+    🔹 I — Interface Segregation Principle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-dependency-inversion-principle" class="md-nav__link">
+    🔹 D — Dependency Inversion Principle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-practica" class="md-nav__link">
+    🧠 Idea práctica
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    🧪 Ejemplo completo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-frecuentes" class="md-nav__link">
+    ❌ Errores frecuentes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-final" class="md-nav__link">
+    📝 Resumen final
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Resumen final">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-debes-recordar" class="md-nav__link">
+    Qué debes recordar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-guia" class="md-nav__link">
+    💬 Mini guía
+  </a>
+  
+    <nav class="md-nav" aria-label="💬 Mini guía">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-usar-normalmente" class="md-nav__link">
+    Qué usar normalmente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2207,72 +2646,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#checked-exceptions" class="md-nav__link">
-    Checked exceptions
+  <a href="#que-es-una-excepcion" class="md-nav__link">
+    🎯 ¿Qué es una excepción?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#unchecked-exceptions" class="md-nav__link">
-    Unchecked exceptions
+  <a href="#jerarquia-basica-de-excepciones" class="md-nav__link">
+    🧱 Jerarquía básica de excepciones
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diferencias-entre-checked-y-unchecked-exceptions" class="md-nav__link">
-    Diferencias entre checked y unchecked exceptions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#throwable" class="md-nav__link">
-    Throwable
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#excecpciones-personalizadas" class="md-nav__link">
-    Excecpciones personalizadas
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#buenas-practicas-para-definir-excepciones-personalizadas" class="md-nav__link">
-    Buenas prácticas para definir excepciones personalizadas
-  </a>
-  
-    <nav class="md-nav" aria-label="Buenas prácticas para definir excepciones personalizadas">
+    <nav class="md-nav" aria-label="🧱 Jerarquía básica de excepciones">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#haz-que-tenga-sentido" class="md-nav__link">
-    Haz que tenga sentido
+  <a href="#throwable" class="md-nav__link">
+    🔹 Throwable
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sigue-la-convencion-de-nomenclatura-estandar" class="md-nav__link">
-    Sigue la convención de nomenclatura estándar
+  <a href="#error" class="md-nav__link">
+    🔹 Error
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#anade-javadoc-a-tu-clase-de-excepcion-personalizada" class="md-nav__link">
-    Añade Javadoc a tu clase de excepción personalizada
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#proporciona-un-constructor" class="md-nav__link">
-    Proporciona un constructor
+  <a href="#exception" class="md-nav__link">
+    🔹 Exception
   </a>
   
 </li>
@@ -2283,9 +2687,483 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#checked-exceptions" class="md-nav__link">
+    ✅ Checked exceptions
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Checked exceptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    🧠 Idea clave
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-habituales" class="md-nav__link">
+    📌 Ejemplos habituales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unchecked-exceptions" class="md-nav__link">
+    ⚠️ Unchecked exceptions
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Unchecked exceptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-habituales_1" class="md-nav__link">
+    📌 Ejemplos habituales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checked-vs-unchecked" class="md-nav__link">
+    🆚 Checked vs Unchecked
+  </a>
+  
+    <nav class="md-nav" aria-label="🆚 Checked vs Unchecked">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-practica" class="md-nav__link">
+    🧠 Regla práctica
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-catch-y-finally" class="md-nav__link">
+    🛠️ try, catch y finally
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ try, catch y finally">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#try" class="md-nav__link">
+    🔹 try
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catch" class="md-nav__link">
+    🔹 catch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finally" class="md-nav__link">
+    🔹 finally
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-with-resources" class="md-nav__link">
+    🧰 try-with-resources
+  </a>
+  
+    <nav class="md-nav" aria-label="🧰 try-with-resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    ✅ Ventajas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throw-vs-throws" class="md-nav__link">
+    🎯 throw vs throws
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 throw vs throws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#throw" class="md-nav__link">
+    🔹 throw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throws" class="md-nav__link">
+    🔹 throws
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captura-multiple-multi-catch" class="md-nav__link">
+    🧪 Captura múltiple (multi-catch)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-de-los-catch" class="md-nav__link">
+    📍 Orden de los catch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hay-que-capturar-siempre-las-excepciones" class="md-nav__link">
+    🚫 ¿Hay que capturar siempre las excepciones?
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 ¿Hay que capturar siempre las excepciones?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mejor" class="md-nav__link">
+    ✅ Mejor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-utiles-de-las-excepciones" class="md-nav__link">
+    🧾 Métodos útiles de las excepciones
+  </a>
+  
+    <nav class="md-nav" aria-label="🧾 Métodos útiles de las excepciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodos-frecuentes" class="md-nav__link">
+    Métodos frecuentes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excepciones-personalizadas" class="md-nav__link">
+    🧩 Excepciones personalizadas
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Excepciones personalizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-tiene-sentido-crear-una" class="md-nav__link">
+    📌 ¿Cuándo tiene sentido crear una?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-crear-una-excepcion-personalizada-checked" class="md-nav__link">
+    🏗️ Cómo crear una excepción personalizada checked
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pasos-para-implementar-una-excepcion-personalizada" class="md-nav__link">
     Pasos para implementar una excepción personalizada
   </a>
+  
+    <nav class="md-nav" aria-label="Pasos para implementar una excepción personalizada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uso" class="md-nav__link">
+    Uso
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-crear-una-excepcion-personalizada-unchecked" class="md-nav__link">
+    ⚡ Cómo crear una excepción personalizada unchecked
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ Cómo crear una excepción personalizada unchecked">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uso_1" class="md-nav__link">
+    Uso
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extiendo-de-exception-o-de-runtimeexception" class="md-nav__link">
+    🧠 ¿Extiendo de Exception o de RuntimeException?
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 ¿Extiendo de Exception o de RuntimeException?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extiende-de-exception-si" class="md-nav__link">
+    Extiende de Exception si...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extiende-de-runtimeexception-si" class="md-nav__link">
+    Extiende de RuntimeException si...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encadenamiento-de-excepciones" class="md-nav__link">
+    🪜 Encadenamiento de excepciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-con-excepciones" class="md-nav__link">
+    🧼 Buenas prácticas con excepciones
+  </a>
+  
+    <nav class="md-nav" aria-label="🧼 Buenas prácticas con excepciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-usa-excepciones-estandar-cuando-ya-encajen" class="md-nav__link">
+    ✅ 1. Usa excepciones estándar cuando ya encajen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-no-captures-throwable" class="md-nav__link">
+    ✅ 2. No captures Throwable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-no-captures-exception-salvo-que-tengas-un-motivo-claro" class="md-nav__link">
+    ✅ 3. No captures Exception salvo que tengas un motivo claro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-escribe-mensajes-utiles" class="md-nav__link">
+    ✅ 4. Escribe mensajes útiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-no-uses-excepciones-para-controlar-el-flujo-normal" class="md-nav__link">
+    ✅ 5. No uses excepciones para controlar el flujo normal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-manten-la-causa-original-cuando-relances" class="md-nav__link">
+    ✅ 6. Mantén la causa original cuando relances
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-crea-excepciones-de-dominio-cuando-aporten-claridad" class="md-nav__link">
+    ✅ 7. Crea excepciones de dominio cuando aporten claridad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excepciones-y-diseno-orientado-a-objetos" class="md-nav__link">
+    🧱 Excepciones y diseño orientado a objetos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excepciones-y-solid" class="md-nav__link">
+    🧭 Excepciones y SOLID
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Excepciones y SOLID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s-single-responsibility-principle" class="md-nav__link">
+    🔹 S — Single Responsibility Principle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-openclosed-principle" class="md-nav__link">
+    🔹 O — Open/Closed Principle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l-liskov-substitution-principle" class="md-nav__link">
+    🔹 L — Liskov Substitution Principle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-interface-segregation-principle" class="md-nav__link">
+    🔹 I — Interface Segregation Principle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-dependency-inversion-principle" class="md-nav__link">
+    🔹 D — Dependency Inversion Principle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-practica" class="md-nav__link">
+    🧠 Idea práctica
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    🧪 Ejemplo completo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-frecuentes" class="md-nav__link">
+    ❌ Errores frecuentes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-final" class="md-nav__link">
+    📝 Resumen final
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Resumen final">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-debes-recordar" class="md-nav__link">
+    Qué debes recordar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-guia" class="md-nav__link">
+    💬 Mini guía
+  </a>
+  
+    <nav class="md-nav" aria-label="💬 Mini guía">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-usar-normalmente" class="md-nav__link">
+    Qué usar normalmente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2305,106 +3183,507 @@
 
 
 
-<h1 id="excepciones">Excepciones</h1>
-<p>Una excepción es un evento que ocurre durante la ejecución de una aplicación e interrumpe el flujo normal de las instrucciones del programa.</p>
+<h1 id="excepciones-en-java">✨ Excepciones en Java</h1>
+<h2 id="que-es-una-excepcion">🎯 ¿Qué es una excepción?</h2>
+<p>Una <strong>excepción</strong> es un objeto que representa un problema ocurrido durante la ejecución de un programa y que <strong>interrumpe el flujo normal</strong> de las instrucciones.</p>
+<p>En Java, las excepciones permiten:</p>
+<ul>
+<li>detectar errores,</li>
+<li>propagar información sobre el problema,</li>
+<li>y decidir si el programa puede recuperarse o no.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// ArithmeticException</span>
+</code></pre></div>
+<hr />
+<h2 id="jerarquia-basica-de-excepciones">🧱 Jerarquía básica de excepciones</h2>
+<p>La jerarquía principal parte de <code>Throwable</code>:</p>
+<div class="highlight"><pre><span></span><code>Throwable
+ ├── Error
+ └── Exception
+      └── RuntimeException
+</code></pre></div>
 <p><img alt="Exception" src="../../img/ud5/exceptions1.png" /></p>
-<p>Class Exception y class Error extienden Throwable. Un método Java puede "lanzar" un objeto de clase Throwable.</p>
-<p>Las excepciones son diferentes de los errores porque se pueden escribir programas para recuperarse de excepciones, pero no se pueden escribir programas para recuperarse de errores.</p>
-<p>Las excepciones pueden ser detectadas por una parte del programa que intenta recuperarse del problema.</p>
+<h3 id="throwable">🔹 <code>Throwable</code></h3>
+<p>Es la superclase de todo lo que puede lanzarse con <code>throw</code>. Se podria capturar en un bloque <code>try-catch</code>, <strong>¡pero nunca se debe hacer!</strong>, ya que, no solo capturará todas las excepciones; sino que también hará lo mismo con todos los errores que genere la aplicacion.</p>
+<h3 id="error">🔹 <code>Error</code></h3>
+<p>Representa problemas graves del sistema o de la JVM.
+Normalmente <strong>no deben capturarse</strong>.</p>
+<p>Ejemplos:</p>
+<ul>
+<li><code>OutOfMemoryError</code></li>
+<li><code>StackOverflowError</code></li>
+</ul>
+<h3 id="exception">🔹 <code>Exception</code></h3>
+<p>Representa situaciones que una aplicación sí puede intentar gestionar. Las excepciones son diferentes de los errores porque se pueden escribir programas para recuperarse de excepciones, pero no se pueden escribir programas para recuperarse de errores.</p>
 <p>En Java, hay dos tipos de excepciones:</p>
 <ul>
 <li><strong>Checked exceptions</strong> (Excepciones verificadas).</li>
 <li><strong>Unchecked exceptions</strong> (Excepciones no verificadas).</li>
 </ul>
-<h2 id="checked-exceptions">Checked exceptions</h2>
-<p>Estas son las excepciones que se comprueban en tiempo de compilación, es decir, un método debe hacer algo al respecto sino el programa no compila. Si algún código dentro de un método arroja una excepción verificada, entonces el método puede:</p>
+<hr />
+<h2 id="checked-exceptions">✅ Checked exceptions</h2>
+<p>Las <strong>checked exceptions</strong> son excepciones que el compilador obliga a tratar.</p>
+<p>Si un método puede producir una checked exception, hay dos opciones:</p>
 <ol>
-<li>manejar la excepción en un bloque <code>try-catch{}</code>, o</li>
-<li><code>throws</code> (lanzar) la excepción al que invoca el método.</li>
+<li><strong>capturarla</strong> con <code>try-catch</code></li>
+<li><strong>propagarla</strong> con <code>throws</code></li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">leerFichero</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">//código java</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>En el ejemplo, <code>IOException</code> es una checked exception. Este método lanza una IOException cuando hay un problema de lectura.</p>
-<p>La palabra reservada <code>throws</code> dice que este método <strong>no</strong> captura la excepción <code>IOException</code> con un <code>catch</code>, sino que cuando ocurra una, se lanzará a la persona que llama el método <code>leerFichero</code>.</p>
-<p>Si hiciéramos esto en un método <code>main</code>, como por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">//código java</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
 
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">leerDatos</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// código que puede lanzar IOException</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>La excepción se lanzará al Java runtime system.
-El sistema de tiempo de ejecución de Java detecta las excepciones que se le han lanzado e imprime un mensaje y un seguimiento de la pila utilizando los datos de la excepción.</p>
-<h2 id="unchecked-exceptions">Unchecked exceptions</h2>
-<p>Ocurren en tiempo de compilación, es decir, no se verifican por el compilador. En Java, las excepciones en las clases <em>RunTimeException</em> y <em>Error</em> y sus subclases son unchecked exceptions todo lo demás es es checked.</p>
-<p>Depende de los programadores especificar o detectar las excepciones unchecked.
-Por ejemplo, imagina que tenemos el siguiente programa Java se compila sin erorres:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>El compilador nos deja compilar la aplicación porque <code>ArithmeticException</code> es una excepción no verificada, pero al ejecutar el programa se lanza la excepción, por tanto, nosotros tendremos que darnos cuenta y controlar este tipo de excepciones.</p>
-<h2 id="diferencias-entre-checked-y-unchecked-exceptions">Diferencias entre checked y unchecked exceptions</h2>
+<h3 id="idea-clave">🧠 Idea clave</h3>
+<p>Si no haces nada con una checked exception, <strong>el programa no compila</strong>.</p>
+<h3 id="ejemplos-habituales">📌 Ejemplos habituales</h3>
 <ul>
-<li>Una checked exception se detecta en tiempo de compilación, mientras que una unchecked exception en tiempo de ejecución.</li>
-<li>Una checked exception debe manejarse o bien con volviéndola a lanzar con un <code>throw</code> o con un bloque <code>try catch</code>, mientras que una unchecked exception no requiere ser manejada.</li>
-<li>Una unchecked exception es un error de programación y es fatal, mientras que una checked exception es una condición de excepción dentro de la lógica de su código y se puede recuperar o volver a intentar.</li>
+<li><code>IOException</code></li>
+<li><code>SQLException</code></li>
+<li><code>ParseException</code></li>
+</ul>
+<hr />
+<h2 id="unchecked-exceptions">⚠️ Unchecked exceptions</h2>
+<p>Las <strong>unchecked exceptions</strong> no están obligadas a tratarse en compilación.</p>
+<p>Suelen indicar:</p>
+<ul>
+<li>errores de programación,</li>
+<li>estados inválidos,</li>
+<li>mal uso de una API,</li>
+<li>o datos incoherentes.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// ArithmeticException</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El compilador deja compilar el programa, pero el error aparece <strong>en tiempo de ejecución</strong>.</p>
+<h3 id="ejemplos-habituales_1">📌 Ejemplos habituales</h3>
+<ul>
+<li><code>ArithmeticException</code></li>
+<li><code>NullPointerException</code></li>
+<li><code>IllegalArgumentException</code></li>
+<li><code>IndexOutOfBoundsException</code></li>
+<li><code>IllegalStateException</code></li>
+</ul>
+<hr />
+<h2 id="checked-vs-unchecked">🆚 Checked vs Unchecked</h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Checked</th>
+<th>Unchecked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¿Se revisa en compilación?</td>
+<td>Sí</td>
+<td>No</td>
+</tr>
+<tr>
+<td>¿Obliga a capturar o propagar?</td>
+<td>Sí</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Uso típico</td>
+<td>Recursos externos, operaciones recuperables</td>
+<td>Errores de programación o estados inválidos</td>
+</tr>
+<tr>
+<td>Heredan de</td>
+<td><code>Exception</code></td>
+<td><code>RuntimeException</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="regla-practica">🧠 Regla práctica</h3>
+<ul>
+<li>Usa <strong>checked</strong> cuando el código cliente <strong>puede recuperarse razonablemente</strong>.</li>
+<li>Usa <strong>unchecked</strong> cuando el problema indica <strong>uso incorrecto del código</strong> o un estado inválido.</li>
 </ul>
 <p><img alt="Exception" src="../../img/ud5/exceptions2.png" /></p>
-<h2 id="throwable">Throwable</h2>
-<p><code>Throwable</code> es la superclase de todas las excepciones y errores. Se podria capturar en un bloque <code>try-catch</code>, <strong>¡pero nunca se debe hacer!</strong>, ya que, no solo capturará todas las excepciones; sino que también hará lo mismo con todos los errores que genere la aplicacion.</p>
-<p>La JVM arroja errores para indicar problemas graves <strong>que no están destinados a ser manejados por una aplicación.</strong></p>
-<p>Ejemplos típicos de eso son <code>OutOfMemoryError</code> o <code>StackOverflowError</code>. Ambos son causados por situaciones que están fuera del control de la aplicación y no se pueden manejar.</p>
-<p>Por lo tanto, es mejor que <strong>NUNCA</strong> captures un Throwable.</p>
-<h2 id="excecpciones-personalizadas">Excecpciones personalizadas</h2>
-<p>Aunque las excepciones de Java cubren casi todas las excepciones generales que están obligadas a ocurrir en la programación. Sin embargo, a veces necesitamos complementar estas excepciones estándar con las nuestras.</p>
-<p>Estas son las principales razones para introducir excepciones personalizadas:</p>
-<ul>
-<li>Añadir excepciones que son específicas de la lógica de nuestra aplicación o empresa. Éstas ayudan a los usuarios de la aplicación o a los desarrolladores a comprender cuál es el problema exacto.</li>
-<li>Para capturar y proporcionar un tratamiento específico a un subconjunto de excepciones de Java existentes.</li>
-<li>Añadir nuevos métodos o atributos que no son parte de las excepciones estándar.</li>
-</ul>
-<h2 id="buenas-practicas-para-definir-excepciones-personalizadas">Buenas prácticas para definir excepciones personalizadas</h2>
-<h3 id="haz-que-tenga-sentido"><strong>Haz que tenga sentido</strong></h3>
-<p>Proporciona información o funcionalidad que no forma parte de las excepciones estándar de Java.</p>
-<p>Esa es la esencia de la primera y más importante recomendación. De lo contrario, su excepción no brinda ningún beneficio en comparación con la gran cantidad de excepciones que ya proporciona el JDK.</p>
-<p>Si no puede proporcionar ningún beneficio, es mejor que use una de las excepciones estándar, como UnsupportedOperationException o IllegalArgumentException. Todos los desarrolladores de Java ya conocen estas excepciones. Eso hace que su código y API sean más fáciles de entender.</p>
-<h3 id="sigue-la-convencion-de-nomenclatura-estandar"><strong>Sigue la convención de nomenclatura estándar</strong></h3>
-<p>Cuando obsevamos las clases de excepción proporcionadas por el JDK, rápidamente nos damos cuenta que todos sus nombres terminan con <code>Exception</code>. Esta convención de nomenclatura general se utiliza en todo el sistema de Java. Y su excepción personalizada también debería seguirlo, por ejemplo, <code>ImpresoraException</code>.</p>
-<h3 id="anade-javadoc-a-tu-clase-de-excepcion-personalizada"><strong>Añade Javadoc a tu clase de excepción personalizada</strong></h3>
-<p>Las API no documentadas son muy difíciles de usar.</p>
-<p>Las clases de excepción pueden no ser la parte más obvia de tu API, pero siguen siendo parte de ella. Tan pronto como uno de sus métodos orientados al cliente arroja una excepción, la clase de excepción se convierte en parte de la API. Eso implica que requiere documentación y un buen Javadoc.</p>
-<p>El Javadoc debe describir el significado general de la excepción y las situaciones en las que podría ocurrir. El objetivo es ayudar a otros desarrolladores a comprender su API y evitar escenarios de error comunes.</p>
-<h3 id="proporciona-un-constructor">Proporciona un constructor</h3>
-<p>Normalmente, nuestro código detectará una excepción estándar antes de lanzar nuestra excepción personalizada. Esto, no debe ocultarse ya que la excepción capturada generalmente contendrá información esencial que necesitaremos para analizar el incidente.</p>
-<p>En el siguiente ejemplo, <code>NumberFormatException</code> proporciona información detallada sobre el error. Perderá esta información si no la configura como la causa de <code>MyException</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">methodA</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">entrada</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">MyException</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// código</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyException</span><span class="p">(</span><span class="s">&quot;Mensaje que describe el error.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">ErrorCode</span><span class="p">.</span><span class="na">INVALID_ENTRY</span><span class="p">);</span>
+<hr />
+<h2 id="try-catch-y-finally">🛠️ <code>try</code>, <code>catch</code> y <code>finally</code></h2>
+<h3 id="try">🔹 <code>try</code></h3>
+<p>Contiene el código que puede lanzar una excepción.</p>
+<h3 id="catch">🔹 <code>catch</code></h3>
+<p>Captura y trata la excepción.</p>
+<h3 id="finally">🔹 <code>finally</code></h3>
+<p>Se ejecuta siempre, tanto si hay excepción como si no.
+Suele usarse para liberar recursos.</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numeros</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArrayIndexOutOfBoundsException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Índice fuera de rango&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fin del bloque&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="try-with-resources">🧰 <code>try-with-resources</code></h2>
+<p>Cuando trabajamos con recursos como ficheros, streams o conexiones, Java permite cerrarlos automáticamente con <code>try-with-resources</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">leerFichero</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">ruta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">ruta</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">br</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error al leer el fichero: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><code>Exception</code> y <code>RuntimeException</code> proporcionan constructores que aceptan un <code>Throwable</code> que describe la causa de la excepción. Por tanato, nuestra excepción debería hacer lo mismo. Debemos implementar <strong>al menos un constructor que obtenga el Throwable causante como parámetro y lo establezca en la superclase</strong>.</p>
+<h3 id="ventajas">✅ Ventajas</h3>
+<ul>
+<li>código más limpio,</li>
+<li>cierre automático del recurso,</li>
+<li>menos riesgo de fugas de recursos.</li>
+</ul>
+<hr />
+<h2 id="throw-vs-throws">🎯 <code>throw</code> vs <code>throws</code></h2>
+<p>Es muy habitual que el alumnado los confunda.</p>
+<h3 id="throw">🔹 <code>throw</code></h3>
+<p>Se usa para <strong>lanzar una excepción concreta</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;La edad no puede ser negativa&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="throws">🔹 <code>throws</code></h3>
+<p>Se usa en la <strong>firma del método</strong> para indicar que puede propagarse una excepción.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">guardar</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="captura-multiple-multi-catch">🧪 Captura múltiple (<code>multi-catch</code>)</h2>
+<p>Si varias excepciones se tratan igual, pueden agruparse en un mismo <code>catch</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="s">&quot;hola&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">NullPointerException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dato no válido&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Esto evita repetir código innecesario.</p>
+<hr />
+<h2 id="orden-de-los-catch">📍 Orden de los <code>catch</code></h2>
+<p>Los <code>catch</code> deben colocarse <strong>de la excepción más específica a la más general</strong>.</p>
+<p>✅ Correcto:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Formato incorrecto&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">RuntimeException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error en tiempo de ejecución&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>❌ Incorrecto:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">RuntimeException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error general&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// nunca se alcanzará</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Formato incorrecto&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="hay-que-capturar-siempre-las-excepciones">🚫 ¿Hay que capturar siempre las excepciones?</h2>
+<p>No.</p>
+<p>Capturar por capturar es una mala práctica.</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// código</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Ese patrón es peligroso porque:</p>
+<ul>
+<li>oculta errores,</li>
+<li>dificulta depurar,</li>
+<li>y hace que el programa falle de forma silenciosa.</li>
+</ul>
+<h3 id="mejor">✅ Mejor</h3>
+<ul>
+<li>capturar lo que realmente puedas tratar,</li>
+<li>propagar lo que no puedas resolver,</li>
+<li>y dar mensajes útiles.</li>
+</ul>
+<hr />
+<h2 id="metodos-utiles-de-las-excepciones">🧾 Métodos útiles de las excepciones</h2>
+<p>Cuando capturas una excepción, tienes herramientas útiles para depurar:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getSimpleName</span><span class="p">());</span>
+<span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="metodos-frecuentes">Métodos frecuentes</h3>
+<ul>
+<li><code>getMessage()</code> → devuelve el mensaje asociado</li>
+<li><code>getClass()</code> → permite ver el tipo concreto</li>
+<li><code>printStackTrace()</code> → muestra la traza completa</li>
+<li><code>getCause()</code> → devuelve la causa original si existe</li>
+</ul>
+<hr />
+<h2 id="excepciones-personalizadas">🧩 Excepciones personalizadas</h2>
+<p>Aunque las excepciones de Java <strong>cubren casi todas las excepciones generales</strong> que están obligadas a ocurrir en la programación, a veces, necesitamos complementar estas excepciones estándar con las nuestras.</p>
+<p><em>En esos casos podemos crear nuestras propias excepciones.</em></p>
+<h3 id="cuando-tiene-sentido-crear-una">📌 ¿Cuándo tiene sentido crear una?</h3>
+<ul>
+<li>cuando el error pertenece a la lógica de tu aplicación,   </li>
+<li>cuando quieres dar un mensaje más claro,  </li>
+<li>cuando necesitas distinguir un caso concreto de negocio,  </li>
+<li>cuando quieres encapsular otra excepción con más contexto, o  </li>
+<li>cuando quieres añadir nuevos métodos o atributos que no son parte de las excepciones estándar.    </li>
+</ul>
+<hr />
+<h2 id="como-crear-una-excepcion-personalizada-checked">🏗️ Cómo crear una excepción personalizada checked</h2>
 <h2 id="pasos-para-implementar-una-excepcion-personalizada">Pasos para implementar una excepción personalizada</h2>
 <ol>
-<li>Debemos extender de la clase <code>java.lang.Exception</code>.</li>
-<li>Se debe proporcionar un constructor que establezca la excepción causante y brinde un beneficio en comparación con las excepciones estándar disponibles.</li>
+<li>Debemos extender de la clase <code>java.lang.Exception</code>.  </li>
+<li>Se debe proporcionar un constructor que establezca la excepción causante y brinde un beneficio en comparación con las excepciones estándar disponibles.  </li>
 </ol>
-<p>Ejemplo:</p>
-<p><img alt="Exception" src="../../img/ud5/exceptions5.png" /></p>
-<p><img alt="Exception" src="../../img/ud5/exceptions3.png" /></p>
-<p><code>MyException</code> usa un enum personalizado para almacenar un código de error que identifica el problema de nuestra aplicación. Los clientes pueden usar el código de error para mostrar mensajes de error localizados o decirle al usuario que incluya este código en un ticket de soporte.</p>
-<p>Para usar <code>MyException</code> en nuestra aplicación o programa necesitaremos especificarlo como parte de la signatura de un método o simplemente capturarla con un bloque <code>try-catch</code>.</p>
-<p><img alt="Exception" src="../../img/ud5/exceptions4.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Si queremos crear una excepción personalizada de tipo unchecked exception realizaremos el mismo procedimiento con la diferencia de que tendremos que extender de la clase <code>java.lang.RuntimeException</code>.</p>
-</div>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ReservaException</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">codigoReserva</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ReservaException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">codigoReserva</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">codigoReserva</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">codigoReserva</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getCodigoReserva</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">codigoReserva</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="uso">Uso</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">reservar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">plazas</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ReservaException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">plazas</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ReservaException</span><span class="p">(</span><span class="s">&quot;Las plazas deben ser mayores que 0&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">codigo</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="como-crear-una-excepcion-personalizada-unchecked">⚡ Cómo crear una excepción personalizada unchecked</h2>
+<p>Los pasos son iguales que las checked pero exteniendo de la clase <code>RuntimeException</code>: </p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EdadInvalidaException</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">RuntimeException</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">EdadInvalidaException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">EdadInvalidaException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">Throwable</span><span class="w"> </span><span class="n">cause</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">cause</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="uso_1">Uso</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setEdad</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EdadInvalidaException</span><span class="p">(</span><span class="s">&quot;La edad no puede ser negativa&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="extiendo-de-exception-o-de-runtimeexception">🧠 ¿Extiendo de <code>Exception</code> o de <code>RuntimeException</code>?</h2>
+<h3 id="extiende-de-exception-si">Extiende de <code>Exception</code> si...</h3>
+<ul>
+<li>quieres obligar al cliente a tratar el problema,  </li>
+<li>el error puede recuperarse,   </li>
+<li>el problema puede pasar, y quiero gestionarlo,     </li>
+<li>o la operación depende de algo externo.   </li>
+</ul>
+<h3 id="extiende-de-runtimeexception-si">Extiende de <code>RuntimeException</code> si...</h3>
+<ul>
+<li>no debería ocurrir si el código está bien hecho,      </li>
+<li>no tiene mucho sentido obligar a capturarlo       </li>
+<li>representa un <strong>fallo de programación</strong>,  </li>
+<li>o se trata de un estado inválido del objeto.  </li>
+</ul>
+<hr />
+<h2 id="encadenamiento-de-excepciones">🪜 Encadenamiento de excepciones</h2>
+<p>Muchas veces capturamos una excepción y queremos lanzar otra más expresiva, <strong>sin perder la causa original</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cargarUsuario</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ReservaException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ReservaException</span><span class="p">(</span><span class="s">&quot;El id del usuario no es numérico&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Esto es muy importante porque permite:</p>
+<ul>
+<li>dar un mensaje de negocio más claro,</li>
+<li>mantener la causa real,</li>
+<li>y facilitar la depuración.</li>
+</ul>
+<hr />
+<h2 id="buenas-practicas-con-excepciones">🧼 Buenas prácticas con excepciones</h2>
+<h3 id="1-usa-excepciones-estandar-cuando-ya-encajen">✅ 1. Usa excepciones estándar cuando ya encajen</h3>
+<p>No crees una excepción personalizada, si no puede proporcionar ningún beneficio. Para ello, es mejor que uses <code>IllegalArgumentException</code> o <code>IllegalStateException</code>, que ya describen bien el problema y son conocidas por los desarrolladores.</p>
+<h3 id="2-no-captures-throwable">✅ 2. No captures <code>Throwable</code></h3>
+<p>Capturaría también errores graves del sistema.</p>
+<h3 id="3-no-captures-exception-salvo-que-tengas-un-motivo-claro">✅ 3. No captures <code>Exception</code> salvo que tengas un motivo claro</h3>
+<p>Es demasiado general y puede ocultar problemas importantes.</p>
+<h3 id="4-escribe-mensajes-utiles">✅ 4. Escribe mensajes útiles</h3>
+<p>Mal:</p>
+<div class="highlight"><pre><span></span><code><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;Error&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>Mejor:</p>
+<div class="highlight"><pre><span></span><code><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;El precio no puede ser negativo&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="5-no-uses-excepciones-para-controlar-el-flujo-normal">✅ 5. No uses excepciones para controlar el flujo normal</h3>
+<p>Mal enfoque:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">texto</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Si el caso es esperable, muchas veces conviene validar antes.</p>
+<h3 id="6-manten-la-causa-original-cuando-relances">✅ 6. Mantén la causa original cuando relances</h3>
+<p>Usa el constructor con <code>cause</code> siempre que aporte contexto.</p>
+<h3 id="7-crea-excepciones-de-dominio-cuando-aporten-claridad">✅ 7. Crea excepciones de dominio cuando aporten claridad</h3>
+<p>Cuando obsevamos las clases de excepción proporcionadas por el JDK, rápidamente nos damos cuenta que <strong>todos sus nombres terminan con <code>Exception</code></strong>. Esta convención de nomenclatura general se utiliza en todo el sistema de Java.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li><code>ReservaCompletaException</code></li>
+<li><code>SaldoInsuficienteException</code></li>
+<li><code>AlumnoDuplicadoException</code></li>
+</ul>
+<hr />
+<h2 id="excepciones-y-diseno-orientado-a-objetos">🧱 Excepciones y diseño orientado a objetos</h2>
+<p>Las excepciones también forman parte del diseño de una API.
+No son solo “errores”, sino una forma de expresar contratos y reglas.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CuentaBancaria</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">saldo</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">retirar</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">cantidad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cantidad</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;La cantidad debe ser positiva&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cantidad</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">saldo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalStateException</span><span class="p">(</span><span class="s">&quot;Saldo insuficiente&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">saldo</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">cantidad</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Aquí las excepciones ayudan a proteger el estado del objeto.</p>
+<hr />
+<h2 id="excepciones-y-solid">🧭 Excepciones y SOLID</h2>
+<p>Aunque SOLID no trata solo de excepciones, sí tiene relación con cómo las diseñamos.</p>
+<h3 id="s-single-responsibility-principle">🔹 S — Single Responsibility Principle</h3>
+<p>Una clase no debería mezclar lógica de negocio con una gestión caótica de errores.
+Cada parte debe tener una responsabilidad clara.</p>
+<h3 id="o-openclosed-principle">🔹 O — Open/Closed Principle</h3>
+<p>Podemos ampliar el comportamiento creando nuevas excepciones de dominio sin reescribir media aplicación.</p>
+<h3 id="l-liskov-substitution-principle">🔹 L — Liskov Substitution Principle</h3>
+<p>Las subclases no deberían romper las expectativas del contrato lanzando excepciones incoherentes o más amplias de forma injustificada.</p>
+<h3 id="i-interface-segregation-principle">🔹 I — Interface Segregation Principle</h3>
+<p>Las interfaces no deben obligar a clientes a tratar excepciones que no tienen sentido para su uso.</p>
+<h3 id="d-dependency-inversion-principle">🔹 D — Dependency Inversion Principle</h3>
+<p>La lógica de alto nivel puede depender de abstracciones y traducir excepciones técnicas a excepciones de dominio más expresivas.</p>
+<h3 id="idea-practica">🧠 Idea práctica</h3>
+<p>En una buena arquitectura:</p>
+<ul>
+<li>la capa de acceso a datos puede lanzar excepciones técnicas,</li>
+<li>la capa de servicio puede transformarlas en excepciones de negocio,</li>
+<li>y la capa de presentación puede mostrar mensajes adecuados.</li>
+</ul>
+<hr />
+<h2 id="ejemplo-completo">🧪 Ejemplo completo</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StockInsuficienteException</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">StockInsuficienteException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Producto</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">stock</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Producto</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">stock</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">isBlank</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;El nombre no puede estar vacío&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">stock</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;El stock no puede ser negativo&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">stock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stock</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">vender</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">cantidad</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">StockInsuficienteException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cantidad</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;La cantidad debe ser mayor que 0&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cantidad</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">stock</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StockInsuficienteException</span><span class="p">(</span>
+<span class="w">                </span><span class="s">&quot;No hay stock suficiente de &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;. Stock actual: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">stock</span>
+<span class="w">            </span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">stock</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">cantidad</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Producto</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Producto</span><span class="p">(</span><span class="s">&quot;Teclado&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">p</span><span class="p">.</span><span class="na">vender</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">StockInsuficienteException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error de negocio: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IllegalArgumentException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error de validación: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="errores-frecuentes">❌ Errores frecuentes</h2>
+<ul>
+<li>confundir <code>throw</code> con <code>throws</code></li>
+<li>pensar que todas las excepciones deben capturarse</li>
+<li>usar <code>catch (Exception e)</code> para todo</li>
+<li>lanzar <code>RuntimeException</code> sin mensaje claro</li>
+<li>crear excepciones personalizadas innecesarias</li>
+<li>olvidar pasar la causa original</li>
+<li>usar excepciones donde bastaba una validación previa</li>
+</ul>
+<hr />
+<h2 id="resumen-final">📝 Resumen final</h2>
+<h3 id="que-debes-recordar">Qué debes recordar</h3>
+<ul>
+<li>Las excepciones permiten gestionar errores de forma controlada.</li>
+<li><code>Throwable</code> es la raíz de la jerarquía.</li>
+<li><code>Error</code> no suele capturarse.</li>
+<li>Las <strong>checked</strong> obligan a capturar o propagar.</li>
+<li>Las <strong>unchecked</strong> suelen reflejar errores de programación o estados inválidos.</li>
+<li><code>throw</code> lanza una excepción y <code>throws</code> la declara.</li>
+<li>Una excepción personalizada debe aportar claridad real.</li>
+<li>Las excepciones también forman parte del diseño de una buena API.</li>
+<li>SOLID ayuda a diseñar código donde los errores se gestionan con sentido y sin mezclar responsabilidades.</li>
+</ul>
+<hr />
+<h2 id="mini-guia">💬 Mini guía</h2>
+<h3 id="que-usar-normalmente">Qué usar normalmente</h3>
+<ul>
+<li><code>IllegalArgumentException</code> → argumento inválido</li>
+<li><code>IllegalStateException</code> → estado del objeto no válido</li>
+<li>checked personalizada → problema de negocio recuperable</li>
+<li>unchecked personalizada → incumplimiento claro de reglas o precondiciones</li>
+</ul>
+<hr />
 
 
   
