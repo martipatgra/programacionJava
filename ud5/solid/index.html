@@ -1332,8 +1332,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#los-5-principios-solid" class="md-nav__link">
-    🔹Los 5 principios SOLID
+  <a href="#que-significa-solid" class="md-nav__link">
+    🔹¿Qué significa SOLID?
   </a>
   
 </li>
@@ -2193,8 +2193,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#los-5-principios-solid" class="md-nav__link">
-    🔹Los 5 principios SOLID
+  <a href="#que-significa-solid" class="md-nav__link">
+    🔹¿Qué significa SOLID?
   </a>
   
 </li>
@@ -2250,8 +2250,22 @@
 
 
 <h1 id="introduccion-a-solid">✨ Introducción a SOLID</h1>
-<p>Los principios <strong>SOLID</strong> son un conjunto de buenas prácticas para diseñar software orientado a objetos.</p>
-<p>Fueron popularizados por <strong>Robert C. Martin (Uncle Bob)</strong>.</p>
+<p><strong>SOLID</strong> es <strong>un conjunto de 5 principios de diseño de software orientado a objetos</strong> que ayudan a escribir código <strong>más limpio, mantenible y fácil de modificar</strong>.</p>
+<p>No es una tecnología, ni una librería, ni algo propio de Java.
+Es simplemente <strong>una forma de pensar cómo diseñar clases</strong>.</p>
+<p>Los principios fueron propuestos por <strong>Robert C. Martin</strong>, un ingeniero de software muy famoso. 
+- Los introdujo a principios de los <strong>años 2000</strong>.<br />
+- Estaban relacionados con ideas anteriores de <strong>programación orientada a objetos</strong>.  <br />
+- Más tarde alguien agrupó los 5 principios y formó el acrónimo <strong>SOLID</strong>.  </p>
+<p>El objetivo era responder a un problema clásico:</p>
+<blockquote>
+<p><em>¿Por qué muchos programas orientados a objetos acaban siendo un caos?</em></p>
+</blockquote>
+<p>Porque las clases:<br />
+- hacen demasiadas cosas  <br />
+- dependen demasiado unas de otras<br />
+- son difíciles de cambiar<br />
+SOLID <strong>intenta evitar eso</strong>.</p>
 <p>Ayudan a que el código sea:</p>
 <ul>
 <li>🧱 Más mantenible   </li>
@@ -2259,7 +2273,8 @@
 <li>🧠 Más fácil de entender    </li>
 </ul>
 <hr />
-<h2 id="los-5-principios-solid">🔹Los 5 principios SOLID</h2>
+<h2 id="que-significa-solid">🔹¿Qué significa SOLID?</h2>
+<p>SOLID es un acrónimo con <strong>5 principios</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -2270,23 +2285,23 @@
 <tbody>
 <tr>
 <td>🟢 <strong>S</strong> – Single Responsibility</td>
-<td>Una clase debe tener una única responsabilidad</td>
+<td>Una clase debe tener <strong>una única responsabilidad</strong></td>
 </tr>
 <tr>
 <td>🔵 <strong>O</strong> – Open/Closed</td>
-<td>El código debe poder ampliarse sin modificarse</td>
+<td>El código debe <strong>permitir ampliarse sin modificarse</strong></td>
 </tr>
 <tr>
 <td>🟡 <strong>L</strong> – Liskov Substitution</td>
-<td>Los hijos deben poder sustituir al padre</td>
+<td>Los hijos deben <strong>poder sustituir al padre</strong></td>
 </tr>
 <tr>
 <td>🟣 <strong>I</strong> – Interface Segregation</td>
-<td>Interfaces pequeñas y específicas</td>
+<td>Mejor <strong>interfaces pequeñas</strong> y específicas que una enorme</td>
 </tr>
 <tr>
 <td>🔴 <strong>D</strong> – Dependency Inversion</td>
-<td>Depender de abstracciones, no de implementaciones</td>
+<td>Depender de <strong>abstracciones</strong>, no de implementaciones</td>
 </tr>
 </tbody>
 </table>
