@@ -1407,6 +1407,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mejor-diseno_2" class="md-nav__link">
+    Mejor diseño
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1428,7 +1435,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mejor-diseno_2" class="md-nav__link">
+  <a href="#mejor-diseno_3" class="md-nav__link">
     Mejor diseño
   </a>
   
@@ -1455,7 +1462,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mejor-diseno_3" class="md-nav__link">
+  <a href="#mejor-diseno_4" class="md-nav__link">
     Mejor diseño
   </a>
   
@@ -2396,6 +2403,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mejor-diseno_2" class="md-nav__link">
+    Mejor diseño
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2417,7 +2431,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mejor-diseno_2" class="md-nav__link">
+  <a href="#mejor-diseno_3" class="md-nav__link">
     Mejor diseño
   </a>
   
@@ -2444,7 +2458,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mejor-diseno_3" class="md-nav__link">
+  <a href="#mejor-diseno_4" class="md-nav__link">
     Mejor diseño
   </a>
   
@@ -2633,6 +2647,32 @@ Es simplemente <strong>una forma de pensar cómo diseñar clases</strong>.</p>
 <span class="p">}</span>
 </code></pre></div>
 <p>Un pingüino <strong>no puede volar</strong>, por lo que esta herencia está mal diseñada.</p>
+<h3 id="mejor-diseno_2">Mejor diseño</h3>
+<p><code>Ave</code> no debería tener <code>volar()</code> si no, estás diciendo que todas las aves vuelan. </p>
+<p><code>volar</code> debe ir en una clase o interfaz más específica.</p>
+<p>Se arregla <strong>quitando <code>volar()</code> de <code>Ave</code></strong> y poniendo esa capacidad solo en las clases que realmente vuelan.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Ave</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">ponerHuevos</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El ave pone huevos&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span> <span class="nc">Volador</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">volar</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Aguila</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Ave</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Volador</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">volar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El águila vuela&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Pinguino</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Ave</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">nadar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El pingüino nada&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
 <h2 id="i-interface-segregation-principle">I — Interface Segregation Principle</h2>
 <p>👉 <strong>Es mejor tener muchas interfaces pequeñas que una muy grande</strong>.</p>
@@ -2643,7 +2683,7 @@ Es simplemente <strong>una forma de pensar cómo diseñar clases</strong>.</p>
 <span class="p">}</span>
 </code></pre></div>
 <p>Un perro tendría que implementar <code>volar()</code> aunque no vuele.</p>
-<h3 id="mejor-diseno_2">Mejor diseño</h3>
+<h3 id="mejor-diseno_3">Mejor diseño</h3>
 <div class="highlight"><pre><span></span><code><span class="kd">interface</span> <span class="nc">Volador</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">volar</span><span class="p">();</span>
 <span class="p">}</span>
@@ -2662,7 +2702,7 @@ Es simplemente <strong>una forma de pensar cómo diseñar clases</strong>.</p>
 <span class="p">}</span>
 </code></pre></div>
 <p>La clase queda <strong>fuertemente acoplada a MySQL</strong>.</p>
-<h3 id="mejor-diseno_3">Mejor diseño</h3>
+<h3 id="mejor-diseno_4">Mejor diseño</h3>
 <div class="highlight"><pre><span></span><code><span class="kd">interface</span> <span class="nc">Database</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">guardar</span><span class="p">();</span>
 <span class="p">}</span>
