@@ -1,0 +1,3404 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
+    
+    
+      
+        <title>📋 `List` en Java - Programación en Java</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-FTWMZYNBPC"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-FTWMZYNBPC",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-FTWMZYNBPC",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="Teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#list-en-java" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Programación en Java" class="md-header__button md-logo" aria-label="Programación en Java" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación en Java
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📋 `List` en Java
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="Teal"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="Teal"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Programación en Java" class="md-nav__button md-logo" aria-label="Programación en Java" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Programación en Java
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        🔥 Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          💾 Elementos de un programa informático
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          💾 Elementos de un programa informático
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/1elementos/" class="md-nav__link">
+        💾 Programa y lenguajes de programación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          💾 El lenguaje Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          💾 El lenguaje Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/121conceptosbasicos/" class="md-nav__link">
+        Conceptos básicos del lenguaje
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/122setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/123holamundo/" class="md-nav__link">
+        Proyecto Hola Mundo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          💾 Variables, sentencias y paquetes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          💾 Variables, sentencias y paquetes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/131variables/" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/132sentencias/" class="md-nav__link">
+        Sentencias y paquetes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          💾 Tipos de datos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          💾 Tipos de datos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/14datatypejava/" class="md-nav__link">
+        Datos primitivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/142noprimitive/" class="md-nav__link">
+        Datos no primitivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/1421enum/" class="md-nav__link">
+        Enum
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/15operators/" class="md-nav__link">
+        💾 Operadores y expresiones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/16comments/" class="md-nav__link">
+        💾 Comentarios en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/17constantesliterales/" class="md-nav__link">
+        💾 Constantes y literales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/18inputoutputconsole/" class="md-nav__link">
+        💾 Entrada y salida de información por consola
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/19poo/" class="md-nav__link">
+        💾 Introducción a la programación orientada a objetos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          🖲️ Estructuras básicas de control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          🖲️ Estructuras básicas de control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          🖲️ Estructuras de selección
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          🖲️ Estructuras de selección
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/1seleccion/" class="md-nav__link">
+        If Statement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/11booleanexpressions/" class="md-nav__link">
+        Expresiones booleanas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/2switch/" class="md-nav__link">
+        Switch Statement
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          🖲️ Estructuras de repetición
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          🖲️ Estructuras de repetición
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/22while/" class="md-nav__link">
+        Bucle while
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/22dowhile/" class="md-nav__link">
+        Bucle do while
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/22whileif/" class="md-nav__link">
+        Bucles while con if
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/22for/" class="md-nav__link">
+        Bucle for
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/22nestedloop/" class="md-nav__link">
+        Bucles anidados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/22principlesloop/" class="md-nav__link">
+        Principios del diseño de bucles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          🖲️ Estructuras de salto
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          🖲️ Estructuras de salto
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/23breakcontinue/" class="md-nav__link">
+        Sentencias break y continue
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/24exceptions/" class="md-nav__link">
+        🖲️ Control de excepciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/25fallos/" class="md-nav__link">
+        🖲️ Prueba y depuración de aplicaciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/26methods/" class="md-nav__link">
+        🖲️ Introducción a los métodos en Java
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/string/" class="md-nav__link">
+        🧵 String
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/6recursion/" class="md-nav__link">
+        ♾️ Recursividad
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          🌎 Programación orientada a objetos POO
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          🌎 Programación orientada a objetos POO
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/1metodoclase/" class="md-nav__link">
+        🌎 Clases en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/varargs/" class="md-nav__link">
+        🌎 varargs en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/5static/" class="md-nav__link">
+        🌎 Variables, métodos y clases estáticas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/metodosinstancia/" class="md-nav__link">
+        🌎 Sobrecarga de Métodos y Paso por Valor vs Referencia en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/7nullvalue/" class="md-nav__link">
+        🌎 Valor `null` en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/8pojo/" class="md-nav__link">
+        🌎 ¿Qué son los POJO en Java?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/record/" class="md-nav__link">
+        🌎 Records en Java
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          📅 Arrays
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          📅 Arrays
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/1arrays/" class="md-nav__link">
+        📅 Introducción
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/2usefularrays/" class="md-nav__link">
+        📅 Algoritmos útiles en arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/3referencetypearrays/" class="md-nav__link">
+        📅 Tipos de referencia y tipos de valor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/4arrayobjects/" class="md-nav__link">
+        📅 Array de objetos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/6searcharrays/" class="md-nav__link">
+        📅 Algoritmos de búsqueda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/5sortarrays/" class="md-nav__link">
+        📅 Algoritmos de ordenación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/7twodimensionarray/" class="md-nav__link">
+        📅 Arrays multidimensionales
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          ✨ POO avanzada
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          ✨ POO avanzada
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/1herencia/" class="md-nav__link">
+        ✨ Herencia
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/2encomabspoli/" class="md-nav__link">
+        ✨ Encapsulación, Composición, Polimorfismo y Abstracción en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/sealedclasses/" class="md-nav__link">
+        ✨ Sealed Classes en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/interfacesysealed/" class="md-nav__link">
+        ✨ Interfaces en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/7exceptions/" class="md-nav__link">
+        ✨ Excepciones en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/enumpoo/" class="md-nav__link">
+        ✨ Enum en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/solid/" class="md-nav__link">
+        ✨ Introducción a SOLID
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          🧆 Colecciones en Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          🧆 Colecciones en Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introductioncollections/" class="md-nav__link">
+        🧆 Introducción
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1list/" class="md-nav__link">
+        🧆 List y ArrayList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2linkedlist/" class="md-nav__link">
+        🧆 Linked List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3innerclass/" class="md-nav__link">
+        🧆 Clases Anidadas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4map/" class="md-nav__link">
+        🧆 Map
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5set/" class="md-nav__link">
+        🧆 Set
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6ordercollections/" class="md-nav__link">
+        🧆 Colecciones ordenadas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7final/" class="md-nav__link">
+        🧆 Keyword Final
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8hashcode_equals/" class="md-nav__link">
+        🧆 Equals & hashcode
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          🦄 Programación avanzada
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          🦄 Programación avanzada
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/9var/" class="md-nav__link">
+        🦄 Keyword var
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/1generics/" class="md-nav__link">
+        🦄 Genéricos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/2lambda/" class="md-nav__link">
+        🦄 Expresiones lambda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/3predicates/" class="md-nav__link">
+        🦄 Predicate, Supplier and Consumer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/4functions/" class="md-nav__link">
+        🦄 Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/5references/" class="md-nav__link">
+        🦄 Referencia a métodos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/8optional/" class="md-nav__link">
+        🦄 Optional
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/6streams/" class="md-nav__link">
+        🦄 Streams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/7regularexpressions/" class="md-nav__link">
+        🦄 Expresiones regulares
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          🤩 Interfaces de usuario
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          🤩 Interfaces de usuario
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/1javafx/" class="md-nav__link">
+        🤩 Java FX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/2stage/" class="md-nav__link">
+        🤩 Stage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/3scene/" class="md-nav__link">
+        🤩 Scene
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/4node/" class="md-nav__link">
+        🤩 Node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/6layouts/" class="md-nav__link">
+        🤩 Layouts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/5uicontrols/" class="md-nav__link">
+        🤩 Controles UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/7events/" class="md-nav__link">
+        🤩 Eventos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          📝 Entrada/Salida (I/O) de la información
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          📝 Entrada/Salida (I/O) de la información
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/1io/" class="md-nav__link">
+        📝 Input/Output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/12binaryfiles/" class="md-nav__link">
+        📝 Ficheros binarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/13characterfiles/" class="md-nav__link">
+        📝 Ficheros de caracteres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/14fileclass/" class="md-nav__link">
+        📝 Clase File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/15javanio/" class="md-nav__link">
+        📝 java.nio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/16randomaccessfile/" class="md-nav__link">
+        📝 Ficheros de acceso aleatorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/17configfiles/" class="md-nav__link">
+        📝 Ficheros de configuración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/18xmlfiles/" class="md-nav__link">
+        📝 XML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/19jsonfiles/" class="md-nav__link">
+        📝 JSON
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/20createjar/" class="md-nav__link">
+        📝 Crear un .jar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/21tryresources/" class="md-nav__link">
+        📝 try-with-resources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          🧠 Persistencia de la información
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          🧠 Persistencia de la información
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud10/1persistence/" class="md-nav__link">
+        🧠 Persistencia
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud10/2mapeo/" class="md-nav__link">
+        🧠 Desfase objeto-relacional
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud10/3conectores/" class="md-nav__link">
+        🧠 Manejo de conectores - JDBC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud10/4transactions/" class="md-nav__link">
+        🧠 Transacciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud10/6rendimiento/" class="md-nav__link">
+        🧠 Mejora del rendimiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud10/7projectstructure/" class="md-nav__link">
+        🧠 Estructura de los proyectos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shortcuts/" class="md-nav__link">
+        🔣 Atajos de teclado para IntelliJ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        ❤️‍🔥 About me
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-list" class="md-nav__link">
+    1️⃣ ¿Qué es List?
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ ¿Qué es List?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    🧠 Idea clave
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-caracteristicas-principales-de-list" class="md-nav__link">
+    2️⃣ Características principales de List
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Características principales de List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mantiene-el-orden-de-insercion" class="md-nav__link">
+    ✅ Mantiene el orden de inserción
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permite-duplicados" class="md-nav__link">
+    ✅ Permite duplicados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permite-acceso-por-indice" class="md-nav__link">
+    ✅ Permite acceso por índice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puede-almacenar-objetos" class="md-nav__link">
+    ✅ Puede almacenar objetos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-implementaciones-principales-de-list" class="md-nav__link">
+    3️⃣ Implementaciones principales de List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-arraylist" class="md-nav__link">
+    4️⃣ ArrayList
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣ ArrayList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona-internamente" class="md-nav__link">
+    🧠 ¿Cómo funciona internamente?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-arraylist" class="md-nav__link">
+    ✅ Ventajas de ArrayList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenientes-de-arraylist" class="md-nav__link">
+    ⚠️ Inconvenientes de ArrayList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-basico-con-arraylist" class="md-nav__link">
+    💡 Ejemplo básico con ArrayList
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-linkedlist" class="md-nav__link">
+    5️⃣ LinkedList
+  </a>
+  
+    <nav class="md-nav" aria-label="5️⃣ LinkedList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona-internamente_1" class="md-nav__link">
+    🧠 ¿Cómo funciona internamente?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-linkedlist" class="md-nav__link">
+    ✅ Ventajas de LinkedList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenientes-de-linkedlist" class="md-nav__link">
+    ⚠️ Inconvenientes de LinkedList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-basico-con-linkedlist" class="md-nav__link">
+    💡 Ejemplo básico con LinkedList
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-arraylist-vs-linkedlist" class="md-nav__link">
+    6️⃣ ArrayList vs LinkedList
+  </a>
+  
+    <nav class="md-nav" aria-label="6️⃣ ArrayList vs LinkedList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-practica" class="md-nav__link">
+    📌 Regla práctica
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-eficiencia-de-operaciones" class="md-nav__link">
+    7️⃣ Eficiencia de operaciones
+  </a>
+  
+    <nav class="md-nav" aria-label="7️⃣ Eficiencia de operaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complejidad-aproximada" class="md-nav__link">
+    📊 Complejidad aproximada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-significa-esto" class="md-nav__link">
+    🧠 ¿Qué significa esto?
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 ¿Qué significa esto?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o1" class="md-nav__link">
+    O(1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on" class="md-nav__link">
+    O(n)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entender-que" class="md-nav__link">
+    🎯 Entender que...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-metodos-mas-usados-de-list" class="md-nav__link">
+    8️⃣ Métodos más usados de List
+  </a>
+  
+    <nav class="md-nav" aria-label="8️⃣ Métodos más usados de List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addelemento" class="md-nav__link">
+    ➕ add(elemento)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addindice-elemento" class="md-nav__link">
+    ➕ add(indice, elemento)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getindice" class="md-nav__link">
+    👀 get(indice)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setindice-elemento" class="md-nav__link">
+    ✏️ set(indice, elemento)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeindice" class="md-nav__link">
+    ❌ remove(indice)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeobjeto" class="md-nav__link">
+    ❌ remove(objeto)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#size" class="md-nav__link">
+    📏 size()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containsobjeto" class="md-nav__link">
+    🔍 contains(objeto)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexofobjeto" class="md-nav__link">
+    📍 indexOf(objeto)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    🧹 clear()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isempty" class="md-nav__link">
+    ❓ isEmpty()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-recorrer-una-list" class="md-nav__link">
+    9️⃣ Recorrer una List
+  </a>
+  
+    <nav class="md-nav" aria-label="9️⃣ Recorrer una List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#con-for-clasico" class="md-nav__link">
+    🔁 Con for clásico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#con-for-each" class="md-nav__link">
+    🔁 Con for-each
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#con-while" class="md-nav__link">
+    🔁 Con while
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-completo-con-list" class="md-nav__link">
+    🔟 Ejemplo completo con List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-listas-de-objetos" class="md-nav__link">
+    1️⃣1️⃣ Listas de objetos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-errores-tipicos-con-list" class="md-nav__link">
+    1️⃣2️⃣ Errores típicos con List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confundir-size-con-length" class="md-nav__link">
+    ⚠️ Confundir size() con length
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Confundir size() con length">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intentar-usar-corchetes" class="md-nav__link">
+    ⚠️ Intentar usar corchetes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#olvidar-importar-las-clases" class="md-nav__link">
+    ⚠️ Olvidar importar las clases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pensar-que-list-se-puede-instanciar" class="md-nav__link">
+    ⚠️ Pensar que List se puede instanciar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceder-a-indices-fuera-de-rango" class="md-nav__link">
+    ⚠️ Acceder a índices fuera de rango
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confundir-removeint-con-removeobject" class="md-nav__link">
+    ⚠️ Confundir remove(int) con remove(Object)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-buenas-practicas" class="md-nav__link">
+    1️⃣3️⃣ Buenas prácticas
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣3️⃣ Buenas prácticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programar-contra-la-interfaz" class="md-nav__link">
+    ✅ Programar contra la interfaz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elegir-arraylist-por-defecto" class="md-nav__link">
+    ✅ Elegir ArrayList por defecto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usar-nombres-claros" class="md-nav__link">
+    ✅ Usar nombres claros
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-final" class="md-nav__link">
+    🧠 Resumen final
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idea-practica" class="md-nav__link">
+    🎯 Idea práctica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-mas-usados-de-list-y-eficiencia" class="md-nav__link">
+    📊 Métodos más usados de List y eficiencia
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="list-en-java">📋 <code>List</code> en Java</h1>
+<p>En este apartado vamos a estudiar una de las interfaces <strong>más importantes</strong> del framework de colecciones de Java: <strong><code>List</code></strong>.</p>
+<hr />
+<h2 id="1-que-es-list">1️⃣ ¿Qué es <code>List</code>?</h2>
+<p><code>List</code> es una <strong>interfaz</strong> de Java que representa una <strong>secuencia ordenada de elementos</strong>.</p>
+<p>Eso significa que en una lista:</p>
+<ul>
+<li>los elementos <strong>mantienen un orden</strong></li>
+<li>cada elemento tiene una <strong>posición o índice</strong></li>
+<li>se pueden guardar <strong>elementos duplicados</strong></li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+<span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">);</span>
+<span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">);</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>[Ana, Luis, Ana]
+</code></pre></div>
+<p>Observa que:</p>
+<ul>
+<li><code>"Ana"</code> aparece dos veces</li>
+<li>los elementos salen en el mismo orden en el que se añadieron</li>
+<li>podemos acceder a cada uno por posición</li>
+</ul>
+<hr />
+<h3 id="idea-clave">🧠 Idea clave</h3>
+<p>Una <code>List</code> se parece bastante a un array, pero con ventajas importantes:</p>
+<ul>
+<li>puede crecer y reducirse dinámicamente</li>
+<li>tiene muchos métodos útiles ya incorporados</li>
+<li>permite trabajar de forma más cómoda con grupos de datos</li>
+</ul>
+<hr />
+<h2 id="2-caracteristicas-principales-de-list">2️⃣ Características principales de <code>List</code></h2>
+<h3 id="mantiene-el-orden-de-insercion">✅ Mantiene el orden de inserción</h3>
+<p>Si añades elementos en este orden:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lista</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;rojo&quot;</span><span class="p">);</span>
+<span class="n">lista</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;verde&quot;</span><span class="p">);</span>
+<span class="n">lista</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;azul&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>La lista quedará así:</p>
+<div class="highlight"><pre><span></span><code>[rojo, verde, azul]
+</code></pre></div>
+<hr />
+<h3 id="permite-duplicados">✅ Permite duplicados</h3>
+<p>A diferencia de un <code>Set</code>, una <code>List</code> sí permite repetir elementos:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lista</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+<span class="n">lista</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>Resultado:</p>
+<div class="highlight"><pre><span></span><code>[Ana, Ana]
+</code></pre></div>
+<hr />
+<h3 id="permite-acceso-por-indice">✅ Permite acceso por índice</h3>
+<p>Igual que en los arrays, cada elemento tiene una posición:</p>
+<div class="highlight"><pre><span></span><code>Índice:   0      1       2
+Valor:  Ana    Luis   Carlos
+</code></pre></div>
+<p>Podemos acceder así:</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">lista</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>Luis
+</code></pre></div>
+<hr />
+<h3 id="puede-almacenar-objetos">✅ Puede almacenar objetos</h3>
+<p>Una <code>List</code> puede guardar:</p>
+<ul>
+<li><code>String</code></li>
+<li><code>Integer</code></li>
+<li><code>Double</code></li>
+<li>objetos creados por ti, como <code>Alumno</code>, <code>Producto</code>, <code>Reserva</code>, etc.</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Producto</span><span class="o">&gt;</span><span class="w"> </span><span class="n">productos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="3-implementaciones-principales-de-list">3️⃣ Implementaciones principales de <code>List</code></h2>
+<p><code>List</code> es una <strong>interfaz</strong>, así que no se puede instanciar directamente:</p>
+<p>❌ Incorrecto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>✔ Correcto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>Las principales clases que implementan <code>List</code> son:</p>
+<table>
+<thead>
+<tr>
+<th>Clase</th>
+<th>Características principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ArrayList</strong></td>
+<td>Lista basada en array dinámico. Muy rápida para acceder por índice.</td>
+</tr>
+<tr>
+<td><strong>LinkedList</strong></td>
+<td>Lista basada en nodos enlazados. Mejor para insertar o eliminar en medio.</td>
+</tr>
+<tr>
+<td><strong>Vector</strong></td>
+<td>Similar a ArrayList pero sincronizado (antiguo, casi no se usa).</td>
+</tr>
+<tr>
+<td><strong>Stack</strong></td>
+<td>Implementa una pila (LIFO). También es una clase antigua basada en Vector.</td>
+</tr>
+</tbody>
+</table>
+<p>Pero en este tema nos vamos a centrar sobre todo en las <strong>dos más importantes y más usadas</strong>:</p>
+<ul>
+<li><strong><code>ArrayList</code></strong></li>
+<li><strong><code>LinkedList</code></strong></li>
+</ul>
+<hr />
+<h2 id="4-arraylist">4️⃣ <code>ArrayList</code></h2>
+<p>Es <strong>la implementación de <code>List</code> más utilizada</strong>.</p>
+<p><code>ArrayList</code> es una implementación de <code>List</code> basada internamente en un <strong>array dinámico</strong>.</p>
+<p>Es decir:</p>
+<ul>
+<li>por dentro usa un array</li>
+<li>pero ese array puede crecer cuando se llena</li>
+<li>Java se encarga automáticamente de crear uno más grande y copiar los elementos</li>
+</ul>
+<hr />
+<h3 id="como-funciona-internamente">🧠 ¿Cómo funciona internamente?</h3>
+<p>De forma simplificada, <strong>internamente</strong> ocurre algo parecido a esto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Object</span><span class="o">[]</span><span class="w"> </span><span class="n">elementos</span><span class="p">;</span>
+</code></pre></div>
+<p>Cuando el <code>ArrayList</code> se llena:</p>
+<ol>
+<li>se crea un array más grande</li>
+<li>se copian los elementos antiguos</li>
+<li>se sigue trabajando con el nuevo array</li>
+</ol>
+<p>Eso hace que para el programador sea muy cómodo, porque no tiene que preocuparse por el tamaño.</p>
+<hr />
+<h3 id="ventajas-de-arraylist">✅ Ventajas de <code>ArrayList</code></h3>
+<ul>
+<li>acceso muy rápido por índice</li>
+<li>muy cómodo de usar</li>
+<li>ideal cuando hacemos muchas lecturas</li>
+<li>suele ser la implementación más usada</li>
+</ul>
+<hr />
+<h3 id="inconvenientes-de-arraylist">⚠️ Inconvenientes de <code>ArrayList</code></h3>
+<ul>
+<li>insertar o borrar en medio puede ser más lento</li>
+<li>porque hay que desplazar elementos, ya que internamente es un array.</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>[Ana, Luis, Carlos, Marta]
+</code></pre></div>
+<p>Si borramos <code>"Luis"</code>:</p>
+<div class="highlight"><pre><span></span><code>[Ana, Carlos, Marta]
+</code></pre></div>
+<p>Java tiene que mover los elementos posteriores una posición.</p>
+<hr />
+<h3 id="ejemplo-basico-con-arraylist">💡 Ejemplo básico con <code>ArrayList</code></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploArrayList</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Carlos&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>[Ana, Luis, Carlos]
+</code></pre></div>
+<hr />
+<h2 id="5-linkedlist">5️⃣ <code>LinkedList</code></h2>
+<p><code>LinkedList</code> es una implementación de <code>List</code> basada en una <strong>lista enlazada</strong>.</p>
+<p>En vez de guardar los elementos en posiciones consecutivas de un array, cada elemento se almacena en un <strong>nodo</strong> (objeto).</p>
+<p>Cada nodo contiene:</p>
+<ul>
+<li>el dato</li>
+<li>una referencia al nodo siguiente</li>
+<li>y en Java además, en esta implementación, también una referencia al anterior</li>
+</ul>
+<p>Por eso se dice que <code>LinkedList</code> es una <strong>lista doblemente enlazada</strong>.</p>
+<hr />
+<h3 id="como-funciona-internamente_1">🧠 ¿Cómo funciona internamente?</h3>
+<p>Simplificando mucho, sería algo parecido a esto:</p>
+<div class="highlight"><pre><span></span><code>[Ana] &lt;-&gt; [Luis] &lt;-&gt; [Carlos] &lt;-&gt; [Marta]
+</code></pre></div>
+<p>Cada nodo “sabe” quién va antes y quién va después.</p>
+<p><img alt="LinkedList" src="../../img/ud6/linkedlist1.png" /></p>
+<hr />
+<h3 id="ventajas-de-linkedlist">✅ Ventajas de <code>LinkedList</code></h3>
+<ul>
+<li>insertar o eliminar elementos al principio o en medio puede ser más eficiente que en <code>ArrayList</code></li>
+</ul>
+<hr />
+<h3 id="inconvenientes-de-linkedlist">⚠️ Inconvenientes de <code>LinkedList</code></h3>
+<ul>
+<li>acceder por índice es más lento</li>
+<li>ocupa más memoria</li>
+<li>en muchos casos prácticos, <code>ArrayList</code> sigue siendo mejor elección</li>
+</ul>
+<p>Para acceder al elemento de índice 500, por ejemplo, no puede ir directamente: tiene que recorrer nodos hasta llegar a ese.</p>
+<hr />
+<h3 id="ejemplo-basico-con-linkedlist">💡 Ejemplo básico con <code>LinkedList</code></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.LinkedList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploLinkedList</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Carlos&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>[Ana, Luis, Carlos]
+</code></pre></div>
+<hr />
+<h2 id="6-arraylist-vs-linkedlist">6️⃣ <code>ArrayList</code> vs <code>LinkedList</code></h2>
+<p><strong>ArrayList</strong></p>
+<ul>
+<li>Es como una fila de cajas contiguas.  </li>
+<li>Ir a una posición concreta es rapidísimo. </li>
+<li>Pero meter o quitar algo en medio molesta, porque hay que mover lo que viene detrás.  </li>
+</ul>
+<p><strong>LinkedList</strong></p>
+<ul>
+<li>Es como una cadena de nodos enlazados.    </li>
+<li>Insertar o quitar al principio o al final puede ser muy fácil.    </li>
+<li>Pero llegar a una posición concreta cuesta más, porque hay que ir pasando nodo a nodo.    </li>
+</ul>
+<h3 id="regla-practica">📌 Regla práctica</h3>
+<p>En la mayoría de ejercicios y programas:</p>
+<blockquote>
+<p>usa <strong><code>ArrayList</code></strong> por defecto</p>
+</blockquote>
+<p>Piensa en <code>LinkedList</code> cuando:</p>
+<ul>
+<li>hay muchas inserciones y borrados al principio o en posiciones ya localizadas</li>
+<li>no importa tanto el acceso rápido por índice</li>
+<li>o quieres reutilizarla luego como cola</li>
+</ul>
+<hr />
+<h2 id="7-eficiencia-de-operaciones">7️⃣ Eficiencia de operaciones</h2>
+<h3 id="complejidad-aproximada">📊 Complejidad aproximada</h3>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>ArrayList</th>
+<th>LinkedList</th>
+<th>Por qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Acceder por índice (<code>get(i)</code>)</td>
+<td><strong>Muy eficiente</strong> <code>O(1)</code></td>
+<td><strong>Poco eficiente</strong> <code>O(n)</code></td>
+<td>En <code>ArrayList</code> se va directo a la posición del array. En <code>LinkedList</code> hay que recorrer nodos.</td>
+</tr>
+<tr>
+<td>Modificar por índice (<code>set(i, x)</code>)</td>
+<td><strong>Muy eficiente</strong> <code>O(1)</code></td>
+<td><strong>Poco eficiente</strong> <code>O(n)</code></td>
+<td>Primero hay que localizar la posición; en lista enlazada eso implica recorrer.</td>
+</tr>
+<tr>
+<td>Añadir al final (<code>add(x)</code>)</td>
+<td><strong>Muy eficiente</strong> amortizado <code>O(1)</code></td>
+<td><strong>Muy eficiente</strong> <code>O(1)</code></td>
+<td><code>ArrayList</code> suele tener hueco al final; a veces debe redimensionar <code>O(n)</code>. <code>LinkedList</code> enlaza un nuevo nodo al final.</td>
+</tr>
+<tr>
+<td>Insertar al principio</td>
+<td><strong>Poco eficiente</strong> <code>O(n)</code></td>
+<td><strong>Muy eficiente</strong> <code>O(1)</code></td>
+<td>En <code>ArrayList</code> hay que desplazar todos los elementos. En <code>LinkedList</code> solo cambia enlaces.</td>
+</tr>
+<tr>
+<td>Insertar en medio</td>
+<td><strong>Poco eficiente</strong> <code>O(n)</code></td>
+<td><strong>Poco eficiente en general</strong> <code>O(n)</code></td>
+<td>En <code>ArrayList</code> se desplazan elementos. En <code>LinkedList</code> no se desplazan, pero normalmente hay que recorrer hasta llegar al nodo.</td>
+</tr>
+<tr>
+<td>Eliminar al principio</td>
+<td><strong>Poco eficiente</strong> <code>O(n)</code></td>
+<td><strong>Muy eficiente</strong> <code>O(1)</code></td>
+<td>En <code>ArrayList</code> todo se corre una posición. En <code>LinkedList</code> solo se cambia el inicio.</td>
+</tr>
+<tr>
+<td>Eliminar al final</td>
+<td><strong>Muy eficiente</strong> <code>O(1)</code></td>
+<td><strong>Muy eficiente</strong> <code>O(1)</code></td>
+<td>En <code>ArrayList</code> se quita el último directamente. En <code>LinkedList</code> también puede ser rápido si guarda referencia al último nodo.</td>
+</tr>
+<tr>
+<td>Eliminar en medio</td>
+<td><strong>Poco eficiente</strong> <code>O(n)</code></td>
+<td><strong>Poco eficiente en general</strong> <code>O(n)</code></td>
+<td><code>ArrayList</code> desplaza elementos; <code>LinkedList</code> necesita localizar el nodo antes de quitarlo.</td>
+</tr>
+<tr>
+<td>Recorrer todos los elementos</td>
+<td><strong>Eficiente</strong> <code>O(n)</code></td>
+<td><strong>Eficiente</strong> <code>O(n)</code></td>
+<td>En ambos hay que pasar por todos.</td>
+</tr>
+<tr>
+<td>Memoria</td>
+<td><strong>Menor consumo</strong></td>
+<td><strong>Mayor consumo</strong></td>
+<td><code>LinkedList</code> necesita nodos y referencias extra.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="que-significa-esto">🧠 ¿Qué significa esto?</h3>
+<h4 id="o1"><code>O(1)</code></h4>
+<p>O(1) significa <strong>tiempo constante</strong>.
+La operación tarda prácticamente lo mismo aunque la lista sea pequeña o grande.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lista</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre></div>
+<p>En <code>ArrayList</code> es rápido porque va directamente a la posición.</p>
+<hr />
+<h4 id="on"><code>O(n)</code></h4>
+<p>La operación depende del número de elementos.</p>
+<p>Cuantos más elementos haya, más puede tardar.</p>
+<p>Ejemplo:</p>
+<ul>
+<li>buscar un nombre</li>
+<li>recorrer hasta una posición</li>
+<li>comprobar si existe un elemento</li>
+</ul>
+<hr />
+<h3 id="entender-que">🎯 Entender que...</h3>
+<ul>
+<li><code>ArrayList</code> es muy buena para <strong>leer por índice</strong></li>
+<li><code>LinkedList</code> no es buena para acceder por posición muchas veces</li>
+<li>ambas pueden usarse como <code>List</code>, pero no rinden igual</li>
+</ul>
+<hr />
+<h2 id="8-metodos-mas-usados-de-list">8️⃣ Métodos más usados de <code>List</code></h2>
+<p>Ahora vamos a ver los métodos más usados de la interfaz <code>List</code>.</p>
+<hr />
+<h3 id="addelemento">➕ <code>add(elemento)</code></h3>
+<p>Añade un elemento al final de la lista.</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="c1">//da igual que sea arrayList que LinkedList</span>
+
+<span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+<span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">);</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>[Ana, Luis]
+</code></pre></div>
+<hr />
+<h3 id="addindice-elemento">➕ <code>add(indice, elemento)</code></h3>
+<p>Inserta un elemento en una posición concreta.</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">);</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>[Ana, Marta, Luis]
+</code></pre></div>
+<hr />
+<h3 id="getindice">👀 <code>get(indice)</code></h3>
+<p>Devuelve el elemento de una posición concreta.</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>Ana
+</code></pre></div>
+<hr />
+<h3 id="setindice-elemento">✏️ <code>set(indice, elemento)</code></h3>
+<p>Modifica el valor de una posición.</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Carlos&quot;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">);</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>[Ana, Carlos, Luis]
+</code></pre></div>
+<hr />
+<h3 id="removeindice">❌ <code>remove(indice)</code></h3>
+<p>Elimina el elemento de una posición.</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">);</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>[Ana, Luis]
+</code></pre></div>
+<hr />
+<h3 id="removeobjeto">❌ <code>remove(objeto)</code></h3>
+<p>Elimina la primera aparición de un elemento.</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">);</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>[Luis]
+</code></pre></div>
+<hr />
+<h3 id="size">📏 <code>size()</code></h3>
+<p>Devuelve cuántos elementos tiene la lista.</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+</code></pre></div>
+<hr />
+<h3 id="containsobjeto">🔍 <code>contains(objeto)</code></h3>
+<p>Comprueba si un elemento existe en la lista.</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">));</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>true
+</code></pre></div>
+<hr />
+<h3 id="indexofobjeto">📍 <code>indexOf(objeto)</code></h3>
+<p>Devuelve la posición de la primera aparición del elemento.</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">));</span>
+</code></pre></div>
+<p>Si no existe, devuelve:</p>
+<div class="highlight"><pre><span></span><code>-1
+</code></pre></div>
+<hr />
+<h3 id="clear">🧹 <code>clear()</code></h3>
+<p>Elimina todos los elementos de la lista.</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">);</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code>[]
+</code></pre></div>
+<hr />
+<h3 id="isempty">❓ <code>isEmpty()</code></h3>
+<p>Indica si la lista está vacía.</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">());</span>
+</code></pre></div>
+<hr />
+<h2 id="9-recorrer-una-list">9️⃣ Recorrer una <code>List</code></h2>
+<h3 id="con-for-clasico">🔁 Con <code>for</code> clásico</h3>
+<p>Muy útil si necesitas los índices.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="con-for-each">🔁 Con <code>for-each</code></h3>
+<p>Muy cómodo cuando solo quieres recorrer los elementos.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nombres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="con-while">🔁 Con <code>while</code></h3>
+<p>También se puede, aunque se usa menos.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombres</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="ejemplo-completo-con-list">🔟 Ejemplo completo con <code>List</code></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploList</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">frutas</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Manzana&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">frutas</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pera&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">frutas</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Plátano&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Lista inicial: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">frutas</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">frutas</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Fresa&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tras insertar: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">frutas</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">frutas</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Kiwi&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tras modificar: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">frutas</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">frutas</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;Manzana&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tras eliminar: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">frutas</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tamaño: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">frutas</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¿Contiene Pera? &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">frutas</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;Pera&quot;</span><span class="p">));</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">fruta</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">frutas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">fruta</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="11-listas-de-objetos">1️⃣1️⃣ Listas de objetos</h2>
+<p>Una de las partes más importantes de <code>List</code> en Java real es que normalmente no guardaremos solo cadenas o enteros, sino <strong>objetos</strong>.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Principal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Alumno</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alumnos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">));</span>
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">));</span>
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Marta&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">));</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Alumno</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">alumnos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">getNombre</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; - &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">getNota</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Y la clase:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumno</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Alumno</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nota</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNota</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Esto conecta directamente con POO.</p>
+<hr />
+<h2 id="12-errores-tipicos-con-list">1️⃣2️⃣ Errores típicos con <code>List</code></h2>
+<h2 id="confundir-size-con-length">⚠️ Confundir <code>size()</code> con <code>length</code></h2>
+<p>❌ Incorrecto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lista</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="c1">//no existe</span>
+</code></pre></div>
+<p>✔ Correcto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lista</span><span class="p">.</span><span class="na">size</span><span class="p">()</span>
+</code></pre></div>
+<p>Los arrays usan <code>length</code>, las colecciones usan <code>size()</code>.</p>
+<hr />
+<h3 id="intentar-usar-corchetes">⚠️ Intentar usar corchetes</h3>
+<p>❌ Incorrecto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lista</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+</code></pre></div>
+<p>✔ Correcto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lista</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h3 id="olvidar-importar-las-clases">⚠️ Olvidar importar las clases</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+</code></pre></div>
+<p>o</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.LinkedList</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h3 id="pensar-que-list-se-puede-instanciar">⚠️ Pensar que <code>List</code> se puede instanciar</h3>
+<p>❌ Incorrecto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>✔ Correcto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h3 id="acceder-a-indices-fuera-de-rango">⚠️ Acceder a índices fuera de rango</h3>
+<div class="highlight"><pre><span></span><code><span class="n">lista</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</code></pre></div>
+<p>Si la lista no tiene esa posición, salta una excepción:</p>
+<div class="highlight"><pre><span></span><code>IndexOutOfBoundsException
+</code></pre></div>
+<hr />
+<h3 id="confundir-removeint-con-removeobject">⚠️ Confundir <code>remove(int)</code> con <code>remove(Object)</code></h3>
+<p>Esto da problemas sobre todo con <code>Integer</code>.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">numeros</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="n">numeros</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="n">numeros</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+
+<span class="n">numeros</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div>
+<p>Esto <strong>no elimina el valor 1</strong>.<br />
+Elimina el elemento de índice 1, es decir, el <code>20</code>.</p>
+<hr />
+<h2 id="13-buenas-practicas">1️⃣3️⃣ Buenas prácticas</h2>
+<h3 id="programar-contra-la-interfaz">✅ Programar contra la interfaz</h3>
+<p>Mejor así:</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>que así:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p><strong><em>¿Por qué?</em></strong></p>
+<p>Porque si luego quieres cambiar la implementación, te resultará más fácil:</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h3 id="elegir-arraylist-por-defecto">✅ Elegir <code>ArrayList</code> por defecto</h3>
+<p>Si no hay un motivo claro para otra cosa, usa:</p>
+<div class="highlight"><pre><span></span><code><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h3 id="usar-nombres-claros">✅ Usar nombres claros</h3>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Alumno</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alumnos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Producto</span><span class="o">&gt;</span><span class="w"> </span><span class="n">productos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="resumen-final">🧠 Resumen final</h2>
+<p><code>List</code> es una interfaz que representa una <strong>colección ordenada de elementos</strong>.</p>
+<p>Sus características principales son:</p>
+<ul>
+<li>mantiene el orden</li>
+<li>permite duplicados</li>
+<li>permite acceso por índice</li>
+</ul>
+<p>Las implementaciones más importantes son:</p>
+<ul>
+<li><strong><code>ArrayList</code></strong> → basada en array dinámico, muy usada</li>
+<li><strong><code>LinkedList</code></strong> → basada en nodos enlazados</li>
+</ul>
+<hr />
+<h2 id="idea-practica">🎯 Idea práctica</h2>
+<ul>
+<li>Usa <strong><code>ArrayList</code></strong> en la mayoría de situaciones</li>
+<li>Piensa en <strong><code>LinkedList</code></strong> si el problema encaja mejor con inserciones y borrados frecuentes</li>
+</ul>
+<hr />
+<h2 id="metodos-mas-usados-de-list-y-eficiencia">📊 Métodos más usados de <code>List</code> y eficiencia</h2>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Qué hace</th>
+<th align="right">ArrayList</th>
+<th align="right">LinkedList</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>add(elemento)</code></td>
+<td>Añade al final</td>
+<td align="right">O(1) amortizado</td>
+<td align="right">O(1)</td>
+</tr>
+<tr>
+<td><code>add(indice, elemento)</code></td>
+<td>Inserta en una posición</td>
+<td align="right">O(n)</td>
+<td align="right">O(n)</td>
+</tr>
+<tr>
+<td><code>get(indice)</code></td>
+<td>Devuelve el elemento de una posición</td>
+<td align="right">O(1)</td>
+<td align="right">O(n)</td>
+</tr>
+<tr>
+<td><code>set(indice, elemento)</code></td>
+<td>Modifica el elemento de una posición</td>
+<td align="right">O(1)</td>
+<td align="right">O(n)</td>
+</tr>
+<tr>
+<td><code>remove(indice)</code></td>
+<td>Elimina el elemento de una posición</td>
+<td align="right">O(n)</td>
+<td align="right">O(n)</td>
+</tr>
+<tr>
+<td><code>remove(objeto)</code></td>
+<td>Elimina la primera aparición del elemento</td>
+<td align="right">O(n)</td>
+<td align="right">O(n)</td>
+</tr>
+<tr>
+<td><code>size()</code></td>
+<td>Devuelve cuántos elementos hay</td>
+<td align="right">O(1)</td>
+<td align="right">O(1)</td>
+</tr>
+<tr>
+<td><code>isEmpty()</code></td>
+<td>Comprueba si está vacía</td>
+<td align="right">O(1)</td>
+<td align="right">O(1)</td>
+</tr>
+<tr>
+<td><code>contains(objeto)</code></td>
+<td>Comprueba si existe un elemento</td>
+<td align="right">O(n)</td>
+<td align="right">O(n)</td>
+</tr>
+<tr>
+<td><code>indexOf(objeto)</code></td>
+<td>Devuelve la posición de la primera aparición</td>
+<td align="right">O(n)</td>
+<td align="right">O(n)</td>
+</tr>
+<tr>
+<td><code>clear()</code></td>
+<td>Elimina todos los elementos</td>
+<td align="right">O(n)</td>
+<td align="right">O(n)</td>
+</tr>
+</tbody>
+</table>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navitagion.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6df46069.min.js"></script>
+      
+    
+  </body>
+</html>
