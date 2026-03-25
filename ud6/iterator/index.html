@@ -2394,6 +2394,11 @@
 <h1 id="iteradores-en-java-iterator-y-listiterator">📚 Iteradores en Java (<code>Iterator</code> y <code>ListIterator</code>)</h1>
 <p>Después de aprender <code>List</code>, <code>ArrayList</code> y <code>LinkedList</code>, necesitamos una forma <strong>segura y estándar de recorrer colecciones</strong>.<br />
 Para eso Java proporciona los <strong>iteradores</strong>.</p>
+<p>Aunque el estándar para recorrer colecciones es el bucle <code>for-each</code> (el rey 👑), ya que es más limpio, legible y menos propenso a errores. </p>
+<p>Los iteradores <strong>son necesarios cuando queremos hacer cosas "más delicadas"</strong>: </p>
+<p>🔹 eliminar mientras recorres, 
+🔹 añadir mientras recorres, 
+🔹 control más fino del recorrido: parar manualmente, avanzar paso a paso, ir hacia atrás.</p>
 <hr />
 <h2 id="que-es-un-iterator">🔁 ¿Qué es un <code>Iterator</code>?</h2>
 <p>Un <strong>iterador</strong> es un objeto que permite <strong>recorrer los elementos de una colección uno a uno</strong>.</p>
