@@ -1437,6 +1437,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#error-tipico-al-eliminar" class="md-nav__link">
+    ❗ Error típico al eliminar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#se-debe-usar-hasnext-antes-de-next" class="md-nav__link">
+    ⚠️ Se DEBE USAR hasNext() antes de next()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#error-comun-al-recorrer-colecciones" class="md-nav__link">
     ❗ Error común al recorrer colecciones
   </a>
@@ -2299,6 +2313,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#error-tipico-al-eliminar" class="md-nav__link">
+    ❗ Error típico al eliminar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#se-debe-usar-hasnext-antes-de-next" class="md-nav__link">
+    ⚠️ Se DEBE USAR hasNext() antes de next()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#error-comun-al-recorrer-colecciones" class="md-nav__link">
     ❗ Error común al recorrer colecciones
   </a>
@@ -2433,7 +2461,7 @@ Para eso Java proporciona los <strong>iteradores</strong>.</p>
 </tr>
 <tr>
 <td>remove()</td>
-<td>Elimina el último elemento devuelto por <code>next()</code></td>
+<td>Elimina <strong>el último elemento devuelto por <code>next()</code></strong></td>
 </tr>
 </tbody>
 </table>
@@ -2498,6 +2526,34 @@ posición actual</p>
 <p class="admonition-title">Note</p>
 <p><strong>Nunca llames a <code>next()</code> sin comprobar <code>hasNext()</code></strong></p>
 </div>
+<hr />
+<h2 id="error-tipico-al-eliminar">❗ Error típico al eliminar</h2>
+<p>Intentas eliminar un elemento antes de hacer <code>next()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<span class="n">it</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span><span class="w"> </span><span class="c1">// ❌ ERROR</span>
+</code></pre></div>
+<p>👉 Lanza excepción (<code>IllegalStateException</code>) porque:<br />
+- aún no has hecho <code>next()</code>
+- no hay “último elemento” que eliminar</p>
+<hr />
+<h2 id="se-debe-usar-hasnext-antes-de-next">⚠️ Se DEBE USAR <code>hasNext()</code> antes de <code>next()</code></h2>
+<p>El método <code>next()</code> <strong>SOLO puede llamarse si existe un elemento siguiente</strong>.</p>
+<p>👉 Si llamamos a <code>next()</code> cuando no quedan elementos, se produce una excepción:</p>
+<div class="highlight"><pre><span></span><code><span class="n">NoSuchElementException</span>
+</code></pre></div>
+<p>✅ Uso correcto
+<div class="highlight"><pre><span></span><code><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//compruebo si quedan elementos</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">elemento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">elemento</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<ul>
+<li><code>hasNext()</code> → “¿queda alguien?”   </li>
+<li><code>next()</code> → “haz pasar al siguiente”   </li>
+</ul>
+<p>👉 Si no queda nadie y llamas a <code>next()</code>, ocurre un <strong>error</strong>.</p>
 <hr />
 <h2 id="error-comun-al-recorrer-colecciones">❗ Error común al recorrer colecciones</h2>
 <p>❌ Incorrecto:</p>
