@@ -2425,15 +2425,15 @@ Para eso Java proporciona los <strong>iteradores</strong>.</p>
 <tbody>
 <tr>
 <td>hasNext()</td>
-<td>Indica si quedan elementos</td>
+<td>Indica si quedan elementos por recorrer</td>
 </tr>
 <tr>
 <td>next()</td>
-<td>Devuelve el siguiente elemento</td>
+<td>Avanza el iterador a la siguiente posición y devuelve ese elemento</td>
 </tr>
 <tr>
 <td>remove()</td>
-<td>Elimina el último elemento devuelto</td>
+<td>Elimina el último elemento devuelto por <code>next()</code></td>
 </tr>
 </tbody>
 </table>
@@ -2466,13 +2466,38 @@ Luis<br />
 Pedro</p>
 <hr />
 <h2 id="como-funciona-internamente">🧠 Cómo funciona internamente</h2>
-<p>El iterador mantiene <strong>una posición interna</strong> en la colección.</p>
-<p>[Ana][Luis][Pedro]<br />
+<p>El iterador <strong>mantiene una posición interna</strong> de recorrido.</p>
+<p>Al crearlo, está antes del primer elemento:</p>
+<p>[it][Ana][Luis][Pedro]<br />
  ↑<br />
 posición actual</p>
 <p>Cada vez que llamamos a <code>next()</code>:</p>
-<p>1️⃣ devuelve el elemento actual<br />
-2️⃣ avanza al siguiente</p>
+<p>1️⃣ avanza al siguiente elemento disponible
+2️⃣ devuelve ese elemento</p>
+<ul>
+<li>primer <code>next()</code> → avanza a <code>Ana</code> y devuelve <code>Ana</code>       </li>
+<li>segundo <code>next()</code> → avanza a <code>Luis</code> y devuelve <code>Luis</code>        </li>
+</ul>
+<p>Cuando creas el iterador con:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+</code></pre></div>
+<p>El iterador está en esta posición:</p>
+<div class="highlight"><pre><span></span><code>[ it ] → elemento0 → elemento1 → elemento2
+</code></pre></div>
+<p>👉 Es decir, <strong>está antes del primer elemento</strong>. Entonces, ¿cuándo apunta al primer elemento?</p>
+<p>Cuando hacemos:</p>
+<div class="highlight"><pre><span></span><code><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+</code></pre></div>
+<p>Entonces: <br />
+- avanza  <br />
+- Devuelve el primer elemento   </p>
+<p>Ahora sí:</p>
+<div class="highlight"><pre><span></span><code>elemento0 ← it → elemento1 → elemento2
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Nunca llames a <code>next()</code> sin comprobar <code>hasNext()</code></strong></p>
+</div>
 <hr />
 <h2 id="error-comun-al-recorrer-colecciones">❗ Error común al recorrer colecciones</h2>
 <p>❌ Incorrecto:</p>
@@ -2489,7 +2514,7 @@ posición actual</p>
 <p>Si quieres eliminar un ítem de una colección mientras la recorres, usa el propio <strong>iterador</strong>:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
 
-<span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">()){</span>
+<span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
 
