@@ -2931,9 +2931,11 @@ Devuelve true si lo ha añadido, false en caso de que el elemento ya exista (que
 <p>Comprueba si existe.</p>
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">set</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
 </code></pre></div>
-<p>Flujo:<br />
-- <code>hashCode()</code> → va al bucket 
-- <code>equals()</code> → busca el elemento   </p>
+<p>Flujo:  </p>
+<ul>
+<li><code>hashCode()</code> → va al bucket   </li>
+<li><code>equals()</code> → busca el elemento    </li>
+</ul>
 <hr />
 <h3 id="boolean-remove">❌ boolean remove()</h3>
 <p>Elimina un elemento.</p>
