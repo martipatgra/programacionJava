@@ -2823,13 +2823,16 @@ Para eso se usan <strong>getters/setters</strong> o <code>protected</code> cuand
 <hr />
 <h2 id="9-sobrescritura-de-metodos-override">🔁 9) Sobrescritura de métodos (<code>@Override</code>)</h2>
 <p>La <strong>sobrescritura</strong> (override) permite que la clase hija <strong>redefina</strong> un método del padre.</p>
-<p>✅ Reglas básicas:<br />
-- <strong>Mismo nombre</strong><br />
-- <strong>Misma lista de parámetros</strong> 
-- <strong>Mismo tipo de retorno</strong> (o compatible)<br />
-- No se puede reducir visibilidad (no pasar de <code>public</code> a <code>protected</code>, por ejemplo) </p>
+<p>✅ Reglas básicas:    <br />
+- <strong>Mismo nombre</strong>    <br />
+- <strong>Misma lista de parámetros</strong>   <br />
+- <strong>Mismo tipo de retorno</strong> (o compatible)    <br />
+- No se puede reducir visibilidad (no pasar de <code>public</code> a <code>protected</code>, por ejemplo)     </p>
 <p>📌 <code>@Override</code> te protege de errores: <br />
 - si te equivocas en la firma → <strong>compila mal</strong> (y es lo que quieres)   </p>
+<mark class="critic block">
+<p>🚫 Si una clase declara alguno de sus métodos como <code>final</code>, <strong>no se podrán sobrescribir en las clases hijas</strong>.</p>
+</mark>
 <hr />
 <h2 id="10-this-vs-super-atributos-y-metodos">🧷 10) <code>this</code> vs <code>super</code> (atributos y métodos)</h2>
 <h3 id="this">🪞 <code>this</code></h3>
