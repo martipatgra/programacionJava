@@ -1515,10 +1515,10 @@
         
           <li class="md-nav__item">
   <a href="#flujo-real" class="md-nav__link">
-    Flujo real:
+    Flujo real
   </a>
   
-    <nav class="md-nav" aria-label="Flujo real:">
+    <nav class="md-nav" aria-label="Flujo real">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2538,10 +2538,10 @@
         
           <li class="md-nav__item">
   <a href="#flujo-real" class="md-nav__link">
-    Flujo real:
+    Flujo real
   </a>
   
-    <nav class="md-nav" aria-label="Flujo real:">
+    <nav class="md-nav" aria-label="Flujo real">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2845,10 +2845,12 @@
 </code></pre></div>
 <p>Ese número entero sirve para <strong>decidir dónde guardar el objeto</strong> en qué bucket de la tabla hash.</p>
 <p><strong>Esto es muy eficiente</strong> porque ahora para buscar "Ana" no se recorre todo, simplemente se va directamente a la caja 3, 🚀 Búsqueda casi instantánea.</p>
-<h3 id="flujo-real">Flujo real:</h3>
-<p>1️⃣ Calcula el hash del objeto 
-2️⃣ Decide en qué “caja” (bucket) guardarlo usando ese código hash 
-3️⃣ Si ya hay algo ahí dentro → usa <code>equals()</code></p>
+<h3 id="flujo-real">Flujo real</h3>
+<ul>
+<li>1️⃣ Calcula el hash del objeto  </li>
+<li>2️⃣ Decide en qué “caja” (bucket) guardarlo usando ese código hash  </li>
+<li>3️⃣ Si ya hay algo ahí dentro → usa <code>equals()</code>  </li>
+</ul>
 <h4 id="que-pasa-si-dos-cosas-van-a-la-misma-caja-bucket">🔍 ¿Qué pasa si dos cosas van a la misma caja (bucket)?</h4>
 <p>Cuando dos objetos distintos devuelven el mismo código hash, es decir, van a la misma caja, esto se llama 💥 <strong>Colisión</strong>.</p>
 <div class="highlight"><pre><span></span><code>&quot;Ana&quot; → caja 3  
@@ -2865,14 +2867,16 @@
 <p>Ahora si queremos hacer esta operación:</p>
 <div class="highlight"><pre><span></span><code><span class="n">set</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
 </code></pre></div>
-<p>1️⃣ Se calcula el hash → va al bucket 3
-2️⃣ Recorre los elementos de ese cajón
-3️⃣ Usa <code>equals()</code> para encontrar el correcto dentro del bucket</p>
+<ul>
+<li>1️⃣ Se calcula el hash → va al bucket 3</li>
+<li>2️⃣ Recorre los elementos de ese cajón</li>
+<li>3️⃣ Usa <code>equals()</code> para encontrar el correcto dentro del bucket</li>
+</ul>
 <p>Entonces, buscar deja de ser rápido, se vuelve casi como una lista y pierdes la ventaja del HashSet.</p>
 <hr />
 <h3 id="donde-entra-equals-en-todo-esto">🧠 ¿Dónde entra <code>equals()</code> en todo esto?</h3>
-<p>Hasta tenemos:<br />
-- tabla hash  <br />
+<p>Hasta tenemos:    <br />
+- tabla hash   <br />
 - buckets <br />
 - <code>hashCode()</code> para decidir el cajón  </p>
 <p>Pero hemos visto que varios objetos pueden caer en el mismo cajón... Entonces Java necesita responder a esta pregunta:</p>
@@ -2916,10 +2920,12 @@ Devuelve true si lo ha añadido, false en caso de que el elemento ya exista (que
 <p>👉 Resultado:</p>
 <div class="highlight"><pre><span></span><code>[Ana, Luis]
 </code></pre></div>
-<p>Flujo:<br />
-- 1️⃣ Calcula el <code>hashCode()</code>. Para saber a qué bucket ir.<br />
-- 2️⃣ Va a ese bucket. Mira lo que ya hay dentro. 
-- 3️⃣ Compara con <code>equals()</code>. Va revisando los elementos de ese bucket y pregunta si son iguales. Si da true → ya existe, no lo añade. Si da false con todos → sí lo añade</p>
+<p>Flujo:      </p>
+<ul>
+<li>1️⃣ Calcula el <code>hashCode()</code>. Para saber a qué bucket ir.  </li>
+<li>2️⃣ Va a ese bucket. Mira lo que ya hay dentro.     </li>
+<li>3️⃣ Compara con <code>equals()</code>. Va revisando los elementos de ese bucket y pregunta si son iguales. Si da true → ya existe, no lo añade. Si da false con todos → sí lo añade</li>
+</ul>
 <hr />
 <h3 id="boolean-contains">🔍 boolean contains()</h3>
 <p>Comprueba si existe.</p>
