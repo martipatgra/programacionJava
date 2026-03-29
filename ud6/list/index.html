@@ -3672,8 +3672,11 @@ La operación tarda prácticamente lo mismo aunque la lista sea pequeña o grand
 </code></pre></div>
 <p><strong><em>Esto conecta directamente con POO.</em></strong></p>
 <p>⚠️ Aquí entra en juego <strong>el método <code>equals()</code></strong> que heredamos de la clase <code>Object</code> y que por defecto compara si dos objetos son el mismo objeto con (==), es decir, <strong>si son el mismo objeto en memoria</strong>.</p>
-<p>Las clases <code>Integer</code>, <code>String</code>, <code>Double</code>, etc. <strong>sobrescriben</strong> el método <code>equals()</code> para que devuelva true si los dos objetos contienen el mismo valor aunque no sean el mismo en memoria.</p>
-<p>El problema viene cuando creamos nosotros clases y no sobrescribimos el método <code>equals()</code>. Por ejemplo:</p>
+<p>Las clases <code>Integer</code>, <code>String</code>, <code>Double</code>, etc. <strong>sobrescriben</strong> el método <code>equals()</code> para que <strong>devuelva true si los dos objetos contienen el mismo valor</strong> aunque no sean el mismo objeto en memoria.</p>
+<blockquote>
+<p>El problema viene cuando creamos nosotros clases y no sobrescribimos el método <code>equals()</code>. </p>
+</blockquote>
+<p>Por ejemplo:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Alumno</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
 <span class="n">Alumno</span><span class="w"> </span><span class="n">a2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
 
