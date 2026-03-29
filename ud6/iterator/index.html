@@ -2521,9 +2521,11 @@ posición actual</p>
 <div class="highlight"><pre><span></span><code><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
 <span class="n">it</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span><span class="w"> </span><span class="c1">// ❌ ERROR</span>
 </code></pre></div>
-<p>👉 Lanza excepción (<code>IllegalStateException</code>) porque:<br />
-- aún no has hecho <code>next()</code>
-- no hay “último elemento” que eliminar</p>
+<p>👉 Lanza excepción (<code>IllegalStateException</code>) porque:    </p>
+<ul>
+<li>aún no has hecho <code>next()</code> </li>
+<li>no hay “último elemento” que eliminar </li>
+</ul>
 <hr />
 <h2 id="se-debe-usar-hasnext-antes-de-next">⚠️ Se DEBE USAR <code>hasNext()</code> antes de <code>next()</code></h2>
 <p>El método <code>next()</code> <strong>SOLO puede llamarse si existe un elemento siguiente</strong>.</p>
