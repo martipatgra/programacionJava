@@ -3681,7 +3681,8 @@ La operación tarda prácticamente lo mismo aunque la lista sea pequeña o grand
 <span class="n">Alumno</span><span class="w"> </span><span class="n">a2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
 
 <span class="c1">//si hacemos</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">a2</span><span class="p">));</span><span class="c1">//devuelve false, ya que NO son el mismo objeto en memoria</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">a2</span><span class="p">));</span><span class="c1">//devuelve false, </span>
+<span class="c1">// ya que NO son el mismo objeto en memoria</span>
 </code></pre></div>
 <p>Casi siempre, querremos sobrescribir el método, ya que para nosotros será el mismo objeto si tienen el mismo contenido. En el caso anterior el alumno a1 es Ana de nota 8, y el alumno a2 también lo es, para nosotros es el mismo alumno aunque en memoria no sean el mismo objeto.</p>
 <p>✅ Solución: en la clase alumno, sobrescribir el método <code>equals()</code>:
