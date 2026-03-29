@@ -3618,7 +3618,7 @@ La operación tarda prácticamente lo mismo aunque la lista sea pequeña o grand
 </code></pre></div>
 <hr />
 <h2 id="11-listas-de-objetos">1️⃣1️⃣ Listas de objetos</h2>
-<p>Una de las partes más importantes de <code>List</code> en Java real es que normalmente no guardaremos solo cadenas o enteros, sino <strong>objetos</strong>.</p>
+<p>Una de las partes más importantes de <code>List</code> en Java real es que normalmente no guardaremos solo cadenas o enteros, sino <strong>objetos</strong> creados por nosotros.</p>
 <p>Ejemplo:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
@@ -3657,6 +3657,35 @@ La operación tarda prácticamente lo mismo aunque la lista sea pequeña o grand
 <span class="p">}</span>
 </code></pre></div>
 <p>Esto conecta directamente con POO.</p>
+<p>Aquí entra en juego el método <code>equals()</code> que heredamos de la clase <code>Object</code> y que por defecto compara si dos objetos son el mismo objeto con (==), es decir, es el mismo objeto en memoria.</p>
+<p>Las clases <code>Integer</code>, <code>String</code>, <code>Double</code>, etc. <strong>sobrescriben</strong> el método <code>equals()</code> para que devuelva true si los dos objetos contienen el mismo valor aunque no sean el mismo en memoria.</p>
+<p>El problema viene cuando creamos nosotros clases y no sobrescribimos el método <code>equals()</code>. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Alumno</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="n">Alumno</span><span class="w"> </span><span class="n">a2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+
+<span class="c1">//si hacemos</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">a2</span><span class="p">));</span><span class="c1">//devuelve false, ya que NO son el mismo objeto en memoria</span>
+</code></pre></div>
+<p>Casi siempre, querremos sobrescribir el método, ya que para nosotros será el mismo objeto si tienen el mismo contenido. En el caso anterior el alumno a1 es Ana de 8 años, y el alumno a2 también lo es, para nosotros es el mismo alumno aunque en memoria no sean el mismo objeto.</p>
+<p>✅ Solución: en la clase alumno, sobrescribir el método <code>equals()</code>:
+<div class="highlight"><pre><span></span><code><span class="nd">@Override</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Alumno</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Alumno</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Alumno</span><span class="p">)</span><span class="w"> </span><span class="n">o</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">nombre</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>El método <code>equals()</code> además, <strong>es usado internamente por muchos métodos</strong> dentro de <code>List</code>:
+| Método                   | Usa <code>equals()</code> | Para qué                                                       |
+| ------------------------ | -------------: | -------------------------------------------------------------- |
+| <code>contains(obj)</code>          |              ✅ | Comprueba si ese objeto está en la lista                       |
+| <code>remove(obj)</code>            |              ✅ | Elimina la primera aparición de ese objeto                     |
+| <code>indexOf(obj)</code>           |              ✅ | Devuelve la posición de la primera coincidencia                |
+| <code>lastIndexOf(obj)</code>       |              ✅ | Devuelve la posición de la última coincidencia                 |
+| <code>containsAll(coleccion)</code> |              ✅ | Comprueba si contiene todos los elementos de otra colección    |
+| <code>removeAll(coleccion)</code>   |              ✅ | Elimina los elementos que estén en la otra colección           |
+| <code>retainAll(coleccion)</code>   |              ✅ | Deja solo los elementos que también estén en la otra colección |</p>
 <hr />
 <h2 id="12-errores-tipicos-con-list">1️⃣2️⃣ Errores típicos con <code>List</code></h2>
 <h2 id="confundir-size-con-length">⚠️ Confundir <code>size()</code> con <code>length</code></h2>
