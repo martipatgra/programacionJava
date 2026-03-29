@@ -1514,6 +1514,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#recorrer-una-lista-hacia-delante-y-hacia-detras-con-listiterator" class="md-nav__link">
+    ↔️ Recorrer una lista hacia delante y hacia detrás con ListIterator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resumen" class="md-nav__link">
     🧠 Resumen
   </a>
@@ -2362,6 +2369,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#recorrer-una-lista-hacia-delante-y-hacia-detras-con-listiterator" class="md-nav__link">
+    ↔️ Recorrer una lista hacia delante y hacia detrás con ListIterator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resumen" class="md-nav__link">
     🧠 Resumen
   </a>
@@ -2659,6 +2673,89 @@ posición actual</p>
 </code></pre></div>
 <p>Resultado:</p>
 <p>[Ana, Luis, Carlos, Pedro]</p>
+<hr />
+<h2 id="recorrer-una-lista-hacia-delante-y-hacia-detras-con-listiterator">↔️ Recorrer una lista hacia delante y hacia detrás con <code>ListIterator</code></h2>
+<p>Una de las ventajas más importantes de <code>ListIterator</code> es que permite recorrer una lista en ambos sentidos.</p>
+<p>💡 Recuerda que <code>Iterator</code> o <code>ListIterator</code> no “apunta” exactamente a un elemento, sino a una posición entre elementos de la lista.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Principal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pedro&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">ListIterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">listIterator</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">opcion</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">haciaDelante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">haciaDetras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n--- MENÚ ---&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1. Ir al siguiente nombre&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2. Ir al nombre anterior&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3. Salir&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Elige una opción: &quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">opcion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">opcion</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">haciaDetras</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="c1">// Si antes iba hacia detrás, recolocamos el iterador</span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                        </span><span class="n">haciaDetras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
+
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Siguiente: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="w">                        </span><span class="n">haciaDelante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ya estás al final de la lista.&quot;</span><span class="p">);</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">haciaDelante</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="c1">// Si antes iba hacia delante, recolocamos el iterador</span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasPrevious</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">it</span><span class="p">.</span><span class="na">previous</span><span class="p">();</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                        </span><span class="n">haciaDelante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
+
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasPrevious</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Anterior: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">previous</span><span class="p">());</span>
+<span class="w">                        </span><span class="n">haciaDetras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ya estás al principio de la lista.&quot;</span><span class="p">);</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
+<span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Saliendo...&quot;</span><span class="p">);</span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">                </span><span class="k">default</span><span class="p">:</span>
+<span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Opción no válida.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opcion</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">sc</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>next()</code> devuelve el elemento de la derecha y avanza  </li>
+<li><code>previous()</code> devuelve el elemento de la izquierda y retrocede </li>
+<li>si ibas hacia delante y ahora quieres ir hacia detrás, haces un <code>previous()</code> de ajuste</li>
+<li>si ibas hacia detrás y ahora quieres ir hacia delante, haces un <code>next()</code> de ajuste</li>
+</ul>
 <hr />
 <h2 id="resumen">🧠 Resumen</h2>
 <table>
