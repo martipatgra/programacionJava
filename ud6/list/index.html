@@ -3695,16 +3695,53 @@ La operación tarda prácticamente lo mismo aunque la lista sea pequeña o grand
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">nota</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">nombre</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></p>
-<p>El método <code>equals()</code> además, <strong>es usado internamente por muchos métodos</strong> dentro de <code>List</code>:
-| Método                   | Usa <code>equals()</code> | Para qué                                                       |
-| ------------------------ | -------------: | -------------------------------------------------------------- |
-| <code>contains(obj)</code>          |              ✅ | Comprueba si ese objeto está en la lista                       |
-| <code>remove(obj)</code>            |              ✅ | Elimina la primera aparición de ese objeto                     |
-| <code>indexOf(obj)</code>           |              ✅ | Devuelve la posición de la primera coincidencia                |
-| <code>lastIndexOf(obj)</code>       |              ✅ | Devuelve la posición de la última coincidencia                 |
-| <code>containsAll(coleccion)</code> |              ✅ | Comprueba si contiene todos los elementos de otra colección    |
-| <code>removeAll(coleccion)</code>   |              ✅ | Elimina los elementos que estén en la otra colección           |
-| <code>retainAll(coleccion)</code>   |              ✅ | Deja solo los elementos que también estén en la otra colección |</p>
+<p>El método <code>equals()</code> además, <strong>es usado internamente por muchos métodos</strong> dentro de <code>List</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th align="right">Usa <code>equals()</code></th>
+<th>Para qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contains(obj)</code></td>
+<td align="right">✅</td>
+<td>Comprueba si ese objeto está en la lista</td>
+</tr>
+<tr>
+<td><code>remove(obj)</code></td>
+<td align="right">✅</td>
+<td>Elimina la primera aparición de ese objeto</td>
+</tr>
+<tr>
+<td><code>indexOf(obj)</code></td>
+<td align="right">✅</td>
+<td>Devuelve la posición de la primera coincidencia</td>
+</tr>
+<tr>
+<td><code>lastIndexOf(obj)</code></td>
+<td align="right">✅</td>
+<td>Devuelve la posición de la última coincidencia</td>
+</tr>
+<tr>
+<td><code>containsAll(coleccion)</code></td>
+<td align="right">✅</td>
+<td>Comprueba si contiene todos los elementos de otra colección</td>
+</tr>
+<tr>
+<td><code>removeAll(coleccion)</code></td>
+<td align="right">✅</td>
+<td>Elimina los elementos que estén en la otra colección</td>
+</tr>
+<tr>
+<td><code>retainAll(coleccion)</code></td>
+<td align="right">✅</td>
+<td>Deja solo los elementos que también estén en la otra colección</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="12-errores-tipicos-con-list">1️⃣2️⃣ Errores típicos con <code>List</code></h2>
 <h2 id="confundir-size-con-length">⚠️ Confundir <code>size()</code> con <code>length</code></h2>
