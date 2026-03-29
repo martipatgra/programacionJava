@@ -2445,7 +2445,7 @@ Para eso Java proporciona los <strong>iteradores</strong>.</p>
 </tr>
 <tr>
 <td>next()</td>
-<td>Avanza el iterador a la siguiente posición y devuelve ese elemento</td>
+<td>Devuelve el elemento a la derecha y avanza el iterador a la siguiente posición</td>
 </tr>
 <tr>
 <td>remove()</td>
@@ -2455,9 +2455,7 @@ Para eso Java proporciona los <strong>iteradores</strong>.</p>
 </table>
 <hr />
 <h2 id="ejemplo-basico">🧪 Ejemplo básico</h2>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploIterator</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploIterator</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
@@ -2488,27 +2486,32 @@ Pedro</p>
  ↑<br />
 posición actual</p>
 <p>Cada vez que llamamos a <code>next()</code>:</p>
-<p>1️⃣ avanza al siguiente elemento disponible
-2️⃣ devuelve ese elemento</p>
 <ul>
-<li>primer <code>next()</code> → avanza a <code>Ana</code> y devuelve <code>Ana</code>       </li>
-<li>segundo <code>next()</code> → avanza a <code>Luis</code> y devuelve <code>Luis</code>        </li>
+<li>1️⃣ devuelve el siguiente elemento disponible (a la derecha del iterador)   </li>
+<li>2️⃣ después avanza la posición del iterador </li>
+</ul>
+<p>[Ana][it][Luis][Pedro]<br />
+      ↑<br />
+posición después del primer <code>next()</code></p>
+<ul>
+<li>primer <code>next()</code> → devuelve <code>Ana</code> y el iterador avanza </li>
+<li>segundo <code>next()</code> → devuelve <code>Luis</code> y el iterador avanza       </li>
 </ul>
 <p>Cuando creas el iterador con:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
 </code></pre></div>
-<p>El iterador está en esta posición:</p>
-<div class="highlight"><pre><span></span><code>[ it ] → elemento0 → elemento1 → elemento2
+<p>El iterador está al inicio (se representa con "|"):</p>
+<div class="highlight"><pre><span></span><code>| elemento0 elemento1 elemento2
 </code></pre></div>
 <p>👉 Es decir, <strong>está antes del primer elemento</strong>. Entonces, ¿cuándo apunta al primer elemento?</p>
 <p>Cuando hacemos:</p>
 <div class="highlight"><pre><span></span><code><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
 </code></pre></div>
-<p>Entonces: <br />
-- avanza  <br />
-- Devuelve el primer elemento   </p>
+<p>Entonces:  <br />
+- Devuelve el elemento a la derecha del iterador  <br />
+- Avanza a la siguiente posición    </p>
 <p>Ahora sí:</p>
-<div class="highlight"><pre><span></span><code>elemento0 ← it → elemento1 → elemento2
+<div class="highlight"><pre><span></span><code>elemento0 | elemento1 elemento2
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2694,11 +2697,12 @@ posición actual</p>
 <span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">haciaDetras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 
 <span class="w">        </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n--- MENÚ ---&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1. Ir al siguiente nombre&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2. Ir al nombre anterior&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3. Salir&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Elige una opción: &quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">            --- MENÚ ---</span>
+<span class="s">            1. Ir al siguiente nombre</span>
+<span class="s">            2. Ir al nombre anterior</span>
+<span class="s">            3. Salir</span>
+<span class="s">            Elige una opción: &quot;&quot;&quot;</span><span class="p">);</span>
 <span class="w">            </span><span class="n">opcion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
 
 <span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">opcion</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2712,7 +2716,7 @@ posición actual</p>
 <span class="w">                    </span><span class="p">}</span>
 
 <span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Siguiente: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Actual: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
 <span class="w">                        </span><span class="n">haciaDelante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 <span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ya estás al final de la lista.&quot;</span><span class="p">);</span>
@@ -2729,7 +2733,7 @@ posición actual</p>
 <span class="w">                    </span><span class="p">}</span>
 
 <span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasPrevious</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Anterior: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">previous</span><span class="p">());</span>
+<span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Actual: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">previous</span><span class="p">());</span>
 <span class="w">                        </span><span class="n">haciaDetras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 <span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ya estás al principio de la lista.&quot;</span><span class="p">);</span>
