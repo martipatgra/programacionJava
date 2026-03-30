@@ -3727,26 +3727,18 @@ La operación tarda prácticamente lo mismo aunque la lista sea pequeña o grand
 <li><strong><code>equals()</code></strong> compara contenido  </li>
 </ul>
 <h3 id="pasos-para-definir-un-buen-metodo-equals">✅ Pasos para definir un buen método <code>equals()</code></h3>
-<ol>
-<li><strong>Comprobar si es el mismo objeto</strong>. Si ambos son exactamente el mismo objeto en memoria, ya son iguales.</li>
-</ol>
+<p>|1.| <strong>Comprobar si es el mismo objeto</strong>. Si ambos son exactamente el mismo objeto en memoria, ya son iguales.</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 </code></pre></div>
-<ol>
-<li><strong>Comprobar que el objeto recibido es válido</strong>. Hay que verificar que no sea <code>null</code> y sea del tipo correcto.</li>
-</ol>
+<p>|2.| <strong>Comprobar que el objeto recibido es válido</strong>. Hay que verificar que no sea <code>null</code> y sea del tipo correcto.</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">getClass</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="na">getClass</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <span class="c1">//o</span>
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Alumno</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 </code></pre></div>
-<ol>
-<li><strong>Hacer el cast al tipo correcto</strong>. Una vez comprobado el tipo, podemos convertirlo (downcasting).</li>
-</ol>
+<p>|3.| <strong>Hacer el cast al tipo correcto</strong>. Una vez comprobado el tipo, podemos convertirlo (downcasting).</p>
 <div class="highlight"><pre><span></span><code><span class="n">Alumno</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Alumno</span><span class="p">)</span><span class="w"> </span><span class="n">o</span><span class="p">;</span>
 </code></pre></div>
-<ol>
-<li><strong>Comparar solo los atributos que identifican lógicamente al objeto</strong>. Aquí está la parte importante. No hay que comparar “todo”, solo lo que hace que dos objetos sean el mismo.</li>
-</ol>
+<p>|4.| <strong>Comparar solo los atributos que identifican lógicamente al objeto</strong>. Aquí está la parte importante. No hay que comparar “todo”, solo lo que hace que dos objetos sean el mismo.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">//edad y nombre</span>
 <span class="k">return</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">Objects</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">nombre</span><span class="p">);</span>
 
