@@ -1754,6 +1754,19 @@
     1️⃣1️⃣ Listas de objetos. Equals()
   </a>
   
+    <nav class="md-nav" aria-label="1️⃣1️⃣ Listas de objetos. Equals()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pasos-para-definir-un-buen-metodo-equals" class="md-nav__link">
+    ✅ Pasos para definir un buen método equals()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2976,6 +2989,19 @@
     1️⃣1️⃣ Listas de objetos. Equals()
   </a>
   
+    <nav class="md-nav" aria-label="1️⃣1️⃣ Listas de objetos. Equals()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pasos-para-definir-un-buen-metodo-equals" class="md-nav__link">
+    ✅ Pasos para definir un buen método equals()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3692,13 +3718,22 @@ La operación tarda prácticamente lo mismo aunque la lista sea pequeña o grand
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Alumno</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <span class="w">    </span><span class="n">Alumno</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Alumno</span><span class="p">)</span><span class="w"> </span><span class="n">o</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">nota</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">nombre</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">nota</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">!=</span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">nombre</span><span class="p">));</span>
 <span class="p">}</span>
 </code></pre></div></p>
 <ul>
 <li><strong><code>==</code></strong> compara referencias    </li>
-<li><strong><code>equals()</code></strong> compara contenido    </li>
+<li><strong><code>equals()</code></strong> compara contenido  </li>
 </ul>
+<h3 id="pasos-para-definir-un-buen-metodo-equals">✅ Pasos para definir un buen método <code>equals()</code></h3>
+<ol>
+<li><strong>Comprobar si es el mismo objeto</strong>. Si ambos son exactamente el mismo objeto en memoria, ya son iguales.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</code></pre></div>
+<ol>
+<li><strong>Comprobar que el objeto recibido es válido</strong>. </li>
+</ol>
 <p>El método <code>equals()</code> además, <strong>es usado internamente por muchos métodos</strong> dentro de <code>List</code>:</p>
 <table>
 <thead>
