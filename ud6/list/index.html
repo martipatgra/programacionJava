@@ -3721,6 +3721,7 @@ La operación tarda prácticamente lo mismo aunque la lista sea pequeña o grand
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">nota</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">!=</span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">nombre</span><span class="p">));</span>
 <span class="p">}</span>
 </code></pre></div></p>
+<p>Recuerda:   </p>
 <ul>
 <li><strong><code>==</code></strong> compara referencias    </li>
 <li><strong><code>equals()</code></strong> compara contenido  </li>
@@ -3732,8 +3733,29 @@ La operación tarda prácticamente lo mismo aunque la lista sea pequeña o grand
 <div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 </code></pre></div>
 <ol>
-<li><strong>Comprobar que el objeto recibido es válido</strong>. </li>
+<li><strong>Comprobar que el objeto recibido es válido</strong>. Hay que verificar que no sea <code>null</code> y sea del tipo correcto.</li>
 </ol>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">getClass</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="na">getClass</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="c1">//o</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Alumno</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+</code></pre></div>
+<ol>
+<li><strong>Hacer el cast al tipo correcto</strong>. Una vez comprobado el tipo, podemos convertirlo (downcasting).</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">Alumno</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Alumno</span><span class="p">)</span><span class="w"> </span><span class="n">o</span><span class="p">;</span>
+</code></pre></div>
+<ol>
+<li><strong>Comparar solo los atributos que identifican lógicamente al objeto</strong>. Aquí está la parte importante. No hay que comparar “todo”, solo lo que hace que dos objetos sean el mismo.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1">//edad y nombre</span>
+<span class="k">return</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">Objects</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">nombre</span><span class="p">);</span>
+
+<span class="c1">//solo nombre</span>
+<span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">nombre</span><span class="p">));</span>
+<span class="c1">//esto equivale al método de la clase Objects:</span>
+<span class="k">return</span><span class="w"> </span><span class="n">Objects</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">nombre</span><span class="p">);</span>
+</code></pre></div>
+<hr />
 <p>El método <code>equals()</code> además, <strong>es usado internamente por muchos métodos</strong> dentro de <code>List</code>:</p>
 <table>
 <thead>
