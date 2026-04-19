@@ -9,13 +9,17 @@
       
       
       
+        <link rel="prev" href="../5set/">
+      
+      
+        <link rel="next" href="../6ordercollections/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>Map - Programación en Java</title>
+        <title>🧆 Interfaz Map. Implementación HashMap - Programación en Java</title>
       
     
     
@@ -79,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#map" class="md-skip">
+        <a href="#map-mapa-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -112,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Map
+              🧆 Interfaz Map. Implementación HashMap
             
           </span>
         </div>
@@ -1312,14 +1316,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
       
       
       
@@ -1328,7 +1334,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           🧆 Colecciones en Java
@@ -1395,11 +1401,610 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../4map/" class="md-nav__link">
-        🧆 Map
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          🧆 Interfaz Map. Implementación HashMap
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        🧆 Interfaz Map. Implementación HashMap
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-un-map" class="md-nav__link">
+    📌 1. ¿Qué es un Map?
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 1. ¿Qué es un Map?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-map-no-hereda-de-collection" class="md-nav__link">
+    🚫 1.1 Map no hereda de Collection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    🔑 Idea clave
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-para-que-sirve-un-mapa" class="md-nav__link">
+    🧠 2. ¿Para qué sirve un mapa?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-implementaciones-principales-de-map" class="md-nav__link">
+    📦 3. Implementaciones principales de Map
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 3. Implementaciones principales de Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-rapida" class="md-nav__link">
+    ⚔️ Comparativa rápida
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-hashmap-la-implementacion-mas-importante" class="md-nav__link">
+    🚀 4. HashMap: la implementación más importante
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 4. HashMap: la implementación más importante">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es" class="md-nav__link">
+    ✅ Qué es
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-como-funciona-hashmap-por-dentro" class="md-nav__link">
+    ⚙️ 5. ¿Cómo funciona HashMap por dentro?
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ 5. ¿Cómo funciona HashMap por dentro?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-tiene-cubos-o-buckets" class="md-nav__link">
+    🪣 Paso 1: tiene “cubos” o “buckets”
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-usa-hashcode-de-la-clave" class="md-nav__link">
+    🧮 Paso 2: usa hashCode() de la clave
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-guarda-la-pareja-clave-valor-alli" class="md-nav__link">
+    📥 Paso 3: guarda la pareja clave-valor allí
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-al-buscar-vuelve-a-calcular" class="md-nav__link">
+    📤 Paso 4: al buscar, vuelve a calcular
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-entonces-por-que-es-tan-rapido" class="md-nav__link">
+    🎯 6. Entonces, ¿por qué es tan rápido?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-eficiencia-de-hashmap" class="md-nav__link">
+    📉 7. Eficiencia de HashMap
+  </a>
+  
+    <nav class="md-nav" aria-label="📉 7. Eficiencia de HashMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complejidades-tipicas" class="md-nav__link">
+    ⏱️ Complejidades típicas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importante" class="md-nav__link">
+    ⚠️ Importante
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-que-es-una-colision" class="md-nav__link">
+    💥 8. ¿Qué es una colisión?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-que-papel-tienen-equals-y-hashcode" class="md-nav__link">
+    🧩 9. ¿Qué papel tienen equals() y hashCode()?
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 9. ¿Qué papel tienen equals() y hashCode()?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-de-oro" class="md-nav__link">
+    ✅ Regla de oro
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-error-tipico-con-claves-personalizadas" class="md-nav__link">
+    ❌ 10. Error típico con claves personalizadas
+  </a>
+  
+    <nav class="md-nav" aria-label="❌ 10. Error típico con claves personalizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que" class="md-nav__link">
+    🤔 ¿Por qué?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-claves-mutables-peligro-real" class="md-nav__link">
+    ✅ 11. Claves mutables: peligro real
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 11. Claves mutables: peligro real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    ✅ Conclusión
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-operaciones-basicas-de-map" class="md-nav__link">
+    🛠️ 12. Operaciones básicas de Map
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ 12. Operaciones básicas de Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#put" class="md-nav__link">
+    ➕ put()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    🔍 get()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containskey" class="md-nav__link">
+    ❓ containsKey()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containsvalue" class="md-nav__link">
+    ❓ containsValue()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    🗑️ remove()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#size" class="md-nav__link">
+    📏 size()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    🧹 clear()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-como-recorrer-un-mapa" class="md-nav__link">
+    👀 13. Cómo recorrer un mapa
+  </a>
+  
+    <nav class="md-nav" aria-label="👀 13. Cómo recorrer un mapa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-recorrer-claves-con-keyset" class="md-nav__link">
+    1) Recorrer claves con keySet()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-recorrer-valores-con-values" class="md-nav__link">
+    2) Recorrer valores con values()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-recorrer-clave-y-valor-con-entryset" class="md-nav__link">
+    3) Recorrer clave y valor con entrySet() ✅
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-ejemplo-completo-sencillo" class="md-nav__link">
+    🧪 14. Ejemplo completo sencillo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-se-permiten-claves-y-valores-null-en-hashmap" class="md-nav__link">
+    🧾 15. ¿Se permiten claves y valores null en HashMap?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-diferencia-importante-con-set" class="md-nav__link">
+    ⚠️ 16. Diferencia importante con Set
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 16. Diferencia importante con Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    Set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    Map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-cosas-modernas-y-utiles-de-java-sobre-mapas" class="md-nav__link">
+    🧠 17. Cosas modernas y útiles de Java sobre mapas
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 17. Cosas modernas y útiles de Java sobre mapas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-getordefault" class="md-nav__link">
+    1) getOrDefault()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-putifabsent" class="md-nav__link">
+    2) putIfAbsent()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-replace" class="md-nav__link">
+    3) replace()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-foreach" class="md-nav__link">
+    4) forEach()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-computeifabsent" class="md-nav__link">
+    5) computeIfAbsent()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-merge" class="md-nav__link">
+    6) merge()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-mapof-mapofentries-y-mapcopyof" class="md-nav__link">
+    🆕 18. Map.of(...), Map.ofEntries(...) y Map.copyOf(...)
+  </a>
+  
+    <nav class="md-nav" aria-label="🆕 18. Map.of(...), Map.ofEntries(...) y Map.copyOf(...)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapof" class="md-nav__link">
+    ✅ Map.of(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapofentries" class="md-nav__link">
+    ✅ Map.ofEntries(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapcopyof" class="md-nav__link">
+    ✅ Map.copyOf(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ojo" class="md-nav__link">
+    ⚠️ Ojo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-novedad-importante-en-java-21-sequencedmap" class="md-nav__link">
+    🆕 19. Novedad importante en Java 21: SequencedMap
+  </a>
+  
+    <nav class="md-nav" aria-label="🆕 19. Novedad importante en Java 21: SequencedMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-problema-habia" class="md-nav__link">
+    🤔 ¿Qué problema había?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-llego-en-java-21" class="md-nav__link">
+    ✅ Qué llegó en Java 21
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-significa-sequencedmap" class="md-nav__link">
+    🧠 Qué significa SequencedMap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-interesantes" class="md-nav__link">
+    🛠️ Métodos interesantes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-consejos-practicos-para-elegir-mapa" class="md-nav__link">
+    🧠 20. Consejos prácticos para elegir mapa
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 20. Consejos prácticos para elegir mapa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usa-hashmap-cuando" class="md-nav__link">
+    Usa HashMap cuando...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-errores-tipicos-del-alumnado" class="md-nav__link">
+    🚫 21. Errores típicos del alumnado
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 21. Errores típicos del alumnado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pensar-que-hashmap-mantiene-orden" class="md-nav__link">
+    ❌ Pensar que HashMap mantiene orden
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pensar-que-put-con-misma-clave-anade-otra-entrada" class="md-nav__link">
+    ❌ Pensar que put() con misma clave añade otra entrada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usar-objetos-como-clave-sin-equals-y-hashcode" class="md-nav__link">
+    ❌ Usar objetos como clave sin equals() y hashCode()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambiar-una-clave-despues-de-insertarla" class="md-nav__link">
+    ❌ Cambiar una clave después de insertarla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recorrer-con-keyset-y-luego-hacer-get-si-ya-necesitas-ambas-cosas" class="md-nav__link">
+    ❌ Recorrer con keySet() y luego hacer get() si ya necesitas ambas cosas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-conclusion" class="md-nav__link">
+    ✅ 22. Conclusión
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2098,64 +2703,566 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#crear-un-mapa" class="md-nav__link">
-    Crear un Mapa
+  <a href="#1-que-es-un-map" class="md-nav__link">
+    📌 1. ¿Qué es un Map?
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 1. ¿Qué es un Map?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-map-no-hereda-de-collection" class="md-nav__link">
+    🚫 1.1 Map no hereda de Collection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    🔑 Idea clave
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-para-que-sirve-un-mapa" class="md-nav__link">
+    🧠 2. ¿Para qué sirve un mapa?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-claves-y-valores-en-un-mapa" class="md-nav__link">
-    Añadir claves y valores en un mapa
+  <a href="#3-implementaciones-principales-de-map" class="md-nav__link">
+    📦 3. Implementaciones principales de Map
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 3. Implementaciones principales de Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-rapida" class="md-nav__link">
+    ⚔️ Comparativa rápida
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-hashmap-la-implementacion-mas-importante" class="md-nav__link">
+    🚀 4. HashMap: la implementación más importante
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 4. HashMap: la implementación más importante">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es" class="md-nav__link">
+    ✅ Qué es
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-como-funciona-hashmap-por-dentro" class="md-nav__link">
+    ⚙️ 5. ¿Cómo funciona HashMap por dentro?
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ 5. ¿Cómo funciona HashMap por dentro?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-tiene-cubos-o-buckets" class="md-nav__link">
+    🪣 Paso 1: tiene “cubos” o “buckets”
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-usa-hashcode-de-la-clave" class="md-nav__link">
+    🧮 Paso 2: usa hashCode() de la clave
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-guarda-la-pareja-clave-valor-alli" class="md-nav__link">
+    📥 Paso 3: guarda la pareja clave-valor allí
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-al-buscar-vuelve-a-calcular" class="md-nav__link">
+    📤 Paso 4: al buscar, vuelve a calcular
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-entonces-por-que-es-tan-rapido" class="md-nav__link">
+    🎯 6. Entonces, ¿por qué es tan rápido?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#obtener-el-valor-para-una-clave" class="md-nav__link">
-    Obtener el valor para una clave
+  <a href="#7-eficiencia-de-hashmap" class="md-nav__link">
+    📉 7. Eficiencia de HashMap
+  </a>
+  
+    <nav class="md-nav" aria-label="📉 7. Eficiencia de HashMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complejidades-tipicas" class="md-nav__link">
+    ⏱️ Complejidades típicas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importante" class="md-nav__link">
+    ⚠️ Importante
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-que-es-una-colision" class="md-nav__link">
+    💥 8. ¿Qué es una colisión?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#comprobar-si-una-clave-o-valor-existe" class="md-nav__link">
-    Comprobar si una clave o valor existe
+  <a href="#9-que-papel-tienen-equals-y-hashcode" class="md-nav__link">
+    🧩 9. ¿Qué papel tienen equals() y hashCode()?
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 9. ¿Qué papel tienen equals() y hashCode()?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-de-oro" class="md-nav__link">
+    ✅ Regla de oro
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-error-tipico-con-claves-personalizadas" class="md-nav__link">
+    ❌ 10. Error típico con claves personalizadas
+  </a>
+  
+    <nav class="md-nav" aria-label="❌ 10. Error típico con claves personalizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que" class="md-nav__link">
+    🤔 ¿Por qué?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-claves-mutables-peligro-real" class="md-nav__link">
+    ✅ 11. Claves mutables: peligro real
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 11. Claves mutables: peligro real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    ✅ Conclusión
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-operaciones-basicas-de-map" class="md-nav__link">
+    🛠️ 12. Operaciones básicas de Map
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ 12. Operaciones básicas de Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#put" class="md-nav__link">
+    ➕ put()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    🔍 get()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containskey" class="md-nav__link">
+    ❓ containsKey()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containsvalue" class="md-nav__link">
+    ❓ containsValue()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    🗑️ remove()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#size" class="md-nav__link">
+    📏 size()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    🧹 clear()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-como-recorrer-un-mapa" class="md-nav__link">
+    👀 13. Cómo recorrer un mapa
+  </a>
+  
+    <nav class="md-nav" aria-label="👀 13. Cómo recorrer un mapa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-recorrer-claves-con-keyset" class="md-nav__link">
+    1) Recorrer claves con keySet()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-recorrer-valores-con-values" class="md-nav__link">
+    2) Recorrer valores con values()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-recorrer-clave-y-valor-con-entryset" class="md-nav__link">
+    3) Recorrer clave y valor con entrySet() ✅
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-ejemplo-completo-sencillo" class="md-nav__link">
+    🧪 14. Ejemplo completo sencillo
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#imprimir-todos-los-valores-del-map" class="md-nav__link">
-    Imprimir todos los valores del Map
+  <a href="#15-se-permiten-claves-y-valores-null-en-hashmap" class="md-nav__link">
+    🧾 15. ¿Se permiten claves y valores null en HashMap?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#imprimir-cada-una-de-las-entradas-del-mapa" class="md-nav__link">
-    Imprimir cada una de las entradas del mapa
+  <a href="#16-diferencia-importante-con-set" class="md-nav__link">
+    ⚠️ 16. Diferencia importante con Set
   </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 16. Diferencia importante con Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    Set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    Map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#eliminar-una-entrada-clave-valor-de-un-map" class="md-nav__link">
-    Eliminar una entrada clave-valor de un Map
+  <a href="#17-cosas-modernas-y-utiles-de-java-sobre-mapas" class="md-nav__link">
+    🧠 17. Cosas modernas y útiles de Java sobre mapas
   </a>
+  
+    <nav class="md-nav" aria-label="🧠 17. Cosas modernas y útiles de Java sobre mapas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-getordefault" class="md-nav__link">
+    1) getOrDefault()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-putifabsent" class="md-nav__link">
+    2) putIfAbsent()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-replace" class="md-nav__link">
+    3) replace()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-foreach" class="md-nav__link">
+    4) forEach()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-computeifabsent" class="md-nav__link">
+    5) computeIfAbsent()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-merge" class="md-nav__link">
+    6) merge()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reemplazar-el-valor-de-una-clave" class="md-nav__link">
-    Reemplazar el valor de una clave
+  <a href="#18-mapof-mapofentries-y-mapcopyof" class="md-nav__link">
+    🆕 18. Map.of(...), Map.ofEntries(...) y Map.copyOf(...)
   </a>
+  
+    <nav class="md-nav" aria-label="🆕 18. Map.of(...), Map.ofEntries(...) y Map.copyOf(...)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapof" class="md-nav__link">
+    ✅ Map.of(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapofentries" class="md-nav__link">
+    ✅ Map.ofEntries(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapcopyof" class="md-nav__link">
+    ✅ Map.copyOf(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ojo" class="md-nav__link">
+    ⚠️ Ojo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hashmap" class="md-nav__link">
-    HashMap
+  <a href="#19-novedad-importante-en-java-21-sequencedmap" class="md-nav__link">
+    🆕 19. Novedad importante en Java 21: SequencedMap
+  </a>
+  
+    <nav class="md-nav" aria-label="🆕 19. Novedad importante en Java 21: SequencedMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-problema-habia" class="md-nav__link">
+    🤔 ¿Qué problema había?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-llego-en-java-21" class="md-nav__link">
+    ✅ Qué llegó en Java 21
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-significa-sequencedmap" class="md-nav__link">
+    🧠 Qué significa SequencedMap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-interesantes" class="md-nav__link">
+    🛠️ Métodos interesantes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-consejos-practicos-para-elegir-mapa" class="md-nav__link">
+    🧠 20. Consejos prácticos para elegir mapa
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 20. Consejos prácticos para elegir mapa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usa-hashmap-cuando" class="md-nav__link">
+    Usa HashMap cuando...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-errores-tipicos-del-alumnado" class="md-nav__link">
+    🚫 21. Errores típicos del alumnado
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 21. Errores típicos del alumnado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pensar-que-hashmap-mantiene-orden" class="md-nav__link">
+    ❌ Pensar que HashMap mantiene orden
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pensar-que-put-con-misma-clave-anade-otra-entrada" class="md-nav__link">
+    ❌ Pensar que put() con misma clave añade otra entrada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usar-objetos-como-clave-sin-equals-y-hashcode" class="md-nav__link">
+    ❌ Usar objetos como clave sin equals() y hashCode()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambiar-una-clave-despues-de-insertarla" class="md-nav__link">
+    ❌ Cambiar una clave después de insertarla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recorrer-con-keyset-y-luego-hacer-get-si-ya-necesitas-ambas-cosas" class="md-nav__link">
+    ❌ Recorrer con keySet() y luego hacer get() si ya necesitas ambas cosas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-conclusion" class="md-nav__link">
+    ✅ 22. Conclusión
   </a>
   
 </li>
@@ -2176,94 +3283,622 @@
 
 
 
-<h1 id="map">Map</h1>
-<p>Aunque las estructura de datos <code>Map</code> no forma parte dentro de la jerarquía de la interfaz <code>Collection</code>, se considera una interfaz de colección principal de Java Collections Framework.</p>
-<p><img alt="Map" src="../../img/ud6/map1.png" /></p>
-<p>Un <code>Map</code> es un objeto que asigna claves a valores. <strong>Un mapa no puede contener claves duplicadas</strong>: cada clave puede asignarse a un valor como máximo. Sin embargo, los valores asignados a la clave pueden tener valores duplicados. La interfaz <code>Map</code> incluye métodos para operaciones básicas (como put, get, remove, containsKey, containsValue, size, y empty) entre muchos otros.</p>
-<p><img alt="Map" src="../../img/ud6/map2.png" /></p>
-<p>La plataforma Java contiene tres implementaciones de <code>Map</code>: <code>HashMap</code>, <code>TreeMap</code> y <code>LinkedHashMap</code>.</p>
-<h2 id="crear-un-mapa">Crear un Mapa</h2>
-<p>Para crear un objeto <code>Map</code> podemos usar cualquiera de las implementaciones para esta interfaz (<code>HashMap</code>, <code>TreeMap</code> y <code>LinkedHashMap</code>), por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">idiomas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<h1 id="map-mapa-en-java">🗺️ Map - Mapa en Java</h1>
+<h2 id="1-que-es-un-map">📌 1. ¿Qué es un <code>Map</code>?</h2>
+<p><code>Map</code> en Java es una <strong>interfaz</strong>.</p>
+<p>Es decir:</p>
+<ul>
+<li><strong>no es una clase</strong>   </li>
+<li><strong>no se puede instanciar directamente</strong>   </li>
+<li>define un <strong>contrato/estándar</strong> para trabajar con parejas <strong>clave → valor</strong>    </li>
+</ul>
+<p>Piensa en ello como una agenda:</p>
+<ul>
+<li>la <strong>clave</strong> es el nombre</li>
+<li>el <strong>valor</strong> es el teléfono</li>
+</ul>
+<p>Ejemplo conceptual:</p>
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Ana&quot;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">666111222</span>
+<span class="s">&quot;Luis&quot;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">644222333</span>
+<span class="s">&quot;Marta&quot;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">611333444</span>
 </code></pre></div>
-<h2 id="anadir-claves-y-valores-en-un-mapa">Añadir claves y valores en un mapa</h2>
-<p>Para añadir un par de clave-valor al mapa usamos el método <code>put</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainMap</span><span class="w"> </span><span class="p">{</span>
+<p>Ejemplo real en Java:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">edades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>Aquí:</p>
+<ul>
+<li><code>Map&lt;String, Integer&gt;</code> es la <strong>interfaz</strong></li>
+<li><code>HashMap&lt;&gt;</code> es la <strong>clase que la implementa</strong></li>
+</ul>
+<h3 id="11-map-no-hereda-de-collection">🚫 1.1 <code>Map</code> no hereda de <code>Collection</code></h3>
+<p>Esto es importante:</p>
+<blockquote>
+<p><code>Map</code> forma parte del framework de colecciones de Java, pero <strong>NO hereda de <code>Collection</code></strong>.</p>
+</blockquote>
+<p>¿Por qué?</p>
+<p>Porque <code>Collection</code> representa una colección “simple” de elementos:</p>
+<ul>
+<li>una <code>List</code> guarda elementos</li>
+<li>un <code>Set</code> guarda elementos</li>
+</ul>
+<p>Pero un <code>Map</code> <strong>no guarda elementos sueltos</strong>, sino <strong>pares clave-valor</strong>.</p>
+<p>O sea, un mapa no almacena solo una cosa:</p>
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Ana&quot;</span>
+</code></pre></div>
+<p>sino una asociación completa:</p>
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Ana&quot;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">20</span>
+</code></pre></div>
+<p>Por eso Java lo separa de <code>Collection</code>.</p>
+<p>Aun así, sí puedes obtener vistas del mapa que sí son colecciones:</p>
+<ul>
+<li><code>keySet()</code> → devuelve un <code>Set</code> con las claves</li>
+<li><code>values()</code> → devuelve una <code>Collection</code> con los valores</li>
+<li><code>entrySet()</code> → devuelve un <code>Set</code> de entradas clave-valor</li>
+</ul>
+<hr />
+<h3 id="idea-clave">🔑 Idea clave</h3>
+<p>En un <code>Map</code>:</p>
+<ul>
+<li><strong>las claves NO se repiten, son ÚNICAS en el mapa</strong></li>
+<li><strong>los valores sí pueden repetirse</strong></li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">edades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">edades</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<span class="n">edades</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">);</span>
+<span class="n">edades</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Marta&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span><span class="w"> </span><span class="c1">// esto sí se puede</span>
+</code></pre></div>
+<p>Pero esto no:</p>
+<div class="highlight"><pre><span></span><code><span class="n">edades</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<span class="n">edades</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
+</code></pre></div>
+<p>No da error, pero la segunda operación <strong>sobrescribe</strong> el valor anterior.</p>
+<hr />
+<h2 id="2-para-que-sirve-un-mapa">🧠 2. ¿Para qué sirve un mapa?</h2>
+<p>Sirve cuando quieres buscar algo a partir de una clave.</p>
+<p>Casos típicos:</p>
+<ul>
+<li>DNI → persona</li>
+<li>matrícula → coche</li>
+<li>usuario → contraseña</li>
+<li>palabra → definición</li>
+<li>producto → precio</li>
+<li>alumno → nota</li>
+</ul>
+<p>Si con una lista tenías que <strong>recorrer elemento a elemento</strong>, con un mapa normalmente buscas directamente por clave.</p>
+<hr />
+<h2 id="3-implementaciones-principales-de-map">📦 3. Implementaciones principales de <code>Map</code></h2>
+<p>Las más importantes son:</p>
+<ul>
+<li><code>HashMap</code></li>
+<li><code>LinkedHashMap</code></li>
+<li><code>TreeMap</code></li>
+</ul>
+<h3 id="comparativa-rapida">⚔️ Comparativa rápida</h3>
+<table>
+<thead>
+<tr>
+<th>Implementación</th>
+<th>Orden</th>
+<th align="right">Velocidad habitual</th>
+<th>Permite <code>null</code></th>
+<th>Cuándo usarla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HashMap</code></td>
+<td>No garantiza orden</td>
+<td align="right">Muy rápida</td>
+<td>Sí</td>
+<td>Cuando quieres buscar rápido</td>
+</tr>
+<tr>
+<td><code>LinkedHashMap</code></td>
+<td>Mantiene orden de inserción</td>
+<td align="right">Muy rápida</td>
+<td>Sí</td>
+<td>Cuando quieres rapidez <strong>y</strong> orden</td>
+</tr>
+<tr>
+<td><code>TreeMap</code></td>
+<td>Ordena por clave</td>
+<td align="right">Más lenta</td>
+<td>No clave <code>null</code></td>
+<td>Cuando quieres los datos ordenados</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-hashmap-la-implementacion-mas-importante">🚀 4. <code>HashMap</code>: la implementación más importante</h2>
+<h3 id="que-es">✅ Qué es</h3>
+<p><code>HashMap</code> es la implementación más usada de <code>Map</code>.</p>
+<p>Su objetivo principal es este:</p>
+<blockquote>
+<p><strong>buscar por clave muy rápido</strong>.</p>
+</blockquote>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">notas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="n">notas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
+<span class="n">notas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Marta&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">);</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">idiomas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="w">        </span><span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;es&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Español&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;English EEUU&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;ca&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;English Canadá&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;de&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Aleman&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;fr&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Francés&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;it&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Italian&quot;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 6</span>
+</code></pre></div>
+<hr />
+<h2 id="5-como-funciona-hashmap-por-dentro">⚙️ 5. ¿Cómo funciona <code>HashMap</code> por dentro?</h2>
+<p>Esta es la idea sencilla:</p>
+<h3 id="paso-1-tiene-cubos-o-buckets">🪣 Paso 1: tiene “cubos” o “buckets”</h3>
+<p>Por dentro, <code>HashMap</code> organiza la información en una tabla.</p>
+<p>Puedes imaginar algo así:</p>
+<div class="highlight"><pre><span></span><code>[0] -&gt; ...
+[1] -&gt; ...
+[2] -&gt; ...
+[3] -&gt; ...
+[4] -&gt; ...
+</code></pre></div>
+<p>Cada posición es un <strong>bucket</strong>.</p>
+<h3 id="paso-2-usa-hashcode-de-la-clave">🧮 Paso 2: usa <code>hashCode()</code> de la clave</h3>
+<p>Cuando metes una clave, Java calcula su <code>hashCode()</code>.</p>
+<p>Con ese número decide <strong>en qué bucket guardarla</strong>.</p>
+<h3 id="paso-3-guarda-la-pareja-clave-valor-alli">📥 Paso 3: guarda la pareja clave-valor allí</h3>
+<p>Cuando haces:</p>
+<div class="highlight"><pre><span></span><code><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+</code></pre></div>
+<p>Java:</p>
+<ol>
+<li>calcula el hash de <code>"Ana"</code></li>
+<li>decide bucket</li>
+<li>guarda ahí la entrada <code>"Ana" -&gt; 8</code></li>
+</ol>
+<h3 id="paso-4-al-buscar-vuelve-a-calcular">📤 Paso 4: al buscar, vuelve a calcular</h3>
+<p>Cuando haces:</p>
+<div class="highlight"><pre><span></span><code><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>Java:</p>
+<ol>
+<li>vuelve a calcular el hash de <code>"Ana"</code></li>
+<li>va directamente al bucket correspondiente</li>
+<li>compara las claves con <code>equals()</code></li>
+<li>devuelve el valor</li>
+</ol>
+<hr />
+<h2 id="6-entonces-por-que-es-tan-rapido">🎯 6. Entonces, ¿por qué es tan rápido?</h2>
+<p>Porque <strong>no necesita recorrer todo</strong> como una lista.</p>
+<p>En vez de buscar así:</p>
+<div class="highlight"><pre><span></span><code>Ana? no
+Luis? no
+Marta? sí
+</code></pre></div>
+<p>va casi directo al sitio correcto.</p>
+<p>Por eso, en condiciones normales:</p>
+<ul>
+<li><code>put()</code> suele ser muy rápido</li>
+<li><code>get()</code> suele ser muy rápido</li>
+<li><code>remove()</code> suele ser muy rápido</li>
+</ul>
+<p>Recuerda que <code>HashMap</code> no garantiza orden.</p>
+<hr />
+<h2 id="7-eficiencia-de-hashmap">📉 7. Eficiencia de <code>HashMap</code></h2>
+<h3 id="complejidades-tipicas">⏱️ Complejidades típicas</h3>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th align="right">Coste habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>put(clave, valor)</code></td>
+<td align="right">O(1)</td>
+</tr>
+<tr>
+<td><code>get(clave)</code></td>
+<td align="right">O(1)</td>
+</tr>
+<tr>
+<td><code>remove(clave)</code></td>
+<td align="right">O(1)</td>
+</tr>
+<tr>
+<td>recorrer todo el mapa</td>
+<td align="right">O(n)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="importante">⚠️ Importante</h3>
+<p>Ese <strong>O(1)</strong> es el caso habitual o esperado.</p>
+<p>No significa “mágicamente instantáneo siempre”.</p>
+<p>Si hay muchas colisiones, el rendimiento puede empeorar.</p>
+<hr />
+<h2 id="8-que-es-una-colision">💥 8. ¿Qué es una colisión?</h2>
+<p>Una colisión ocurre cuando <strong>dos claves distintas terminan en el mismo bucket</strong>.</p>
+<p>Ejemplo imaginario:</p>
+<div class="highlight"><pre><span></span><code>&quot;Ana&quot;   -&gt; bucket 3
+&quot;Luis&quot;  -&gt; bucket 3
+</code></pre></div>
+<p>Ambas claves caen en el mismo sitio.</p>
+<p>Entonces <code>HashMap</code> tiene que guardar varias entradas en ese bucket.</p>
+<p>Eso hace que buscar sea menos eficiente.</p>
+<p>Usar muchas claves con el mismo <code>hashCode()</code> empeora el rendimiento.</p>
+<hr />
+<h2 id="9-que-papel-tienen-equals-y-hashcode">🧩 9. ¿Qué papel tienen <code>equals()</code> y <code>hashCode()</code>?</h2>
+<p>En un <code>HashMap</code>, la clave se maneja con estos dos métodos:</p>
+<ul>
+<li><code>hashCode()</code> decide <strong>a qué zona aproximada ir</strong></li>
+<li><code>equals()</code> decide <strong>si esa clave es exactamente la correcta</strong></li>
+</ul>
+<h3 id="regla-de-oro">✅ Regla de oro</h3>
+<p>Si dos objetos son iguales según <code>equals()</code>, <strong>deben tener el mismo <code>hashCode()</code></strong>.</p>
+<p>Si no, el mapa puede comportarse mal.</p>
+<hr />
+<h2 id="10-error-tipico-con-claves-personalizadas">❌ 10. Error típico con claves personalizadas</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Alumno</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dni</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Alumno</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">dni</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">dni</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dni</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Las claves de los mapas son <strong>únicas</strong>, si intentamos añadir un nuevo valor para una clave que ya existe, el valor es sobreescrito.</p>
-<p>Para saber si estamos agregando una nueva clave o solo modificando el valor, el método <code>put</code> nos ayuda, ya que devuelve el valor anterior asociado con la clave, o <code>null</code> si no hubo asignación para la clave antes.</p>
-<p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">idiomas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<p>Y luego:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">Alumno</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mapa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">mapa</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;111A&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
 
-<span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;es&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Español&quot;</span><span class="p">);</span>
-<span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;English EEUU&quot;</span><span class="p">);</span>
-<span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;ca&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;English Canadá&quot;</span><span class="p">);</span>
-<span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;de&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Aleman&quot;</span><span class="p">);</span>
-<span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;fr&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Francés&quot;</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;it&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Italian&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">//devuelve null</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">idiomas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;it&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Italiano&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">//devuelve el valor previo &quot;Italian&quot;, lo que significa que se ha sobreescrito</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mapa</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;111A&quot;</span><span class="p">)));</span>
 </code></pre></div>
-<h2 id="obtener-el-valor-para-una-clave">Obtener el valor para una clave</h2>
-<p>Para obtener el valor asociado a una clave usamos el método <code>get</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idiomas</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;it&quot;</span><span class="p">);</span>
-</code></pre></div>
-<h2 id="comprobar-si-una-clave-o-valor-existe">Comprobar si una clave o valor existe</h2>
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">idiomas</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;es&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La clave es ya existe&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+<p>Muchos pensaréis que devolverá <code>Ana</code>, pero probablemente devolverá <code>null</code>, porque es otro objeto y no hemos sobrescrito el método <code>hashCode()</code>.</p>
+<h3 id="por-que">🤔 ¿Por qué?</h3>
+<p>Porque son <strong>dos objetos distintos</strong>.</p>
+<p>Si no redefinimos <code>equals()</code> y <code>hashCode()</code>, Java los trata como diferentes.</p>
+<hr />
+<h2 id="11-claves-mutables-peligro-real">✅ 11. Claves mutables: peligro real</h2>
+<p>Esto es importantísimo.</p>
+<p>Si usas como clave un objeto y cambias después el atributo que participa en <code>equals()</code> o <code>hashCode()</code>, puedes “romper” el mapa.</p>
+<p>Ejemplo conceptual:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">Cuenta</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mapa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">Cuenta</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cuenta</span><span class="p">(</span><span class="s">&quot;ES123&quot;</span><span class="p">);</span>
+<span class="n">mapa</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Cuenta principal&quot;</span><span class="p">);</span>
 
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">idiomas</span><span class="p">.</span><span class="na">containsValue</span><span class="p">(</span><span class="s">&quot;Español&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El idioma español ya existe&quot;</span><span class="p">);</span>
+<span class="n">c</span><span class="p">.</span><span class="na">setIban</span><span class="p">(</span><span class="s">&quot;ES999&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>Ahora puede pasar que:</p>
+<ul>
+<li>el objeto siga dentro del mapa</li>
+<li>pero no lo encuentres bien con <code>get()</code> o <code>containsKey()</code></li>
+</ul>
+<p>Hay que tener muchísimo cuidado con claves mutables y que el comportamiento deja de estar bien definido si cambias una clave de una forma que afecte a <code>equals()</code>.</p>
+<hr />
+<h3 id="conclusion">✅ Conclusión</h3>
+<p>Las claves en mapas deberían ser preferiblemente:</p>
+<ul>
+<li>inmutables</li>
+<li>bien definidas</li>
+<li>con <code>equals()</code> y <code>hashCode()</code> correctos</li>
+</ul>
+<hr />
+<h2 id="12-operaciones-basicas-de-map">🛠️ 12. Operaciones básicas de <code>Map</code></h2>
+<h3 id="put">➕ <code>put()</code></h3>
+<p>Añade o sustituye una entrada. Devuelve el <strong>valor anterior asociado a esa clave</strong>. Si la clave no existía, devuelve <code>null</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mapa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">mapa</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="n">mapa</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
+<span class="n">mapa</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// sustituye el valor anterior</span>
+</code></pre></div>
+<h3 id="get">🔍 <code>get()</code></h3>
+<p>Devuelve el valor asociado a la clave. Si la clave no existe → devuelve <code>null</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mapa</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 10</span>
+</code></pre></div>
+<h3 id="containskey">❓ <code>containsKey()</code></h3>
+<p>Comprueba si existe una clave, devuelve <code>true</code> or <code>false</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mapa</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div>
+<h3 id="containsvalue">❓ <code>containsValue()</code></h3>
+<p>Comprueba si existe un valor. Devuelve <code>true</code> si ese valor aparece en alguna entrada del mapa o <code>false</code> si no aparece.</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mapa</span><span class="p">.</span><span class="na">containsValue</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div>
+<h3 id="remove">🗑️ <code>remove()</code></h3>
+<p>Elimina una entrada por clave. Devuelve el valor que estaba asociado a esa clave. Si la clave existía → devuelve el valor eliminado. Si no existía → devuelve <code>null</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">mapa</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="size">📏 <code>size()</code></h3>
+<p>Devuelve el número de entradas.</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mapa</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+</code></pre></div>
+<h3 id="clear">🧹 <code>clear()</code></h3>
+<p>Vacía el mapa.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mapa</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="13-como-recorrer-un-mapa">👀 13. Cómo recorrer un mapa</h2>
+<h3 id="1-recorrer-claves-con-keyset">1) Recorrer claves con <code>keySet()</code></h3>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">clave</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">mapa</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">clave</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="imprimir-todos-los-valores-del-map">Imprimir todos los valores del <code>Map</code></h2>
-<p>Lo haremos de la siguiente forma:</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="n">idiomas</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">idiomas</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">key</span><span class="p">));</span>
+<h3 id="2-recorrer-valores-con-values">2) Recorrer valores con <code>values()</code></h3>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">mapa</span><span class="p">.</span><span class="na">values</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">valor</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Al imprimir vemos que las claves no aparecen en ningún orden, ni en el que las hemos introducido ni en orden alfabético. Los elementos del <code>HashMap</code> no están ordenados.</p>
-<h2 id="imprimir-cada-una-de-las-entradas-del-mapa">Imprimir cada una de las entradas del mapa</h2>
-<p>Si queremos recorrer las entradas del mapa usaremos:</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">entradaMapa</span><span class="p">:</span><span class="w"> </span><span class="n">idiomas</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">entradaMapa</span><span class="p">.</span><span class="na">getKey</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">entradaMapa</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
+<h3 id="3-recorrer-clave-y-valor-con-entryset">3) Recorrer clave y valor con <code>entrySet()</code> ✅</h3>
+<p>Esta suele ser la mejor opción si necesitas ambas cosas.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">entrada</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">mapa</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">entrada</span><span class="p">.</span><span class="na">getKey</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">entrada</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="eliminar-una-entrada-clave-valor-de-un-map">Eliminar una entrada clave-valor de un <code>Map</code></h2>
-<p>Tenemos dos formas de eliminar:</p>
-<ol>
-<li>Eliminar desde una clave existente, o</li>
-<li>Eliminar un par clave-valor existente.</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="c1">//Forma 1</span>
-<span class="kt">boolean</span><span class="w"> </span><span class="n">eliminado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idiomas</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;fr&quot;</span><span class="p">);</span>
+<hr />
+<h2 id="14-ejemplo-completo-sencillo">🧪 14. Ejemplo completo sencillo</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
 
-<span class="c1">//Forma 2</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">idiomas</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;de&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ingles&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;de ha sido eliminado&quot;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No existe un par clave-valor con de-Ingles&quot;</span><span class="p">);</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">notas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="w">        </span><span class="n">notas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
+<span class="w">        </span><span class="n">notas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Marta&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">);</span>
+<span class="w">        </span><span class="n">notas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"> </span><span class="c1">// sustituye el 6</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nota de Marta: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">notas</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Marta&quot;</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¿Existe Ana? &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">notas</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tamaño: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">notas</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">notas</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getKey</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="reemplazar-el-valor-de-una-clave">Reemplazar el valor de una clave</h2>
-<div class="highlight"><pre><span></span><code><span class="n">idiomas</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span><span class="s">&quot;es&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Spain&quot;</span><span class="p">);</span>
-<span class="n">idiomas</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;English&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;English EEUU&quot;</span><span class="p">);</span><span class="c1">//Reemplazo el antiguo valor por el nuevo, pero antes me aseguro que el antiguo valor sea ese dato antes de cambiarlo</span>
+<hr />
+<h2 id="15-se-permiten-claves-y-valores-null-en-hashmap">🧾 15. ¿Se permiten claves y valores <code>null</code> en <code>HashMap</code>?</h2>
+<p>Sí:</p>
+<ul>
+<li>permite <strong>UNA  clave <code>null</code></strong></li>
+<li>permite varios valores <code>null</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mapa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">mapa</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="n">mapa</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
 </code></pre></div>
-<h2 id="hashmap"><code>HashMap</code></h2>
-<p><code>HashMap</code> es una estructura de datos que implementa la <code>Map&lt;Key,Value&gt;</code> interfaz y se basa en el principio de hash.</p>
-<p><strong>Una función hash</strong> es una función que convierte datos de entrada de cualquier tamaño (generalmente grande) en datos de tamaño fijo, generalmente compactos. El resultado de esta función de trabajo se llama <strong>código hash</strong>.</p>
-<p>Cada objeto Java tiene un código hash. Suele ser un número y se calcula utilizando el método hashCode de la clase Object.</p>
+<hr />
+<h2 id="16-diferencia-importante-con-set">⚠️ 16. Diferencia importante con <code>Set</code></h2>
+<h3 id="set"><code>Set</code></h3>
+<p>Guarda solo valores:</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">ana</span><span class="p">,</span><span class="w"> </span><span class="n">luis</span><span class="p">,</span><span class="w"> </span><span class="n">marta</span><span class="o">]</span>
+</code></pre></div>
+<h3 id="map"><code>Map</code></h3>
+<p>Guarda pares clave-valor:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ana</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">8</span>
+<span class="n">luis</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">6</span>
+<span class="n">marta</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">9</span>
+</code></pre></div>
+<p>De hecho:</p>
+<ul>
+<li>un <code>Set</code> te dice si <strong>existe un elemento</strong></li>
+<li>un <code>Map</code> te permite obtener <strong>el valor asociado a una clave</strong></li>
+</ul>
+<hr />
+<h2 id="17-cosas-modernas-y-utiles-de-java-sobre-mapas">🧠 17. Cosas modernas y útiles de Java sobre mapas</h2>
+<p>Aquí van varias cosas importantes que conviene conocer.</p>
+<h3 id="1-getordefault">1) <code>getOrDefault()</code></h3>
+<p>Muy útil cuando la clave podría no existir.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mapa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">mapa</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mapa</span><span class="p">.</span><span class="na">getOrDefault</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span><span class="w"> </span><span class="c1">// 0</span>
+</code></pre></div>
+<p>En vez de devolver <code>null</code>, te da un valor por defecto.</p>
+<h3 id="2-putifabsent">2) <code>putIfAbsent()</code></h3>
+<p>Solo mete el valor si la clave no estaba ya.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mapa</span><span class="p">.</span><span class="na">putIfAbsent</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="p">);</span><span class="w"> </span><span class="c1">// no cambia nada</span>
+<span class="n">mapa</span><span class="p">.</span><span class="na">putIfAbsent</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// sí lo añade</span>
+</code></pre></div>
+<h3 id="3-replace">3) <code>replace()</code></h3>
+<p>Reemplaza un valor solo si la clave existe.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mapa</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="4-foreach">4) <code>forEach()</code></h3>
+<p>Más cómodo para recorrer:</p>
+<div class="highlight"><pre><span></span><code><span class="n">mapa</span><span class="p">.</span><span class="na">forEach</span><span class="p">((</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="p">));</span>
+</code></pre></div>
+<h3 id="5-computeifabsent">5) <code>computeIfAbsent()</code></h3>
+<p>Muy útil para mapas de listas o contadores.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">grupos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="n">grupos</span><span class="p">.</span><span class="na">computeIfAbsent</span><span class="p">(</span><span class="s">&quot;DAM&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">()).</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+<span class="n">grupos</span><span class="p">.</span><span class="na">computeIfAbsent</span><span class="p">(</span><span class="s">&quot;DAM&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">()).</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>Esto evita hacer:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">grupos</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;DAM&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grupos</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;DAM&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="6-merge">6) <code>merge()</code></h3>
+<p>Buenísimo para contar cosas.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="n">contador</span><span class="p">.</span><span class="na">merge</span><span class="p">(</span><span class="s">&quot;rojo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="p">::</span><span class="n">sum</span><span class="p">);</span>
+<span class="n">contador</span><span class="p">.</span><span class="na">merge</span><span class="p">(</span><span class="s">&quot;rojo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="p">::</span><span class="n">sum</span><span class="p">);</span>
+<span class="n">contador</span><span class="p">.</span><span class="na">merge</span><span class="p">(</span><span class="s">&quot;azul&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="p">::</span><span class="n">sum</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">contador</span><span class="p">);</span><span class="w"> </span><span class="c1">// {rojo=2, azul=1}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th align="right">¿Usa <code>hashCode()</code>?</th>
+<th align="right">¿Usa <code>equals()</code>?</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>put(clave, valor)</code></td>
+<td align="right">Sí</td>
+<td align="right">Sí</td>
+<td>Calcula el <code>hashCode()</code> de la clave para ir al cubo correspondiente. Si ya hay claves en ese cubo, compara con <code>equals()</code> para ver si la clave ya existía y sustituir el valor.</td>
+</tr>
+<tr>
+<td><code>get(clave)</code></td>
+<td align="right">Sí</td>
+<td align="right">Sí</td>
+<td>Usa <code>hashCode()</code> para localizar el cubo y luego <code>equals()</code> para encontrar la clave exacta dentro de ese cubo.</td>
+</tr>
+<tr>
+<td><code>containsKey(clave)</code></td>
+<td align="right">Sí</td>
+<td align="right">Sí</td>
+<td>Igual que <code>get()</code>: localiza por <code>hashCode()</code> y confirma con <code>equals()</code>.</td>
+</tr>
+<tr>
+<td><code>remove(clave)</code></td>
+<td align="right">Sí</td>
+<td align="right">Sí</td>
+<td>Busca la clave usando <code>hashCode()</code> y <code>equals()</code>, y si la encuentra elimina esa entrada.</td>
+</tr>
+<tr>
+<td><code>putIfAbsent(clave, valor)</code></td>
+<td align="right">Sí</td>
+<td align="right">Sí</td>
+<td>Necesita comprobar si la clave ya existe, así que funciona igual que una búsqueda por clave.</td>
+</tr>
+<tr>
+<td><code>getOrDefault(clave, valorPorDefecto)</code></td>
+<td align="right">Sí</td>
+<td align="right">Sí</td>
+<td>Busca la clave con el mismo mecanismo que <code>get()</code>.</td>
+</tr>
+<tr>
+<td><code>replace(clave, valor)</code></td>
+<td align="right">Sí</td>
+<td align="right">Sí</td>
+<td>Primero debe localizar la clave; para eso usa <code>hashCode()</code> y <code>equals()</code>.</td>
+</tr>
+<tr>
+<td><code>computeIfAbsent(clave, funcion)</code></td>
+<td align="right">Sí</td>
+<td align="right">Sí</td>
+<td>Comprueba si la clave existe antes de calcular el valor.</td>
+</tr>
+<tr>
+<td><code>computeIfPresent(clave, funcion)</code></td>
+<td align="right">Sí</td>
+<td align="right">Sí</td>
+<td>Busca la clave para ver si está presente.</td>
+</tr>
+<tr>
+<td><code>compute(clave, funcion)</code></td>
+<td align="right">Sí</td>
+<td align="right">Sí</td>
+<td>Trabaja sobre una clave concreta, así que antes debe localizarla.</td>
+</tr>
+<tr>
+<td><code>merge(clave, valor, funcion)</code></td>
+<td align="right">Sí</td>
+<td align="right">Sí</td>
+<td>Busca si esa clave ya existe para fusionar o insertar.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="18-mapof-mapofentries-y-mapcopyof">🆕 18. <code>Map.of(...)</code>, <code>Map.ofEntries(...)</code> y <code>Map.copyOf(...)</code></h2>
+<p>Estas utilidades modernas permiten crear mapas <strong>inmutables</strong> de forma muy cómoda.</p>
+<h3 id="mapof">✅ <code>Map.of(...)</code></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mapa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;Marta&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span>
+<span class="p">);</span>
+</code></pre></div>
+<h3 id="mapofentries">✅ <code>Map.ofEntries(...)</code></h3>
+<p>Útil cuando hay muchas entradas.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mapa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">ofEntries</span><span class="p">(</span>
+<span class="w">    </span><span class="n">Map</span><span class="p">.</span><span class="na">entry</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">),</span>
+<span class="w">    </span><span class="n">Map</span><span class="p">.</span><span class="na">entry</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">Map</span><span class="p">.</span><span class="na">entry</span><span class="p">(</span><span class="s">&quot;Marta&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<h3 id="mapcopyof">✅ <code>Map.copyOf(...)</code></h3>
+<p>Crea una copia inmutable a partir de otro mapa.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">original</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+
+<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">copia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">copyOf</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="ojo">⚠️ Ojo</h3>
+<p>Estos mapas son <strong>no modificables</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">mapa</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Pepe&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// UnsupportedOperationException</span>
+</code></pre></div>
+<p>La API oficial de <code>Map</code> incluye estos métodos estáticos (<code>of</code>, <code>ofEntries</code>, <code>copyOf</code>) para crear mapas no modificables. citeturn798303view1</p>
+<hr />
+<h2 id="19-novedad-importante-en-java-21-sequencedmap">🆕 19. Novedad importante en Java 21: <code>SequencedMap</code></h2>
+<p>Esto sí es una novedad reciente de verdad.</p>
+<h3 id="que-problema-habia">🤔 ¿Qué problema había?</h3>
+<p>Antes, Java tenía mapas con orden, pero <strong>no había una interfaz común clara</strong> para trabajar con ese orden de forma uniforme.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li><code>LinkedHashMap</code> tiene orden de inserción</li>
+<li><code>TreeMap</code> tiene orden por clave</li>
+</ul>
+<p>Pero faltaba una interfaz más general para expresar “este mapa tiene un orden definido”.</p>
+<h3 id="que-llego-en-java-21">✅ Qué llegó en Java 21</h3>
+<p>Java 21 introdujo <code>SequencedMap</code> mediante JEP 431. Oracle explica que esta nueva jerarquía añade interfaces para colecciones, sets y mapas con orden definido, y que <code>LinkedHashMap</code> y <code>SortedMap</code>/<code>TreeMap</code> encajan ahí. citeturn798303view2turn798303view4</p>
+<h3 id="que-significa-sequencedmap">🧠 Qué significa <code>SequencedMap</code></h3>
+<p>Es un mapa que:</p>
+<ul>
+<li>tiene un orden de encuentro bien definido</li>
+<li>permite trabajar por ambos extremos</li>
+<li>se puede recorrer al revés fácilmente</li>
+</ul>
+<p>La documentación oficial lo define exactamente así: un mapa con orden bien definido, operaciones en ambos extremos y vista reversible. citeturn798303view3</p>
+<h3 id="metodos-interesantes">🛠️ Métodos interesantes</h3>
+<p>Entre otros, aparecen ideas como:</p>
+<ul>
+<li><code>firstEntry()</code></li>
+<li><code>lastEntry()</code></li>
+<li><code>pollFirstEntry()</code></li>
+<li><code>pollLastEntry()</code></li>
+<li><code>reversed()</code></li>
+</ul>
+<p>Ejemplo conceptual:</p>
+<div class="highlight"><pre><span></span><code><span class="n">SequencedMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mapa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedHashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>Y luego poder hacer cosas como:</p>
+<div class="highlight"><pre><span></span><code><span class="n">mapa</span><span class="p">.</span><span class="na">firstEntry</span><span class="p">();</span>
+<span class="n">mapa</span><span class="p">.</span><span class="na">lastEntry</span><span class="p">();</span>
+<span class="n">mapa</span><span class="p">.</span><span class="na">reversed</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="20-consejos-practicos-para-elegir-mapa">🧠 20. Consejos prácticos para elegir mapa</h2>
+<h3 id="usa-hashmap-cuando">Usa <code>HashMap</code> cuando...</h3>
+<ul>
+<li>quieras rapidez</li>
+<li>el orden te dé igual</li>
+<li>sea tu opción por defecto</li>
+</ul>
+<hr />
+<h2 id="21-errores-tipicos-del-alumnado">🚫 21. Errores típicos del alumnado</h2>
+<h3 id="pensar-que-hashmap-mantiene-orden">❌ Pensar que <code>HashMap</code> mantiene orden</h3>
+<p>No. Puede coincidir alguna vez, pero <strong>no está garantizado</strong>.</p>
+<h3 id="pensar-que-put-con-misma-clave-anade-otra-entrada">❌ Pensar que <code>put()</code> con misma clave añade otra entrada</h3>
+<p>No. Sustituye el valor.</p>
+<h3 id="usar-objetos-como-clave-sin-equals-y-hashcode">❌ Usar objetos como clave sin <code>equals()</code> y <code>hashCode()</code></h3>
+<p>Eso rompe búsquedas lógicas.</p>
+<h3 id="cambiar-una-clave-despues-de-insertarla">❌ Cambiar una clave después de insertarla</h3>
+<p>Muy peligroso si afecta al hash o a la igualdad.</p>
+<h3 id="recorrer-con-keyset-y-luego-hacer-get-si-ya-necesitas-ambas-cosas">❌ Recorrer con <code>keySet()</code> y luego hacer <code>get()</code> si ya necesitas ambas cosas</h3>
+<p>Si necesitas clave y valor, suele ser mejor <code>entrySet()</code>.</p>
+<hr />
+<h2 id="22-conclusion">✅ 22. Conclusión</h2>
+<ul>
+<li>una <code>List</code> busca por posición</li>
+<li>un <code>Set</code> guarda valores únicos</li>
+<li>un <code>Map</code> relaciona una clave con un valor</li>
+</ul>
 
 
   
