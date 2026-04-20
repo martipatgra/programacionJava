@@ -3809,6 +3809,13 @@ Marta? sí
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Primera&quot;</span><span class="p">).</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 8</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Segunda&quot;</span><span class="p">).</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 7</span>
 </code></pre></div>
+<p>Para modificar un dato del mapa interno:</p>
+<div class="highlight"><pre><span></span><code><span class="n">notas</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Primera&quot;</span><span class="p">).</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+
+<span class="c1">//o si lo quiero ver en pasos separados</span>
+<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">eva</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">notas</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Primera&quot;</span><span class="p">);</span>
+<span class="n">eva</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+</code></pre></div>
 <hr />
 <h2 id="22-conclusion">✅ 22. Conclusión</h2>
 <ul>
