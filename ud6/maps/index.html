@@ -1954,6 +1954,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#22-crear-un-mapa-de-mapas" class="md-nav__link">
+    🧩 22. Crear un mapa de mapas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#21-conclusion" class="md-nav__link">
     ✅ 21. Conclusión
   </a>
@@ -3179,6 +3186,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#22-crear-un-mapa-de-mapas" class="md-nav__link">
+    🧩 22. Crear un mapa de mapas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#21-conclusion" class="md-nav__link">
     ✅ 21. Conclusión
   </a>
@@ -3771,6 +3785,30 @@ Marta? sí
 <p>Muy peligroso si afecta al hash o a la igualdad.</p>
 <h3 id="recorrer-con-keyset-y-luego-hacer-get-si-ya-necesitas-ambas-cosas">❌ Recorrer con <code>keySet()</code> y luego hacer <code>get()</code> si ya necesitas ambas cosas</h3>
 <p>Si necesitas clave y valor, suele ser mejor <code>entrySet()</code>.</p>
+<hr />
+<h2 id="22-crear-un-mapa-de-mapas">🧩 22. Crear un mapa de mapas</h2>
+<p>A veces, en lugar de guardar un valor simple, queremos guardar otro mapa como valor.</p>
+<p>Eso se llama un <strong>mapa anidado o mapa de mapas</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//Ejemplo: //La clave externa es un String y el valor asociado es otro Map</span>
+<span class="c1">//En ese mapa interno: la clave es un String y el valor es un Integer</span>
+<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">eva1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">eva1</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="n">eva1</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
+
+<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">eva2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">eva2</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">);</span>
+<span class="n">eva2</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
+
+<span class="n">notas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Primera&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">eva1</span><span class="p">);</span>
+<span class="n">notas</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Segunda&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">eva2</span><span class="p">);</span>
+</code></pre></div>
+<p>🔍 Acceder a un dato de un mapa de mapas:</p>
+<p>Para acceder, hacemos un get() del mapa exterior y luego otro get() del mapa interior:</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Primera&quot;</span><span class="p">).</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 8</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Segunda&quot;</span><span class="p">).</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 7</span>
+</code></pre></div>
 <hr />
 <h2 id="21-conclusion">✅ 21. Conclusión</h2>
 <ul>
