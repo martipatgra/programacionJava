@@ -3369,9 +3369,8 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">});</span>
 
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">entrada</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entradas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">entrada</span><span class="p">.</span><span class="na">getKey</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">entrada</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
-<span class="p">}</span>
+<span class="c1">//o también se puede hacer:</span>
+<span class="n">entradas</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="p">.</span><span class="na">comparingByKey</span><span class="p">());</span>
 </code></pre></div>
 <hr />
 <h2 id="como-ordenar-un-hashmap-por-valor">🧾 Cómo ordenar un <code>HashMap</code> por valor</h2>
@@ -3385,9 +3384,12 @@
 <span class="n">entradas</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Comparator</span><span class="o">&lt;</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">e1</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">e2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">e2</span><span class="p">.</span><span class="na">getValue</span><span class="p">(),</span><span class="w"> </span><span class="n">e1</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">e1</span><span class="p">.</span><span class="na">getValue</span><span class="p">(),</span><span class="w"> </span><span class="n">e2</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">});</span>
+
+<span class="c1">//o también se puede hacer:</span>
+<span class="n">entradas</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="p">.</span><span class="na">comparingByValue</span><span class="p">());</span>
 </code></pre></div>
 <hr />
 <h2 id="error-tipico-creer-que-ordenar-cambia-un-hashset-o-un-hashmap">🧨 Error típico: creer que ordenar cambia un <code>HashSet</code> o un <code>HashMap</code></h2>
