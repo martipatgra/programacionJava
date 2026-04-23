@@ -3254,6 +3254,7 @@
 <p>porque <code>Integer.compare(...)</code> es más claro y evita problemas en comparaciones numéricas.</p>
 <hr />
 <h2 id="ejemplo-5-si-empatan-en-nota-ordenar-por-nombre">🧩 Ejemplo 5: si empatan en nota, ordenar por nombre</h2>
+<p>Ejemplo con clase anónima:</p>
 <div class="highlight"><pre><span></span><code><span class="n">alumnos</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Comparator</span><span class="o">&lt;</span><span class="n">Alumno</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="n">Alumno</span><span class="w"> </span><span class="n">a1</span><span class="p">,</span><span class="w"> </span><span class="n">Alumno</span><span class="w"> </span><span class="n">a2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
