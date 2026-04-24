@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../list/">
+        <link rel="prev" href="../../ud6/3innerclass/">
       
       
-        <link rel="next" href="../5set/">
+        <link rel="next" href="../genericos/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>🧆 Iteradores en Java - Programación en Java</title>
+        <title>🦄 Keyword `var` en Java - Programación en Java</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#iteradores-en-java-iterator-y-listiterator" class="md-skip">
+        <a href="#keyword-var-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🧆 Iteradores en Java
+              🦄 Keyword `var` en Java
             
           </span>
         </div>
@@ -1316,16 +1316,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
       
       
       
@@ -1334,7 +1332,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           🧆 Colecciones en Java
@@ -1347,7 +1345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introductioncollections/" class="md-nav__link">
+      <a href="../../ud6/introductioncollections/" class="md-nav__link">
         🧆 Introducción
       </a>
     </li>
@@ -1361,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../list/" class="md-nav__link">
+      <a href="../../ud6/list/" class="md-nav__link">
         🧆 Interfaz List. ArrayList y LinkedList. Equals
       </a>
     </li>
@@ -1373,171 +1371,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          🧆 Iteradores en Java
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ud6/iterator/" class="md-nav__link">
         🧆 Iteradores en Java
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#que-es-un-iterator" class="md-nav__link">
-    🔁 ¿Qué es un Iterator?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metodos-principales-de-iterator" class="md-nav__link">
-    ⚙️ Métodos principales de Iterator
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-basico" class="md-nav__link">
-    🧪 Ejemplo básico
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-funciona-internamente" class="md-nav__link">
-    🧠 Cómo funciona internamente
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-tipico-al-eliminar" class="md-nav__link">
-    ❗ Error típico al eliminar
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#se-debe-usar-hasnext-antes-de-next" class="md-nav__link">
-    ⚠️ Se DEBE USAR hasNext() antes de next()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-comun-al-recorrer-colecciones" class="md-nav__link">
-    ❗ Error común al recorrer colecciones
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#forma-correcta-con-iterator" class="md-nav__link">
-    ✅ Forma correcta con Iterator
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#for-each-usa-internamente-un-iterator" class="md-nav__link">
-    🔄 for-each usa internamente un Iterator
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listiterator" class="md-nav__link">
-    🔁 ListIterator
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ventajas-de-listiterator" class="md-nav__link">
-    ⭐ Ventajas de ListIterator
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metodos-principales" class="md-nav__link">
-    ⚙️ Métodos principales
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-con-listiterator" class="md-nav__link">
-    🧪 Ejemplo con ListIterator
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recorrer-la-lista-hacia-atras" class="md-nav__link">
-    🔁 Recorrer la lista hacia atrás
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#insertar-elementos-durante-el-recorrido" class="md-nav__link">
-    ➕ Insertar elementos durante el recorrido
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recorrer-una-lista-hacia-delante-y-hacia-detras-con-listiterator" class="md-nav__link">
-    ↔️ Recorrer una lista hacia delante y hacia detrás con ListIterator
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen" class="md-nav__link">
-    🧠 Resumen
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#idea-clave" class="md-nav__link">
-    💡 Idea clave
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1549,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5set/" class="md-nav__link">
+      <a href="../../ud6/5set/" class="md-nav__link">
         🧆 Interfaz Set. HashSet, equals y hashCode
       </a>
     </li>
@@ -1563,7 +1401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maps/" class="md-nav__link">
+      <a href="../../ud6/maps/" class="md-nav__link">
         🧆 Interfaz Map. Implementación HashMap
       </a>
     </li>
@@ -1577,7 +1415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ordercol/" class="md-nav__link">
+      <a href="../../ud6/ordercol/" class="md-nav__link">
         🧆 Ordenar colecciones en Java
       </a>
     </li>
@@ -1591,7 +1429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3innerclass/" class="md-nav__link">
+      <a href="../../ud6/3innerclass/" class="md-nav__link">
         🧆 Clases Anidadas
       </a>
     </li>
@@ -1611,14 +1449,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
       
       
       
@@ -1627,7 +1467,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           🦄 Programación avanzada
@@ -1638,11 +1478,245 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ud7/var/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          🦄 Keyword `var` en Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         🦄 Keyword `var` en Java
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-var" class="md-nav__link">
+    🧠 ¿Qué es var?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-muy-sencillo" class="md-nav__link">
+    🔍 Ejemplo muy sencillo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#var-no-significa-cualquier-tipo" class="md-nav__link">
+    🚫 var no significa “cualquier tipo”
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#var-solo-se-puede-usar-en-variables-locales" class="md-nav__link">
+    🏠 var solo se puede usar en variables locales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#donde-no-se-puede-usar-var" class="md-nav__link">
+    ❌ Dónde NO se puede usar var
+  </a>
+  
+    <nav class="md-nav" aria-label="❌ Dónde NO se puede usar var">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-se-puede-usar-como-atributo-o-campo-de-la-clase" class="md-nav__link">
+    ❌ No se puede usar como atributo o campo de la clase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-se-puede-usar-como-parametro-de-un-metodo" class="md-nav__link">
+    ❌ No se puede usar como parámetro de un método
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-se-puede-usar-como-tipo-de-retorno" class="md-nav__link">
+    ❌ No se puede usar como tipo de retorno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-se-puede-declarar-sin-inicializar" class="md-nav__link">
+    ❌ No se puede declarar sin inicializar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-se-puede-inicializar-con-null" class="md-nav__link">
+    ❌ No se puede inicializar con null
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-se-puede-usar-con-inicializadores-de-arrays-sin-tipo" class="md-nav__link">
+    ❌ No se puede usar con inicializadores de arrays sin tipo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-si-tiene-sentido-usar-var" class="md-nav__link">
+    ✅ Cuándo SÍ tiene sentido usar var
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Cuándo SÍ tiene sentido usar var">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#con-objetos-recien-creados" class="md-nav__link">
+    ✅ Con objetos recién creados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-bucles-for-each" class="md-nav__link">
+    ✅ En bucles for-each
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-bucles-for-normales" class="md-nav__link">
+    ✅ En bucles for normales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#con-tipos-largos-o-incomodos" class="md-nav__link">
+    ✅ Con tipos largos o incómodos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-no-conviene-usar-var" class="md-nav__link">
+    ⚠️ Cuándo NO conviene usar var
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Cuándo NO conviene usar var">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-el-tipo-no-es-evidente" class="md-nav__link">
+    ⚠️ Cuando el tipo no es evidente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-el-nombre-de-la-variable-no-ayuda" class="md-nav__link">
+    ⚠️ Cuando el nombre de la variable no ayuda
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#var-con-colecciones" class="md-nav__link">
+    🧪 var con colecciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#var-y-el-operador-diamante" class="md-nav__link">
+    💎 var y el operador diamante &lt;&gt;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#var-con-final" class="md-nav__link">
+    🧩 var con final
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#var-en-lambdas" class="md-nav__link">
+    🧬 var en lambdas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    ✅ Buenas prácticas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    🧱 Ejemplo completo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idea-final" class="md-nav__link">
+    🏁 Idea final
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1654,7 +1728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud7/genericos/" class="md-nav__link">
+      <a href="../genericos/" class="md-nav__link">
         🦄 Genéricos en Java
       </a>
     </li>
@@ -1668,7 +1742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud7/2lambda/" class="md-nav__link">
+      <a href="../2lambda/" class="md-nav__link">
         🦄 Expresiones lambda
       </a>
     </li>
@@ -1682,7 +1756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud7/3predicates/" class="md-nav__link">
+      <a href="../3predicates/" class="md-nav__link">
         🦄 Predicate, Supplier and Consumer
       </a>
     </li>
@@ -1696,7 +1770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud7/4functions/" class="md-nav__link">
+      <a href="../4functions/" class="md-nav__link">
         🦄 Functions
       </a>
     </li>
@@ -1710,7 +1784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud7/5references/" class="md-nav__link">
+      <a href="../5references/" class="md-nav__link">
         🦄 Referencia a métodos
       </a>
     </li>
@@ -1724,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud7/8optional/" class="md-nav__link">
+      <a href="../8optional/" class="md-nav__link">
         🦄 Optional
       </a>
     </li>
@@ -1738,7 +1812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud7/6streams/" class="md-nav__link">
+      <a href="../6streams/" class="md-nav__link">
         🦄 Streams
       </a>
     </li>
@@ -1752,7 +1826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud7/7regularexpressions/" class="md-nav__link">
+      <a href="../7regularexpressions/" class="md-nav__link">
         🦄 Expresiones regulares
       </a>
     </li>
@@ -2264,127 +2338,201 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-un-iterator" class="md-nav__link">
-    🔁 ¿Qué es un Iterator?
+  <a href="#que-es-var" class="md-nav__link">
+    🧠 ¿Qué es var?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodos-principales-de-iterator" class="md-nav__link">
-    ⚙️ Métodos principales de Iterator
+  <a href="#ejemplo-muy-sencillo" class="md-nav__link">
+    🔍 Ejemplo muy sencillo
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-basico" class="md-nav__link">
-    🧪 Ejemplo básico
+  <a href="#var-no-significa-cualquier-tipo" class="md-nav__link">
+    🚫 var no significa “cualquier tipo”
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-funciona-internamente" class="md-nav__link">
-    🧠 Cómo funciona internamente
+  <a href="#var-solo-se-puede-usar-en-variables-locales" class="md-nav__link">
+    🏠 var solo se puede usar en variables locales
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#error-tipico-al-eliminar" class="md-nav__link">
-    ❗ Error típico al eliminar
+  <a href="#donde-no-se-puede-usar-var" class="md-nav__link">
+    ❌ Dónde NO se puede usar var
+  </a>
+  
+    <nav class="md-nav" aria-label="❌ Dónde NO se puede usar var">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-se-puede-usar-como-atributo-o-campo-de-la-clase" class="md-nav__link">
+    ❌ No se puede usar como atributo o campo de la clase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-se-puede-usar-como-parametro-de-un-metodo" class="md-nav__link">
+    ❌ No se puede usar como parámetro de un método
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-se-puede-usar-como-tipo-de-retorno" class="md-nav__link">
+    ❌ No se puede usar como tipo de retorno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-se-puede-declarar-sin-inicializar" class="md-nav__link">
+    ❌ No se puede declarar sin inicializar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-se-puede-inicializar-con-null" class="md-nav__link">
+    ❌ No se puede inicializar con null
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-se-puede-usar-con-inicializadores-de-arrays-sin-tipo" class="md-nav__link">
+    ❌ No se puede usar con inicializadores de arrays sin tipo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-si-tiene-sentido-usar-var" class="md-nav__link">
+    ✅ Cuándo SÍ tiene sentido usar var
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Cuándo SÍ tiene sentido usar var">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#con-objetos-recien-creados" class="md-nav__link">
+    ✅ Con objetos recién creados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-bucles-for-each" class="md-nav__link">
+    ✅ En bucles for-each
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-bucles-for-normales" class="md-nav__link">
+    ✅ En bucles for normales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#con-tipos-largos-o-incomodos" class="md-nav__link">
+    ✅ Con tipos largos o incómodos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-no-conviene-usar-var" class="md-nav__link">
+    ⚠️ Cuándo NO conviene usar var
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Cuándo NO conviene usar var">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-el-tipo-no-es-evidente" class="md-nav__link">
+    ⚠️ Cuando el tipo no es evidente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-el-nombre-de-la-variable-no-ayuda" class="md-nav__link">
+    ⚠️ Cuando el nombre de la variable no ayuda
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#var-con-colecciones" class="md-nav__link">
+    🧪 var con colecciones
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#se-debe-usar-hasnext-antes-de-next" class="md-nav__link">
-    ⚠️ Se DEBE USAR hasNext() antes de next()
+  <a href="#var-y-el-operador-diamante" class="md-nav__link">
+    💎 var y el operador diamante &lt;&gt;
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#error-comun-al-recorrer-colecciones" class="md-nav__link">
-    ❗ Error común al recorrer colecciones
+  <a href="#var-con-final" class="md-nav__link">
+    🧩 var con final
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#forma-correcta-con-iterator" class="md-nav__link">
-    ✅ Forma correcta con Iterator
+  <a href="#var-en-lambdas" class="md-nav__link">
+    🧬 var en lambdas
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#for-each-usa-internamente-un-iterator" class="md-nav__link">
-    🔄 for-each usa internamente un Iterator
+  <a href="#buenas-practicas" class="md-nav__link">
+    ✅ Buenas prácticas
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listiterator" class="md-nav__link">
-    🔁 ListIterator
+  <a href="#ejemplo-completo" class="md-nav__link">
+    🧱 Ejemplo completo
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventajas-de-listiterator" class="md-nav__link">
-    ⭐ Ventajas de ListIterator
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metodos-principales" class="md-nav__link">
-    ⚙️ Métodos principales
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-con-listiterator" class="md-nav__link">
-    🧪 Ejemplo con ListIterator
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recorrer-la-lista-hacia-atras" class="md-nav__link">
-    🔁 Recorrer la lista hacia atrás
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#insertar-elementos-durante-el-recorrido" class="md-nav__link">
-    ➕ Insertar elementos durante el recorrido
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recorrer-una-lista-hacia-delante-y-hacia-detras-con-listiterator" class="md-nav__link">
-    ↔️ Recorrer una lista hacia delante y hacia detrás con ListIterator
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen" class="md-nav__link">
-    🧠 Resumen
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#idea-clave" class="md-nav__link">
-    💡 Idea clave
+  <a href="#idea-final" class="md-nav__link">
+    🏁 Idea final
   </a>
   
 </li>
@@ -2405,423 +2553,340 @@
 
 
 
-<h1 id="iteradores-en-java-iterator-y-listiterator">📚 Iteradores en Java (<code>Iterator</code> y <code>ListIterator</code>)</h1>
-<p>Después de aprender <code>List</code>, <code>ArrayList</code> y <code>LinkedList</code>, necesitamos una forma <strong>segura y estándar de recorrer colecciones</strong>.<br />
-Para eso Java proporciona los <strong>iteradores</strong>.</p>
-<p>Aunque el estándar para recorrer colecciones es el bucle <code>for-each</code> (el rey 👑), ya que es más limpio, legible y menos propenso a errores. </p>
-<p>Los iteradores <strong>son necesarios cuando queremos hacer cosas "más delicadas"</strong>: </p>
-<ul>
-<li>🔹 eliminar mientras recorres, </li>
-<li>🔹 añadir mientras recorres, </li>
-<li>🔹 control más fino del recorrido: parar manualmente, avanzar paso a paso, ir hacia atrás.</li>
-</ul>
-<hr />
-<h2 id="que-es-un-iterator">🔁 ¿Qué es un <code>Iterator</code>?</h2>
-<p>Un <strong>iterador</strong> es un objeto que permite <strong>recorrer los elementos de una colección uno a uno</strong>.</p>
-<p>La interfaz principal es:</p>
+<h1 id="keyword-var-en-java">🧩 Keyword <code>var</code> en Java</h1>
 <blockquote>
-<p><code>Iterator&lt;E&gt;</code></p>
+<p><code>var</code> permite declarar variables locales sin escribir el tipo explícitamente, porque Java lo deduce automáticamente.</p>
 </blockquote>
-<p>📌 Permite recorrer colecciones como:</p>
-<ul>
-<li>ArrayList</li>
-<li>LinkedList</li>
-<li>HashSet</li>
-<li>TreeSet</li>
-</ul>
+<p>Pero cuidado:</p>
+<blockquote>
+<p><code>var</code> <strong>no convierte Java en un lenguaje dinámico</strong>. Java sigue siendo un lenguaje fuertemente tipado.</p>
+</blockquote>
 <hr />
-<h2 id="metodos-principales-de-iterator">⚙️ Métodos principales de <code>Iterator</code></h2>
+<h2 id="que-es-var">🧠 ¿Qué es <code>var</code>?</h2>
+<p><code>var</code> es una palabra clave que permite que el compilador deduzca el tipo de una variable local a partir del valor que le asignamos.</p>
+<p>Antes de <code>var</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>Con <code>var</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>Java mira lo que hay a la derecha del <code>=</code> y deduce el tipo.</p>
 <table>
 <thead>
 <tr>
-<th>Método</th>
-<th>Qué hace</th>
+<th>Código</th>
+<th>Tipo que deduce Java</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>hasNext()</td>
-<td>Indica si quedan elementos por recorrer</td>
+<td><code>var nombre = "Ana";</code></td>
+<td><code>String</code></td>
 </tr>
 <tr>
-<td>next()</td>
-<td>Devuelve el elemento a la derecha y avanza el iterador a la siguiente posición</td>
+<td><code>var edad = 20;</code></td>
+<td><code>int</code></td>
 </tr>
 <tr>
-<td>remove()</td>
-<td>Elimina <strong>el último elemento devuelto por <code>next()</code></strong></td>
+<td><code>var precio = 9.99;</code></td>
+<td><code>double</code></td>
+</tr>
+<tr>
+<td><code>var activo = true;</code></td>
+<td><code>boolean</code></td>
+</tr>
+<tr>
+<td><code>var lista = new ArrayList&lt;String&gt;();</code></td>
+<td><code>ArrayList&lt;String&gt;</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="ejemplo-basico">🧪 Ejemplo básico</h2>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploIterator</span><span class="w"> </span><span class="p">{</span>
-
+<h2 id="ejemplo-muy-sencillo">🔍 Ejemplo muy sencillo</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola mundo&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.5</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">correcto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 
-<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-
-<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pedro&quot;</span><span class="p">);</span>
-
-<span class="w">        </span><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
-
-<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mensaje</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">decimal</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">correcto</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Salida:</p>
-<p>Ana<br />
-Luis<br />
-Pedro</p>
+<p>Aunque no hemos escrito los tipos, Java los conoce perfectamente.</p>
+<p>Este código sería equivalente a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola mundo&quot;</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.5</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">correcto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</code></pre></div>
 <hr />
-<h2 id="como-funciona-internamente">🧠 Cómo funciona internamente</h2>
-<p>El iterador <strong>mantiene una posición interna</strong> de recorrido.</p>
-<p>Al crearlo, está antes del primer elemento:</p>
-<p>[it][Ana][Luis][Pedro]<br />
- ↑<br />
-posición actual</p>
-<p>Cada vez que llamamos a <code>next()</code>:</p>
-<ul>
-<li>1️⃣ devuelve el siguiente elemento disponible (a la derecha del iterador)   </li>
-<li>2️⃣ después avanza a la siguiente posición del iterador </li>
-</ul>
-<p>[Ana][it][Luis][Pedro]  </p>
-<ul>
-<li>primer <code>next()</code> → devuelve <code>Ana</code> y el iterador avanza </li>
-<li>segundo <code>next()</code> → devuelve <code>Luis</code> y el iterador avanza       </li>
-</ul>
-<p>Cuando creas el iterador con:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<h2 id="var-no-significa-cualquier-tipo">🚫 <code>var</code> no significa “cualquier tipo”</h2>
+<p>Este es el error más importante que hay que evitar.</p>
+<p>En Java, una variable declarada con <code>var</code> <strong>sigue teniendo un tipo fijo</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w">      </span><span class="c1">// Correcto</span>
+<span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// Error</span>
 </code></pre></div>
-<p>El iterador está al inicio (se representa con "|"):</p>
-<div class="highlight"><pre><span></span><code>| elemento0 elemento1 elemento2
+<p>¿Por qué da error?</p>
+<p>Porque al escribir:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
 </code></pre></div>
-<p>👉 Es decir, <strong>está antes del primer elemento</strong>. Entonces, ¿cuándo apunta al primer elemento?</p>
-<p>Cuando hacemos:</p>
-<div class="highlight"><pre><span></span><code><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
-</code></pre></div>
-<p>Entonces:  <br />
-- Devuelve el elemento a la derecha del iterador  <br />
-- Avanza a la siguiente posición interna del iterador       </p>
-<p>Ahora sí:</p>
-<div class="highlight"><pre><span></span><code>elemento0 | elemento1 elemento2
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>Nunca llames a <code>next()</code> sin comprobar <code>hasNext()</code></strong></p>
-</div>
+<p>Java deduce que <code>edad</code> es de tipo <code>int</code>.</p>
+<p>Por tanto, después no podemos guardar un <code>String</code> en esa variable.</p>
 <hr />
-<h2 id="error-tipico-al-eliminar">❗ Error típico al eliminar</h2>
-<p>Intentas eliminar un elemento antes de hacer <code>next()</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
-<span class="n">it</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span><span class="w"> </span><span class="c1">// ❌ ERROR</span>
-</code></pre></div>
-<p>👉 Lanza excepción (<code>IllegalStateException</code>) porque:    </p>
-<ul>
-<li>aún no has hecho <code>next()</code> </li>
-<li>no hay “último elemento” que eliminar </li>
-</ul>
-<hr />
-<h2 id="se-debe-usar-hasnext-antes-de-next">⚠️ Se DEBE USAR <code>hasNext()</code> antes de <code>next()</code></h2>
-<p>El método <code>next()</code> <strong>SOLO puede llamarse si existe un elemento siguiente</strong>.</p>
-<p>👉 Si llamamos a <code>next()</code> cuando no quedan elementos, se produce una excepción:</p>
-<div class="highlight"><pre><span></span><code><span class="n">NoSuchElementException</span>
-</code></pre></div>
-<p>✅ Uso correcto
-<div class="highlight"><pre><span></span><code><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
-
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//compruebo si quedan elementos</span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">elemento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">elemento</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<ul>
-<li><code>hasNext()</code> → “¿queda alguien?”   </li>
-<li><code>next()</code> → “haz pasar al siguiente”   </li>
-</ul>
-<p>👉 Si no queda nadie y llamas a <code>next()</code>, ocurre un <strong>error</strong>.</p>
-<hr />
-<h2 id="error-comun-al-recorrer-colecciones">❗ Error común al recorrer colecciones</h2>
-<p>❌ Incorrecto:</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nombres</span><span class="p">){</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">nombre</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">)){</span>
-<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Provoca:</p>
-<p><strong><code>ConcurrentModificationException</code></strong> --&gt; indica que <strong>has modificado (add/remove) una colección mientras la estabas recorriendo de una forma no permitida</strong>.</p>
-<hr />
-<h2 id="forma-correcta-con-iterator">✅ Forma correcta con <code>Iterator</code></h2>
-<p>Si quieres eliminar un ítem de una colección mientras la recorres, usa el propio <strong>iterador</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
-
-<span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
-
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">nombre</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">)){</span>
-<span class="w">        </span><span class="n">it</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Esto es seguro porque el <strong>iterador controla las modificaciones</strong>.</p>
-<hr />
-<h2 id="for-each-usa-internamente-un-iterator">🔄 <code>for-each</code> usa internamente un <code>Iterator</code></h2>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nombres</span><span class="p">){</span>
+<h2 id="var-solo-se-puede-usar-en-variables-locales">🏠 <code>var</code> solo se puede usar en variables locales</h2>
+<p><code>var</code> se usa principalmente dentro de métodos, constructores o bloques de código.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Internamente Java hace algo parecido a:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
-
-<span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">()){</span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<p>Eso es correcto porque <code>nombre</code> es una variable local.</p>
+<hr />
+<h2 id="donde-no-se-puede-usar-var">❌ Dónde NO se puede usar <code>var</code></h2>
+<h3 id="no-se-puede-usar-como-atributo-o-campo-de-la-clase">❌ No se puede usar como atributo o campo de la clase</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Los atributos de una clase deben tener el tipo escrito explícitamente:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<h2 id="listiterator">🔁 <code>ListIterator</code></h2>
-<p>Las listas (<code>List</code>) tienen un iterador <strong>más avanzado</strong>:</p>
-<blockquote>
-<p><strong><code>ListIterator</code></strong></p>
-</blockquote>
-<p>Solo funciona con:</p>
-<ul>
-<li>ArrayList</li>
-<li>LinkedList</li>
-</ul>
+<h3 id="no-se-puede-usar-como-parametro-de-un-metodo">❌ No se puede usar como parámetro de un método</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Error</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Debe escribirse así:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
-<h2 id="ventajas-de-listiterator">⭐ Ventajas de <code>ListIterator</code></h2>
-<p>Permite:</p>
-<p>✔ recorrer la lista <strong>hacia delante y hacia atrás</strong><br />
-✔ <strong>modificar elementos</strong><br />
-✔ <strong>insertar elementos durante el recorrido</strong></p>
+<h3 id="no-se-puede-usar-como-tipo-de-retorno">❌ No se puede usar como tipo de retorno</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nf">obtenerNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Error</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Debe escribirse así:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">obtenerNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
-<h2 id="metodos-principales">⚙️ Métodos principales</h2>
-<table>
-<thead>
-<tr>
-<th>Método</th>
-<th>Qué hace</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>hasNext()</td>
-<td>Hay siguiente elemento</td>
-</tr>
-<tr>
-<td>next()</td>
-<td>Devuelve siguiente</td>
-</tr>
-<tr>
-<td>hasPrevious()</td>
-<td>Hay elemento anterior</td>
-</tr>
-<tr>
-<td>previous()</td>
-<td>Devuelve anterior</td>
-</tr>
-<tr>
-<td>remove()</td>
-<td>Elimina el último elemento devuelto</td>
-</tr>
-<tr>
-<td>add(E e)</td>
-<td>Inserta elemento</td>
-</tr>
-<tr>
-<td>set(E e)</td>
-<td>Modifica elemento actual</td>
-</tr>
-<tr>
-<td>nextIndex()</td>
-<td>índice del elemento que devolvería next()</td>
-</tr>
-<tr>
-<td>previousIndex()</td>
-<td>índice del elemento que devolvería previous()</td>
-</tr>
-</tbody>
-</table>
+<h3 id="no-se-puede-declarar-sin-inicializar">❌ No se puede declarar sin inicializar</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error</span>
+<span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</code></pre></div>
+<p>Java necesita ver el valor inicial para deducir el tipo.</p>
+<p>Correcto:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</code></pre></div>
 <hr />
-<h2 id="ejemplo-con-listiterator">🧪 Ejemplo con <code>ListIterator</code></h2>
-<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<h3 id="no-se-puede-inicializar-con-null">❌ No se puede inicializar con <code>null</code></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error</span>
+</code></pre></div>
+<p>Java no puede saber qué tipo queremos usar.</p>
+<p>Correcto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Persona</span><span class="w"> </span><span class="n">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h3 id="no-se-puede-usar-con-inicializadores-de-arrays-sin-tipo">❌ No se puede usar con inicializadores de arrays sin tipo</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"> </span><span class="c1">// Error</span>
+</code></pre></div>
+<p>Correcto:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+</code></pre></div>
+<p>O también:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+</code></pre></div>
+<hr />
+<h2 id="cuando-si-tiene-sentido-usar-var">✅ Cuándo SÍ tiene sentido usar <code>var</code></h2>
+<p><code>var</code> es útil cuando el tipo es muy evidente o cuando escribir el tipo completo hace el código más pesado.</p>
+<h3 id="con-objetos-recien-creados">✅ Con objetos recién creados</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="kd">var</span><span class="w"> </span><span class="n">mapa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="kd">var</span><span class="w"> </span><span class="n">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+</code></pre></div>
+<p>Aquí el tipo se ve claramente en la parte derecha.</p>
+<hr />
+<h3 id="en-bucles-for-each">✅ En bucles <code>for-each</code></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
 
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nombres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Java deduce que <code>nombre</code> es un <code>String</code>.</p>
+<hr />
+<h3 id="en-bucles-for-normales">✅ En bucles <code>for</code> normales</h3>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Java deduce que <code>i</code> es un <code>int</code>.</p>
+<hr />
+<h3 id="con-tipos-largos-o-incomodos">✅ Con tipos largos o incómodos</h3>
+<p>Sin <code>var</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">notasPorAlumno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>Con <code>var</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">notasPorAlumno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>El código queda más corto sin perder información importante.</p>
+<hr />
+<h2 id="cuando-no-conviene-usar-var">⚠️ Cuándo NO conviene usar <code>var</code></h2>
+<p><code>var</code> no siempre mejora el código.</p>
+<p>A veces lo empeora porque oculta demasiado el tipo.</p>
+<h3 id="cuando-el-tipo-no-es-evidente">⚠️ Cuando el tipo no es evidente</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obtenerResultado</span><span class="p">();</span>
+</code></pre></div>
+<p>Aquí no sabemos qué devuelve <code>obtenerResultado()</code>.</p>
+<p>¿Es un <code>String</code>?<br />
+¿Es un <code>int</code>?<br />
+¿Es un objeto?<br />
+¿Es una lista?</p>
+<p>En este caso puede ser más claro escribir el tipo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ResultadoOperacion</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obtenerResultado</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h3 id="cuando-el-nombre-de-la-variable-no-ayuda">⚠️ Cuando el nombre de la variable no ayuda</h3>
+<p>Mal ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcular</span><span class="p">();</span>
+</code></pre></div>
+<p>No sabemos qué es <code>x</code> ni qué devuelve <code>calcular()</code>.</p>
+<p>Mejor:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">precioFinal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcularPrecioFinal</span><span class="p">();</span>
+</code></pre></div>
+<p>O incluso:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">precioFinal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcularPrecioFinal</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="var-con-colecciones">🧪 <code>var</code> con colecciones</h2>
+<p><code>var</code> se usa bastante con colecciones, pero hay que tener cuidado.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
 <span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">);</span>
-<span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pedro&quot;</span><span class="p">);</span>
-
-<span class="n">ListIterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">listIterator</span><span class="p">();</span>
-
-<span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">()){</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
-<span class="p">}</span>
+</code></pre></div>
+<p>Java deduce:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>Por eso esto daría error:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span><span class="w"> </span><span class="c1">// Error</span>
+</code></pre></div>
+<p>La lista solo admite <code>String</code>.</p>
+<hr />
+<h2 id="var-y-el-operador-diamante">💎 <code>var</code> y el operador diamante <code>&lt;&gt;</code></h2>
+<p>Podemos combinar <code>var</code> con el operador diamante:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>También se puede escribir:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>Pero hay que tener cuidado.</p>
+<p>En este caso Java puede deducir algo demasiado genérico:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>Aquí Java no tiene información suficiente sobre qué tipo de elementos queremos guardar.</p>
+<p>Por eso, en clase es más recomendable escribir:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>O directamente:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 </code></pre></div>
 <hr />
-<h2 id="recorrer-la-lista-hacia-atras">🔁 Recorrer la lista hacia atrás</h2>
-<div class="highlight"><pre><span></span><code><span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasPrevious</span><span class="p">()){</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">previous</span><span class="p">());</span>
-<span class="p">}</span>
+<h2 id="var-con-final">🧩 <code>var</code> con <code>final</code></h2>
+<p>También podemos usar <code>var</code> con <code>final</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">final</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p>Esto significa que la variable no podrá cambiar de valor.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">final</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error</span>
+</code></pre></div>
+<p>Sería equivalente a:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
 </code></pre></div>
 <hr />
-<h2 id="insertar-elementos-durante-el-recorrido">➕ Insertar elementos durante el recorrido</h2>
-<div class="highlight"><pre><span></span><code><span class="n">ListIterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">listIterator</span><span class="p">();</span>
-
-<span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">()){</span>
-
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
-
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">nombre</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">)){</span>
-<span class="w">        </span><span class="n">it</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Carlos&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<h2 id="var-en-lambdas">🧬 <code>var</code> en lambdas</h2>
+<p>Desde Java 11, <code>var</code> también puede usarse en los parámetros de una expresión lambda.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()</span>
 </code></pre></div>
-<p>Resultado:</p>
-<p>[Ana, Luis, Carlos, Pedro]</p>
+<p>Pero en cursos iniciales normalmente se usa así:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()</span>
+</code></pre></div>
+<p>El uso de <code>var</code> en lambdas es poco habitual en ejemplos sencillos.</p>
+<p>Puede ser útil si queremos añadir anotaciones al parámetro:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nd">@NonNull</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()</span>
+</code></pre></div>
+<p>Pero esto no es necesario para empezar.</p>
 <hr />
-<h2 id="recorrer-una-lista-hacia-delante-y-hacia-detras-con-listiterator">↔️ Recorrer una lista hacia delante y hacia detrás con <code>ListIterator</code></h2>
-<p>Una de las ventajas más importantes de <code>ListIterator</code> es que permite recorrer una lista en ambos sentidos.</p>
-<p>💡 Recuerda que <code>Iterator</code> o <code>ListIterator</code> no “apunta” exactamente a un elemento, sino a una posición entre elementos de la lista.</p>
-<p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Principal</span><span class="w"> </span><span class="p">{</span>
+<h2 id="buenas-practicas">✅ Buenas prácticas</h2>
+<p>Usa <code>var</code> cuando:</p>
+<ul>
+<li>El tipo se entiende claramente.</li>
+<li>El código queda más limpio.</li>
+<li>La parte derecha ya deja claro el tipo.</li>
+<li>El nombre de la variable es descriptivo.</li>
+</ul>
+<p>Evita <code>var</code> cuando:</p>
+<ul>
+<li>El tipo no se entiende.</li>
+<li>La variable tiene un nombre poco claro.</li>
+<li>El método devuelve algo difícil de adivinar.</li>
+<li>El código queda más confuso.</li>
+</ul>
+<hr />
+<h2 id="ejemplo-completo">🧱 Ejemplo completo</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+
 <span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pedro&quot;</span><span class="p">);</span>
 
-<span class="w">        </span><span class="n">ListIterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">listIterator</span><span class="p">();</span>
-<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nombres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">opcion</span><span class="p">;</span>
-<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">haciaDelante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">haciaDetras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-
-<span class="w">        </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&quot;&quot;</span>
-<span class="s">            --- MENÚ ---</span>
-<span class="s">            1. Ir al siguiente nombre</span>
-<span class="s">            2. Ir al nombre anterior</span>
-<span class="s">            3. Salir</span>
-<span class="s">            Elige una opción: &quot;&quot;&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">opcion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-
-<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">opcion</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
-<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">haciaDetras</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="c1">// Si antes iba hacia detrás, recolocamos el iterador</span>
-<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                            </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
-<span class="w">                        </span><span class="p">}</span>
-<span class="w">                        </span><span class="n">haciaDetras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<span class="w">                    </span><span class="p">}</span>
-
-<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Actual: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
-<span class="w">                        </span><span class="n">haciaDelante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ya estás al final de la lista.&quot;</span><span class="p">);</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                    </span><span class="k">break</span><span class="p">;</span>
-
-<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
-<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">haciaDelante</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="c1">// Si antes iba hacia delante, recolocamos el iterador</span>
-<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasPrevious</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                            </span><span class="n">it</span><span class="p">.</span><span class="na">previous</span><span class="p">();</span>
-<span class="w">                        </span><span class="p">}</span>
-<span class="w">                        </span><span class="n">haciaDelante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<span class="w">                    </span><span class="p">}</span>
-
-<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasPrevious</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Actual: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">previous</span><span class="p">());</span>
-<span class="w">                        </span><span class="n">haciaDetras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ya estás al principio de la lista.&quot;</span><span class="p">);</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                    </span><span class="k">break</span><span class="p">;</span>
-
-<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
-<span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Saliendo...&quot;</span><span class="p">);</span>
-<span class="w">                    </span><span class="k">break</span><span class="p">;</span>
-
-<span class="w">                </span><span class="k">default</span><span class="p">:</span>
-<span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Opción no válida.&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opcion</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
-
-<span class="w">        </span><span class="n">sc</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<ul>
-<li><code>next()</code> devuelve el elemento de la derecha y avanza  </li>
-<li><code>previous()</code> devuelve el elemento de la izquierda y retrocede </li>
-<li>si ibas hacia delante y ahora quieres ir hacia detrás, haces un <code>previous()</code> de ajuste</li>
-<li>si ibas hacia detrás y ahora quieres ir hacia delante, haces un <code>next()</code> de ajuste</li>
-</ul>
+<p>En este código:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p>Java deduce que <code>nombres</code> es un <code>ArrayList&lt;String&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nombres</span><span class="p">)</span>
+</code></pre></div>
+<p>Java deduce que <code>nombre</code> es un <code>String</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+</code></pre></div>
+<p>Java deduce que <code>total</code> es un <code>int</code>.</p>
 <hr />
-<h2 id="resumen">🧠 Resumen</h2>
-<table>
-<thead>
-<tr>
-<th>Método</th>
-<th>Iterator</th>
-<th>ListIterator</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Tipo de colecciones</td>
-<td>Cualquier colección (<code>List</code>, <code>Set</code>, etc.)</td>
-<td>Solo <code>List</code></td>
-</tr>
-<tr>
-<td><code>hasNext()</code></td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-<tr>
-<td><code>next()</code></td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-<tr>
-<td><code>remove()</code></td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-<tr>
-<td><code>add()</code></td>
-<td>❌</td>
-<td>✔</td>
-</tr>
-<tr>
-<td><code>set()</code></td>
-<td>❌</td>
-<td>✔</td>
-</tr>
-<tr>
-<td><code>previous()</code></td>
-<td>❌</td>
-<td>✔</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="idea-clave">💡 Idea clave</h2>
-<p><em>Todas las colecciones se pueden recorrer con iteradores.</em>  </p>
+<h2 id="idea-final">🏁 Idea final</h2>
+<p><code>var</code> sirve para escribir menos, pero no para pensar menos.</p>
+<p>La regla más sencilla es:</p>
 <blockquote>
-<p><code>Iterator</code> permite recorrer y borrar; <code>ListIterator</code> además permite insertar, modificar y retroceder.</p>
+<p>Usa <code>var</code> solo cuando el tipo se entienda fácilmente al leer el código.</p>
 </blockquote>
+<p>Si al leer una línea tienes que preguntarte “¿qué tipo será esto?”, probablemente es mejor escribir el tipo explícitamente.</p>
 
 
   
