@@ -1,0 +1,3166 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
+    
+    
+      
+        <title>🔗 Referencias de métodos en Java - Programación en Java</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-FTWMZYNBPC"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-FTWMZYNBPC",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-FTWMZYNBPC",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="Teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#referencias-de-metodos-en-java" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Programación en Java" class="md-header__button md-logo" aria-label="Programación en Java" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación en Java
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🔗 Referencias de métodos en Java
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="Teal"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="Teal"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Programación en Java" class="md-nav__button md-logo" aria-label="Programación en Java" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Programación en Java
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        🔥 Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          💾 Elementos de un programa informático
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          💾 Elementos de un programa informático
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/1elementos/" class="md-nav__link">
+        💾 Programa y lenguajes de programación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          💾 El lenguaje Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          💾 El lenguaje Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/121conceptosbasicos/" class="md-nav__link">
+        Conceptos básicos del lenguaje
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/122setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/123holamundo/" class="md-nav__link">
+        Proyecto Hola Mundo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          💾 Variables, sentencias y paquetes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          💾 Variables, sentencias y paquetes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/131variables/" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/132sentencias/" class="md-nav__link">
+        Sentencias y paquetes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          💾 Tipos de datos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          💾 Tipos de datos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/14datatypejava/" class="md-nav__link">
+        Datos primitivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/142noprimitive/" class="md-nav__link">
+        Datos no primitivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/1421enum/" class="md-nav__link">
+        Enum
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/15operators/" class="md-nav__link">
+        💾 Operadores y expresiones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/16comments/" class="md-nav__link">
+        💾 Comentarios en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/17constantesliterales/" class="md-nav__link">
+        💾 Constantes y literales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/18inputoutputconsole/" class="md-nav__link">
+        💾 Entrada y salida de información por consola
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/19poo/" class="md-nav__link">
+        💾 Introducción a la programación orientada a objetos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          🖲️ Estructuras básicas de control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          🖲️ Estructuras básicas de control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          🖲️ Estructuras de selección
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          🖲️ Estructuras de selección
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/1seleccion/" class="md-nav__link">
+        If Statement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/11booleanexpressions/" class="md-nav__link">
+        Expresiones booleanas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/2switch/" class="md-nav__link">
+        Switch Statement
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          🖲️ Estructuras de repetición
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          🖲️ Estructuras de repetición
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/22while/" class="md-nav__link">
+        Bucle while
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/22dowhile/" class="md-nav__link">
+        Bucle do while
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/22whileif/" class="md-nav__link">
+        Bucles while con if
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/22for/" class="md-nav__link">
+        Bucle for
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/22nestedloop/" class="md-nav__link">
+        Bucles anidados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/22principlesloop/" class="md-nav__link">
+        Principios del diseño de bucles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          🖲️ Estructuras de salto
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          🖲️ Estructuras de salto
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/23breakcontinue/" class="md-nav__link">
+        Sentencias break y continue
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/24exceptions/" class="md-nav__link">
+        🖲️ Control de excepciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/25fallos/" class="md-nav__link">
+        🖲️ Prueba y depuración de aplicaciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/26methods/" class="md-nav__link">
+        🖲️ Introducción a los métodos en Java
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/string/" class="md-nav__link">
+        🧵 String
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/6recursion/" class="md-nav__link">
+        ♾️ Recursividad
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          🌎 Programación orientada a objetos POO
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          🌎 Programación orientada a objetos POO
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/1metodoclase/" class="md-nav__link">
+        🌎 Clases en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/varargs/" class="md-nav__link">
+        🌎 varargs en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/5static/" class="md-nav__link">
+        🌎 Variables, métodos y clases estáticas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/metodosinstancia/" class="md-nav__link">
+        🌎 Sobrecarga de Métodos y Paso por Valor vs Referencia en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/7nullvalue/" class="md-nav__link">
+        🌎 Valor `null` en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/8pojo/" class="md-nav__link">
+        🌎 ¿Qué son los POJO en Java?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/record/" class="md-nav__link">
+        🌎 Records en Java
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          📅 Arrays
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          📅 Arrays
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/1arrays/" class="md-nav__link">
+        📅 Introducción
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/2usefularrays/" class="md-nav__link">
+        📅 Algoritmos útiles en arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/3referencetypearrays/" class="md-nav__link">
+        📅 Tipos de referencia y tipos de valor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/4arrayobjects/" class="md-nav__link">
+        📅 Array de objetos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/6searcharrays/" class="md-nav__link">
+        📅 Algoritmos de búsqueda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/5sortarrays/" class="md-nav__link">
+        📅 Algoritmos de ordenación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/7twodimensionarray/" class="md-nav__link">
+        📅 Arrays multidimensionales
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          ✨ POO avanzada
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          ✨ POO avanzada
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/1herencia/" class="md-nav__link">
+        ✨ Herencia
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/2encomabspoli/" class="md-nav__link">
+        ✨ Encapsulación, Composición, Polimorfismo y Abstracción en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/sealedclasses/" class="md-nav__link">
+        ✨ Sealed Classes en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/interfacesysealed/" class="md-nav__link">
+        ✨ Interfaces en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/7exceptions/" class="md-nav__link">
+        ✨ Excepciones en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/enumpoo/" class="md-nav__link">
+        ✨ Enum en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/solid/" class="md-nav__link">
+        ✨ Introducción a SOLID
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          🧆 Colecciones en Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          🧆 Colecciones en Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud6/introductioncollections/" class="md-nav__link">
+        🧆 Introducción
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud6/list/" class="md-nav__link">
+        🧆 Interfaz List. ArrayList y LinkedList. Equals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud6/iterator/" class="md-nav__link">
+        🧆 Iteradores en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud6/5set/" class="md-nav__link">
+        🧆 Interfaz Set. HashSet, equals y hashCode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud6/maps/" class="md-nav__link">
+        🧆 Interfaz Map. Implementación HashMap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud6/ordercol/" class="md-nav__link">
+        🧆 Ordenar colecciones en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud6/3innerclass/" class="md-nav__link">
+        🧆 Clases Anidadas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          🦄 Programación avanzada
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          🦄 Programación avanzada
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../var/" class="md-nav__link">
+        🦄 Keyword `var` en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../genericos/" class="md-nav__link">
+        🦄 Genéricos en Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2lambda/" class="md-nav__link">
+        🦄 Expresiones lambda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3predicates/" class="md-nav__link">
+        🦄 Predicate, Supplier and Consumer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4functions/" class="md-nav__link">
+        🦄 Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5references/" class="md-nav__link">
+        🦄 Referencia a métodos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8optional/" class="md-nav__link">
+        🦄 Optional
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6streams/" class="md-nav__link">
+        🦄 Streams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7regularexpressions/" class="md-nav__link">
+        🦄 Expresiones regulares
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          🤩 Interfaces de usuario
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          🤩 Interfaces de usuario
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/1javafx/" class="md-nav__link">
+        🤩 Java FX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/2stage/" class="md-nav__link">
+        🤩 Stage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/3scene/" class="md-nav__link">
+        🤩 Scene
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/4node/" class="md-nav__link">
+        🤩 Node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/6layouts/" class="md-nav__link">
+        🤩 Layouts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/5uicontrols/" class="md-nav__link">
+        🤩 Controles UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud8/7events/" class="md-nav__link">
+        🤩 Eventos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          📝 Entrada/Salida (I/O) de la información
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          📝 Entrada/Salida (I/O) de la información
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/1io/" class="md-nav__link">
+        📝 Input/Output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/12binaryfiles/" class="md-nav__link">
+        📝 Ficheros binarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/13characterfiles/" class="md-nav__link">
+        📝 Ficheros de caracteres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/14fileclass/" class="md-nav__link">
+        📝 Clase File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/15javanio/" class="md-nav__link">
+        📝 java.nio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/16randomaccessfile/" class="md-nav__link">
+        📝 Ficheros de acceso aleatorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/17configfiles/" class="md-nav__link">
+        📝 Ficheros de configuración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/18xmlfiles/" class="md-nav__link">
+        📝 XML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/19jsonfiles/" class="md-nav__link">
+        📝 JSON
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/20createjar/" class="md-nav__link">
+        📝 Crear un .jar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud9/21tryresources/" class="md-nav__link">
+        📝 try-with-resources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          🧠 Persistencia de la información
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          🧠 Persistencia de la información
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud10/1persistence/" class="md-nav__link">
+        🧠 Persistencia
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud10/2mapeo/" class="md-nav__link">
+        🧠 Desfase objeto-relacional
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud10/3conectores/" class="md-nav__link">
+        🧠 Manejo de conectores - JDBC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud10/4transactions/" class="md-nav__link">
+        🧠 Transacciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud10/6rendimiento/" class="md-nav__link">
+        🧠 Mejora del rendimiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud10/7projectstructure/" class="md-nav__link">
+        🧠 Estructura de los proyectos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shortcuts/" class="md-nav__link">
+        🔣 Atajos de teclado para IntelliJ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        ❤️‍🔥 About me
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-empezar-recordatorio-de-lambdas" class="md-nav__link">
+    🧠 Antes de empezar: recordatorio de lambdas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="referencias-de-metodos-en-java">🔗 Referencias de métodos en Java</h1>
+<p>Las referencias de métodos son una forma más corta y elegante de escribir algunas expresiones lambda.</p>
+<p>Dicho de forma muy simple:</p>
+<blockquote>
+<p>Una referencia de método sirve para decirle a Java:<br />
+<strong>“usa este método que ya existe”</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="antes-de-empezar-recordatorio-de-lambdas">🧠 Antes de empezar: recordatorio de lambdas</h2>
+<p>Una expresión lambda permite escribir una pequeña acción de forma rápida.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
+
+<span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">));</span>
+</code></pre></div>
+<p>La parte importante es esta:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+</code></pre></div>
+<p>Esto significa:</p>
+<blockquote>
+<p>Recibe un <code>nombre</code> y pásaselo al método <code>println</code>.</p>
+</blockquote>
+<p>Pero fíjate bien: la lambda no está haciendo nada especial. Solo llama a un método que ya existe.</p>
+<p>Por eso Java permite escribirlo de una forma más corta:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h1 id="que-es-una-referencia-de-metodo">✨ ¿Qué es una referencia de método?</h1>
+<p>Una referencia de método es una forma abreviada de escribir una lambda cuando la lambda <strong>solo llama a un método existente</strong>.</p>
+<p>La sintaxis usa <code>::</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nl">algo</span><span class="p">::</span><span class="n">metodo</span>
+</code></pre></div>
+<p>El símbolo <code>::</code> se puede leer como:</p>
+<blockquote>
+<p>referencia al método</p>
+</blockquote>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span>
+</code></pre></div>
+<p>Se puede leer como:</p>
+<blockquote>
+<p>usa el método <code>println</code> del objeto <code>System.out</code>.</p>
+</blockquote>
+<hr />
+<h2 id="lambda-vs-referencia-de-metodo">🧩 Lambda vs referencia de método</h2>
+<p>Estas dos instrucciones hacen lo mismo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">));</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+</code></pre></div>
+<p>La primera usa una <strong>lambda</strong>.</p>
+<p>La segunda usa una <strong>referencia de método</strong>.</p>
+<p>Java entiende que <code>forEach</code> necesita algo que reciba un elemento y haga algo con él.</p>
+<p>Por eso interpreta esto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span>
+</code></pre></div>
+<p>como si fuera esto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="idea-clave">🧱 Idea clave</h2>
+<p>Una referencia de método <strong>no ejecuta el método en ese mismo instante</strong>.</p>
+<p>Solo le entrega a Java una referencia para que lo ejecute cuando toque.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+</code></pre></div>
+<p>Aquí <code>println</code> se ejecutará una vez por cada elemento de la lista.</p>
+<p>Es como decirle a Java:</p>
+<blockquote>
+<p>Cuando tengas cada nombre, pásaselo a <code>println</code>.</p>
+</blockquote>
+<hr />
+<h1 id="las-referencias-de-metodos-necesitan-una-interfaz-funcional">⚠️ Las referencias de métodos necesitan una interfaz funcional</h1>
+<p>Igual que las lambdas, las referencias de métodos solo funcionan cuando Java espera una <strong>interfaz funcional</strong>.</p>
+<p>Una interfaz funcional es una interfaz que tiene <strong>un único método abstracto</strong>.</p>
+<p>Algunas interfaces funcionales importantes son:</p>
+<table>
+<thead>
+<tr>
+<th>Interfaz funcional</th>
+<th>Método principal</th>
+<th>Significado sencillo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Consumer&lt;T&gt;</code></td>
+<td><code>accept(T t)</code></td>
+<td>Recibe un dato y no devuelve nada</td>
+</tr>
+<tr>
+<td><code>Function&lt;T, R&gt;</code></td>
+<td><code>apply(T t)</code></td>
+<td>Recibe un dato y devuelve otro</td>
+</tr>
+<tr>
+<td><code>Predicate&lt;T&gt;</code></td>
+<td><code>test(T t)</code></td>
+<td>Recibe un dato y devuelve <code>true</code> o <code>false</code></td>
+</tr>
+<tr>
+<td><code>Supplier&lt;T&gt;</code></td>
+<td><code>get()</code></td>
+<td>No recibe nada y devuelve un dato</td>
+</tr>
+<tr>
+<td><code>Comparator&lt;T&gt;</code></td>
+<td><code>compare(T a, T b)</code></td>
+<td>Compara dos objetos</td>
+</tr>
+</tbody>
+</table>
+<p>Por ejemplo, <code>forEach</code> espera un <code>Consumer</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+</code></pre></div>
+<p><code>System.out::println</code> encaja porque puede recibir un dato y no devuelve nada.</p>
+<hr />
+<h1 id="primer-ejemplo-completo">🧪 Primer ejemplo completo</h1>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Ana</span>
+<span class="n">Luis</span>
+<span class="n">Marta</span>
+</code></pre></div>
+<p>Esto sería equivalente a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">));</span>
+</code></pre></div>
+<hr />
+<h1 id="tipos-de-referencias-de-metodos">📚 Tipos de referencias de métodos</h1>
+<p>En Java hay cuatro tipos principales:</p>
+<ol>
+<li>Referencia a un <strong>método estático</strong>.</li>
+<li>Referencia a un <strong>método de un objeto concreto</strong>.</li>
+<li>Referencia a un <strong>método de instancia de un objeto que llega como parámetro</strong>.</li>
+<li>Referencia a un <strong>constructor</strong>.</li>
+</ol>
+<p>Vamos uno por uno.</p>
+<hr />
+<h1 id="1-referencia-a-un-metodo-estatico">1️⃣ Referencia a un método estático</h1>
+<h2 id="sintaxis">📌 Sintaxis</h2>
+<div class="highlight"><pre><span></span><code><span class="nl">Clase</span><span class="p">::</span><span class="n">metodoEstatico</span>
+</code></pre></div>
+<p>Se usa cuando queremos llamar a un método <code>static</code> de una clase.</p>
+<hr />
+<h2 id="ejemplo-con-integerparseint">🧪 Ejemplo con <code>Integer.parseInt</code></h2>
+<p>Supongamos que tenemos una interfaz funcional:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Function</span><span class="p">;</span>
+
+<span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">conversor</span><span class="p">;</span>
+</code></pre></div>
+<p><code>Function&lt;String, Integer&gt;</code> significa:</p>
+<blockquote>
+<p>Recibe un <code>String</code> y devuelve un <code>Integer</code>.</p>
+</blockquote>
+<p>Con lambda:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">conversor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">texto</span><span class="p">);</span>
+</code></pre></div>
+<p>Con referencia de método:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">conversor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">::</span><span class="n">parseInt</span><span class="p">;</span>
+</code></pre></div>
+<p>Ejemplo completo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Function</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">conversor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">::</span><span class="n">parseInt</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conversor</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="s">&quot;25&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="mi">30</span>
+</code></pre></div>
+<p>La referencia:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Integer</span><span class="p">::</span><span class="n">parseInt</span>
+</code></pre></div>
+<p>equivale a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">texto</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="ejemplo-con-metodo-estatico-propio">🧪 Ejemplo con método estático propio</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Function</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">calcularDoble</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Function</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">operacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Main</span><span class="p">::</span><span class="n">calcularDoble</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">operacion</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="mi">6</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="mi">12</span>
+</code></pre></div>
+<p>Esto:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Main</span><span class="p">::</span><span class="n">calcularDoble</span>
+</code></pre></div>
+<p>equivale a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">numero</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Main</span><span class="p">.</span><span class="na">calcularDoble</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="por-que-funciona">🧠 ¿Por qué funciona?</h2>
+<p>Porque el método <code>calcularDoble</code> recibe un <code>int</code> y devuelve un <code>int</code>.</p>
+<p>Y <code>Function&lt;Integer, Integer&gt;</code> necesita exactamente algo parecido:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Integer</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Integer</span>
+</code></pre></div>
+<p>Por eso Java dice:</p>
+<blockquote>
+<p>Vale, este método encaja con esta interfaz funcional.</p>
+</blockquote>
+<hr />
+<h1 id="2-referencia-a-un-metodo-de-un-objeto-concreto">2️⃣ Referencia a un método de un objeto concreto</h1>
+<h2 id="sintaxis_1">📌 Sintaxis</h2>
+<div class="highlight"><pre><span></span><code><span class="nl">objeto</span><span class="p">::</span><span class="n">metodo</span>
+</code></pre></div>
+<p>Se usa cuando ya tenemos un objeto creado y queremos usar uno de sus métodos.</p>
+<hr />
+<h2 id="ejemplo-con-un-objeto-propio">🧪 Ejemplo con un objeto propio</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Mensajero</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarMensaje</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">mensaje</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;📢 Mensaje: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mensaje</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">avisos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Revisar tarea&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Subir proyecto&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Estudiar lambdas&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">Mensajero</span><span class="w"> </span><span class="n">mensajero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mensajero</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">avisos</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">mensajero</span><span class="p">::</span><span class="n">mostrarMensaje</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="err">📢</span><span class="w"> </span><span class="n">Mensaje</span><span class="p">:</span><span class="w"> </span><span class="n">Revisar</span><span class="w"> </span><span class="n">tarea</span>
+<span class="err">📢</span><span class="w"> </span><span class="n">Mensaje</span><span class="p">:</span><span class="w"> </span><span class="n">Subir</span><span class="w"> </span><span class="n">proyecto</span>
+<span class="err">📢</span><span class="w"> </span><span class="n">Mensaje</span><span class="p">:</span><span class="w"> </span><span class="n">Estudiar</span><span class="w"> </span><span class="n">lambdas</span>
+</code></pre></div>
+<p>Esto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">avisos</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">mensajero</span><span class="p">::</span><span class="n">mostrarMensaje</span><span class="p">);</span>
+</code></pre></div>
+<p>equivale a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">avisos</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">aviso</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mensajero</span><span class="p">.</span><span class="na">mostrarMensaje</span><span class="p">(</span><span class="n">aviso</span><span class="p">));</span>
+</code></pre></div>
+<hr />
+<h2 id="idea-importante">🧠 Idea importante</h2>
+<p>Aquí el objeto ya existe:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Mensajero</span><span class="w"> </span><span class="n">mensajero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mensajero</span><span class="p">();</span>
+</code></pre></div>
+<p>La referencia de método no crea un <code>Mensajero</code> nuevo.</p>
+<p>Solo dice:</p>
+<blockquote>
+<p>Usa el método <code>mostrarMensaje</code> de este objeto concreto.</p>
+</blockquote>
+<hr />
+<h2 id="otro-ejemplo">🧪 Otro ejemplo</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Consumer</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Registro</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">guardar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">texto</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Guardando en registro: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">texto</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Registro</span><span class="w"> </span><span class="n">registro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Registro</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">::</span><span class="n">guardar</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">accion</span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="s">&quot;Usuario creado&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">accion</span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="s">&quot;Producto eliminado&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Guardando</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">registro</span><span class="p">:</span><span class="w"> </span><span class="n">Usuario</span><span class="w"> </span><span class="n">creado</span>
+<span class="n">Guardando</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">registro</span><span class="p">:</span><span class="w"> </span><span class="n">Producto</span><span class="w"> </span><span class="n">eliminado</span>
+</code></pre></div>
+<hr />
+<h1 id="3-referencia-a-un-metodo-de-instancia-de-un-objeto-recibido-como-parametro">3️⃣ Referencia a un método de instancia de un objeto recibido como parámetro</h1>
+<p>Este tipo suele ser el más difícil al principio, así que vamos despacio.</p>
+<h2 id="sintaxis_2">📌 Sintaxis</h2>
+<div class="highlight"><pre><span></span><code><span class="nl">Clase</span><span class="p">::</span><span class="n">metodoDeInstancia</span>
+</code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">String</span><span class="p">::</span><span class="n">toUpperCase</span>
+</code></pre></div>
+<p>Cuidado: <code>toUpperCase</code> <strong>no es estático</strong>.</p>
+<p>No podemos hacer esto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">();</span><span class="w"> </span><span class="c1">// ❌ Incorrecto</span>
+</code></pre></div>
+<p>Entonces, ¿por qué sí podemos escribir esto?</p>
+<div class="highlight"><pre><span></span><code><span class="nl">String</span><span class="p">::</span><span class="n">toUpperCase</span>
+</code></pre></div>
+<p>Porque Java entiende que el objeto sobre el que se llamará el método será el dato que llegue como parámetro.</p>
+<hr />
+<h2 id="ejemplo-con-stringtouppercase">🧪 Ejemplo con <code>String::toUpperCase</code></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Function</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">convertir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">::</span><span class="n">toUpperCase</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">convertir</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="s">&quot;hola&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="n">HOLA</span>
+</code></pre></div>
+<p>Esto:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">String</span><span class="p">::</span><span class="n">toUpperCase</span>
+</code></pre></div>
+<p>equivale a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">texto</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h2 id="ejemplo-con-stringlength">🧪 Ejemplo con <code>String::length</code></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Function</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">calcularLongitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">::</span><span class="n">length</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">calcularLongitud</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">calcularLongitud</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="s">&quot;Programación&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="mi">4</span>
+<span class="mi">12</span>
+</code></pre></div>
+<p>Esto:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">String</span><span class="p">::</span><span class="n">length</span>
+</code></pre></div>
+<p>equivale a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">texto</span><span class="p">.</span><span class="na">length</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h2 id="ejemplo-con-predicate">🧪 Ejemplo con <code>Predicate</code></h2>
+<p><code>Predicate&lt;T&gt;</code> recibe un dato y devuelve <code>true</code> o <code>false</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Predicate</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Predicate</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">estaVacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">::</span><span class="n">isEmpty</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">estaVacio</span><span class="p">.</span><span class="na">test</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">estaVacio</span><span class="p">.</span><span class="na">test</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="kc">true</span>
+<span class="kc">false</span>
+</code></pre></div>
+<p>Esto:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">String</span><span class="p">::</span><span class="n">isEmpty</span>
+</code></pre></div>
+<p>equivale a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">texto</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h2 id="diferencia-importante">🧠 Diferencia importante</h2>
+<p>No es lo mismo esto:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">objeto</span><span class="p">::</span><span class="n">metodo</span>
+</code></pre></div>
+<p>que esto:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Clase</span><span class="p">::</span><span class="n">metodo</span>
+</code></pre></div>
+<p>En <code>objeto::metodo</code>, el objeto ya existe:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">mensajero</span><span class="p">::</span><span class="n">mostrarMensaje</span>
+</code></pre></div>
+<p>Equivale a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mensajero</span><span class="p">.</span><span class="na">mostrarMensaje</span><span class="p">(</span><span class="n">texto</span><span class="p">)</span>
+</code></pre></div>
+<p>En <code>Clase::metodo</code>, el objeto llega como parámetro:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">String</span><span class="p">::</span><span class="n">toUpperCase</span>
+</code></pre></div>
+<p>Equivale a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">texto</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h1 id="4-referencia-a-un-constructor">4️⃣ Referencia a un constructor</h1>
+<h2 id="sintaxis_3">📌 Sintaxis</h2>
+<div class="highlight"><pre><span></span><code><span class="nl">Clase</span><span class="p">::</span><span class="k">new</span>
+</code></pre></div>
+<p>Se usa cuando queremos crear objetos usando un constructor.</p>
+<hr />
+<h2 id="ejemplo-sencillo-con-supplier">🧪 Ejemplo sencillo con <code>Supplier</code></h2>
+<p><code>Supplier&lt;T&gt;</code> no recibe nada y devuelve un objeto.</p>
+<p>Supongamos esta clase:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Caja</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Caja</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Caja creada&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Con lambda:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Supplier</span><span class="o">&lt;</span><span class="n">Caja</span><span class="o">&gt;</span><span class="w"> </span><span class="n">creador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Caja</span><span class="p">();</span>
+</code></pre></div>
+<p>Con referencia a constructor:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Supplier</span><span class="o">&lt;</span><span class="n">Caja</span><span class="o">&gt;</span><span class="w"> </span><span class="n">creador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Caja</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
+</code></pre></div>
+<p>Ejemplo completo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Supplier</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Caja</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Caja</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Caja creada&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Supplier</span><span class="o">&lt;</span><span class="n">Caja</span><span class="o">&gt;</span><span class="w"> </span><span class="n">creador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Caja</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">Caja</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">creador</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Caja</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">creador</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Caja</span><span class="w"> </span><span class="n">creada</span>
+<span class="n">Caja</span><span class="w"> </span><span class="n">creada</span>
+</code></pre></div>
+<hr />
+<h2 id="ojo-cajanew-no-crea-la-caja-inmediatamente">🧠 Ojo: <code>Caja::new</code> no crea la caja inmediatamente</h2>
+<p>Esto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Supplier</span><span class="o">&lt;</span><span class="n">Caja</span><span class="o">&gt;</span><span class="w"> </span><span class="n">creador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Caja</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
+</code></pre></div>
+<p>no crea todavía una caja.</p>
+<p>La caja se crea cuando llamamos a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">creador</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="constructor-con-parametro">🧪 Constructor con parámetro</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Function</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Persona</span><span class="o">&gt;</span><span class="w"> </span><span class="n">crearPersona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Persona</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">Persona</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">crearPersona</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Persona</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">crearPersona</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p2</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Ana</span>
+<span class="n">Luis</span>
+</code></pre></div>
+<p>Esto:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Persona</span><span class="p">::</span><span class="k">new</span>
+</code></pre></div>
+<p>equivale a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h1 id="referencias-de-metodos-con-comparator">🧮 Referencias de métodos con <code>Comparator</code></h1>
+<p>Las referencias de métodos se usan muchísimo para ordenar objetos.</p>
+<p>Supongamos esta clase:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Producto</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">stock</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Producto</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">stock</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">stock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stock</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getPrecio</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getStock</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">stock</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; - &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; € - stock: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">stock</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="ordenar-por-nombre">📌 Ordenar por nombre</h2>
+<p>Con lambda:</p>
+<div class="highlight"><pre><span></span><code><span class="n">productos</span><span class="p">.</span><span class="na">sort</span><span class="p">((</span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">p1</span><span class="p">.</span><span class="na">getNombre</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">p2</span><span class="p">.</span><span class="na">getNombre</span><span class="p">()));</span>
+</code></pre></div>
+<p>Con <code>Comparator.comparing</code> y referencia de método:</p>
+<div class="highlight"><pre><span></span><code><span class="n">productos</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">Comparator</span><span class="p">.</span><span class="na">comparing</span><span class="p">(</span><span class="n">Producto</span><span class="p">::</span><span class="n">getNombre</span><span class="p">));</span>
+</code></pre></div>
+<p>Esto se lee así:</p>
+<blockquote>
+<p>Ordena los productos usando el nombre de cada producto.</p>
+</blockquote>
+<hr />
+<h2 id="ordenar-por-precio">📌 Ordenar por precio</h2>
+<div class="highlight"><pre><span></span><code><span class="n">productos</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">Comparator</span><span class="p">.</span><span class="na">comparingDouble</span><span class="p">(</span><span class="n">Producto</span><span class="p">::</span><span class="n">getPrecio</span><span class="p">));</span>
+</code></pre></div>
+<p>Esto se lee así:</p>
+<blockquote>
+<p>Ordena los productos usando el precio de cada producto.</p>
+</blockquote>
+<hr />
+<h2 id="ordenar-por-stock">📌 Ordenar por stock</h2>
+<div class="highlight"><pre><span></span><code><span class="n">productos</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">Comparator</span><span class="p">.</span><span class="na">comparingInt</span><span class="p">(</span><span class="n">Producto</span><span class="p">::</span><span class="n">getStock</span><span class="p">));</span>
+</code></pre></div>
+<p>Esto se lee así:</p>
+<blockquote>
+<p>Ordena los productos usando el stock de cada producto.</p>
+</blockquote>
+<hr />
+<h2 id="ordenar-por-varios-criterios">📌 Ordenar por varios criterios</h2>
+<div class="highlight"><pre><span></span><code><span class="n">productos</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Comparator</span><span class="p">.</span><span class="na">comparing</span><span class="p">(</span><span class="n">Producto</span><span class="p">::</span><span class="n">getNombre</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">thenComparingDouble</span><span class="p">(</span><span class="n">Producto</span><span class="p">::</span><span class="n">getPrecio</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">thenComparingInt</span><span class="p">(</span><span class="n">Producto</span><span class="p">::</span><span class="n">getStock</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Esto significa:</p>
+<ol>
+<li>Ordena primero por nombre.</li>
+<li>Si dos productos tienen el mismo nombre, ordena por precio.</li>
+<li>Si también tienen el mismo precio, ordena por stock.</li>
+</ol>
+<hr />
+<h2 id="ejemplo-completo-con-comparator">🧪 Ejemplo completo con <code>Comparator</code></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Comparator</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Producto</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">stock</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Producto</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">stock</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">stock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stock</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getPrecio</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getStock</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">stock</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; - &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; € - stock: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">stock</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Producto</span><span class="o">&gt;</span><span class="w"> </span><span class="n">productos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">productos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Producto</span><span class="p">(</span><span class="s">&quot;Ratón&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">15.99</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">));</span>
+<span class="w">        </span><span class="n">productos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Producto</span><span class="p">(</span><span class="s">&quot;Teclado&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">29.99</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">));</span>
+<span class="w">        </span><span class="n">productos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Producto</span><span class="p">(</span><span class="s">&quot;Ratón&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">9.99</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">));</span>
+<span class="w">        </span><span class="n">productos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Producto</span><span class="p">(</span><span class="s">&quot;Monitor&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">149.99</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span>
+
+<span class="w">        </span><span class="n">productos</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span>
+<span class="w">                </span><span class="n">Comparator</span><span class="p">.</span><span class="na">comparing</span><span class="p">(</span><span class="n">Producto</span><span class="p">::</span><span class="n">getNombre</span><span class="p">)</span>
+<span class="w">                        </span><span class="p">.</span><span class="na">thenComparingDouble</span><span class="p">(</span><span class="n">Producto</span><span class="p">::</span><span class="n">getPrecio</span><span class="p">)</span>
+<span class="w">        </span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">productos</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">producto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">producto</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Monitor</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">149.99</span><span class="w"> </span><span class="err">€</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">stock</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<span class="n">Ratón</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">9.99</span><span class="w"> </span><span class="err">€</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">stock</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span>
+<span class="n">Ratón</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">15.99</span><span class="w"> </span><span class="err">€</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">stock</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
+<span class="n">Teclado</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">29.99</span><span class="w"> </span><span class="err">€</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">stock</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+</code></pre></div>
+<hr />
+<h1 id="referencias-de-metodos-con-metodos-propios">🧰 Referencias de métodos con métodos propios</h1>
+<p>No hace falta usar siempre métodos de Java.</p>
+<p>También podemos crear nuestros propios métodos y referenciarlos.</p>
+<hr />
+<h2 id="ejemplo-con-consumer">🧪 Ejemplo con <code>Consumer</code></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">felicitar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Buen trabajo, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">Main</span><span class="p">::</span><span class="n">felicitar</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="err">¡</span><span class="n">Buen</span><span class="w"> </span><span class="n">trabajo</span><span class="p">,</span><span class="w"> </span><span class="n">Ana</span><span class="o">!</span>
+<span class="err">¡</span><span class="n">Buen</span><span class="w"> </span><span class="n">trabajo</span><span class="p">,</span><span class="w"> </span><span class="n">Luis</span><span class="o">!</span>
+<span class="err">¡</span><span class="n">Buen</span><span class="w"> </span><span class="n">trabajo</span><span class="p">,</span><span class="w"> </span><span class="n">Marta</span><span class="o">!</span>
+</code></pre></div>
+<p>Esto:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Main</span><span class="p">::</span><span class="n">felicitar</span>
+</code></pre></div>
+<p>equivale a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Main</span><span class="p">.</span><span class="na">felicitar</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="ejemplo-con-un-metodo-que-valida">🧪 Ejemplo con un método que valida</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Predicate</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esNombreLargo</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Predicate</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">validador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Main</span><span class="p">::</span><span class="n">esNombreLargo</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">validador</span><span class="p">.</span><span class="na">test</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">validador</span><span class="p">.</span><span class="na">test</span><span class="p">(</span><span class="s">&quot;Marta&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="kc">false</span>
+<span class="kc">true</span>
+</code></pre></div>
+<p>Esto:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Main</span><span class="p">::</span><span class="n">esNombreLargo</span>
+</code></pre></div>
+<p>equivale a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Main</span><span class="p">.</span><span class="na">esNombreLargo</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h1 id="cuando-usar-referencia-de-metodo-y-cuando-usar-lambda">🧠 Cuándo usar referencia de método y cuándo usar lambda</h1>
+<h2 id="usa-referencia-de-metodo-cuando">✅ Usa referencia de método cuando...</h2>
+<p>La lambda solo llama a un método existente.</p>
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">texto</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()</span>
+</code></pre></div>
+<p>Mejor:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">String</span><span class="p">::</span><span class="n">toUpperCase</span>
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">producto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">producto</span><span class="p">.</span><span class="na">getPrecio</span><span class="p">()</span>
+</code></pre></div>
+<p>Mejor:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Producto</span><span class="p">::</span><span class="n">getPrecio</span>
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">texto</span><span class="p">)</span>
+</code></pre></div>
+<p>Mejor:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Integer</span><span class="p">::</span><span class="n">parseInt</span>
+</code></pre></div>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+</code></pre></div>
+<p>Mejor:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Persona</span><span class="p">::</span><span class="k">new</span>
+</code></pre></div>
+<hr />
+<h2 id="mejor-usa-lambda-cuando">❌ Mejor usa lambda cuando...</h2>
+<p>La operación tiene más lógica.</p>
+<div class="highlight"><pre><span></span><code><span class="n">producto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">producto</span><span class="p">.</span><span class="na">getPrecio</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">producto</span><span class="p">.</span><span class="na">getNombre</span><span class="p">().</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;R&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Aquí una referencia de método no sería clara.</p>
+<hr />
+<p>También es mejor usar lambda cuando necesitas modificar el valor antes de pasarlo al método.</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span>
+</code></pre></div>
+<p>Esto no equivale a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span>
+</code></pre></div>
+<p>Porque la primera imprime un texto personalizado y la segunda imprime el nombre tal cual.</p>
+<hr />
+<p>También es mejor usar lambda cuando necesitas negar una condición.</p>
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">!</span><span class="n">texto</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span>
+</code></pre></div>
+<p>Existe:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">String</span><span class="p">::</span><span class="n">isEmpty</span>
+</code></pre></div>
+<p>pero eso significa:</p>
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">texto</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span>
+</code></pre></div>
+<p>No significa:</p>
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">!</span><span class="n">texto</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h1 id="tabla-resumen">🔍 Tabla resumen</h1>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Sintaxis</th>
+<th>Ejemplo</th>
+<th>Equivale a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Método estático</td>
+<td><code>Clase::metodo</code></td>
+<td><code>Integer::parseInt</code></td>
+<td><code>texto -&gt; Integer.parseInt(texto)</code></td>
+</tr>
+<tr>
+<td>Método de un objeto concreto</td>
+<td><code>objeto::metodo</code></td>
+<td><code>registro::guardar</code></td>
+<td><code>texto -&gt; registro.guardar(texto)</code></td>
+</tr>
+<tr>
+<td>Método de instancia</td>
+<td><code>Clase::metodo</code></td>
+<td><code>String::toUpperCase</code></td>
+<td><code>texto -&gt; texto.toUpperCase()</code></td>
+</tr>
+<tr>
+<td>Constructor</td>
+<td><code>Clase::new</code></td>
+<td><code>Persona::new</code></td>
+<td><code>nombre -&gt; new Persona(nombre)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="errores-tipicos">⚠️ Errores típicos</h1>
+<h2 id="error-1-pensar-que-el-metodo-se-ejecuta-inmediatamente">❌ Error 1: pensar que el método se ejecuta inmediatamente</h2>
+<div class="highlight"><pre><span></span><code><span class="n">Supplier</span><span class="o">&lt;</span><span class="n">Caja</span><span class="o">&gt;</span><span class="w"> </span><span class="n">creador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Caja</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
+</code></pre></div>
+<p>Esto no crea una caja en ese momento.</p>
+<p>La caja se crea cuando se llama a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">creador</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+</code></pre></div>
+<p>Lo mismo pasa aquí:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+</code></pre></div>
+<p><code>println</code> se ejecuta cuando <code>forEach</code> recorre la lista, no al escribir la referencia.</p>
+<hr />
+<h2 id="error-2-usar-referencia-de-metodo-cuando-la-lambda-hace-mas-cosas">❌ Error 2: usar referencia de método cuando la lambda hace más cosas</h2>
+<p>Esto se entiende bien como lambda:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">));</span>
+</code></pre></div>
+<p>No se puede sustituir directamente por:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+</code></pre></div>
+<p>porque no hace lo mismo.</p>
+<p>La primera imprime:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Hola</span><span class="p">,</span><span class="w"> </span><span class="n">Ana</span>
+</code></pre></div>
+<p>La segunda imprime:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Ana</span>
+</code></pre></div>
+<hr />
+<h2 id="error-3-confundir-metodo-estatico-con-metodo-de-instancia">❌ Error 3: confundir método estático con método de instancia</h2>
+<p>Esto es correcto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">convertir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">::</span><span class="n">toUpperCase</span><span class="p">;</span>
+</code></pre></div>
+<p>Aunque <code>toUpperCase</code> no sea estático.</p>
+<p>Java lo interpreta como:</p>
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">texto</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()</span>
+</code></pre></div>
+<p>No significa que se esté llamando a:</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">();</span><span class="w"> </span><span class="c1">// ❌ Incorrecto</span>
+</code></pre></div>
+<hr />
+<h2 id="error-4-usar-una-referencia-que-no-encaja-con-lo-que-java-espera">❌ Error 4: usar una referencia que no encaja con lo que Java espera</h2>
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">);</span>
+
+<span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">String</span><span class="p">::</span><span class="n">length</span><span class="p">);</span><span class="w"> </span><span class="c1">// ❌ Error</span>
+</code></pre></div>
+<p>¿Por qué?</p>
+<p>Porque <code>forEach</code> espera algo que reciba un elemento y no devuelva nada.</p>
+<p>Pero <code>String::length</code> devuelve un número.</p>
+<p>Sí encaja con <code>Function&lt;String, Integer&gt;</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">::</span><span class="n">length</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h1 id="ejemplo-comparativo-final">🧪 Ejemplo comparativo final</h1>
+<h2 id="version-con-lambdas">Versión con lambdas</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Comparator</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Alumno</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Alumno</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">nota</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getNota</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Alumno</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alumnos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Marta&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">8.5</span><span class="p">));</span>
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">9.1</span><span class="p">));</span>
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">6.7</span><span class="p">));</span>
+
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">sort</span><span class="p">((</span><span class="n">a1</span><span class="p">,</span><span class="w"> </span><span class="n">a2</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a1</span><span class="p">.</span><span class="na">getNombre</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">a2</span><span class="p">.</span><span class="na">getNombre</span><span class="p">()));</span>
+
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">alumno</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">alumno</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="version-con-referencias-de-metodos">Versión con referencias de métodos</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Comparator</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Alumno</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Alumno</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">nota</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getNota</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Alumno</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alumnos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Marta&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">8.5</span><span class="p">));</span>
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">9.1</span><span class="p">));</span>
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">6.7</span><span class="p">));</span>
+
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">Comparator</span><span class="p">.</span><span class="na">comparing</span><span class="p">(</span><span class="n">Alumno</span><span class="p">::</span><span class="n">getNombre</span><span class="p">));</span>
+
+<span class="w">        </span><span class="n">alumnos</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Ana</span><span class="w"> </span><span class="p">(</span><span class="mf">9.1</span><span class="p">)</span>
+<span class="n">Luis</span><span class="w"> </span><span class="p">(</span><span class="mf">6.7</span><span class="p">)</span>
+<span class="n">Marta</span><span class="w"> </span><span class="p">(</span><span class="mf">8.5</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h1 id="como-pensar-cuando-veo-una-referencia-de-metodo">🧭 Cómo pensar cuando veo una referencia de método</h1>
+<p>Cuando veas algo como esto:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Producto</span><span class="p">::</span><span class="n">getPrecio</span>
+</code></pre></div>
+<p>pregúntate:</p>
+<ol>
+<li>¿Qué dato va a llegar como parámetro?</li>
+<li>¿Qué método se va a llamar?</li>
+<li>¿Qué devuelve ese método?</li>
+<li>¿Encaja con lo que Java espera en ese lugar?</li>
+</ol>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Comparator</span><span class="p">.</span><span class="na">comparing</span><span class="p">(</span><span class="n">Producto</span><span class="p">::</span><span class="n">getPrecio</span><span class="p">)</span>
+</code></pre></div>
+<p>Se puede leer así:</p>
+<blockquote>
+<p>Para comparar productos, usa el precio de cada producto.</p>
+</blockquote>
+<hr />
+<h1 id="mini-chuleta">📝 Mini chuleta</h1>
+<div class="highlight"><pre><span></span><code><span class="c1">// Método estático</span>
+<span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">conversor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">::</span><span class="n">parseInt</span><span class="p">;</span>
+
+<span class="c1">// Método estático propio</span>
+<span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Main</span><span class="p">::</span><span class="n">felicitar</span><span class="p">;</span>
+
+<span class="c1">// Método de un objeto concreto</span>
+<span class="n">Registro</span><span class="w"> </span><span class="n">registro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Registro</span><span class="p">();</span>
+<span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">guardar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">::</span><span class="n">guardar</span><span class="p">;</span>
+
+<span class="c1">// Método de instancia del objeto recibido como parámetro</span>
+<span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mayusculas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">::</span><span class="n">toUpperCase</span><span class="p">;</span>
+<span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">::</span><span class="n">length</span><span class="p">;</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">::</span><span class="n">isEmpty</span><span class="p">;</span>
+
+<span class="c1">// Constructor sin parámetros</span>
+<span class="n">Supplier</span><span class="o">&lt;</span><span class="n">Caja</span><span class="o">&gt;</span><span class="w"> </span><span class="n">crearCaja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Caja</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
+
+<span class="c1">// Constructor con un parámetro</span>
+<span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Persona</span><span class="o">&gt;</span><span class="w"> </span><span class="n">crearPersona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Persona</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
+
+<span class="c1">// Ordenar por atributo</span>
+<span class="n">productos</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">Comparator</span><span class="p">.</span><span class="na">comparing</span><span class="p">(</span><span class="n">Producto</span><span class="p">::</span><span class="n">getNombre</span><span class="p">));</span>
+
+<span class="c1">// Ordenar por atributo numérico</span>
+<span class="n">productos</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">Comparator</span><span class="p">.</span><span class="na">comparingDouble</span><span class="p">(</span><span class="n">Producto</span><span class="p">::</span><span class="n">getPrecio</span><span class="p">));</span>
+</code></pre></div>
+<hr />
+<h1 id="conclusion">✅ Conclusión</h1>
+<p>Las referencias de métodos hacen que el código sea más limpio cuando la lambda simplemente llama a un método existente.</p>
+<p>La clave es esta:</p>
+<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">texto</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()</span>
+</code></pre></div>
+<p>se puede escribir como:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">String</span><span class="p">::</span><span class="n">toUpperCase</span>
+</code></pre></div>
+<p>Y esto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+</code></pre></div>
+<p>se puede escribir como:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Persona</span><span class="p">::</span><span class="k">new</span>
+</code></pre></div>
+<p>Pero no conviene forzarlo siempre.</p>
+<p>Regla sencilla:</p>
+<blockquote>
+<p>Si la lambda solo llama a un método, probablemente puedas usar una referencia de método.<br />
+Si la lambda tiene lógica propia, condiciones, concatenaciones o varias instrucciones, mejor deja la lambda.</p>
+</blockquote>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navitagion.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6df46069.min.js"></script>
+      
+    
+  </body>
+</html>

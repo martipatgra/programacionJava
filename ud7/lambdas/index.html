@@ -2410,54 +2410,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#referencias-a-metodos" class="md-nav__link">
-    🪄 Referencias a métodos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-comunes-de-referencias-a-metodos" class="md-nav__link">
-    🧭 Tipos comunes de referencias a métodos
-  </a>
-  
-    <nav class="md-nav" aria-label="🧭 Tipos comunes de referencias a métodos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-metodo-estatico" class="md-nav__link">
-    1. Método estático
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-metodo-de-un-objeto-concreto" class="md-nav__link">
-    2. Método de un objeto concreto
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-metodo-de-un-objeto-que-llega-como-parametro" class="md-nav__link">
-    3. Método de un objeto que llega como parámetro
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-referencia-a-constructor" class="md-nav__link">
-    4. Referencia a constructor
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lambdas-modernas-con-comparator" class="md-nav__link">
     📊 Lambdas modernas con Comparator
   </a>
@@ -3184,6 +3136,19 @@ Beatriz
 <div class="highlight"><pre><span></span><code><span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">impar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">esPar</span><span class="p">.</span><span class="na">negate</span><span class="p">();</span>
 
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">impar</span><span class="p">.</span><span class="na">test</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
+
+<span class="c1">//se pueden combinar varios</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">greaterThan10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lessThan20</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">greaterThan10</span><span class="p">.</span><span class="na">and</span><span class="p">(</span><span class="n">lessThan20</span><span class="p">).</span><span class="na">test</span><span class="p">(</span><span class="mi">15</span><span class="p">));</span>
+
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">greaterThanTen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lowerThanTwenty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">resul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">greaterThanTen</span><span class="p">.</span><span class="na">and</span><span class="p">(</span><span class="n">lowerThanTwenty</span><span class="p">).</span><span class="na">test</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span><span class="c1">//true</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">resul2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">greaterThanTen</span><span class="p">.</span><span class="na">and</span><span class="p">(</span><span class="n">lowerThanTwenty</span><span class="p">).</span><span class="na">negate</span><span class="p">().</span><span class="na">test</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span><span class="c1">//false</span>
+
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">i</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">Predicate</span><span class="p">.</span><span class="na">isEqual</span><span class="p">(</span><span class="s">&quot;asdf&quot;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">test</span><span class="p">(</span><span class="s">&quot;java&quot;</span><span class="p">));</span><span class="c1">//false</span>
 </code></pre></div>
 <hr />
 <h2 id="consumert-hacer-algo-con-un-dato">📦 <code>Consumer&lt;T&gt;</code>: hacer algo con un dato</h2>
@@ -3385,30 +3350,36 @@ Nombre: Marta
 <h2 id="variables-externas-en-lambdas">🔒 Variables externas en lambdas</h2>
 <p>Una lambda puede usar variables locales externas, pero esas variables deben ser <strong>finales o efectivamente finales</strong>.</p>
 <p>Ejemplo correcto:</p>
-<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">prefijo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ejemplo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">prefijo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola&quot;</span><span class="p">;</span>
 
-<span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">saludar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">prefijo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">saludar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">prefijo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
 
-<span class="n">saludar</span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">saludar</span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>Aunque <code>prefijo</code> no tenga la palabra <code>final</code>, no se modifica después. Por eso es efectivamente final.</p>
 <p>Ejemplo incorrecto:</p>
-<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">prefijo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ejemplo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">prefijo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola&quot;</span><span class="p">;</span>
 
-<span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">saludar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">prefijo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">saludar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">prefijo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
 
-<span class="n">prefijo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Buenas&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error si la lambda usa prefijo</span>
+<span class="w">    </span><span class="n">prefijo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Buenas&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error si la lambda usa prefijo</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>📌 Si una variable local se usa dentro de una lambda, no puedes cambiarla después.</p>
+<p>📌 Si una variable local se usa dentro de una lambda, no puedes cambiarla después. Porque una lambda <strong>puede ejecutarse más tarde</strong>, cuando el método donde se creó <strong>ya ha terminado</strong>.</p>
 <hr />
 <h2 id="error-tipico-intentar-modificar-una-variable-local">🧨 Error típico: intentar modificar una variable local</h2>
 <p>Esto no compila:</p>
-<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ejemplo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
-<span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error</span>
-<span class="p">});</span>
+<span class="w">    </span><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>¿Por qué?</p>
 <p>Porque <code>contador</code> es una variable local externa y la lambda intenta modificarla.</p>
@@ -3451,46 +3422,6 @@ Nombre: Marta
 <div class="highlight"><pre><span></span><code>Objeto externo
 </code></pre></div>
 <p>📌 En lambdas, <code>this</code> no crea un nuevo contexto como una clase anónima.</p>
-<hr />
-<h2 id="referencias-a-metodos">🪄 Referencias a métodos</h2>
-<p>A veces una lambda solo llama a un método existente.</p>
-<p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">));</span>
-</code></pre></div>
-<p>Se puede simplificar con una referencia a método:</p>
-<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
-</code></pre></div>
-<p>Las referencias a métodos usan <code>::</code>.</p>
-<hr />
-<h2 id="tipos-comunes-de-referencias-a-metodos">🧭 Tipos comunes de referencias a métodos</h2>
-<h3 id="1-metodo-estatico">1. Método estático</h3>
-<div class="highlight"><pre><span></span><code><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">convertir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">texto</span><span class="p">);</span>
-</code></pre></div>
-<p>Con referencia a método:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">convertir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">::</span><span class="n">parseInt</span><span class="p">;</span>
-</code></pre></div>
-<hr />
-<h3 id="2-metodo-de-un-objeto-concreto">2. Método de un objeto concreto</h3>
-<div class="highlight"><pre><span></span><code><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">imprimir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">texto</span><span class="p">);</span>
-</code></pre></div>
-<p>Con referencia a método:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">imprimir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">;</span>
-</code></pre></div>
-<hr />
-<h3 id="3-metodo-de-un-objeto-que-llega-como-parametro">3. Método de un objeto que llega como parámetro</h3>
-<div class="highlight"><pre><span></span><code><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mayusculas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">texto</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">();</span>
-</code></pre></div>
-<p>Con referencia a método:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mayusculas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">::</span><span class="n">toUpperCase</span><span class="p">;</span>
-</code></pre></div>
-<hr />
-<h3 id="4-referencia-a-constructor">4. Referencia a constructor</h3>
-<div class="highlight"><pre><span></span><code><span class="n">Supplier</span><span class="o">&lt;</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">crearLista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-</code></pre></div>
-<p>Con referencia a constructor:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Supplier</span><span class="o">&lt;</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">crearLista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">::</span><span class="k">new</span><span class="p">;</span>
-</code></pre></div>
-<p>📌 Las referencias a métodos no sustituyen a todas las lambdas, solo a las que básicamente llaman a un método ya existente.</p>
 <hr />
 <h2 id="lambdas-modernas-con-comparator">📊 Lambdas modernas con <code>Comparator</code></h2>
 <p>Una de las aplicaciones más útiles de las lambdas es ordenar objetos.</p>
