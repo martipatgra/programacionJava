@@ -9,13 +9,17 @@
       
       
       
+        <link rel="prev" href="../genericos/">
+      
+      
+        <link rel="next" href="../referenciametodos/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>⚡ Expresiones lambda en Java - Programación en Java</title>
+        <title>🦄 Expresiones lambda en Java - Programación en Java</title>
       
     
     
@@ -112,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ⚡ Expresiones lambda en Java
+              🦄 Expresiones lambda en Java
             
           </span>
         </div>
@@ -1445,14 +1449,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
       
       
       
@@ -1461,7 +1467,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           🦄 Programación avanzada
@@ -1500,11 +1506,530 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../2lambda/" class="md-nav__link">
-        🦄 Expresiones lambda
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          🦄 Expresiones lambda en Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        🦄 Expresiones lambda en Java
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#idea-principal-que-problema-resuelven-las-lambdas" class="md-nav__link">
+    🧠 Idea principal: ¿qué problema resuelven las lambdas?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-exactamente-una-lambda" class="md-nav__link">
+    🧩 ¿Qué es exactamente una lambda?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-seguir-interfaz-funcional" class="md-nav__link">
+    🧱 Antes de seguir: interfaz funcional
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-anotacion-functionalinterface" class="md-nav__link">
+    🏷️ La anotación @FunctionalInterface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-abstractos-default-y-static" class="md-nav__link">
+    🔎 Métodos abstractos, default y static
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sintaxis-basica-de-una-lambda" class="md-nav__link">
+    ✍️ Sintaxis básica de una lambda
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-lambda-sin-parametros" class="md-nav__link">
+    0️⃣ Lambda sin parámetros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-lambda-con-un-parametro" class="md-nav__link">
+    1️⃣ Lambda con un parámetro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lambda-con-varios-parametros" class="md-nav__link">
+    2️⃣ Lambda con varios parámetros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tengo-que-poner-los-tipos-de-los-parametros" class="md-nav__link">
+    🧠 ¿Tengo que poner los tipos de los parámetros?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambdas-que-devuelven-un-valor" class="md-nav__link">
+    ↩️ Lambdas que devuelven un valor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambdas-con-varias-instrucciones" class="md-nav__link">
+    🧾 Lambdas con varias instrucciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-completo-desde-cero" class="md-nav__link">
+    🧪 Ejemplo completo desde cero
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antes-y-despues-clase-anonima-frente-a-lambda" class="md-nav__link">
+    🆚 Antes y después: clase anónima frente a lambda
+  </a>
+  
+    <nav class="md-nav" aria-label="🆚 Antes y después: clase anónima frente a lambda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sin-lambda" class="md-nav__link">
+    😵 Sin lambda
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#con-lambda" class="md-nav__link">
+    😎 Con lambda
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambdas-con-colecciones" class="md-nav__link">
+    🧺 Lambdas con colecciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foreach" class="md-nav__link">
+    🔁 forEach
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removeif" class="md-nav__link">
+    🧹 removeIf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sort-con-lambda" class="md-nav__link">
+    📊 sort con lambda
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambdas-con-objetos" class="md-nav__link">
+    🏗️ Lambdas con objetos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtrar-objetos-con-removeif" class="md-nav__link">
+    🧹 Filtrar objetos con removeIf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordenar-objetos-con-sort" class="md-nav__link">
+    📊 Ordenar objetos con sort
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaces-funcionales-ya-preparadas-por-java" class="md-nav__link">
+    🧰 Interfaces funcionales ya preparadas por Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicatet-comprobar-condiciones" class="md-nav__link">
+    ✅ Predicate&lt;T&gt;: comprobar condiciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combinar-predicate" class="md-nav__link">
+    🧩 Combinar Predicate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consumert-hacer-algo-con-un-dato" class="md-nav__link">
+    📦 Consumer&lt;T&gt;: hacer algo con un dato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppliert-producir-un-dato" class="md-nav__link">
+    🎁 Supplier&lt;T&gt;: producir un dato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functiont-r-transformar-un-dato" class="md-nav__link">
+    🔄 Function&lt;T, R&gt;: transformar un dato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combinar-function" class="md-nav__link">
+    🔗 Combinar Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bifunctiont-u-r-dos-entradas-una-salida" class="md-nav__link">
+    🧮 BiFunction&lt;T, U, R&gt;: dos entradas, una salida
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unaryoperatort-y-binaryoperatort" class="md-nav__link">
+    🔁 UnaryOperator&lt;T&gt; y BinaryOperator&lt;T&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="🔁 UnaryOperator&lt;T&gt; y BinaryOperator&lt;T&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unaryoperatort" class="md-nav__link">
+    UnaryOperator&lt;T&gt;
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binaryoperatort" class="md-nav__link">
+    BinaryOperator&lt;T&gt;
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaces-funcionales-para-tipos-primitivos" class="md-nav__link">
+    🏃 Interfaces funcionales para tipos primitivos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inferencia-de-tipo-y-tipo-objetivo" class="md-nav__link">
+    🧭 Inferencia de tipo y tipo objetivo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-externas-en-lambdas" class="md-nav__link">
+    🔒 Variables externas en lambdas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-tipico-intentar-modificar-una-variable-local" class="md-nav__link">
+    🧨 Error típico: intentar modificar una variable local
+  </a>
+  
+    <nav class="md-nav" aria-label="🧨 Error típico: intentar modificar una variable local">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usar-un-bucle-normal" class="md-nav__link">
+    ✅ Usar un bucle normal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usar-una-estructura-mutable" class="md-nav__link">
+    ✅ Usar una estructura mutable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usar-streams-mas-adelante" class="md-nav__link">
+    ✅ Usar Streams más adelante
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambdas-y-this" class="md-nav__link">
+    📌 Lambdas y this
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambdas-modernas-con-comparator" class="md-nav__link">
+    📊 Lambdas modernas con Comparator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordenar-con-lambda-clasica" class="md-nav__link">
+    📈 Ordenar con lambda clásica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordenar-con-comparatorcomparing" class="md-nav__link">
+    ✨ Ordenar con Comparator.comparing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambdas-y-streams-pequena-introduccion" class="md-nav__link">
+    🧹 Lambdas y Streams: pequeña introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-sistema-de-descuentos" class="md-nav__link">
+    🧪 Ejemplo práctico: sistema de descuentos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-validaciones-reutilizables" class="md-nav__link">
+    🧪 Ejemplo práctico: validaciones reutilizables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-procesar-pedidos" class="md-nav__link">
+    🧪 Ejemplo práctico: procesar pedidos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-tipicos-con-lambdas" class="md-nav__link">
+    ⚠️ Errores típicos con lambdas
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Errores típicos con lambdas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-1-usar-una-interfaz-con-mas-de-un-metodo-abstracto" class="md-nav__link">
+    ❌ Error 1: usar una interfaz con más de un método abstracto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-2-olvidar-los-parentesis-cuando-no-hay-parametros" class="md-nav__link">
+    ❌ Error 2: olvidar los paréntesis cuando no hay parámetros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-3-poner-return-sin-llaves" class="md-nav__link">
+    ❌ Error 3: poner return sin llaves
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-4-no-devolver-valor-cuando-toca" class="md-nav__link">
+    ❌ Error 4: no devolver valor cuando toca
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-5-modificar-una-variable-local-externa" class="md-nav__link">
+    ❌ Error 5: modificar una variable local externa
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-resumen-de-sintaxis" class="md-nav__link">
+    🧠 Tabla resumen de sintaxis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-resumen-de-interfaces-funcionales" class="md-nav__link">
+    🧠 Tabla resumen de interfaces funcionales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-usar-lambdas" class="md-nav__link">
+    🧩 ¿Cuándo usar lambdas?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regla-de-oro" class="md-nav__link">
+    🧠 Regla de oro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-ejercicios-de-comprension" class="md-nav__link">
+    🧪 Mini ejercicios de comprensión
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Mini ejercicios de comprensión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-que-imprime" class="md-nav__link">
+    1. ¿Qué imprime?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-que-imprime" class="md-nav__link">
+    2. ¿Qué imprime?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-completa-la-lambda" class="md-nav__link">
+    3. Completa la lambda
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-corrige-el-error" class="md-nav__link">
+    4. Corrige el error
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    ✅ Conclusión
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1516,35 +2041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3predicates/" class="md-nav__link">
-        🦄 Predicate, Supplier and Consumer
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../4functions/" class="md-nav__link">
-        🦄 Functions
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../5references/" class="md-nav__link">
+      <a href="../referenciametodos/" class="md-nav__link">
         🦄 Referencia a métodos
       </a>
     </li>
