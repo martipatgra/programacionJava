@@ -2986,7 +2986,8 @@
 <p>Por ejemplo:</p>
 <div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
 
-<span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">));</span>
+<span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
+<span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">accion</span><span class="p">);</span>
 </code></pre></div>
 <p>La parte importante es esta:</p>
 <div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
@@ -2997,7 +2998,7 @@
 </blockquote>
 <p>Pero fíjate bien: la lambda no está haciendo nada especial. Solo llama a un método que ya existe.</p>
 <p>Por eso Java permite escribirlo de una forma más corta:</p>
-<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">;</span>
 </code></pre></div>
 <hr />
 <h2 id="que-es-una-referencia-de-metodo">✨ ¿Qué es una referencia de método?</h2>
@@ -3019,13 +3020,13 @@
 <hr />
 <h3 id="lambda-vs-referencia-de-metodo">🧩 Lambda vs referencia de método</h3>
 <p>Estas dos instrucciones hacen lo mismo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">));</span>
+<div class="highlight"><pre><span></span><code><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">;</span>
 </code></pre></div>
 <p>La primera usa una <strong>lambda</strong>.</p>
 <p>La segunda usa una <strong>referencia de método</strong>.</p>
-<p>Java entiende que <code>forEach</code> necesita algo que reciba un elemento y haga algo con él.</p>
+<p>Java entiende que <code>Consumer&lt;String&gt;</code> necesita algo que reciba un elemento y haga algo con él.</p>
 <p>Por eso interpreta esto:</p>
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span>
 </code></pre></div>
@@ -3037,13 +3038,8 @@
 <p>Una referencia de método <strong>no ejecuta el método en ese mismo instante</strong>.</p>
 <p>Solo le entrega a Java una referencia para que lo ejecute cuando toque.</p>
 <p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">;</span>
 </code></pre></div>
-<p>Aquí <code>println</code> se ejecutará una vez por cada elemento de la lista.</p>
-<p>Es como decirle a Java:</p>
-<blockquote>
-<p>Cuando tengas cada nombre, pásaselo a <code>println</code>.</p>
-</blockquote>
 <hr />
 <h2 id="las-referencias-de-metodos-necesitan-una-interfaz-funcional">⚠️ Las referencias de métodos necesitan una interfaz funcional</h2>
 <p>Igual que las lambdas, las referencias de métodos solo funcionan cuando Java espera una <strong>interfaz funcional</strong>.</p>
@@ -3086,7 +3082,7 @@
 </tbody>
 </table>
 <p>Por ejemplo, <code>forEach</code> espera un <code>Consumer</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">;</span>
 </code></pre></div>
 <p><code>System.out::println</code> encaja porque puede recibir un dato y no devuelve nada.</p>
 <hr />
@@ -3097,7 +3093,8 @@
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
 
-<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">;</span>
+<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">accion</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -3222,7 +3219,8 @@
 
 <span class="w">        </span><span class="n">Mensajero</span><span class="w"> </span><span class="n">mensajero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mensajero</span><span class="p">();</span>
 
-<span class="w">        </span><span class="n">avisos</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">mensajero</span><span class="p">::</span><span class="n">mostrarMensaje</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mensajero</span><span class="p">::</span><span class="n">mostrarMensaje</span><span class="p">;</span>
+<span class="w">        </span><span class="n">avisos</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">accion</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -3232,10 +3230,10 @@
 <span class="err">📢</span><span class="w"> </span><span class="n">Mensaje</span><span class="p">:</span><span class="w"> </span><span class="n">Estudiar</span><span class="w"> </span><span class="n">lambdas</span>
 </code></pre></div>
 <p>Esto:</p>
-<div class="highlight"><pre><span></span><code><span class="n">avisos</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">mensajero</span><span class="p">::</span><span class="n">mostrarMensaje</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mensajero</span><span class="p">::</span><span class="n">mostrarMensaje</span><span class="p">;</span>
 </code></pre></div>
 <p>equivale a:</p>
-<div class="highlight"><pre><span></span><code><span class="n">avisos</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">aviso</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mensajero</span><span class="p">.</span><span class="na">mostrarMensaje</span><span class="p">(</span><span class="n">aviso</span><span class="p">));</span>
+<div class="highlight"><pre><span></span><code><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aviso</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mensajero</span><span class="p">.</span><span class="na">mostrarMensaje</span><span class="p">(</span><span class="n">aviso</span><span class="p">);</span>
 </code></pre></div>
 <hr />
 <h3 id="idea-importante">🧠 Idea importante</h3>
