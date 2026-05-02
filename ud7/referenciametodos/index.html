@@ -1708,6 +1708,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#truco" class="md-nav__link">
+    🧠 Truco
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ejemplo-con-stringtouppercase" class="md-nav__link">
     🧪 Ejemplo con String::toUpperCase
   </a>
@@ -1724,13 +1731,6 @@
           <li class="md-nav__item">
   <a href="#ejemplo-con-predicate" class="md-nav__link">
     🧪 Ejemplo con Predicate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#diferencia-importante" class="md-nav__link">
-    🧠 Diferencia importante
   </a>
   
 </li>
@@ -2686,6 +2686,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#truco" class="md-nav__link">
+    🧠 Truco
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ejemplo-con-stringtouppercase" class="md-nav__link">
     🧪 Ejemplo con String::toUpperCase
   </a>
@@ -2702,13 +2709,6 @@
           <li class="md-nav__item">
   <a href="#ejemplo-con-predicate" class="md-nav__link">
     🧪 Ejemplo con Predicate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#diferencia-importante" class="md-nav__link">
-    🧠 Diferencia importante
   </a>
   
 </li>
@@ -3274,21 +3274,59 @@
 </code></pre></div>
 <hr />
 <h2 id="3-referencia-a-un-metodo-de-instancia-de-un-objeto-recibido-como-parametro">3️⃣ Referencia a un método de instancia de un objeto recibido como parámetro</h2>
-<p>Este tipo suele ser el más difícil al principio, así que vamos despacio.</p>
+<p>Este tipo suele ser el más difícil al principio, así que vamos a explicarlo bien.
+La diferencia clave con el anterior está en que <strong>el objeto te lo pasan como parámetro</strong>.</p>
 <h3 id="sintaxis_2">📌 Sintaxis</h3>
 <div class="highlight"><pre><span></span><code><span class="nl">Clase</span><span class="p">::</span><span class="n">metodoDeInstancia</span>
 </code></pre></div>
 <p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="nl">String</span><span class="p">::</span><span class="n">toUpperCase</span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Perro</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">Perro</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">ladrar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; dice guau!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">longitudNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>Cuidado: <code>toUpperCase</code> <strong>no es estático</strong>.</p>
-<p>No podemos hacer esto:</p>
-<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">();</span><span class="w"> </span><span class="c1">// ❌ Incorrecto</span>
+<p>Si tú ya tienes el objeto creado, como hemos visto anteriormente sería:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Perro</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Perro</span><span class="p">(</span><span class="s">&quot;Max&quot;</span><span class="p">);</span>
+
+<span class="c1">//lambda:</span>
+<span class="n">Runnable</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">ladrar</span><span class="p">();</span>
+
+<span class="c1">//referencia de métodos caso 2 (con un objeto concreto):</span>
+<span class="n">Runnable</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">::</span><span class="n">ladrar</span><span class="p">;</span>
 </code></pre></div>
-<p>Entonces, ¿por qué sí podemos escribir esto?</p>
-<div class="highlight"><pre><span></span><code><span class="nl">String</span><span class="p">::</span><span class="n">toUpperCase</span>
+<p><strong>Aquí NO hay parámetros. El objeto (p) ya lo tienes.</strong></p>
+<p>Ahora bien, cuando el objeto llega como parámetro, es deicr, NO tienes el objeto, te lo pasan como parámetro:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//lambda</span>
+<span class="n">Function</span><span class="o">&lt;</span><span class="n">Perro</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">perro</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">perro</span><span class="p">.</span><span class="na">longitudNombre</span><span class="p">();</span>
+
+<span class="c1">//referencia de métodos usando caso 3</span>
+<span class="n">Function</span><span class="o">&lt;</span><span class="n">Perro</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Perro</span><span class="p">::</span><span class="n">longitudNombre</span><span class="p">;</span>
 </code></pre></div>
-<p>Porque Java entiende que el objeto sobre el que se llamará el método será el dato que llegue como parámetro.</p>
+<p>Aquí el perro viene como parámetro, por eso usamos la sintaxis:</p>
+<blockquote>
+<p>Clase::metodoDeInstancia</p>
+</blockquote>
+<h3 id="truco">🧠 Truco</h3>
+<p>Pregúntate:</p>
+<ul>
+<li>❓ ¿El objeto ya existe?  </li>
+</ul>
+<p>→ Sí → <code>objeto::metodo</code></p>
+<ul>
+<li>❓ ¿El objeto viene como parámetro?</li>
+</ul>
+<p>→ Sí → <code>Clase::metodo</code></p>
 <hr />
 <h3 id="ejemplo-con-stringtouppercase">🧪 Ejemplo con <code>String::toUpperCase</code></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Function</span><span class="p">;</span>
@@ -3356,26 +3394,6 @@
 </code></pre></div>
 <p>equivale a:</p>
 <div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">texto</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span>
-</code></pre></div>
-<hr />
-<h3 id="diferencia-importante">🧠 Diferencia importante</h3>
-<p>No es lo mismo esto:</p>
-<div class="highlight"><pre><span></span><code><span class="nl">objeto</span><span class="p">::</span><span class="n">metodo</span>
-</code></pre></div>
-<p>que esto:</p>
-<div class="highlight"><pre><span></span><code><span class="nl">Clase</span><span class="p">::</span><span class="n">metodo</span>
-</code></pre></div>
-<p>En <code>objeto::metodo</code>, el objeto ya existe:</p>
-<div class="highlight"><pre><span></span><code><span class="nl">mensajero</span><span class="p">::</span><span class="n">mostrarMensaje</span>
-</code></pre></div>
-<p>Equivale a:</p>
-<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mensajero</span><span class="p">.</span><span class="na">mostrarMensaje</span><span class="p">(</span><span class="n">texto</span><span class="p">)</span>
-</code></pre></div>
-<p>En <code>Clase::metodo</code>, el objeto llega como parámetro:</p>
-<div class="highlight"><pre><span></span><code><span class="nl">String</span><span class="p">::</span><span class="n">toUpperCase</span>
-</code></pre></div>
-<p>Equivale a:</p>
-<div class="highlight"><pre><span></span><code><span class="n">texto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">texto</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()</span>
 </code></pre></div>
 <hr />
 <h2 id="4-referencia-a-un-constructor">4️⃣ Referencia a un constructor</h2>
