@@ -1597,13 +1597,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#primer-ejemplo-completo" class="md-nav__link">
-    🧪 Primer ejemplo completo
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tipos-de-referencias-de-metodos" class="md-nav__link">
     📚 Tipos de referencias de métodos
   </a>
@@ -2575,13 +2568,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#primer-ejemplo-completo" class="md-nav__link">
-    🧪 Primer ejemplo completo
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tipos-de-referencias-de-metodos" class="md-nav__link">
     📚 Tipos de referencias de métodos
   </a>
@@ -3010,13 +2996,6 @@
 <blockquote>
 <p>referencia al método</p>
 </blockquote>
-<p>Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span>
-</code></pre></div>
-<p>Se puede leer como:</p>
-<blockquote>
-<p>usa el método <code>println</code> del objeto <code>System.out</code>.</p>
-</blockquote>
 <hr />
 <h3 id="lambda-vs-referencia-de-metodo">🧩 Lambda vs referencia de método</h3>
 <p>Estas dos instrucciones hacen lo mismo:</p>
@@ -3026,20 +3005,10 @@
 </code></pre></div>
 <p>La primera usa una <strong>lambda</strong>.</p>
 <p>La segunda usa una <strong>referencia de método</strong>.</p>
-<p>Java entiende que <code>Consumer&lt;String&gt;</code> necesita algo que reciba un elemento y haga algo con él.</p>
-<p>Por eso interpreta esto:</p>
-<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span>
-</code></pre></div>
-<p>como si fuera esto:</p>
-<div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
-</code></pre></div>
 <hr />
 <h3 id="idea-clave">🧱 Idea clave</h3>
 <p>Una referencia de método <strong>no ejecuta el método en ese mismo instante</strong>.</p>
 <p>Solo le entrega a Java una referencia para que lo ejecute cuando toque.</p>
-<p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">;</span>
-</code></pre></div>
 <hr />
 <h2 id="las-referencias-de-metodos-necesitan-una-interfaz-funcional">⚠️ Las referencias de métodos necesitan una interfaz funcional</h2>
 <p>Igual que las lambdas, las referencias de métodos solo funcionan cuando Java espera una <strong>interfaz funcional</strong>.</p>
@@ -3081,31 +3050,6 @@
 </tr>
 </tbody>
 </table>
-<p>Por ejemplo, <code>forEach</code> espera un <code>Consumer</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">;</span>
-</code></pre></div>
-<p><code>System.out::println</code> encaja porque puede recibir un dato y no devuelve nada.</p>
-<hr />
-<h2 id="primer-ejemplo-completo">🧪 Primer ejemplo completo</h2>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marta&quot;</span><span class="p">);</span>
-
-<span class="w">        </span><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">;</span>
-<span class="w">        </span><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">accion</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Salida:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Ana</span>
-<span class="n">Luis</span>
-<span class="n">Marta</span>
-</code></pre></div>
-<p>Esto sería equivalente a:</p>
-<div class="highlight"><pre><span></span><code><span class="n">nombres</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">));</span>
-</code></pre></div>
 <hr />
 <h2 id="tipos-de-referencias-de-metodos">📚 Tipos de referencias de métodos</h2>
 <p>En Java hay cuatro tipos principales:</p>
